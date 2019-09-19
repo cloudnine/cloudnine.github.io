@@ -2,103 +2,103 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Cloud Nine</title>
-    <link>http://buildhello.github.io/tags/</link>
+    <link>https://buildhello.github.io/tags/</link>
     <description>Recent content in Tags on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>© 2019 - Yuri Tricys</copyright>
     <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://buildhello.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://buildhello.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Development</title>
-      <link>http://buildhello.github.io/tags/development/</link>
+      <link>https://buildhello.github.io/tags/development/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://buildhello.github.io/tags/development/</guid>
+      <guid>https://buildhello.github.io/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Emacs</title>
-      <link>http://buildhello.github.io/tags/emacs/</link>
+      <link>https://buildhello.github.io/tags/emacs/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://buildhello.github.io/tags/emacs/</guid>
+      <guid>https://buildhello.github.io/tags/emacs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Featured</title>
-      <link>http://buildhello.github.io/tags/featured/</link>
+      <link>https://buildhello.github.io/tags/featured/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://buildhello.github.io/tags/featured/</guid>
+      <guid>https://buildhello.github.io/tags/featured/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
-      <link>http://buildhello.github.io/tags/go/</link>
+      <link>https://buildhello.github.io/tags/go/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://buildhello.github.io/tags/go/</guid>
+      <guid>https://buildhello.github.io/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>http://buildhello.github.io/tags/golang/</link>
+      <link>https://buildhello.github.io/tags/golang/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://buildhello.github.io/tags/golang/</guid>
+      <guid>https://buildhello.github.io/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>http://buildhello.github.io/tags/hugo/</link>
+      <link>https://buildhello.github.io/tags/hugo/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://buildhello.github.io/tags/hugo/</guid>
+      <guid>https://buildhello.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jekyll</title>
-      <link>http://buildhello.github.io/tags/jekyll/</link>
+      <link>https://buildhello.github.io/tags/jekyll/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://buildhello.github.io/tags/jekyll/</guid>
+      <guid>https://buildhello.github.io/tags/jekyll/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Templates</title>
-      <link>http://buildhello.github.io/tags/templates/</link>
+      <link>https://buildhello.github.io/tags/templates/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://buildhello.github.io/tags/templates/</guid>
+      <guid>https://buildhello.github.io/tags/templates/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Text Editor</title>
-      <link>http://buildhello.github.io/tags/text-editor/</link>
+      <link>https://buildhello.github.io/tags/text-editor/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://buildhello.github.io/tags/text-editor/</guid>
+      <guid>https://buildhello.github.io/tags/text-editor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Themes</title>
-      <link>http://buildhello.github.io/tags/themes/</link>
+      <link>https://buildhello.github.io/tags/themes/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://buildhello.github.io/tags/themes/</guid>
+      <guid>https://buildhello.github.io/tags/themes/</guid>
       <description></description>
     </item>
     
