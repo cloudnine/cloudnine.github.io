@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Golang on Onward and Upward</title>
-    <link>http://onwardandupward.github.io/categories/golang/</link>
-    <description>Recent content in Golang on Onward and Upward</description>
+    <title>Golang on Cloud Nine</title>
+    <link>http://buildhello.github.io/categories/golang/</link>
+    <description>Recent content in Golang on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>© 2019 - Yuri Tricys</copyright>
     <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://onwardandupward.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://buildhello.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>(Hu)go Template Primer</title>
-      <link>http://onwardandupward.github.io/post/goisforlovers/</link>
+      <link>http://buildhello.github.io/post/goisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://onwardandupward.github.io/post/goisforlovers/</guid>
+      <guid>http://buildhello.github.io/post/goisforlovers/</guid>
       <description>&lt;p&gt;Hugo uses the excellent &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/template&lt;/a&gt; library for
 its template engine. It is an extremely lightweight engine that provides a very
 small amount of logic. In our experience that it is just the right amount of
@@ -31,10 +31,10 @@ provide more details.&lt;/p&gt;</description>
     
     <item>
       <title>Getting Started with Hugo</title>
-      <link>http://onwardandupward.github.io/post/hugoisforlovers/</link>
+      <link>http://buildhello.github.io/post/hugoisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://onwardandupward.github.io/post/hugoisforlovers/</guid>
+      <guid>http://buildhello.github.io/post/hugoisforlovers/</guid>
       <description>&lt;p&gt;First, go to &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;Hugo releases&lt;/a&gt; and download the
 appropriate version for your OS and architecture.&lt;/p&gt;
 

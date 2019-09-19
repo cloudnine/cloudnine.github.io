@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Onward and Upward</title>
-    <link>http://onwardandupward.github.io/</link>
-    <description>Recent content on Onward and Upward</description>
+    <title>Cloud Nine</title>
+    <link>http://buildhello.github.io/</link>
+    <description>Recent content on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>© 2019 - Yuri Tricys</copyright>
     <lastBuildDate>Sun, 27 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://onwardandupward.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://buildhello.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Things I do with my text editor</title>
-      <link>http://onwardandupward.github.io/categories/personaldevelopment/texteditor/</link>
+      <link>http://buildhello.github.io/categories/personaldevelopment/texteditor/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://onwardandupward.github.io/categories/personaldevelopment/texteditor/</guid>
+      <guid>http://buildhello.github.io/categories/personaldevelopment/texteditor/</guid>
       <description>&lt;h2 id=&#34;set-your-configuration-publish-folder-to-site&#34;&gt;Set your configuration publish folder to &lt;code&gt;_site&lt;/code&gt;&lt;/h2&gt;
 
 &lt;p&gt;The default is for Jekyll to publish to &lt;code&gt;_site&lt;/code&gt; and for Hugo to publish to &lt;code&gt;public&lt;/code&gt;. If, like me, you have &lt;a href=&#34;http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html&#34;&gt;&lt;code&gt;_site&lt;/code&gt; mapped to a git submodule on the &lt;code&gt;gh-pages&lt;/code&gt; branch&lt;/a&gt;, you&amp;rsquo;ll want to do one of two alternatives:&lt;/p&gt;
@@ -43,10 +43,10 @@ git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
     
     <item>
       <title>This is a test blog</title>
-      <link>http://onwardandupward.github.io/categories/texteditor/</link>
+      <link>http://buildhello.github.io/categories/texteditor/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://onwardandupward.github.io/categories/texteditor/</guid>
+      <guid>http://buildhello.github.io/categories/texteditor/</guid>
       <description>&lt;h2 id=&#34;set-your-configuration-publish-folder-to-site&#34;&gt;Set your configuration publish folder to &lt;code&gt;_site&lt;/code&gt;&lt;/h2&gt;
 
 &lt;p&gt;The default is for Jekyll to publish to &lt;code&gt;_site&lt;/code&gt; and for Hugo to publish to &lt;code&gt;public&lt;/code&gt;. If, like me, you have &lt;a href=&#34;http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html&#34;&gt;&lt;code&gt;_site&lt;/code&gt; mapped to a git submodule on the &lt;code&gt;gh-pages&lt;/code&gt; branch&lt;/a&gt;, you&amp;rsquo;ll want to do one of two alternatives:&lt;/p&gt;
@@ -72,10 +72,10 @@ git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
     
     <item>
       <title>Creating a New Theme</title>
-      <link>http://onwardandupward.github.io/post/creating-a-new-theme/</link>
+      <link>http://buildhello.github.io/post/creating-a-new-theme/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://onwardandupward.github.io/post/creating-a-new-theme/</guid>
+      <guid>http://buildhello.github.io/post/creating-a-new-theme/</guid>
       <description>&lt;p&gt;This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p&gt;
 
 &lt;p&gt;We&amp;rsquo;ll start with creating a new site with a very basic template. Then we&amp;rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.&lt;/p&gt;</description>
@@ -83,10 +83,10 @@ git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
     
     <item>
       <title>Migrate to Hugo from Jekyll</title>
-      <link>http://onwardandupward.github.io/post/migrate-from-jekyll/</link>
+      <link>http://buildhello.github.io/post/migrate-from-jekyll/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://onwardandupward.github.io/post/migrate-from-jekyll/</guid>
+      <guid>http://buildhello.github.io/post/migrate-from-jekyll/</guid>
       <description>&lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.
 With Jekyll, something that looked like&lt;/p&gt;
 
@@ -108,10 +108,10 @@ With Jekyll, something that looked like&lt;/p&gt;
     
     <item>
       <title>About Hugo</title>
-      <link>http://onwardandupward.github.io/about/</link>
+      <link>http://buildhello.github.io/about/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://onwardandupward.github.io/about/</guid>
+      <guid>http://buildhello.github.io/about/</guid>
       <description>Hugo is the world’s fastest framework for building websites. It is written in Go.
 It makes use of a variety of open source projects including:
  https://github.com/russross/blackfriday https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper  Learn more and contribute on GitHub.</description>
@@ -119,10 +119,10 @@ It makes use of a variety of open source projects including:
     
     <item>
       <title>(Hu)go Template Primer</title>
-      <link>http://onwardandupward.github.io/post/goisforlovers/</link>
+      <link>http://buildhello.github.io/post/goisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://onwardandupward.github.io/post/goisforlovers/</guid>
+      <guid>http://buildhello.github.io/post/goisforlovers/</guid>
       <description>&lt;p&gt;Hugo uses the excellent &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/template&lt;/a&gt; library for
 its template engine. It is an extremely lightweight engine that provides a very
 small amount of logic. In our experience that it is just the right amount of
@@ -136,10 +136,10 @@ provide more details.&lt;/p&gt;</description>
     
     <item>
       <title>Getting Started with Hugo</title>
-      <link>http://onwardandupward.github.io/post/hugoisforlovers/</link>
+      <link>http://buildhello.github.io/post/hugoisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://onwardandupward.github.io/post/hugoisforlovers/</guid>
+      <guid>http://buildhello.github.io/post/hugoisforlovers/</guid>
       <description>&lt;p&gt;First, go to &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;Hugo releases&lt;/a&gt; and download the
 appropriate version for your OS and architecture.&lt;/p&gt;
 

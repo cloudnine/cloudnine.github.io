@@ -3,137 +3,137 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://onwardandupward.github.io/categories/personaldevelopment/texteditor/</loc>
+    <loc>http://buildhello.github.io/categories/personaldevelopment/texteditor/</loc>
     <lastmod>2019-01-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/categories/texteditor/</loc>
+    <loc>http://buildhello.github.io/categories/texteditor/</loc>
     <lastmod>2019-01-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/post/creating-a-new-theme/</loc>
+    <loc>http://buildhello.github.io/post/creating-a-new-theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/post/migrate-from-jekyll/</loc>
+    <loc>http://buildhello.github.io/post/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/about/</loc>
+    <loc>http://buildhello.github.io/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/post/goisforlovers/</loc>
+    <loc>http://buildhello.github.io/post/goisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/post/hugoisforlovers/</loc>
+    <loc>http://buildhello.github.io/post/hugoisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/categories/</loc>
+    <loc>http://buildhello.github.io/categories/</loc>
     <lastmod>2019-01-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/categories/</loc>
+    <loc>http://buildhello.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/tags/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://onwardandupward.github.io/categories/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://onwardandupward.github.io/tags/emacs/</loc>
+    <loc>http://buildhello.github.io/</loc>
     <lastmod>2019-01-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/tags/featured/</loc>
+    <loc>http://buildhello.github.io/tags/development/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://buildhello.github.io/categories/development/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://buildhello.github.io/tags/emacs/</loc>
+    <lastmod>2019-01-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://buildhello.github.io/tags/featured/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/tags/go/</loc>
+    <loc>http://buildhello.github.io/tags/go/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/tags/golang/</loc>
+    <loc>http://buildhello.github.io/tags/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/categories/golang/</loc>
+    <loc>http://buildhello.github.io/categories/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/tags/hugo/</loc>
+    <loc>http://buildhello.github.io/tags/hugo/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/tags/jekyll/</loc>
+    <loc>http://buildhello.github.io/tags/jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/</loc>
-    <lastmod>2019-01-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://onwardandupward.github.io/post/</loc>
+    <loc>http://buildhello.github.io/post/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/tags/</loc>
+    <loc>http://buildhello.github.io/tags/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/tags/templates/</loc>
+    <loc>http://buildhello.github.io/tags/templates/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/tags/text-editor/</loc>
+    <loc>http://buildhello.github.io/tags/text-editor/</loc>
     <lastmod>2019-01-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://onwardandupward.github.io/tags/themes/</loc>
+    <loc>http://buildhello.github.io/tags/themes/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

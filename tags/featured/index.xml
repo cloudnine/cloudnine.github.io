@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Featured on Onward and Upward</title>
-    <link>http://onwardandupward.github.io/tags/featured/</link>
-    <description>Recent content in Featured on Onward and Upward</description>
+    <title>Featured on Cloud Nine</title>
+    <link>http://buildhello.github.io/tags/featured/</link>
+    <description>Recent content in Featured on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>© 2019 - Yuri Tricys</copyright>
     <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://onwardandupward.github.io/tags/featured/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://buildhello.github.io/tags/featured/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Creating a New Theme</title>
-      <link>http://onwardandupward.github.io/post/creating-a-new-theme/</link>
+      <link>http://buildhello.github.io/post/creating-a-new-theme/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://onwardandupward.github.io/post/creating-a-new-theme/</guid>
+      <guid>http://buildhello.github.io/post/creating-a-new-theme/</guid>
       <description>&lt;p&gt;This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p&gt;
 
 &lt;p&gt;We&amp;rsquo;ll start with creating a new site with a very basic template. Then we&amp;rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.&lt;/p&gt;</description>
@@ -25,10 +25,10 @@
     
     <item>
       <title>Migrate to Hugo from Jekyll</title>
-      <link>http://onwardandupward.github.io/post/migrate-from-jekyll/</link>
+      <link>http://buildhello.github.io/post/migrate-from-jekyll/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://onwardandupward.github.io/post/migrate-from-jekyll/</guid>
+      <guid>http://buildhello.github.io/post/migrate-from-jekyll/</guid>
       <description>&lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.
 With Jekyll, something that looked like&lt;/p&gt;
 
