@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jekyll on Onward and Upward</title>
+    <link>http://onwardandupward.github.io/tags/jekyll/</link>
+    <description>Recent content in Jekyll on Onward and Upward</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>© 2019 - Yuri Tricys</copyright>
+    <lastBuildDate>Mon, 10 Mar 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://onwardandupward.github.io/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>http://onwardandupward.github.io/post/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://onwardandupward.github.io/post/migrate-from-jekyll/</guid>
+      <description>&lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.
+With Jekyll, something that looked like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
+    ▾ images/
+        logo.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;should become&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
+    ▾ static/
+        ▾ images/
+            logo.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code&gt;CNAME&lt;/code&gt;) to be moved to &lt;code&gt;static&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
