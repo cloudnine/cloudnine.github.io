@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emacs on Cloud Nine</title>
-    <link>https://buildhello.github.io/tags/emacs/</link>
+    <link>https://cloudnine.github.io/tags/emacs/</link>
     <description>Recent content in Emacs on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>© 2019 - Yuri Tricys</copyright>
     <lastBuildDate>Sun, 27 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://buildhello.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cloudnine.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Things I do with my text editor</title>
-      <link>https://buildhello.github.io/categories/personaldevelopment/texteditor/</link>
+      <link>https://cloudnine.github.io/categories/personaldevelopment/texteditor/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://buildhello.github.io/categories/personaldevelopment/texteditor/</guid>
+      <guid>https://cloudnine.github.io/categories/personaldevelopment/texteditor/</guid>
       <description>&lt;h2 id=&#34;set-your-configuration-publish-folder-to-site&#34;&gt;Set your configuration publish folder to &lt;code&gt;_site&lt;/code&gt;&lt;/h2&gt;
 
 &lt;p&gt;The default is for Jekyll to publish to &lt;code&gt;_site&lt;/code&gt; and for Hugo to publish to &lt;code&gt;public&lt;/code&gt;. If, like me, you have &lt;a href=&#34;http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html&#34;&gt;&lt;code&gt;_site&lt;/code&gt; mapped to a git submodule on the &lt;code&gt;gh-pages&lt;/code&gt; branch&lt;/a&gt;, you&amp;rsquo;ll want to do one of two alternatives:&lt;/p&gt;
@@ -43,10 +43,10 @@ git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
     
     <item>
       <title>This is a test blog</title>
-      <link>https://buildhello.github.io/categories/texteditor/</link>
+      <link>https://cloudnine.github.io/categories/texteditor/</link>
       <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://buildhello.github.io/categories/texteditor/</guid>
+      <guid>https://cloudnine.github.io/categories/texteditor/</guid>
       <description>&lt;h2 id=&#34;set-your-configuration-publish-folder-to-site&#34;&gt;Set your configuration publish folder to &lt;code&gt;_site&lt;/code&gt;&lt;/h2&gt;
 
 &lt;p&gt;The default is for Jekyll to publish to &lt;code&gt;_site&lt;/code&gt; and for Hugo to publish to &lt;code&gt;public&lt;/code&gt;. If, like me, you have &lt;a href=&#34;http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html&#34;&gt;&lt;code&gt;_site&lt;/code&gt; mapped to a git submodule on the &lt;code&gt;gh-pages&lt;/code&gt; branch&lt;/a&gt;, you&amp;rsquo;ll want to do one of two alternatives:&lt;/p&gt;
