@@ -9,7 +9,7 @@
 
 We&rsquo;ll start with creating a new site with a very basic template. Then we&rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/post/creating-a-new-theme/" /><meta property="article:published_time" content="2014-09-28T00:00:00&#43;00:00"/>
+<meta property="og:url" content="/post/creating-a-new-theme/" /><meta property="article:published_time" content="2014-09-28T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2014-09-28T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
         <meta name="twitter:card" content="summary"/>
@@ -18,34 +18,35 @@ We&rsquo;ll start with creating a new site with a very basic template. Then we&r
 
 We&rsquo;ll start with creating a new site with a very basic template. Then we&rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites."/>
 
-        
+
         <title>
   Creating a New Theme | Cloud Nine
 </title>
 
-        <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
-        <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">  
+        <link rel="icon" type="image/png" href='images/favicon-16x16.png' sizes="16x16">
+        <link rel="icon" type="image/png" href='images/favicon-32x32.png' sizes="32x32">
 
         <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">      
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
         
         
         
         
 
-        <link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.7ca6cd3bb53a831d18b6183000ae658b8d6f672f7acab1b00f788e5fe8b5d844.css" integrity="sha256-fKbNO7U6gx0YthgwAK5li41vZy96yrGwD3iOX&#43;i12EQ="  />
+        <link rel="stylesheet" href="/css/bundle.min.0843dde4d415f86dc64ea89ed5e735d4c3748c21f3b27c256596666275b7f2e0.css" integrity="sha256-CEPd5NQV&#43;G3GTqie1ec11MN0jCHzsnwlZZZmYnW38uA="  />
 
         
-    <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/> 
-<link rel="icon" type="image/png" href="https://cloudnine.github.io/images/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="https://cloudnine.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
 
-<link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+<link rel="alternate" type="application/rss+xml" href='index.xml' />
 
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta name="author" content="Cloud Nine" />
-<meta name="copyright" content="© 2019 - Yuri Tricys" />
+<meta name="copyright" content="Copyrights" />
 
 
 <meta name="description" content="This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
@@ -53,41 +54,39 @@ We&amp;rsquo;ll start with creating a new site with a very basic template. Then 
 ">
 
 
+
     
-        
+
     </head>
     <body>
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
             <div class="container">
-                    <a class="navbar-brand pr-2" href="https://cloudnine.github.io">CLOUD NINE</a>
+                    <a class="navbar-brand pr-2" href="">CLOUD NINE</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="navbar-collapse collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-    <a class="nav-link active" href="https://cloudnine.github.io/categories/texteditor/">Things I do with My
-    Text Editor -> </a>
+    <a class="nav-link active" href="about/">About</a>
 </li>
 
 <li class="nav-item">
-    <a class="nav-link active" href="https://cloudnine.github.io/categories/personaldevelopment/">Personal
-    Development -> </a>
+    <a class="nav-link active" href="motivation/">Motivation</a>
 </li>
 
 <li class="nav-item">
-    <a class="nav-link active" href="https://cloudnine.github.io/categories/othermusings/">Other Musings -> </a>
+    <a class="nav-link active" href="books/">Books</a>
 </li>
 
 <li class="nav-item">
-    <a class="nav-link active" href="https://cloudnine.github.io/about/">About -> </a>
+    <a class="nav-link active" href="science/">Science</a>
 </li>
-
 
                     </ul>
                     <div class="social-icons d-none d-lg-block">
                         <a class="py-2 px-2" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><i class="fab fa-linkedin"></i></a>
-<a class="py-2 px-2" href='https://cloudnine.github.io/index.xml'><i class="fas fa-rss"></i></a>
+<a class="py-2 px-2" href='index.xml'><i class="fas fa-rss"></i></a>
 
                     </div>
                 </div>
@@ -98,7 +97,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template. Then 
 <header class="feature-image d-print-none">
 </header>
 
-        
+
         <div class="main">
             
 <div class="container mt-4 post">
@@ -107,53 +106,11 @@ We&amp;rsquo;ll start with creating a new site with a very basic template. Then 
     <small>
         <strong>By Michael Henderson</strong>
         | <i class="far fa-calendar-alt"></i>&nbsp;Sep 28, 2014&nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='https://cloudnine.github.io/tags/featured/'>featured</a>, <a href='https://cloudnine.github.io/tags/hugo/'>hugo</a>, <a href='https://cloudnine.github.io/tags/themes/'>themes</a>
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/featured/'>featured</a>, <a href='/tags/hugo/'>hugo</a>, <a href='/tags/themes/'>themes</a>
     </small>
 </div>
 
-    <div class="share-icons d-flex justify-content-center d-print-none">
-        <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fpost%2fcreating-a-new-theme%2f&text=Creating%20a%20New%20Theme&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
-    <div>
-        <span class="fa-stack">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-        </span>
-    </div>
-    <div class="fa-inverse text-center"><small>Tweet</small></div>
-</a>
-
-<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fpost%2fcreating-a-new-theme%2f&t=Creating%20a%20New%20Theme" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
-    <div>
-        <span class="fa-stack">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
-        </span>
-    </div>
-    <div class="fa-inverse text-center"><small>Share</small></div>
-</a>
-
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fpost%2fcreating-a-new-theme%2f&title=Creating%20a%20New%20Theme&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
-    <div>
-        <span class="fa-stack">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-        </span>
-    </div>
-    <div class="fa-inverse text-center"><small>Share</small></div>
-</a>
-
-<a href="javascript:window.print()" title="Print this article" class="p-2" target="_blank" rel="nofollow">
-    <div>
-        <span class="fa-stack">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fa fa-print fa-stack-1x fa-inverse"></i>
-        </span>
-    </div>
-    <div class="fa-inverse text-center"><small>Print</small></div>
-</a>
-    </div>
-
-    <div class="mt-4 mb-4 main-content">
+        <div class="mt-4 mb-4 main-content">
         <p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.</p>
 
 <p>We&rsquo;ll start with creating a new site with a very basic template. Then we&rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.</p>
@@ -1245,7 +1202,7 @@ $ vi themes/zafta/layouts/_default/single.html
 <p>DRY is a good design goal and Hugo does a great job supporting it. Part of the art of a good template is knowing when to add a new template and when to update an existing one. While you&rsquo;re figuring that out, accept that you&rsquo;ll be doing some refactoring. Hugo makes that easy and fast, so it&rsquo;s okay to delay splitting up a template.</p>
 
         <div class="share-icons d-flex justify-content-center d-print-none">
-            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fpost%2fcreating-a-new-theme%2f&text=Creating%20a%20New%20Theme&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
+            <a href="https://twitter.com/intent/tweet?url=%2fpost%2fcreating-a-new-theme%2f&text=Creating%20a%20New%20Theme&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -1255,7 +1212,7 @@ $ vi themes/zafta/layouts/_default/single.html
     <div class="fa-inverse text-center"><small>Tweet</small></div>
 </a>
 
-<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fpost%2fcreating-a-new-theme%2f&t=Creating%20a%20New%20Theme" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
+<a href="https://www.facebook.com/sharer.php?u=%2fpost%2fcreating-a-new-theme%2f&t=Creating%20a%20New%20Theme" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -1265,7 +1222,7 @@ $ vi themes/zafta/layouts/_default/single.html
     <div class="fa-inverse text-center"><small>Share</small></div>
 </a>
 
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fpost%2fcreating-a-new-theme%2f&title=Creating%20a%20New%20Theme&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=%2fpost%2fcreating-a-new-theme%2f&title=Creating%20a%20New%20Theme&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -1295,40 +1252,46 @@ $ vi themes/zafta/layouts/_default/single.html
         <div>
             A blog about passion, discovery, and computer science.
         </div>
-        <a href='https://cloudnine.github.io/about/' class="btn btn-outline-secondary mt-3" role="button">Read More...</a>
+        <a href='about/' class="btn btn-outline-secondary mt-3" role="button">Read More...</a>
         <h2 class="mt-4">Top Posts</h2>
     
     
-        <a href="https://cloudnine.github.io/post/creating-a-new-theme/" class="nav-link">Creating a New Theme</a>
+        <a href="/post/creating-a-new-theme/" class="nav-link">Creating a New Theme</a>
     
-        <a href="https://cloudnine.github.io/post/migrate-from-jekyll/" class="nav-link">Migrate to Hugo from Jekyll</a>
+        <a href="/motivation/migrate-from-jekyll/" class="nav-link">Migrate to Hugo from Jekyll</a>
     
     <h2 class="mt-4">Recent Posts</h2>
     <nav class="nav flex-column">
         
-        <a href="https://cloudnine.github.io/post/creating-a-new-theme/" class="nav-link">Creating a New Theme</a>
+        <a href="/post/creating-a-new-theme/" class="nav-link">Creating a New Theme</a>
         
-        <a href="https://cloudnine.github.io/post/migrate-from-jekyll/" class="nav-link">Migrate to Hugo from Jekyll</a>
+        <a href="/post/23-september-2019/" class="nav-link">Time To Think About A New Job?</a>
         
-        <a href="https://cloudnine.github.io/post/goisforlovers/" class="nav-link">(Hu)go Template Primer</a>
-        
-        <a href="https://cloudnine.github.io/post/hugoisforlovers/" class="nav-link">Getting Started with Hugo</a>
-        
-        <a href="https://cloudnine.github.io/post/" class="nav-link">Posts</a>
+        <a href="/post/" class="nav-link">Posts</a>
         
     </nav>
     
     <h2 class="mt-4 text-capitalize">categories</h2>
     <nav class="nav flex-column">
         
-        <a href='https://cloudnine.github.iocategories/development/' class="nav-link">
-        development
-        <span class="badge badge-pill badge-secondary">2</span>
+        <a href='categories/computer-science/' class="nav-link">
+        computer-science
+        <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
-        <a href='https://cloudnine.github.iocategories/golang/' class="nav-link">
+        <a href='categories/emacs/' class="nav-link">
+        emacs
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='categories/golang/' class="nav-link">
         golang
-        <span class="badge badge-pill badge-secondary">2</span>
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='categories/motivation/' class="nav-link">
+        motivation
+        <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
     </nav>
@@ -1336,53 +1299,53 @@ $ vi themes/zafta/layouts/_default/single.html
     <h2 class="mt-4 text-capitalize">tags</h2>
     <nav class="nav flex-column">
         
-        <a href='https://cloudnine.github.iotags/development/' class="nav-link">
-        development
+        <a href='tags/computer-science/' class="nav-link">
+        computer-science
         <span class="badge badge-pill badge-secondary">2</span>
         </a>
         
-        <a href='https://cloudnine.github.iotags/emacs/' class="nav-link">
+        <a href='tags/emacs/' class="nav-link">
         emacs
         <span class="badge badge-pill badge-secondary">2</span>
         </a>
         
-        <a href='https://cloudnine.github.iotags/featured/' class="nav-link">
+        <a href='tags/featured/' class="nav-link">
         featured
         <span class="badge badge-pill badge-secondary">2</span>
         </a>
         
-        <a href='https://cloudnine.github.iotags/go/' class="nav-link">
-        go
-        <span class="badge badge-pill badge-secondary">2</span>
-        </a>
-        
-        <a href='https://cloudnine.github.iotags/golang/' class="nav-link">
-        golang
-        <span class="badge badge-pill badge-secondary">2</span>
-        </a>
-        
-        <a href='https://cloudnine.github.iotags/hugo/' class="nav-link">
-        hugo
-        <span class="badge badge-pill badge-secondary">2</span>
-        </a>
-        
-        <a href='https://cloudnine.github.iotags/text-editor/' class="nav-link">
-        text-editor
-        <span class="badge badge-pill badge-secondary">2</span>
-        </a>
-        
-        <a href='https://cloudnine.github.iotags/themes/' class="nav-link">
+        <a href='tags/themes/' class="nav-link">
         themes
         <span class="badge badge-pill badge-secondary">2</span>
         </a>
         
-        <a href='https://cloudnine.github.iotags/jekyll/' class="nav-link">
+        <a href='tags/development/' class="nav-link">
+        development
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='tags/go/' class="nav-link">
+        go
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='tags/golang/' class="nav-link">
+        golang
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='tags/hugo/' class="nav-link">
+        hugo
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='tags/jekyll/' class="nav-link">
         jekyll
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
-        <a href='https://cloudnine.github.iotags/templates/' class="nav-link">
-        templates
+        <a href='tags/self-development/' class="nav-link">
+        self-development
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
@@ -1396,26 +1359,33 @@ $ vi themes/zafta/layouts/_default/single.html
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-xl-3">
-                        <h5>© 2019 - Yuri Tricys</h5>
+                        <h5>Website</h5>
+This blog was created using <a href="https://gohugo.io/">Hugo</a>,
+<a href="https://getbootstrap.com/">Bootstrap</a>, and the Silhouette Hugo theme.
 
                     </div>
+
                     <div class="col-md-4 col-xl-3">
                         <h5>Disclaimer</h5>
 Opinions expressed here are my own and may not reflect those of any company I work for, or people I
 work with.
 
                     </div>
+
                     <div class="col-md-4 col-xl-3">
-                        
+                        <h5>Copyrights</h5>
+© 2019 - Yuri Tricys
 
                     </div>
+
+
                 </div>
 
                 <hr />
 
                 <div class="d-flex justify-content-center icons">
                     <a class="py-2 px-2" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><i class="fab fa-linkedin"></i></a>
-<a class="py-2 px-2" href='https://cloudnine.github.io/index.xml'><i class="fas fa-rss"></i></a>
+<a class="py-2 px-2" href='index.xml'><i class="fas fa-rss"></i></a>
 
                 </div>
             </div>
