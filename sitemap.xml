@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/motivation/02-10-2019-how-to-motivate-that-guy/</loc>
+    <lastmod>2019-10-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/motivation/new-job/</loc>
     <lastmod>2019-09-27T06:15:00-07:00</lastmod>
   </url>
@@ -120,8 +125,14 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/tags/leadership/</loc>
+    <lastmod>2019-10-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/categories/motivation/</loc>
-    <lastmod>2019-09-27T06:15:00-07:00</lastmod>
+    <lastmod>2019-10-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
