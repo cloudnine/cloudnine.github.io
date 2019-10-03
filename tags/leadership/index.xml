@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leadership on Cloud Nine</title>
+    <link>https://cloudnine.github.io/tags/leadership/</link>
+    <description>Recent content in Leadership on Cloud Nine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyrights</copyright>
+    <lastBuildDate>Wed, 02 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/tags/leadership/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To Motivate That Guy</title>
+      <link>https://cloudnine.github.io/motivation/02-10-2019-how-to-motivate-that-guy/</link>
+      <pubDate>Wed, 02 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/motivation/02-10-2019-how-to-motivate-that-guy/</guid>
+      <description>Here you have a header Sample Post Auto Deploy Testy Whether you are dealing with friends, family, co-workers, or employees, there is always that one guy (or gal) who just isn&amp;rsquo;t getting anything done. Life has got a grip on them, and most of the nasties out there aren&amp;rsquo;t helping him out. As a leader your job is not to tell people what to do (that&amp;rsquo;s a boss, by the way).</description>
+    </item>
+    
+  </channel>
+</rss>

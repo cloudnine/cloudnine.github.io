@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Motivations on Cloud Nine</title>
+    <link>https://cloudnine.github.io/motivation/</link>
+    <description>Recent content in Motivations on Cloud Nine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyrights</copyright>
+    <lastBuildDate>Mon, 10 Mar 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/motivation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>https://cloudnine.github.io/motivation/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/motivation/migrate-from-jekyll/</guid>
+      <description>&lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.
+With Jekyll, something that looked like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
+    ▾ images/
+        logo.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;should become&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
+    ▾ static/
+        ▾ images/
+            logo.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code&gt;CNAME&lt;/code&gt;) to be moved to &lt;code&gt;static&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How To Motivate That Guy</title>
+      <link>https://cloudnine.github.io/motivation/02-10-2019-how-to-motivate-that-guy/</link>
+      <pubDate>Wed, 02 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/motivation/02-10-2019-how-to-motivate-that-guy/</guid>
+      <description>Here you have a header Sample Post Auto Deploy Testy Whether you are dealing with friends, family, co-workers, or employees, there is always that one guy (or gal) who just isn&amp;rsquo;t getting anything done. Life has got a grip on them, and most of the nasties out there aren&amp;rsquo;t helping him out. As a leader your job is not to tell people what to do (that&amp;rsquo;s a boss, by the way).</description>
+    </item>
+    
+    <item>
+      <title>New Job</title>
+      <link>https://cloudnine.github.io/motivation/new-job/</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/motivation/new-job/</guid>
+      <description>Insert Lead paragraph here.
+Here you have a header And here you have some content.</description>
+    </item>
+    
+  </channel>
+</rss>

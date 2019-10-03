@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emacs on Cloud Nine</title>
+    <link>https://cloudnine.github.io/tags/emacs/</link>
+    <description>Recent content in Emacs on Cloud Nine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyrights</copyright>
+    <lastBuildDate>Sun, 27 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Things I do with my text editor</title>
+      <link>https://cloudnine.github.io/books/texteditor/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/books/texteditor/</guid>
+      <description>&lt;h2 id=&#34;set-your-configuration-publish-folder-to-site&#34;&gt;Set your configuration publish folder to &lt;code&gt;_site&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;The default is for Jekyll to publish to &lt;code&gt;_site&lt;/code&gt; and for Hugo to publish to &lt;code&gt;public&lt;/code&gt;. If, like me, you have &lt;a href=&#34;http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html&#34;&gt;&lt;code&gt;_site&lt;/code&gt; mapped to a git submodule on the &lt;code&gt;gh-pages&lt;/code&gt; branch&lt;/a&gt;, you&amp;rsquo;ll want to do one of two alternatives:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Change your submodule to point to map &lt;code&gt;gh-pages&lt;/code&gt; to public instead of &lt;code&gt;_site&lt;/code&gt; (recommended).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git submodule deinit _site
+git rm _site
+git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Or, change the Hugo configuration to use &lt;code&gt;_site&lt;/code&gt; instead of &lt;code&gt;public&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+    ..
+    &amp;quot;publishdir&amp;quot;: &amp;quot;_site&amp;quot;,
+    ..
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Time To Think About A New Job?</title>
+      <link>https://cloudnine.github.io/post/23-september-2019/</link>
+      <pubDate>Mon, 23 Sep 2019 18:49:47 -0700</pubDate>
+      
+      <guid>https://cloudnine.github.io/post/23-september-2019/</guid>
+      <description>Hang Around The Barbershop Long Enough And You&#39;re Bound To Get A Haircut It can be a challenge on the job market, right? You&amp;rsquo;re fighting for a new position. The competition is everywhere. They&amp;rsquo;re young fast and strong. How are you going to make it in this new world? Can you adapt? The answer is that you can adapt. Everyone Can. But you need to keep a positive attitude.
+  keep a positive attitude!</description>
+    </item>
+    
+  </channel>
+</rss>
