@@ -59,14 +59,14 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/tags/computer-science/</loc>
-    <lastmod>2019-01-27T00:00:00+00:00</lastmod>
+    <loc>https://cloudnine.github.io/categories/computer-science/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/categories/computer-science/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://cloudnine.github.io/tags/computer-science/</loc>
+    <lastmod>2019-01-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -77,14 +77,14 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/tags/emacs/</loc>
-    <lastmod>2019-01-27T00:00:00+00:00</lastmod>
+    <loc>https://cloudnine.github.io/categories/emacs/</loc>
+    <lastmod>2019-09-23T18:49:47-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/categories/emacs/</loc>
-    <lastmod>2019-09-23T18:49:47-07:00</lastmod>
+    <loc>https://cloudnine.github.io/tags/emacs/</loc>
+    <lastmod>2019-01-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -101,13 +101,13 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/tags/golang/</loc>
+    <loc>https://cloudnine.github.io/categories/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/categories/golang/</loc>
+    <loc>https://cloudnine.github.io/tags/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
