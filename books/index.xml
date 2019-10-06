@@ -41,5 +41,14 @@ git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
 &lt;/ol&gt;</description>
     </item>
     
+    <item>
+      <title>Another Book Post</title>
+      <link>https://cloudnine.github.io/books/another-book-post/</link>
+      <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/books/another-book-post/</guid>
+      <description> The Alchemy Of Finance  And here is a code block, right? (setq whatever-variable-to t)    YOu Know    </description>
+    </item>
+    
   </channel>
 </rss>

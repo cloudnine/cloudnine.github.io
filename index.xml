@@ -80,20 +80,19 @@ With Jekyll, something that looked like&lt;/p&gt;
     <item>
       <title>How To Motivate That Guy</title>
       <link>https://cloudnine.github.io/motivation/02-10-2019-how-to-motivate-that-guy/</link>
-      <pubDate>Wed, 02 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/motivation/02-10-2019-how-to-motivate-that-guy/</guid>
       <description>Here you have a header Sample Post Auto Deploy Testy Whether you are dealing with friends, family, co-workers, or employees, there is always that one guy (or gal) who just isn&amp;rsquo;t getting anything done. Life has got a grip on them, and most of the nasties out there aren&amp;rsquo;t helping him out. As a leader your job is not to tell people what to do (that&amp;rsquo;s a boss, by the way).</description>
     </item>
     
     <item>
-      <title>New Job</title>
-      <link>https://cloudnine.github.io/motivation/new-job/</link>
-      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      <title>Another Book Post</title>
+      <link>https://cloudnine.github.io/books/another-book-post/</link>
+      <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/motivation/new-job/</guid>
-      <description>Insert Lead paragraph here.
-Here you have a header And here you have some content.</description>
+      <guid>https://cloudnine.github.io/books/another-book-post/</guid>
+      <description> The Alchemy Of Finance  And here is a code block, right? (setq whatever-variable-to t)    YOu Know    </description>
     </item>
     
     <item>
@@ -113,6 +112,16 @@ Here you have a header And here you have some content.</description>
       <guid>https://cloudnine.github.io/post/23-september-2019/</guid>
       <description>Hang Around The Barbershop Long Enough And You&#39;re Bound To Get A Haircut It can be a challenge on the job market, right? You&amp;rsquo;re fighting for a new position. The competition is everywhere. They&amp;rsquo;re young fast and strong. How are you going to make it in this new world? Can you adapt? The answer is that you can adapt. Everyone Can. But you need to keep a positive attitude.
   keep a positive attitude!</description>
+    </item>
+    
+    <item>
+      <title>New Job</title>
+      <link>https://cloudnine.github.io/motivation/new-job/</link>
+      <pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/motivation/new-job/</guid>
+      <description>Insert Lead paragraph here.
+Here you have a header And here you have some content.</description>
     </item>
     
     <item>
