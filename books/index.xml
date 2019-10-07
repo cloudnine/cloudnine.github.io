@@ -42,6 +42,15 @@ git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
     </item>
     
     <item>
+      <title>Finance History JP Morgan</title>
+      <link>https://cloudnine.github.io/books/finance-history-jp-morgan/</link>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/books/finance-history-jp-morgan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Another Book Post</title>
       <link>https://cloudnine.github.io/books/another-book-post/</link>
       <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
