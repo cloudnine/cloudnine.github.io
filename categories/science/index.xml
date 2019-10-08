@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyrights</copyright>
-    <lastBuildDate>Mon, 07 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/categories/science/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Emacs With an Interface</title>
       <link>https://cloudnine.github.io/science/emacs-with-an-interface/</link>
-      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 08 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/emacs-with-an-interface/</guid>
       <description>What&amp;rsquo;s All This About Text Editors? I always used to ask, why do people post about their text-editors? These days I know the reason. Computers are lightening fast, using them isn&#39;t. You need to leave what you are doing to turn on another piece of software. You have to search for files. You&#39;re constantly having to remember how a process works, or search around the IDE to figure out how to do something again.</description>
