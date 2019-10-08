@@ -13,18 +13,13 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/motivation/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://cloudnine.github.io/books/finance-history-jp-morgan/</loc>
     <lastmod>2019-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/motivation/02-10-2019-how-to-motivate-that-guy/</loc>
-    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
+    <loc>https://cloudnine.github.io/motivation/the-bean-machine/</loc>
+    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -40,11 +35,6 @@
   <url>
     <loc>https://cloudnine.github.io/post/23-september-2019/</loc>
     <lastmod>2019-09-23T18:49:47-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/motivation/new-job/</loc>
-    <lastmod>2019-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -142,32 +132,26 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/tags/jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/tags/leadership/</loc>
-    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cloudnine.github.io/categories/motivation/</loc>
-    <lastmod>2019-10-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/motivation/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/post/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/resiliance/</loc>
+    <lastmod>2019-10-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -198,12 +182,6 @@
   <url>
     <loc>https://cloudnine.github.io/tags/themes/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/tags/work/</loc>
-    <lastmod>2019-09-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
