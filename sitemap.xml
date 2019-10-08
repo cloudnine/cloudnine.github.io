@@ -48,7 +48,7 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/google32b6556004ceb7be/</loc>
+    <loc>https://cloudnine.github.io/verification/single/</loc>
   </url>
   
   <url>
@@ -186,6 +186,11 @@
   <url>
     <loc>https://cloudnine.github.io/tags/themes/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/verification/</loc>
     <priority>0</priority>
   </url>
   
