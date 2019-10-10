@@ -34,7 +34,7 @@
         
         
 
-        <link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.770641cf215f913f2532ca2111547d6a4c7bb1024d72846b1ac2d18cc8576221.css" integrity="sha256-dwZBzyFfkT8lMsohEVR9akx7sQJNcoRrGsLRjMhXYiE="  />
+        <link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.7e22d5c838f1d67d94fdbe552c5ddee005a8e6f900d1c23b9b2271da7a9143c8.css" integrity="sha256-fiLVyDjx1n2U/b5VLF3e4AWo5vkA0cI7myJx2nqRQ8g="  />
 
         
     <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
@@ -53,31 +53,100 @@
 
 
     
-    <style type="text/css">
-        .feature-image {
-            background-image: url("https://cloudnine.github.io/images/hugo-hydra.png");
-            height: 500px;
-        }
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script>
 
-        @media (max-width: 992px) {
-            .feature-image {
-                height: 350px;
-            }
-        }
+<script type="text/javascript">SyntaxHighlighter.all();</script>
 
-        @media (max-width: 768px) {
-            .feature-image {
-                height: 250px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .feature-image {
-                height: 200px;
-            }
-        }
-    </style>
     
+<style type="text/css">
+        .feature-image {
+          background-image: url("https://cloudnine.github.io/images/hugo-hydra.png");
+          width:100%;
+          height: auto;
+        }
+@media (max-width: 575px) {
+.feature-image {
+    min-height: 180px;
+}
+
+.feature-image-text {
+    max-width: 80%;
+    margin-top:5px;
+}
+.feature-image-text h1 {
+    font-size: 1.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: .75rem;
+}
+}  
+
+@media (min-width: 576px) {
+    .feature-image {
+    min-height: 200px;
+    }
+.feature-image-text {
+    max-width: 80%;
+    margin-top:10px;
+}
+.feature-image-text h1 {
+    font-size: 1.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: .75rem;
+}
+}  
+
+@media (min-width: 768px) {
+    .feature-image {
+    min-height: 250px;
+    }
+.feature-image-text {
+    max-width: 80%;
+    margin-top:10px;
+}
+.feature-image-text h1 {
+    font-size: 1.6rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1rem;
+}
+} 
+
+@media (min-width: 992px) {
+    .feature-image {
+    min-height: 350px;
+}
+.feature-image-text {
+    max-width: 600px;
+    margin-top:15px;
+}
+.feature-image-text h1 {
+    font-size: 2rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1.4rem;
+}
+} 
+@media (min-width: 1200px) {
+    .feature-image {
+    min-height: 500px;
+}
+.feature-image-text {
+    max-width: 760px;
+    margin-top:20px;
+}
+.feature-image-text h1 {
+    font-size: 2.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1.6rem;
+}
+} 
+</style>
+
 
     </head>
     <body>
@@ -106,11 +175,7 @@
 </li>
 
                     </ul>
-                    <div class="social-icons d-none d-lg-block">
-                        <a class="py-2 px-2" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><i class="fab fa-linkedin"></i></a>
-<a class="py-2 px-2" href='https://cloudnine.github.io/index.xml'><i class="fas fa-rss"></i></a>
 
-                    </div>
                 </div>
             </div>
         </nav>
@@ -204,7 +269,8 @@ command log package) in a split screen I can be reminded quickly what the underl
 </p>
 <br/>
 <h6>Here&rsquo;s My Initialization Code For Hydra and Pretty Hydra</h6>
-<br/></p>
+<br/>
+<p class ="brush: scala;"></p>
 
 <pre><code>;hydra
 (use-package hydra
@@ -251,7 +317,8 @@ command log package) in a split screen I can be reminded quickly what the underl
 
 </code></pre>
 
-<p><br/>
+<p></p>
+<br/>
 <p style= "text-align:justify;">
 Most of my initialization code relies on the use-package package. If want to use Emacs or you&rsquo;re&rsquo; just getting into it, I recommend a couple of
 youtube videos to get you started. There&rsquo;s a lot of stuff out there. I like <a href="https://cestlaz.github.io/stories/emacs/"
@@ -312,25 +379,23 @@ be post at least some of it over there.
     </div>
 
     <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "cloud-nine-2" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+<script type="text/javascript">
+
+(function() {
+      
+      
+      if (window.location.hostname == "localhost")
+                return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'cloud-nine-2';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
+
 </div>
 <div class="sidebar d-print-none d-none d-xl-block">
     
@@ -442,6 +507,5 @@ work with.
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-        
     </body>
 </html>
