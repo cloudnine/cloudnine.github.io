@@ -52,12 +52,6 @@
 
 
 
-    
-<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
-<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
-<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script>
-
-<script type="text/javascript">SyntaxHighlighter.all();</script>
 
     
 <style type="text/css">
@@ -269,56 +263,98 @@ command log package) in a split screen I can be reminded quickly what the underl
 </p>
 <br/>
 <h6>Here&rsquo;s My Initialization Code For Hydra and Pretty Hydra</h6>
-<br/>
-<p class ="brush: scala;"></p>
-
-<pre><code>;hydra
-(use-package hydra
-;:pin melpa-stable
-:config
-(use-package use-package-hydra
-;:pin melpa-stable
-);use-package-hydra
-(use-package hydra-posframe
-:load-path hydra-posframe-p
-:config
-(require 'hydra-posframe)
-:custom
-(hydra-posframe-parameters
-'((left-fringe . 4) (right-fringe . 4) (height . 18) (width . 105) (min-height . 17) (max-height . 30) (top . 25)))
-:custom-face
-(hydra-posframe-border-face ((t (:background &quot;#ffffff&quot;))))
-(hydra-posframe-face ((t (:background-color &quot;#6272a4&quot;))))
-:hook
-(after-init . hydra-posframe-enable)
-);end use-package-hydra-posframe
-);end use-package hydra
-;Pretty Hydra
-(use-package pretty-hydra
-:config
-(require 'pretty-hydra)
-);end use package pretty hyrda
-;title generator
-(require 's)
-(require 'all-the-icons)
-(with-eval-after-load 'all-the-icons
-(declare-function all-the-icons-faicon 'all-the-icons)
-(declare-function all-the-icons-fileicon 'all-the-icons)
-(declare-function all-the-icons-material 'all-the-icons)
-(declare-function all-the-icons-octicon 'all-the-icons)
+<br/></p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;hydra</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">hydra</span>
+<span style="color:#080;font-style:italic">;:pin melpa-stable</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">use-package-hydra</span>
+<span style="color:#080;font-style:italic">;:pin melpa-stable</span>
+)<span style="color:#080;font-style:italic">;use-package-hydra</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">hydra-posframe</span>
+<span style="color:#a2f">:load-path</span> <span style="color:#b8860b">hydra-posframe-p</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;hydra-posframe</span>)
+<span style="color:#a2f">:custom</span>
+(<span style="color:#b8860b">hydra-posframe-parameters</span>
+<span style="color:#666">&#39;</span>((<span style="color:#b8860b">left-fringe</span> <span style="color:#666">.</span> <span style="color:#666">4</span>) (<span style="color:#b8860b">right-fringe</span> <span style="color:#666">.</span> <span style="color:#666">4</span>) (<span style="color:#b8860b">height</span> <span style="color:#666">.</span> <span style="color:#666">18</span>) (<span style="color:#b8860b">width</span> <span style="color:#666">.</span> <span style="color:#666">105</span>) (<span style="color:#b8860b">min-height</span> <span style="color:#666">.</span> <span style="color:#666">17</span>) (<span style="color:#b8860b">max-height</span> <span style="color:#666">.</span> <span style="color:#666">30</span>) (<span style="color:#b8860b">top</span> <span style="color:#666">.</span> <span style="color:#666">25</span>)))
+<span style="color:#a2f">:custom-face</span>
+(<span style="color:#b8860b">hydra-posframe-border-face</span> ((<span style="color:#800">t</span> (<span style="color:#a2f">:background</span> <span style="color:#b44">&#34;#ffffff&#34;</span>))))
+(<span style="color:#b8860b">hydra-posframe-face</span> ((<span style="color:#800">t</span> (<span style="color:#a2f">:background-color</span> <span style="color:#b44">&#34;#6272a4&#34;</span>))))
+<span style="color:#a2f">:hook</span>
+(<span style="color:#b8860b">after-init</span> <span style="color:#666">.</span> <span style="color:#b8860b">hydra-posframe-enable</span>)
+)<span style="color:#080;font-style:italic">;end use-package-hydra-posframe</span>
+)<span style="color:#080;font-style:italic">;end use-package hydra</span>
+<span style="color:#080;font-style:italic">;Pretty Hydra</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">pretty-hydra</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;pretty-hydra</span>)
+)<span style="color:#080;font-style:italic">;end use package pretty hyrda</span>
+<span style="color:#080;font-style:italic">;title generator</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;s</span>)
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;all-the-icons</span>)
+(<span style="color:#a2f">with-eval-after-load</span> <span style="color:#b8860b">&#39;all-the-icons</span>
+(<span style="color:#a2f">declare-function</span> <span style="color:#b8860b">all-the-icons-faicon</span> <span style="color:#b8860b">&#39;all-the-icons</span>)
+(<span style="color:#a2f">declare-function</span> <span style="color:#b8860b">all-the-icons-fileicon</span> <span style="color:#b8860b">&#39;all-the-icons</span>)
+(<span style="color:#a2f">declare-function</span> <span style="color:#b8860b">all-the-icons-material</span> <span style="color:#b8860b">&#39;all-the-icons</span>)
+(<span style="color:#a2f">declare-function</span> <span style="color:#b8860b">all-the-icons-octicon</span> <span style="color:#b8860b">&#39;all-the-icons</span>)
 )
-;define an icon function with all-the-icons-faicon
-;to use filecon, etc, define same function with icon set
- (defun with-faicon (icon str &amp;rest height v-adjust)
-    (s-concat (all-the-icons-faicon icon :v-adjust (or v-adjust 0) :height (or height 1)) &quot; &quot; str))
-;filecon
- (defun with-fileicon (icon str &amp;rest height v-adjust)
-    (s-concat (all-the-icons-fileicon icon :v-adjust (or v-adjust 0) :height (or height 1)) &quot; &quot; str))
-
-</code></pre>
-
-<p></p>
-<br/>
+<span style="color:#080;font-style:italic">;define an icon function with all-the-icons-faicon</span>
+<span style="color:#080;font-style:italic">;to use filecon, etc, define same function with icon set</span>
+ (<span style="color:#a2f">defun</span> <span style="color:#b8860b">with-faicon</span> (<span style="color:#b8860b">icon</span> <span style="color:#b8860b">str</span> <span style="color:#a2f">&amp;rest</span> <span style="color:#b8860b">height</span> <span style="color:#b8860b">v-adjust</span>)
+    (<span style="color:#b8860b">s-concat</span> (<span style="color:#b8860b">all-the-icons-faicon</span> <span style="color:#b8860b">icon</span> <span style="color:#a2f">:v-adjust</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">v-adjust</span> <span style="color:#666">0</span>) <span style="color:#a2f">:height</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">height</span> <span style="color:#666">1</span>)) <span style="color:#b44">&#34; &#34;</span> <span style="color:#b8860b">str</span>))
+<span style="color:#080;font-style:italic">;filecon</span>
+ (<span style="color:#a2f">defun</span> <span style="color:#b8860b">with-fileicon</span> (<span style="color:#b8860b">icon</span> <span style="color:#b8860b">str</span> <span style="color:#a2f">&amp;rest</span> <span style="color:#b8860b">height</span> <span style="color:#b8860b">v-adjust</span>)
+    (<span style="color:#b8860b">s-concat</span> (<span style="color:#b8860b">all-the-icons-fileicon</span> <span style="color:#b8860b">icon</span> <span style="color:#a2f">:v-adjust</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">v-adjust</span> <span style="color:#666">0</span>) <span style="color:#a2f">:height</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">height</span> <span style="color:#666">1</span>)) <span style="color:#b44">&#34; &#34;</span> <span style="color:#b8860b">str</span>))</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/>
 <p style= "text-align:justify;">
 Most of my initialization code relies on the use-package package. If want to use Emacs or you&rsquo;re&rsquo; just getting into it, I recommend a couple of
 youtube videos to get you started. There&rsquo;s a lot of stuff out there. I like <a href="https://cestlaz.github.io/stories/emacs/"
