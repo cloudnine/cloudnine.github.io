@@ -119,12 +119,31 @@
     
 
 <article class="post">
+        <a class="title" href="https://cloudnine.github.io/science/windows-program-launcher/"><h2>Windows Program Launcher</h2></a>
+        <div class="mb-3">
+    <small>
+        <strong>By Yuri Tricys</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Oct 23, 2019&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/config/'>config</a>
+    </small>
+</div>
+        <div>
+            For any readers setting up configuration files for their emacs editor, here is the quick and easy code for the windows program launcher shown in the image below.    Here&rsquo;s the config code: 
+1 2 3 4 5 6 7  ;path of program you want in your launcher (defvar name-of-program-p &#34;C:/full-path-to-program/program.exe&#34;) ; launcher function (defun launch-program-name () (interactive) (w32-shell-execute nil name-of-program-p nil) );end launch-program-name    Then you can put the launch function name in your hydra config, like this:  (&quot;p&quot; launch-program-name &quot;Launch This Program&quot;)  For the generate hydra code see this post: Emacs Bookmarks  Thanks for reading.
+        </div>
+        <div>
+            <a href="https://cloudnine.github.io/science/windows-program-launcher/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
+        </div>
+      </article>
+    
+
+<article class="post">
         <a class="title" href="https://cloudnine.github.io/science/emacs-bookmarks/"><h2>Emacs Bookmarks</h2></a>
         <div class="mb-3">
     <small>
         <strong>By Yuri Tricys</strong>
         | <i class="far fa-calendar-alt"></i>&nbsp;Oct 20, 2019&nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/bookmarks/'>bookmarks</a>
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/bookmarks/'>bookmarks</a>, <a href='/tags/featured/'>featured</a>
     </small>
 </div>
         <div>
@@ -220,16 +239,36 @@ Here is something to think about. What does it mean to be normal?  The picture b
             A blog about passion, discovery, and science.
         </div>
         <a href='https://cloudnine.github.io/about/' class="btn btn-outline-secondary mt-3" role="button">Read More...</a>
-        <h2 class="mt-4">Top Posts</h2>
+
+<h2 class="mt-4">Featured Posts</h2>
+    <nav class="nav flex-column">
+
     
+        <a href="https://cloudnine.github.io/science/emacs-bookmarks/" class="nav-link">Emacs Bookmarks</a>
     
-    <h2 class="mt-4">Recent Posts</h2>
+    </nav>
+
+
+
+   <h2 class="mt-4">Recent Posts</h2>
     <nav class="nav flex-column">
         
+        <a href="https://cloudnine.github.io/science/windows-program-launcher/" class="nav-link">Windows Program Launcher</a>
+         
+        <a href="https://cloudnine.github.io/science/emacs-bookmarks/" class="nav-link">Emacs Bookmarks</a>
+         
+        <a href="https://cloudnine.github.io/science/emacs-with-an-interface/" class="nav-link">Emacs With an Interface</a>
+         
     </nav>
+
     
     <h2 class="mt-4 text-capitalize">categories</h2>
     <nav class="nav flex-column">
+        
+        <a href='https://cloudnine.github.io/categories/emacs/' class="nav-link">
+        emacs
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
         
         <a href='https://cloudnine.github.io/categories/motivation/' class="nav-link">
         motivation
@@ -243,11 +282,6 @@ Here is something to think about. What does it mean to be normal?  The picture b
         
         <a href='https://cloudnine.github.io/categories/books/' class="nav-link">
         books
-        <span class="badge badge-pill badge-secondary">1</span>
-        </a>
-        
-        <a href='https://cloudnine.github.io/categories/emacs/' class="nav-link">
-        emacs
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
@@ -266,8 +300,18 @@ Here is something to think about. What does it mean to be normal?  The picture b
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
+        <a href='https://cloudnine.github.io/tags/config/' class="nav-link">
+        config
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
         <a href='https://cloudnine.github.io/tags/emacs/' class="nav-link">
         emacs
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/featured/' class="nav-link">
+        featured
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
