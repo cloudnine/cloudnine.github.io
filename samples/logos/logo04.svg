@@ -14,7 +14,7 @@
    viewBox="0 0 114.36628 246.15703"
    version="1.1"
    id="svg12581"
-   sodipodi:docname="logo4.svg"
+   sodipodi:docname="logo04.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <defs
      id="defs12575" />
@@ -25,12 +25,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.0875"
-     inkscape:cx="-3516.9404"
-     inkscape:cy="1671.9433"
+     inkscape:zoom="0.7"
+     inkscape:cx="418.51819"
+     inkscape:cy="397.12391"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
-     showgrid="false" />
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-global="false" />
   <metadata
      id="metadata12578">
     <rdf:RDF>
@@ -39,7 +42,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -49,7 +52,7 @@
      id="layer1"
      transform="translate(-51.67404,-29.155442)">
     <g
-       transform="matrix(0.46689391,0,0,0.46689391,-606.93323,-1048.9928)"
+       transform="matrix(-0.46560297,0.03469583,0.03469583,0.46560297,731.90424,-1097.7374)"
        id="g11397">
       <path
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1em;font-family:NordiquePro-Bold;-inkscape-font-specification:'NordiquePro-Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0.0079375px;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#008000;fill-opacity:1;stroke:none;stroke-width:0.35334775;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
