@@ -18,8 +18,7 @@
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/emacs-configuration-overview/</guid>
-      <description>Below are some notes covering among other things why I got into Emacs,
-where I got my version, and how my configuration is organized. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or Sublime Text are awesome, and offer also great selections of unique packages. Atom, for example, has some super useful snippet packages. You can convert them into Yasnippet format (an Emacs snippet package), but it&#39;s a hassle.</description>
+      <description>Below are some notes covering among other things why I got into Emacs, where I got my version, and how my configuration is organized. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or Sublime Text are awesome, and offer also great selections of unique packages. Atom, for example, has some super useful snippet packages. You can convert them into Yasnippet format (an Emacs snippet package), but it&#39;s a hassle.</description>
     </item>
     
   </channel>
