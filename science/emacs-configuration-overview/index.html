@@ -212,7 +212,7 @@ unencumbered text with all the function of an IDE and more. Plus, it's old sKool
 <p style= "text-align:justify;"> I first got into Emacs in 2013. After five or six years of part-time college in sciences and arts, and many
 years in industry in a variety of positions, including business owner, I went back to university in 2009 to finish my bachelors degree.
 Having finished Adam Smith's <a href="https://en.wikipedia.org/wiki/The_Wealth_of_Nations" target="_blank">"The Wealth of Nations,"</a> but
-stumbled on Keynes's <a href="https://en.wikipedia.org/wiki/The_General_Theory_of_Employment,_Interest_and_Money" target="_blank">"The
+stumbled on Keynes' <a href="https://en.wikipedia.org/wiki/The_General_Theory_of_Employment,_Interest_and_Money" target="_blank">"The
 General Theory of Employment, Interest And Money"</a> I majored in economics. As much as the theory at what is now <a
 href="https://economics.ubc.ca/" target="_blank">The Vancouver School of Economics</a> was excellent, on the data and programming side our
 courses disappointingly veered away from computer science. While at one point we were introduced to the R GUI, in general we were taught
@@ -234,7 +234,7 @@ Stanford who in the late 90's had a lot of involvement with <a href="https://www
 Software</a> (GAMS), one of the frameworks used to solve equilibrium models. I found <a
 href="https://enec.ethz.ch/people/person-detail.html?persid=169504" target="_blank">Renger Van Nieuwkoop's</a> name while reading
 Rutherford's work, and when I saw it again beneath a GAMS thread post, I contacted him. Renger's price was out of my range, but someone
-anyway wanted to make it happen, because they spoke and I had my supervisor.
+anyway wanted to make it happen, because the directors spoke and I had my supervisor.
 </p>
 
 <p style= "text-align:justify;">
@@ -306,10 +306,10 @@ most out of Emacs, you'll need a few resources.</p>
 href="https://www.virtualbox.org/" target="_blank">VirtualBox</a> or <a
 href="https://www.x.org/releases/X11R7.7/doc/man/man1/Xserver.1.xhtml" target="_blank">X Server</a> is one way to run an Emacs configuration
 that does more than a <a href="http://www.guckes.net/pico/" target="_blank">Pico</a> or <a href="https://www.nano-editor.org/"
-target="_blank">Nano</a> on your windows machine. I use Ubuntu on WSl, but I haven't gotten around to running graphics programs on it. I'm
-still using Emacs on the Windows system. Other than the start-up time, usually a one-time cost, it's not slow enough for me
-to notice. Even with a reasonable amount of RAM however any work on data with more than a million records would be more efficiently done on the
-Linux system.
+target="_blank">Nano</a> on your windows machine. I use <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> on WSl, but I haven't
+gotten around to running graphics programs on it. I'm still using Emacs on the Windows system. Other than the start-up time, usually a
+one-time cost, it's not slow enough for me to notice. Even with a reasonable amount of RAM however any work on data with more than a million
+records would be more efficiently done on the Linux system.
 </p>
 
 <p style= "text-align:justify;">
@@ -320,9 +320,9 @@ code chunks in your configuration, using something like <code>(eval-after-load '
 </p>
 
 <p style= "text-align:justify;">
-Also, if you're using <a href="https://orgmode.org/worg/org-contrib/babel/" target="_blank">org-babel</a> in your initialization to separate
+Also, if you're using <a href="https://orgmode.org/worg/org-contrib/babel/" target="_blank">Org-babel</a> in your initialization to separate
 the code you want to send to the interpreter or compiler from text you want to write or send to the web, you'll want to remember the more
-separate chunks you tangle, the slower the load time. Ideally you would have two versions of your init file, one with lots of organized code
+separate chunks you tangle the slower the load time. Ideally you would have two versions of your init file, one with lots of organized code
 chunks for folding and editing easily, and another with one code chunk to optimize load time.
 </p>
 
@@ -412,8 +412,8 @@ You can then fold it to navigate it, interpret it, or compile it for faster load
 </p>
 
 <p style= "text-align:justify;">
-The following elisp sets up my initialization file, which is called on line 129 with <code>org-babel-load-file</code>.
-This goes in the .emacs file in your root emacs directory.  I'll add to the comments, marked as such with ;;, before the code to explain
+The following elisp sets up my initialization file, which is called on line ~129 with <code>org-babel-load-file</code>.
+This goes in the .emacs file in your root emacs directory.  I'll add to the comments before the code to explain
 them. I'm a fan of both GPL and BSD, but it's hard to argue with the merits of the free license Manish Parashar has used in his
 configuration <a href="http://www.wtfpl.net/about/" target="_blank">here</a>. Pardon any overkill, I was in a hurry so I just threw Parashar's .emacs together
 with mine. They were essentially the same, with some minor syntax changes.
@@ -599,7 +599,6 @@ with mine. They were essentially the same, with some minor syntax changes.
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">175
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">176
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">177
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">178
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#080;font-style:italic">;; Copyright (C) 2019 Manish Parashar</span>
@@ -645,7 +644,6 @@ with mine. They were essentially the same, with some minor syntax changes.
              <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;melpa-stable&#34;</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;https://stable.melpa.org/packages/&#34;</span>) <span style="color:#800">t</span>))
 
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">package-user-dir</span> <span style="color:#b44">&#34;~/emax/elpa&#34;</span>)
-
 
 <span style="color:#080;font-style:italic">;I don&#39;t think you need this. Apparently will not for sure when version 27 is out.</span>
 (<span style="color:#b8860b">package-initialize</span>)
@@ -841,7 +839,7 @@ through quickly each of the sections. So next I'm going to introduce you to the 
 </ul>
 
 <p><p style= "text-align:justify;">
-Well most of the above is operational, there are a lot of areas I&rsquo;ve set up but haven&rsquo;t gotten around to testing. Basically, whenever I do
+While most of the above is operational, there are a lot of areas I&rsquo;ve set up but haven&rsquo;t gotten around to testing. Basically, whenever I do
 any work I keep notes explaining how I did it. In most cases, I&rsquo;ve taken those notes and turned out some Elisp to automate the process, but
 in quite a few cases I haven&rsquo;t gotten around to it and haven&rsquo;t had to use it again. But, it&rsquo;s 80% done, and when I get the time I&rsquo;ll finish
 it off, optimized it, and publish it to the net. Below is an image of the same, for good measure.</p>
