@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/books/participative-management/</loc>
-    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://cloudnine.github.io/science/windows-program-launcher/</loc>
     <lastmod>2019-10-23T00:00:00+00:00</lastmod>
   </url>
@@ -68,19 +63,19 @@
   
   <url>
     <loc>https://cloudnine.github.io/books/</loc>
-    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/categories/books/</loc>
-    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/categories/</loc>
-    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -103,14 +98,14 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/categories/emacs/</loc>
-    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+    <loc>https://cloudnine.github.io/tags/emacs/</loc>
+    <lastmod>2019-10-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/tags/emacs/</loc>
-    <lastmod>2019-10-08T00:00:00+00:00</lastmod>
+    <loc>https://cloudnine.github.io/categories/emacs/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -129,12 +124,6 @@
   <url>
     <loc>https://cloudnine.github.io/tags/habits/</loc>
     <lastmod>2019-10-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/tags/management-science/</loc>
-    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
