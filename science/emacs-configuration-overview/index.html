@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
+        <meta property="og:title" content="Emacs Configuration Overview" />
+<meta property="og:description" content="The Where, What, and Why of My Emacs Configuration" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/science/emacs-configuration-overview/" /><meta property="article:published_time" content="2020-01-19T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-01-19T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs Configuration Overview"/>
+<meta name="twitter:description" content="The Where, What, and Why of My Emacs Configuration"/>
+
+
+
+
+        <title>
+  Emacs Configuration Overview | Cloud Nine
+</title>
+
+        <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
+        <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
+
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+        
+        
+        
+        
+
+        <link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.7e22d5c838f1d67d94fdbe552c5ddee005a8e6f900d1c23b9b2271da7a9143c8.css" integrity="sha256-fiLVyDjx1n2U/b5VLF3e4AWo5vkA0cI7myJx2nqRQ8g="  />
+
+        
+    <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+
+<link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="Cloud Nine" />
+<meta name="copyright" content="Copyrights" />
+
+
+<meta name="description" content="The Where, What, and Why of My Emacs Configuration">
+
+
+
+
+    
+<style type="text/css">
+        .feature-image {
+          background-image: url("https://cloudnine.github.io/images/pleiades.jpg");
+          width:100%;
+          height: auto;
+        }
+@media (max-width: 575px) {
+.feature-image {
+    min-height: 180px;
+}
+
+.feature-image-text {
+    max-width: 80%;
+    margin-top:5px;
+}
+.feature-image-text h1 {
+    font-size: 1.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: .75rem;
+}
+}  
+
+@media (min-width: 576px) {
+    .feature-image {
+    min-height: 200px;
+    }
+.feature-image-text {
+    max-width: 80%;
+    margin-top:10px;
+}
+.feature-image-text h1 {
+    font-size: 1.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: .75rem;
+}
+}  
+
+@media (min-width: 768px) {
+    .feature-image {
+    min-height: 250px;
+    }
+.feature-image-text {
+    max-width: 80%;
+    margin-top:10px;
+}
+.feature-image-text h1 {
+    font-size: 1.6rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1rem;
+}
+} 
+
+@media (min-width: 992px) {
+    .feature-image {
+    min-height: 350px;
+}
+.feature-image-text {
+    max-width: 600px;
+    margin-top:15px;
+}
+.feature-image-text h1 {
+    font-size: 2rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1.4rem;
+}
+} 
+@media (min-width: 1200px) {
+    .feature-image {
+    min-height: 500px;
+}
+.feature-image-text {
+    max-width: 760px;
+    margin-top:20px;
+}
+.feature-image-text h1 {
+    font-size: 2.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1.6rem;
+}
+} 
+</style>
+
+
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+            <div class="container">
+                    <a class="navbar-brand pr-2" href="https://cloudnine.github.io/">CLOUD NINE</a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/about/">About</a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/motivation/">Motivation</a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/books/">Books</a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/science/">Science</a>
+</li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        
+<header class="feature-image d-print-none">
+</header>
+
+
+        <div class="main">
+            
+<div class="container mt-4 post">
+    <h1>Emacs Configuration Overview</h1>
+    <div class="mb-3">
+    <small>
+        <strong>By Yuri Tricys</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Jan 19, 2020&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/configuration/'>configuration</a>
+    </small>
+</div>
+
+        <div class="mt-4 mb-4 main-content">
+        <p><br/>
+<h3>Intro Post So I Can Share Code Chunks From My Emacs Initialization File In Order</h3></p>
+
+<p><p style= "text-align:justify;"> Here are some notes about how I set-up my emacs config, how I used to set it up, and what areas I&rsquo;m still
+working on. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or WebStorm are awesome, and offer also cool
+unique packages. For example, Atom has some super useful snippet packages. Yes, you can convert them into Yasnippet&rsquo;s format (Yasnippet is
+an emacs snippet package), but that&rsquo;s a hassle. Still, I use and promote emacs, despite the fact it&rsquo;s written in the incredibly widely used
+elisp language, because it has an incredibly clean feel when you&rsquo;re using it. Properly configured, it&rsquo;s simple unencumbered text with all
+the function of an IDE and much much more. Plus&hellip;it&rsquo;s old sKool, with a capital K.</p>
+<br/></p>
+
+<h3>Why </h3>
+
+<p><p style= "text-align:justify;"> I first got into Emacs in 2013. After five or six years of part-time college in sciences and arts and many
+years in industry in a variety of positions, including business owner, I went back to university in 2009 to finish my bachelors degree.
+Having finished Adam Smith&rsquo;s &ldquo;The Wealth Of Nations,&rdquo; but stumbled on Keynes&rsquo;s &ldquo;The General Theory of Employment, Interest And Money&rdquo; I
+majored in economics. As much as the theory at what is now the Vancouver School of Economics was excellent, on the data and programming side
+our courses disappointingly veered away from computer science. We were taught Stata. I used at one point Notepad++, and in one class we were
+introduced to the R GUI, but I did most of my work with Excel, Word, and Open Office.
+</p>
+<p style= "text-align:justify;"> After graduation, I left the Economics Department. My passion for economics was (and is) still
+alive, but for all it&rsquo;s beauty a university is an ugly thing. Nothing had changed. If the earth were to be &lsquo;flat&rsquo; today, the university would
+promote it. The irony is that in our world both progress and degeneration are born from a profit making sham. I went on my way, but one year
+after graduation a former professor contacted me and offered research work. Hungry for among other things knowledge I ended up back in the
+jaws of the beast.
+</p>
+<br/>
+<p style= "text-align:justify;">
+After signing the contract I spent a month wading through the theory. Elusively shallow waters turned deep. I needed guidance. For better
+and worse, that&rsquo;s what I got. My director agreed to a budget for supervision. I had been digging around general equilibrium papers and had
+found a lot of stuff written by <a href="https://aae.wisc.edu/faculty/tfrutherford/" target="_blank">Thomas Rutherford,</a> a Phd from
+Stanford who in the late 90&rsquo;s had a lot of involvement with General Equilibrium Modelling Software (GAMS), one of the frameworks used to
+solve equilibrium models. I found <a href="https://enec.ethz.ch/people/person-detail.html?persid=169504" target="_blank">Renger Van
+Nieuwkoop&rsquo;s</a> name while reading Rutherford&rsquo;s work, and when I saw it again beneath a GAMS thread post, I contacted him. Renger&rsquo;s price
+was out of my range, but I guess the director anyway wanted to make it happen, because they spoke and I had my supervisor.
+</p>
+<br/>
+<p style= "text-align:justify;">
+Renger gave me what I was looking for, the computational side of economics. He showed me <a href="https://www.gnu.org/software/emacs/"
+target="_blank">Emacs</a> (the subject of this post), <a
+href="https://github.com/emacs-ess/ESS/tree/2812b85880807e5da35dbf2e69fc1b577f2ad7f4" target="_blank">ESS</a> (the emacs speaks statistics
+package, an interface alternative to the R GUI, or Rstudio), and the Emacs <a href="https://github.com/ShiroTakeda/gams-mode/tree/210bd355dd2075bde3fd76c880aa489a25a54cb5"
+target="_blank">GAMS package</a>, now available on <a href="https://melpa.org/#/" target="_blank">Melpa</a>.
+Most of our work focused on GAMS, but to do it I had to get started with Emacs. In the process, I dropped everything I&rsquo;d learned about Stata
+and narrowed down on R. On the data side &ndash; GAMS models are fed panels of data called Social Accounting Matrices (SAMS), and a part of my job was
+to build a big one &ndash; I was using Excel and Microsoft Access. Today of course I would still use a fair amount of Excel, but I would use a MySQL
+program like Mariadb over Microsoft Access and I&rsquo;d use it through Emacs.
+</p>
+<br/>
+<h3>Where </h3>
+<p style= "text-align:justify;">
+I never did meet Renger, but even over Skype, and even bouncing questions back at me as a questions, he was great to work with. That said,
+he didn&rsquo;t need a lot of Emacs in his work flow. I don&rsquo;t know what it&rsquo;s like today, but back then his initialization file wasn&rsquo;t a big deal.
+Even so, it was recommend I use a pre-configured Emacs installation. I used Vincent Goulet&rsquo;s <a
+href="https://vigou3.gitlab.io/emacs-modified-windows/" target="_blank">version</a>, which then and at least for now comes with R and a
+Latex engine pre-configured. It&rsquo;s not the one I&rsquo;m using now. I&rsquo;ll get to that.
+</p>
+<br/>
+<p style= "text-align:justify;">
+The evolution of every Emacs configuration is too long of a story. It&rsquo;s a trial and error process. Emacs at it&rsquo;s best is like an operating
+system in an operating system. You&rsquo;re building a car (well, a workshop) from second hand parts. You&rsquo;ve got to find them, fit and run them
+together, fix them when they don&rsquo;t work, and make new ones when you need them. Everything is built in a variation of lisp called elisp, and
+while lisp is a very cool language with a very cool history, it&rsquo;s basically useless for anything practical other than programming theory or
+Emacs. You can get from a blank initialization to a fully operational emacs installation without taking a single lisp course, but if I were
+to start again, I&rsquo;d take a week or two and do a crash course in Lisp. I&rsquo;m not an expert programmer, heck I&rsquo;ve only been programming seven
+years, I&rsquo;m only just a jack of all trades, but I know enough to know a good resource when I see it. Here&rsquo;s a link to a book written by the
+quite famous programmer, writer, and investor Paul Graham, founder of <a href="https://www.ycombinator.com/" target="_blank">Ycombinator</a>
+one the incubators behind such startups as &ldquo;Dropbox,&rdquo; &ldquo;Airbnb,&rdquo; &ldquo;Zapier,&rdquo; &ldquo;Gitlab,&rdquo; and &ldquo;Docker,&rdquo; to name a few. You can buy Paul Graham&rsquo;s
+book &ldquo;On Lisp, Advanced Techniques for Common Lisp&rdquo; from Amazon for $154 USD, or you can download essentially the same thing from Paul&rsquo;s
+website <a href="https://sep.yimg.com/ty/cdn/paulgraham/onlisp.pdf?t=1564708198&" target="_blank">here</a> for free. Either way, the book is
+a decent introduction to programming and for anyone taking the emacs route in the long run worth, along with other resources, a few weeks of
+your time.
+</p>
+<br/>
+<p style= "text-align:justify;">
+Emacs configurations get hefty and drag on load time. You can run it as a server, in which case it runs as process and it&rsquo;s always on, or
+you can optimize the load time. One way to do that is to use a Linux distro, and if you do you will find emacs is just all around faster.
+There&rsquo;s a lot of reasons for this, one of them is that emacs packages are often written for Unix and spawn a lot of processes, which is slow
+on the Windows NTFS backed file system. If you&rsquo;re just starting out, start on Linux. I&rsquo;m Windows user and it&rsquo;s not now worth it for me to
+explore too much Linux. Having said that, since Windows SubSystem Linux came out, I&rsquo;m using Ubuntu on my windows machine, but I haven&rsquo;t
+bothered to get X server up and running, or experimented with Virtual Box, two ways to really speed up Emacs on Windows. Actually, with my
+config Emacs is not that slow. I mean yes, my startup time is more than 30 seconds not less than 3, but I could actually bring that down to
+less than 10 seconds using conditional calls to code chunks in my babel tangles, which I am getting around to. Anyway, if you&rsquo;re going to
+use emacs on windows without any Linux distro, you&rsquo;ll want to use a version that is compiled for windows. The advantage is you get access to
+Linux libraries without having to use Cygwin (or as mentioned VirtualBox). You can compile Emacs for Windows
+yourself or use someone elses compilation. Vincent Goulet&rsquo;s version is compiled for windows, I&rsquo;m using today a version I found on the web
+last year that supports PDF Tools and Image Magick. Way Cool.
+</p>
+<br/>
+<p style= "text-align:justify;">
+Here&rsquo;s the write up from my notes written for me so I know where I got my emacs version. I know nothing about the guy, I just use his distro.
+</p>
+<br/>
+<h4> Windows Emacs Installation</h4>
+<p style= "text-align:justify;">
+- a better emacs exe is compiled with imagemagick support, pdftools support, and other libraries sourced from
+Mingw64. &ldquo;XPM JPEG TIFF GIF PNG RSVG IMAGEMAGICK SOUND NOTIFY ACL GNUTLS LIBXML2 ZLIB TOOLKIT_SCROLL_BARS MODULES THREADS LCMS2&rdquo;
+Currently there is at least one person compiling and publishing a version with these patches, see here:
+<a href="https://github.com/m-parashar/emax64/releases" target="_blank"><a href="https://github.com/m-parashar/emax64/releases">https://github.com/m-parashar/emax64/releases</a></a>
+<a href="https://ntemacs.sourceforge.io/" target="_blank"><a href="https://ntemacs.sourceforge.io/">https://ntemacs.sourceforge.io/</a></a>
+<a href="https://github.com/m-parashar/emax64" target="_blank"><a href="https://github.com/m-parashar/emax64">https://github.com/m-parashar/emax64</a></a>
+<a href="https://github.com/m-parashar/emax64/releases" target="_blank"><a href="https://github.com/m-parashar/emax64/releases">https://github.com/m-parashar/emax64/releases</a></a>
+I prefer to install to c://, as that is what I&rsquo;m used to.
+As per his instructions:
+</p>
+<br/>
+<h4>Description</h4>
+<p style= "text-align:justify;">
+64-bit Windows build of Emacs 26.2 final release.
+Patched with ImageMagick 7 support. Binaries and libs included.
+PDF-TOOLS (epdfinfo.exe) included. [emax.7z package]
+Features[1]: &ldquo;XPM JPEG TIFF GIF PNG RSVG IMAGEMAGICK SOUND NOTIFY ACL GNUTLS LIBXML2 ZLIB TOOLKIT_SCROLL_BARS MODULES THREADS LCMS2&rdquo;
+Optimized clean build. Options[2]: &ldquo;&ndash;without-compress-install &ndash;without-dbus &ndash;with-modules &lsquo;CFLAGS= -O2 -g3&rsquo;&rdquo;
+Built and tested on a clean Windows 10 system.
+addpm modified to not create/update any registry HOME entries. It only creates shortcuts as it should.
+<br/>
+[1] C-h v system-configuration-features
+[2] C-h v system-configuration-options
+</p>
+<br/>
+<h4>Installation:</h4>
+<p style= "text-align:justify;">
+Unpack the 7z binary archive, preferably in C:\ root directory.
+Double-click the addpm.exe file in emax64\bin to create/update shortcuts.
+</p>
+<br/>
+<h4>Recommended:</h4>
+<p style= "text-align:justify;">
+-installation instructions for msys2, which provides a bash shell and other linux tools for windows,
+and is a windows programming tool
+<a href="http://www.msys2.org" target="_blank"><a href="http://www.msys2.org/">http://www.msys2.org/</a></a>
+Install MSYS2 [64-bit: <a href="http://repo.msys2.org/distrib/msys2-x86_64-latest.exe"
+target="_blank"><a href="http://repo.msys2.org/distrib/msys2-x86_64-latest.exe">http://repo.msys2.org/distrib/msys2-x86_64-latest.exe</a></a>]
+<br/>
+Download and unpack emax.7z into your HOME directory, usually C:\Users&lt;username&gt;\AppData\Roaming
+emax.7z is an environment to make your Emacs experience a little more tolerable on Windows.
+It includes a barebones dotfile along with BusyBox 64-bit, some MinGW packages, SSH, W3M, Aspell, and other GNU tools to help you start right away.
+</p>
+<br/>
+<h4>Sources:</h4>
+<p style= "text-align:justify;">
+GNU Emacs sources, patched as described above, are available as a separate src archive.
+All the other binaries included in the emax64 and emax archives are unmodified and distributed as is.
+Their sources can be downloaded from MSYS2/MinGW servers: <a href="http://repo.msys2.org/mingw/sources/" target="_blank"><a href="http://repo.msys2.org/mingw/sources/">http://repo.msys2.org/mingw/sources/</a></a>
+BusyBox (Windows) sources can be obtained from here: <a href="https://frippery.org/files/busybox/" target="_blank"><a href="https://frippery.org/files/busybox/">https://frippery.org/files/busybox/</a></a>
+</p>
+<br/>
+<br/></p>
+
+<p><h3>What</h3>
+<p style= "text-align:justify;">
+An Emacs initialization file calls and configures packages (libraries). Like any other program resources need to be loaded into namespaces in order so
+they can be found when called on. One of the more popular Emacs packages is called Org-mode. I think &ldquo;Org&rdquo; is for &ldquo;organization&rdquo; but I think
+of &ldquo;Origami&rdquo; because org mode has cool section folding. Org-mode has an affiliated library called Org-babel. It enables labelled section chunks to be
+sent to the interpreter or compiler. With Org-babel you can put your entire initialization file into one .org file (though it&rsquo;s actually not
+recommended, but we&rsquo;ll get to that when/if I get more time.) You can then fold it to navigate it, and interpret it. Actually, you can
+compile it into an elisp file for faster loading later.
+</p>
+<p style= "text-align:justify;">
+The following code sets up my initialization file. Ask any questions in the comments.
+</p>
+<br/></p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">105
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">106
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">107
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">108
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">109
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">110
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">111
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">112
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">113
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">114
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">115
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">116
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">117
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">118
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">119
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">120
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">121
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">122
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">123
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">124
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">125
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">126
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">127
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">128
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">129
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">130
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">131
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">132
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">133
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">134
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">135
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">136
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">137
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">138
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">139
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">140
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">141
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">142
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">143
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">144
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">145
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">146
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">147
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">148
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">149
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">150
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">151
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">152
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">153
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">154
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">155
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">156
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">157
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">158
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">159
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">160
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">161
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">162
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">163
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">164
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">165
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">166
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">167
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">168
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">169
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">170
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">171
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">172
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#080;font-style:italic">;;; .emacs --- bootstrap the rest of it</span>
+<span style="color:#080;font-style:italic">;; Copyright (C) 2019 Manish Parashar</span>
+<span style="color:#080;font-style:italic">;; Author: Manish Parashar</span>
+<span style="color:#080;font-style:italic">;; This program is free software. You can redistribute it and/or modify it under</span>
+<span style="color:#080;font-style:italic">;; the terms of the Do What The Fuck You Want To Public License, version 2 as</span>
+<span style="color:#080;font-style:italic">;; published by Sam Hocevar.</span>
+<span style="color:#080;font-style:italic">;;</span>
+<span style="color:#080;font-style:italic">;; This program is distributed in the hope that it will be useful, but WITHOUT</span>
+<span style="color:#080;font-style:italic">;; ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span>
+<span style="color:#080;font-style:italic">;; FOR A PARTICULAR PURPOSE.</span>
+<span style="color:#080;font-style:italic">;;</span>
+<span style="color:#080;font-style:italic">;; You should have received a copy of the Do What The Fuck You Want To Public</span>
+<span style="color:#080;font-style:italic">;; License along with this program. If not, see http://www.wtfpl.net/.</span>
+
+<span style="color:#080;font-style:italic">;; Everything in this file below this point is a mix between the code authored by the guy above &#34;Manish Parashar&#34; and Yuri Tricys.</span>
+<span style="color:#080;font-style:italic">;; Basically I took his code, which did the same thing as my earlier code but was written slightly differently, and threw it together with my code</span>
+<span style="color:#080;font-style:italic">;;, then cut out what wasn&#39;t working. I still haven&#39;t had time to clean up the overkill in this file, but the tangle configuration refered to on</span>
+<span style="color:#080;font-style:italic">;; 129, 130 of this file, &#34;c:/emacs/emax/emax.org&#34; is my emacs configuration.</span>
+
+<span style="color:#080;font-style:italic">;comment on off to debug init</span>
+<span style="color:#080;font-style:italic">;(setq debug-on-error t)</span>
+
+<span style="color:#080;font-style:italic">;; Set repositories</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;package</span>)
+(<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">package-enable-at-startup</span> <span style="color:#800">nil</span>)
+
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">load-prefer-newer</span> <span style="color:#800">t</span>)
+(<span style="color:#b8860b">package-initialize</span>)
+
+(<span style="color:#a2f">unless</span> (<span style="color:#b8860b">assoc-default</span> <span style="color:#b44">&#34;melpa&#34;</span> <span style="color:#b8860b">package-archives</span>)
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;package-archives</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;melpa&#34;</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;http://melpa.org/packages/&#34;</span>) <span style="color:#800">t</span>))
+
+(<span style="color:#a2f">unless</span> (<span style="color:#b8860b">assoc-default</span> <span style="color:#b44">&#34;melpa&#34;</span> <span style="color:#b8860b">package-archives</span>)
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;package-archives</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;melpa2&#34;</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;http://www.mirrorservice.org/sites/melpa.org/packages/&#34;</span>) <span style="color:#800">t</span>))
+
+(<span style="color:#a2f">unless</span> (<span style="color:#b8860b">assoc-default</span> <span style="color:#b44">&#34;melpa&#34;</span> <span style="color:#b8860b">package-archives</span>)
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;package-archives</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;melpa3&#34;</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;http://www.mirrorservice.org/sites/stable.melpa.org/packages/&#34;</span>) <span style="color:#800">t</span>))
+
+(<span style="color:#a2f">unless</span> (<span style="color:#b8860b">assoc-default</span> <span style="color:#b44">&#34;orgmode&#34;</span> <span style="color:#b8860b">package-archives</span>)
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;package-archives</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;org&#34;</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;http://orgmode.org/elpa/&#34;</span>) <span style="color:#800">t</span>))
+
+(<span style="color:#a2f">unless</span> (<span style="color:#b8860b">assoc-default</span> <span style="color:#b44">&#34;marmalade&#34;</span> <span style="color:#b8860b">package-archives</span>)
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;package-archives</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;marmalade&#34;</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;https://marmalade-repo.org/packages/&#34;</span>) <span style="color:#800">t</span>))
+(<span style="color:#a2f">unless</span> (<span style="color:#b8860b">assoc-default</span> <span style="color:#b44">&#34;gnu&#34;</span> <span style="color:#b8860b">package-archives</span>)
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;package-archives</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;gnu&#34;</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;https://elpa.gnu.org/packages/&#34;</span>) <span style="color:#800">t</span>))
+
+(<span style="color:#a2f">unless</span> (<span style="color:#b8860b">assoc-default</span> <span style="color:#b44">&#34;melpa-stable&#34;</span> <span style="color:#b8860b">package-archives</span>)
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;package-archives</span>
+             <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;melpa-stable&#34;</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;https://stable.melpa.org/packages/&#34;</span>) <span style="color:#800">t</span>))
+
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">package-user-dir</span> <span style="color:#b44">&#34;~/emax/elpa&#34;</span>)
+(<span style="color:#b8860b">package-initialize</span>)
+
+<span style="color:#080;font-style:italic">;; Install dependencies</span>
+(<span style="color:#a2f">unless</span> (<span style="color:#a2f">and</span> (<span style="color:#b8860b">package-installed-p</span> <span style="color:#b8860b">&#39;delight</span>)
+               (<span style="color:#b8860b">package-installed-p</span> <span style="color:#b8860b">&#39;use-package</span>))
+(<span style="color:#b8860b">package-refresh-contents</span>)
+(<span style="color:#b8860b">package-install</span> <span style="color:#b8860b">&#39;delight</span> <span style="color:#800">t</span>)
+(<span style="color:#b8860b">package-install</span> <span style="color:#b8860b">&#39;use-package</span> <span style="color:#800">t</span>))
+(<span style="color:#a2f">setq-default</span>
+<span style="color:#080;font-style:italic">; use-package-always-defer t</span>
+ <span style="color:#b8860b">use-package-always-ensure</span> <span style="color:#800">t</span>
+ <span style="color:#b8860b">use-package-verbose</span> <span style="color:#800">t</span>)
+<span style="color:#080;font-style:italic">;(use-package auto-compile)</span>
+
+<span style="color:#080;font-style:italic">;; Default value for :pin in each use-package.</span>
+<span style="color:#080;font-style:italic">;(setq use-package-always-pin &#34;melpa-stable&#34;)</span>
+
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b44">&#34;c:/emacs/emax/elpa/auto-compile&#34;</span>)
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;packed</span>)
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;auto-compile</span>)
+(<span style="color:#b8860b">auto-compile-on-load-mode</span>)
+(<span style="color:#b8860b">auto-compile-on-save-mode</span>)
+
+(<span style="color:#a2f">eval-when-compile</span>
+  (<span style="color:#a2f">setq</span> <span style="color:#b8860b">use-package-expand-minimally</span> <span style="color:#b8860b">byte-compile-current-file</span>))
+
+(<span style="color:#a2f">eval-when-compile</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;use-package</span>))
+
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">diminish</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;diminish</span>))
+
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">bind-key</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;bind-key</span>))
+
+<span style="color:#080;font-style:italic">;; Use latest Org</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">org</span>
+<span style="color:#080;font-style:italic">;:pin org</span>
+<span style="color:#a2f">:ensure</span> <span style="color:#b8860b">org-plus-contrib</span>
+<span style="color:#a2f">:demand</span> <span style="color:#800">t</span>)
+
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">emax-root</span> (<span style="color:#00a000">concat</span> (<span style="color:#00a000">expand-file-name</span> <span style="color:#b44">&#34;~&#34;</span>) <span style="color:#b44">&#34;/emax&#34;</span>))
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">emax-bin</span> (<span style="color:#00a000">concat</span> <span style="color:#b8860b">emax-root</span> <span style="color:#b44">&#34;/bin&#34;</span>))
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">emax-bin64</span> (<span style="color:#00a000">concat</span> <span style="color:#b8860b">emax-root</span> <span style="color:#b44">&#34;/bin64&#34;</span>))
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">emax-mingw64</span> (<span style="color:#00a000">concat</span> <span style="color:#b8860b">emax-root</span> <span style="color:#b44">&#34;/mingw64/bin&#34;</span>))
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">emax-lisp</span> (<span style="color:#00a000">concat</span> <span style="color:#b8860b">emax-root</span> <span style="color:#b44">&#34;/lisp&#34;</span>))
+
+
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">exec-path</span> (<span style="color:#00a000">cons</span> <span style="color:#b8860b">emax-bin</span> <span style="color:#b8860b">exec-path</span>))
+(<span style="color:#b8860b">setenv</span> <span style="color:#b44">&#34;PATH&#34;</span> (<span style="color:#00a000">concat</span> <span style="color:#b8860b">emax-bin</span> <span style="color:#b44">&#34;;&#34;</span> (<span style="color:#b8860b">getenv</span> <span style="color:#b44">&#34;PATH&#34;</span>)))
+
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">exec-path</span> (<span style="color:#00a000">cons</span> <span style="color:#b8860b">emax-bin64</span> <span style="color:#b8860b">exec-path</span>))
+(<span style="color:#b8860b">setenv</span> <span style="color:#b44">&#34;PATH&#34;</span> (<span style="color:#00a000">concat</span> <span style="color:#b8860b">emax-bin64</span> <span style="color:#b44">&#34;;&#34;</span> (<span style="color:#b8860b">getenv</span> <span style="color:#b44">&#34;PATH&#34;</span>)))
+
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">exec-path</span> (<span style="color:#00a000">cons</span> <span style="color:#b8860b">emax-mingw64</span> <span style="color:#b8860b">exec-path</span>))
+(<span style="color:#b8860b">setenv</span> <span style="color:#b44">&#34;PATH&#34;</span> (<span style="color:#00a000">concat</span> <span style="color:#b8860b">emax-mingw64</span> <span style="color:#b44">&#34;;&#34;</span> (<span style="color:#b8860b">getenv</span> <span style="color:#b44">&#34;PATH&#34;</span>)))
+
+(<span style="color:#b8860b">setenv</span> <span style="color:#b44">&#34;PATH&#34;</span> (<span style="color:#00a000">concat</span> <span style="color:#b44">&#34;C:\\msys64\\usr\\bin;C:\\msys64\\mingw64\\bin;&#34;</span> (<span style="color:#b8860b">getenv</span> <span style="color:#b44">&#34;PATH&#34;</span>)))
+
+(<span style="color:#a2f">dolist</span> (<span style="color:#b8860b">dir</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;~/emax/&#34;</span> <span style="color:#b44">&#34;~/emax/bin/&#34;</span> <span style="color:#b44">&#34;~/emax/bin64/&#34;</span> <span style="color:#b44">&#34;~/emax/mingw64/bin/&#34;</span> <span style="color:#b44">&#34;~/emax/lisp/&#34;</span> <span style="color:#b44">&#34;~/emax/elpa/&#34;</span>))
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b8860b">dir</span>))
+
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b44">&#34;c:/emacs/lisp/&#34;</span>)
+<span style="color:#080;font-style:italic">;;the pre-installed packages</span>
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b44">&#34;c:/emacs/site-lisp/&#34;</span>)
+
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b44">&#34;c:/emacs/share/26.2/lisp&#34;</span>)
+
+(<span style="color:#b8860b">set-language-environment</span> <span style="color:#b8860b">&#39;utf-8</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">locale-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
+(<span style="color:#b8860b">set-default-coding-systems</span> <span style="color:#b8860b">&#39;utf-8</span>)
+(<span style="color:#b8860b">set-terminal-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
+(<span style="color:#b8860b">prefer-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
+
+<span style="color:#080;font-style:italic">;; Tangle configuration</span>
+(<span style="color:#b8860b">org-babel-load-file</span> (<span style="color:#00a000">expand-file-name</span> <span style="color:#b44">&#34;~/emax/emax.org&#34;</span>))
+(<span style="color:#b8860b">org-babel-load-file</span> <span style="color:#b44">&#34;c:/emacs/emax/emax.org&#34;</span>)
+
+<span style="color:#080;font-style:italic">;;(garbage-collect))</span>
+
+<span style="color:#080;font-style:italic">;;; init.el ends here</span>
+(<span style="color:#b8860b">custom-set-variables</span>
+ <span style="color:#080;font-style:italic">;; custom-set-variables was added by Custom.</span>
+ <span style="color:#080;font-style:italic">;; If you edit it by hand, you could mess it up, so be careful.</span>
+ <span style="color:#080;font-style:italic">;; Your init file should contain only one such instance.</span>
+ <span style="color:#080;font-style:italic">;; If there is more than one, they won&#39;t work right.</span>
+ <span style="color:#666">&#39;</span>(<span style="color:#b8860b">package-selected-packages</span>
+   (<span style="color:#a2f">quote</span>
+   (<span style="color:#b8860b">magit</span> <span style="color:#b8860b">yasnippet-snippets</span> <span style="color:#b8860b">yaml-mode</span> <span style="color:#b8860b">writegood-mode</span> <span style="color:#b8860b">wordnut</span>
+<span style="color:#b8860b">which-key-posframe</span> <span style="color:#b8860b">web-mode</span> <span style="color:#b8860b">w3m</span> <span style="color:#b8860b">volatile-highlights</span>
+<span style="color:#b8860b">visual-fill-column</span> <span style="color:#b8860b">use-package-hydra</span> <span style="color:#b8860b">tagedit</span> <span style="color:#b8860b">synosaurus</span>
+<span style="color:#b8860b">switch-window</span> <span style="color:#b8860b">sublime-themes</span> <span style="color:#b8860b">start-menu</span> <span style="color:#b8860b">spacemacs-theme</span>
+<span style="color:#b8860b">solarized-theme</span> <span style="color:#b8860b">snazzy-theme</span> <span style="color:#b8860b">smooth-scrolling</span> <span style="color:#b8860b">smex</span> <span style="color:#b8860b">smartparens</span>
+<span style="color:#b8860b">smart-comment</span> <span style="color:#b8860b">slime</span> <span style="color:#b8860b">restart-emacs</span> <span style="color:#b8860b">request</span> <span style="color:#b8860b">rainbow-mode</span>
+<span style="color:#b8860b">rainbow-identifiers</span> <span style="color:#b8860b">rainbow-delimiters</span> <span style="color:#b8860b">pretty-hydra</span> <span style="color:#b8860b">powershell</span>
+<span style="color:#b8860b">php-extras</span> <span style="color:#b8860b">peep-dired</span> <span style="color:#b8860b">paredit</span> <span style="color:#b8860b">pandoc-mode</span> <span style="color:#b8860b">org-super-agenda</span>
+<span style="color:#b8860b">org-ref</span> <span style="color:#b8860b">org-plus-contrib</span> <span style="color:#b8860b">org-pdfview</span> <span style="color:#b8860b">org-bullets</span>
+<span style="color:#b8860b">org-beautify-theme</span> <span style="color:#b8860b">olivetti</span> <span style="color:#b8860b">neotree</span> <span style="color:#b8860b">mwim</span> <span style="color:#b8860b">minions</span> <span style="color:#b8860b">mingus</span>
+<span style="color:#b8860b">markdown-toc</span> <span style="color:#b8860b">markdown-preview-mode</span> <span style="color:#b8860b">js2-mode</span> <span style="color:#b8860b">jeison</span> <span style="color:#b8860b">intellij-theme</span>
+<span style="color:#b8860b">image+</span> <span style="color:#b8860b">ido-vertical-mode</span> <span style="color:#b8860b">ido-ubiquitous</span> <span style="color:#b8860b">ido-at-point</span>
+<span style="color:#b8860b">hungry-delete</span> <span style="color:#b8860b">highlight-parentheses</span> <span style="color:#b8860b">highlight-numbers</span>
+<span style="color:#b8860b">highlight-indent-guides</span> <span style="color:#b8860b">helm-projectile</span> <span style="color:#b8860b">helm-mode-manager</span>
+<span style="color:#b8860b">helm-ispell</span> <span style="color:#b8860b">helm-helm-commands</span> <span style="color:#b8860b">helm-fuzzier</span> <span style="color:#b8860b">helm-flyspell</span>
+<span style="color:#b8860b">helm-emmet</span> <span style="color:#b8860b">helm-css-scss</span> <span style="color:#b8860b">helm-company</span> <span style="color:#b8860b">helm-chrome</span> <span style="color:#b8860b">helm-ag</span>
+<span style="color:#b8860b">helm-addressbook</span> <span style="color:#b8860b">frame-cmds</span> <span style="color:#b8860b">flyspell-popup</span> <span style="color:#b8860b">flymd</span> <span style="color:#b8860b">flx-isearch</span>
+<span style="color:#b8860b">flx-ido</span> <span style="color:#b8860b">fill-column-indicator</span> <span style="color:#b8860b">engine-mode</span> <span style="color:#b8860b">elnode</span> <span style="color:#b8860b">easy-kill</span>
+<span style="color:#b8860b">doom-themes</span> <span style="color:#b8860b">doom-modeline</span> <span style="color:#b8860b">diminish</span> <span style="color:#b8860b">desktop+</span> <span style="color:#b8860b">delight</span> <span style="color:#b8860b">dashboard</span>
+<span style="color:#b8860b">cycle-themes</span> <span style="color:#b8860b">company-web</span> <span style="color:#b8860b">company-try-hard</span> <span style="color:#b8860b">company-tern</span>
+<span style="color:#b8860b">company-quickhelp</span> <span style="color:#b8860b">company-php</span> <span style="color:#b8860b">company-fuzzy</span> <span style="color:#b8860b">command-log-mode</span>
+<span style="color:#b8860b">color-theme-modern</span> <span style="color:#b8860b">change-inner</span> <span style="color:#b8860b">challenger-deep-theme</span>
+<span style="color:#b8860b">browse-kill-ring</span> <span style="color:#b8860b">beacon</span> <span style="color:#b8860b">avy</span> <span style="color:#b8860b">auto-yasnippet</span> <span style="color:#b8860b">anzu</span>
+<span style="color:#b8860b">all-the-icons-dired</span> <span style="color:#b8860b">ag</span> <span style="color:#b8860b">academic-phrases</span> <span style="color:#b8860b">ac-php</span>
+<span style="color:#b8860b">ac-html-bootstrap</span>))))
+(<span style="color:#b8860b">custom-set-faces</span>
+ <span style="color:#080;font-style:italic">;; custom-set-faces was added by Custom.</span>
+ <span style="color:#080;font-style:italic">;; If you edit it by hand, you could mess it up, so be careful.</span>
+ <span style="color:#080;font-style:italic">;; Your init file should contain only one such instance.</span>
+ <span style="color:#080;font-style:italic">;; If there is more than one, they won&#39;t work right.</span>
+ )</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/>
+<br/>
+<h4>My Initialization File</h4>
+<p style= "text-align:justify;">
+Is a big one. Here&rsquo;s an image of it folded origami style. In later posts, I plan to go through quickly each of the sections. This can be a
+reference to the order of those sections. Keep in mind, the more separate chunks you have to tangle, the slower your emacs installation will
+load. Ideally you would have two versions of your init file, one with a ton of organized code chunks or folding and editing easily, and
+another with one code chunk for optimal load time. You would also defer load times as much as possible with &ldquo;use-package&rdquo; or something like,
+<code>(eval-after-load &lsquo;example-mode &lsquo;(require &lsquo;setup-example-mode))</code>
+</p>
+<br/>
+<img src="/images/init.png" alt="emacs-initialization" align="left" title="Tricys Emacs Initialization" class="img" width="100%"/>
+<br/></p>
+
+<p><br/>
+<br/></p>
+
+
+        <div class="share-icons d-flex justify-content-center d-print-none">
+            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2femacs-configuration-overview%2f&text=Emacs%20Configuration%20Overview&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Tweet</small></div>
+</a>
+
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2femacs-configuration-overview%2f&t=Emacs%20Configuration%20Overview" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Share</small></div>
+</a>
+
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2femacs-configuration-overview%2f&title=Emacs%20Configuration%20Overview&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Share</small></div>
+</a>
+
+<a href="javascript:window.print()" title="Print this article" class="p-2" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fa fa-print fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Print</small></div>
+</a>
+        </div>
+    </div>
+
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+      
+      
+      if (window.location.hostname == "localhost")
+                return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'cloud-nine-2';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
+
+</div>
+<div class="sidebar d-print-none d-none d-xl-block">
+    
+        <h2>Cloud Nine</h2>
+        <div>
+            A blog about passion, discovery, and science.
+        </div>
+        <a href='https://cloudnine.github.io/about/' class="btn btn-outline-secondary mt-3" role="button">Read More...</a>
+
+<h2 class="mt-4">Featured Posts</h2>
+    <nav class="nav flex-column">
+
+    
+        <a href="https://cloudnine.github.io/science/emacs-bookmarks/" class="nav-link">Emacs Bookmarks</a>
+    
+    </nav>
+
+
+
+   <h2 class="mt-4">Recent Posts</h2>
+    <nav class="nav flex-column">
+        
+        <a href="https://cloudnine.github.io/science/emacs-configuration-overview/" class="nav-link">Emacs Configuration Overview</a>
+         
+        <a href="https://cloudnine.github.io/science/windows-program-launcher/" class="nav-link">Windows Program Launcher</a>
+         
+        <a href="https://cloudnine.github.io/science/emacs-bookmarks/" class="nav-link">Emacs Bookmarks</a>
+         
+        <a href="https://cloudnine.github.io/science/emacs-with-an-interface/" class="nav-link">Emacs With an Interface</a>
+         
+    </nav>
+
+    
+    <h2 class="mt-4 text-capitalize">categories</h2>
+    <nav class="nav flex-column">
+        
+        <a href='https://cloudnine.github.io/categories/emacs/' class="nav-link">
+        emacs
+        <span class="badge badge-pill badge-secondary">3</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/books/' class="nav-link">
+        books
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/motivation/' class="nav-link">
+        motivation
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/science/' class="nav-link">
+        science
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+    </nav>
+    
+    <h2 class="mt-4 text-capitalize">tags</h2>
+    <nav class="nav flex-column">
+        
+        <a href='https://cloudnine.github.io/tags/bookmarks/' class="nav-link">
+        bookmarks
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/computer-science/' class="nav-link">
+        computer-science
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/config/' class="nav-link">
+        config
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/configuration/' class="nav-link">
+        configuration
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs/' class="nav-link">
+        emacs
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/featured/' class="nav-link">
+        featured
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/finance/' class="nav-link">
+        finance
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/habits/' class="nav-link">
+        habits
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/management-science/' class="nav-link">
+        management-science
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/resiliance/' class="nav-link">
+        resiliance
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+    </nav>
+    
+</div>
+
+
+        </div>
+
+        <footer class="mt-auto footer d-print-none">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Website</h5>
+This blog was created using <a href="https://gohugo.io/">Hugo</a>,
+<a href="https://getbootstrap.com/">Bootstrap</a>, and the Silhouette Hugo theme.
+
+                    </div>
+
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Disclaimer</h5>
+Opinions expressed here are my own and may not reflect those of any company I work for, or people I
+work with.
+
+                    </div>
+
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Copyrights</h5>
+© 2019 - Yuri Tricys
+
+                    </div>
+
+
+                </div>
+
+                <hr />
+
+                <div class="d-flex justify-content-center icons">
+                    <a class="py-2 px-2" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><i class="fab fa-linkedin"></i></a>
+<a class="py-2 px-2" href='https://cloudnine.github.io/index.xml'><i class="fas fa-rss"></i></a>
+
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
