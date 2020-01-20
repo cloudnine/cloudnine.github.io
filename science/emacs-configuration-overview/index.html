@@ -328,7 +328,9 @@ chunks for folding and editing easily, and another with one code chunk to optimi
 
 <p style= "text-align:justify;">
 Finally, if you're running Emacs on a windows system, you'll want to run a version that is compiled for windows. This will give you access
-to useful linux libraries. Today, I'm using a window's compiled version I found on the web last year that supports PDF Tools and Image Magick. Way Cool.
+to useful linux libraries. Today, I'm using a window's compiled version I found on the web last year that supports <a
+href="https://github.com/politza/pdf-tools" target="_blank">PDF Tools</a> and <a
+href="https://imagemagick.org/index.php" target="_blank">Image Magick</a>. Way Cool.
 The next section is from the notes I took about the Emacs version I found. I don't know the guy who compiled it. I just use his distro.
 </p>
 <h4> Windows Emacs Installation</h4>
@@ -418,7 +420,7 @@ with mine. They were essentially the same, with some minor syntax changes.
 </p>
 <br/>
 
-```elisp
+```EmacsLisp
 
 ;; Copyright (C) 2019 Manish Parashar
 ;; Author: Manish Parashar
@@ -615,54 +617,58 @@ through quickly each of the sections. So next I'm going to introduce you to the 
 </p>
 
 <p><h3> MY INITIALIZATION FILE</h3>
-<br/>
-* SET UP, DEFAULTS, AND CUSTOMIZATION
-* APPEARANCE
-* Default Operations
-* Selection region and Mark
-* Browsers
-* Finding Files
-* ediff improvements
-* Finding Differences in Files With Diff
-* elnode
-* Editing
-* THE HELM HYDRA
-* Web Developer Hydra
-* Autocomplete
-* Emmet
-* Yasnippet
-* Auto-yasnippet
-* Program Launcher
-* WEB MODE
-* PHP Mode
-* CSS Mode
-* Easy Hugo
-* Configure your code (test)
-* Pretty insane company configuration
-* Javascript Mode
-* Javascript syntax highlighting
-* Json syntax highlighting
-* Hydra for editing javascript
-* Pandoc-Mode
-* Comment/uncomment block
-* Shell
-* Text mode
-* Org
-* Git Magit Hydra
-* Printing
-* Flymake
-* Auctek, Miktex, Latex
-* CSV Mode
-* MYSQL (SQL MODE)
-* ESS Mode
-* Gams
-* HTMLize
-* Markdown
-* Mingus
-* Rectangles
-* Yaml Mode
-* Git
-<br/>
+<br/></p>
+
+<ul>
+<li>SET UP, DEFAULTS, AND CUSTOMIZATION</li>
+<li>APPEARANCE</li>
+<li>Default Operations</li>
+<li>Selection region and Mark</li>
+<li>Browsers</li>
+<li>Finding Files</li>
+<li>ediff improvements</li>
+<li>Finding Differences in Files With Diff</li>
+<li>elnode</li>
+<li>Editing</li>
+<li>THE HELM HYDRA</li>
+<li>Web Developer Hydra</li>
+<li>Autocomplete</li>
+<li>Emmet</li>
+<li>Yasnippet</li>
+<li>Auto-yasnippet</li>
+<li>Program Launcher</li>
+<li>WEB MODE</li>
+<li>PHP Mode</li>
+<li>CSS Mode</li>
+<li>Easy Hugo</li>
+<li>Configure your code (test)</li>
+<li>Pretty insane company configuration</li>
+<li>Javascript Mode</li>
+<li>Javascript syntax highlighting</li>
+<li>Json syntax highlighting</li>
+<li>Hydra for editing javascript</li>
+<li>Pandoc-Mode</li>
+<li>Comment/uncomment block</li>
+<li>Shell</li>
+<li>Text mode</li>
+<li>Org</li>
+<li>Git Magit Hydra</li>
+<li>Printing</li>
+<li>Flymake</li>
+<li>Auctek, Miktex, Latex</li>
+<li>CSV Mode</li>
+<li>MYSQL (SQL MODE)</li>
+<li>ESS Mode</li>
+<li>Gams</li>
+<li>HTMLize</li>
+<li>Markdown</li>
+<li>Mingus</li>
+<li>Rectangles</li>
+<li>Yaml Mode</li>
+<li>Git</li>
+</ul>
+
+<p><br/>
 <p style= "text-align:justify;">
 Well most of the above is operational, there are a lot of areas I&rsquo;ve set up but haven&rsquo;t gotten around to testing. Basically, whenever I do
 any work I keep notes explaining how I did it. In most cases, I&rsquo;ve taken those notes and turned out some Elisp to automate the process, but
