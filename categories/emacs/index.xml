@@ -18,8 +18,8 @@
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/emacs-configuration-overview/</guid>
-      <description>Intro Post So I Can Share Code Chunks From My Emacs Initialization File In Order
-Here are some notes about how I set-up my emacs config, how I used to set it up, and what areas I&amp;rsquo;m still working on. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or WebStorm are awesome, and offer also cool unique packages. For example, Atom has some super useful snippet packages.</description>
+      <description>Below are some notes covering among other things why I got into Emacs,
+where I got my version, and how my configuration is organized. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or Sublime Text are awesome, and offer also great selections of unique packages. Atom, for example, has some super useful snippet packages. You can convert them into Yasnippet format (an Emacs snippet package), but it&#39;s a hassle.</description>
     </item>
     
     <item>
