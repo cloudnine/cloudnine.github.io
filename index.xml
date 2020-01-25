@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyrights</copyright>
-    <lastBuildDate>Sun, 19 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Emacs Installation and Defaults</title>
+      <link>https://cloudnine.github.io/science/emacs-installation-and-defaults/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/emacs-installation-and-defaults/</guid>
+      <description>Directly Below are the subheadings to the first main heading of my initialization file, see my last post Emacs Configuration Overview. I&#39;ll go through the lines of code in order, but remember, the line numbers you see in Hugo&#39;s code block css styling are relative to the code in each styling block, not the emacs initialization file [Hugo is the Static Content Management System based on GOLANG I used to make this blog].</description>
+    </item>
     
     <item>
       <title>Emacs Configuration Overview</title>
