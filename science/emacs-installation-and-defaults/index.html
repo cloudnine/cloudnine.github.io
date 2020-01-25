@@ -202,52 +202,46 @@ stuff and skip anything redundant in this post and the next few. Each post will 
 breakdown and write-up below that. I like to get these blog posts written in less than a half hour, so just ignore mistakes. </p>
 
 <h3>Beginning of Initialization File</h3>
-
-<ul>
-<li>SET UP, DEFAULTS, AND CUSTOMIZATION
-
-<ul>
-<li>Necessary Adjustments when you set-up on a new computer</li>
-<li>Paths to Update on Change</li>
-<li>Executables Paths</li>
-<li>Libraries</li>
-<li>Function declarations</li>
-<li>Emacs Customization Seperate File</li>
-<li>Emax Defaults</li>
-<li>Some Defaults</li>
-<li>Frames, Buffers, And Lines</li>
-<li>Some Custom Default Functions</li>
-<li>Some New Key Bindings</li>
-<li>Popup, Pos-tip,Tooltip, Posframe</li>
-<li>Which Key</li>
-</ul></li>
-</ul>
+<br/>
+* SET UP, DEFAULTS, AND CUSTOMIZATION
+    * Necessary Adjustments when you set-up on a new computer
+    * Paths to Update on Change
+    * Executable Paths
+    * Libraries
+    * Function declarations
+    * Emacs Customization Seperate File
+    * Emax Defaults
+    * Some Defaults
+    * Frames, Buffers, And Lines
+    * Some Custom Default Functions
+    * Some New Key Bindings
+    * Popup, Pos-tip,Tooltip, Posframe
+    * Which Key
 
 <p style= "text-align:justify;">
-Oh ya, when I installed the dashboard package there was an option to choose a picture. That's when I named my Emacs configuration. Poseidon,
-the text editor.</p>
+Oh yes, when I installed the dashboard package there was an option to choose a picture. That's when I named my Emacs configuration. Welcome
+to Poseidon the text editor.</p>
 
-<p><br/>
+<br/>
 <img src="/images/poseidon.png" alt="emacs-initialization" align="center" title="Tricys Emacs Initialization" class="img" width="100%" />
-<br/></p>
-
+<br/>
+<br/>
 <h3>Necessary Adjustments when you set-up on a new computer</h3>
 
 <h4>steps needed to get set-up on a new computer</h4>
+<br/>
+1. install emacs
+2. install external executables
+3. paste .emacs and myinit.org from active emacs installation to new emacs installation
+4. Change load paths in myinit.org
+5. paste dependency folders to new emacs (snippets, etc.)
+6. adjust home variable on new system
+7. adjust emacs to have administer rights
+8. restart emacs and deal with each error as emacs runs through myinit.org code (Most errors should be easily resolved by updating directory
+paths, providing missing libraries, ensuring executables and missing library dependencies are installed)
+9. to troubleshoot basic errors use emacs debugger, messages, and the restart-emacs package. Also, comment out org tangle blocks and
+initialize the init incrementally.
 
-<ol>
-<li>install emacs</li>
-<li>install external executables</li>
-<li>paste .emacs and myinit.org from active emacs installation to new emacs installation</li>
-<li>Change load paths in myinit.org</li>
-<li>paste dependency folders to new emacs (snippets, etc.)</li>
-<li>adjust home variable on new system</li>
-<li>adjust emacs to have administer rights</li>
-<li>restart emacs and deal with each error as emacs runs through myinit.org code (Most errors should be easily resolved by updating directory
-paths, providing missing libraries, ensuring executables and missing library dependencies are installed)</li>
-<li>to troubleshoot basic errors use emacs debugger, messages, and the restart-emacs package. Also, comment out org tangle blocks and
-initialize the init incrementally.</li>
-</ol>
 
 <h4>Paths to Update on Change</h4>
 
@@ -366,7 +360,7 @@ Later in the code, usually in a use-package :config or a function the variables 
 </div>
 </div>
 <p><p style= "text-align:justify;">
-So that&rsquo;s the first 130 lines or so of my init file (52 shown here plus the paths I didn&rsquo;t bother to paste in and some text). Coming up are
+So there&rsquo;s the first 130 lines or so of my init file (52 shown here plus the paths I didn&rsquo;t bother to paste in and some text). Coming up are
 the function declarations.
 </p>
 <br/>
