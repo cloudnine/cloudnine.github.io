@@ -120,80 +120,6 @@
     <br/><br/>
 
 
-    
-
-<article class="post">
-        <a class="title" href="https://cloudnine.github.io/science/emacs-installation-and-defaults/"><h2>Emacs Installation and Defaults</h2></a>
-        <div class="mb-3">
-    <small>
-        <strong>By Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Jan 24, 2020&nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/configuration/'>configuration</a>
-    </small>
-</div>
-        <div>
-            Directly below are the subheadings to the first main heading of my initialization file, see my last post Emacs Configuration Overview. I'll go through the lines of code in order, but remember, the line numbers you see in Hugo's code block css styling are relative to the code on this page not the emacs initialization file [Hugo is the Static Content Management System based on GO I used to make this blog].
-        </div>
-        <div>
-            <a href="https://cloudnine.github.io/science/emacs-installation-and-defaults/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
-        </div>
-      </article>
-    
-
-<article class="post">
-        <a class="title" href="https://cloudnine.github.io/science/emacs-configuration-overview/"><h2>Emacs Configuration Overview</h2></a>
-        <div class="mb-3">
-    <small>
-        <strong>By Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Jan 19, 2020&nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/configuration/'>configuration</a>
-    </small>
-</div>
-        <div>
-            Below are some notes covering among other things why I got into Emacs, where I got my version, and how my configuration is organized. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or Sublime Text are awesome, and offer also great selections of unique packages. Atom, for example, has some super useful snippet packages. You can convert them into Yasnippet format (an Emacs snippet package), but it's a hassle.
-        </div>
-        <div>
-            <a href="https://cloudnine.github.io/science/emacs-configuration-overview/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
-        </div>
-      </article>
-    
-
-<article class="post">
-        <a class="title" href="https://cloudnine.github.io/science/windows-program-launcher/"><h2>Windows Program Launcher</h2></a>
-        <div class="mb-3">
-    <small>
-        <strong>By Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Oct 23, 2019&nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/config/'>config</a>
-    </small>
-</div>
-        <div>
-            For any readers setting up configuration files for their emacs editor, here is the quick and easy code for the windows program launcher shown in the image below.    Here&rsquo;s the config code: 
-1 2 3 4 5 6 7  ;path of program you want in your launcher (defvar name-of-program-p &#34;C:/full-path-to-program/program.exe&#34;) ; launcher function (defun launch-program-name () (interactive) (w32-shell-execute nil name-of-program-p nil) );end launch-program-name    Then you can put the launch function name in your hydra config, like this:  (&quot;p&quot; launch-program-name &quot;Launch This Program&quot;)  For the generate hydra code see this post: Emacs Bookmarks  Thanks for reading.
-        </div>
-        <div>
-            <a href="https://cloudnine.github.io/science/windows-program-launcher/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
-        </div>
-      </article>
-    
-
-<article class="post">
-        <a class="title" href="https://cloudnine.github.io/science/emacs-bookmarks/"><h2>Emacs Bookmarks</h2></a>
-        <div class="mb-3">
-    <small>
-        <strong>By Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Oct 20, 2019&nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/bookmarks/'>bookmarks</a>, <a href='/tags/featured/'>featured</a>
-    </small>
-</div>
-        <div>
-            Jumping To Directories In Emacs  If you want to accomplish things efficiently with your computer, you will benefit from mastering a text editor. I use emacs as a general project manager for web development, writing, and organizing thoughts, materials, and actions. Jumping to and from directories and files enables quickly me to get things done more efficiently. To do this I use a few different packages and functions. They are:
-        </div>
-        <div>
-            <a href="https://cloudnine.github.io/science/emacs-bookmarks/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
-        </div>
-      </article>
-    
 
 <article class="post">
         <a class="title" href="https://cloudnine.github.io/motivation/life-moves-habits-tell-you-where/"><h2>Life Moves Habits Tell You Where</h2></a>
@@ -214,24 +140,6 @@
     
 
 <article class="post">
-        <a class="title" href="https://cloudnine.github.io/science/emacs-with-an-interface/"><h2>Emacs With an Interface</h2></a>
-        <div class="mb-3">
-    <small>
-        <strong>By Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Oct 8, 2019&nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/computer-science/'>computer-science</a>
-    </small>
-</div>
-        <div>
-            What&rsquo;s All This About Text Editors? I always used to ask, why do people post about their text-editors? These days I know the reason. Computers are lightening fast, using them isn't. You need to leave what you are doing to turn on another piece of software. You have to search for files. You're constantly having to remember how a process works, or search around the IDE to figure out how to do something again.
-        </div>
-        <div>
-            <a href="https://cloudnine.github.io/science/emacs-with-an-interface/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
-        </div>
-      </article>
-    
-
-<article class="post">
         <a class="title" href="https://cloudnine.github.io/motivation/the-bean-machine/"><h2>The Bean Machine</h2></a>
         <div class="mb-3">
     <small>
@@ -246,24 +154,6 @@ Here is something to think about. What does it mean to be normal?  The picture b
         </div>
         <div>
             <a href="https://cloudnine.github.io/motivation/the-bean-machine/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
-        </div>
-      </article>
-    
-
-<article class="post">
-        <a class="title" href="https://cloudnine.github.io/books/another-book-post/"><h2>Another Book Post</h2></a>
-        <div class="mb-3">
-    <small>
-        <strong>By Cloud Nine</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Oct 5, 2019&nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/finance/'>finance</a>
-    </small>
-</div>
-        <div>
-             The Alchemy Of Finance  And here is a code block, right? (setq whatever-variable-to t)    YOu Know    
-        </div>
-        <div>
-            <a href="https://cloudnine.github.io/books/another-book-post/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
         </div>
       </article>
     
