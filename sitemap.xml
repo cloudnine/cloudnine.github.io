@@ -61,8 +61,8 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/tags/bookmarks/</loc>
-    <lastmod>2019-10-20T00:00:00+00:00</lastmod>
+    <loc>https://cloudnine.github.io/categories/about-the-author/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -80,36 +80,42 @@
   
   <url>
     <loc>https://cloudnine.github.io/categories/</loc>
-    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/tags/computer-science/</loc>
-    <lastmod>2019-10-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/tags/config/</loc>
-    <lastmod>2019-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/tags/configuration/</loc>
+    <loc>https://cloudnine.github.io/tags/changing-computers/</loc>
     <lastmod>2020-01-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/categories/computer-science/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/economics/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/tags/emacs/</loc>
-    <lastmod>2019-10-08T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/categories/emacs/</loc>
+    <lastmod>2019-10-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/emacs-configuration/</loc>
     <lastmod>2020-01-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -133,6 +139,12 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/tags/hydras/</loc>
+    <lastmod>2019-10-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/categories/motivation/</loc>
     <lastmod>2019-10-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -151,12 +163,6 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/categories/science/</loc>
-    <lastmod>2019-10-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cloudnine.github.io/science/</loc>
     <lastmod>2020-01-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -164,12 +170,30 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/</loc>
-    <lastmod>2019-10-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/text-editors/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/verification/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/categories/video/</loc>
+    <lastmod>2019-10-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/windows/</loc>
+    <lastmod>2019-10-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
