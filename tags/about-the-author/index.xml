@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About the Author on Cloud Nine</title>
+    <link>https://cloudnine.github.io/tags/about-the-author/</link>
+    <description>Recent content in About the Author on Cloud Nine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright</copyright>
+    <lastBuildDate>Thu, 26 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/tags/about-the-author/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cloud Nine</title>
+      <link>https://cloudnine.github.io/about/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/about/</guid>
+      <description>Cloud Nine is a blog about &#39;stuff.&#39; Yes, exactly, &#39;stuff,&#39; in all its ambiguous grandeur. &#39;Stuff&#39; can mean pretty much anything, but I&#39;m talking about a special kind of stuff, that kind that makes us human. You know like, &#39;aack,&#39; philosophy, ethics, motivation, and work. Or, success, family, friends, and community. Okay, you get the point. I have a license to write about pretty much anything here. And even though you can see from the menu items on the navigation bar that Cloud Nine is about sciency stuff, and books; and even though I&#39;m going to warn you right now it&#39;s also about computers; rest assured, the motivation section is meant for everyone.</description>
+    </item>
+    
+  </channel>
+</rss>

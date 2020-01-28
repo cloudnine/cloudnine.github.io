@@ -42,7 +42,7 @@
         
         
 
-<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.d3cf17fbe41ce82c59db50a8df29ad7baafefeb34e8636ec243749b6b1b4ef2a.css" integrity="sha256-088X&#43;&#43;Qc6CxZ21Co3ymte6r&#43;/rNOhjbsJDdJtrG07yo="  />
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.358fc61794444105539e4124b11018de13041f4bbfb03bdbd4ae3578f038437c.css" integrity="sha256-NY/GF5REQQVTnkEksRAY3hMEH0u/sDvb1K41ePA4Q3w="  />
 
         
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -86,7 +86,7 @@
         
         
 
-<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.d3cf17fbe41ce82c59db50a8df29ad7baafefeb34e8636ec243749b6b1b4ef2a.css" integrity="sha256-088X&#43;&#43;Qc6CxZ21Co3ymte6r&#43;/rNOhjbsJDdJtrG07yo="  />
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.358fc61794444105539e4124b11018de13041f4bbfb03bdbd4ae3578f038437c.css" integrity="sha256-NY/GF5REQQVTnkEksRAY3hMEH0u/sDvb1K41ePA4Q3w="  />
 
 
 
@@ -234,7 +234,7 @@
 
 
         <div class="mt-4 mb-4 main-content">
-        <p style= "text-align:justify;">Directly below are the subheadings to the first main heading of my initialization file, see my last post <a
+        <p class="p-news">Directly below are the subheadings to the first main heading of my initialization file, see my last post <a
 href="https://cloudnine.github.io/science/emacs-configuration-overview/" target="_blank">Emacs Configuration Overview.</a>
 I'll go through the lines of code in order, but remember, the line numbers you see in Hugo's code block css styling are relative to the
 code on this page not the emacs initialization file [<a href="https://gohugo.io/" target="_blank">Hugo</a> is the Static Content
@@ -266,7 +266,7 @@ breakdown and write-up below that.  </p>
 </ul></li>
 </ul>
 
-<p style= "text-align:justify;">
+<p class="p-news">
 Oh yes, when I installed the dashboard package there was an option to choose a picture. That's when I named my Emacs configuration. Welcome
 to Poseidon the text editor.</p>
 
@@ -294,13 +294,13 @@ initialize the init incrementally.</li>
 
 <h4>Paths to Update on Change</h4>
 
-<p style= "text-align:justify;">
+<p class="p-news">
 Here paths to executables, libraries, and external urls are stored in variables. When you install Poseidon on a new system, or change a
 program or its location, change the path variable assignments here. Later in the code, usually in a use-package :config or a function the
 variables are called.
 </p>
 
-<p style= "text-align:justify;">
+<p class="p-news">
 Oh, btw, before the path assignments is an org-tangle block, delineated by the org-mode elisp code on lines 2 and 4. Everything inside them is processed by emacs, everything outside is notes and text you can push to the web easily.
 </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -426,7 +426,7 @@ Oh, btw, before the path assignments is an org-tangle block, delineated by the o
 <span style="">#</span><span style="color:#b8860b">+end_src</span></code></pre></td></tr></table>
 </div>
 </div>
-<p><p style= "text-align:justify;">
+<p><p class="p-news">
 So there&rsquo;s the first 130 lines or so of my init file (52 shown here plus the paths I didn&rsquo;t bother to paste in and some text). Btw, it
 doesn&rsquo;t matter where you store your stuff, as long as emacs knows where it is. In fact, that&rsquo;s the point of assigning the paths to
 variables. When your paths or path names change, you don&rsquo;t have to search the document for each path. Coming up are the function
@@ -587,14 +587,14 @@ declarations.
         <span class="badge badge-pill badge-secondary">4</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/emacs/' class="nav-link">
-        emacs
-        <span class="badge badge-pill badge-secondary">4</span>
-        </a>
-        
         <a href='https://cloudnine.github.io/tags/finance/' class="nav-link">
         finance
         <span class="badge badge-pill badge-secondary">4</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs/' class="nav-link">
+        emacs
+        <span class="badge badge-pill badge-secondary">3</span>
         </a>
         
         <a href='https://cloudnine.github.io/tags/trends-global/' class="nav-link">
@@ -612,6 +612,11 @@ declarations.
         <span class="badge badge-pill badge-secondary">2</span>
         </a>
         
+        <a href='https://cloudnine.github.io/tags/about-the-author/' class="nav-link">
+        about-the-author
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
         <a href='https://cloudnine.github.io/tags/changing-computers/' class="nav-link">
         changing-computers
         <span class="badge badge-pill badge-secondary">1</span>
@@ -619,11 +624,6 @@ declarations.
         
         <a href='https://cloudnine.github.io/tags/featured/' class="nav-link">
         featured
-        <span class="badge badge-pill badge-secondary">1</span>
-        </a>
-        
-        <a href='https://cloudnine.github.io/tags/habits/' class="nav-link">
-        habits
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
