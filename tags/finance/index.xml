@@ -6,7 +6,7 @@
     <description>Recent content in Finance on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyrights</copyright>
+    <copyright>Copyright</copyright>
     <lastBuildDate>Sat, 05 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/tags/finance/index.xml" rel="self" type="application/rss+xml" />
@@ -19,6 +19,15 @@
       
       <guid>https://cloudnine.github.io/books/another-book-post/</guid>
       <description> The Alchemy Of Finance  And here is a code block, right? (setq whatever-variable-to t)    YOu Know    </description>
+    </item>
+    
+    <item>
+      <title>Upcoming ECB Rate Changes</title>
+      <link>https://cloudnine.github.io/archives/upcoming-ecb-rate-changes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/archives/upcoming-ecb-rate-changes/</guid>
+      <description>Yesterday&#39;s flash Harmonized Consumer Price Index indicated a drop in EMU price rises to 0.5%. Given the ECB&#39;s primary target is price stability, markets are widely anticipating tomorrow&#39;s ECB meeting will see overnight interest rates reduced to negative levels.This would have banks less likely to deposit daily surpluses in the ECB overnight and more likely to loan them out. They would also commit a smaller portion of liquidity to paying down liabilities previously acquired with the ECB.</description>
     </item>
     
   </channel>

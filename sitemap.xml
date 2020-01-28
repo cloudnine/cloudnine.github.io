@@ -67,6 +67,16 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/archives/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/categories/archives/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/books/</loc>
     <lastmod>2019-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -178,6 +188,15 @@
     <loc>https://cloudnine.github.io/tags/text-editors/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/trends-global/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/archives/upcoming-ecb-rate-changes/</loc>
   </url>
   
   <url>

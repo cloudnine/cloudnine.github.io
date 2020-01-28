@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyrights</copyright>
+    <copyright>Copyright</copyright>
     <lastBuildDate>Sun, 19 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
@@ -18,6 +18,15 @@
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/categories/about-the-author/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Archives</title>
+      <link>https://cloudnine.github.io/categories/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/archives/</guid>
       <description></description>
     </item>
     
