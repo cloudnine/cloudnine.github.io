@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Science on Cloud Nine</title>
+    <link>https://cloudnine.github.io/categories/science/</link>
+    <description>Recent content in Science on Cloud Nine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright</copyright>
+    <lastBuildDate>Fri, 12 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/categories/science/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Little Firms Big Decisions</title>
+      <link>https://cloudnine.github.io/archives/data-needs-and-firm-size/</link>
+      <pubDate>Fri, 12 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/archives/data-needs-and-firm-size/</guid>
+      <description>Big data means billions if not trillions of observations recorded daily. Sophisticated data infrastructures and advanced algorithms reveal new insights into our fast changing world, but only for those massive organizations with the transaction frequency and the know how to extract them, right?
+The question is one of relevance. While big data benefits for large organizations are readily tangible--like in the case where retailers want to know when customers are more likely to purchase which products, or what optimal prices will move discounted products in a set time frame--smaller organizations sometimes just don&#39;t see how the data revolution is important to them.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Business on Cloud Nine</title>
+    <link>https://cloudnine.github.io/tags/business/</link>
+    <description>Recent content in Business on Cloud Nine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright</copyright>
+    <lastBuildDate>Tue, 15 Mar 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/tags/business/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Research, The New Profit Center</title>
+      <link>https://cloudnine.github.io/archives/research-new-profit-center/</link>
+      <pubDate>Tue, 15 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/archives/research-new-profit-center/</guid>
+      <description>Enhanced financial regulation typically comes with intended and unintended consequences. Directive 2004/39/EC, the Market for Financial Instruments Directive (MiFID), for example, successfully increased competition among financial instrument trading organizations in Europe. This brought down consumer prices and narrowed margins. It also sent market participants looking to move large blocks of shares into dark pools, where trade data are not made public.
+There will be intended and unintended consequences from MiFID&#39;s successor, MiFID2, which is anticipated to be in effect by January 2018.</description>
+    </item>
+    
+    <item>
+      <title>Organizational Psychology</title>
+      <link>https://cloudnine.github.io/archives/organizational-psychology/</link>
+      <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/archives/organizational-psychology/</guid>
+      <description>Numerous studies have examined what intangible and tangible factors might cause one organization to outperform others over a period of time. There is no question that ideas and talent are invaluable, but it is no longer any surprise that the single most important factor affecting organizational performance is organizational psychology. Here are a few examples:
+Ray Dalio runs Bridgewater Associates, one of the largest hedge funds in the world. In Connecticut, he&#39;s got 1500 people, some of whom are the best and brightest brains in the financial sector, but does Ray cite his PhDs, research acumen, and process as his number one a comparative advantage?</description>
+    </item>
+    
+  </channel>
+</rss>
