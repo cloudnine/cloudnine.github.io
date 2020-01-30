@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cloudnine.github.io/motivation/achieving-alignment-through-communication-01-2020/</loc>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/science/emacs-installation-and-defaults/</loc>
     <lastmod>2020-01-24T00:00:00+00:00</lastmod>
   </url>
@@ -133,7 +138,7 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/archives/data-needs-and-firm-size/</loc>
+    <loc>https://cloudnine.github.io/archives/little-firms-big-decisions/</loc>
     <lastmod>2016-02-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -243,6 +248,11 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/archives/strong-dollar-could-be-good-for-canada/</loc>
+    <lastmod>2009-11-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/archives/bill-sank-ignatieff-likely-to-float/</loc>
     <lastmod>2009-11-09T00:00:00+00:00</lastmod>
   </url>
@@ -284,7 +294,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -345,7 +355,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/business/</loc>
-    <lastmod>2016-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -453,13 +463,13 @@
   
   <url>
     <loc>https://cloudnine.github.io/categories/motivation/</loc>
-    <lastmod>2019-10-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/motivation/</loc>
-    <lastmod>2019-10-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -471,19 +481,13 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/psychology/</loc>
-    <lastmod>2019-10-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/tags/research/</loc>
     <lastmod>2016-03-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/categories/science/</loc>
-    <lastmod>2016-02-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

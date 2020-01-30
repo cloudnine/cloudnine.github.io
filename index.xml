@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright</copyright>
-    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Achieving Alignment Through Communication</title>
+      <link>https://cloudnine.github.io/motivation/achieving-alignment-through-communication-01-2020/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/motivation/achieving-alignment-through-communication-01-2020/</guid>
+      <description>Psychologist do important work, but it doesn&#39;t take one to know that people operate a lot like computers. We&#39;ve got code inside that issues a response when stimulated. The more you know the person, the more you know the responses. In any organization team building improves organization outcomes. But what is going on when team members bond?
+Here&#39;s a favourite concept of mine to explain. Let each line in this chart represent a person; but more than that, let it represent their psychology, the millions of associations their mind contains between images and expectations, words and definitions, and information and responses.</description>
+    </item>
     
     <item>
       <title>Emacs Installation and Defaults</title>
@@ -285,10 +295,10 @@ Firstly, the legal profession stands to gain from those data driven insights tha
     
     <item>
       <title>Little Firms Big Decisions</title>
-      <link>https://cloudnine.github.io/archives/data-needs-and-firm-size/</link>
+      <link>https://cloudnine.github.io/archives/little-firms-big-decisions/</link>
       <pubDate>Fri, 12 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/archives/data-needs-and-firm-size/</guid>
+      <guid>https://cloudnine.github.io/archives/little-firms-big-decisions/</guid>
       <description>Big data means billions if not trillions of observations recorded daily. Sophisticated data infrastructures and advanced algorithms reveal new insights into our fast changing world, but only for those massive organizations with the transaction frequency and the know how to extract them, right?
 The question is one of relevance. While big data benefits for large organizations are readily tangible--like in the case where retailers want to know when customers are more likely to purchase which products, or what optimal prices will move discounted products in a set time frame--smaller organizations sometimes just don&#39;t see how the data revolution is important to them.</description>
     </item>
@@ -479,11 +489,20 @@ Data science is the science of data analytics in the context of scientific query
     </item>
     
     <item>
-      <title>Strong Dollar Could Be Good For Canada</title>
+      <title>A Case For Continued Pursuit Of the Euro</title>
       <link>https://cloudnine.github.io/archives/a-case-for-continued-pursuit-of-the-euro-in-lithuania/</link>
       <pubDate>Sat, 28 Nov 2009 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/a-case-for-continued-pursuit-of-the-euro-in-lithuania/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Strong Dollar Could Be Good For Canada</title>
+      <link>https://cloudnine.github.io/archives/strong-dollar-could-be-good-for-canada/</link>
+      <pubDate>Sat, 28 Nov 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/archives/strong-dollar-could-be-good-for-canada/</guid>
       <description>Pundits of the double-dip recession theory cite the now globally anticipated fallout of the U.S. dollar as a key source. The fed is printing money like confetti, they say. The U.S. Treasury bill bubble is soon to pop, they add. The newly coined (U.S. dollar-carry trade) (it used to be the yen-carry trade) is driving commodities through the roof, they squeal. The concerns are many. For example, rampant increases in U.</description>
     </item>
     
