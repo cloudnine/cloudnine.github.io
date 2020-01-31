@@ -14,10 +14,10 @@
     
     <item>
       <title>Windows Program Launcher</title>
-      <link>https://cloudnine.github.io/science/windows-program-launcher/</link>
+      <link>https://cloudnine.github.io/science/windows-program-launcher-23-09-2019/</link>
       <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/science/windows-program-launcher/</guid>
+      <guid>https://cloudnine.github.io/science/windows-program-launcher-23-09-2019/</guid>
       <description>For any readers setting up configuration files for their emacs editor, here is the quick and easy code for the windows program launcher shown in the image below.    Here&amp;rsquo;s the config code: 
 1 2 3 4 5 6 7  ;path of program you want in your launcher (defvar name-of-program-p &amp;#34;C:/full-path-to-program/program.exe&amp;#34;) ; launcher function (defun launch-program-name () (interactive) (w32-shell-execute nil name-of-program-p nil) );end launch-program-name    Then you can put the launch function name in your hydra config, like this:  (&amp;quot;p&amp;quot; launch-program-name &amp;quot;Launch This Program&amp;quot;)  For the generate hydra code see this post: Emacs Bookmarks  Thanks for reading.</description>
     </item>

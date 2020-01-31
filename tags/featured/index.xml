@@ -14,10 +14,10 @@
     
     <item>
       <title>Emacs Bookmarks</title>
-      <link>https://cloudnine.github.io/science/emacs-bookmarks/</link>
+      <link>https://cloudnine.github.io/science/emacs-bookmarks-20-09-2020/</link>
       <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/science/emacs-bookmarks/</guid>
+      <guid>https://cloudnine.github.io/science/emacs-bookmarks-20-09-2020/</guid>
       <description>Jumping To Directories In Emacs If you want to accomplish things efficiently with your computer, you will benefit from mastering a text editor. I use emacs as a general project manager for web development, writing, and organizing thoughts, materials, and actions. Jumping to and from directories and files enables quickly me to get things done more efficiently. To do this I use a few different packages and functions. They are:  1.</description>
     </item>
     

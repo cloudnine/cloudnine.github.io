@@ -3,27 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cloudnine.github.io/science/some-emacs-configuration-functions-31-01-2020/</loc>
+    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/motivation/achieving-alignment-through-communication-01-2020/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/science/emacs-installation-and-defaults/</loc>
+    <loc>https://cloudnine.github.io/science/emacs-installation-and-defaults-24-01-2020/</loc>
     <lastmod>2020-01-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/science/emacs-configuration-overview/</loc>
+    <loc>https://cloudnine.github.io/science/emacs-configuration-overview-19-01-2020/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/science/windows-program-launcher/</loc>
+    <loc>https://cloudnine.github.io/science/windows-program-launcher-23-09-2019/</loc>
     <lastmod>2019-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/science/emacs-bookmarks/</loc>
+    <loc>https://cloudnine.github.io/science/emacs-bookmarks-20-09-2020/</loc>
     <lastmod>2019-10-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -33,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/science/emacs-with-an-interface/</loc>
+    <loc>https://cloudnine.github.io/science/emacs-with-an-interface-08-09-2019/</loc>
     <lastmod>2019-10-08T00:00:00+00:00</lastmod>
   </url>
   
@@ -294,7 +299,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -367,7 +372,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/changing-computers/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -379,7 +384,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/categories/computer-science/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -403,7 +408,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/emacs/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -415,7 +420,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/emacs-configuration/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -493,7 +498,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/science/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
