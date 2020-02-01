@@ -73,7 +73,7 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/archives/cobalt-attractive-but-not-without-its-downsides/</loc>
+    <loc>https://cloudnine.github.io/archives/2018-02-20-cobalt-attractive-not-without-downsides/</loc>
     <lastmod>2018-02-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -88,7 +88,7 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/archives/blog-links/</loc>
+    <loc>https://cloudnine.github.io/archives/2018-01-01-economics-blog-links/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -208,7 +208,7 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/archives/bis-warns-of-low-rates/</loc>
+    <loc>https://cloudnine.github.io/archives/2015-06-28-bis-warns-of-low-rates/</loc>
     <lastmod>2015-06-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -228,17 +228,22 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/archives/characteristics-of-a-winner/</loc>
+    <loc>https://cloudnine.github.io/archives/2012-12-15-characteristics-of-a-winner/</loc>
     <lastmod>2012-12-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/archives/trade-liberalization-and-sector-productivity/</loc>
+    <loc>https://cloudnine.github.io/archives/2011-12-05-trade-liberalization-and-sector-productivity/</loc>
     <lastmod>2011-12-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/archives/optimal-pathway-to-business-cycle-convergence-in-the-emu/</loc>
+    <loc>https://cloudnine.github.io/archives/2015-03-15-a-case-for-continued-pursuit-of-emu-accession-in-lithuania/</loc>
+    <lastmod>2011-03-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/archives/2011-02-26-optimal-pathway-to-business-cycle-convergence-in-the-emu/</loc>
     <lastmod>2011-02-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -258,7 +263,7 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/archives/bill-sank-ignatieff-likely-to-float/</loc>
+    <loc>https://cloudnine.github.io/archives/2009-11-09-bill-sank-ignatieff-likely-to-float/</loc>
     <lastmod>2009-11-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -268,7 +273,7 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/archives/bringing-down-the-house/</loc>
+    <loc>https://cloudnine.github.io/archives/2008-12-04-bringing-down-the-house/</loc>
     <lastmod>2008-12-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -323,8 +328,20 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/tags/academic-report/</loc>
+    <loc>https://cloudnine.github.io/tags/academic/</loc>
     <lastmod>2011-12-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/academic-report/</loc>
+    <lastmod>2011-02-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/alternative-energy/</loc>
+    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -407,6 +424,12 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/categories/economics/</loc>
+    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/tags/emacs/</loc>
     <lastmod>2020-01-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -437,6 +460,12 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/categories/finance/</loc>
+    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/tags/government/</loc>
     <lastmod>2016-03-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -461,6 +490,12 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/tags/macroeconomics/</loc>
+    <lastmod>2015-06-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/tags/motivation/</loc>
     <lastmod>2019-10-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -479,14 +514,44 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/tags/newsroom/</loc>
+    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/opinion/</loc>
+    <lastmod>2009-11-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/personal-development/</loc>
+    <lastmod>2012-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/tags/politics/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/categories/politics/</loc>
+    <lastmod>2009-11-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/tags/psychology/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/categories/psychology/</loc>
+    <lastmod>2012-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -499,6 +564,24 @@
   <url>
     <loc>https://cloudnine.github.io/science/</loc>
     <lastmod>2020-01-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/categories/statistic/</loc>
+    <lastmod>2011-03-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/categories/statistics/</loc>
+    <lastmod>2011-12-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/stock-market/</loc>
+    <lastmod>2018-02-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

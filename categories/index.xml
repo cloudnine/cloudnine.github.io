@@ -49,11 +49,29 @@
     </item>
     
     <item>
+      <title>Economics</title>
+      <link>https://cloudnine.github.io/categories/economics/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/economics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Emacs</title>
       <link>https://cloudnine.github.io/categories/emacs/</link>
       <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/categories/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Finance</title>
+      <link>https://cloudnine.github.io/categories/finance/</link>
+      <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/finance/</guid>
       <description></description>
     </item>
     
@@ -72,6 +90,42 @@
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/categories/motivation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Politics</title>
+      <link>https://cloudnine.github.io/categories/politics/</link>
+      <pubDate>Mon, 09 Nov 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/politics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Psychology</title>
+      <link>https://cloudnine.github.io/categories/psychology/</link>
+      <pubDate>Sat, 15 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/psychology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistic</title>
+      <link>https://cloudnine.github.io/categories/statistic/</link>
+      <pubDate>Tue, 15 Mar 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/statistic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>https://cloudnine.github.io/categories/statistics/</link>
+      <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/statistics/</guid>
       <description></description>
     </item>
     
