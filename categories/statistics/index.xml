@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright</copyright>
-    <lastBuildDate>Mon, 05 Dec 2011 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Feb 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Trade Statistics And Blockchain</title>
+      <link>https://cloudnine.github.io/archives/2016-02-23-trade-statistics-and-blockchain/</link>
+      <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/archives/2016-02-23-trade-statistics-and-blockchain/</guid>
+      <description>National and international level statistics that report macroeconomic indicators, like nominal and real inflation, international transaction flows, and trade statistics, are relied on by market participants, policy makers and stakeholders as inputs to critical decisions. More often than not, macroeconomic statistics are taken as reliable, after-all, those are our official statistics, right?. But just how reliable are they? Unfortunately, the answer is that aligning statistics with underlying realities is a challenging task, and mainstream macroeconomic statistics should, even in the best of cases, be taken with a grain of salt.</description>
+    </item>
+    
+    <item>
+      <title>What Are Statistics</title>
+      <link>https://cloudnine.github.io/archives/2016-01-11-what-are-statistics/</link>
+      <pubDate>Mon, 11 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/archives/2016-01-11-what-are-statistics/</guid>
+      <description>What are statistics? Statistics are transformations of data through calculation. While in theory any calculation done with data yields a statistic, in practice statistics are associated with scientific and field specific calculations. For example, during preparation phase your data is frequently explored and analysed using simple plotting techniques that present meaningful descriptive statistics from the data or data subset, like the mean, median, and/or quartile ranges. As another example, in macroeconomics, various calculations with data yield well known statistics like GDP, inflation, or trade balance by sector.</description>
+    </item>
     
     <item>
       <title>Trade Liberalization And Sector Productivity</title>

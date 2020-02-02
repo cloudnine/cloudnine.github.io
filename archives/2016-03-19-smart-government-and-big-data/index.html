@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="Cloud Nine" />
+<meta name="copyright" content="Copyright" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
+<meta name="yandex-verification" content="7cb55c3432ff9fc7" />
+<meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
+
+
+<meta name="description" content="The data revolution is impacting government in a number of ways. The foremost is known as &#39;smart government&#39;, which is a reference to the way governments manage the data they have and the way they make that management and the services that go with it available to their clients (constituents in a democracy). The second impact, also intelligent, is known as the &#39;smart city.&#39;
+Smart government is a concept championed by the Estonian government (our example), which won the United Nations Public Service Award, in the category of Promoting Whole of Government Approaches in the Information Age, for their online business registry.">
+
+
+<title>Smart Government And The Data Revolution | Cloud Nine</title>
+
+<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
+<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
+
+
+<meta property="og:title" content="Smart Government And The Data Revolution" />
+<meta property="og:description" content="An article about smart government, authored by Yuri Tricys." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/archives/2016-03-19-smart-government-and-big-data/" /><meta property="article:published_time" content="2016-03-19T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-03-19T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Smart Government And The Data Revolution"/>
+<meta name="twitter:description" content="An article about smart government, authored by Yuri Tricys."/>
+
+
+<link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
+<link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD&#43;dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p&#43;WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S&#43;L3BlXeVIU" crossorigin="anonymous">
+
+        
+        
+        
+        
+
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.87dcffbb985abc3faacbacd940429cf30b68bf42964745bd64202e45b7e8a982.css" integrity="sha256-h9z/u5havD&#43;qy6zZQEKc8wtov0KWR0W9ZCAuRbfoqYI="  />
+
+        
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="Cloud Nine" />
+<meta name="copyright" content="Copyright" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
+<meta name="yandex-verification" content="7cb55c3432ff9fc7" />
+<meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
+
+
+<meta name="description" content="The data revolution is impacting government in a number of ways. The foremost is known as &#39;smart government&#39;, which is a reference to the way governments manage the data they have and the way they make that management and the services that go with it available to their clients (constituents in a democracy). The second impact, also intelligent, is known as the &#39;smart city.&#39;
+Smart government is a concept championed by the Estonian government (our example), which won the United Nations Public Service Award, in the category of Promoting Whole of Government Approaches in the Information Age, for their online business registry.">
+
+
+<title>Smart Government And The Data Revolution | Cloud Nine</title>
+
+<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
+<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
+
+
+<meta property="og:title" content="Smart Government And The Data Revolution" />
+<meta property="og:description" content="An article about smart government, authored by Yuri Tricys." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/archives/2016-03-19-smart-government-and-big-data/" /><meta property="article:published_time" content="2016-03-19T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-03-19T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Smart Government And The Data Revolution"/>
+<meta name="twitter:description" content="An article about smart government, authored by Yuri Tricys."/>
+
+
+<link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
+<link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD&#43;dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p&#43;WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S&#43;L3BlXeVIU" crossorigin="anonymous">
+
+        
+        
+        
+        
+
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.87dcffbb985abc3faacbacd940429cf30b68bf42964745bd64202e45b7e8a982.css" integrity="sha256-h9z/u5havD&#43;qy6zZQEKc8wtov0KWR0W9ZCAuRbfoqYI="  />
+
+
+
+    
+<style type="text/css">
+        .feature-image {
+          background-image: url("https://cloudnine.github.io/images/archives/vpl.jpg");
+          width:100%;
+          height: auto;
+        }
+@media (max-width: 575px) {
+.feature-image {
+    min-height: 180px;
+}
+
+.feature-image-text {
+    max-width: 80%;
+    margin-top:5px;
+}
+.feature-image-text h1 {
+    font-size: 1.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: .75rem;
+}
+}  
+
+@media (min-width: 576px) {
+    .feature-image {
+    min-height: 200px;
+    }
+.feature-image-text {
+    max-width: 80%;
+    margin-top:10px;
+}
+.feature-image-text h1 {
+    font-size: 1.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: .75rem;
+}
+}  
+
+@media (min-width: 768px) {
+    .feature-image {
+    min-height: 250px;
+    }
+.feature-image-text {
+    max-width: 80%;
+    margin-top:10px;
+}
+.feature-image-text h1 {
+    font-size: 1.6rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1rem;
+}
+} 
+
+@media (min-width: 992px) {
+    .feature-image {
+    min-height: 350px;
+}
+.feature-image-text {
+    max-width: 600px;
+    margin-top:15px;
+}
+.feature-image-text h1 {
+    font-size: 2rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1.4rem;
+}
+} 
+@media (min-width: 1200px) {
+    .feature-image {
+    min-height: 500px;
+}
+.feature-image-text {
+    max-width: 760px;
+    margin-top:20px;
+}
+.feature-image-text h1 {
+    font-size: 2.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1.6rem;
+}
+} 
+</style>
+
+
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+            <div class="container">
+                    <a class="navbar-brand pr-2" href="https://cloudnine.github.io/">CLOUD NINE</a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/about/">About</a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/motivation/">Motivation</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/science/">Science</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/categories/">Categories</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/tags/">Tags</a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/books/">Books</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/archives/">Archives</a>
+</li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        
+<header class="feature-image d-print-none">
+</header>
+
+
+        <div class="main">
+            
+<div class="container mt-4 post">
+    <h1>Smart Government And The Data Revolution</h1>
+    <div class="mb-3">
+    <small>
+        <strong>Author: Yuri Tricys</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Mar 19, 2016    &nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/data-science/'>data-science</a>, <a href='/tags/research/'>research</a>, <a href='/tags/public-sector/'>public-sector</a>
+    </small>
+</div>
+
+
+        <div class="mt-4 mb-4 main-content">
+        <p class= "p-news">The data revolution is impacting government in a number of ways. The foremost is known as 'smart government', which is a
+reference to the way governments manage the data they have and the way they make that management and the services that go with it available
+to their clients (constituents in a democracy). The second impact, also intelligent, is known as the 'smart city.'</p>
+
+<p class= "p-news">Smart government is a concept championed by the Estonian government (our example), which won the United Nations Public
+Service Award, in the category of Promoting Whole of Government Approaches in the Information Age, for their online business registry.</p>
+
+<p class= "p-news">Smart cities are a reference to the ways cities are being made smarter through the use of data science programs and technologies in city
+managed fields like urban planning, civil engineering, and energy use. The miracle of Estonia's online government portal is
+found in the application of efficient relational database theory that limits the duplicate storage of data. Data is not actually stored in
+one place, but because there is no overlap, and each database is connected by the users identity, which serves as a primary key, users view
+all interactions with public services through one portal. The orthogonal system means health records, traffic violations, employment data,
+tax records, and all municipal and national level program interactions, are available to the user quickly and efficiently. Moreover,
+citizens are entitled to view which government officials have viewed their data, and how frequently. The idea is that government is
+empowering citizens by giving them control over their own data. At the same time, smart government reduces overhead and clumsy
+administrative burden. Estonian citizens, for example, can register a business and within 18 minutes start trade.</p>
+
+<p class= "p-news">Ultimately, the data revolution offers government the opportunity to streamline its operations and more efficiently engage with citizens,
+but it also offers information that can be used to engage technology, like the Internet of things, in a way that promises citizenry more
+efficient and less expensive living, through the transition to smart cities.</p>
+
+<p class= "p-news">The smart city is entity created from the union of data science and urban planning. Smart cities have citizens that can get from point a to
+b more efficiently. They have more intelligent crime prevention and therefore lower crime rates. Their power generation and distribution are
+more efficient. They have better city water and sewage systems.</p>
+
+<p class= "p-news">While the New Jersey Institute of Technology suggests the smart city technology industry could turn into a 27 billion dollar market by 2023,
+the benefits to citizens could be much higher. The OECD estimates traffic congestion costs the city of Toronto 3.3 billion CAD in lost
+productivity annually. According to Reuters, US citizens spend on average 42 hours a year stuck in traffic. Smart city technologies have the
+promise of not only improving financial measures of standard of living, but also improving the utility citizens get from the cities they
+live in.</p>
+
+<p class= "p-news">But how do cities get smarter? The answer starts with data initiatives. More and more cities are implementing programs to plan for data
+collection, processing, and data driven research. Sensors that relay information on water pressure, peak water demand, traffic congestion,
+power usage, and more, are being installed, replaced and in some cases designed. Municipal governments are outsourcing more data science to
+ensure collected data is rigorously analyzed. The shift is really about directing funds toward research and planning so that the right
+investments can be made at the right times.</p>
+
+<p class= "p-news">Cities are also upgrading their own statistical analysis at the municipal level. This can be done by envisioning the city itself as a closed
+system, and learning to track economic flow data across and within that system. For example, at the national level, input/output tables are
+used as a means of drawing conclusions about inflows and outflows of goods and services. New methods have been derived for drawing
+conclusions at the municipal level from input output data. Smart city data initiatives have a lot to gain from those new methods.</p>
+
+<p class= "p-news">For example, it is possible to extrapolate from larger data sets meaningful inference about regional statistics. More comprehensive and
+updated regional statistics, like those derived from updated business registries, enable more accurate estimates of municipal output by
+sector. More accurate municipal output estimates can inform policy makers who can then engage citizens so that real changes can be made.</p>
+
+<p class= "p-news">Better survey design and more frequent surveying can allow local governments to estimate transaction flows across municipal boundaries,
+which enable preemptive measures to guard against long tail economic shocks, like real-estate market movements away from equilibrium.</p>
+
+<p class= "p-news">Models that predict and forecast indicators at the regional level using data input from the national level, are enabling municipal
+governments to pursue smarter policies, and attract the kind of investment that can stimulate local economies by creating jobs, and
+ultimately lift standards of living.</p>
+
+<p class= "p-news">The data revolution is enabling governments to engage with citizenry more efficiently by upgrading the methods and technology they use to
+manage their data stores. It is also giving them the information they need to pursue smart city initiatives that promise to guide policy
+more accurately and lift standard of living at the city level. Whatever else may be said of government, there isn't any question they are
+getting smarter, and that intelligence can have benefits.</p>
+
+<p class= "p-news">Read more about Estonia's smart government <a href="https://www.bloomberg.com/opinion/articles/2015-03-04/envying-estonia-s-digital-government">here</a>.</p>
+
+<p><br/><br/></p>
+
+
+        <div class="share-icons d-flex justify-content-center d-print-none">
+            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2farchives%2f2016-03-19-smart-government-and-big-data%2f&text=Smart%20Government%20And%20The%20Data%20Revolution&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Tweet</small></div>
+</a>
+
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2farchives%2f2016-03-19-smart-government-and-big-data%2f&t=Smart%20Government%20And%20The%20Data%20Revolution" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Share</small></div>
+</a>
+
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2farchives%2f2016-03-19-smart-government-and-big-data%2f&title=Smart%20Government%20And%20The%20Data%20Revolution&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Share</small></div>
+</a>
+
+<a href="javascript:window.print()" title="Print this article" class="p-2" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fa fa-print fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Print</small></div>
+</a>
+        </div>
+    </div>
+
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+      
+      
+      if (window.location.hostname == "localhost")
+                return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'cloud-nine-2';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
+
+</div>
+<div class="sidebar d-print-none d-none d-xl-block">
+    
+        <h2>Cloud Nine</h2>
+        <div>
+            A blog about passion, discovery, and science.
+        </div>
+        <a href='https://cloudnine.github.io/about/' class="btn btn-outline-secondary mt-3" role="button">Read More...</a>
+
+<h2 class="mt-4">Featured Posts</h2>
+    <nav class="nav flex-column">
+
+    
+        <a href="https://cloudnine.github.io/science/2020-09-20-emacs-bookmarks/" class="nav-link">Emacs Bookmarks</a>
+    
+    </nav>
+
+<h2 class="mt-4">Recent Posts</h2>
+<nav class="nav flex-column">
+
+
+<a href="https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/" class="nav-link">Emacs Functions</a>
+
+<a href="https://cloudnine.github.io/motivation/2020-01-30-achieving-alignment-through-communication/" class="nav-link">Achieving Alignment Through Communication</a>
+
+<a href="https://cloudnine.github.io/science/2020-01-24-emacs-installation-and-defaults/" class="nav-link">Emacs Installation and Defaults</a>
+
+<a href="https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/" class="nav-link">Emacs Configuration Overview</a>
+
+<a href="https://cloudnine.github.io/science/2019-09-23-windows-program-launcher/" class="nav-link">Windows Program Launcher</a>
+
+<a href="https://cloudnine.github.io/science/2020-09-20-emacs-bookmarks/" class="nav-link">Emacs Bookmarks</a>
+
+    </nav>
+
+    
+    <h2 class="mt-4 text-capitalize">categories</h2>
+    <nav class="nav flex-column">
+        
+        <a href='https://cloudnine.github.io/categories/computer-science/' class="nav-link">
+        computer-science
+        <span class="badge badge-pill badge-secondary">24</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/economics/' class="nav-link">
+        economics
+        <span class="badge badge-pill badge-secondary">23</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/finance/' class="nav-link">
+        finance
+        <span class="badge badge-pill badge-secondary">17</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/business/' class="nav-link">
+        business
+        <span class="badge badge-pill badge-secondary">14</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/politics/' class="nav-link">
+        politics
+        <span class="badge badge-pill badge-secondary">12</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/psychology/' class="nav-link">
+        psychology
+        <span class="badge badge-pill badge-secondary">7</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/statistics/' class="nav-link">
+        statistics
+        <span class="badge badge-pill badge-secondary">4</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/links/' class="nav-link">
+        links
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/math/' class="nav-link">
+        math
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/books/' class="nav-link">
+        books
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/data-science/' class="nav-link">
+        data-science
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/ethics/' class="nav-link">
+        ethics
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/law/' class="nav-link">
+        law
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+    </nav>
+    
+    <h2 class="mt-4 text-capitalize">tags</h2>
+    <nav class="nav flex-column">
+        
+        <a href='https://cloudnine.github.io/tags/learning-center/' class="nav-link">
+        learning-center
+        <span class="badge badge-pill badge-secondary">22</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/newsroom/' class="nav-link">
+        newsroom
+        <span class="badge badge-pill badge-secondary">18</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/data-science/' class="nav-link">
+        data-science
+        <span class="badge badge-pill badge-secondary">17</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/data-firm/' class="nav-link">
+        data-firm
+        <span class="badge badge-pill badge-secondary">14</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/opinion/' class="nav-link">
+        opinion
+        <span class="badge badge-pill badge-secondary">14</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/macroeconomics/' class="nav-link">
+        macroeconomics
+        <span class="badge badge-pill badge-secondary">12</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/trends-global/' class="nav-link">
+        trends-global
+        <span class="badge badge-pill badge-secondary">9</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/research/' class="nav-link">
+        research
+        <span class="badge badge-pill badge-secondary">8</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/personal-development/' class="nav-link">
+        personal-development
+        <span class="badge badge-pill badge-secondary">7</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs/' class="nav-link">
+        emacs
+        <span class="badge badge-pill badge-secondary">6</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/trade/' class="nav-link">
+        trade
+        <span class="badge badge-pill badge-secondary">6</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/stock-market/' class="nav-link">
+        stock-market
+        <span class="badge badge-pill badge-secondary">4</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/academic/' class="nav-link">
+        academic
+        <span class="badge badge-pill badge-secondary">3</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-hydras/' class="nav-link">
+        emacs-hydras
+        <span class="badge badge-pill badge-secondary">3</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/about-the-author/' class="nav-link">
+        about-the-author
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/changing-computers/' class="nav-link">
+        changing-computers
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/text-editors/' class="nav-link">
+        text-editors
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/windows/' class="nav-link">
+        windows
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/alternative-energy/' class="nav-link">
+        alternative-energy
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/blog-links/' class="nav-link">
+        blog-links
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/calculus/' class="nav-link">
+        calculus
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/climate-change/' class="nav-link">
+        climate-change
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/computational-modelling/' class="nav-link">
+        computational-modelling
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/custom-charts/' class="nav-link">
+        custom-charts
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/data-links/' class="nav-link">
+        data-links
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/economics/' class="nav-link">
+        economics
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
+        emacs-functions
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-hydra/' class="nav-link">
+        emacs-hydra
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/featured/' class="nav-link">
+        featured
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/finance/' class="nav-link">
+        finance
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/investing/' class="nav-link">
+        investing
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/organization-psychology/' class="nav-link">
+        organization-psychology
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/organizational-psychology/' class="nav-link">
+        organizational-psychology
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/public-sector/' class="nav-link">
+        public-sector
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/tech/' class="nav-link">
+        tech
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/video/' class="nav-link">
+        video
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+    </nav>
+    
+</div>
+
+
+        </div>
+
+        <footer class="mt-auto footer d-print-none">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Website</h5>
+This blog was created using <a href="https://gohugo.io/">Hugo</a>,
+<a href="https://getbootstrap.com/">Bootstrap</a>, and the Silhouette Hugo theme.
+
+                    </div>
+
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Disclaimer</h5>
+Opinions expressed here are my own and may not reflect those of any company I work for, or people I
+work with.
+
+                    </div>
+
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Copyright</h5>
+© 2019 - Yuri Tricys
+
+                    </div>
+
+
+                </div>
+
+                <hr />
+
+                <div class="d-flex justify-content-center icons">
+                    <a class="py-2 px-2" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><i class="fab fa-linkedin"></i></a>
+<a class="py-2 px-2" href='https://cloudnine.github.io/index.xml'><i class="fas fa-rss"></i></a>
+
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>

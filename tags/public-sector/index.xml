@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Public Sector on Cloud Nine</title>
+    <link>https://cloudnine.github.io/tags/public-sector/</link>
+    <description>Recent content in Public Sector on Cloud Nine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright</copyright>
+    <lastBuildDate>Sat, 19 Mar 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/tags/public-sector/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Smart Government And The Data Revolution</title>
+      <link>https://cloudnine.github.io/archives/2016-03-19-smart-government-and-big-data/</link>
+      <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/archives/2016-03-19-smart-government-and-big-data/</guid>
+      <description>The data revolution is impacting government in a number of ways. The foremost is known as &#39;smart government&#39;, which is a reference to the way governments manage the data they have and the way they make that management and the services that go with it available to their clients (constituents in a democracy). The second impact, also intelligent, is known as the &#39;smart city.&#39;
+Smart government is a concept championed by the Estonian government (our example), which won the United Nations Public Service Award, in the category of Promoting Whole of Government Approaches in the Information Age, for their online business registry.</description>
+    </item>
+    
+  </channel>
+</rss>
