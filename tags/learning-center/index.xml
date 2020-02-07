@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright</copyright>
-    <lastBuildDate>Fri, 31 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/tags/learning-center/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Business the Ultimate Resource</title>
+      <link>https://cloudnine.github.io/books/2020-02-04-business-the-ultimate-resource/</link>
+      <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/books/2020-02-04-business-the-ultimate-resource/</guid>
+      <description>This is a fantastic book. I bought it when it was first published (in 2002), and my copy is well used. The idea was basically to publish an everything you need to know about business, that a book can teach you, between two covers. The reality of course is that there are a lot of books on business, and many of them are inspiring and educational. Moreover, books like this one are great for people who want to understand key processes in big business, and even helpful for those who want to build better small business.</description>
+    </item>
     
     <item>
       <title>Emacs Functions</title>
