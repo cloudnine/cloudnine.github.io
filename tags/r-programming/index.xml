@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Programming on Cloud Nine</title>
+    <link>https://cloudnine.github.io/tags/r-programming/</link>
+    <description>Recent content in R Programming on Cloud Nine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright</copyright>
+    <lastBuildDate>Fri, 05 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/tags/r-programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An Overview Of The Emacs Text Editor</title>
+      <link>https://cloudnine.github.io/archives/2016-08-02-an-emacs-overview/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/archives/2016-08-02-an-emacs-overview/</guid>
+      <description>Video Tutorial. Emacs Overview.</description>
+    </item>
+    
+    <item>
+      <title>Working With Data In R</title>
+      <link>https://cloudnine.github.io/archives/2017-05-29-getting-data-into-r/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/archives/2017-05-29-getting-data-into-r/</guid>
+      <description>Video Tutorial. Loading data into R via Emacs Speaks Statistics, and doing some operations on it.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -103,6 +103,16 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/archives/2016-08-02-an-emacs-overview/</loc>
+    <lastmod>2017-05-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/archives/2017-05-29-getting-data-into-r/</loc>
+    <lastmod>2017-05-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/archives/2016-11-12-principles/</loc>
     <lastmod>2016-11-12T00:00:00+00:00</lastmod>
   </url>
@@ -428,7 +438,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/data-science/</loc>
-    <lastmod>2016-03-21T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -567,6 +577,12 @@
   <url>
     <loc>https://cloudnine.github.io/tags/public-sector/</loc>
     <lastmod>2016-03-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/r-programming/</loc>
+    <lastmod>2017-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

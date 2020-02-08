@@ -67,5 +67,23 @@
       <description>What&#39;s All This About Text Editors? I always used to ask, why do people post about their text-editors? These days I know the reason. Computers are lightening fast, using them isn&#39;t. You need to leave what you are doing to turn on another piece of software. You have to search for files. You&#39;re constantly having to remember how a process works, or search around the IDE to figure out how to do something again.</description>
     </item>
     
+    <item>
+      <title>An Overview Of The Emacs Text Editor</title>
+      <link>https://cloudnine.github.io/archives/2016-08-02-an-emacs-overview/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/archives/2016-08-02-an-emacs-overview/</guid>
+      <description>Video Tutorial. Emacs Overview.</description>
+    </item>
+    
+    <item>
+      <title>Working With Data In R</title>
+      <link>https://cloudnine.github.io/archives/2017-05-29-getting-data-into-r/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/archives/2017-05-29-getting-data-into-r/</guid>
+      <description>Video Tutorial. Loading data into R via Emacs Speaks Statistics, and doing some operations on it.</description>
+    </item>
+    
   </channel>
 </rss>
