@@ -10,25 +10,26 @@
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
 
 
+
 <meta name="description" content="Today&#39;s post has some functions from the functions declaration section of the beginning of my initialization file.  SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key">
 
-
-<title>Emacs Functions | Cloud Nine</title>
-
-<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
-<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
-
-
 <meta property="og:title" content="Emacs Functions" />
-<meta property="og:description" content="Porting an emacs installation to a new computer." />
+<meta property="og:description" content="Some nifty Emacs functions. From Yuri Tricys&#39; Emacs configuration." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/" /><meta property="article:published_time" content="2020-01-31T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2020-01-31T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Emacs Functions"/>
-<meta name="twitter:description" content="Porting an emacs installation to a new computer."/>
+<meta name="twitter:description" content="Some nifty Emacs functions. From Yuri Tricys&#39; Emacs configuration."/>
 
+<meta property="og:title" content="Cloud Nine">
+<meta property="og:image" content='https://cloudnine.github.io/images/hero-main.jpg'>
+<meta property="og:description" content="{.Site.Params.Description}">
+<title>Emacs Functions | Cloud Nine</title>
+
+<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
+<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
 
 <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
 <link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
@@ -54,25 +55,26 @@
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
 
 
+
 <meta name="description" content="Today&#39;s post has some functions from the functions declaration section of the beginning of my initialization file.  SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key">
 
-
-<title>Emacs Functions | Cloud Nine</title>
-
-<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
-<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
-
-
 <meta property="og:title" content="Emacs Functions" />
-<meta property="og:description" content="Porting an emacs installation to a new computer." />
+<meta property="og:description" content="Some nifty Emacs functions. From Yuri Tricys&#39; Emacs configuration." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/" /><meta property="article:published_time" content="2020-01-31T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2020-01-31T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Emacs Functions"/>
-<meta name="twitter:description" content="Porting an emacs installation to a new computer."/>
+<meta name="twitter:description" content="Some nifty Emacs functions. From Yuri Tricys&#39; Emacs configuration."/>
 
+<meta property="og:title" content="Cloud Nine">
+<meta property="og:image" content='https://cloudnine.github.io/images/hero-main.jpg'>
+<meta property="og:description" content="{.Site.Params.Description}">
+<title>Emacs Functions | Cloud Nine</title>
+
+<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
+<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
 
 <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
 <link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
@@ -232,7 +234,7 @@
     <small>
         <strong>Author: Yuri Tricys</strong>
         | <i class="far fa-calendar-alt"></i>&nbsp;Jan 31, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/emacs-functions/'>emacs-functions</a>, <a href='/tags/changing-computers/'>changing-computers</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/emacs-functions/'>emacs-functions</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>
     </small>
 </div>
 
@@ -269,6 +271,8 @@ statements (like :command or :defer). I've yet to defer a lot of things in my in
 in terms of time a priority. Keep that in mind if you use any of these functions in your init file.</p>
 
 <h5>Clear The Kill Ring <br/><br/></h5>
+
+<p class= "p-news">Pretty straight forward. Emacs keeps lots of goodies you copied on the clipboard. Later I'll show you how you can cycle through them. This bad boy clears everything when you no longer want to deal with the insanity. </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -820,6 +824,8 @@ familiar with many of the upcoming defaults. </p>
 <nav class="nav flex-column">
 
 
+<a href="https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/" class="nav-link">Emacs Defaults</a>
+
 <a href="https://cloudnine.github.io/books/2020-02-04-business-the-ultimate-resource/" class="nav-link">Business the Ultimate Resource</a>
 
 <a href="https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/" class="nav-link">Emacs Functions</a>
@@ -830,8 +836,6 @@ familiar with many of the upcoming defaults. </p>
 
 <a href="https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/" class="nav-link">Emacs Configuration Overview</a>
 
-<a href="https://cloudnine.github.io/science/2019-09-23-windows-program-launcher/" class="nav-link">Windows Program Launcher</a>
-
     </nav>
 
     
@@ -840,7 +844,7 @@ familiar with many of the upcoming defaults. </p>
         
         <a href='https://cloudnine.github.io/categories/computer-science/' class="nav-link">
         computer-science
-        <span class="badge badge-pill badge-secondary">26</span>
+        <span class="badge badge-pill badge-secondary">27</span>
         </a>
         
         <a href='https://cloudnine.github.io/categories/economics/' class="nav-link">
@@ -900,7 +904,7 @@ familiar with many of the upcoming defaults. </p>
         
         <a href='https://cloudnine.github.io/tags/learning-center/' class="nav-link">
         learning-center
-        <span class="badge badge-pill badge-secondary">28</span>
+        <span class="badge badge-pill badge-secondary">29</span>
         </a>
         
         <a href='https://cloudnine.github.io/tags/data-science/' class="nav-link">
@@ -933,14 +937,14 @@ familiar with many of the upcoming defaults. </p>
         <span class="badge badge-pill badge-secondary">10</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/trends-global/' class="nav-link">
-        trends-global
+        <a href='https://cloudnine.github.io/tags/emacs/' class="nav-link">
+        emacs
         <span class="badge badge-pill badge-secondary">9</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/emacs/' class="nav-link">
-        emacs
-        <span class="badge badge-pill badge-secondary">8</span>
+        <a href='https://cloudnine.github.io/tags/trends-global/' class="nav-link">
+        trends-global
+        <span class="badge badge-pill badge-secondary">9</span>
         </a>
         
         <a href='https://cloudnine.github.io/tags/research/' class="nav-link">
@@ -983,11 +987,6 @@ familiar with many of the upcoming defaults. </p>
         <span class="badge badge-pill badge-secondary">2</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/changing-computers/' class="nav-link">
-        changing-computers
-        <span class="badge badge-pill badge-secondary">2</span>
-        </a>
-        
         <a href='https://cloudnine.github.io/tags/r-programming/' class="nav-link">
         r-programming
         <span class="badge badge-pill badge-secondary">2</span>
@@ -1015,6 +1014,11 @@ familiar with many of the upcoming defaults. </p>
         
         <a href='https://cloudnine.github.io/tags/calculus/' class="nav-link">
         calculus
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/changing-computers/' class="nav-link">
+        changing-computers
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         

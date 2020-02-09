@@ -11,22 +11,23 @@
 
 
 
-<meta name="description" content="Directly below are the subheadings to the first main heading of my initialization file, see my last post Emacs Configuration Overview. I&#39;ll go through the lines of code in order, but remember, the line numbers you see in Hugo&#39;s code block css styling are relative to the code on this page not the emacs initialization file [Hugo is the Static Content Management System based on GO I used to make this blog].">
+<meta name="description" content="Today&#39;s post has some of the default settings from my initialization file.   SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key   
+Preamble Last post I covered function declarations from the above subsection, lines 135 - 424 of my configuration.">
 
-<meta property="og:title" content="Emacs Installation and Defaults" />
-<meta property="og:description" content="Porting an emacs installation to a new computer." />
+<meta property="og:title" content="Emacs Defaults" />
+<meta property="og:description" content="Some configuration defaults for your Emacs configuration file." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-01-24-emacs-installation-and-defaults/" /><meta property="article:published_time" content="2020-01-24T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-01-24T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/" /><meta property="article:published_time" content="2020-02-09T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-02-09T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Installation and Defaults"/>
-<meta name="twitter:description" content="Porting an emacs installation to a new computer."/>
+<meta name="twitter:title" content="Emacs Defaults"/>
+<meta name="twitter:description" content="Some configuration defaults for your Emacs configuration file."/>
 
 <meta property="og:title" content="Cloud Nine">
 <meta property="og:image" content='https://cloudnine.github.io/images/hero-main.jpg'>
 <meta property="og:description" content="{.Site.Params.Description}">
-<title>Emacs Installation and Defaults | Cloud Nine</title>
+<title>Emacs Defaults | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
@@ -56,22 +57,23 @@
 
 
 
-<meta name="description" content="Directly below are the subheadings to the first main heading of my initialization file, see my last post Emacs Configuration Overview. I&#39;ll go through the lines of code in order, but remember, the line numbers you see in Hugo&#39;s code block css styling are relative to the code on this page not the emacs initialization file [Hugo is the Static Content Management System based on GO I used to make this blog].">
+<meta name="description" content="Today&#39;s post has some of the default settings from my initialization file.   SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key   
+Preamble Last post I covered function declarations from the above subsection, lines 135 - 424 of my configuration.">
 
-<meta property="og:title" content="Emacs Installation and Defaults" />
-<meta property="og:description" content="Porting an emacs installation to a new computer." />
+<meta property="og:title" content="Emacs Defaults" />
+<meta property="og:description" content="Some configuration defaults for your Emacs configuration file." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-01-24-emacs-installation-and-defaults/" /><meta property="article:published_time" content="2020-01-24T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-01-24T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/" /><meta property="article:published_time" content="2020-02-09T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-02-09T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Installation and Defaults"/>
-<meta name="twitter:description" content="Porting an emacs installation to a new computer."/>
+<meta name="twitter:title" content="Emacs Defaults"/>
+<meta name="twitter:description" content="Some configuration defaults for your Emacs configuration file."/>
 
 <meta property="og:title" content="Cloud Nine">
 <meta property="og:image" content='https://cloudnine.github.io/images/hero-main.jpg'>
 <meta property="og:description" content="{.Site.Params.Description}">
-<title>Emacs Installation and Defaults | Cloud Nine</title>
+<title>Emacs Defaults | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
@@ -229,28 +231,18 @@
         <div class="main">
             
 <div class="container mt-4 post">
-    <h1>Emacs Installation and Defaults</h1>
+    <h1>Emacs Defaults</h1>
     <div class="mb-3">
     <small>
         <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Jan 24, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/windows/'>windows</a>, <a href='/tags/changing-computers/'>changing-computers</a>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 9, 2020    &nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>
     </small>
 </div>
 
 
         <div class="mt-4 mb-4 main-content">
-        <p class="p-news">Directly below are the subheadings to the first main heading of my initialization file, see my last post <a
-href="https://cloudnine.github.io/science/emacs-configuration-overview/" target="_blank">Emacs Configuration Overview.</a>
-I'll go through the lines of code in order, but remember, the line numbers you see in Hugo's code block css styling are relative to the
-code on this page not the emacs initialization file [<a href="https://gohugo.io/" target="_blank">Hugo</a> is the Static Content
-Management System based on <a href="https://golang.org/" target="_blank">GO</a> I used to make
-this blog]. There are roughly 760 lines of code beneath these subheadings (all of it <a
-href="https://encyclopedia2.thefreedictionary.com/Quick+and+dirty+code" target="_blank">quick and dirty</a>). I'll go through the relevant
-stuff and skip anything redundant in this post and the next few. Each post will have the following reference headings, and then the
-breakdown and write-up below that.  </p>
-
-<h3>Beginning of Initialization File <br/><br/></h3>
+        <h5>Today's post has some of the default settings from my initialization file. <br/><br/></h5>
 
 <ul>
 <li>SET UP, DEFAULTS, AND CUSTOMIZATION
@@ -272,59 +264,38 @@ breakdown and write-up below that.  </p>
 </ul></li>
 </ul>
 
-<p class="p-news">
-Oh yes, when I installed the dashboard package there was an option to choose a picture. That's when I named my Emacs configuration. Welcome
-to Poseidon the text editor.</p>
+<p><br/></p>
 
-<p><br/>
-<img src="/images/poseidon.png" alt="emacs-initialization" align="center" title="Tricys Emacs Initialization" class="img" width="100%" />
-<br/>
-<br/>
-<h3>Necessary Adjustments when you set-up on a new computer</h3></p>
+<h5>Preamble</h5>
 
-<h4>steps needed to get set-up on a new computer<br/><br/></h4>
+<p class= "p-news">Last <a href="https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/" target="_blank">post</a>
+ I covered function declarations from the above subsection, lines 135 - 424 of my configuration. This post
+covers up to "Frames, Buffers, And Lines" (also defaults), so lines 425 - 534.</p>
 
-<ol>
-<li>install emacs</li>
-<li>install external executables</li>
-<li>paste .emacs and myinit.org from active emacs installation to new emacs installation</li>
-<li>Change load paths in myinit.org</li>
-<li>paste dependency folders to new emacs (snippets, etc.)</li>
-<li>adjust home variable on new system</li>
-<li>adjust emacs to have administrator rights</li>
-<li>restart emacs and deal with each error as emacs runs through myinit.org code (Most errors should be easily resolved by updating directory
-paths, providing missing libraries, ensuring executables and missing library dependencies are installed)</li>
-<li>to troubleshoot basic errors use emacs debugger, messages, and the restart-emacs package. Also, comment out org tangle blocks and
-initialize the init incrementally.</li>
-</ol>
+<p class= "p-news">Most of the defaults are relevant. If you don't want your Emacs to beep when you hit the end of the file, then you need
+to set a default, and the same for another annoying stuff. I make no promises the following section is efficient (let me know if you see
+some double entries). </p>
 
-<h4>Paths to Update on Change</h4>
+<h5>Customization</h5>
 
-<p class="p-news">
-Here paths to executables, libraries, and external urls are stored in variables. When you install Poseidon on a new system, or change a
-program or its location, change the path variable assignments here. Later in the code, usually in a use-package :config or a function the
-variables are called.
-</p>
-
-<p class="p-news">
-Oh, btw, before the path assignments is an org-tangle block, delineated by the org-mode elisp code on lines 2 and 4. Everything inside them is processed by emacs, everything outside is notes and text you can push to the web easily.
-</p>
+<p class= "p-news">First though, Emacs will continually add to your config with any auto settings configured through the GUI customization
+interface. You don't want that, so you need to put it in a separate file like this. </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#080;font-style:italic">;notes and code</span>
-<span style="">#</span><span style="color:#b8860b">+begin_src</span> <span style="color:#b8860b">emacs-lisp</span>
-<span style="color:#080;font-style:italic">;emacs initialization code</span>
-<span style="">#</span><span style="color:#b8860b">+end_src</span></code></pre></td></tr></table>
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">setq</span> <span style="color:#b8860b">custom-file</span> (<span style="color:#00a000">expand-file-name</span> <span style="color:#b44">&#34;custom.el&#34;</span> <span style="color:#b44">&#34;c:/emacs/emax/&#34;</span>))
+ (<span style="color:#00a000">load</span> <span style="color:#b8860b">custom-file</span>)</code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+</div>
+<p><br/></p>
+
+<h5>Here are some of the defaults I use</h5>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -376,76 +347,175 @@ Oh, btw, before the path assignments is an org-tangle block, delineated by the o
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="">#</span><span style="color:#b8860b">+begin_src</span> <span style="color:#b8860b">emacs-lisp</span>
-<span style="color:#080;font-style:italic">; most of the executables I use from within emacs, except some security ones and some of the browsers</span>
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">xampp-p</span> <span style="color:#b44">&#34;.../xampp/xampp-control.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">notepad++-p</span> <span style="color:#b44">&#34;.../Program Files/Notepad++/notepad++.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">backup-init-p</span> <span style="color:#b44">&#34;.../emacs/emax/run-backup-init-silently.vbs&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">image-magick-p</span> <span style="color:#b44">&#34;.../Program Files/ImageMagick-7.0.8-Q16/magick.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">dropbox-p</span> <span style="color:#b44">&#34;.../Program Files (x86)/Dropbox/Client/Dropbox.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">wordnet-command-p</span> <span style="color:#b44">&#34;.../Program Files (x86)/WordNet/2.1/bin/wn.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">win-calc-p</span> <span style="color:#b44">&#34;.../Windows/System32/calc.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">screen-cast-p</span>  <span style="color:#b44">&#34;.../Program Files (x86)/Screencast-O-Matic/v2/Screencast-O-Matic.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">fsviewer-p</span> <span style="color:#b44">&#34;.../Program Files (x86)/FastStone Image Viewer/FSViewer.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">gimp-p</span> <span style="color:#b44">&#34;.../Program Files/GIMP 2/bin/gimp-2.10.exe&#34;</span> )
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">7z-p</span> <span style="color:#b44">&#34;.../Program Files/7-Zip/7z.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">winword-p</span> <span style="color:#b44">&#34;.../Program Files/Microsoft Office/root/Office16/WINWORD.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">excel-p</span> <span style="color:#b44">&#34;.../Program Files/Microsoft Office/root/Office16/EXCEL.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">mpd-start-p</span> <span style="color:#b44">&#34;.../Users/Methuselah/Documents/mpd-windows-master/start-silently-mpd.vbs&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">mpd-stop-p</span> <span style="color:#b44">&#34;.../Users/Methuselah/Documents/mpd-windows-master/stop-mpd-silently.vbs&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">keycast-p</span> <span style="color:#b44">&#34;.../Program Files/Keycastow/keycastow.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">pandoc-p</span> <span style="color:#b44">&#34;.../Users/Methuselah/AppData/Local/Pandoc/pandoc.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">firefox-p</span> <span style="color:#b44">&#34;.../Program Files/Mozilla Firefox/firefox.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">git-exe-p</span> <span style="color:#b44">&#34;.../Program Files/Git/mingw64/libexec/git-core/git.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">win-ubuntu-exe-p</span> <span style="color:#b44">&#34;.../Windows/System32/wsl.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">atom-exe-p</span>  <span style="color:#b44">&#34;.../Users/Methuselah/AppData/Local/atom/atom.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">default-comspec-p</span> <span style="color:#b44">&#34;C:\\Windows\\system32\\cmd.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">bash-comspec-p</span> <span style="color:#b44">&#34;C:\\Windows\\system32\\wsl.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">default-shell-file-name-p</span> <span style="color:#b44">&#34;.../emacs/libexec/emacs/26.2/x86_64-w64-mingw32/cmdproxy.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">bash-shell-file-name-p</span> <span style="color:#b44">&#34;.../Windows/system32/bash.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">git-bash-shell-file-name-p</span> <span style="color:#b44">&#34;.../Program Files/Git/git-bash.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">onedrive-p</span> <span style="color:#b44">&#34;.../Users/Methuselah/AppData/Local/Microsoft/OneDrive/OneDrive.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">deploy-cloud-nine-p</span> <span style="color:#b44">&#34;.../Hugo/sites/cloudnine-build-directory/cloudnine-deploy-silently.vbs&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">deploy-build-hello-p</span> <span style="color:#b44">&#34;.../Hugo/sites/buildhello-build-directory/buildhello-deploy-silently.vbs&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">image-magick-convert-p</span> <span style="color:#b44">&#34;.../Program Files/ImageMagick-7.0.8-Q16/convert.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">live-reload-p</span> <span style="color:#b44">&#34;.../Users/Methuselah/AppData/Local/Apps/2.0/W5VQXTCA.25X/1NPRP1JV.N67/live..tion_0000000000000000_0000.0009_403689373d141ec5/LiveReload.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">inkscape-p</span> <span style="color:#b44">&#34;.../Program Files/Inkscape/inkscape.exe&#34;</span> )
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">ag-executable-p</span> <span style="color:#b44">&#34;.../emacs/ag/ag.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">ispell-program-name-p</span> <span style="color:#b44">&#34;.../emacs/hunspell-1.3.2-3-w32-bin/bin/hunspell.exe&#34;</span>)
-
-<span style="color:#080;font-style:italic">;library paths</span>
-
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">auto-yas-p</span> <span style="color:#b44">&#34;~/emax/elpa/auto-yasnippet-20190326.958/&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">yas-p</span> <span style="color:#b44">&#34;~/.emacs.d/elpa/yasnippet-20190724.1204/&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">wordnet-dictionary-p</span> <span style="color:#b44">&#34;.../Program Files (x86)/WordNet/2.1/dict/&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">comp-ispell-dic-p</span> <span style="color:#b44">&#34;.../emacs/.emacs.d/misc/english-words.dic&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">dash-p</span> <span style="color:#b44">&#34;.../emacs/emax/elpa/dashboard-20190721.504/&#34;</span> )
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">dash-image-p</span>  <span style="color:#b44">&#34;~/.emacs.d/images/poseidon_2.png&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">all-the-icons-p</span> <span style="color:#b44">&#34;.../emacs/.emacs.d/all-the-icons-fonts/&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">auto-yas-dir-p</span> <span style="color:#b44">&#34;.../emacs/.emacs.d/auto-yas-snippets/&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">yas-snippets-p</span> <span style="color:#b44">&#34;.../emacs/.emacs.d/snippets/&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">which-key-posframe-p</span> <span style="color:#b44">&#34;.../emacs/emax/elpa/which-key-posframe-20190427.1103/which-key-posframe.el&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">hydra-posframe-p</span> <span style="color:#b44">&#34;.../emacs/emax/elpa/hydra-posframe/&#34;</span>)
-
-<span style="">#</span><span style="color:#b8860b">+end_src</span></code></pre></td></tr></table>
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"> <span style="color:#080;font-style:italic">;; Keep emacs Custom-settings in separate file</span>
+(<span style="color:#a2f">when</span> <span style="color:#00a000">window-system</span>
+(<span style="color:#b8860b">blink-cursor-mode</span> <span style="color:#666">0</span>)                           <span style="color:#080;font-style:italic">; Disable the cursor blinking</span>
+<span style="color:#080;font-style:italic">;(scroll-bar-mode 0)                             ; Disable the scroll bar</span>
+(<span style="color:#b8860b">tool-bar-mode</span> <span style="color:#666">0</span>)                               <span style="color:#080;font-style:italic">; Disable the tool bar</span>
+(<span style="color:#b8860b">tooltip-mode</span> <span style="color:#666">0</span>))                               <span style="color:#080;font-style:italic">; Disable the tooltips</span>
+(<span style="color:#a2f">setq-default</span>
+<span style="color:#b8860b">ad-redefinition-action</span> <span style="color:#b8860b">&#39;accept</span>                   <span style="color:#080;font-style:italic">; Silence warnings for redefinition</span>
+<span style="color:#b8860b">confirm-kill-emacs</span> <span style="color:#b8860b">&#39;yes-or-no-p</span>                  <span style="color:#080;font-style:italic">; Confirm before exiting Emacs</span>
+<span style="color:#b8860b">cursor-in-non-selected-windows</span> <span style="color:#800">t</span>                 <span style="color:#080;font-style:italic">; Hide the cursor in inactive windows</span>
+<span style="color:#b8860b">delete-by-moving-to-trash</span> <span style="color:#800">t</span>                      <span style="color:#080;font-style:italic">; Delete files to trash</span>
+<span style="color:#b8860b">display-time-default-load-average</span> <span style="color:#800">nil</span>            <span style="color:#080;font-style:italic">; Don&#39;t display load average</span>
+<span style="color:#b8860b">display-time-format</span> <span style="color:#b44">&#34;%H:%M&#34;</span>                      <span style="color:#080;font-style:italic">; Format the time string</span>
+<span style="color:#b8860b">fill-column</span> <span style="color:#666">140</span>                                   <span style="color:#080;font-style:italic">; Set width for automatic line breaks</span>
+<span style="color:#b8860b">help-window-select</span> <span style="color:#800">t</span>                             <span style="color:#080;font-style:italic">; Focus new help windows when opened</span>
+<span style="color:#b8860b">indent-tabs-mode</span> <span style="color:#800">nil</span>                             <span style="color:#080;font-style:italic">; Stop using tabs to indent</span>
+<span style="color:#b8860b">inhibit-startup-screen</span> <span style="color:#800">t</span>                         <span style="color:#080;font-style:italic">; Disable start-up screen</span>
+<span style="color:#b8860b">initial-scratch-message</span> <span style="color:#b44">&#34;&#34;</span>                       <span style="color:#080;font-style:italic">; Empty the initial *scratch* buffer</span>
+<span style="color:#080;font-style:italic">; left-margin-width 1 right-margin-width 1         ; Add left and right margins</span>
+<span style="color:#b8860b">mode-require-final-newline</span> <span style="color:#b8860b">&#39;visit-save</span>           <span style="color:#080;font-style:italic">; Add a newline at EOF on visit</span>
+<span style="color:#b8860b">mouse-yank-at-point</span> <span style="color:#800">t</span>                            <span style="color:#080;font-style:italic">; Yank at point rather than pointer</span>
+<span style="color:#b8860b">ns-use-srgb-colorspace</span> <span style="color:#800">nil</span>                       <span style="color:#080;font-style:italic">; Don&#39;t use sRGB colors</span>
+<span style="color:#b8860b">recenter-positions</span> <span style="color:#666">&#39;</span>(<span style="color:#666">5</span> <span style="color:#b8860b">top</span> <span style="color:#b8860b">bottom</span>)               <span style="color:#080;font-style:italic">; Set re-centering positions</span>
+<span style="color:#b8860b">redisplay-dont-pause</span> <span style="color:#800">t</span>                           <span style="color:#080;font-style:italic">; don&#39;t pause display on input</span>
+<span style="color:#b8860b">debug-on-error</span> <span style="color:#800">t</span>
+<span style="color:#b8860b">jit-lock-defer-time</span> <span style="color:#666">0</span>
+<span style="color:#b8860b">frame-resize-pixelwise</span> <span style="color:#800">t</span>
+<span style="color:#b8860b">fast-but-imprecise-scrolling</span> <span style="color:#800">t</span>
+<span style="color:#b8860b">scroll-conservatively</span> <span style="color:#666">10000</span>                      <span style="color:#080;font-style:italic">; Always scroll by one line</span>
+<span style="color:#b8860b">scroll-margin</span> <span style="color:#666">1</span>                                  <span style="color:#080;font-style:italic">; scroll N lines to screen edge</span>
+<span style="color:#b8860b">scroll-step</span> <span style="color:#666">1</span>                                    <span style="color:#080;font-style:italic">; keyboard scroll one line at a time</span>
+<span style="color:#b8860b">scroll-preserve-screen-position</span> <span style="color:#666">1</span>
+<span style="color:#b8860b">select-enable-clipboard</span> <span style="color:#800">t</span>                        <span style="color:#080;font-style:italic">; Merge system&#39;s and Emacs&#39; clipboard</span>
+<span style="color:#b8860b">show-trailing-whitespace</span> <span style="color:#800">nil</span>                     <span style="color:#080;font-style:italic">; Display trailing whitespaces</span>
+<span style="color:#080;font-style:italic">; split-height-threshold nil                       ; Disable vertical window splitting</span>
+<span style="color:#080;font-style:italic">; split-width-threshold nil                        ; Disable horizontal window splitting</span>
+<span style="color:#b8860b">tab-width</span> <span style="color:#666">4</span>                                      <span style="color:#080;font-style:italic">; Set width for tabs</span>
+<span style="color:#b8860b">uniquify-buffer-name-style</span> <span style="color:#b8860b">&#39;forward</span>              <span style="color:#080;font-style:italic">; Uniquify buffer names</span>
+<span style="color:#080;font-style:italic">; window-combination-resize t                      ; Resize windows proportionally</span>
+<span style="color:#b8860b">x-stretch-cursor</span> <span style="color:#800">t</span>)                              <span style="color:#080;font-style:italic">; Stretch cursor to the glyph width</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">sentence-end-double-space</span> <span style="color:#800">nil</span>)             <span style="color:#080;font-style:italic">; End a sentence after a dot and a space</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">line-number-mode</span> <span style="color:#800">t</span>)                         <span style="color:#080;font-style:italic">; Enable line numbers in the mode-line</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">column-number-mode</span> <span style="color:#800">t</span>)                       <span style="color:#080;font-style:italic">; Enable column numbers in the mode-line</span>
+(<span style="color:#b8860b">size-indication-mode</span> <span style="color:#666">1</span>)                          <span style="color:#080;font-style:italic">; Enable size status in the mode-line</span>
+(<span style="color:#b8860b">display-time-mode</span>)                               <span style="color:#080;font-style:italic">; Enable time in the mode-line</span>
+(<span style="color:#b8860b">fringe-mode</span> <span style="color:#666">0</span>)                                   <span style="color:#080;font-style:italic">; Hide fringes</span>
+(<span style="color:#00a000">fset</span> <span style="color:#b8860b">&#39;yes-or-no-p</span> <span style="color:#b8860b">&#39;y-or-n-p</span>)                     <span style="color:#080;font-style:italic">; Replace yes/no prompts with y/n</span>
+<span style="color:#080;font-style:italic">;(show-paren-mode t)</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">show-paren-style</span> <span style="color:#b8860b">&#39;expression</span>)
+<span style="color:#080;font-style:italic">;(menu-bar-mode 0)                                 ; Disable the menu bar</span>
+<span style="color:#080;font-style:italic">;(mouse-avoidance-mode &#39;banish)                    ; Avoid collision of mouse with point</span>
+(<span style="color:#00a000">put</span> <span style="color:#b8860b">&#39;downcase-region</span> <span style="color:#b8860b">&#39;disabled</span> <span style="color:#800">nil</span>)              <span style="color:#080;font-style:italic">; Enable downcase-region</span>
+(<span style="color:#00a000">put</span> <span style="color:#b8860b">&#39;upcase-region</span> <span style="color:#b8860b">&#39;disabled</span> <span style="color:#800">nil</span>)                <span style="color:#080;font-style:italic">; Enable upcase-region</span>
+<span style="color:#080;font-style:italic">;Garbage-collect on focus-out, Emacs /should/ feel snappier.</span>
+(<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;focus-out-hook</span> <span style="color:#00a000">#&#39;garbage-collect</span>)
+<span style="color:#080;font-style:italic">;delete trailing whitespace</span>
+(<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;before-save-hook</span> <span style="color:#b8860b">&#39;delete-trailing-whitespace</span>)
+(<span style="color:#b8860b">pdf-tools-install</span> <span style="color:#a2f">:no-query</span>)
+<span style="color:#080;font-style:italic">;set-warning level</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">warning-minimum-level</span> <span style="color:#a2f">:emergency</span>)</code></pre></td></tr></table>
 </div>
 </div>
-<p><p class="p-news">
-So there&rsquo;s the first 130 lines or so of my init file (52 shown here plus the paths I didn&rsquo;t bother to paste in and some text). Btw, it
-doesn&rsquo;t matter where you store your stuff, as long as emacs knows where it is. In fact, that&rsquo;s the point of assigning the paths to
-variables. When your paths or path names change, you don&rsquo;t have to search the document for each path. Coming up are the function
-declarations.
-</p>
-<br/>
-<br/>
-<h5>Until Next Time&hellip;</h5>
+<p><br/></p>
+
+<h5>Here are the rest for this post, the last line is line 534 of my init</h5>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">; Silence warnings for redefinition</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ad-redefinition-action</span> <span style="color:#b8860b">&#39;warn</span>)
+<span style="color:#080;font-style:italic">; Hide the cursor in inactive windows</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">cursor-in-non-selected-windows</span> <span style="color:#800">t</span> )
+<span style="color:#080;font-style:italic">; Don&#39;t display load average</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">display-time-default-load-average</span> <span style="color:#800">nil</span>)
+<span style="color:#080;font-style:italic">; Focus new help windows when opened</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">help-window-select</span> <span style="color:#800">t</span> )
+<span style="color:#080;font-style:italic">; Prefers spaces over tabs</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">indent-tabs-mode</span> <span style="color:#800">nil</span> )
+<span style="color:#080;font-style:italic">; Merge system&#39;s and Emacs&#39; clipboard</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">select-enable-clipboard</span> <span style="color:#800">t</span> )
+<span style="color:#080;font-style:italic">;interprogram-paste-before-kill</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">save-interprogram-paste-before-kill</span> <span style="color:#800">t</span>)
+<span style="color:#080;font-style:italic">; Avoid the :ensure keyword for each package</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">use-package-always-ensure</span> <span style="color:#800">t</span>)
+<span style="color:#080;font-style:italic">; Always follow the symlinks</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">vc-follow-symlinks</span> <span style="color:#b8860b">&#39;ask</span>)
+<span style="color:#080;font-style:italic">;view-read-only-defined in &#39;files.el, (require &#39;file.el) moved from later line to here</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;files</span>)
+<span style="color:#080;font-style:italic">;read-only files in read-only-mode</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">view-read-only</span> <span style="color:#800">t</span>)
+<span style="color:#080;font-style:italic">;no byte compile warnings (not set here?)</span>
+<span style="color:#080;font-style:italic">;(setq byte-compile-warnings -1)</span>
+<span style="color:#080;font-style:italic">; Re-define package--save-selected-packages to stop customization sending dependeny info to melpa process.</span>
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">package--save-selected-packages</span> (<span style="color:#a2f">&amp;rest</span> <span style="color:#b8860b">opt</span>) <span style="color:#800">nil</span>)
+<span style="color:#080;font-style:italic">;ensure manual indentation</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">electric-indent-mode</span> <span style="color:#666">-1</span>)
+(<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;after-change-major-mode-hook</span> (<span style="color:#a2f">lambda</span>() (<span style="color:#b8860b">electric-indent-mode</span> <span style="color:#666">-1</span>)))
+<span style="color:#080;font-style:italic">;set tab width</span>
+(<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">tab-width</span> <span style="color:#666">4</span>)
+<span style="color:#080;font-style:italic">;(bind-key &#34;C-x TAB&#34; &#39;indent-rigidly)</span>
+(<span style="color:#b8860b">global-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-x TAB&#34;</span>) <span style="color:#b8860b">&#39;indent-rigidly</span>)
+<span style="color:#080;font-style:italic">;; Save a list of recent files visited. (open recent file with C-x f)</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;recentf</span>)
+(<span style="color:#b8860b">recentf-mode</span> <span style="color:#666">1</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">recentf-max-saved-items</span> <span style="color:#666">100</span>)
+<span style="color:#080;font-style:italic">;save abbrevs silently</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">save-abbrevs</span> <span style="color:#b8860b">&#39;silently</span>)</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<p class= "p-news">See you next time...</p>
+
+<p><br/>
 <br/></p>
 
 
         <div class="share-icons d-flex justify-content-center d-print-none">
-            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-24-emacs-installation-and-defaults%2f&text=Emacs%20Installation%20and%20Defaults&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
+            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-09-some-emacs-defaults%2f&text=Emacs%20Defaults&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -455,7 +525,7 @@ declarations.
     <div class="fa-inverse text-center"><small>Tweet</small></div>
 </a>
 
-<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-24-emacs-installation-and-defaults%2f&t=Emacs%20Installation%20and%20Defaults" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-09-some-emacs-defaults%2f&t=Emacs%20Defaults" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -465,7 +535,7 @@ declarations.
     <div class="fa-inverse text-center"><small>Share</small></div>
 </a>
 
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-24-emacs-installation-and-defaults%2f&title=Emacs%20Installation%20and%20Defaults&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-09-some-emacs-defaults%2f&title=Emacs%20Defaults&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>

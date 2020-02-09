@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/</loc>
+    <lastmod>2020-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/books/2020-02-04-business-the-ultimate-resource/</loc>
     <lastmod>2020-02-04T00:00:00+00:00</lastmod>
   </url>
@@ -329,7 +334,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/</loc>
-    <lastmod>2020-02-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -396,7 +401,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/changing-computers/</loc>
-    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -414,7 +419,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/categories/computer-science/</loc>
-    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -456,7 +461,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/emacs/</loc>
-    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -504,7 +509,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/learning-center/</loc>
-    <lastmod>2020-02-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -600,7 +605,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/science/</loc>
-    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright</copyright>
-    <lastBuildDate>Fri, 31 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/science/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Emacs Defaults</title>
+      <link>https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/</link>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/</guid>
+      <description>Today&#39;s post has some of the default settings from my initialization file.   SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key   
+Preamble Last post I covered function declarations from the above subsection, lines 135 - 424 of my configuration.</description>
+    </item>
     
     <item>
       <title>Emacs Functions</title>
