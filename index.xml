@@ -23,15 +23,6 @@ Preamble Last post I covered function declarations from the above subsection, li
     </item>
     
     <item>
-      <title>Hello Music Playlist</title>
-      <link>https://cloudnine.github.io/about/about/</link>
-      <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/about/about/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Business the Ultimate Resource</title>
       <link>https://cloudnine.github.io/books/2020-02-04-business-the-ultimate-resource/</link>
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
@@ -75,6 +66,15 @@ Alignment is a concept that explains what&#39;s going on. Let each line in this 
       
       <guid>https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/</guid>
       <description>Below are some notes covering among other things why I got into Emacs, where I got my version, and how my configuration is organized. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or Sublime Text are awesome, and offer also great selections of unique packages. Atom, for example, has some super useful snippet packages. You can convert them into Yasnippet format (an Emacs snippet package), but it&#39;s a hassle.</description>
+    </item>
+    
+    <item>
+      <title>Hello Music Playlist</title>
+      <link>https://cloudnine.github.io/about/01-12-2019-hell0-music-playlist/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/about/01-12-2019-hell0-music-playlist/</guid>
+      <description></description>
     </item>
     
     <item>

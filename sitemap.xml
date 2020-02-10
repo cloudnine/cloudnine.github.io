@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/about/about/</loc>
-    <lastmod>2020-02-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://cloudnine.github.io/books/2020-02-04-business-the-ultimate-resource/</loc>
     <lastmod>2020-02-04T00:00:00+00:00</lastmod>
   </url>
@@ -35,6 +30,11 @@
   <url>
     <loc>https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/about/01-12-2019-hell0-music-playlist/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -347,13 +347,13 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/about-the-author/</loc>
-    <lastmod>2020-02-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/about/</loc>
-    <lastmod>2020-02-09T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -545,7 +545,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/music/</loc>
-    <lastmod>2020-02-09T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -641,7 +641,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/</loc>
-    <lastmod>2020-02-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
