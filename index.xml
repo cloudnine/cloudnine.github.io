@@ -23,6 +23,15 @@ Preamble Last post I covered function declarations from the above subsection, li
     </item>
     
     <item>
+      <title>Hello Music Playlist</title>
+      <link>https://cloudnine.github.io/about/about/</link>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/about/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Business the Ultimate Resource</title>
       <link>https://cloudnine.github.io/books/2020-02-04-business-the-ultimate-resource/</link>
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
@@ -123,15 +132,6 @@ What happens to the ball when it gets dropped into the top of the bean machine? 
       
       <guid>https://cloudnine.github.io/books/another-book-post/</guid>
       <description> The Alchemy Of Finance  And here is a code block, right? (setq whatever-variable-to t)    YOu Know    </description>
-    </item>
-    
-    <item>
-      <title>Cloud Nine</title>
-      <link>https://cloudnine.github.io/about/</link>
-      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/about/</guid>
-      <description>Cloud Nine is a blog about &#39;stuff.&#39; Yes, exactly, &#39;stuff,&#39; in all its ambiguous grandeur. &#39;Stuff&#39; can mean pretty much anything, but I&#39;m talking about a special kind of stuff, that kind that makes us human. You know like, &#39;aack,&#39; philosophy, ethics, motivation, and work. Or, success, family, friends, and community. Okay, you get the point. I have a license to write about pretty much anything here. And even though you can see from the menu items on the navigation bar that Cloud Nine is about sciency stuff, and books; and even though I&#39;m going to warn you right now it&#39;s also about computers; rest assured, the motivation section is meant for everyone.</description>
     </item>
     
     <item>
