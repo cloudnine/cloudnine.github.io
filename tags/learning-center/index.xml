@@ -90,10 +90,10 @@ Alignment is a concept that explains what&#39;s going on. Let each line in this 
     
     <item>
       <title>Emacs Bookmarks</title>
-      <link>https://cloudnine.github.io/science/2020-09-20-emacs-bookmarks/</link>
+      <link>https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/</link>
       <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/science/2020-09-20-emacs-bookmarks/</guid>
+      <guid>https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/</guid>
       <description>Jumping To Directories In Emacs If you want to accomplish things efficiently with your computer, you will benefit from mastering a text editor. I use emacs as a general project manager for web development, writing, and organizing thoughts, materials, and actions. Jumping to and from directories and files enables quickly me to get things done more efficiently. To do this I use a few different packages and functions. They are:  Bookmarks</description>
     </item>
     
