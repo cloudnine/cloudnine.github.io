@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Cloud Nine</title>
+    <link>https://cloudnine.github.io/about/</link>
+    <description>Recent content in Abouts on Cloud Nine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright</copyright>
+    <lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello Music Playlist</title>
+      <link>https://cloudnine.github.io/about/01-12-2019-hell0-music-playlist/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/about/01-12-2019-hell0-music-playlist/</guid>
+      <description>
+Stuff to listen to on the exercise bike 
+                                           </description>
+    </item>
+    
+  </channel>
+</rss>
