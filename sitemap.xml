@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cloudnine.github.io/science/2020-02-15-emacs-shell-hydra/</loc>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/science/2020-02-11-emacs-frames-buffers-defaults-functions/</loc>
     <lastmod>2020-02-11T00:00:00+00:00</lastmod>
   </url>
@@ -354,7 +359,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/</loc>
-    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -445,7 +450,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/categories/computer-science/</loc>
-    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -474,20 +479,20 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/tags/economics/</loc>
-    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cloudnine.github.io/categories/economics/</loc>
     <lastmod>2019-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/tags/economics/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/tags/emacs/</loc>
-    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -499,7 +504,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/emacs-hydras/</loc>
-    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -535,7 +540,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/learning-center/</loc>
-    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -637,7 +642,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/science/</loc>
-    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
