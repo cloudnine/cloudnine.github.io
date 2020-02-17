@@ -10,22 +10,23 @@
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
 
 
-<meta name="description" content="Directly below are the subheadings to the first main heading of my initialization file, see my last post Emacs Configuration Overview. I&#39;ll go through the lines of code in order, but remember, the line numbers you see in Hugo&#39;s code block css styling are relative to the code on this page not the emacs initialization file [Hugo is the Static Content Management System based on GO I used to make this blog].">
+<meta name="description" content="Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts from oldest to newest.
+In this earlier emacs post I covered lines 534 - 656 of my configuration file.">
 
-<meta property="og:title" content="Emacs Installation and Defaults" />
-<meta property="og:description" content="Porting an emacs installation to a new computer." />
+<meta property="og:title" content="Emacs Configuration Posframe and Which Key, Some Key Bindings" />
+<meta property="og:description" content="Some configuration defaults for your Emacs configuration file." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-01-24-emacs-installation-and-defaults/" /><meta property="article:published_time" content="2020-01-24T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-01-24T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/" /><meta property="article:published_time" content="2020-02-17T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-02-17T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Installation and Defaults"/>
-<meta name="twitter:description" content="Porting an emacs installation to a new computer."/>
+<meta name="twitter:title" content="Emacs Configuration Posframe and Which Key, Some Key Bindings"/>
+<meta name="twitter:description" content="Some configuration defaults for your Emacs configuration file."/>
 
 <meta property="og:title" content="Cloud Nine">
 <meta property="og:image" content="https://cloudnine.github.io/images/hero.png">
 <meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
-<title>Emacs Installation and Defaults | Cloud Nine</title>
+<title>Emacs Configuration Posframe and Which Key, Some Key Bindings | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
@@ -54,22 +55,23 @@
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
 
 
-<meta name="description" content="Directly below are the subheadings to the first main heading of my initialization file, see my last post Emacs Configuration Overview. I&#39;ll go through the lines of code in order, but remember, the line numbers you see in Hugo&#39;s code block css styling are relative to the code on this page not the emacs initialization file [Hugo is the Static Content Management System based on GO I used to make this blog].">
+<meta name="description" content="Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts from oldest to newest.
+In this earlier emacs post I covered lines 534 - 656 of my configuration file.">
 
-<meta property="og:title" content="Emacs Installation and Defaults" />
-<meta property="og:description" content="Porting an emacs installation to a new computer." />
+<meta property="og:title" content="Emacs Configuration Posframe and Which Key, Some Key Bindings" />
+<meta property="og:description" content="Some configuration defaults for your Emacs configuration file." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-01-24-emacs-installation-and-defaults/" /><meta property="article:published_time" content="2020-01-24T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-01-24T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/" /><meta property="article:published_time" content="2020-02-17T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-02-17T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Installation and Defaults"/>
-<meta name="twitter:description" content="Porting an emacs installation to a new computer."/>
+<meta name="twitter:title" content="Emacs Configuration Posframe and Which Key, Some Key Bindings"/>
+<meta name="twitter:description" content="Some configuration defaults for your Emacs configuration file."/>
 
 <meta property="og:title" content="Cloud Nine">
 <meta property="og:image" content="https://cloudnine.github.io/images/hero.png">
 <meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
-<title>Emacs Installation and Defaults | Cloud Nine</title>
+<title>Emacs Configuration Posframe and Which Key, Some Key Bindings | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
@@ -227,102 +229,169 @@
         <div class="main">
             
 <div class="container mt-4 post">
-    <h1>Emacs Installation and Defaults</h1>
+    <h1>Emacs Configuration Posframe and Which Key, Some Key Bindings</h1>
     <div class="mb-3">
     <small>
         <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Jan 24, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/windows/'>windows</a>, <a href='/tags/changing-computers/'>changing-computers</a>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 17, 2020    &nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>
     </small>
 </div>
 
 
         <div class="mt-4 mb-4 main-content">
-        <p class="p-news">Directly below are the subheadings to the first main heading of my initialization file, see my last post <a
-href="https://cloudnine.github.io/science/emacs-configuration-overview/" target="_blank">Emacs Configuration Overview.</a>
-I'll go through the lines of code in order, but remember, the line numbers you see in Hugo's code block css styling are relative to the
-code on this page not the emacs initialization file [<a href="https://gohugo.io/" target="_blank">Hugo</a> is the Static Content
-Management System based on <a href="https://golang.org/" target="_blank">GO</a> I used to make
-this blog]. There are roughly 760 lines of code beneath these subheadings (all of it <a
-href="https://encyclopedia2.thefreedictionary.com/Quick+and+dirty+code" target="_blank">quick and dirty</a>). I'll go through the relevant
-stuff and skip anything redundant in this post and the next few. Each post will have the following reference headings, and then the
-breakdown and write-up below that.  </p>
+        <p class= "p-news">Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
+know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts from
+oldest to newest.</p>
 
-<h3>Beginning of Initialization File <br/><br/></h3>
+<p class = "p-news">In this earlier emacs <a href="https://cloudnine.github.io/science/2020-02-11-emacs-frames-buffers-defaults-functions/" target="_blank">post</a> I covered
+ lines 534 - 656 of my configuration file. This post covers lines 664 - 769</p>
 
-<ul>
-<li>SET UP, DEFAULTS, AND CUSTOMIZATION
+<h5>Some Key Bindings</h5>
 
-<ul>
-<li>Necessary Adjustments when you set-up on a new computer</li>
-<li>Paths to Update on Change</li>
-<li>Executable Paths</li>
-<li>Libraries</li>
-<li>Function declarations</li>
-<li>Emacs Customization Seperate File</li>
-<li>Emax Defaults</li>
-<li>Some Defaults</li>
-<li>Frames, Buffers, And Lines</li>
-<li>Some Custom Default Functions</li>
-<li>Some New Key Bindings</li>
-<li>Popup, Pos-tip,Tooltip, Posframe</li>
-<li>Which Key</li>
-</ul></li>
-</ul>
-
-<p class="p-news">
-Oh yes, when I installed the dashboard package there was an option to choose a picture. That's when I named my Emacs configuration. Welcome
-to Poseidon the text editor.</p>
-
-<p><br/>
-<img src="/images/poseidon.png" alt="emacs-initialization" align="center" title="Tricys Emacs Initialization" class="img" width="100%" />
-<br/>
-<br/>
-<h3>Necessary Adjustments when you set-up on a new computer</h3></p>
-
-<h4>steps needed to get set-up on a new computer<br/><br/></h4>
-
-<ol>
-<li>install emacs</li>
-<li>install external executables</li>
-<li>paste .emacs and myinit.org from active emacs installation to new emacs installation</li>
-<li>Change load paths in myinit.org</li>
-<li>paste dependency folders to new emacs (snippets, etc.)</li>
-<li>adjust home variable on new system</li>
-<li>adjust emacs to have administrator rights</li>
-<li>restart emacs and deal with each error as emacs runs through myinit.org code (Most errors should be easily resolved by updating directory
-paths, providing missing libraries, ensuring executables and missing library dependencies are installed)</li>
-<li>to troubleshoot basic errors use emacs debugger, messages, and the restart-emacs package. Also, comment out org tangle blocks and
-initialize the init incrementally.</li>
-</ol>
-
-<h4>Paths to Update on Change</h4>
-
-<p class="p-news">
-Here paths to executables, libraries, and external urls are stored in variables. When you install Poseidon on a new system, or change a
-program or its location, change the path variable assignments here. Later in the code, usually in a use-package :config or a function the
-variables are called.
-</p>
-
-<p class="p-news">
-Oh, btw, before the path assignments is an org-tangle block, delineated by the org-mode elisp code on lines 2 and 4. Everything inside them is processed by emacs, everything outside is notes and text you can push to the web easily.
-</p>
+<p class= "p-news">Emacs is all about key bindings and shortcuts. The 'macs' part is short for 'macro.' Here are a few I use.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#080;font-style:italic">;notes and code</span>
-<span style="">#</span><span style="color:#b8860b">+begin_src</span> <span style="color:#b8860b">emacs-lisp</span>
-<span style="color:#080;font-style:italic">;emacs initialization code</span>
-<span style="">#</span><span style="color:#b8860b">+end_src</span></code></pre></td></tr></table>
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">; Rebind C-m as prefix [before any C-m bound]</span>
+<span style="color:#080;font-style:italic">;unest C-m from RET</span>
+(<span style="color:#00a000">define-key</span> <span style="color:#b8860b">input-decode-map</span> [<span style="color:#b44">?\C</span><span style="color:#b8860b">-m</span>] [<span style="color:#b8860b">C-m</span>])
+<span style="color:#080;font-style:italic">; translate it as synonymous with &lt;apps&gt; key</span>
+(<span style="color:#00a000">define-key</span> <span style="color:#b8860b">key-translation-map</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;&lt;apps&gt;&#34;</span>) (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;&lt;C-m&gt;&#34;</span>))
+<span style="color:#080;font-style:italic">;create a prefix command</span>
+(<span style="color:#00a000">define-prefix-command</span> <span style="color:#b8860b">&#39;super-keymap</span>)
+<span style="color:#080;font-style:italic">;set C-m as the prefix-command (note s- is also enabled now</span>
+<span style="color:#080;font-style:italic">;so all C-m can be run with s-</span>
+(<span style="color:#b8860b">global-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;&lt;C-m&gt;&#34;</span>) <span style="color:#b8860b">super-keymap</span>)
+<span style="color:#080;font-style:italic">;(bind-key &#34;&lt;C-m&gt;&#34; super-keymap)</span>
+<span style="color:#080;font-style:italic">;Undo Undo Default Binding</span>
+(<span style="color:#b8860b">global-unset-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-_&#34;</span>))
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-c C-u&#34;</span> <span style="color:#b8860b">&#39;undo</span>)
+<span style="color:#080;font-style:italic">;Bind append-lines</span>
+(<span style="color:#b8860b">global-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;M-j&#34;</span>) <span style="color:#b8860b">&#39;append-lines</span>)
+<span style="color:#080;font-style:italic">;(bind-key &#34;M-j&#34; append-lines)</span>
+<span style="color:#080;font-style:italic">;Bind Kill This Buffer</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;\C-x\C-k&#34;</span> <span style="color:#b8860b">&#39;kill-this-buffer</span>)
+<span style="color:#080;font-style:italic">;New Scratch Buffer</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-c b&#34;</span> <span style="color:#b8860b">&#39;new-frame-scratch-buffer</span>)
+<span style="color:#080;font-style:italic">; remap go-to-line</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;M-g&#34;</span> <span style="color:#b8860b">&#39;goto-line</span>)
+(<span style="color:#b8860b">global-set-key</span> [<span style="color:#b8860b">remap</span> <span style="color:#b8860b">goto-line</span>] <span style="color:#b8860b">&#39;goto-line-with-feedback</span>)
+<span style="color:#080;font-style:italic">;Bind New Line Dwim (gets next line bullet, creates new line with it)</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;C-return&gt;&#34;</span> <span style="color:#b8860b">&#39;new-line-dwim</span>)
+<span style="color:#080;font-style:italic">;(setq there-is-no-variable-here )</span>
+<span style="color:#080;font-style:italic">;describe personal key bindings</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;f11&gt;&#34;</span>  <span style="color:#b8860b">&#39;describe-personal-keybindings</span>)</code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+</div>
+<p><br/></p>
+
+<h5>Posframe and Popup</h5>
+
+<p class= "p-news">Popup and Posframe are standard packages you need to use other packages with popup frames, like hydra. Here's the code:</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">popup</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">&#39;popup-scroll-bar-foreground-face</span> <span style="color:#800">nil</span> <span style="color:#a2f">:inherit</span> <span style="color:#800">nil</span> <span style="color:#a2f">:background</span> <span style="color:#b44">&#34;#FFC300&#34;</span>)
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">&#39;popup-scroll-bar-background-face</span> <span style="color:#800">nil</span> <span style="color:#a2f">:inherit</span> <span style="color:#800">nil</span> <span style="color:#a2f">:background</span> <span style="color:#b44">&#34;#2471A3&#34;</span>)
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">&#39;popup-face</span>
+  <span style="color:#666">&#39;</span>((<span style="color:#800">t</span> (<span style="color:#a2f">:background</span> <span style="color:#b44">&#34;#FFC300&#34;</span> <span style="color:#a2f">:foreground</span> <span style="color:#b44">&#34;#2471A3&#34;</span>))))
+(<span style="color:#00a000">define-key</span> <span style="color:#b8860b">popup-menu-keymap</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;SPC&#34;</span>) <span style="color:#b8860b">&#39;popup-select</span>)
+)<span style="color:#080;font-style:italic">;end popup</span>
+<span style="color:#080;font-style:italic">;tooltip popups on mouse over</span>
+(<span style="color:#b8860b">tooltip-mode</span> <span style="color:#666">1</span>)
+<span style="color:#080;font-style:italic">;customize tooltip background</span>
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">&#39;tooltip</span> <span style="color:#800">nil</span> <span style="color:#a2f">:inherit</span> <span style="color:#800">nil</span> <span style="color:#a2f">:background</span> <span style="color:#b44">&#34;gray96&#34;</span>)
+<span style="color:#080;font-style:italic">;pos-tip, scroll over popups with info</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">pos-tip</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">pos-tip-foreground-color</span> <span style="color:#b44">&#34;#FFC300&#34;</span>
+<span style="color:#b44">&#34;Default foreground color of pos-tip&#39;s tooltip.&#34;</span>)
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">pos-tip-background-color</span> <span style="color:#b44">&#34;#2471A3&#34;</span>
+<span style="color:#b44">&#34;Default background color of pos-tip&#39;s tooltip.&#34;</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">pos-tip-background-color</span> <span style="color:#b44">&#34;#2471A3&#34;</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">pos-tip-foreground-color</span> <span style="color:#b44">&#34;#FFC300&#34;</span>)
+<span style="color:#080;font-style:italic">;(pos-tip-w32-max-width-height)</span>
+<span style="color:#080;font-style:italic">;(pos-tip-w32-max-width-height t)</span>
+)
+<span style="color:#080;font-style:italic">;posframe</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">posframe</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;posframe</span>)
+)</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>Which Key</h5>
+
+<p class= "p-news">Which Key opens a frame with next letter options and explanations after you type a letter. It's great until you have a
+system of hydras, at which point you won't need it. I leave up as it doesn't get in the way. </p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -358,92 +427,53 @@ Oh, btw, before the path assignments is an org-tangle block, delineated by the o
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="">#</span><span style="color:#b8860b">+begin_src</span> <span style="color:#b8860b">emacs-lisp</span>
-<span style="color:#080;font-style:italic">; most of the executables I use from within emacs, except some security ones and some of the browsers</span>
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">xampp-p</span> <span style="color:#b44">&#34;.../xampp/xampp-control.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">notepad++-p</span> <span style="color:#b44">&#34;.../Program Files/Notepad++/notepad++.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">backup-init-p</span> <span style="color:#b44">&#34;.../emacs/emax/run-backup-init-silently.vbs&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">image-magick-p</span> <span style="color:#b44">&#34;.../Program Files/ImageMagick-7.0.8-Q16/magick.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">dropbox-p</span> <span style="color:#b44">&#34;.../Program Files (x86)/Dropbox/Client/Dropbox.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">wordnet-command-p</span> <span style="color:#b44">&#34;.../Program Files (x86)/WordNet/2.1/bin/wn.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">win-calc-p</span> <span style="color:#b44">&#34;.../Windows/System32/calc.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">screen-cast-p</span>  <span style="color:#b44">&#34;.../Program Files (x86)/Screencast-O-Matic/v2/Screencast-O-Matic.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">fsviewer-p</span> <span style="color:#b44">&#34;.../Program Files (x86)/FastStone Image Viewer/FSViewer.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">gimp-p</span> <span style="color:#b44">&#34;.../Program Files/GIMP 2/bin/gimp-2.10.exe&#34;</span> )
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">7z-p</span> <span style="color:#b44">&#34;.../Program Files/7-Zip/7z.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">winword-p</span> <span style="color:#b44">&#34;.../Program Files/Microsoft Office/root/Office16/WINWORD.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">excel-p</span> <span style="color:#b44">&#34;.../Program Files/Microsoft Office/root/Office16/EXCEL.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">mpd-start-p</span> <span style="color:#b44">&#34;.../Users/Methuselah/Documents/mpd-windows-master/start-silently-mpd.vbs&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">mpd-stop-p</span> <span style="color:#b44">&#34;.../Users/Methuselah/Documents/mpd-windows-master/stop-mpd-silently.vbs&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">keycast-p</span> <span style="color:#b44">&#34;.../Program Files/Keycastow/keycastow.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">pandoc-p</span> <span style="color:#b44">&#34;.../Users/Methuselah/AppData/Local/Pandoc/pandoc.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">firefox-p</span> <span style="color:#b44">&#34;.../Program Files/Mozilla Firefox/firefox.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">git-exe-p</span> <span style="color:#b44">&#34;.../Program Files/Git/mingw64/libexec/git-core/git.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">win-ubuntu-exe-p</span> <span style="color:#b44">&#34;.../Windows/System32/wsl.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">atom-exe-p</span>  <span style="color:#b44">&#34;.../Users/Methuselah/AppData/Local/atom/atom.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">default-comspec-p</span> <span style="color:#b44">&#34;C:\\Windows\\system32\\cmd.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">bash-comspec-p</span> <span style="color:#b44">&#34;C:\\Windows\\system32\\wsl.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">default-shell-file-name-p</span> <span style="color:#b44">&#34;.../emacs/libexec/emacs/26.2/x86_64-w64-mingw32/cmdproxy.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">bash-shell-file-name-p</span> <span style="color:#b44">&#34;.../Windows/system32/bash.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">git-bash-shell-file-name-p</span> <span style="color:#b44">&#34;.../Program Files/Git/git-bash.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">onedrive-p</span> <span style="color:#b44">&#34;.../Users/Methuselah/AppData/Local/Microsoft/OneDrive/OneDrive.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">deploy-cloud-nine-p</span> <span style="color:#b44">&#34;.../Hugo/sites/cloudnine-build-directory/cloudnine-deploy-silently.vbs&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">deploy-build-hello-p</span> <span style="color:#b44">&#34;.../Hugo/sites/buildhello-build-directory/buildhello-deploy-silently.vbs&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">image-magick-convert-p</span> <span style="color:#b44">&#34;.../Program Files/ImageMagick-7.0.8-Q16/convert.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">live-reload-p</span> <span style="color:#b44">&#34;.../Users/Methuselah/AppData/Local/Apps/2.0/W5VQXTCA.25X/1NPRP1JV.N67/live..tion_0000000000000000_0000.0009_403689373d141ec5/LiveReload.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">inkscape-p</span> <span style="color:#b44">&#34;.../Program Files/Inkscape/inkscape.exe&#34;</span> )
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">ag-executable-p</span> <span style="color:#b44">&#34;.../emacs/ag/ag.exe&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">ispell-program-name-p</span> <span style="color:#b44">&#34;.../emacs/hunspell-1.3.2-3-w32-bin/bin/hunspell.exe&#34;</span>)
-
-<span style="color:#080;font-style:italic">;library paths</span>
-
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">auto-yas-p</span> <span style="color:#b44">&#34;~/emax/elpa/auto-yasnippet-20190326.958/&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">yas-p</span> <span style="color:#b44">&#34;~/.emacs.d/elpa/yasnippet-20190724.1204/&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">wordnet-dictionary-p</span> <span style="color:#b44">&#34;.../Program Files (x86)/WordNet/2.1/dict/&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">comp-ispell-dic-p</span> <span style="color:#b44">&#34;.../emacs/.emacs.d/misc/english-words.dic&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">dash-p</span> <span style="color:#b44">&#34;.../emacs/emax/elpa/dashboard-20190721.504/&#34;</span> )
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">dash-image-p</span>  <span style="color:#b44">&#34;~/.emacs.d/images/poseidon_2.png&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">all-the-icons-p</span> <span style="color:#b44">&#34;.../emacs/.emacs.d/all-the-icons-fonts/&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">auto-yas-dir-p</span> <span style="color:#b44">&#34;.../emacs/.emacs.d/auto-yas-snippets/&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">yas-snippets-p</span> <span style="color:#b44">&#34;.../emacs/.emacs.d/snippets/&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">which-key-posframe-p</span> <span style="color:#b44">&#34;.../emacs/emax/elpa/which-key-posframe-20190427.1103/which-key-posframe.el&#34;</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">hydra-posframe-p</span> <span style="color:#b44">&#34;.../emacs/emax/elpa/hydra-posframe/&#34;</span>)
-
-<span style="">#</span><span style="color:#b8860b">+end_src</span></code></pre></td></tr></table>
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Which Key</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">which-key</span>
+<span style="color:#a2f">:after</span> <span style="color:#b8860b">popup</span> <span style="color:#b8860b">pos-tip</span>
+<span style="color:#a2f">:diminish</span>
+<span style="color:#a2f">:init</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;which-key</span>)
+(<span style="color:#b8860b">which-key-mode</span> <span style="color:#666">1</span>)
+<span style="color:#a2f">:config</span>
+<span style="color:#080;font-style:italic">;(which-key-setup-side-window-right)</span>
+<span style="color:#080;font-style:italic">;(which-key-setup-minibuffer)</span>
+<span style="color:#080;font-style:italic">;(setq which-key-use-C-h-commands t)</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">which-key-popup-type</span> <span style="color:#b8860b">&#39;frame</span>)
+<span style="color:#080;font-style:italic">; max width of which-key frame: number of columns (an integer)</span>
+<span style="color:#080;font-style:italic">;(setq which-key-frame-max-width 140)</span>
+<span style="color:#080;font-style:italic">; max height of which-key frame: number of lines (an integer)</span>
+<span style="color:#080;font-style:italic">;(setq which-key-frame-max-height 120)</span>
+<span style="color:#080;font-style:italic">;this is supposed to improve speed with custom fonts</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">which-key-allow-imprecise-window-fit</span> <span style="color:#800">t</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">which-key-sort-order</span> <span style="color:#b8860b">&#39;which-key-local-then-key-order</span>)
+<span style="color:#080;font-style:italic">;just so you can read your hyrda function titles in C-m m</span>
+(<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">which-key-show-docstrings</span> <span style="color:#800">nil</span>)
+(<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">which-key-max-description-length</span> <span style="color:#666">11</span>)
+)<span style="color:#080;font-style:italic">;end which-key</span>
+<span style="color:#080;font-style:italic">;Which Key Posframe</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">which-key-posframe</span>
+<span style="color:#a2f">:load-path</span> <span style="color:#b8860b">which-key-posframe-p</span>
+<span style="color:#a2f">:after</span> <span style="color:#b8860b">posframe</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;which-key-posframe</span>)
+(<span style="color:#b8860b">which-key-posframe-mode</span>)
+<span style="color:#080;font-style:italic">;(setq which-key-posframe-poshandlee &#39;posframe-poshandler-frame-center)</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">which-key-posframe-poshandler</span> <span style="color:#b8860b">&#39;posframe-poshandler-frame-top-center</span>)
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">&#39;which-key-posframe</span> <span style="color:#800">nil</span> <span style="color:#a2f">:inherit</span> <span style="color:#800">nil</span> <span style="color:#a2f">:background</span> <span style="color:#b44">&#34;#061229&#34;</span>)
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">&#39;which-key-command-description-face</span> <span style="color:#800">nil</span> <span style="color:#a2f">:inherit</span> <span style="color:#800">nil</span> <span style="color:#a2f">:foreground</span> <span style="color:#b44">&#34;ghost white&#34;</span>)
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">&#39;which-key-posframe-border</span> <span style="color:#800">nil</span> <span style="color:#a2f">:inherit</span> <span style="color:#800">nil</span> <span style="color:#a2f">:background</span> <span style="color:#b44">&#34;ghost white&#34;</span>)
+)<span style="color:#080;font-style:italic">;end which-key-posframe</span></code></pre></td></tr></table>
 </div>
 </div>
-<p><p class="p-news">
-So there&rsquo;s the first 130 lines or so of my init file (52 shown here plus the paths I didn&rsquo;t bother to paste in and some text). Btw, it
-doesn&rsquo;t matter where you store your stuff, as long as emacs knows where it is. In fact, that&rsquo;s the point of assigning the paths to
-variables. When your paths or path names change, you don&rsquo;t have to search the document for each path. Coming up are the function
-declarations.
-</p>
-<br/>
-<br/>
-<h5>Until Next Time&hellip;</h5>
-<br/></p>
+<p><br/></p>
+
+<h5>That's all for now. See you next time...</h5>
 
 
         <div class="share-icons d-flex justify-content-center d-print-none">
-            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-24-emacs-installation-and-defaults%2f&text=Emacs%20Installation%20and%20Defaults&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
+            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-17-emacs-posframe-which-key%2f&text=Emacs%20Configuration%20Posframe%20and%20Which%20Key%2c%20Some%20Key%20Bindings&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -453,7 +483,7 @@ declarations.
     <div class="fa-inverse text-center"><small>Tweet</small></div>
 </a>
 
-<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-24-emacs-installation-and-defaults%2f&t=Emacs%20Installation%20and%20Defaults" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-17-emacs-posframe-which-key%2f&t=Emacs%20Configuration%20Posframe%20and%20Which%20Key%2c%20Some%20Key%20Bindings" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -463,7 +493,7 @@ declarations.
     <div class="fa-inverse text-center"><small>Share</small></div>
 </a>
 
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-24-emacs-installation-and-defaults%2f&title=Emacs%20Installation%20and%20Defaults&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-17-emacs-posframe-which-key%2f&title=Emacs%20Configuration%20Posframe%20and%20Which%20Key%2c%20Some%20Key%20Bindings&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
