@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="Cloud Nine" />
+<meta name="copyright" content="Copyright" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
+<meta name="yandex-verification" content="7cb55c3432ff9fc7" />
+<meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
+
+
+<meta name="description" content="Today&#39;s post covers &#34;Entering and Exiting Emacs&#34; and &#34;Default Appearance Customizations&#34; from the appearance section of my init.   Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra    Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.">
+
+<meta property="og:title" content="Emacs Appearance, Entering and Exiting (&#43; Some Functions)" />
+<meta property="og:description" content="Some configuration defaults for your Emacs configuration file." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-20-emacs-enter-exit-appearance/" /><meta property="article:published_time" content="2020-02-20T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-02-20T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs Appearance, Entering and Exiting (&#43; Some Functions)"/>
+<meta name="twitter:description" content="Some configuration defaults for your Emacs configuration file."/>
+
+<meta property="og:title" content="Cloud Nine">
+<meta property="og:image" content="https://cloudnine.github.io/images/hero.png">
+<meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
+<title>Emacs Appearance, Entering and Exiting (&#43; Some Functions) | Cloud Nine</title>
+
+<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
+<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
+
+<link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
+<link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD&#43;dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p&#43;WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S&#43;L3BlXeVIU" crossorigin="anonymous">
+
+        
+        
+        
+        
+
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.d28596dd7eaebe2045cc8fc38d44f07588ae3f4e3a6f58c4aa556fa9bb47e3b0.css" integrity="sha256-0oWW3X6uviBFzI/DjUTwdYiuP046b1jEqlVvqbtH47A="  />
+
+        
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="Cloud Nine" />
+<meta name="copyright" content="Copyright" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
+<meta name="yandex-verification" content="7cb55c3432ff9fc7" />
+<meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
+
+
+<meta name="description" content="Today&#39;s post covers &#34;Entering and Exiting Emacs&#34; and &#34;Default Appearance Customizations&#34; from the appearance section of my init.   Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra    Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.">
+
+<meta property="og:title" content="Emacs Appearance, Entering and Exiting (&#43; Some Functions)" />
+<meta property="og:description" content="Some configuration defaults for your Emacs configuration file." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-20-emacs-enter-exit-appearance/" /><meta property="article:published_time" content="2020-02-20T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-02-20T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs Appearance, Entering and Exiting (&#43; Some Functions)"/>
+<meta name="twitter:description" content="Some configuration defaults for your Emacs configuration file."/>
+
+<meta property="og:title" content="Cloud Nine">
+<meta property="og:image" content="https://cloudnine.github.io/images/hero.png">
+<meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
+<title>Emacs Appearance, Entering and Exiting (&#43; Some Functions) | Cloud Nine</title>
+
+<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
+<link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
+
+<link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
+<link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD&#43;dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p&#43;WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S&#43;L3BlXeVIU" crossorigin="anonymous">
+
+        
+        
+        
+        
+
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.d28596dd7eaebe2045cc8fc38d44f07588ae3f4e3a6f58c4aa556fa9bb47e3b0.css" integrity="sha256-0oWW3X6uviBFzI/DjUTwdYiuP046b1jEqlVvqbtH47A="  />
+
+
+
+    
+<style type="text/css">
+        .feature-image {
+          background-image: url("https://cloudnine.github.io/images/science/christian-bale.png");
+          width:100%;
+          height: auto;
+        }
+@media (max-width: 575px) {
+.feature-image {
+    min-height: 180px;
+}
+
+.feature-image-text {
+    max-width: 80%;
+    margin-top:5px;
+}
+.feature-image-text h1 {
+    font-size: 1.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: .75rem;
+}
+}  
+
+@media (min-width: 576px) {
+    .feature-image {
+    min-height: 200px;
+    }
+.feature-image-text {
+    max-width: 80%;
+    margin-top:10px;
+}
+.feature-image-text h1 {
+    font-size: 1.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: .75rem;
+}
+}  
+
+@media (min-width: 768px) {
+    .feature-image {
+    min-height: 250px;
+    }
+.feature-image-text {
+    max-width: 80%;
+    margin-top:10px;
+}
+.feature-image-text h1 {
+    font-size: 1.6rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1rem;
+}
+} 
+
+@media (min-width: 992px) {
+    .feature-image {
+    min-height: 350px;
+}
+.feature-image-text {
+    max-width: 600px;
+    margin-top:15px;
+}
+.feature-image-text h1 {
+    font-size: 2rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1.4rem;
+}
+} 
+@media (min-width: 1200px) {
+    .feature-image {
+    min-height: 500px;
+}
+.feature-image-text {
+    max-width: 760px;
+    margin-top:20px;
+}
+.feature-image-text h1 {
+    font-size: 2.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1.6rem;
+}
+} 
+</style>
+
+
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+            <div class="container">
+                    <a class="navbar-brand pr-2" href="https://cloudnine.github.io/">CLOUD NINE</a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/about/">About</a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/motivation/">Motivation</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/science/">Science</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/categories/">Categories</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/tags/">Tags</a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/books/">Books</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" href="https://cloudnine.github.io/archives/">Archives</a>
+</li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        
+<header class="feature-image d-print-none">
+</header>
+
+
+        <div class="main">
+            
+<div class="container mt-4 post">
+    <h1>Emacs Appearance, Entering and Exiting (&#43; Some Functions)</h1>
+    <div class="mb-3">
+    <small>
+        <strong>Author: Yuri Tricys</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 20, 2020    &nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/emacs-functions/'>emacs-functions</a>
+    </small>
+</div>
+
+
+        <div class="mt-4 mb-4 main-content">
+        <h5>Today's post covers "Entering and Exiting Emacs" and "Default Appearance Customizations" from the appearance section of my init. <br/><br/></h5>
+
+<ul>
+<li>Appearance
+
+<ul>
+<li>Entering and Exiting Emacs</li>
+<li>Default Appearance Customizations</li>
+<li>Themes</li>
+<li>Highlights</li>
+<li>Hydras</li>
+<li>Appearance Hydra
+<br/></li>
+</ul></li>
+</ul>
+
+<h5>Preamble</h5>
+
+<p class= "p-news">Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
+know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts y date from
+oldest to newest.</p>
+
+<p class = "p-news">In the last emacs <a href="https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/" target="_blank">post</a> I covered lines 664 - 769. This post
+covers lines 771 - 914</p>
+
+<p class= "p-news">Most of this is relevant. If you don't want your Emacs to beep when you hit the end of the file, then you need
+to set a default, and the same for another annoying stuff. I make no promises the following section is efficient (let me know if you see
+some double entries). </p>
+
+<h5>Entering and Exiting Emacs</h5>
+
+<p class= "p-news">Dashboard is cool. Gives you an opening screen you can post an image.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">dashboard</span>
+<span style="color:#a2f">:after</span> <span style="color:#b8860b">all-the-icons</span>
+<span style="color:#a2f">:diminish</span> (<span style="color:#b8860b">dashboard-mode</span> <span style="color:#b8860b">page-break-lines-mode</span>)
+<span style="color:#a2f">:load-path</span> <span style="color:#b8860b">dash-p</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;dashboard</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">dashboard-footer</span> <span style="color:#b44">&#34;Time teaches all things.&#34;</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">dashboard-footer-icon</span> (<span style="color:#b8860b">all-the-icons-octicon</span> <span style="color:#b44">&#34;calendar&#34;</span>
+                                                   <span style="color:#a2f">:height</span> <span style="color:#666">1.1</span>
+                                                   <span style="color:#a2f">:v-adjust</span> <span style="color:#666">-0.05</span>
+                                                   <span style="color:#a2f">:face</span> <span style="color:#b8860b">&#39;font-lock-keyword-face</span>))
+<span style="color:#a2f">:custom</span>
+(<span style="color:#b8860b">dashboard-center-content</span> <span style="color:#800">t</span>)
+(<span style="color:#b8860b">dashboard-setup-startup-hook</span>)
+(<span style="color:#b8860b">dashboard-startup-banner</span> <span style="color:#b8860b">dash-image-p</span>)
+(<span style="color:#b8860b">dashboard-banner-logo-title</span> <span style="color:#b44">&#34;Poseidon Editor&#34;</span>)
+<span style="color:#080;font-style:italic">;(dashboard-startup-banner 3)</span>
+(<span style="color:#b8860b">dashboard-items</span>
+<span style="color:#666">&#39;</span>(
+(<span style="color:#b8860b">bookmarks</span> <span style="color:#666">.</span> <span style="color:#666">5</span>)
+<span style="color:#080;font-style:italic">;(projects . 5)</span>
+(<span style="color:#b8860b">recents</span> <span style="color:#666">.</span> <span style="color:#666">5</span>)
+)<span style="color:#080;font-style:italic">;end a-list</span>
+)<span style="color:#080;font-style:italic">;end dashboard-items</span>
+<span style="color:#a2f">:custom-face</span>
+(<span style="color:#b8860b">dashboard-heading</span> ((<span style="color:#800">t</span> (<span style="color:#a2f">:foreground</span> <span style="color:#b44">&#34;#f1fa8c&#34;</span> <span style="color:#a2f">:weight</span> <span style="color:#b8860b">bold</span>))))
+<span style="color:#a2f">:hook</span>
+(<span style="color:#b8860b">after-init</span> <span style="color:#666">.</span> <span style="color:#b8860b">dashboard-setup-startup-hook</span>)
+)<span style="color:#080;font-style:italic">;end-dashboard</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><br/>
+<h5>Here&rsquo;s my current dashboard image. Below the images there are shorts-cuts to files you&rsquo;ve been working on.</h5>
+<br/>
+<img src="/images/poseidon.png" alt="emacs-initialization" align="center" title="Tricys Emacs Initialization" class="img" width="100%" />
+<br/></p>
+
+<h5>Exit Poseidon</h5>
+
+<p class= "p-news">A function to exit emacs. I use it from minibuffer or from a hydra.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;exit and save command-logs,only works if command-log-mode feature is loaded at the same time global-command-log-mode is started</span>
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">exit-poseidon</span> ()
+(<span style="color:#a2f">interactive</span>)
+(<span style="color:#a2f">progn</span>
+(<span style="color:#a2f">if</span> (<span style="color:#a2f">featurep</span> <span style="color:#b8860b">&#39;command-log-mode</span>)
+(<span style="color:#a2f">progn</span>
+(<span style="color:#b8860b">clm/save-command-log</span>)
+(<span style="color:#b8860b">stop-mpd</span>)
+(<span style="color:#b8860b">save-buffers-kill-terminal</span>)))
+(<span style="color:#b8860b">save-buffers-kill-terminal</span>))
+)<span style="color:#080;font-style:italic">;end exit poseidon</span>
+<span style="color:#080;font-style:italic">; the mnemonic is C-x really quit (close everything)</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-x r q&#34;</span> <span style="color:#b8860b">&#39;exit-poseidon</span>)</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>Restart Poseidon</h5>
+
+<p class= "p-news">Restart is nifty for trouble-shooting init</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">restart-emacs</span>
+<span style="color:#080;font-style:italic">;:init</span>
+<span style="color:#a2f">:config</span>
+<span style="color:#080;font-style:italic">;(setq restart-emacs-restore-frames t)</span>
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">restart-poseidon</span>()
+(<span style="color:#a2f">interactive</span>)
+(<span style="color:#a2f">progn</span>
+(<span style="color:#a2f">if</span> (<span style="color:#a2f">featurep</span> <span style="color:#b8860b">&#39;command-log-mode</span>) (<span style="color:#b8860b">clm/save-command-log</span>)
+(<span style="color:#b8860b">restart-emacs</span>))
+(<span style="color:#b8860b">restart-emacs</span>))
+)<span style="color:#080;font-style:italic">;end restart-poseidon</span>
+<span style="color:#a2f">:bind</span>
+(<span style="color:#b44">&#34;C-x r r&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">restart-poseidon</span>)
+)<span style="color:#080;font-style:italic">;end restart-emacs</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>Default Appearance Customizations</h5>
+
+<h5>system info</h5>
+
+<p class= "p-news">Puts info and path at top of frame</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">setq</span> <span style="color:#00a000">system-name</span> <span style="color:#b44">&#34;Your System Name&#34;</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#00a000">user-full-name</span> <span style="color:#b44">&#34;Your Name&#34;</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">user-mail-address</span> <span style="color:#b44">&#34;your-email@e-mail.com&#34;</span>)
+<span style="color:#080;font-style:italic">;menu-bar, tool-bar, scroll-bar</span>
+<span style="color:#080;font-style:italic">;(if (fboundp &#39;menu-bar-mode) (menu-bar-mode -1))</span>
+(<span style="color:#a2f">if</span> (<span style="color:#00a000">fboundp</span> <span style="color:#b8860b">&#39;tool-bar-mode</span>) (<span style="color:#b8860b">tool-bar-mode</span> <span style="color:#666">-1</span>))
+<span style="color:#080;font-style:italic">;(if (fboundp &#39;scroll-bar-mode) (scroll-bar-mode -1))</span>
+<span style="color:#080;font-style:italic">;clock</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">display-time-12hr-format</span> <span style="color:#800">t</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">display-time-format</span> <span style="color:#b44">&#34;%H:%M - %B %d - %Y&#34;</span>)
+(<span style="color:#b8860b">display-time-mode</span> <span style="color:#666">1</span>)
+<span style="color:#080;font-style:italic">;(setq display-time-day-and-date t)</span>
+<span style="color:#080;font-style:italic">;Put path, time, date at frame top</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">global-mode-string</span> <span style="color:#800">nil</span>)
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">frame-title-prefix</span>()
+(<span style="color:#00a000">list</span> (<span style="color:#00a000">format</span> <span style="color:#b44">&#34;%s %%S: %%j &#34;</span> (<span style="color:#00a000">concat</span> <span style="color:#b44">&#34;System: &#34;</span> <span style="color:#00a000">system-name</span> <span style="color:#b44">&#34; - Editor: Poseidon - Path&#34;</span>))
+         <span style="color:#666">&#39;</span>(<span style="color:#00a000">buffer-file-name</span> <span style="color:#b44">&#34;%f&#34;</span> (<span style="color:#b8860b">dired-directory</span> <span style="color:#b8860b">dired-directory</span> <span style="color:#b44">&#34;%b&#34;</span>))))
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">frame-title-format</span>
+<span style="color:#666">&#39;</span>(<span style="color:#b44">&#34; &#34;</span> (<span style="color:#a2f">:eval</span> (<span style="color:#b8860b">frame-title-prefix</span>)) <span style="color:#b44">&#34; - Time and Date: &#34;</span> <span style="color:#b8860b">display-time-string</span>))</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>Desktop Config</h5>
+
+<p class= "p-news">I only use when I have some complex shit going on and I need to come back to it exactly. It's a bit weird, you need to
+alternate saves to keep a default opening in reserve.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;save desktop configuration</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">desktop+</span>
+<span style="color:#a2f">:commands</span> (<span style="color:#b8860b">desktop-create</span> <span style="color:#b8860b">desktop-load</span>)
+<span style="color:#a2f">:init</span>
+(<span style="color:#b8860b">eval-after-load</span> <span style="color:#b44">&#34;desktop+&#34;</span>
+  <span style="color:#666">&#39;</span>(<span style="color:#a2f">defun</span> <span style="color:#b8860b">desktop+--set-frame-title</span> ()
+(<span style="color:#00a000">message</span> <span style="color:#b44">&#34;desktop+ set in initialization to not write to frame title&#34;</span>)
+ ))
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;desktop+</span>)
+<span style="color:#080;font-style:italic">;if you want to also save open buffers</span>
+<span style="color:#080;font-style:italic">;(setq desktop+-special-buffer-handlers &#39;(org-agenda-mode shell-mode))</span>
+)<span style="color:#080;font-style:italic">;end desktop+</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>A couple defaults</h5>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;inhibit font caching</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">inhibit-compacting-font-caches</span> <span style="color:#800">t</span>)
+<span style="color:#080;font-style:italic">;increase/decrease text</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-=&#34;</span> <span style="color:#b8860b">&#39;text-scale-increase</span>)
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C--&#34;</span> <span style="color:#b8860b">&#39;text-scale-decrease</span>)
+<span style="color:#080;font-style:italic">;Wrap words at window edge</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">truncate-partial-width-windows</span> <span style="color:#800">nil</span>)
+<span style="color:#080;font-style:italic">;(global-visual-line-mode t)</span>
+(<span style="color:#b8860b">diminish</span> <span style="color:#b8860b">&#39;visual-line-mode</span>)</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>Visual Fill Column and Adaptive Wrap</h5>
+
+<p class= "p-news">Visual Fill Column shows a line where words will end. You can change the fill column to fit various page widths, like
+word is 100 or something. Adaptive wrap I think preserves the indent on text wrapping.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Wrap words at column edge</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">visual-fill-column</span>
+<span style="color:#a2f">:commands</span> <span style="color:#b8860b">visual-fill-column-mode</span>
+<span style="color:#a2f">:config</span>
+<span style="color:#080;font-style:italic">;(add-hook &#39;visual-line-mode-hook #&#39;visual-fill-column-mode)</span>
+(<span style="color:#b8860b">advice-add</span> <span style="color:#b8860b">&#39;text-scale-increase</span> <span style="color:#a2f">:after</span>
+   <span style="color:#00a000">#&#39;</span><span style="color:#b8860b">visual-fill-column-adjust</span>)
+(<span style="color:#b8860b">advice-add</span> <span style="color:#b8860b">&#39;text-scale-decrease</span> <span style="color:#a2f">:after</span>
+   <span style="color:#00a000">#&#39;</span><span style="color:#b8860b">visual-fill-column-adjust</span>)
+)<span style="color:#080;font-style:italic">;end use package fill column</span>
+
+<span style="color:#080;font-style:italic">; you need to download adaptive wrap library from somewhere and add a path to it</span>
+<span style="color:#080;font-style:italic">;adaptive wrap indents wrapped lines</span>
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b8860b">adaptive-wrap-p</span>)
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;adaptive-wrap</span>)</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>Coding system</h5>
+
+<p class= "p-news">Overkill doesn't always work.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;all the coding systems you can handle (still doesn&#39;t always work)</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">locale-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
+(<span style="color:#b8860b">set-terminal-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
+(<span style="color:#b8860b">set-keyboard-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
+(<span style="color:#b8860b">set-selection-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
+(<span style="color:#b8860b">prefer-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
+(<span style="color:#b8860b">set-language-environment</span> <span style="color:#b8860b">&#39;utf-8</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">coding-system-for-read</span> <span style="color:#b8860b">&#39;utf-8</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">coding-system-for-write</span> <span style="color:#b8860b">&#39;utf-8</span>)
+(<span style="color:#b8860b">set-default-coding-systems</span> <span style="color:#b8860b">&#39;utf-8</span>)
+<span style="color:#080;font-style:italic">;Replace characters that paste into emacs incorrectly</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>Replace Garbage Characters</h5>
+
+<p class= "p-news">When you cut and paste from the net or other programs the coding systems don't always match. You can garbage characters
+on your screen. I use this to replace them. Whenever I meet a new one I add it below, if I remember.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">defun</span> <span style="color:#b8860b">replace-garbage-chars</span> ()
+<span style="color:#b44">&#34;Replace goofy MS and other garbage characters with latin1 equivalents.&#34;</span>
+(<span style="color:#a2f">interactive</span>)
+(<span style="color:#a2f">save-excursion</span>             <span style="color:#080;font-style:italic">;save the current point</span>
+(<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\221&#34;</span> <span style="color:#b44">&#34;`&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
+(<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\222&#34;</span> <span style="color:#b44">&#34;&#39;&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
+(<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\226&#34;</span> <span style="color:#b44">&#34;-&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
+(<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\227&#34;</span> <span style="color:#b44">&#34;--&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
+(<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\223&#34;</span> <span style="color:#b44">&#34;(&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
+(<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\224&#34;</span> <span style="color:#b44">&#34;)&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
+(<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\205&#34;</span> <span style="color:#b44">&#34;...&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
+(<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\225&#34;</span> <span style="color:#b44">&#34;-&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
+))<span style="color:#080;font-style:italic">;end replace-garbage-characters</span>
+<span style="color:#080;font-style:italic">;bind-key replace-garbage-characters</span>
+(<span style="color:#b8860b">bind-key</span>  <span style="color:#b44">&#34;\C-cr&#34;</span>  <span style="color:#b8860b">&#39;replace-garbage-chars</span>)</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>That's all. See you next time.</h5>
+
+
+        <div class="share-icons d-flex justify-content-center d-print-none">
+            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-20-emacs-enter-exit-appearance%2f&text=Emacs%20Appearance%2c%20Entering%20and%20Exiting%20%28%2b%20Some%20Functions%29&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Tweet</small></div>
+</a>
+
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-20-emacs-enter-exit-appearance%2f&t=Emacs%20Appearance%2c%20Entering%20and%20Exiting%20%28%2b%20Some%20Functions%29" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Share</small></div>
+</a>
+
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-20-emacs-enter-exit-appearance%2f&title=Emacs%20Appearance%2c%20Entering%20and%20Exiting%20%28%2b%20Some%20Functions%29&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Share</small></div>
+</a>
+
+<a href="javascript:window.print()" title="Print this article" class="p-2" target="_blank" rel="nofollow">
+    <div>
+        <span class="fa-stack">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fa fa-print fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+    <div class="fa-inverse text-center"><small>Print</small></div>
+</a>
+        </div>
+    </div>
+
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+      
+      
+      if (window.location.hostname == "localhost")
+                return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'cloud-nine-2';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
+
+</div>
+<div class="sidebar d-print-none d-none d-xl-block">
+    
+<h2 class ="center">Meet The Author</h2>
+
+<div class="mobile-iframe">
+<iframe width="360" height="180" src="https://www.youtube.com/embed/HR3O17D0MaE?start=0.2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div> 
+
+<p>Hi, I'm <strong>Yuri Tricys</strong>, the author of Cloud Nine. I'm a <strong>researcher</strong>, <strong>technical writer</strong>, <strong>data analyst</strong>, and <strong>web developer</strong>.</p>
+
+<p>Cloud Nine is a place where you can browse some of the <strong>free</strong> content I create.</p>
+
+<p>You can also <strong>outsource</strong> <strong>research</strong> to me directly. In fact, I encourage you to do so.</p>
+<p>Just send an e-mail to <a href="mailto:tricys@alumni.ubc.ca? subject=Research">tricys@alumni.ubc.ca</a> with "Research" in the subject line and I'll get back to you.</p>
+
+
+<h2 class="mt-4">Featured Posts</h2>
+    <nav class="nav flex-column">
+
+    
+        <a href="https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/" class="nav-link">Emacs Bookmarks</a>
+    
+    </nav>
+
+<h2 class="mt-4">Recent Posts</h2>
+<nav class="nav flex-column">
+
+
+<a href="https://cloudnine.github.io/science/2020-02-20-emacs-enter-exit-appearance/" class="nav-link">Emacs Appearance, Entering and Exiting (&#43; Some Functions)</a>
+
+<a href="https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/" class="nav-link">Emacs Configuration Posframe and Which Key, Some Key Bindings</a>
+
+<a href="https://cloudnine.github.io/books/2020-02-15-smith-keynes-and-penrose/" class="nav-link">Smith, Keynes, and Penrose</a>
+
+<a href="https://cloudnine.github.io/science/2020-02-15-emacs-shell-hydra/" class="nav-link">An Emacs Shell Hydra</a>
+
+<a href="https://cloudnine.github.io/science/2020-02-11-emacs-frames-buffers-defaults-functions/" class="nav-link">Emacs Frames, Buffers, Lines, Defaults (&#43; Some Functions)</a>
+
+<a href="https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/" class="nav-link">Emacs Defaults</a>
+
+    </nav>
+
+    
+    <h2 class="mt-4 text-capitalize">categories</h2>
+    <nav class="nav flex-column">
+        
+        <a href='https://cloudnine.github.io/categories/computer-science/' class="nav-link">
+        computer-science
+        <span class="badge badge-pill badge-secondary">31</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/economics/' class="nav-link">
+        economics
+        <span class="badge badge-pill badge-secondary">27</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/finance/' class="nav-link">
+        finance
+        <span class="badge badge-pill badge-secondary">20</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/business/' class="nav-link">
+        business
+        <span class="badge badge-pill badge-secondary">17</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/politics/' class="nav-link">
+        politics
+        <span class="badge badge-pill badge-secondary">12</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/psychology/' class="nav-link">
+        psychology
+        <span class="badge badge-pill badge-secondary">10</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/statistics/' class="nav-link">
+        statistics
+        <span class="badge badge-pill badge-secondary">4</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/links/' class="nav-link">
+        links
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/math/' class="nav-link">
+        math
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/ethics/' class="nav-link">
+        ethics
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/law/' class="nav-link">
+        law
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/maths/' class="nav-link">
+        maths
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/physics/' class="nav-link">
+        physics
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+    </nav>
+    
+    <h2 class="mt-4 text-capitalize">tags</h2>
+    <nav class="nav flex-column">
+        
+        <a href='https://cloudnine.github.io/tags/learning-center/' class="nav-link">
+        learning-center
+        <span class="badge badge-pill badge-secondary">34</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/data-science/' class="nav-link">
+        data-science
+        <span class="badge badge-pill badge-secondary">20</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/newsroom/' class="nav-link">
+        newsroom
+        <span class="badge badge-pill badge-secondary">19</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/data-firm/' class="nav-link">
+        data-firm
+        <span class="badge badge-pill badge-secondary">16</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/macroeconomics/' class="nav-link">
+        macroeconomics
+        <span class="badge badge-pill badge-secondary">15</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/opinion/' class="nav-link">
+        opinion
+        <span class="badge badge-pill badge-secondary">14</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs/' class="nav-link">
+        emacs
+        <span class="badge badge-pill badge-secondary">13</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/personal-development/' class="nav-link">
+        personal-development
+        <span class="badge badge-pill badge-secondary">10</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/research/' class="nav-link">
+        research
+        <span class="badge badge-pill badge-secondary">10</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/trends-global/' class="nav-link">
+        trends-global
+        <span class="badge badge-pill badge-secondary">9</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/trade/' class="nav-link">
+        trade
+        <span class="badge badge-pill badge-secondary">8</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/academic/' class="nav-link">
+        academic
+        <span class="badge badge-pill badge-secondary">5</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-hydras/' class="nav-link">
+        emacs-hydras
+        <span class="badge badge-pill badge-secondary">5</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/stock-market/' class="nav-link">
+        stock-market
+        <span class="badge badge-pill badge-secondary">4</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/music/' class="nav-link">
+        music
+        <span class="badge badge-pill badge-secondary">3</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/organizational-psychology/' class="nav-link">
+        organizational-psychology
+        <span class="badge badge-pill badge-secondary">3</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/video/' class="nav-link">
+        video
+        <span class="badge badge-pill badge-secondary">3</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/about-the-author/' class="nav-link">
+        about-the-author
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
+        emacs-functions
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/non-fiction/' class="nav-link">
+        non-fiction
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/r-programming/' class="nav-link">
+        r-programming
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/text-editors/' class="nav-link">
+        text-editors
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/windows/' class="nav-link">
+        windows
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/alternative-energy/' class="nav-link">
+        alternative-energy
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/blog-links/' class="nav-link">
+        blog-links
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/calculus/' class="nav-link">
+        calculus
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/changing-computers/' class="nav-link">
+        changing-computers
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/climate-change/' class="nav-link">
+        climate-change
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/computational-modelling/' class="nav-link">
+        computational-modelling
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/custom-charts/' class="nav-link">
+        custom-charts
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/data-links/' class="nav-link">
+        data-links
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/economics/' class="nav-link">
+        economics
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/featured/' class="nav-link">
+        featured
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/investing/' class="nav-link">
+        investing
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/public-sector/' class="nav-link">
+        public-sector
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/reviews/' class="nav-link">
+        reviews
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/soros/' class="nav-link">
+        soros
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/tech/' class="nav-link">
+        tech
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+    </nav>
+    
+</div>
+
+
+        </div>
+
+        <footer class="mt-auto footer d-print-none">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Website</h5>
+This blog was created using <a href="https://gohugo.io/">Hugo</a>,
+<a href="https://getbootstrap.com/">Bootstrap</a>, and the Silhouette Hugo theme.
+
+                    </div>
+
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Disclaimer</h5>
+Opinions expressed here are my own and may not reflect those of any company I work for, or people I
+work with.
+
+                    </div>
+
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Copyright</h5>
+© 2019 - Yuri Tricys
+
+                    </div>
+
+
+                </div>
+
+                <hr />
+
+                <div class="d-flex justify-content-center icons">
+                    <a class="py-2 px-2" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><i class="fab fa-linkedin"></i></a>
+<a class="py-2 px-2" href='https://cloudnine.github.io/index.xml'><i class="fas fa-rss"></i></a>
+
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101236333);</script>
+<script async src='//static.getclicky.com/js'></script>
+
+
+    </body>
+</html>
