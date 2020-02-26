@@ -159,7 +159,7 @@
     <item>
       <title>Featured</title>
       <link>https://cloudnine.github.io/tags/featured/</link>
-      <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/featured/</guid>
       <description></description>
@@ -177,7 +177,7 @@
     <item>
       <title>Learning Center</title>
       <link>https://cloudnine.github.io/tags/learning-center/</link>
-      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/learning-center/</guid>
       <description></description>
@@ -231,7 +231,7 @@
     <item>
       <title>Organizational Psychology</title>
       <link>https://cloudnine.github.io/tags/organizational-psychology/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/organizational-psychology/</guid>
       <description></description>
@@ -240,7 +240,7 @@
     <item>
       <title>Personal Development</title>
       <link>https://cloudnine.github.io/tags/personal-development/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/personal-development/</guid>
       <description></description>
@@ -339,9 +339,27 @@
     <item>
       <title>Video</title>
       <link>https://cloudnine.github.io/tags/video/</link>
-      <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/video/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Video Emacs</title>
+      <link>https://cloudnine.github.io/tags/video-emacs/</link>
+      <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/video-emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Video Motivational</title>
+      <link>https://cloudnine.github.io/tags/video-motivational/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/video-motivational/</guid>
       <description></description>
     </item>
     

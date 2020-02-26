@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cloudnine.github.io/motivation/2020-02-25-developing-cognitive-ambidexterity/</loc>
+    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/science/2020-02-22-emacs-themes/</loc>
     <lastmod>2020-02-22T00:00:00+00:00</lastmod>
   </url>
@@ -384,7 +389,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/</loc>
-    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -439,7 +444,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/categories/business/</loc>
-    <lastmod>2020-02-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -451,7 +456,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/categories/</loc>
-    <lastmod>2020-02-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -541,7 +546,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/featured/</loc>
-    <lastmod>2019-10-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -565,7 +570,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/learning-center/</loc>
-    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -595,7 +600,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/motivation/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -625,13 +630,13 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/organizational-psychology/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/tags/personal-development/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -649,7 +654,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/categories/psychology/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -738,7 +743,19 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/video/</loc>
+    <lastmod>2017-05-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/video-emacs/</loc>
     <lastmod>2019-10-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/video-motivational/</loc>
+    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
