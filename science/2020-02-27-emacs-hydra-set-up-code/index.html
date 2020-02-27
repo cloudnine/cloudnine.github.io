@@ -10,19 +10,19 @@
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
 
 
-<meta name="description" content="What&#39;s All This About Text Editors? I always used to ask, why do people post about their text-editors? These days I know the reason. Computers are lightening fast, using them isn&#39;t. You need to leave what you are doing to turn on another piece of software. You have to search for files. You&#39;re constantly having to remember how a process works, or search around the IDE to figure out how to do something again.">
+<meta name="description" content="This post covers &#34;Highlights&#34; from the appearance section of my init.   Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra    Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.">
 
-<meta property="og:title" content="Emacs With an Interface" />
-<meta property="og:description" content="Emacs allows more ways to use it as an interface." />
+<meta property="og:title" content="Emacs Hydra Config and an Appearance Hydra" />
+<meta property="og:description" content="Some configuration defaults for your Emacs configuration file." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2019-09-08-emacs-with-an-interface/" /><meta property="article:published_time" content="2019-10-08T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-10-08T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-27-emacs-hydra-set-up-code/" /><meta property="article:published_time" content="2020-02-27T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-02-27T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs With an Interface"/>
-<meta name="twitter:description" content="Emacs allows more ways to use it as an interface."/>
+<meta name="twitter:title" content="Emacs Hydra Config and an Appearance Hydra"/>
+<meta name="twitter:description" content="Some configuration defaults for your Emacs configuration file."/>
 
-<meta property="og:title" content="Emacs With an Interface">
+<meta property="og:title" content="Emacs Hydra Config and an Appearance Hydra">
 
 <meta property="og:image" content="https://cloudnine.github.io/">
 <meta property="og:image:secure_url" content="https://cloudnine.github.io/">
@@ -36,7 +36,7 @@
 
 <meta property="og:type" content="blog">
 
-<title>Emacs With an Interface | Cloud Nine</title>
+<title>Emacs Hydra Config and an Appearance Hydra | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
@@ -61,7 +61,7 @@
     
 <style type="text/css">
         .feature-image {
-          background-image: url("https://cloudnine.github.io/images/hugo-hydra.png");
+          background-image: url("https://cloudnine.github.io/images/science/christian-bale.png");
           width:100%;
           height: auto;
         }
@@ -195,86 +195,47 @@
         <div class="main">
             
 <div class="container mt-4 post">
-    <h1>Emacs With an Interface</h1>
+    <h1>Emacs Hydra Config and an Appearance Hydra</h1>
     <div class="mb-3">
     <small>
         <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Oct 8, 2019    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>, <a href='/tags/text-editors/'>text-editors</a>, <a href='/tags/learning-center/'>learning-center</a>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 27, 2020    &nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>
     </small>
 </div>
 
 
         <div class="mt-4 mb-4 main-content">
-        <h3>What's All This About Text Editors?</h3>
+        <h5>This post covers "Highlights" from the appearance section of my init. <br/><br/></h5>
 
-<p class="p-news">
-I always used to ask, why do people post about their text-editors? These days I know the reason. Computers are lightening fast, using them
-isn't. You need to leave what you are doing to turn on another piece of software. You have to search for files. You're constantly having to
-remember how a process works, or search around the IDE to figure out how to do something again. Mastering a text editor empowers the user to
-do things efficiently. It puts him or her in a position to confidently and competently multitask.
-</p>
+<ul>
+<li>Appearance
 
-<h3>What Editor Should I Use?</h3>
-<p class="p-news">
-Most modern text editors are cool and easy to use. Some are better than others. Some are free. The most popular ones, Sublime, Atom,
-Coda, Vim, are vastly extensible. For command line action a simple one like Pico, or Nano will do. When I want to use an editor in addition
-to Emacs I use Notepad++, Pico, and/or Atom, in order of frequency. I've heard products from Jetbrains are wicked cool, especially IntelliJ.
-If I had the time to learn a new editor I would probably pick up Webstorm.
-</p>
+<ul>
+<li>Entering and Exiting Emacs</li>
+<li>Default Appearance Customizations</li>
+<li>Themes</li>
+<li>Highlights</li>
+<li>Hydras</li>
+<li>Appearance Hydra
+<br/></li>
+</ul></li>
+</ul>
 
-<h3>Okay, Why Emacs?</h3>
+<h5>Preamble</h5>
 
-<p class="p-news">
-Text editors are in the same family. You will always have to learn shortcuts. You will always have to figure out how to use them.  You will
-always have to find and update packages. Some of those packages will always conflict, fall out of maintenance, or go obsolete. They're all
-the same and they all come from Emacs. Emacs isn't popular because doing those things can be complex. You have to configure the code, and that means
-going under the hood. Under there you'll find elisp, which has other uses. No, really, it does. The advantage of Emacs is that once you
-learn how to use it you can do more than you can with any other editor. A lot more. It also has a feel to it that is hard to beat. You're
-running everything from a clean text file. If you can get to the simplicity on the other side of complexity it's amazingly clean.
-</p>
+<p class= "p-news">Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
+know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts y date from
+oldest to newest.</p>
 
-<h3>How I Use Emacs With An Interface</h3>
+<p class = "p-news">In the last emacs <a href="https://cloudnine.github.io/science/2020-02-27-emacs-highlighting-packages/" target="_blank">post</a> I covered lines 1031 - 1110. This post
+covers lines 1115 - 1195. I include the lines for anyone that wants to patch together my entire init from start to finish. The lines won't always match up because I take stuff out when I'm in my init.</p>
 
-<p class="p-news">
-Modern editors are great mostly because of their IDEs, which make them easier to use. You don't have to remember 400 hundred functions, only
-the buttons that call them. Wordprocessers group tasks so you only have to remember which area to go to then you will be reminded not only
-how to do what you want but also what other things you can do there. That's a big issue with Emacs, remembering what you need to do (other
-issues include using the control key, which you may want to rebind to CAPSLOCK).
-</p>
-<p class="p-news"> I use two packages to generate popup interfaces that enable me not only to group tasks, but also to call
-functions, without remembering shortcuts. They are <a href="https://github.com/abo-abo/hydra" target="_blank">Hydra</a>, by Oleh Krehel, and
-<a href="https://github.com/jerrypnz/major-mode-hydra.el/tree/bba876b86f0b80495004bf185b2b1f6083a1ff3a" target="_blank">Pretty Hydra</a>, by
-Jerry Peng. A hydra in Emacs is a 'control panel', also called sometimes a 'dispatch' that yields quick access to functions. If you look at
-the hero image on this page, you can see a screenshot of my hugo hyrda, which uses both of these packages. The background is an empty
-scratch buffer (a blank page in interactive elisp mode). Superimposed on that is a group of functions that can be accessed by hitting keys.
-This one uses functions from the <a href="https://github.com/masasam/emacs-easy-hugo" target="_blank">Easy-Hugo</a> package, written by
-Masashi Miyaura in Japan, and some functions I've written myself. The deploy commands, on the right hand side, run batch scripts that
-direct hugo to generate its publishable files, then push those files to github repos using git. The visit commands call the browser and open
-up links. The beauty of the system is that it's fast, wicked fast. I only need to call <code>C-m H</code>, and this hydra pops up instantly,
-allowing me to run the functions I need without remembering the shortcuts, and remember also what I can do.
-I've about 25 hydras that can be called from <code>C-m</code>, so the system is fast, efficient, and superb for multitasking.
-</p>
+<p class= "p-news">The code for setting up the hydra packages needs to come before any hydra packages. The appearance hydra is wicked cool. </p>
 
-<p class="p-news">
-On the right hand side of the hugo hydra is command called "Return To Helm." I actually didn't want to name my hydra dispatch hydra, "The
-Helm," because I didn't want to reference the Helm package which is so prominent in the Emacs eco-system, but it really is the most fitting
-word. My helm hyrda has commands that call all of my other hydras. So I can pop from any group of functions back to the central command
-panel, and back out to any other hydra of grouped functions. <em>Oleh Krehel</em> has really helped me out here. Thanks <em>Oleh!</em>
-</p>
+<h5>Highlight Numbers</h5>
 
-<p><h6>Here&rsquo;s An Image Of How My Emacs Interface Works</h6>
-<br/>
-<img src="/images/hub-and-spoke.png" alt="hub and spoke image" align="center" title="" class="img" width="50%" />
-<br/><br/>
-<p class="p-news">
-The helm hydra acts as the central hub, and some 25 other hydras, including the hugo hydra act as spokes. All this doesn&rsquo;t mean I can&rsquo;t call
-the functions directly from the minibuffer or use global or mode specific shortcuts. Actually, if I bring up a command log buffer (the
-command log package) in a split screen I can be reminded quickly what the underlying functions and their associated shortcuts are.
-</p></p>
-
-<p><h6>Here&rsquo;s My Initialization Code For Hydra and Pretty Hydra</h6>
-<br/></p>
+<p class= "p-news">Adds some syntax highlighting just for numbers. Use case: you have a doc with numbers everywhere and you want to see them contrasted against text. </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -319,6 +280,10 @@ command log package) in a split screen I can be reminded quickly what the underl
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;hydra</span>
@@ -334,7 +299,7 @@ command log package) in a split screen I can be reminded quickly what the underl
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;hydra-posframe</span>)
 <span style="color:#a2f">:custom</span>
 (<span style="color:#b8860b">hydra-posframe-parameters</span>
-<span style="color:#666">&#39;</span>((<span style="color:#b8860b">left-fringe</span> <span style="color:#666">.</span> <span style="color:#666">4</span>) (<span style="color:#b8860b">right-fringe</span> <span style="color:#666">.</span> <span style="color:#666">4</span>) (<span style="color:#b8860b">height</span> <span style="color:#666">.</span> <span style="color:#666">18</span>) (<span style="color:#b8860b">width</span> <span style="color:#666">.</span> <span style="color:#666">105</span>) (<span style="color:#b8860b">min-height</span> <span style="color:#666">.</span> <span style="color:#666">17</span>) (<span style="color:#b8860b">max-height</span> <span style="color:#666">.</span> <span style="color:#666">30</span>) (<span style="color:#b8860b">top</span> <span style="color:#666">.</span> <span style="color:#666">25</span>)))
+<span style="color:#666">&#39;</span>((<span style="color:#b8860b">left-fringe</span> <span style="color:#666">.</span> <span style="color:#666">4</span>) (<span style="color:#b8860b">right-fringe</span> <span style="color:#666">.</span> <span style="color:#666">4</span>) (<span style="color:#b8860b">top-fringe</span> <span style="color:#666">.</span> <span style="color:#666">4</span>) (<span style="color:#b8860b">bottom-fringe</span> <span style="color:#666">.</span> <span style="color:#666">4</span>) (<span style="color:#b8860b">height</span> <span style="color:#666">.</span> <span style="color:#666">18</span>) (<span style="color:#b8860b">width</span> <span style="color:#666">.</span> <span style="color:#666">105</span>) (<span style="color:#b8860b">min-height</span> <span style="color:#666">.</span> <span style="color:#666">17</span>) (<span style="color:#b8860b">max-height</span> <span style="color:#666">.</span> <span style="color:#666">30</span>) (<span style="color:#b8860b">top</span> <span style="color:#666">.</span> <span style="color:#666">25</span>)))
 <span style="color:#a2f">:custom-face</span>
 (<span style="color:#b8860b">hydra-posframe-border-face</span> ((<span style="color:#800">t</span> (<span style="color:#a2f">:background</span> <span style="color:#b44">&#34;#ffffff&#34;</span>))))
 (<span style="color:#b8860b">hydra-posframe-face</span> ((<span style="color:#800">t</span> (<span style="color:#a2f">:background-color</span> <span style="color:#b44">&#34;#6272a4&#34;</span>))))
@@ -342,6 +307,7 @@ command log package) in a split screen I can be reminded quickly what the underl
 (<span style="color:#b8860b">after-init</span> <span style="color:#666">.</span> <span style="color:#b8860b">hydra-posframe-enable</span>)
 )<span style="color:#080;font-style:italic">;end use-package-hydra-posframe</span>
 )<span style="color:#080;font-style:italic">;end use-package hydra</span>
+
 <span style="color:#080;font-style:italic">;Pretty Hydra</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">pretty-hydra</span>
 <span style="color:#a2f">:config</span>
@@ -356,6 +322,9 @@ command log package) in a split screen I can be reminded quickly what the underl
 (<span style="color:#a2f">declare-function</span> <span style="color:#b8860b">all-the-icons-material</span> <span style="color:#b8860b">&#39;all-the-icons</span>)
 (<span style="color:#a2f">declare-function</span> <span style="color:#b8860b">all-the-icons-octicon</span> <span style="color:#b8860b">&#39;all-the-icons</span>)
 )
+
+<span style="color:#080;font-style:italic">;with-faicon function allows an icon in hydra title. Requires following requires and aliases. To omit don&#39;t include &#39;with-faicon&#39; in appearance-title</span>
+
 <span style="color:#080;font-style:italic">;define an icon function with all-the-icons-faicon</span>
 <span style="color:#080;font-style:italic">;to use filecon, etc, define same function with icon set</span>
  (<span style="color:#a2f">defun</span> <span style="color:#b8860b">with-faicon</span> (<span style="color:#b8860b">icon</span> <span style="color:#b8860b">str</span> <span style="color:#a2f">&amp;rest</span> <span style="color:#b8860b">height</span> <span style="color:#b8860b">v-adjust</span>)
@@ -365,25 +334,106 @@ command log package) in a split screen I can be reminded quickly what the underl
     (<span style="color:#b8860b">s-concat</span> (<span style="color:#b8860b">all-the-icons-fileicon</span> <span style="color:#b8860b">icon</span> <span style="color:#a2f">:v-adjust</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">v-adjust</span> <span style="color:#666">0</span>) <span style="color:#a2f">:height</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">height</span> <span style="color:#666">1</span>)) <span style="color:#b44">&#34; &#34;</span> <span style="color:#b8860b">str</span>))</code></pre></td></tr></table>
 </div>
 </div>
-<p><br/>
-<p class="p-news">
-Most of my initialization code relies on the use-package package. If want to use Emacs or you&rsquo;re&rsquo; just getting into it, I recommend a couple of
-youtube videos to get you started. There&rsquo;s a lot of stuff out there. I like <a href="https://cestlaz.github.io/stories/emacs/"
-target="_blank">Mike Zamansky</a>, over at his blog &ldquo;C&rsquo;est La Z&rdquo;, and <a href="https://www.youtube.com/watch?v=vCyBu8Az254"
-target="_blank">Uncle Dave</a>, over on Youtube.
-</p></p>
+<p><br/></p>
 
-<p><p class="p-news">
-So that&rsquo;s an introduction to how I use my text-editor. It&rsquo;s a huge thing for me, because it helps me get done the stuff I&rsquo;m so passionate
-about. I&rsquo;ll explain more later. So if Emacs interests you, be sure to come back here and click on the Emacs tags sidebar of the main page.
-If it doesn&rsquo;t, well&hellip;certainly go over to motivation page. Over the years I&rsquo;ve written reams of motivational material, and I&rsquo;ll certainly
-be post at least some of it over there.
-</p>
-<br/><br/></p>
+<h5>Appearance Hydra</h5>
+
+<p class= "p-news">This hydra is kick-ass. I bind it to 'C-m a' and use it all the time to cycle themes, hop into olivetti mode, throw the line numbers on, add
+transparency, maximize screen, and highlight stuff. Here's an image followed by the code.</p>
+
+<p><div class="mobile-iframe">
+<figure class="zoom-effect">
+<div class="aspectRatioPlaceholder" >
+<div class="aspect-ratio-fill" style="padding-bottom: 75.78947368421053%;"></div> <!-- end aspect ratio fill -->
+<!--appearance hydra-->
+<img src="/images/science/appearance.png" align="center" title="" class="inline-image img-zoom" width="100%" alt="theme-image-here" data-width="1920" data-height="1080">
+</div> <!-- end aspect ratio -->
+</figure> <!-- end figure -->
+</div> <!--mobile-iframe-->
+<br/></p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;define a title function</span>
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">appearance-title</span> (<span style="color:#b8860b">with-faicon</span> <span style="color:#b44">&#34;desktop&#34;</span> <span style="color:#b44">&#34;APPEARANCE&#34;</span>))
+<span style="color:#080;font-style:italic">;generate hydra</span>
+(<span style="color:#b8860b">pretty-hydra-define</span> <span style="color:#b8860b">Appearance_</span> (<span style="color:#a2f">:foreign-keys</span> <span style="color:#d2413a;font-weight:bold">warn</span> <span style="color:#a2f">:title</span> <span style="color:#b8860b">appearance-title</span> <span style="color:#a2f">:quit-key</span> <span style="color:#b44">&#34;q&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">amaranth</span> )
+(<span style="color:#b44">&#34;Theme&#34;</span>
+   ((<span style="color:#b44">&#34;o&#34;</span> <span style="color:#b8860b">olivetti-mode</span> <span style="color:#b44">&#34;Olivetti&#34;</span> <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span>)
+    (<span style="color:#b44">&#34;t&#34;</span> <span style="color:#b8860b">toggle-window-transparency</span> <span style="color:#b44">&#34;Transparency&#34;</span> <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span> )
+    (<span style="color:#b44">&#34;c&#34;</span> <span style="color:#b8860b">cycle-themes</span> <span style="color:#b44">&#34;Cycle Themes&#34;</span> )
+    (<span style="color:#b44">&#34;=&#34;</span> <span style="color:#b8860b">text-scale-increase</span> <span style="color:#b44">&#34;Zoom In&#34;</span>)
+    (<span style="color:#b44">&#34;-&#34;</span> <span style="color:#b8860b">text-scale-decrease</span> <span style="color:#b44">&#34;Zoom Out&#34;</span>)
+    (<span style="color:#b44">&#34;x&#34;</span> <span style="color:#b8860b">toggle-frame-maximized</span> <span style="color:#b44">&#34;Maximize Frame&#34;</span> <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span> )
+)<span style="color:#080;font-style:italic">;end theme</span>
+<span style="color:#b44">&#34;Highlighting&#34;</span>
+   (
+     (<span style="color:#b44">&#34;d&#34;</span> <span style="color:#b8860b">rainbow-delimiters-mode</span> <span style="color:#b44">&#34;Rainbow Delimiters&#34;</span> <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span> )
+     (<span style="color:#b44">&#34;r&#34;</span> <span style="color:#b8860b">rainbow-mode</span> <span style="color:#b44">&#34;Show Hex Colours&#34;</span> <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span> )
+<span style="color:#080;font-style:italic">;    (&#34;n&#34; highlight-numbers-mode &#34;Highlight Code Numbers&#34; :toggle t )</span>
+     (<span style="color:#b44">&#34;l&#34;</span> <span style="color:#b8860b">display-line-numbers-mode</span> <span style="color:#b44">&#34;Show Line Numbers&#34;</span> <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span> )
+     (<span style="color:#b44">&#34;_&#34;</span> <span style="color:#b8860b">global-hl-line-mode</span> <span style="color:#b44">&#34;Highlight Current Line&#34;</span> <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span> )
+<span style="color:#080;font-style:italic">;    (&#34;I&#34; rainbow-identifiers-mode &#34;Rainbow Identifiers&#34; :toggle t )</span>
+     (<span style="color:#b44">&#34;b&#34;</span> <span style="color:#b8860b">beacon-mode</span> <span style="color:#b44">&#34;Show Cursor Trailer&#34;</span> <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span> )
+<span style="color:#080;font-style:italic">;    (&#34;e&#34; emojify     &#34;Enable Emojies&#34; :toggle 0 )</span>
+)<span style="color:#080;font-style:italic">;end highlighting</span>
+<span style="color:#b44">&#34;Miscellaneous&#34;</span>
+   ((<span style="color:#b44">&#34;j&#34;</span> <span style="color:#b8860b">visual-line-mode</span> <span style="color:#b44">&#34;Wrap Line Window&#34;</span>  <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span>)
+    (<span style="color:#b44">&#34;m&#34;</span> <span style="color:#b8860b">visual-fill-column-mode</span> <span style="color:#b44">&#34;Wrap Line Column&#34;</span>  <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span>)
+    (<span style="color:#b44">&#34;a&#34;</span> <span style="color:#b8860b">adaptive-wrap-prefix-mode</span> <span style="color:#b44">&#34;Indent Wrapped Lines&#34;</span> <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span> )
+<span style="color:#080;font-style:italic">;   (&#34;i&#34; highlight-indent-guides-mode  &#34;Show Indent Guides&#34; :toggle t )</span>
+    (<span style="color:#b44">&#34;g&#34;</span> <span style="color:#b8860b">fci-mode</span> <span style="color:#b44">&#34;Show Fill Column&#34;</span> <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span> )
+    (<span style="color:#b44">&#34;h&#34;</span> <span style="color:#b8860b">hydra-helm/body</span> <span style="color:#b44">&#34;Return To Helm&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
+    (<span style="color:#b44">&#34;&lt;SPC&gt;&#34;</span> <span style="color:#800">nil</span> <span style="color:#b44">&#34;Quit&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
+)<span style="color:#080;font-style:italic">;end miscellaneous</span>
+)<span style="color:#080;font-style:italic">;end hydra body</span>
+)<span style="color:#080;font-style:italic">;end pretty-hydra-appearance</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;C-m&gt; a&#34;</span> <span style="color:#b8860b">&#39;Appearance_/body</span>)</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>That's all for now. See you next time.</h5>
 
 
         <div class="share-icons d-flex justify-content-center d-print-none">
-            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2019-09-08-emacs-with-an-interface%2f&text=Emacs%20With%20an%20Interface&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
+            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-27-emacs-hydra-set-up-code%2f&text=Emacs%20Hydra%20Config%20and%20an%20Appearance%20Hydra&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -393,7 +443,7 @@ be post at least some of it over there.
     <div class="fa-inverse text-center"><small>Tweet</small></div>
 </a>
 
-<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2019-09-08-emacs-with-an-interface%2f&t=Emacs%20With%20an%20Interface" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-27-emacs-hydra-set-up-code%2f&t=Emacs%20Hydra%20Config%20and%20an%20Appearance%20Hydra" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -403,7 +453,7 @@ be post at least some of it over there.
     <div class="fa-inverse text-center"><small>Share</small></div>
 </a>
 
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2019-09-08-emacs-with-an-interface%2f&title=Emacs%20With%20an%20Interface&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-27-emacs-hydra-set-up-code%2f&title=Emacs%20Hydra%20Config%20and%20an%20Appearance%20Hydra&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -822,6 +872,9 @@ work with.
 
 
 
+
+<script src= "https://cloudnine.github.io/javascripts/medium-lightbox.js"></script>
+<script src= "https://cloudnine.github.io/javascripts/init_science.js"></script>
 
 
 

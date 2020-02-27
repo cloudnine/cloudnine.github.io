@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright</copyright>
-    <lastBuildDate>Sat, 15 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/tags/emacs-hydras/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Emacs Hydra Config and an Appearance Hydra</title>
+      <link>https://cloudnine.github.io/science/2020-02-27-emacs-hydra-set-up-code/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-02-27-emacs-hydra-set-up-code/</guid>
+      <description>This post covers &#34;Highlights&#34; from the appearance section of my init.   Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra    Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
+    </item>
     
     <item>
       <title>An Emacs Shell Hydra</title>
@@ -23,7 +32,7 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.</desc
     </item>
     
     <item>
-      <title>Emacs Functions</title>
+      <title>Emacs Functions (And Program Launcher Hydra)</title>
       <link>https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/</link>
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
       

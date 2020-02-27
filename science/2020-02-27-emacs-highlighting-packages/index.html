@@ -10,19 +10,19 @@
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
 
 
-<meta name="description" content="What&#39;s All This About Text Editors? I always used to ask, why do people post about their text-editors? These days I know the reason. Computers are lightening fast, using them isn&#39;t. You need to leave what you are doing to turn on another piece of software. You have to search for files. You&#39;re constantly having to remember how a process works, or search around the IDE to figure out how to do something again.">
+<meta name="description" content="This post covers &#34;Highlights&#34; from the appearance section of my init.   Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra    Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.">
 
-<meta property="og:title" content="Emacs With an Interface" />
-<meta property="og:description" content="Emacs allows more ways to use it as an interface." />
+<meta property="og:title" content="Emacs Highlighting Packages" />
+<meta property="og:description" content="Some configuration defaults for your Emacs configuration file." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2019-09-08-emacs-with-an-interface/" /><meta property="article:published_time" content="2019-10-08T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-10-08T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-27-emacs-highlighting-packages/" /><meta property="article:published_time" content="2020-02-27T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-02-27T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs With an Interface"/>
-<meta name="twitter:description" content="Emacs allows more ways to use it as an interface."/>
+<meta name="twitter:title" content="Emacs Highlighting Packages"/>
+<meta name="twitter:description" content="Some configuration defaults for your Emacs configuration file."/>
 
-<meta property="og:title" content="Emacs With an Interface">
+<meta property="og:title" content="Emacs Highlighting Packages">
 
 <meta property="og:image" content="https://cloudnine.github.io/">
 <meta property="og:image:secure_url" content="https://cloudnine.github.io/">
@@ -36,7 +36,7 @@
 
 <meta property="og:type" content="blog">
 
-<title>Emacs With an Interface | Cloud Nine</title>
+<title>Emacs Highlighting Packages | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
@@ -61,7 +61,7 @@
     
 <style type="text/css">
         .feature-image {
-          background-image: url("https://cloudnine.github.io/images/hugo-hydra.png");
+          background-image: url("https://cloudnine.github.io/images/science/christian-bale.png");
           width:100%;
           height: auto;
         }
@@ -195,86 +195,179 @@
         <div class="main">
             
 <div class="container mt-4 post">
-    <h1>Emacs With an Interface</h1>
+    <h1>Emacs Highlighting Packages</h1>
     <div class="mb-3">
     <small>
         <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Oct 8, 2019    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>, <a href='/tags/text-editors/'>text-editors</a>, <a href='/tags/learning-center/'>learning-center</a>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 27, 2020    &nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>
     </small>
 </div>
 
 
         <div class="mt-4 mb-4 main-content">
-        <h3>What's All This About Text Editors?</h3>
+        <h5>This post covers "Highlights" from the appearance section of my init. <br/><br/></h5>
 
-<p class="p-news">
-I always used to ask, why do people post about their text-editors? These days I know the reason. Computers are lightening fast, using them
-isn't. You need to leave what you are doing to turn on another piece of software. You have to search for files. You're constantly having to
-remember how a process works, or search around the IDE to figure out how to do something again. Mastering a text editor empowers the user to
-do things efficiently. It puts him or her in a position to confidently and competently multitask.
-</p>
+<ul>
+<li>Appearance
 
-<h3>What Editor Should I Use?</h3>
-<p class="p-news">
-Most modern text editors are cool and easy to use. Some are better than others. Some are free. The most popular ones, Sublime, Atom,
-Coda, Vim, are vastly extensible. For command line action a simple one like Pico, or Nano will do. When I want to use an editor in addition
-to Emacs I use Notepad++, Pico, and/or Atom, in order of frequency. I've heard products from Jetbrains are wicked cool, especially IntelliJ.
-If I had the time to learn a new editor I would probably pick up Webstorm.
-</p>
+<ul>
+<li>Entering and Exiting Emacs</li>
+<li>Default Appearance Customizations</li>
+<li>Themes</li>
+<li>Highlights</li>
+<li>Hydras</li>
+<li>Appearance Hydra
+<br/></li>
+</ul></li>
+</ul>
 
-<h3>Okay, Why Emacs?</h3>
+<h5>Preamble</h5>
 
-<p class="p-news">
-Text editors are in the same family. You will always have to learn shortcuts. You will always have to figure out how to use them.  You will
-always have to find and update packages. Some of those packages will always conflict, fall out of maintenance, or go obsolete. They're all
-the same and they all come from Emacs. Emacs isn't popular because doing those things can be complex. You have to configure the code, and that means
-going under the hood. Under there you'll find elisp, which has other uses. No, really, it does. The advantage of Emacs is that once you
-learn how to use it you can do more than you can with any other editor. A lot more. It also has a feel to it that is hard to beat. You're
-running everything from a clean text file. If you can get to the simplicity on the other side of complexity it's amazingly clean.
-</p>
+<p class= "p-news">Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
+know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts y date from
+oldest to newest.</p>
 
-<h3>How I Use Emacs With An Interface</h3>
+<p class = "p-news">In the last emacs <a href= "https://cloudnine.github.io/science/2020-02-22-emacs-themes/" target="_blank">post</a> I covered lines 914 - 1031. This post
+covers lines 1031 - 1110. Include the lines for anyone that wants to patch together my entire init from start to finish. The lines won't always match up because I take stuff out when I'm my init.</p>
 
-<p class="p-news">
-Modern editors are great mostly because of their IDEs, which make them easier to use. You don't have to remember 400 hundred functions, only
-the buttons that call them. Wordprocessers group tasks so you only have to remember which area to go to then you will be reminded not only
-how to do what you want but also what other things you can do there. That's a big issue with Emacs, remembering what you need to do (other
-issues include using the control key, which you may want to rebind to CAPSLOCK).
-</p>
-<p class="p-news"> I use two packages to generate popup interfaces that enable me not only to group tasks, but also to call
-functions, without remembering shortcuts. They are <a href="https://github.com/abo-abo/hydra" target="_blank">Hydra</a>, by Oleh Krehel, and
-<a href="https://github.com/jerrypnz/major-mode-hydra.el/tree/bba876b86f0b80495004bf185b2b1f6083a1ff3a" target="_blank">Pretty Hydra</a>, by
-Jerry Peng. A hydra in Emacs is a 'control panel', also called sometimes a 'dispatch' that yields quick access to functions. If you look at
-the hero image on this page, you can see a screenshot of my hugo hyrda, which uses both of these packages. The background is an empty
-scratch buffer (a blank page in interactive elisp mode). Superimposed on that is a group of functions that can be accessed by hitting keys.
-This one uses functions from the <a href="https://github.com/masasam/emacs-easy-hugo" target="_blank">Easy-Hugo</a> package, written by
-Masashi Miyaura in Japan, and some functions I've written myself. The deploy commands, on the right hand side, run batch scripts that
-direct hugo to generate its publishable files, then push those files to github repos using git. The visit commands call the browser and open
-up links. The beauty of the system is that it's fast, wicked fast. I only need to call <code>C-m H</code>, and this hydra pops up instantly,
-allowing me to run the functions I need without remembering the shortcuts, and remember also what I can do.
-I've about 25 hydras that can be called from <code>C-m</code>, so the system is fast, efficient, and superb for multitasking.
-</p>
+<p class= "p-news">Highlight packages just the ones I grouped as such for simplicity. They go in an appearance hydra that I will post in a minute.</p>
 
-<p class="p-news">
-On the right hand side of the hugo hydra is command called "Return To Helm." I actually didn't want to name my hydra dispatch hydra, "The
-Helm," because I didn't want to reference the Helm package which is so prominent in the Emacs eco-system, but it really is the most fitting
-word. My helm hyrda has commands that call all of my other hydras. So I can pop from any group of functions back to the central command
-panel, and back out to any other hydra of grouped functions. <em>Oleh Krehel</em> has really helped me out here. Thanks <em>Oleh!</em>
-</p>
+<h5>Highlight Numbers</h5>
 
-<p><h6>Here&rsquo;s An Image Of How My Emacs Interface Works</h6>
-<br/>
-<img src="/images/hub-and-spoke.png" alt="hub and spoke image" align="center" title="" class="img" width="50%" />
-<br/><br/>
-<p class="p-news">
-The helm hydra acts as the central hub, and some 25 other hydras, including the hugo hydra act as spokes. All this doesn&rsquo;t mean I can&rsquo;t call
-the functions directly from the minibuffer or use global or mode specific shortcuts. Actually, if I bring up a command log buffer (the
-command log package) in a split screen I can be reminded quickly what the underlying functions and their associated shortcuts are.
-</p></p>
+<p class= "p-news">Adds some syntax highlighting just for numbers. Use case: you have a doc with numbers everywhere and you want to see them contrasted against text. </p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">highlight-numbers</span>
+<span style="color:#a2f">:commands</span> <span style="color:#b8860b">highlight-numbers-mode</span>
+)<span style="color:#080;font-style:italic">;end highight numbers</span>
+<span style="color:#080;font-style:italic">; Highlight-identifiers</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
 
-<p><h6>Here&rsquo;s My Initialization Code For Hydra and Pretty Hydra</h6>
-<br/></p>
+<h5>Rainbow Identifiers and Delimiters</h5>
+
+<p class= "p-news">Delimiters is a must use that highlights brackets with different colours. Identifiers is an alternate syntax highlighting
+to try out on code. I didn't use it yet.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">rainbow-identifiers</span>
+<span style="color:#a2f">:commands</span> <span style="color:#b8860b">rainbow-identifiers-mode</span>
+)<span style="color:#080;font-style:italic">;end rainbow identifiers</span>
+<span style="color:#080;font-style:italic">;Highlight Delimiters</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">rainbow-delimiters</span>
+<span style="color:#a2f">:commands</span> <span style="color:#b8860b">rainbow-delimiters-mode</span>
+<span style="color:#a2f">:hook</span>(
+(<span style="color:#b8860b">prog-mode</span> <span style="color:#666">.</span> <span style="color:#b8860b">rainbow-delimiters-mode</span>)
+(<span style="color:#b8860b">text-mode</span> <span style="color:#666">.</span> <span style="color:#b8860b">rainbow-delimiters-mode</span>)
+)<span style="color:#080;font-style:italic">;end hook</span>
+)<span style="color:#080;font-style:italic">;end rainbow-delimiters</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>Rainbow Mode</h5>
+
+<p class= "p-news">Highlights Hex colours in corresponding hex colour. Use it a lot.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Show Hex Color Codes</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">rainbow-mode</span>
+<span style="color:#a2f">:commands</span> <span style="color:#b8860b">rainbow-mode</span>
+<span style="color:#a2f">:diminish</span>
+<span style="color:#a2f">:hook</span> (
+(<span style="color:#b8860b">web-mode</span> <span style="color:#666">.</span> <span style="color:#b8860b">rainbow-mode</span>)
+(<span style="color:#b8860b">css-mode</span> <span style="color:#666">.</span> <span style="color:#b8860b">rainbow-mode</span>)
+)<span style="color:#080;font-style:italic">;end hook</span>
+)<span style="color:#080;font-style:italic">;end rainbow-mode</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>Syntax and Font</h5>
+
+<p class= "p-news">Defaults you need somewhere.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Highlight Syntax</span>
+(<span style="color:#b8860b">global-font-lock-mode</span> <span style="color:#800">t</span>)
+<span style="color:#080;font-style:italic">; Highlight current line</span>
+<span style="color:#080;font-style:italic">;(global-hl-line-mode 1)</span>
+<span style="color:#080;font-style:italic">;maximum font decoration</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">font-lock-maximum-decoration</span> <span style="color:#800">t</span>)</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>Highlight Parentheses</h5>
+
+<p class= "p-news">Rainbow Identifiers maybe has this covered.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Highlight Parenthesis</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">highlight-parentheses</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#b8860b">show-paren-mode</span> <span style="color:#800">t</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">show-paren-style</span> <span style="color:#b8860b">&#39;mixed</span>)
+<span style="color:#666">&#39;</span>(<span style="color:#b8860b">kept-old-versions</span> <span style="color:#666">0</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">show-paren-delay</span> <span style="color:#666">0</span>)
+)<span style="color:#080;font-style:italic">;end highlight parenthesis</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>Indent Guides and Volatile Things</h5>
+
+<p class= "p-news">Indent guides highlights indents, good for python and all code. BVolatile things is so far whatever flagged removal.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -297,93 +390,111 @@ command log package) in a split screen I can be reminded quickly what the underl
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;hydra</span>
-(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">hydra</span>
-<span style="color:#080;font-style:italic">;:pin melpa-stable</span>
-<span style="color:#a2f">:config</span>
-(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">use-package-hydra</span>
-<span style="color:#080;font-style:italic">;:pin melpa-stable</span>
-)<span style="color:#080;font-style:italic">;use-package-hydra</span>
-(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">hydra-posframe</span>
-<span style="color:#a2f">:load-path</span> <span style="color:#b8860b">hydra-posframe-p</span>
-<span style="color:#a2f">:config</span>
-(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;hydra-posframe</span>)
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Highlight Indent Guides</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">highlight-indent-guides</span>
+<span style="color:#a2f">:diminish</span>
+<span style="color:#a2f">:commands</span> <span style="color:#b8860b">highlight-indent-guides-mode</span>
 <span style="color:#a2f">:custom</span>
-(<span style="color:#b8860b">hydra-posframe-parameters</span>
-<span style="color:#666">&#39;</span>((<span style="color:#b8860b">left-fringe</span> <span style="color:#666">.</span> <span style="color:#666">4</span>) (<span style="color:#b8860b">right-fringe</span> <span style="color:#666">.</span> <span style="color:#666">4</span>) (<span style="color:#b8860b">height</span> <span style="color:#666">.</span> <span style="color:#666">18</span>) (<span style="color:#b8860b">width</span> <span style="color:#666">.</span> <span style="color:#666">105</span>) (<span style="color:#b8860b">min-height</span> <span style="color:#666">.</span> <span style="color:#666">17</span>) (<span style="color:#b8860b">max-height</span> <span style="color:#666">.</span> <span style="color:#666">30</span>) (<span style="color:#b8860b">top</span> <span style="color:#666">.</span> <span style="color:#666">25</span>)))
-<span style="color:#a2f">:custom-face</span>
-(<span style="color:#b8860b">hydra-posframe-border-face</span> ((<span style="color:#800">t</span> (<span style="color:#a2f">:background</span> <span style="color:#b44">&#34;#ffffff&#34;</span>))))
-(<span style="color:#b8860b">hydra-posframe-face</span> ((<span style="color:#800">t</span> (<span style="color:#a2f">:background-color</span> <span style="color:#b44">&#34;#6272a4&#34;</span>))))
+<span style="color:#080;font-style:italic">;(highlight-indent-guides-auto-enabled t)</span>
+(<span style="color:#b8860b">highlight-indent-guides-responsive</span> <span style="color:#800">t</span>)
+(<span style="color:#b8860b">highlight-indent-guides-method</span> <span style="color:#b8860b">&#39;character</span>)
 <span style="color:#a2f">:hook</span>
-(<span style="color:#b8860b">after-init</span> <span style="color:#666">.</span> <span style="color:#b8860b">hydra-posframe-enable</span>)
-)<span style="color:#080;font-style:italic">;end use-package-hydra-posframe</span>
-)<span style="color:#080;font-style:italic">;end use-package hydra</span>
-<span style="color:#080;font-style:italic">;Pretty Hydra</span>
-(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">pretty-hydra</span>
-<span style="color:#a2f">:config</span>
-(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;pretty-hydra</span>)
-)<span style="color:#080;font-style:italic">;end use package pretty hyrda</span>
-<span style="color:#080;font-style:italic">;title generator</span>
-(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;s</span>)
-(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;all-the-icons</span>)
-(<span style="color:#a2f">with-eval-after-load</span> <span style="color:#b8860b">&#39;all-the-icons</span>
-(<span style="color:#a2f">declare-function</span> <span style="color:#b8860b">all-the-icons-faicon</span> <span style="color:#b8860b">&#39;all-the-icons</span>)
-(<span style="color:#a2f">declare-function</span> <span style="color:#b8860b">all-the-icons-fileicon</span> <span style="color:#b8860b">&#39;all-the-icons</span>)
-(<span style="color:#a2f">declare-function</span> <span style="color:#b8860b">all-the-icons-material</span> <span style="color:#b8860b">&#39;all-the-icons</span>)
-(<span style="color:#a2f">declare-function</span> <span style="color:#b8860b">all-the-icons-octicon</span> <span style="color:#b8860b">&#39;all-the-icons</span>)
-)
-<span style="color:#080;font-style:italic">;define an icon function with all-the-icons-faicon</span>
-<span style="color:#080;font-style:italic">;to use filecon, etc, define same function with icon set</span>
- (<span style="color:#a2f">defun</span> <span style="color:#b8860b">with-faicon</span> (<span style="color:#b8860b">icon</span> <span style="color:#b8860b">str</span> <span style="color:#a2f">&amp;rest</span> <span style="color:#b8860b">height</span> <span style="color:#b8860b">v-adjust</span>)
-    (<span style="color:#b8860b">s-concat</span> (<span style="color:#b8860b">all-the-icons-faicon</span> <span style="color:#b8860b">icon</span> <span style="color:#a2f">:v-adjust</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">v-adjust</span> <span style="color:#666">0</span>) <span style="color:#a2f">:height</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">height</span> <span style="color:#666">1</span>)) <span style="color:#b44">&#34; &#34;</span> <span style="color:#b8860b">str</span>))
-<span style="color:#080;font-style:italic">;filecon</span>
- (<span style="color:#a2f">defun</span> <span style="color:#b8860b">with-fileicon</span> (<span style="color:#b8860b">icon</span> <span style="color:#b8860b">str</span> <span style="color:#a2f">&amp;rest</span> <span style="color:#b8860b">height</span> <span style="color:#b8860b">v-adjust</span>)
-    (<span style="color:#b8860b">s-concat</span> (<span style="color:#b8860b">all-the-icons-fileicon</span> <span style="color:#b8860b">icon</span> <span style="color:#a2f">:v-adjust</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">v-adjust</span> <span style="color:#666">0</span>) <span style="color:#a2f">:height</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">height</span> <span style="color:#666">1</span>)) <span style="color:#b44">&#34; &#34;</span> <span style="color:#b8860b">str</span>))</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/>
-<p class="p-news">
-Most of my initialization code relies on the use-package package. If want to use Emacs or you&rsquo;re&rsquo; just getting into it, I recommend a couple of
-youtube videos to get you started. There&rsquo;s a lot of stuff out there. I like <a href="https://cestlaz.github.io/stories/emacs/"
-target="_blank">Mike Zamansky</a>, over at his blog &ldquo;C&rsquo;est La Z&rdquo;, and <a href="https://www.youtube.com/watch?v=vCyBu8Az254"
-target="_blank">Uncle Dave</a>, over on Youtube.
-</p></p>
+(<span style="color:#b8860b">prog-mode</span>  <span style="color:#666">.</span> <span style="color:#b8860b">highlight-indent-guides-mode</span>)
+) <span style="color:#080;font-style:italic">; end indent-guides</span>
 
-<p><p class="p-news">
-So that&rsquo;s an introduction to how I use my text-editor. It&rsquo;s a huge thing for me, because it helps me get done the stuff I&rsquo;m so passionate
-about. I&rsquo;ll explain more later. So if Emacs interests you, be sure to come back here and click on the Emacs tags sidebar of the main page.
-If it doesn&rsquo;t, well&hellip;certainly go over to motivation page. Over the years I&rsquo;ve written reams of motivational material, and I&rsquo;ll certainly
-be post at least some of it over there.
-</p>
-<br/><br/></p>
+<span style="color:#080;font-style:italic">;Highlight Volatile Things ?</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">volatile-highlights</span>
+<span style="color:#a2f">:diminish</span>
+<span style="color:#a2f">:commands</span> <span style="color:#b8860b">volatile-highlights-mode</span>
+<span style="color:#080;font-style:italic">;:hook</span>
+<span style="color:#080;font-style:italic">;(after-init . volatile-highlights-mode)</span>
+<span style="color:#a2f">:custom-face</span>
+(<span style="color:#b8860b">vhl/default-face</span> ((<span style="color:#800">nil</span> (<span style="color:#a2f">:foreground</span> <span style="color:#b44">&#34;#FF3333&#34;</span> <span style="color:#a2f">:background</span> <span style="color:#b44">&#34;#FFCDCD&#34;</span>)))))<span style="color:#080;font-style:italic">;end volatile highlites</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5> Fill Column Indicator</h5>
+
+<p class= "p-news">Cool. I use it all the time to figure out where I am on the page. </p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Highlight column edge</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">fill-column-indicator</span>
+<span style="color:#a2f">:commands</span> <span style="color:#b8860b">fill-column-indicator-mode</span>
+<span style="color:#a2f">:config</span>
+<span style="color:#080;font-style:italic">;to change the color</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">fci-rule-color</span> <span style="color:#b44">&#34;#111122&#34;</span>)
+<span style="color:#080;font-style:italic">;( set fci-rule-use-dashes nil)</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">fci-rule-width</span> <span style="color:#666">1</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">fci-rule-color</span> <span style="color:#b44">&#34;darkblue&#34;</span>)
+<span style="color:#a2f">:diminish</span>
+)<span style="color:#080;font-style:italic">;end fill column indicator</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>Beacon</h5>
+
+<p class= "p-news">Cool flashy hello cursor when you jump around. </p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;highlight cursor when jump window/buffer</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">beacon</span>
+<span style="color:#a2f">:diminish</span>
+<span style="color:#a2f">:commands</span> <span style="color:#b8860b">beacon-mode</span>
+<span style="color:#a2f">:init</span>
+(<span style="color:#b8860b">beacon-mode</span> <span style="color:#666">1</span>)
+<span style="color:#a2f">:config</span>
+<span style="color:#080;font-style:italic">;; only flash on window/buffer changes...</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">beacon-blink-when-window-changes</span> <span style="color:#800">t</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">beacon-blink-when-window-scrolls</span> <span style="color:#800">nil</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">beacon-blink-when-point-moves</span> <span style="color:#800">nil</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">beacon-blink-duration</span> <span style="color:#666">.2</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">beacon-blink-delay</span> <span style="color:#666">.2</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">beacon-size</span> <span style="color:#666">20</span>)
+)<span style="color:#080;font-style:italic">;end beacon</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>That's all for this post. See you in the next one.</h5>
 
 
         <div class="share-icons d-flex justify-content-center d-print-none">
-            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2019-09-08-emacs-with-an-interface%2f&text=Emacs%20With%20an%20Interface&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
+            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-27-emacs-highlighting-packages%2f&text=Emacs%20Highlighting%20Packages&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -393,7 +504,7 @@ be post at least some of it over there.
     <div class="fa-inverse text-center"><small>Tweet</small></div>
 </a>
 
-<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2019-09-08-emacs-with-an-interface%2f&t=Emacs%20With%20an%20Interface" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-27-emacs-highlighting-packages%2f&t=Emacs%20Highlighting%20Packages" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -403,7 +514,7 @@ be post at least some of it over there.
     <div class="fa-inverse text-center"><small>Share</small></div>
 </a>
 
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2019-09-08-emacs-with-an-interface%2f&title=Emacs%20With%20an%20Interface&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-27-emacs-highlighting-packages%2f&title=Emacs%20Highlighting%20Packages&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -822,6 +933,9 @@ work with.
 
 
 
+
+<script src= "https://cloudnine.github.io/javascripts/medium-lightbox.js"></script>
+<script src= "https://cloudnine.github.io/javascripts/init_science.js"></script>
 
 
 
