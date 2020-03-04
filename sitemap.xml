@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cloudnine.github.io/books/2020-03-04-written-good/</loc>
+    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/</loc>
     <lastmod>2020-03-02T00:00:00+00:00</lastmod>
   </url>
@@ -404,7 +409,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -417,7 +422,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/about-the-author/</loc>
-    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -446,6 +451,12 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/tags/blog/</loc>
+    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/tags/blog-links/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -453,7 +464,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/books/</loc>
-    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -524,14 +535,14 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/tags/economics/</loc>
-    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+    <loc>https://cloudnine.github.io/categories/economics/</loc>
+    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/categories/economics/</loc>
-    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
+    <loc>https://cloudnine.github.io/tags/economics/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -656,6 +667,12 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/categories/philosophy/</loc>
+    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/categories/physics/</loc>
     <lastmod>2020-02-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -723,7 +740,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/</loc>
-    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
