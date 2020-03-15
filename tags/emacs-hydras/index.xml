@@ -18,7 +18,7 @@
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/</guid>
-      <description>This post covers &#34;Highlights&#34; from the appearance section of my init.   Default Operations
+      <description>This post covers the first two sections from the &#34;Default Operations&#34; section of my init.   Default Operations
  Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history  
   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for.</description>
     </item>
