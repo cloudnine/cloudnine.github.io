@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cloudnine.github.io/science/2020-03-17-emacs-parentheses-directories-clipboard-command-line-history/</loc>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/science/2020-03-15-emacs-projectile-helm-smex/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
@@ -414,7 +419,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -511,7 +516,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/categories/computer-science/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -553,19 +558,19 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/emacs/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/tags/emacs-functions/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/tags/emacs-hydras/</loc>
-    <lastmod>2020-03-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -601,7 +606,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/learning-center/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -721,7 +726,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/science/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
