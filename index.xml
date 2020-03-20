@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright</copyright>
-    <lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring Time. We&#39;re Doing Great.</title>
+      <link>https://cloudnine.github.io/motivation/2020-03-19-global-progress-is-on-the-rise/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/motivation/2020-03-19-global-progress-is-on-the-rise/</guid>
+      <description>Today I took the train around town and ran some errands. There was an apocalypse vibe on the train. Now that there is pandemic, there are a lot of unhappy people in the streets. Let&#39;s rephrase that. Everyone in the street appears unhappy. I understand, it&#39;s a pandemic.
+One of my facebook readers reminded me my last post was about Julian Assange. Why so serious? What is all this posting about war?</description>
+    </item>
     
     <item>
       <title>Emacs Parentheses, Directories, Clipboard, Command-Line-History</title>
