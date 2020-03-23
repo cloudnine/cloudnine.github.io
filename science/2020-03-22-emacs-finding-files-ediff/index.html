@@ -10,25 +10,26 @@
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
 
 
-<meta name="description" content="Today&#39;s post has some of the default settings from my initialization file.   SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key   
-Preamble Emacs is old school.">
+<meta name="description" content="This post covers the following sections from my init.   Finding Files Ediff
 
-<meta property="og:title" content="Emacs Frames, Buffers, Lines, Defaults (&#43; Some Functions)" />
-<meta property="og:description" content="Emacs configuration code to open a windows executable in default program and customize emacs start screen." />
+  Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date from oldest to newest.">
+
+<meta property="og:title" content="Emacs Configuration Finding Files and Ediff" />
+<meta property="og:description" content="Emacs configuration Silver Searcher, Ag, Ido, Flx-ido, Ediff" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-11-emacs-frames-buffers-defaults-functions/" /><meta property="article:published_time" content="2020-02-11T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-02-11T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-03-22-emacs-finding-files-ediff/" /><meta property="article:published_time" content="2020-03-22T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-03-22T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Frames, Buffers, Lines, Defaults (&#43; Some Functions)"/>
-<meta name="twitter:description" content="Emacs configuration code to open a windows executable in default program and customize emacs start screen."/>
+<meta name="twitter:title" content="Emacs Configuration Finding Files and Ediff"/>
+<meta name="twitter:description" content="Emacs configuration Silver Searcher, Ag, Ido, Flx-ido, Ediff"/>
 
-<meta property="og:title" content="Emacs Frames, Buffers, Lines, Defaults (&#43; Some Functions)">
+<meta property="og:title" content="Emacs Configuration Finding Files and Ediff">
 <meta property="og:image:type" content="image/jpg" />
 
 
-<meta property="og:image" content="https://cloudnine.github.io/images/hcf.jpg">
-<meta property="og:image:secure_url" content="https://cloudnine.github.io/images/hcf.jpg">
+<meta property="og:image" content="https://cloudnine.github.io/images/science/christian-bale.png">
+<meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/christian-bale.png">
 
 
 <meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
@@ -36,7 +37,7 @@ Preamble Emacs is old school.">
 
 <meta property="og:type" content="blog">
 
-<title>Emacs Frames, Buffers, Lines, Defaults (&#43; Some Functions) | Cloud Nine</title>
+<title>Emacs Configuration Finding Files and Ediff | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
@@ -61,7 +62,7 @@ Preamble Emacs is old school.">
     
 <style type="text/css">
         .feature-image {
-          background-image: url("https://cloudnine.github.io/images/hcf.jpg");
+          background-image: url("https://cloudnine.github.io/images/science/christian-bale.png");
           width:100%;
           height: auto;
         }
@@ -198,40 +199,26 @@ Preamble Emacs is old school.">
         <div class="main">
             
 <div class="container mt-4 post">
-    <h1>Emacs Frames, Buffers, Lines, Defaults (&#43; Some Functions)</h1>
+    <h1>Emacs Configuration Finding Files and Ediff</h1>
     <div class="mb-3">
     <small>
         <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 11, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Mar 22, 2020    &nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>
     </small>
 </div>
 
 
         <div class="mt-4 mb-4 main-content">
-        <h5>Today's post has some of the default settings from my initialization file. <br/><br/></h5>
+        <h5>This post covers the following sections from my init. <br/><br/></h5>
 
 <ul>
-<li>SET UP, DEFAULTS, AND CUSTOMIZATION
+<li>Finding Files</li>
 
-<ul>
-<li>Necessary Adjustments when you set-up on a new computer</li>
-<li>Paths to Update on Change</li>
-<li>Executable Paths</li>
-<li>Libraries</li>
-<li>Function declarations</li>
-<li>Emacs Customization Seperate File</li>
-<li>Emax Defaults</li>
-<li>Some Defaults</li>
-<li>Frames, Buffers, And Lines</li>
-<li>Some Custom Default Functions</li>
-<li>Some New Key Bindings</li>
-<li>Popup, Pos-tip,Tooltip, Posframe</li>
-<li>Which Key</li>
-</ul></li>
+<li><p>Ediff</p>
+
+<p><br/></p></li>
 </ul>
-
-<p><br/></p>
 
 <h5>Preamble</h5>
 
@@ -239,17 +226,24 @@ Preamble Emacs is old school.">
 know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts y date from
 oldest to newest.</p>
 
-<p class = "p-news">In the last emacs <a href="https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/" target="_blank">post</a>
- I covered customization file and some defaults, lines 425 - 534 of my configuration. This post
-covers "Frames, Buffers, And Lines" and "Some Custom Default Functions", so lines 534 - 656</p>
+<p class = "p-news">In the last emacs <a href="https://cloudnine.github.io/science/2020-03-17-emacs-parentheses-directories-clipboard-command-line-history/"
+target="_blank">post</a> I covered lines 2004 - 2188. This post covers lines 2188 - 2379. I include the lines for anyone that wants
+to patch together the entire init from start to finish. The lines won't always match up because I take stuff out when I'm in the init.</p>
 
-<p class= "p-news">Most of this is relevant. If you don't want your Emacs to beep when you hit the end of the file, then you need
-to set a default, and the same for another annoying stuff. I make no promises the following section is efficient (let me know if you see
-some double entries). </p>
+<p class= "p-news"> </p>
 
-<h5>Frames, Buffers, and Lines</h5>
+<h5>Finding Files</h5>
 
-<p class= "p-news">Just more useful defaults.</p>
+<p class= "p-news">First the diff and Ediff code is on hold. Diff and Ediff in emacs are great packages, a lot of people however
+enjoy newer programs for managing changes in files, especially when working with git revisions. I use a program called Beyond Compare with
+git and Diff and Ediff with most files. I've yet to put my diff/ediff system into a hydra though. So that comes later.
+</p>
+
+<p class= "p-news"> query-replace-regexp is just like C-f in your browser. You need the code below to do that with emacs. Anzu shows the
+number of matches in a give region. Ag is the Silver Searcher executable. It's a linux program so you have to find a version compiled just
+for windows, which you can do on the net, or with the version I referenced in earlier posts. You can of course use other search utilities in
+your hydra. In the Ag case you set the path to the ag-executable-p variable you set earlier. Helm-ag enables use of the helm interface to access
+the ag results.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -290,104 +284,65 @@ some double entries). </p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;set the initial frame, different for each monitor</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">initial-frame-alist</span> <span style="color:#666">&#39;</span>((<span style="color:#b8860b">left</span> <span style="color:#666">.</span> <span style="color:#666">250</span>) (<span style="color:#b8860b">top</span> <span style="color:#666">.</span> <span style="color:#666">25</span>) (<span style="color:#b8860b">height</span> <span style="color:#666">.</span> <span style="color:#666">40</span>) (<span style="color:#b8860b">width</span> <span style="color:#666">.</span> <span style="color:#666">110</span>)
-(<span style="color:#b8860b">left-fringe</span> <span style="color:#666">.</span> <span style="color:#666">6</span>) (<span style="color:#b8860b">right-fringe</span> <span style="color:#666">.</span> <span style="color:#666">6</span>)))
-<span style="color:#080;font-style:italic">;set default frame</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">default-frame-alist</span> (<span style="color:#00a000">copy-alist</span> <span style="color:#b8860b">initial-frame-alist</span>))
-<span style="color:#080;font-style:italic">;Auto refresh buffers including dired</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">global-auto-revert-non-file-buffers</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">; Do not generate any messages (be quiet about refreshing Dired).</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">auto-revert-verbose</span> <span style="color:#800">nil</span>)
-<span style="color:#080;font-style:italic">;Auto refresh buffers</span>
-(<span style="color:#b8860b">global-auto-revert-mode</span> <span style="color:#666">1</span>)
-<span style="color:#080;font-style:italic">;encourage new frame over new window</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">split-window-preferred-function</span> <span style="color:#800">nil</span>)
-<span style="color:#080;font-style:italic">;(setq split-window-preferred-function &#39;split-window-sensibly)</span>
-<span style="color:#080;font-style:italic">;two identical buffers get uniquely numbered names</span>
-(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;uniquify</span>)
-<span style="color:#080;font-style:italic">;if window smaller 90 split below, over split beside</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">split-width-threshold</span> <span style="color:#666">90</span>)
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">uniquify-buffer-name-style</span> <span style="color:#b8860b">&#39;forward</span>)
-<span style="color:#080;font-style:italic">;; Allow recursive minibuffers</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">enable-recursive-minibuffers</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">;;show recursion depth in minibuffer</span>
-(<span style="color:#b8860b">minibuffer-depth-indicate-mode</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">;; Save minibuffer history</span>
-(<span style="color:#b8860b">savehist-mode</span> <span style="color:#666">1</span>)
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">history-length</span> <span style="color:#666">1000</span>)
-<span style="color:#080;font-style:italic">;Killing line deletes it</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">kill-whole-line</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">;Down arrow won&#39;t add \n</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">next-line-add-newlines</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">;newline required</span>
-<span style="color:#080;font-style:italic">;(setq require-final-newline t)</span>
-<span style="color:#080;font-style:italic">;Iterate through CamelCase words diminished</span>
-(<span style="color:#a2f">with-eval-after-load</span> <span style="color:#b8860b">&#39;subword</span>
-  (<span style="color:#b8860b">diminish</span> <span style="color:#b8860b">&#39;subword-mode</span>))
-(<span style="color:#b8860b">global-subword-mode</span> <span style="color:#666">+1</span>)
-<span style="color:#080;font-style:italic">; Don&#39;t break lines</span>
-(<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">truncate-lines</span> <span style="color:#800">t</span>)</code></pre></td></tr></table>
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;find and replace expressions in an emacs buffer</span>
+(<span style="color:#b8860b">global-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;M-&amp;&#34;</span>) <span style="color:#b8860b">&#39;query-replace-regexp</span>)
+<span style="color:#080;font-style:italic">;show number of matches</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">anzu</span>
+<span style="color:#a2f">:diminish</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#b8860b">global-anzu-mode</span> <span style="color:#666">+1</span>)
+(<span style="color:#b8860b">global-set-key</span> [<span style="color:#b8860b">remap</span> <span style="color:#b8860b">query-replace</span>] <span style="color:#b8860b">&#39;anzu-query-replace</span>)
+(<span style="color:#b8860b">global-set-key</span> [<span style="color:#b8860b">remap</span> <span style="color:#b8860b">query-replace-regexp</span>] <span style="color:#b8860b">&#39;anzu-query-replace-regexp</span>)
+<span style="color:#a2f">:hook</span>
+(<span style="color:#b8860b">after-init</span> <span style="color:#666">.</span> <span style="color:#b8860b">global-anzu-mode</span>)
+)<span style="color:#080;font-style:italic">;end anzu</span>
+
+<span style="color:#080;font-style:italic">;find expressions in files in directories using ag</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">ag</span>
+<span style="color:#a2f">:commands</span> (<span style="color:#b8860b">ag-files</span> <span style="color:#b8860b">ag-regexp</span> <span style="color:#b8860b">ag-project</span> <span style="color:#b8860b">ag-project-files</span> <span style="color:#b8860b">ag-project-regexp</span>)
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ag-executable</span> <span style="color:#b8860b">ag-executable-p</span>)
+<span style="color:#080;font-style:italic">;(next-error-follow-minor-mode t)</span>
+<span style="color:#080;font-style:italic">;(automatically-display-search-results-at-point t)</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ag-highligh-search</span> <span style="color:#800">t</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ag-reuse-buffers</span> <span style="color:#800">t</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ag-reuse-window</span> <span style="color:#800">t</span>)
+<span style="color:#080;font-style:italic">;:bind</span>
+<span style="color:#080;font-style:italic">;(&#34;M-s a&#34; . ag-project)</span>
+)<span style="color:#080;font-style:italic">;end ag</span>
+<span style="color:#080;font-style:italic">;use helm to activate ag with extra functionality</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">helm-ag</span>
+<span style="color:#a2f">:commands</span> (<span style="color:#b8860b">helm-ag</span> <span style="color:#b8860b">helm-ag-this-file</span> <span style="color:#b8860b">helm-do-ag</span> <span style="color:#b8860b">helm-ag-project-root</span> <span style="color:#b8860b">help-ag-buffers</span>)
+<span style="color:#a2f">:init</span>
+(<span style="color:#b8860b">custom-set-variables</span>
+ <span style="color:#666">&#39;</span>(<span style="color:#b8860b">helm-follow-mode-persistent</span> <span style="color:#800">t</span>))
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">setq</span>
+<span style="color:#b8860b">helm-ag-base-command</span>         <span style="color:#b44">&#34;rg --no-heading --smart-case&#34;</span>
+<span style="color:#b8860b">helm-ag-fuzzy-match</span>          <span style="color:#800">t</span>
+<span style="color:#080;font-style:italic">;helm-ag-use-grep-ignore-list t</span>
+<span style="color:#080;font-style:italic">;helm-ag-use-agignore         t</span>
+)<span style="color:#080;font-style:italic">;end helm-ag-init</span>
+<span style="color:#a2f">:bind</span> (<span style="color:#a2f">:map</span> <span style="color:#b8860b">helm-ag-map</span>
+(<span style="color:#b44">&#34;C-c o&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">&#39;helm-ag-other-window-action</span>)
+(<span style="color:#b44">&#34;C-c &gt;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">&#39;helm-ag-next-file</span>)
+(<span style="color:#b44">&#34;C-c &gt;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">&#39;helm-ag-previous-file</span>)
+)<span style="color:#080;font-style:italic">;end helm ag map</span>
+)<span style="color:#080;font-style:italic">;end helm-ag</span></code></pre></td></tr></table>
 </div>
 </div>
 <p><br/></p>
 
-<h5>More Custom Functions</h5>
-
-<p><h5>Go to line</h5>
-<p class= "p-news">I use it, in a hydra and from the minibuffer.</p></p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">; go to line with feedback</span>
-<span style="color:#080;font-style:italic">;quit-selection-here</span>
- (<span style="color:#a2f">defun</span> <span style="color:#b8860b">goto-line-with-feedback</span> ()
-   <span style="color:#b44">&#34;Show line numbers temporarily, while prompting for the line number input&#34;</span>
-   (<span style="color:#a2f">interactive</span>)
-   (<span style="color:#a2f">unwind-protect</span>
-       (<span style="color:#a2f">progn</span>
- (<span style="color:#b8860b">display-line-numbers-mode</span> <span style="color:#666">1</span>)
- (<span style="color:#b8860b">goto-line</span> (<span style="color:#b8860b">read-number</span> <span style="color:#b44">&#34;Goto line: &#34;</span>)))
-     (<span style="color:#b8860b">display-line-numbers-mode</span> <span style="color:#666">0</span>)))</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
-
-<p><h5>Append Lines</h5>
-<p class= "p-news">Rarely used.</p></p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">defun</span> <span style="color:#b8860b">append-lines</span> ()
-<span style="color:#b44">&#34;add next line to current line&#34;</span>
-    (<span style="color:#a2f">lambda</span> ()
-        (<span style="color:#a2f">interactive</span>)
-            (<span style="color:#b8860b">join-line</span> <span style="color:#666">-1</span>)))</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
-
-<p><h5>Open File (from Dired)</h5>
-<p class= "p-news">I use it a lot.</p></p>
+<h5>Here is the search Hydra</h5>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -412,36 +367,68 @@ some double entries). </p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">defun</span> <span style="color:#b8860b">xah-open-in-external-app</span> (<span style="color:#a2f">&amp;optional</span> <span style="color:#b8860b">file</span>)
-  <span style="color:#b44">&#34;Open the current file or dired marked files in external app.
-</span><span style="color:#b44">The app is chosen from your OS&#39;s preference.&#34;</span>
-  (<span style="color:#a2f">interactive</span>)
-  (<span style="color:#a2f">let</span> ( <span style="color:#b8860b">doIt</span>
-         (<span style="color:#b8860b">myFileList</span>
-          (<span style="color:#a2f">cond</span>
-           ((<span style="color:#00a000">string-equal</span> <span style="color:#b8860b">major-mode</span> <span style="color:#b44">&#34;dired-mode&#34;</span>) (<span style="color:#b8860b">dired-get-marked-files</span>))
-           ((<span style="color:#b8860b">not</span> <span style="color:#b8860b">file</span>) (<span style="color:#00a000">list</span> (<span style="color:#00a000">buffer-file-name</span>)))
-           (<span style="color:#b8860b">file</span> (<span style="color:#00a000">list</span> <span style="color:#b8860b">file</span>)))))
-
-    (<span style="color:#a2f">setq</span> <span style="color:#b8860b">doIt</span> (<span style="color:#a2f">if</span> (<span style="color:#00a000">&lt;=</span> (<span style="color:#00a000">length</span> <span style="color:#b8860b">myFileList</span>) <span style="color:#666">5</span>)
-                   <span style="color:#800">t</span>
-                 (<span style="color:#b8860b">y-or-n-p</span> <span style="color:#b44">&#34;Open more than 5 files? &#34;</span>) ) )
-     (<span style="color:#a2f">when</span> <span style="color:#b8860b">doIt</span>
-      (<span style="color:#a2f">cond</span>
-       ((<span style="color:#00a000">string-equal</span> <span style="color:#b8860b">system-type</span> <span style="color:#b44">&#34;windows-nt&#34;</span>)
-        (<span style="color:#00a000">mapc</span> (<span style="color:#a2f">lambda</span> (<span style="color:#b8860b">fPath</span>) (<span style="color:#00a000">w32-shell-execute</span> <span style="color:#b44">&#34;open&#34;</span> (<span style="color:#b8860b">replace-regexp-in-string</span> <span style="color:#b44">&#34;/&#34;</span> <span style="color:#b44">&#34;\\&#34;</span> <span style="color:#b8860b">fPath</span> <span style="color:#800">t</span> <span style="color:#800">t</span>)) ) <span style="color:#b8860b">myFileList</span>))
-       ((<span style="color:#00a000">string-equal</span> <span style="color:#b8860b">system-type</span> <span style="color:#b44">&#34;darwin&#34;</span>)
-        (<span style="color:#00a000">mapc</span> (<span style="color:#a2f">lambda</span> (<span style="color:#b8860b">fPath</span>) (<span style="color:#b8860b">shell-command</span> (<span style="color:#00a000">format</span> <span style="color:#b44">&#34;open \&#34;%s\&#34;&#34;</span> <span style="color:#b8860b">fPath</span>)) )  <span style="color:#b8860b">myFileList</span>) )
-       ((<span style="color:#00a000">string-equal</span> <span style="color:#b8860b">system-type</span> <span style="color:#b44">&#34;gnu/linux&#34;</span>)
-        (<span style="color:#00a000">mapc</span> (<span style="color:#a2f">lambda</span> (<span style="color:#b8860b">fPath</span>) (<span style="color:#a2f">let</span> ((<span style="color:#b8860b">process-connection-type</span> <span style="color:#800">nil</span>)) (<span style="color:#00a000">start-process</span> <span style="color:#b44">&#34;&#34;</span> <span style="color:#800">nil</span> <span style="color:#b44">&#34;xdg-open&#34;</span> <span style="color:#b8860b">fPath</span>)) ) <span style="color:#b8860b">myFileList</span>) ) ) ) ) )</code></pre></td></tr></table>
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;find files hydra</span>
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">find-files-title</span> (<span style="color:#b8860b">with-octicon</span> <span style="color:#b44">&#34;search&#34;</span> <span style="color:#b44">&#34;Search Files And Text With The Silver Searcher&#34;</span>))
+<span style="color:#080;font-style:italic">;generate hydra</span>
+(<span style="color:#b8860b">pretty-hydra-define</span> <span style="color:#b8860b">Search-Files</span> (<span style="color:#a2f">:title</span> <span style="color:#b8860b">find-files-title</span> <span style="color:#a2f">:quit-key</span> <span style="color:#b44">&#34;q&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">teal</span> )
+(<span style="color:#b44">&#34;Basic Searches&#34;</span>
+   ((<span style="color:#b44">&#34;a&#34;</span> <span style="color:#b8860b">ag</span> <span style="color:#b44">&#34;Search With Ag&#34;</span>)
+    (<span style="color:#b44">&#34;m&#34;</span> <span style="color:#b8860b">helm-ag</span> <span style="color:#b44">&#34;Search With Helm Prefix&#34;</span>)
+    (<span style="color:#b44">&#34;b&#34;</span> <span style="color:#b8860b">ag-kill-buffers</span> <span style="color:#b44">&#34;Delete Ag Buffers&#34;</span>)
+    (<span style="color:#b44">&#34;o&#34;</span> <span style="color:#b8860b">ag-kill-other-buffers</span> <span style="color:#b44">&#34;Delete Other Ag Buffers&#34;</span>)
+)<span style="color:#080;font-style:italic">;end basic</span>
+<span style="color:#b44">&#34;More Specific Searches&#34;</span>
+   (
+    (<span style="color:#b44">&#34;f&#34;</span> <span style="color:#b8860b">ag-file</span> <span style="color:#b44">&#34;Text and File Specific Search Ag&#34;</span> )
+    (<span style="color:#b44">&#34;r&#34;</span> <span style="color:#b8860b">ag-regexp</span> <span style="color:#b44">&#34;Regular Expression Ag Search&#34;</span>)
+    (<span style="color:#b44">&#34;t&#34;</span> <span style="color:#b8860b">helm-ag-this-file</span> <span style="color:#b44">&#34;Search Open File With Helm&#34;</span> )
+    (<span style="color:#b44">&#34;s&#34;</span> <span style="color:#b8860b">helm-ag-buffers</span> <span style="color:#b44">&#34;Search Buffers With Helm&#34;</span>)
+)<span style="color:#080;font-style:italic">;end specific</span>
+<span style="color:#b44">&#34;Project Searches&#34;</span>
+   (
+    (<span style="color:#b44">&#34;p&#34;</span> <span style="color:#b8860b">ag-project</span> <span style="color:#b44">&#34;Search Text In Projects&#34;</span> )
+    (<span style="color:#b44">&#34;R&#34;</span> <span style="color:#b8860b">ag-project-regexp</span> <span style="color:#b44">&#34;Search Regular Expresions In Projects&#34;</span>)
+    (<span style="color:#b44">&#34;P&#34;</span> <span style="color:#b8860b">helm-ag-project-root</span> <span style="color:#b44">&#34;Search Project With Helm&#34;</span>)
+    (<span style="color:#b44">&#34;h&#34;</span> <span style="color:#b8860b">hydra-helm/body</span> <span style="color:#b44">&#34;Return To Helm&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
+    (<span style="color:#b44">&#34;&lt;SPC&gt;&#34;</span> <span style="color:#800">nil</span> <span style="color:#b44">&#34;Quit&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
+)<span style="color:#080;font-style:italic">;end project</span>
+)<span style="color:#080;font-style:italic">;end hydra body</span>
+)<span style="color:#080;font-style:italic">;end pretty-hydra-find-files</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;C-m&gt; s&#34;</span> <span style="color:#b8860b">&#39;Search-Files/body</span>)</code></pre></td></tr></table>
 </div>
 </div>
 <p><br/></p>
 
-<p><h5>Date and Time Stuff</h5>
-<p class= "p-news">Good to have around, somewhere. You need this to remember when you hit blue ocean. </p></p>
+<p><div class="mobile-iframe">
+<figure class="zoom-effect">
+<div class="aspectRatioPlaceholder" >
+<div class="aspect-ratio-fill" style="padding-bottom: 75.78947368421053%;"></div> <!-- end aspect ratio fill -->
+<!--appearance hydra-->
+<img src="/images/science/search.png" align="center" title="" class="inline-image img-zoom" width="100%" alt="theme-image-here" data-width="1920" data-height="1080">
+</div> <!-- end aspect ratio -->
+</figure> <!-- end figure -->
+</div> <!--mobile-iframe-->
+<small class="col-6 d-flex mx-auto">Image: Search Hydra</small></p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h5>Ido Mode</h5>
+
+<p class= "p-news">Ido mode is an alternative to helm. It structures searches in the minibuffer (whereas Helm enlarges greatly the
+mini-buffer and includes utilities.) With Helm my Ido-mode use drops off, but I include shortcuts to use it anyway. I enjoyed always use of
+Ido, only helm works for me a little bit better. </p>
+
+<p><br/></p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -480,56 +467,133 @@ some double entries). </p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;; Date and time functions</span>
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">current-date-time-format</span> <span style="color:#b44">&#34;%a %b %d %Y %H:%M:%S %Z &#34;</span>
-  <span style="color:#b44">&#34;Format of date to insert with </span><span style="color:#b8860b">`insert-current-date-time&#39;</span><span style="color:#b44"> func
-</span><span style="color:#b44">See help of </span><span style="color:#b8860b">`format-time-string&#39;</span><span style="color:#b44"> for possible replacements&#34;</span>)
-<span style="color:#080;font-style:italic">;</span>
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">current-date-format</span> <span style="color:#b44">&#34;%d %b  %Y &#34;</span>
-  <span style="color:#b44">&#34;Format of date to insert with </span><span style="color:#b8860b">`insert-current-date-time&#39;</span><span style="color:#b44"> func
-</span><span style="color:#b44">See help of </span><span style="color:#b8860b">`format-time-string&#39;</span><span style="color:#b44"> for possible replacements&#34;</span>)
-<span style="color:#080;font-style:italic">;</span>
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">current-time-format</span> <span style="color:#b44">&#34;%a %H:%M:%S&#34;</span>
-  <span style="color:#b44">&#34;Format of date to insert with </span><span style="color:#b8860b">`insert-current-time&#39;</span><span style="color:#b44"> func.
-</span><span style="color:#b44">Note the weekly scope of the command&#39;s precision.&#34;</span>)
-<span style="color:#080;font-style:italic">;</span>
-(<span style="color:#a2f">defun</span> <span style="color:#b8860b">insert-current-date-time</span> ()
-  <span style="color:#b44">&#34;insert the current date and time into current buffer.
-</span><span style="color:#b44">Uses </span><span style="color:#b8860b">`current-date-time-format&#39;</span><span style="color:#b44"> for the formatting the date/time.&#34;</span>
-       (<span style="color:#a2f">interactive</span>)
-<span style="color:#080;font-style:italic">;       (insert (let () (comment-start)))</span>
-       (<span style="color:#00a000">insert</span> (<span style="color:#00a000">format-time-string</span> <span style="color:#b8860b">current-date-time-format</span> (<span style="color:#00a000">current-time</span>)))
-       )
-<span style="color:#080;font-style:italic">;</span>
-(<span style="color:#a2f">defun</span> <span style="color:#b8860b">insert-current-date</span> ()
-  <span style="color:#b44">&#34;insert the current date and time into current buffer.
-</span><span style="color:#b44">Uses </span><span style="color:#b8860b">`current-date-format&#39;</span><span style="color:#b44"> for the formatting the date/time.&#34;</span>
-       (<span style="color:#a2f">interactive</span>)
-<span style="color:#080;font-style:italic">;       (insert (let () (comment-start)))</span>
-       (<span style="color:#00a000">insert</span> (<span style="color:#00a000">format-time-string</span> <span style="color:#b8860b">current-date-format</span> (<span style="color:#00a000">current-time</span>)))
-       )
-<span style="color:#080;font-style:italic">;</span>
-(<span style="color:#a2f">defun</span> <span style="color:#b8860b">insert-current-time</span> ()
-  <span style="color:#b44">&#34;insert the current time (1-week scope) into the current buffer.&#34;</span>
-       (<span style="color:#a2f">interactive</span>)
-       (<span style="color:#00a000">insert</span> (<span style="color:#00a000">format-time-string</span> <span style="color:#b8860b">current-time-format</span> (<span style="color:#00a000">current-time</span>)))
-       )
-(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;\C-c\C-y&#34;</span> <span style="color:#b8860b">&#39;insert-current-date</span>)
-(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;\C-c\C-t&#34;</span> <span style="color:#b8860b">&#39;insert-current-time</span>)</code></pre></td></tr></table>
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;ido mode and supporting</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">flx-ido</span>
+<span style="color:#a2f">:init</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;flx-ido</span>)
+(<span style="color:#b8860b">ido-mode</span> <span style="color:#666">1</span>)
+<span style="color:#080;font-style:italic">;(ido-everywhere 1)</span>
+(<span style="color:#b8860b">flx-ido-mode</span> <span style="color:#666">1</span>)
+<span style="color:#080;font-style:italic">;~ tilda to go to home directory</span>
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">my/ido-go-straight-home</span> ()
+  (<span style="color:#a2f">interactive</span>)
+  (<span style="color:#a2f">cond</span>
+   ((<span style="color:#b8860b">looking-back</span> <span style="color:#b44">&#34;~/&#34;</span>) (<span style="color:#00a000">insert</span> <span style="color:#b44">&#34;projects/&#34;</span>))
+   ((<span style="color:#b8860b">looking-back</span> <span style="color:#b44">&#34;/&#34;</span>) (<span style="color:#00a000">insert</span> <span style="color:#b44">&#34;~/&#34;</span>))
+   (<span style="color:#a2f">:else</span> (<span style="color:#00a000">call-interactively</span> <span style="color:#b8860b">&#39;self-insert-command</span>))))
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">recentf-ido-find-file</span> ()
+<span style="color:#b44">&#34;Find a recent file using Ido.&#34;</span>
+(<span style="color:#a2f">interactive</span>)
+(<span style="color:#a2f">let</span> ((<span style="color:#b8860b">file</span> (<span style="color:#b8860b">ido-completing-read</span> <span style="color:#b44">&#34;Choose recent file: &#34;</span> <span style="color:#b8860b">recentf-list</span> <span style="color:#800">nil</span> <span style="color:#800">t</span>)))
+(<span style="color:#a2f">when</span> <span style="color:#b8860b">file</span>
+(<span style="color:#b8860b">find-file</span> <span style="color:#b8860b">file</span>))))
+<span style="color:#a2f">:bind</span>
+(<span style="color:#b44">&#34;C-x C-i&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">ido-imenu</span>)
+(<span style="color:#b44">&#34;C-x M-f&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">ido-find-file-other-window</span>)
+(<span style="color:#b44">&#34;C-x F&#34;</span> <span style="color:#666">.</span>  <span style="color:#b8860b">recentf-ido-find-file</span>)
+(<span style="color:#b44">&#34;C-x C-b&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">ibuffer</span>)
+(<span style="color:#a2f">:map</span> <span style="color:#b8860b">ido-file-completion-map</span>
+((<span style="color:#b44">&#34;C-~&#34;</span>  <span style="color:#666">.</span> <span style="color:#b8860b">my/ido-go-straight-home</span>)
+(<span style="color:#b44">&#34;C-w&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">ido-delete-backward-updir</span>)
+(<span style="color:#b44">&#34;C-x C-w&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">ido-copy-current-file-name</span>)
+(<span style="color:#b44">&#34;~&#34;</span> <span style="color:#666">.</span> (<span style="color:#a2f">lambda</span> () (<span style="color:#a2f">interactive</span>) (<span style="color:#a2f">if</span>
+         (<span style="color:#b8860b">looking-back</span> <span style="color:#b44">&#34;/&#34;</span>)
+         (<span style="color:#00a000">insert</span> <span style="color:#b44">&#34;~/&#34;</span>)
+         (<span style="color:#00a000">call-interactively</span> <span style="color:#b8860b">&#39;self-insert-command</span>))))))
+<span style="color:#a2f">:config</span>
+<span style="color:#080;font-style:italic">; turning off ido faces and on flex matching faces</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ido-enable-flex-matching</span> <span style="color:#800">t</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ido-use-faces</span> <span style="color:#800">nil</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ido-enable-prefix</span> <span style="color:#800">nil</span>
+      <span style="color:#b8860b">ido-enable-flex-matching</span> <span style="color:#800">t</span>
+      <span style="color:#b8860b">ido-case-fold</span> <span style="color:#800">nil</span>
+      <span style="color:#b8860b">ido-auto-merge-work-directories-length</span> <span style="color:#666">-1</span>
+      <span style="color:#b8860b">ido-create-new-buffer</span> <span style="color:#b8860b">&#39;always</span>
+      <span style="color:#b8860b">ido-use-filename-at-point</span> <span style="color:#800">nil</span>
+      <span style="color:#b8860b">ido-max-prospects</span> <span style="color:#666">10</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">flx-ido-use-faces</span> <span style="color:#800">t</span>)
+<span style="color:#080;font-style:italic">;; Always rescan buffer for imenu</span>
+(<span style="color:#00a000">set-default</span> <span style="color:#b8860b">&#39;imenu-auto-rescan</span> <span style="color:#800">t</span>)
+(<span style="color:#b8860b">global-unset-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-x TAB&#34;</span>))
+)<span style="color:#080;font-style:italic">;use package flx-ido</span>
+<span style="color:#080;font-style:italic">;matching</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">flx-isearch</span> )
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">ido-at-point</span>)
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">ido-ubiquitous</span>)
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">ido-vertical-mode</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#b8860b">ido-vertical-mode</span> <span style="color:#800">t</span>)
+<span style="color:#080;font-style:italic">;; C-n/p is more intuitive in vertical layout</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ido-vertical-define-keys</span> <span style="color:#b8860b">&#39;C-n-C-p-up-down-left-right</span>)
+)<span style="color:#080;font-style:italic">;end use package</span>
+<span style="color:#080;font-style:italic">;functions</span>
+<span style="color:#080;font-style:italic">;; Fix ido-ubiquitous for newer packages</span>
+<span style="color:#080;font-style:italic">;(defmacro ido-ubiquitous-use-new-completing-read (cmd package)</span>
+<span style="color:#080;font-style:italic">;   `(eval-after-load ,package</span>
+<span style="color:#080;font-style:italic">;     &#39;(defadvice ,cmd (around ido-ubiquitous-new activate)</span>
+<span style="color:#080;font-style:italic">;        (let ((ido-ubiquitous-enable-compatibility nil))</span>
+<span style="color:#080;font-style:italic">;          ad-do-it))))</span>
+<span style="color:#080;font-style:italic">;; Ido at point (C-,)</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;ido-at-point</span>)
+(<span style="color:#b8860b">ido-at-point-mode</span>)
+<span style="color:#080;font-style:italic">;; Use ido everywhere</span>
+<span style="color:#080;font-style:italic">;(require &#39;ido-ubiquitus)</span>
+<span style="color:#080;font-style:italic">;(ido-ubiquitous-mode 1)</span>
+<span style="color:#080;font-style:italic">;(ido-ubiquitous-use-new-completing-read webjump &#39;webjump)</span>
+<span style="color:#080;font-style:italic">;(ido-ubiquitous-use-new-completing-read yas-expand &#39;yasnippet)</span>
+<span style="color:#080;font-style:italic">;(ido-ubiquitous-use-new-completing-read yas-visit-snippet-file &#39;yasnippet)</span></code></pre></td></tr></table>
 </div>
 </div>
 <p><br/></p>
 
-<p class= "p-news">See you next time...</p>
+<p class= "p-news">As mentioned earlier, Ediff and Diff code isn't finalized yet (it's commented out in this part of the init).</p>
 
-<p><br/>
-<br/></p>
+<h5>That's all for now. See you next time.</h5>
 
 
         <div class="share-icons d-flex justify-content-center d-print-none">
-            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-11-emacs-frames-buffers-defaults-functions%2f&text=Emacs%20Frames%2c%20Buffers%2c%20Lines%2c%20Defaults%20%28%2b%20Some%20Functions%29&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
+            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-22-emacs-finding-files-ediff%2f&text=Emacs%20Configuration%20Finding%20Files%20and%20Ediff&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -539,7 +603,7 @@ some double entries). </p>
     <div class="fa-inverse text-center"><small>Tweet</small></div>
 </a>
 
-<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-11-emacs-frames-buffers-defaults-functions%2f&t=Emacs%20Frames%2c%20Buffers%2c%20Lines%2c%20Defaults%20%28%2b%20Some%20Functions%29" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-22-emacs-finding-files-ediff%2f&t=Emacs%20Configuration%20Finding%20Files%20and%20Ediff" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -549,7 +613,7 @@ some double entries). </p>
     <div class="fa-inverse text-center"><small>Share</small></div>
 </a>
 
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-11-emacs-frames-buffers-defaults-functions%2f&title=Emacs%20Frames%2c%20Buffers%2c%20Lines%2c%20Defaults%20%28%2b%20Some%20Functions%29&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-22-emacs-finding-files-ediff%2f&title=Emacs%20Configuration%20Finding%20Files%20and%20Ediff&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -983,6 +1047,9 @@ work with.
 
 
 
+
+<script src= "https://cloudnine.github.io/javascripts/medium-lightbox.js"></script>
+<script src= "https://cloudnine.github.io/javascripts/init_science.js"></script>
 
 
 
