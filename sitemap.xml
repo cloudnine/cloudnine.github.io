@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cloudnine.github.io/motivation/2020-03-25-playlist/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/science/2020-03-24-emacs-mathjax/</loc>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/science/2020-03-22-emacs-finding-files-ediff/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url>
@@ -70,6 +80,11 @@
   <url>
     <loc>https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/</loc>
     <lastmod>2020-02-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/books/2020-03-28-american-financier/</loc>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -439,7 +454,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -536,7 +551,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/categories/computer-science/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -584,7 +599,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/emacs/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -596,7 +611,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/emacs-hydras/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -619,6 +634,12 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/categories/history/</loc>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/tags/investing/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -632,7 +653,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/learning-center/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -662,7 +683,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/motivation/</loc>
-    <lastmod>2020-03-19T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -704,7 +725,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/personal-development/</loc>
-    <lastmod>2020-03-19T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -728,7 +749,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/categories/psychology/</loc>
-    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -758,7 +779,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/science/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright</copyright>
-    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/motivation/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Playlist</title>
+      <link>https://cloudnine.github.io/motivation/2020-03-25-playlist/</link>
+      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/motivation/2020-03-25-playlist/</guid>
+      <description>     </description>
+    </item>
     
     <item>
       <title>Spring Time. We&#39;re Doing Great.</title>

@@ -16,7 +16,7 @@
 <meta property="og:description" content="A blog about passion, discovery, and science." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://cloudnine.github.io/science/" />
-<meta property="og:updated_time" content="2020-03-22T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+<meta property="og:updated_time" content="2020-03-24T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sciences"/>
@@ -53,6 +53,37 @@
         
 
 <link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.49150b81616b6ee67d88c2f4564c35e025a3d3e6d2fffcdb8e16b5ce1169e2d7.css" integrity="sha256-SRULgWFrbuZ9iML0Vkw14CWj0&#43;bS//zbjha1zhFp4tc="  />
+
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath:[['\\(','\\)']],
+    displayMath: [ ['$$','$$'], ['\[','\]'] ],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["tex2math.js","TeX/noErrors.js","TeX/noUndefined.js",
+             "TeX/AMSmath.js","TeX/AMSsymbols.js"]}
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
 
         
 
@@ -152,6 +183,24 @@ background-image: linear-gradient(
 <div class="container mt-4 mb-4 recent-posts">
 <br/>
 
+    
+      <article class="post">
+        <a class="title" href="https://cloudnine.github.io/science/2020-03-24-emacs-mathjax/"><h2>Emacs on Finding Files and Ediff</h2></a>
+        <div class="mb-3">
+    <small>
+        <strong>Author: Yuri Tricys</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Mar 24, 2020    &nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>
+    </small>
+</div>
+
+        <div>
+            $$\left[ \frac{mtpl}{exchange} \right]$$
+        </div>
+        <div class="mt-2">
+            <a href="https://cloudnine.github.io/science/2020-03-24-emacs-mathjax/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
+        </div>
+      </article>
     
       <article class="post">
         <a class="title" href="https://cloudnine.github.io/science/2020-03-22-emacs-finding-files-ediff/"><h2>Emacs Configuration Finding Files and Ediff</h2></a>
@@ -325,25 +374,6 @@ background-image: linear-gradient(
         </div>
       </article>
     
-      <article class="post">
-        <a class="title" href="https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/"><h2>Emacs Configuration Posframe and Which Key, Some Key Bindings</h2></a>
-        <div class="mb-3">
-    <small>
-        <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 17, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>
-    </small>
-</div>
-
-        <div>
-            Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts from oldest to newest.
-In this earlier emacs post I covered lines 534 - 656 of my configuration file.
-        </div>
-        <div class="mt-2">
-            <a href="https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
-        </div>
-      </article>
-    
     <div class="d-flex justify-content-center">
         
 
@@ -429,6 +459,10 @@ In this earlier emacs post I covered lines 534 - 656 of my configuration file.
 <nav class="nav flex-column">
 
 
+<a href="https://cloudnine.github.io/motivation/2020-03-25-playlist/" class="nav-link">Playlist</a>
+
+<a href="https://cloudnine.github.io/science/2020-03-24-emacs-mathjax/" class="nav-link">Emacs on Finding Files and Ediff</a>
+
 <a href="https://cloudnine.github.io/science/2020-03-22-emacs-finding-files-ediff/" class="nav-link">Emacs Configuration Finding Files and Ediff</a>
 
 <a href="https://cloudnine.github.io/science/2020-03-20-emacs-selection-region-mark-browsers/" class="nav-link">Emacs Selection, Region, Mark, and Browsers</a>
@@ -436,10 +470,6 @@ In this earlier emacs post I covered lines 534 - 656 of my configuration file.
 <a href="https://cloudnine.github.io/motivation/2020-03-19-global-progress-is-on-the-rise/" class="nav-link">Spring Time. We&#39;re Doing Great.</a>
 
 <a href="https://cloudnine.github.io/science/2020-03-17-emacs-parentheses-directories-clipboard-command-line-history/" class="nav-link">Emacs Parentheses, Directories, Clipboard, Command-Line-History</a>
-
-<a href="https://cloudnine.github.io/science/2020-03-15-emacs-projectile-helm-smex/" class="nav-link">Emacs Projectile, Helm, and Smex</a>
-
-<a href="https://cloudnine.github.io/books/2020-03-04-written-good/" class="nav-link">Written Good</a>
 
     </nav>
 
@@ -449,12 +479,12 @@ In this earlier emacs post I covered lines 534 - 656 of my configuration file.
         
         <a href='https://cloudnine.github.io/categories/computer-science/' class="nav-link">
         computer-science
-        <span class="badge badge-pill badge-secondary">39</span>
+        <span class="badge badge-pill badge-secondary">40</span>
         </a>
         
         <a href='https://cloudnine.github.io/categories/economics/' class="nav-link">
         economics
-        <span class="badge badge-pill badge-secondary">28</span>
+        <span class="badge badge-pill badge-secondary">29</span>
         </a>
         
         <a href='https://cloudnine.github.io/categories/finance/' class="nav-link">
@@ -474,7 +504,7 @@ In this earlier emacs post I covered lines 534 - 656 of my configuration file.
         
         <a href='https://cloudnine.github.io/categories/psychology/' class="nav-link">
         psychology
-        <span class="badge badge-pill badge-secondary">11</span>
+        <span class="badge badge-pill badge-secondary">12</span>
         </a>
         
         <a href='https://cloudnine.github.io/categories/statistics/' class="nav-link">
@@ -494,6 +524,11 @@ In this earlier emacs post I covered lines 534 - 656 of my configuration file.
         
         <a href='https://cloudnine.github.io/categories/ethics/' class="nav-link">
         ethics
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/categories/history/' class="nav-link">
+        history
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
@@ -524,12 +559,12 @@ In this earlier emacs post I covered lines 534 - 656 of my configuration file.
         
         <a href='https://cloudnine.github.io/tags/learning-center/' class="nav-link">
         learning-center
-        <span class="badge badge-pill badge-secondary">43</span>
+        <span class="badge badge-pill badge-secondary">45</span>
         </a>
         
         <a href='https://cloudnine.github.io/tags/emacs/' class="nav-link">
         emacs
-        <span class="badge badge-pill badge-secondary">21</span>
+        <span class="badge badge-pill badge-secondary">22</span>
         </a>
         
         <a href='https://cloudnine.github.io/tags/data-science/' class="nav-link">
@@ -559,12 +594,12 @@ In this earlier emacs post I covered lines 534 - 656 of my configuration file.
         
         <a href='https://cloudnine.github.io/tags/personal-development/' class="nav-link">
         personal-development
-        <span class="badge badge-pill badge-secondary">12</span>
+        <span class="badge badge-pill badge-secondary">13</span>
         </a>
         
         <a href='https://cloudnine.github.io/tags/emacs-hydras/' class="nav-link">
         emacs-hydras
-        <span class="badge badge-pill badge-secondary">11</span>
+        <span class="badge badge-pill badge-secondary">12</span>
         </a>
         
         <a href='https://cloudnine.github.io/tags/research/' class="nav-link">
@@ -612,13 +647,13 @@ In this earlier emacs post I covered lines 534 - 656 of my configuration file.
         <span class="badge badge-pill badge-secondary">3</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/featured/' class="nav-link">
-        featured
-        <span class="badge badge-pill badge-secondary">2</span>
-        </a>
-        
         <a href='https://cloudnine.github.io/tags/non-fiction/' class="nav-link">
         non-fiction
+        <span class="badge badge-pill badge-secondary">3</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/featured/' class="nav-link">
+        featured
         <span class="badge badge-pill badge-secondary">2</span>
         </a>
         
