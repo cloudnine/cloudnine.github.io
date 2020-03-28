@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/books/2020-03-28-american-financier/</loc>
+    <lastmod>2020-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/science/2020-02-27-emacs-highlighting-packages/</loc>
     <lastmod>2020-02-27T00:00:00+00:00</lastmod>
   </url>
@@ -70,11 +75,6 @@
   <url>
     <loc>https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/</loc>
     <lastmod>2020-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/books/2020-03-28-american-financier/</loc>
-    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -625,7 +625,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/categories/history/</loc>
-    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -697,7 +697,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/non-fiction/</loc>
-    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
