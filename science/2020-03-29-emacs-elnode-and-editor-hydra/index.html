@@ -10,25 +10,26 @@
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
 
 
-<meta name="description" content="Today&#39;s post has some of the default settings from my initialization file.   SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key   
-Preamble Last post I covered function declarations from the above subsection, lines 135 - 424 of my configuration.">
+<meta name="description" content="This post covers the following sections from my init.   Elnode Editor Hydra
 
-<meta property="og:title" content="Emacs Defaults" />
-<meta property="og:description" content="Some configuration defaults for your Emacs configuration file." />
+  Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date from oldest to newest.">
+
+<meta property="og:title" content="Emacs Configuration Elnode and the Editor Hydra" />
+<meta property="og:description" content="Emacs configuration Elnode and Editor Hydra." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/" /><meta property="article:published_time" content="2020-02-09T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-02-09T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-03-29-emacs-elnode-and-editor-hydra/" /><meta property="article:published_time" content="2020-03-29T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-03-29T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Defaults"/>
-<meta name="twitter:description" content="Some configuration defaults for your Emacs configuration file."/>
+<meta name="twitter:title" content="Emacs Configuration Elnode and the Editor Hydra"/>
+<meta name="twitter:description" content="Emacs configuration Elnode and Editor Hydra."/>
 
-<meta property="og:title" content="Emacs Defaults">
+<meta property="og:title" content="Emacs Configuration Elnode and the Editor Hydra">
 <meta property="og:image:type" content="image/jpg" />
 
 
-<meta property="og:image" content="https://cloudnine.github.io/images/hcf.jpg">
-<meta property="og:image:secure_url" content="https://cloudnine.github.io/images/hcf.jpg">
+<meta property="og:image" content="https://cloudnine.github.io/images/science/christian-bale.png">
+<meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/christian-bale.png">
 
 
 <meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
@@ -36,7 +37,7 @@ Preamble Last post I covered function declarations from the above subsection, li
 
 <meta property="og:type" content="blog">
 
-<title>Emacs Defaults | Cloud Nine</title>
+<title>Emacs Configuration Elnode and the Editor Hydra | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
@@ -92,7 +93,7 @@ Preamble Last post I covered function declarations from the above subsection, li
     
 <style type="text/css">
         .feature-image {
-          background-image: url("https://cloudnine.github.io/images/hcf.jpg");
+          background-image: url("https://cloudnine.github.io/images/science/christian-bale.png");
           width:100%;
           height: auto;
         }
@@ -229,68 +230,113 @@ Preamble Last post I covered function declarations from the above subsection, li
         <div class="main">
             
 <div class="container mt-4 post">
-    <h1>Emacs Defaults</h1>
+    <h1>Emacs Configuration Elnode and the Editor Hydra</h1>
     <div class="mb-3">
     <small>
         <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 9, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Mar 29, 2020    &nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>
     </small>
 </div>
 
 
         <div class="mt-4 mb-4 main-content">
-        <h5>Today's post has some of the default settings from my initialization file. <br/><br/></h5>
+        <h5>This post covers the following sections from my init. <br/><br/></h5>
 
 <ul>
-<li>SET UP, DEFAULTS, AND CUSTOMIZATION
+<li>Elnode</li>
 
-<ul>
-<li>Necessary Adjustments when you set-up on a new computer</li>
-<li>Paths to Update on Change</li>
-<li>Executable Paths</li>
-<li>Libraries</li>
-<li>Function declarations</li>
-<li>Emacs Customization Seperate File</li>
-<li>Emax Defaults</li>
-<li>Some Defaults</li>
-<li>Frames, Buffers, And Lines</li>
-<li>Some Custom Default Functions</li>
-<li>Some New Key Bindings</li>
-<li>Popup, Pos-tip,Tooltip, Posframe</li>
-<li>Which Key</li>
-</ul></li>
+<li><p>Editor Hydra</p>
+
+<p><br/></p></li>
 </ul>
-
-<p><br/></p>
 
 <h5>Preamble</h5>
 
-<p class= "p-news">Last <a href="https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/" target="_blank">post</a>
- I covered function declarations from the above subsection, lines 135 - 424 of my configuration. This post
-covers up to "Frames, Buffers, And Lines" (also defaults), so lines 425 - 534.</p>
+<p class= "p-news">Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
+know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts y date from
+oldest to newest.</p>
 
-<p class= "p-news">Most of the defaults are relevant. If you don't want your Emacs to beep when you hit the end of the file, then you need
-to set a default, and the same for another annoying stuff. I make no promises the following section is efficient (let me know if you see
-some double entries). </p>
+<p class = "p-news">In the last emacs <a href="https://cloudnine.github.io/science/2020-03-22-emacs-finding-files-ediff/"
+target="_blank">post</a> I covered lines 2188 - 2379. This post covers lines 2407 - 2558. I include the lines for anyone that wants
+to patch together the entire init from start to finish. The lines won't always match up because I take stuff out when I'm in the init.</p>
 
-<h5>Customization</h5>
+<p class= "p-news"> </p>
 
-<p class= "p-news">First though, Emacs will continually add to your config with any auto settings configured through the GUI customization
-interface. You don't want that, so you need to put it in a separate file like this. </p>
+<h5>Elnode</h5>
+
+<p class= "p-news">Elnode is a nifty little package that starts an emacs server. Basically, you set up a public folder with a shortcut and
+you jump there and make html files when you want to mess around with html without bothering with a third party dev server (Xampp in my
+case). It's quick and easy. I've put some short-cuts to the elnode functions in my web development hydra, which I'll get to later. Here's
+the Elnode config. Btw, the eldoc code is in there too. Eldoc has nothing to do with Elnode. It shows function arguments in the minibuffer.
+If you want to run a lean emacs, just cut that code out.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">setq</span> <span style="color:#b8860b">custom-file</span> (<span style="color:#00a000">expand-file-name</span> <span style="color:#b44">&#34;custom.el&#34;</span> <span style="color:#b44">&#34;c:/emacs/emax/&#34;</span>))
- (<span style="color:#00a000">load</span> <span style="color:#b8860b">custom-file</span>)</code></pre></td></tr></table>
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">elnode</span>
+<span style="color:#a2f">:commands</span>  <span style="color:#b8860b">elnode</span> <span style="color:#b8860b">elnode-start</span> <span style="color:#b8860b">elnode-make-webserver</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;elnode</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">elnode-webserver-docroot</span> <span style="color:#b44">&#34;c:/emacs/.emacs.d/public_html/&#34;</span>)
+)<span style="color:#080;font-style:italic">;specify any port, try 8028, on localhost:</span>
+
+
+<span style="color:#080;font-style:italic">; Using Eldo To Inform Function Arguments</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">eldoc</span>
+<span style="color:#a2f">:defer</span> <span style="color:#800">t</span>
+<span style="color:#a2f">:diminish</span> <span style="color:#b8860b">eldoc-mode</span>)</code></pre></td></tr></table>
 </div>
 </div>
 <p><br/></p>
 
-<p><h5>Here are some of the defaults I use</h5><br/></p>
+<h5>Here are some notes for Elnode</h5>
+
+<p class= "p-news">
+1. Put web files in your ~public_html/ directory. <br/>
+2. M-x elnode make webserver (select directory of files, port and host for this one server) <br/>
+3. Navigate to host and port from browser to serve files <br/>
+4. M-x list-elnode-servers, kill server by hitting k on it <br/>
+5. M-x elnode-start and M-x elnode-stop also work <br/>
+6. make a handler function: <br/>
+(defun my-test-handler (httpcon) <br/>
+"Demonstration function"   <br/>
+(elnode-http-start httpcon 200 '("Content-type" . "text/html")) <br/>
+(elnode-http-return httpcon "<html><b>HELLO!</b></html>")) <br/>
+Then elnode-start 'my-test-handler :port 8010 :host "localhost"</p>
+
+<h5>Here's an image of the web dev hydra. Look at the lower section of Action to see the Elnode stuff. There's also a jump to the server
+root, which makes it easy to use.</h5>
+<br/>
+
+<div class="mobile-iframe">
+<figure class="zoom-effect">
+<div class="aspectRatioPlaceholder" >
+<div class="aspect-ratio-fill" style="padding-bottom: 75.78947368421053%;"></div> <!-- end aspect ratio fill -->
+<!--appearance hydra-->
+<img src="/images/science/web-dev.png" align="center" title="" class="inline-image img-zoom" width="100%" alt="theme-image-here" data-width="1920" data-height="1080">
+</div> <!-- end aspect ratio -->
+</figure> <!-- end figure -->
+</div> <!--mobile-iframe-->
+<small class="col-6 d-flex mx-auto">Image: Search Hydra</small>
+
+<br/>
+
+
+
+<h5>Here is the Editor Hydra Stuff</h5>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -353,167 +399,190 @@ interface. You don't want that, so you need to put it in a separate file like th
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">79
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">80
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">81
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">82
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">83
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">84
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">85
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">86
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">87
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">88
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">89
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">90
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">91
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">92
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">93
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">94
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"> <span style="color:#080;font-style:italic">;; Keep emacs Custom-settings in separate file</span>
-(<span style="color:#a2f">when</span> <span style="color:#00a000">window-system</span>
-(<span style="color:#b8860b">blink-cursor-mode</span> <span style="color:#666">0</span>)                           <span style="color:#080;font-style:italic">; Disable the cursor blinking</span>
-<span style="color:#080;font-style:italic">;(scroll-bar-mode 0)                             ; Disable the scroll bar</span>
-(<span style="color:#b8860b">tool-bar-mode</span> <span style="color:#666">0</span>)                               <span style="color:#080;font-style:italic">; Disable the tool bar</span>
-(<span style="color:#b8860b">tooltip-mode</span> <span style="color:#666">0</span>))                               <span style="color:#080;font-style:italic">; Disable the tooltips</span>
-(<span style="color:#a2f">setq-default</span>
-<span style="color:#b8860b">ad-redefinition-action</span> <span style="color:#b8860b">&#39;accept</span>                   <span style="color:#080;font-style:italic">; Silence warnings for redefinition</span>
-<span style="color:#b8860b">confirm-kill-emacs</span> <span style="color:#b8860b">&#39;yes-or-no-p</span>                  <span style="color:#080;font-style:italic">; Confirm before exiting Emacs</span>
-<span style="color:#b8860b">cursor-in-non-selected-windows</span> <span style="color:#800">t</span>                 <span style="color:#080;font-style:italic">; Hide the cursor in inactive windows</span>
-<span style="color:#b8860b">delete-by-moving-to-trash</span> <span style="color:#800">t</span>                      <span style="color:#080;font-style:italic">; Delete files to trash</span>
-<span style="color:#b8860b">display-time-default-load-average</span> <span style="color:#800">nil</span>            <span style="color:#080;font-style:italic">; Don&#39;t display load average</span>
-<span style="color:#b8860b">display-time-format</span> <span style="color:#b44">&#34;%H:%M&#34;</span>                      <span style="color:#080;font-style:italic">; Format the time string</span>
-<span style="color:#b8860b">fill-column</span> <span style="color:#666">140</span>                                   <span style="color:#080;font-style:italic">; Set width for automatic line breaks</span>
-<span style="color:#b8860b">help-window-select</span> <span style="color:#800">t</span>                             <span style="color:#080;font-style:italic">; Focus new help windows when opened</span>
-<span style="color:#b8860b">indent-tabs-mode</span> <span style="color:#800">nil</span>                             <span style="color:#080;font-style:italic">; Stop using tabs to indent</span>
-<span style="color:#b8860b">inhibit-startup-screen</span> <span style="color:#800">t</span>                         <span style="color:#080;font-style:italic">; Disable start-up screen</span>
-<span style="color:#b8860b">initial-scratch-message</span> <span style="color:#b44">&#34;&#34;</span>                       <span style="color:#080;font-style:italic">; Empty the initial *scratch* buffer</span>
-<span style="color:#080;font-style:italic">; left-margin-width 1 right-margin-width 1         ; Add left and right margins</span>
-<span style="color:#b8860b">mode-require-final-newline</span> <span style="color:#b8860b">&#39;visit-save</span>           <span style="color:#080;font-style:italic">; Add a newline at EOF on visit</span>
-<span style="color:#b8860b">mouse-yank-at-point</span> <span style="color:#800">t</span>                            <span style="color:#080;font-style:italic">; Yank at point rather than pointer</span>
-<span style="color:#b8860b">ns-use-srgb-colorspace</span> <span style="color:#800">nil</span>                       <span style="color:#080;font-style:italic">; Don&#39;t use sRGB colors</span>
-<span style="color:#b8860b">recenter-positions</span> <span style="color:#666">&#39;</span>(<span style="color:#666">5</span> <span style="color:#b8860b">top</span> <span style="color:#b8860b">bottom</span>)               <span style="color:#080;font-style:italic">; Set re-centering positions</span>
-<span style="color:#b8860b">redisplay-dont-pause</span> <span style="color:#800">t</span>                           <span style="color:#080;font-style:italic">; don&#39;t pause display on input</span>
-<span style="color:#b8860b">debug-on-error</span> <span style="color:#800">t</span>
-<span style="color:#b8860b">jit-lock-defer-time</span> <span style="color:#666">0</span>
-<span style="color:#b8860b">frame-resize-pixelwise</span> <span style="color:#800">t</span>
-<span style="color:#b8860b">fast-but-imprecise-scrolling</span> <span style="color:#800">t</span>
-<span style="color:#b8860b">scroll-conservatively</span> <span style="color:#666">10000</span>                      <span style="color:#080;font-style:italic">; Always scroll by one line</span>
-<span style="color:#b8860b">scroll-margin</span> <span style="color:#666">1</span>                                  <span style="color:#080;font-style:italic">; scroll N lines to screen edge</span>
-<span style="color:#b8860b">scroll-step</span> <span style="color:#666">1</span>                                    <span style="color:#080;font-style:italic">; keyboard scroll one line at a time</span>
-<span style="color:#b8860b">scroll-preserve-screen-position</span> <span style="color:#666">1</span>
-<span style="color:#b8860b">select-enable-clipboard</span> <span style="color:#800">t</span>                        <span style="color:#080;font-style:italic">; Merge system&#39;s and Emacs&#39; clipboard</span>
-<span style="color:#b8860b">show-trailing-whitespace</span> <span style="color:#800">nil</span>                     <span style="color:#080;font-style:italic">; Display trailing whitespaces</span>
-<span style="color:#080;font-style:italic">; split-height-threshold nil                       ; Disable vertical window splitting</span>
-<span style="color:#080;font-style:italic">; split-width-threshold nil                        ; Disable horizontal window splitting</span>
-<span style="color:#b8860b">tab-width</span> <span style="color:#666">4</span>                                      <span style="color:#080;font-style:italic">; Set width for tabs</span>
-<span style="color:#b8860b">uniquify-buffer-name-style</span> <span style="color:#b8860b">&#39;forward</span>              <span style="color:#080;font-style:italic">; Uniquify buffer names</span>
-<span style="color:#080;font-style:italic">; window-combination-resize t                      ; Resize windows proportionally</span>
-<span style="color:#b8860b">x-stretch-cursor</span> <span style="color:#800">t</span>)                              <span style="color:#080;font-style:italic">; Stretch cursor to the glyph width</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">sentence-end-double-space</span> <span style="color:#800">nil</span>)             <span style="color:#080;font-style:italic">; End a sentence after a dot and a space</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">line-number-mode</span> <span style="color:#800">t</span>)                         <span style="color:#080;font-style:italic">; Enable line numbers in the mode-line</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">column-number-mode</span> <span style="color:#800">t</span>)                       <span style="color:#080;font-style:italic">; Enable column numbers in the mode-line</span>
-(<span style="color:#b8860b">size-indication-mode</span> <span style="color:#666">1</span>)                          <span style="color:#080;font-style:italic">; Enable size status in the mode-line</span>
-(<span style="color:#b8860b">display-time-mode</span>)                               <span style="color:#080;font-style:italic">; Enable time in the mode-line</span>
-(<span style="color:#b8860b">fringe-mode</span> <span style="color:#666">0</span>)                                   <span style="color:#080;font-style:italic">; Hide fringes</span>
-(<span style="color:#00a000">fset</span> <span style="color:#b8860b">&#39;yes-or-no-p</span> <span style="color:#b8860b">&#39;y-or-n-p</span>)                     <span style="color:#080;font-style:italic">; Replace yes/no prompts with y/n</span>
-<span style="color:#080;font-style:italic">;(show-paren-mode t)</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">show-paren-style</span> <span style="color:#b8860b">&#39;expression</span>)
-<span style="color:#080;font-style:italic">;(menu-bar-mode 0)                                 ; Disable the menu bar</span>
-<span style="color:#080;font-style:italic">;(mouse-avoidance-mode &#39;banish)                    ; Avoid collision of mouse with point</span>
-(<span style="color:#00a000">put</span> <span style="color:#b8860b">&#39;downcase-region</span> <span style="color:#b8860b">&#39;disabled</span> <span style="color:#800">nil</span>)              <span style="color:#080;font-style:italic">; Enable downcase-region</span>
-(<span style="color:#00a000">put</span> <span style="color:#b8860b">&#39;upcase-region</span> <span style="color:#b8860b">&#39;disabled</span> <span style="color:#800">nil</span>)                <span style="color:#080;font-style:italic">; Enable upcase-region</span>
-<span style="color:#080;font-style:italic">;Garbage-collect on focus-out, Emacs /should/ feel snappier.</span>
-(<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;focus-out-hook</span> <span style="color:#00a000">#&#39;garbage-collect</span>)
-<span style="color:#080;font-style:italic">;delete trailing whitespace</span>
-(<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;before-save-hook</span> <span style="color:#b8860b">&#39;delete-trailing-whitespace</span>)
-(<span style="color:#b8860b">pdf-tools-install</span> <span style="color:#a2f">:no-query</span>)
-<span style="color:#080;font-style:italic">;set-warning level</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">warning-minimum-level</span> <span style="color:#a2f">:emergency</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;writegood-mode</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">writegood-mode</span>
+<span style="color:#a2f">:commands</span> <span style="color:#b8860b">writegood-mode</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b44">&#34;path/to/writegood-mode&#34;</span>)
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;writegood-mode</span>)
+<span style="color:#080;font-style:italic">;set usability test</span>
+(<span style="color:#b8860b">global-set-key</span> <span style="color:#b44">&#34;\C-c\C-gg&#34;</span> <span style="color:#b8860b">&#39;writegood-grade-level</span>)
+(<span style="color:#b8860b">global-set-key</span> <span style="color:#b44">&#34;\C-c\C-ge&#34;</span> <span style="color:#b8860b">&#39;writegood-reading-ease</span>)
+<span style="color:#080;font-style:italic">;edit faces</span>
+<span style="color:#080;font-style:italic">;Weasel words (writegood-weasels-face)</span>
+<span style="color:#080;font-style:italic">;Passive voice (writegood-passive-voice-face)</span>
+<span style="color:#080;font-style:italic">;Duplicate words (writegood-duplicates-face)</span>
+<span style="color:#a2f">:bind</span>
+(<span style="color:#b44">&#34;\C-cg&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">writegood-mode</span>)
+<span style="color:#080;font-style:italic">;(global-set-key &#34;\C-cg&#34; &#39;writegood-mode)</span>
+)<span style="color:#080;font-style:italic">;end package writegood-mode</span>
 
-<p><h5>Here are the rest for this post, the last line is line 534 of my init </h5> <br/></p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">; Silence warnings for redefinition</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ad-redefinition-action</span> <span style="color:#b8860b">&#39;warn</span>)
-<span style="color:#080;font-style:italic">; Hide the cursor in inactive windows</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">cursor-in-non-selected-windows</span> <span style="color:#800">t</span> )
-<span style="color:#080;font-style:italic">; Don&#39;t display load average</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">display-time-default-load-average</span> <span style="color:#800">nil</span>)
-<span style="color:#080;font-style:italic">; Focus new help windows when opened</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">help-window-select</span> <span style="color:#800">t</span> )
-<span style="color:#080;font-style:italic">; Prefers spaces over tabs</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">indent-tabs-mode</span> <span style="color:#800">nil</span> )
-<span style="color:#080;font-style:italic">; Merge system&#39;s and Emacs&#39; clipboard</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">select-enable-clipboard</span> <span style="color:#800">t</span> )
-<span style="color:#080;font-style:italic">;interprogram-paste-before-kill</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">save-interprogram-paste-before-kill</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">; Avoid the :ensure keyword for each package</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">use-package-always-ensure</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">; Always follow the symlinks</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">vc-follow-symlinks</span> <span style="color:#b8860b">&#39;ask</span>)
-<span style="color:#080;font-style:italic">;view-read-only-defined in &#39;files.el, (require &#39;file.el) moved from later line to here</span>
-(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;files</span>)
-<span style="color:#080;font-style:italic">;read-only files in read-only-mode</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">view-read-only</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">;no byte compile warnings (not set here?)</span>
-<span style="color:#080;font-style:italic">;(setq byte-compile-warnings -1)</span>
-<span style="color:#080;font-style:italic">; Re-define package--save-selected-packages to stop customization sending dependeny info to melpa process.</span>
-(<span style="color:#a2f">defun</span> <span style="color:#b8860b">package--save-selected-packages</span> (<span style="color:#a2f">&amp;rest</span> <span style="color:#b8860b">opt</span>) <span style="color:#800">nil</span>)
-<span style="color:#080;font-style:italic">;ensure manual indentation</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">electric-indent-mode</span> <span style="color:#666">-1</span>)
-(<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;after-change-major-mode-hook</span> (<span style="color:#a2f">lambda</span>() (<span style="color:#b8860b">electric-indent-mode</span> <span style="color:#666">-1</span>)))
-<span style="color:#080;font-style:italic">;set tab width</span>
-(<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">tab-width</span> <span style="color:#666">4</span>)
-<span style="color:#080;font-style:italic">;(bind-key &#34;C-x TAB&#34; &#39;indent-rigidly)</span>
-(<span style="color:#b8860b">global-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-x TAB&#34;</span>) <span style="color:#b8860b">&#39;indent-rigidly</span>)
-<span style="color:#080;font-style:italic">;; Save a list of recent files visited. (open recent file with C-x f)</span>
-(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;recentf</span>)
-(<span style="color:#b8860b">recentf-mode</span> <span style="color:#666">1</span>)
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">recentf-max-saved-items</span> <span style="color:#666">100</span>)
-<span style="color:#080;font-style:italic">;save abbrevs silently</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">save-abbrevs</span> <span style="color:#b8860b">&#39;silently</span>)</code></pre></td></tr></table>
+<span style="color:#080;font-style:italic">;artbollocks-mode</span>
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b44">&#34;~/emax/elpa/artbollocks-mode/artbollocks-mode.el&#34;</span>)
+<span style="color:#080;font-style:italic">;(require &#39;artbollocks-mode)</span>
+<span style="color:#080;font-style:italic">;art-bollocks mode</span>
+<span style="color:#080;font-style:italic">;font-lock-fontify-buffer</span>
+<span style="color:#080;font-style:italic">;(define-key artbollocks-mode-keymap (kbd &#34;C-c [&#34;) &#39;artbollocks-word-count)</span>
+<span style="color:#080;font-style:italic">;(define-key artbollocks-mode-keymap (kbd &#34;C-c ]&#34;) &#39;artbollocks-sentence-count)</span>
+<span style="color:#080;font-style:italic">;(define-key artbollocks-mode-keymap (kbd &#34;C-c \\&#34;) &#39;artbollocks-readability-index)</span>
+<span style="color:#080;font-style:italic">;(define-key artbollocks-mode-keymap (kbd &#34;C-c /&#34;) &#39;artbollocks-reading-ease)</span>
+<span style="color:#080;font-style:italic">;(define-key artbollocks-mode-keymap (kbd &#34;C-c =&#34;) &#39;artbollocks-grade-level)</span>
+
+<span style="color:#080;font-style:italic">;flyspell</span>
+<span style="color:#080;font-style:italic">;underline mispelled word. On point helm-flyspell-correct</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">flyspell</span>
+<span style="color:#a2f">:diminish</span>
+<span style="color:#a2f">:commands</span> (<span style="color:#b8860b">flyspell-prog-mode</span> <span style="color:#b8860b">flyspell-mode</span> <span style="color:#b8860b">helm-flyspell-correct</span>)
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">ispell-program-name</span> <span style="color:#b8860b">ispell-program-name-p</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ispell-local-dictionary</span> <span style="color:#b44">&#34;english&#34;</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ispell-dictionary</span> <span style="color:#b44">&#34;en_CA&#34;</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ispell-alternate-dictionary</span> <span style="color:#b8860b">comp-ispell-dic-p</span>)
+<span style="color:#080;font-style:italic">;(setq ispell-local-dictionary &#34;en_CA&#34;)</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">ispell-really-hunspell</span> <span style="color:#800">t</span>)
+(<span style="color:#b8860b">setenv</span> <span style="color:#b44">&#34;DICTIONARY&#34;</span> <span style="color:#b44">&#34;en_CA&#34;</span>)
+<span style="color:#080;font-style:italic">;(setq ispell-dictionary &#34;english&#34;)</span>
+<span style="color:#080;font-style:italic">;:custom-face</span>
+<span style="color:#080;font-style:italic">;(flyspell-incorrect ((t (:underline (:color &#34;#f1fa8c&#34; :style wave)))))</span>
+<span style="color:#080;font-style:italic">;(flyspell-duplicate ((t (:underline (:color &#34;#50fa7b&#34; :style wave)))))</span>
+<span style="color:#a2f">:hook</span>
+((<span style="color:#b8860b">org-mode</span> <span style="color:#b8860b">yaml-mode</span> <span style="color:#b8860b">markdown-mode</span> <span style="color:#b8860b">git-commit-mode</span> <span style="color:#b8860b">text-mode</span> <span style="color:#b8860b">elisp-mode</span>) <span style="color:#666">.</span> <span style="color:#b8860b">flyspell-mode</span> )
+(<span style="color:#b8860b">prog-mode</span> <span style="color:#666">.</span> <span style="color:#b8860b">flyspell-prog-mode</span>)
+)<span style="color:#080;font-style:italic">;end flyspell use-package</span>
+<span style="color:#080;font-style:italic">;interface for flyspell (you can also use flyspell-popup and flyspell-correct)</span>
+
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">helm-flyspell</span>
+<span style="color:#a2f">:commands</span>  (<span style="color:#b8860b">helm-flyspell-correct</span>)
+<span style="color:#a2f">:bind</span>
+(<span style="color:#b44">&#34;C-c f&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">helm-flyspell-correct</span>)
+)<span style="color:#080;font-style:italic">;end helm-flyspell</span>
+
+<span style="color:#080;font-style:italic">;flyspell-popup</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">flyspell-popup</span>
+<span style="color:#a2f">:commands</span> (<span style="color:#b8860b">flyspell-mode</span> <span style="color:#b8860b">flyspell-popup-correct</span>)
+<span style="color:#080;font-style:italic">;:config</span>
+<span style="color:#080;font-style:italic">;(setq flyspell-popup-delay 0)</span>
+<span style="color:#a2f">:bind</span>
+(<span style="color:#b44">&#34;C-c g&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">flyspell-popup-correct</span>)
+)<span style="color:#080;font-style:italic">;flyspell pop-up</span>
+
+<span style="color:#080;font-style:italic">;synorous thesaurus with wordnet backend</span>
+<span style="color:#080;font-style:italic">; http://wordnetcode.princeton.edu/2.1/WordNet-2.1.exe</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">synosaurus</span>
+<span style="color:#a2f">:commands</span> (<span style="color:#b8860b">synosaurus-lookup</span> <span style="color:#b8860b">synosaurus-choose-and-replace</span> <span style="color:#b8860b">synosaurus-choose-and-insert</span>)
+<span style="color:#a2f">:config</span>
+<span style="color:#080;font-style:italic">;(defvar synosaurus-wordnet--command &#34;wn&#34;)</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">synosaurus-choose-method</span> <span style="color:#b8860b">&#39;popup</span>)
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b8860b">wordnet-p</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">synosaurus-wordnet--command</span> <span style="color:#b8860b">wordnet-command-p</span>)
+)<span style="color:#080;font-style:italic">;end synosaurus</span>
+
+<span style="color:#080;font-style:italic">;use wordnut as a dictionary also</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">wordnut</span>
+<span style="color:#a2f">:commands</span> (<span style="color:#b8860b">wordnut-lookup-current-word</span> <span style="color:#b8860b">wordnut-search</span> )
+<span style="color:#a2f">:init</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;adaptive-wrap</span>)
+(<span style="color:#a2f">if</span> (<span style="color:#00a000">eq</span> <span style="color:#b8860b">&#39;windows-nt</span> <span style="color:#b8860b">system-type</span>)
+    (<span style="color:#a2f">progn</span>
+      (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b8860b">wordnet-dictionary-p</span>)
+      (<span style="color:#a2f">setq</span> <span style="color:#b8860b">wordnut-cmd</span> <span style="color:#b8860b">wordnet-command-p</span>)
+      (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;wordnut</span>)))
+)<span style="color:#080;font-style:italic">;end wordnut</span>
+
+<span style="color:#080;font-style:italic">;academic phrases</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">academic-phrases</span>
+<span style="color:#a2f">:commands</span> (<span style="color:#b8860b">academic-phrases</span> <span style="color:#b8860b">academic-phrases-by-section</span>)
+)<span style="color:#080;font-style:italic">;end academic phrases</span></code></pre></td></tr></table>
 </div>
 </div>
-<p><br/></p>
-
-<p class= "p-news">See you next time...</p>
-
 <p><br/>
-<br/></p>
+<p class= "p-news">
+Writegood mode and Artbollocks mode are grammar checkers. They give suggestions by underlining words much like Word does in a sidebar when
+you run the spell check. I haven&rsquo;t explored either of these much. As I recall Artbollocks mode was a little more interesting, but still for
+me anyway mostly unnecessary (well&hellip;they probably are necessary 😏 , let me say instead I&rsquo;m too lazy to use them.)</p></p>
+
+<p class= "p-news"> Flyspell is mandatory. I use it with Hunspell. You can find a Hunspell executable on line. Aspell was the go-to spell checker, but it's not frequently
+compiled for Windows 10. I ended up switching to Hunspell, then found an Aspell executable compiled for Windows 10, but never bothered to
+switch back. The flyspell popup allows you to spellcheck words with a drop down. Flyspell helm pops up in the helm interface and gives some
+extra functions. I use the popup through the editor hydra when I spell check word. Spell check region and buffer underlined misspelled words
+and offer replacements in the top of the page. You select a letter to choose your replacement and use the space bar to move through the
+page. Standard.  </p>
+
+<p class= "p-news">
+The trick with the spell checkers is to get the dictionary configuration optimized. You only need to ensure the words are spelled correctly.
+I built my dictionaries from google data of the 10,000 most commonly googled words. You can build (or just find) dictionaries in any
+language and there are several functions on line for switching dictionaries on the fly if you need to do that. Here's a link to the page
+where I built my own dictionary (rather than using the one included in Hunspell) <a
+href="https://www.suares.com/index.php?page_id=25&news_id=233" target="_blank">Build a Spellcheck Dictionary</a>
+</p>
+
+<p class = "p-news">
+Wordnut and Synosaurus are probably the coolest packages on this page. As an everyday writer, I use them all the time. Synosaurus gives a
+drop down of synonyms, or if you type out an easy to think of antonym and use it on that a drop down of antonyms. I have it set to replace
+the word, which saves cut/paste action. Wordnut is a program built at Princeton that gives definitions. The emacs Wordnut package opens up
+the definitions, senses, and examples in a buffer. I still use google often, but I always check wordnut first.  </p>
+
+<p class = "p-news">The Academic phrases package is not what I expected. It just gives suggestions for possible actions to take in any academic paper. Great if
+you have to write any reports, but not what I wanted which was a database of possible dependent and independent clauses.
+</p>
+
+<h5>Here's an Image of the Editor Hydra</h5>
+<br/>
+
+<div class="mobile-iframe">
+<figure class="zoom-effect">
+<div class="aspectRatioPlaceholder" >
+<div class="aspect-ratio-fill" style="padding-bottom: 75.78947368421053%;"></div> <!-- end aspect ratio fill -->
+<!--appearance hydra-->
+<img src="/images/science/editor.png" align="center" title="" class="inline-image img-zoom" width="100%" alt="theme-image-here" data-width="1920" data-height="1080">
+</div> <!-- end aspect ratio -->
+</figure> <!-- end figure -->
+</div> <!--mobile-iframe-->
+<small class="col-6 d-flex mx-auto">Image: Search Hydra</small>
+
+<br/>
+
+<h5>That's all for now. See you next time.</h5>
 
 
         <div class="share-icons d-flex justify-content-center d-print-none">
-            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-09-some-emacs-defaults%2f&text=Emacs%20Defaults&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
+            <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-29-emacs-elnode-and-editor-hydra%2f&text=Emacs%20Configuration%20Elnode%20and%20the%20Editor%20Hydra&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -523,7 +592,7 @@ interface. You don't want that, so you need to put it in a separate file like th
     <div class="fa-inverse text-center"><small>Tweet</small></div>
 </a>
 
-<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-09-some-emacs-defaults%2f&t=Emacs%20Defaults" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-29-emacs-elnode-and-editor-hydra%2f&t=Emacs%20Configuration%20Elnode%20and%20the%20Editor%20Hydra" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -533,7 +602,7 @@ interface. You don't want that, so you need to put it in a separate file like th
     <div class="fa-inverse text-center"><small>Share</small></div>
 </a>
 
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-09-some-emacs-defaults%2f&title=Emacs%20Defaults&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-29-emacs-elnode-and-editor-hydra%2f&title=Emacs%20Configuration%20Elnode%20and%20the%20Editor%20Hydra&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -972,6 +1041,9 @@ work with.
 
 
 
+
+<script src= "https://cloudnine.github.io/javascripts/medium-lightbox.js"></script>
+<script src= "https://cloudnine.github.io/javascripts/init_science.js"></script>
 
 
 
