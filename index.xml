@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright</copyright>
-    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>American Financier, by Jean Strous</title>
+      <link>https://cloudnine.github.io/books/2020-03-28-american-financier/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/books/2020-03-28-american-financier/</guid>
+      <description>J.P. Morgan: celebrated, powerfully unambiguous, oligarchicaly connected, pillar of American history. The man with the bushy furrowed brows, pudgy fat nose, and bulging adams apple. As a school boy, he was infirm, aloof, and disliked. As a business titan he had fingers in every corner of gilded America. He built the railway to the west. When Edison dumped Tesla on the street with a shovel - less a year or two of salary - Morgan signed him from his rescuers and put him back in the money.</description>
+    </item>
     
     <item>
       <title>Emacs Configuration Finding Files and Ediff</title>
@@ -95,15 +104,6 @@ First, note the image to the right says &#34;Journalism is not a Crime.&#34; It 
       <description>This post covers the first two sections from the &#34;Default Operations&#34; section of my init.   Default Operations
  Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history  
   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for.</description>
-    </item>
-    
-    <item>
-      <title>American Financier, by Jean Strous</title>
-      <link>https://cloudnine.github.io/books/2020-03-28-american-financier/</link>
-      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/books/2020-03-28-american-financier/</guid>
-      <description>J.P. Morgan: celebrated, powerfully unambiguous, oligarchicaly connected, pillar of American history. The man with the bushy furrowed brows, pudgy fat nose, and bulging adams apple. As a school boy, he was infirm, aloof, and disliked. As a business titan he had fingers in every corner of gilded America. He built the railway to the west. When Edison dumped Tesla on the street with a shovel - less a year or two of salary - Morgan signed him from his rescuers and put him back in the money.</description>
     </item>
     
     <item>
