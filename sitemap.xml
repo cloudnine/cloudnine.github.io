@@ -581,6 +581,10 @@
   </url>
   
   <url>
+    <loc>https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/</loc>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/tags/economics/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -769,6 +773,11 @@
   <url>
     <loc>https://cloudnine.github.io/tags/reviews/</loc>
     <lastmod>2019-10-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/science-fiction/</loc>
     <priority>0</priority>
   </url>
   
