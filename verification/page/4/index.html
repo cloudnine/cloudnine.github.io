@@ -16,7 +16,7 @@
 <meta property="og:description" content="A blog about passion, discovery, and science." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://cloudnine.github.io/verification/" />
-<meta property="og:updated_time" content="2019-10-20T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+<meta property="og:updated_time" content="2019-10-23T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Verifications"/>
@@ -161,6 +161,26 @@
     <br/><br/>
 
 
+    
+
+<article class="post">
+        <a class="title" href="https://cloudnine.github.io/science/2019-09-23-windows-program-launcher/"><h2>Windows Program Launcher</h2></a>
+        <div class="mb-3">
+    <small>
+        <strong>Author: Yuri Tricys</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Oct 23, 2019    &nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/windows/'>windows</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>, <a href='/tags/learning-center/'>learning-center</a>
+    </small>
+</div>
+
+        <div>
+            For any readers setting up configuration files for their emacs editor, here is the quick and easy code for the windows program launcher shown in the image below.    Here&rsquo;s the config code: 
+1 2 3 4 5 6 7  ;path of program you want in your launcher (defvar name-of-program-p &#34;C:/full-path-to-program/program.exe&#34;) ; launcher function (defun launch-program-name () (interactive) (w32-shell-execute nil name-of-program-p nil) );end launch-program-name    Then you can put the launch function name in your hydra config, like this:  (&quot;p&quot; launch-program-name &quot;Launch This Program&quot;)  For the generate hydra code see this post: Emacs Bookmarks  Thanks for reading.
+        </div>
+        <div class="mt-2">
+            <a href="https://cloudnine.github.io/science/2019-09-23-windows-program-launcher/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
+        </div>
+      </article>
     
 
 <article class="post">
@@ -336,25 +356,6 @@ Investing is all about timing. The five simple words that contain the secret to 
         </div>
       </article>
     
-
-<article class="post">
-        <a class="title" href="https://cloudnine.github.io/archives/2018-02-18-what-is-an-etf/"><h2>What Is An ETF?</h2></a>
-        <div class="mb-3">
-    <small>
-        <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 18, 2018    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/stock-market/'>stock-market</a>
-    </small>
-</div>
-
-        <div>
-            What is an ETF? Electronically traded funds are close-end funds that trade on a stock exchange. They are managed through a creation and redemption scheme that ties their contents to those of an index, or selection of investments that meet specific criteria. The value of an ETF is determined by market forces. When the value deviates from the net asset value (NAV) of the underlying investments, traders trade on the arbitrage opportunity.
-        </div>
-        <div class="mt-2">
-            <a href="https://cloudnine.github.io/archives/2018-02-18-what-is-an-etf/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
-        </div>
-      </article>
-    
     <div class="d-flex justify-content-center">
         
 
@@ -461,7 +462,16 @@ Investing is all about timing. The five simple words that contain the secret to 
         
     
     
-    <li class="page-item"><a class="page-link" href="/verification/page/9/">9</a></li>
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/verification/page/10/">10</a></li>
     
     
     <li class="page-item">
@@ -469,7 +479,7 @@ Investing is all about timing. The five simple words that contain the secret to 
     </li>
     
     <li class="page-item">
-        <a href="/verification/page/9/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/verification/page/10/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
     </li>
     
 </ul>
@@ -515,6 +525,8 @@ Investing is all about timing. The five simple words that contain the secret to 
 
 <a href="https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/" class="nav-link">Dune, by Frank Herbert</a>
 
+<a href="https://cloudnine.github.io/books/2020-04-07-citadel-algis-budrys/" class="nav-link">Citadel, by Algis Budrys</a>
+
 <a href="https://cloudnine.github.io/science/2020-03-29-emacs-elnode-and-editor-hydra/" class="nav-link">Emacs Configuration Elnode and the Editor Hydra</a>
 
 <a href="https://cloudnine.github.io/books/2020-03-28-american-financier/" class="nav-link">American Financier, by Jean Strous</a>
@@ -522,8 +534,6 @@ Investing is all about timing. The five simple words that contain the secret to 
 <a href="https://cloudnine.github.io/science/2020-03-22-emacs-finding-files-ediff/" class="nav-link">Emacs Configuration Finding Files and Ediff</a>
 
 <a href="https://cloudnine.github.io/science/2020-03-20-emacs-selection-region-mark-browsers/" class="nav-link">Emacs Selection, Region, Mark, and Browsers</a>
-
-<a href="https://cloudnine.github.io/motivation/2020-03-19-global-progress-is-on-the-rise/" class="nav-link">Spring Time. We&#39;re Doing Great.</a>
 
     </nav>
 
@@ -716,6 +726,11 @@ Investing is all about timing. The five simple words that contain the secret to 
         <span class="badge badge-pill badge-secondary">2</span>
         </a>
         
+        <a href='https://cloudnine.github.io/tags/science-fiction/' class="nav-link">
+        science-fiction
+        <span class="badge badge-pill badge-secondary">2</span>
+        </a>
+        
         <a href='https://cloudnine.github.io/tags/text-editors/' class="nav-link">
         text-editors
         <span class="badge badge-pill badge-secondary">2</span>
@@ -798,11 +813,6 @@ Investing is all about timing. The five simple words that contain the secret to 
         
         <a href='https://cloudnine.github.io/tags/reviews/' class="nav-link">
         reviews
-        <span class="badge badge-pill badge-secondary">1</span>
-        </a>
-        
-        <a href='https://cloudnine.github.io/tags/science-fiction/' class="nav-link">
-        science-fiction
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
