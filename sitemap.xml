@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/</loc>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/science/2020-03-29-emacs-elnode-and-editor-hydra/</loc>
     <lastmod>2020-03-29T00:00:00+00:00</lastmod>
   </url>
@@ -449,7 +454,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/</loc>
-    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -504,7 +509,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/books/</loc>
-    <lastmod>2020-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -578,10 +583,6 @@
     <loc>https://cloudnine.github.io/tags/data-science/</loc>
     <lastmod>2017-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/</loc>
   </url>
   
   <url>
@@ -778,6 +779,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/science-fiction/</loc>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

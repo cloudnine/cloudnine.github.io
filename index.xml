@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright</copyright>
-    <lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dune, by Frank Herbert</title>
+      <link>https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/</guid>
+      <description>Dune, undoubtedly one of the best science fiction series ever written, is scheduled to return to the screen this November (2020). No film has yet done the book justice in any way. Like a lot of books written in the days when people read things, it&#39;s a long one. Frank Herbert spent six long years writing thing. I only wish I the time to read it again; but then, I live in a real-estate bubble, there&#39;s no time for anything.</description>
+    </item>
     
     <item>
       <title>Emacs Configuration Elnode and the Editor Hydra</title>
@@ -901,15 +910,6 @@ The common sense approach says that to avoid a sudden crash or some kind of long
       
       <guid>https://cloudnine.github.io/verification/google32b6556004ceb7be/</guid>
       <description>google-site-verification: google32b6556004ceb7be.</description>
-    </item>
-    
-    <item>
-      <title>Dune, by Frank Herbert</title>
-      <link>https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/</guid>
-      <description>Dune, undoubtedly one of the best science fiction series ever written, is scheduled to return to the screen this November (2020). No film has yet done the book justice in any way. Like a lot of books written in the days when people read things, it&#39;s a long one. Frank Herbert spent six long years writing thing. I only wish I the time to read it again; but then, I live in a real-estate bubble, there&#39;s no time for anything.</description>
     </item>
     
   </channel>
