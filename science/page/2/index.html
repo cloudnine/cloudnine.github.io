@@ -16,7 +16,7 @@
 <meta property="og:description" content="A blog about passion, discovery, and science." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://cloudnine.github.io/science/" />
-<meta property="og:updated_time" content="2020-02-17T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
+<meta property="og:updated_time" content="2020-02-20T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sciences"/>
@@ -87,45 +87,105 @@
 
         
 
+
+
+
+
+
+
 <style type="text/css">
-        .feature-image {
+
+.feature-image {
 background-image: linear-gradient(
     rgba(0, 0, 0, 0.15),
     rgba(0, 0, 0, 0.15)
-    
-    ), url('https://cloudnine.github.io/images/authagraph1.png');
+    ), url('https://cloudnine.github.io/images/science/authagraph1.png');
     width: 100%;
     height:auto;
 }
-.feature-image-text {
-    margin-top: 20px;
-    }
+
 @media (max-width: 575px) {
-    .feature-image {
+.feature-image {
     min-height: 180px;
-    }
-    }
+}
+
+.feature-image-text {
+    max-width: 80%;
+    margin-top:5px;
+}
+.feature-image-text h1 {
+    font-size: 1.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: .75rem;
+}
+}  
+
 @media (min-width: 576px) {
     .feature-image {
     min-height: 200px;
     }
-    }
+.feature-image-text {
+    max-width: 80%;
+    margin-top:10px;
+}
+.feature-image-text h1 {
+    font-size: 1.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: .75rem;
+}
+}  
+
 @media (min-width: 768px) {
     .feature-image {
     min-height: 250px;
     }
-    }
+.feature-image-text {
+    max-width: 80%;
+    margin-top:10px;
+}
+.feature-image-text h1 {
+    font-size: 1.6rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1rem;
+}
+} 
+
 @media (min-width: 992px) {
     .feature-image {
     min-height: 350px;
-    }
-    }
+}
+.feature-image-text {
+    max-width: 600px;
+    margin-top:15px;
+}
+.feature-image-text h1 {
+    font-size: 2rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1.4rem;
+}
+} 
 @media (min-width: 1200px) {
     .feature-image {
-    min-height: 640px;
-    }
-    }
+    min-height: 630px;
+}
+.feature-image-text {
+    max-width: 760px;
+    margin-top:20px;
+}
+.feature-image-text h1 {
+    font-size: 2.3rem;
+}
+.feature-image-text .intro-description {
+    font-size: 1.6rem;
+}
+     }  
+
 </style>
+
 
     </head>
     <body>
@@ -183,6 +243,24 @@ background-image: linear-gradient(
 <div class="container mt-4 mb-4 recent-posts">
 <br/>
 
+    
+      <article class="post">
+        <a class="title" href="https://cloudnine.github.io/science/2020-02-20-emacs-enter-exit-appearance/"><h2>Emacs Appearance, Entering and Exiting (&#43; Some Functions)</h2></a>
+        <div class="mb-3">
+    <small>
+        <strong>Author: Yuri Tricys</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 20, 2020    &nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/emacs-functions/'>emacs-functions</a>
+    </small>
+</div>
+
+        <div>
+            Today's post covers "Entering and Exiting Emacs" and "Default Appearance Customizations" from the appearance section of my init.   Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra    Preamble Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag.
+        </div>
+        <div class="mt-2">
+            <a href="https://cloudnine.github.io/science/2020-02-20-emacs-enter-exit-appearance/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
+        </div>
+      </article>
     
       <article class="post">
         <a class="title" href="https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/"><h2>Emacs Configuration Posframe and Which Key, Some Key Bindings</h2></a>
@@ -351,24 +429,6 @@ Preamble Last post I covered function declarations from the above subsection, li
         </div>
       </article>
     
-      <article class="post">
-        <a class="title" href="https://cloudnine.github.io/science/2019-09-08-emacs-with-an-interface/"><h2>Emacs With an Interface</h2></a>
-        <div class="mb-3">
-    <small>
-        <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Oct 8, 2019    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>, <a href='/tags/text-editors/'>text-editors</a>, <a href='/tags/learning-center/'>learning-center</a>
-    </small>
-</div>
-
-        <div>
-            What's All This About Text Editors? I always used to ask, why do people post about their text-editors? These days I know the reason. Computers are lightening fast, using them isn't. You need to leave what you are doing to turn on another piece of software. You have to search for files. You're constantly having to remember how a process works, or search around the IDE to figure out how to do something again.
-        </div>
-        <div class="mt-2">
-            <a href="https://cloudnine.github.io/science/2019-09-08-emacs-with-an-interface/" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
-        </div>
-      </article>
-    
     <div class="d-flex justify-content-center">
         
 
@@ -405,12 +465,23 @@ Preamble Last post I covered function declarations from the above subsection, li
     <li class="page-item active"><a class="page-link" href="/science/page/2/">2</a></li>
     
     
-    <li class="page-item disabled">
-    <a href="" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/science/page/3/">3</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/science/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     
     <li class="page-item">
-        <a href="/science/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/science/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
     </li>
     
 </ul>
@@ -454,6 +525,8 @@ Preamble Last post I covered function declarations from the above subsection, li
 <nav class="nav flex-column">
 
 
+<a href="https://cloudnine.github.io/science/2020-04-09-helm-hydra/" class="nav-link">The Helm Hydra</a>
+
 <a href="https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/" class="nav-link">Dune, by Frank Herbert</a>
 
 <a href="https://cloudnine.github.io/books/2020-04-07-citadel-algis-budrys/" class="nav-link">Citadel, by Algis Budrys</a>
@@ -464,8 +537,6 @@ Preamble Last post I covered function declarations from the above subsection, li
 
 <a href="https://cloudnine.github.io/science/2020-03-22-emacs-finding-files-ediff/" class="nav-link">Emacs Configuration Finding Files and Ediff</a>
 
-<a href="https://cloudnine.github.io/science/2020-03-20-emacs-selection-region-mark-browsers/" class="nav-link">Emacs Selection, Region, Mark, and Browsers</a>
-
     </nav>
 
     
@@ -474,7 +545,7 @@ Preamble Last post I covered function declarations from the above subsection, li
         
         <a href='https://cloudnine.github.io/categories/computer-science/' class="nav-link">
         computer-science
-        <span class="badge badge-pill badge-secondary">40</span>
+        <span class="badge badge-pill badge-secondary">41</span>
         </a>
         
         <a href='https://cloudnine.github.io/categories/economics/' class="nav-link">
@@ -554,12 +625,12 @@ Preamble Last post I covered function declarations from the above subsection, li
         
         <a href='https://cloudnine.github.io/tags/learning-center/' class="nav-link">
         learning-center
-        <span class="badge badge-pill badge-secondary">45</span>
+        <span class="badge badge-pill badge-secondary">46</span>
         </a>
         
         <a href='https://cloudnine.github.io/tags/emacs/' class="nav-link">
         emacs
-        <span class="badge badge-pill badge-secondary">22</span>
+        <span class="badge badge-pill badge-secondary">23</span>
         </a>
         
         <a href='https://cloudnine.github.io/tags/data-science/' class="nav-link">
@@ -589,7 +660,7 @@ Preamble Last post I covered function declarations from the above subsection, li
         
         <a href='https://cloudnine.github.io/tags/emacs-hydras/' class="nav-link">
         emacs-hydras
-        <span class="badge badge-pill badge-secondary">12</span>
+        <span class="badge badge-pill badge-secondary">13</span>
         </a>
         
         <a href='https://cloudnine.github.io/tags/personal-development/' class="nav-link">
