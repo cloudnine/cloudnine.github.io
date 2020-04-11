@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cloudnine.github.io/current/2020-04-10-cloverfield-paradox-film/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloudnine.github.io/science/2020-04-09-helm-hydra/</loc>
     <lastmod>2020-04-09T00:00:00+00:00</lastmod>
   </url>
@@ -464,7 +469,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/</loc>
-    <lastmod>2020-04-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -567,7 +572,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/current/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -596,14 +601,14 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/tags/economics/</loc>
-    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+    <loc>https://cloudnine.github.io/categories/economics/</loc>
+    <lastmod>2020-03-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/categories/economics/</loc>
-    <lastmod>2020-03-28T00:00:00+00:00</lastmod>
+    <loc>https://cloudnine.github.io/tags/economics/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -694,6 +699,12 @@
   <url>
     <loc>https://cloudnine.github.io/motivation/</loc>
     <lastmod>2020-03-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/categories/movies/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -789,7 +800,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/science-fiction/</loc>
-    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
