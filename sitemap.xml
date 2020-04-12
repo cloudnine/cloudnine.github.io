@@ -188,11 +188,6 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/books/another-book-post/</loc>
-    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://cloudnine.github.io/archives/2018-02-25-newtons-stock-market/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
   </url>
@@ -328,7 +323,7 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/archives/2018-01-18-what-is-internation-trade/</loc>
+    <loc>https://cloudnine.github.io/archives/2018-01-18-what-is-international-trade/</loc>
     <lastmod>2016-01-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -644,7 +639,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/categories/finance/</loc>
-    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -680,7 +675,7 @@
   
   <url>
     <loc>https://cloudnine.github.io/tags/macroeconomics/</loc>
-    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -793,12 +788,6 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/tags/reviews/</loc>
-    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cloudnine.github.io/tags/science-fiction/</loc>
     <lastmod>2020-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -807,12 +796,6 @@
   <url>
     <loc>https://cloudnine.github.io/science/</loc>
     <lastmod>2020-04-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/tags/soros/</loc>
-    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
