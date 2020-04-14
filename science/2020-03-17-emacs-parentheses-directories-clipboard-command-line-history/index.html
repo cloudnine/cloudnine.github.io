@@ -960,7 +960,169 @@ in a directory I always use emacs. I'll toggle on and off the details as needed 
 <p><small class="col-6 d-flex mx-auto">Images: Directories Hydra</small>
 <br/></p>
 
-<h5>That's all for now. See you next time.</h5>
+<h5>Some Kill Ring Settings and Functions</h5>
+<p class= "p-news">Before they had clipboards they had kill-rings. I'm not asking. 😄 "Kill" is copy and "Yank" is paste. In Emacs myself (and most people) use M-w and C-y. I've never liked the M-w for cutting, but I use it anyway. I also have M-y to show the kill-ring in the helm buffer, which I use a lot.  </p>
+<p class= "p-news">Below is code to browse the kill-ring with C-c 9, which I rarely use. There's also some code to ensure you get the ents of the windows clipboard in your kill ring, which is really important.</p>
+
+<h5></h5>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">; Remove text in active region if inserting text</span>
+(<span style="color:#b8860b">delete-selection-mode</span> <span style="color:#666">1</span>)
+<span style="color:#080;font-style:italic">;clipboard is saved to kill-ring</span>
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">clipboard-to-kill-ring</span>()
+   <span style="color:#b44">&#34;save the external clipboard contents to the kill ring&#34;</span>
+   (<span style="color:#a2f">interactive</span>)
+     (<span style="color:#a2f">let</span> ((<span style="color:#b8860b">clip</span> (<span style="color:#00a000">funcall</span> <span style="color:#b8860b">interprogram-paste-function</span>)))
+       (<span style="color:#a2f">when</span> <span style="color:#b8860b">clip</span>
+         (<span style="color:#b8860b">kill-new</span> <span style="color:#b8860b">clip</span>)))
+(<span style="color:#a2f">defadvice</span> <span style="color:#b8860b">yank</span> (<span style="color:#b8860b">before</span> <span style="color:#b8860b">maybe-copy-windows-clipboard</span> (<span style="color:#b8860b">arg</span>))
+     (<span style="color:#b8860b">clipboard-to-kill-ring</span>))
+(<span style="color:#b8860b">ad-activate</span> <span style="color:#b8860b">&#39;yank</span>))
+<span style="color:#080;font-style:italic">;Browse Kill Ring</span>
+ (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">browse-kill-ring</span>
+<span style="color:#a2f">:defer</span> <span style="color:#800">t</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">browse-kill-ring-highlight-current-entry</span> <span style="color:#800">t</span>)
+<span style="color:#a2f">:bind</span>
+(<span style="color:#b44">&#34;C-c 9&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">browse-kill-ring</span>))</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/>
+<h5>Easy Kill</h5>
+<p class= "p-news">
+Easy Kill gives an option to add a letter after M-w and save specific items, as follows: <br/>
+<br/>
+M-w w: save word at point <br/>
+    M-w s: save sexp at point<br/>
+    M-w l: save list at point (enclosing sexp)<br/>
+    M-w d: save defun at point<br/>
+    M-w D: save current defun name<br/>
+    M-w f: save file at point<br/>
+    M-w b: save buffer-file-name or default-directory. - changes the kill to the directory name, + to full name and 0 to basename.
+    The following keys modify the selection:<br/>
+<br/>
+    @: append selection to previous kill and exit. For example, M-w d @ will append current function to last kill.<br/>
+    C-w: kill selection and exit<br/>
+    +, - and 1..9: expand/shrink selection<br/>
+    0 shrink the selection to the initial size i.e. before any expansion<br/>
+    SPC: cycle through things in easy-kill-alist<br/>
+    C-SPC: turn selection into an active region<br/>
+    C-g: abort<br/>
+</p>
+<p class= "p-news">Hungry delete follows that, and it&rsquo;s cool. You use C-d to delete, as usual, but all the empty space is deleted in one shot. So it pulls all the gaps out of the code. It also automatically deletes the entire line if you are at the left margin and the space is gone. So double C-d will delete all trailing white space between two paragraphs and then the next line of the next paragraph. Sanity kill back to indent works backwards. I just highlight the line and delete it. </p></p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">easy-kill</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#b8860b">global-set-key</span> [<span style="color:#b8860b">remap</span> <span style="color:#b8860b">kill-ring-save</span>] <span style="color:#00a000">#&#39;</span><span style="color:#b8860b">easy-kill</span>)
+(<span style="color:#b8860b">global-set-key</span> [<span style="color:#b8860b">remap</span> <span style="color:#b8860b">mark-sexp</span>] <span style="color:#00a000">#&#39;</span><span style="color:#b8860b">easy-mark</span>))
+<span style="color:#080;font-style:italic">;hungry delete</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">hungry-delete</span>
+<span style="color:#a2f">:diminish</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#b8860b">global-hungry-delete-mode</span>))
+<span style="color:#080;font-style:italic">;sanity delete</span>
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">sanityinc/kill-back-to-indentation</span> ()
+ <span style="color:#b44">&#34;Kill from point back to the first non-whitespace character on the line.&#34;</span>
+ (<span style="color:#a2f">interactive</span>)
+ (<span style="color:#a2f">let</span> ((<span style="color:#b8860b">prev-pos</span> (<span style="color:#00a000">point</span>)))
+   (<span style="color:#b8860b">back-to-indentation</span>)
+   (<span style="color:#b8860b">kill-region</span> (<span style="color:#00a000">point</span>) <span style="color:#b8860b">prev-pos</span>)))
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-M-&lt;backspace&gt;&#34;</span> <span style="color:#b8860b">&#39;sanityinc/kill-back-to-indentation</span>)</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/></p>
+
+<h5>Pdf Tools and Command Line history </h5>
+
+<p class= "p-news"><a href="https://emacs.stackexchange.com/questions/19686/how-to-use-pdf-tools-pdf-view-mode-in-emacs" target="_blank">PDF Tools</a> of course require an emacs compiled with pdf tools support. See earlier blog posts for installing emacs (search for emacs or install)
+</p>
+
+<p class= "p-news">paste/substring is a custom function you can use to copy a string, run this function, paste the string into the minibuffer, then paste the last 11 characters of the string anywhere you like (it's on the kill ring). This is useful to copy a youtube URL from the browser with C-c, run this function, paste the youtube URL into the minibuffer, Enter, then paste the Youtube ID anywhere you like (Youtube ID is last 11 ch of URL).
+</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;start server so pdf-tools autostart when pdf is selected can use emacsclient to open in same instance</span>
+(<span style="color:#b8860b">server-start</span>)
+(<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;TeX-after-compilation-finished-functions</span> <span style="color:#00a000">#&#39;</span><span style="color:#b8860b">TeX-revert-document-buffer</span>)
+<span style="color:#080;font-style:italic">;command line history</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">command-log-mode</span>
+<span style="color:#a2f">:commands</span> (<span style="color:#b8860b">global-command-log-mode</span> <span style="color:#b8860b">clm/toggle-command-log-buffer</span>)
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;command-log-mode</span>)
+(<span style="color:#b8860b">global-command-log-mode</span>)
+)<span style="color:#080;font-style:italic">;end command-log mode</span>
+<span style="color:#080;font-style:italic">;substring</span>
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">paste/substring</span> (<span style="color:#b8860b">astring</span>)
+  <span style="color:#b44">&#34;Copy a string to clipboard&#34;</span>
+(<span style="color:#a2f">interactive</span> <span style="color:#b44">&#34;sAstring: &#34;</span>)
+(<span style="color:#a2f">with-temp-buffer</span>
+    (<span style="color:#00a000">insert</span> (<span style="color:#00a000">substring</span> <span style="color:#b8860b">astring</span> <span style="color:#666">-11</span>))
+    (<span style="color:#b8860b">clipboard-kill-region</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))))</code></pre></td></tr></table>
+</div>
+</div>
+<p><br/>
+<h5>That&rsquo;s all for now. See you next time.</h5></p>
 
 
         <div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-17-emacs-parentheses-directories-clipboard-command-line-history%2f&text=Emacs%20Parentheses%2c%20Directories%2c%20Clipboard%2c%20Command-Line-History&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
