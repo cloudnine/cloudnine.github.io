@@ -64,7 +64,7 @@ function MediumLightbox(element, options) {
 
 			//Get real dimension
 			if(this.img.dataset){
-				realW = this.img.dataset.width;    
+				realW = this.img.dataset.width;
 				realH = this.img.dataset.height;
 			}else{
 				realW = this.img.getAttribute('data-width');
@@ -87,7 +87,7 @@ function MediumLightbox(element, options) {
 			this.overlay.style.cssText = 'height:'+(screenSize.y)+'px; width: '+screenSize.x+'px; top: -'+ ((screenSize.y-imgH)/2) +'px; left: -'+((screenSize.x-imgW)/2)+'px;';
 
 
-			//create wrapper for img and set attributes 
+			//create wrapper for img and set attributes
 			this.wrapper = document.createElement('div');
 			this.wrapper.id = 'the-wrapper';
 			this.wrapper.className = 'zoomImg-wrap zoomImg-wrap--absolute';
@@ -110,24 +110,24 @@ function MediumLightbox(element, options) {
 			//TODO if ratio*H > realH no scale
 			var scale = 1;
 			if(realH > imgH){
-				if(imgH == imgW && screenSize.y > screenSize.x){  
+				if(imgH == imgW && screenSize.y > screenSize.x){
 					// case 1: square image and screen h > w
 					scale = (screenSize.x-margin)/imgW;
-				}else if(imgH == imgW && screenSize.y < screenSize.x){ 
+				}else if(imgH == imgW && screenSize.y < screenSize.x){
 					// case 2: square image and screen w > h
 					scale = (screenSize.y-margin)/imgH;
-				}else if(imgH > imgW){ 
+				}else if(imgH > imgW){
 					// case 3: rectangular image h > w
 					scale = (screenSize.y-margin)/imgH;
-					if (scale*imgW > screenSize.x) { 
-						// case 3b: rectangular image h > w but zoomed image is too big 
+					if (scale*imgW > screenSize.x) {
+						// case 3b: rectangular image h > w but zoomed image is too big
 						scale = (screenSize.x-margin)/imgW;
 					};
-				}else if(imgH < imgW){ 
+				}else if(imgH < imgW){
 					// case 4: rectangular image w > h
 					scale = (screenSize.x-margin)/imgW;
 					if (scale*imgH > screenSize.y) {
-						// case 4b: rectangular image w > h but zoomed image is too big 
+						// case 4b: rectangular image w > h but zoomed image is too big
 						scale = (screenSize.y-margin)/imgH;
 					};
 				}
@@ -138,7 +138,7 @@ function MediumLightbox(element, options) {
 				scale = realW/imgW;
 				//console.log('big')
 			}
-			
+
                         //Add zommed values: x,y and scale
                         var that = this;
                         setTimeout(function(){
@@ -165,7 +165,7 @@ function MediumLightbox(element, options) {
 			var that = this;
 			setTimeout(function(){
 				that.children[0].appendChild(that.img)
-				that.children[0].removeChild(that.wrapper) 
+				that.children[0].removeChild(that.wrapper)
 
 				var className = 'zoomImg'
 				if (that.img.classList)

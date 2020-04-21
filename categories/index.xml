@@ -1,28 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Cloud Nine</title>
+    <title>Cloud Nine</title>
     <link>https://cloudnine.github.io/categories/</link>
-    <description>Recent content in Categories on Cloud Nine</description>
+    <description>Recent content on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright</copyright>
-    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Business</title>
-      <link>https://cloudnine.github.io/categories/business/</link>
-      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      <title>music</title>
+      <link>https://cloudnine.github.io/categories/music/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/categories/business/</guid>
+      <guid>https://cloudnine.github.io/categories/music/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Computer Science</title>
+      <title>movies</title>
+      <link>https://cloudnine.github.io/categories/movies/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/movies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computer science</title>
       <link>https://cloudnine.github.io/categories/computer-science/</link>
       <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -31,7 +39,7 @@
     </item>
     
     <item>
-      <title>Economics</title>
+      <title>economics</title>
       <link>https://cloudnine.github.io/categories/economics/</link>
       <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -40,25 +48,7 @@
     </item>
     
     <item>
-      <title>Ethics</title>
-      <link>https://cloudnine.github.io/categories/ethics/</link>
-      <pubDate>Sat, 12 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/categories/ethics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Finance</title>
-      <link>https://cloudnine.github.io/categories/finance/</link>
-      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/categories/finance/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>History</title>
+      <title>history</title>
       <link>https://cloudnine.github.io/categories/history/</link>
       <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -67,11 +57,74 @@
     </item>
     
     <item>
-      <title>Law</title>
-      <link>https://cloudnine.github.io/categories/law/</link>
-      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
+      <title>politics</title>
+      <link>https://cloudnine.github.io/categories/politics/</link>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/categories/law/</guid>
+      <guid>https://cloudnine.github.io/categories/politics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>philosophy</title>
+      <link>https://cloudnine.github.io/categories/philosophy/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/philosophy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>business</title>
+      <link>https://cloudnine.github.io/categories/business/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/business/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>psychology</title>
+      <link>https://cloudnine.github.io/categories/psychology/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/psychology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>math</title>
+      <link>https://cloudnine.github.io/categories/math/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>maths</title>
+      <link>https://cloudnine.github.io/categories/maths/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/maths/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>physics</title>
+      <link>https://cloudnine.github.io/categories/physics/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/physics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>finance</title>
+      <link>https://cloudnine.github.io/categories/finance/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/categories/finance/</guid>
       <description></description>
     </item>
     
@@ -85,70 +138,25 @@
     </item>
     
     <item>
-      <title>Math</title>
-      <link>https://cloudnine.github.io/categories/math/</link>
-      <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
+      <title>ethics</title>
+      <link>https://cloudnine.github.io/categories/ethics/</link>
+      <pubDate>Sat, 12 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/categories/math/</guid>
+      <guid>https://cloudnine.github.io/categories/ethics/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Maths</title>
-      <link>https://cloudnine.github.io/categories/maths/</link>
-      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      <title>law</title>
+      <link>https://cloudnine.github.io/categories/law/</link>
+      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/categories/maths/</guid>
+      <guid>https://cloudnine.github.io/categories/law/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Movies</title>
-      <link>https://cloudnine.github.io/categories/movies/</link>
-      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/categories/movies/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Philosophy</title>
-      <link>https://cloudnine.github.io/categories/philosophy/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/categories/philosophy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Physics</title>
-      <link>https://cloudnine.github.io/categories/physics/</link>
-      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/categories/physics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Politics</title>
-      <link>https://cloudnine.github.io/categories/politics/</link>
-      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/categories/politics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Psychology</title>
-      <link>https://cloudnine.github.io/categories/psychology/</link>
-      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/categories/psychology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Statistics</title>
+      <title>statistics</title>
       <link>https://cloudnine.github.io/categories/statistics/</link>
       <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
       

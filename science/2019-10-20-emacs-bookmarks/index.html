@@ -2,46 +2,56 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Cloud Nine" />
-<meta name="copyright" content="Copyright" />
+<meta name="copyright" content='Copyright &copy; 2019 - 2020 by Yuri Tricys  All rights reserved.' />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
 <meta name="yandex-verification" content="7cb55c3432ff9fc7" />
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
+<meta name="description" content="Emacs Bookmarks explained with some configuration code."/>
+<title>Emacs Bookmarks</title>
+<meta property="article:author" content="Yuri Tricys" />
+<link rel="canonical" href="https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/">
 
 
-<meta name="description" content="Jumping To Directories In Emacs If you want to accomplish things efficiently with your computer, you will benefit from mastering a text editor. I use emacs as a general project manager for web development, writing, and organizing thoughts, materials, and actions. Jumping to and from directories and files enables quickly me to get things done more efficiently. To do this I use a few different packages and functions. They are:  Bookmarks">
 
-<meta property="og:title" content="Emacs Bookmarks" />
-<meta property="og:description" content="Emacs Bookmarks explained with some configuration code." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/" /><meta property="article:published_time" content="2019-10-20T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-10-20T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Bookmarks"/>
-<meta name="twitter:description" content="Emacs Bookmarks explained with some configuration code."/>
+
+
+
+
+
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:title" content="Emacs Bookmarks">
 <meta property="og:image:type" content="image/jpg" />
 
-
-<meta property="og:image" content="https://cloudnine.github.io/">
-<meta property="og:image:secure_url" content="https://cloudnine.github.io/">
-
-
-<meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
+<meta property="og:image" content="">
+<meta property="og:image:secure_url" content="">
+<meta property="og:description" content="Emacs Bookmarks explained with some configuration code.">
 <meta property="og:site_name" content="Cloud Nine Blog.">
-
+<meta property="og:url" content="https://cloudnine.github.io/" />
 <meta property="og:type" content="blog">
-
-<title>Emacs Bookmarks | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
 
 <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
 <link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<meta property="og:title" content="Emacs Bookmarks" />
+<meta property="og:description" content="Emacs Bookmarks explained with some configuration code." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/" />
+<meta property="article:published_time" content="2019-10-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-10-20T00:00:00+00:00" /><meta property="og:site_name" content="Cloud Nine" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs Bookmarks"/>
+<meta name="twitter:description" content="Emacs Bookmarks explained with some configuration code."/>
+
+
 
 <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD&#43;dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -52,48 +62,28 @@
         
         
 
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.ea5d6b1a95bc28f9856027f41c46ec57ee1b84d89f9aab3e7e7026b816781f83.css" integrity="sha256-6l1rGpW8KPmFYCf0HEbsV&#43;4bhNifmqs&#43;fnAmuBZ4H4M="  />
 
-<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.60e5f69e5fbc3c868e7a5e4a21dcb8b46da65825a899b6c0bdcb952c45c5969e.css" integrity="sha256-YOX2nl&#43;8PIaOel5KIdy4tG2mWCWombbAvcuVLEXFlp4="  />
 
-<script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath:[['\\(','\\)']],
-    displayMath: [ ['$$','$$'], ['\[','\]'] ],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-           extensions: ["tex2math.js","TeX/noErrors.js","TeX/noUndefined.js",
-             "TeX/AMSmath.js","TeX/AMSsymbols.js"]}
-  }
-  });
-  MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
 
-  MathJax.Hub.Config({
-  
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-  });
-</script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X&#43;965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH&#43;8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM&#43;B07jRM" crossorigin="anonymous" defer></script>
+<script src="//static.getclicky.com/js" integrity="" crossorigin="anonymous" defer></script>
+
+
+<script src="https://cloudnine.github.io/javascripts/init.js" crossorigin="anonymous" defer></script>
+<script src="https://cloudnine.github.io/javascripts/medium-lightbox.js" crossorigin="anonymous" defer></script>
 
         
 
 
 
 
-    </head>
+        </head>
     <body>
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
             <div class="container">
                     <a class="navbar-brand pr-2" href="https://cloudnine.github.io/">CLOUD NINE</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -132,38 +122,52 @@
                     </div>
             </div>
         </nav>
-        
+
+
 <header class="feature-image d-print-none"></header>
 
-        <div class="main">
+
+<main class="main">
             
 <div class="container mt-4 post">
     <h1>Emacs Bookmarks</h1><div class="mb-3 mt-2">
     <small>
-        <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Oct 20, 2019    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/featured/'>featured</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>, <a href='/tags/video-emacs/'>video-emacs</a>, <a href='/tags/learning-center/'>learning-center</a>
+<strong>Author:
+Yuri Tricys
+
+</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Oct 20, 2019&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> &nbsp;<a href="/tags/emacs">emacs</a>, <a href="/tags/emacs-hydras">emacs hydras</a>, <a href="/tags/featured">featured</a>, <a href="/tags/learning-center">learning center</a>, <a href="/tags/video-emacs">video emacs</a>
     </small>
 </div>
 <div class="mt-4 mb-4 main-content">
         <h3>Jumping To Directories In Emacs</h3>
-
 <p class="p-news">
 If you want to accomplish things efficiently with your computer, you will benefit from mastering a text editor. I use emacs as a general
 project manager for web development, writing, and organizing thoughts, materials, and actions. Jumping to and from directories and files
 enables quickly me to get things done more efficiently. To do this I use a few different packages and functions.
 They are:
 </p>
-
 <ol>
-<li><p class= "p-news mb-0">Bookmarks</p></li>
-<li><p class= "p-news mt-0 mb-0">Projectile</p></li>
-<li><p class= "p-news mb-0 mt-0">Capture</p></li>
-<li><p class= "p-news mt-0 mb-0">Dired Mode</p></li>
-<li><p class= "p-news mb-0 mt-0">Hardwired Jumps</p></li>
-<li><p class= "p-news mt-0">File-find functions: Helm-find, Better-helm, Ido-find etc.</p></li>
+<li>
+<p class= "p-news mb-0">Bookmarks</p>
+</li>
+<li>
+<p class= "p-news mt-0 mb-0">Projectile</p>
+</li>
+<li>
+<p class= "p-news mb-0 mt-0">Capture</p>
+</li>
+<li>
+<p class= "p-news mt-0 mb-0">Dired Mode</p>
+</li>
+<li>
+<p class= "p-news mb-0 mt-0">Hardwired Jumps</p>
+</li>
+<li>
+<p class= "p-news mt-0">File-find functions: Helm-find, Better-helm, Ido-find etc.</p>
+</li>
 </ol>
-
 <p class="p-news">
 Bookmarks is a package built into emacs. I use it the most. Projectile is a package you add to your emacs configuration. I use projectile a
 lot as well. It's more useful if you have really large projects with a lot of files in them. If I cover projectile, I'll do it at another
@@ -173,7 +177,6 @@ in a few hydras and there are a few packages that use them as well (like easy-hu
 similar. They are calls you make from the minibuffer to bring up searches. If I do another post about finding files in emacs I'll discuss
 those as well.
 </p>
-
 <p class="p-news">
 I call the bookmark functions through a bookmark hydra. It has in it chrome bookmarks, helm-address-bookmark (which is just basically bookmarks with
 another name), and bookmarks. Chrome bookmarks enable you to access your web bookmarks from within emacs. The other bookmarks jump you to a
@@ -182,13 +185,12 @@ network. Here's an image of the bookmarks and some configuration code.
 </p>
 <br/>
 <img src="bookmark-hydra.jpg" alt="Bookmark Hydra" align="left" title="Bookmark Hydra" class="img center mb-4" width="100%"/>
-
 <p class="p-news">
 Here's the chrome bookmarks config code:
 </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -200,57 +202,58 @@ Here's the chrome bookmarks config code:
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#080;font-style:italic">;helm-bookmark-p</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">
+<span style="color:#080;font-style:italic">;helm-bookmark-p</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">helm-bookmark-p</span> <span style="color:#b44">&#34;c:/emacs/emax/elpa/helm-bookmarks/helm-bookmark.el&#34;</span>)
 
 
-<span style="color:#080;font-style:italic">;helm-chrome (bookmark manager)</span>
+<span style="color:#080;font-style:italic">;helm-chrome (bookmark manager)</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">helm-chrome</span>
 <span style="color:#a2f">:commands</span> (<span style="color:#b8860b">helm-chrome-bookmarks</span> <span style="color:#b8860b">helm-chrome-reload-bookmarks</span>)
-<span style="color:#a2f">:defer</span> <span style="color:#800">t</span>
+<span style="color:#a2f">:defer</span> <span style="color:#b8860b">t</span>
 <span style="color:#a2f">:config</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;helm-chrome</span> )
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">helm-chrome-use-urls</span> <span style="color:#800">t</span>)
-)<span style="color:#080;font-style:italic">;end helm-chrome</span></code></pre></td></tr></table>
+)<span style="color:#080;font-style:italic">;end helm-chrome</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><br/>
+</div><br/>
 <p class="p-news">
 Helm bookmarks I think you have to download to your path and require.
 You can get the file here:
 <a href="https://github.com/emacs-helm/helm/blob/master/helm-bookmark.el">Helm Bookmarks</a>
 I add all paths to variables in one early section of my configuration. That way they are easy to change. Later I require the file from the
 path.
-</p></p>
+</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#080;font-style:italic">;line 82</span>
-<span style="color:#080;font-style:italic">;helm-bookmark-p</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#080;font-style:italic">;line 82</span>
+<span style="color:#080;font-style:italic">;helm-bookmark-p</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">helm-bookmark-p</span> <span style="color:#b44">&#34;c:/emacs/emax/elpa/helm-bookmarks/helm-bookmark.el&#34;</span>)
-<span style="color:#080;font-style:italic">;line 1674</span>
+<span style="color:#080;font-style:italic">;line 1674</span>
 (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b8860b">helm-bookmark-p</span>)
-(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;helm-bookmark</span>)</code></pre></td></tr></table>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;helm-bookmark</span>)
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><br/></p>
-
+</div><br/>
 <p class="p-news">
 And here's the configuration for the bookmarks hydra (you need all-the-icons installed and some icon configuration code to get the icon on
 the hydra.)
 </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -281,53 +284,49 @@ the hydra.)
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#080;font-style:italic">;line 129</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#080;font-style:italic">;line 129</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">bookmarks-p</span> <span style="color:#b44">&#34;c://emacs/.emacs.d/default-bookmarks&#34;</span> )
-<span style="color:#080;font-style:italic">;line 1690</span>
-<span style="color:#080;font-style:italic">;bookmarks configuration</span>
+<span style="color:#080;font-style:italic">;line 1690</span>
+<span style="color:#080;font-style:italic">;bookmarks configuration</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">bookmark-default-file</span> <span style="color:#b8860b">bookmarks-p</span>)
-<span style="color:#080;font-style:italic">;bookmark hydra</span>
+<span style="color:#080;font-style:italic">;bookmark hydra</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">bookmarks-title</span> (<span style="color:#b8860b">with-faicon</span> <span style="color:#b44">&#34;book&#34;</span> <span style="color:#b44">&#34;Manage Book Marks&#34;</span>))
-<span style="color:#080;font-style:italic">;generate hydra</span>
+<span style="color:#080;font-style:italic">;generate hydra</span>
 (<span style="color:#b8860b">pretty-hydra-define</span> <span style="color:#b8860b">Bookmarks</span> (<span style="color:#a2f">:title</span> <span style="color:#b8860b">bookmarks-title</span> <span style="color:#a2f">:quit-key</span> <span style="color:#b44">&#34;q&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">teal</span> )
 (<span style="color:#b44">&#34;Local Bookmarks&#34;</span>
 (
      (<span style="color:#b44">&#34;b&#34;</span>  <span style="color:#b8860b">helm-bookmarks</span> <span style="color:#b44">&#34;Jump To A Bookmark&#34;</span>)
      (<span style="color:#b44">&#34;s&#34;</span> <span style="color:#b8860b">bookmark-set</span> <span style="color:#b44">&#34;Set A Bookmark&#34;</span>)
      (<span style="color:#b44">&#34;e&#34;</span> <span style="color:#b8860b">edit-bookmarks</span> <span style="color:#b44">&#34;Edit Bookmarks&#34;</span>)
-)<span style="color:#080;font-style:italic">;end local</span>
+)<span style="color:#080;font-style:italic">;end local</span>
 <span style="color:#b44">&#34;Chrome Bookmarks&#34;</span>
 (
      (<span style="color:#b44">&#34;c&#34;</span> <span style="color:#b8860b">helm-chrome-bookmarks</span> <span style="color:#b44">&#34;Select A Chrome Bookmark&#34;</span>)
      (<span style="color:#b44">&#34;r&#34;</span> <span style="color:#b8860b">helm-chrome-reload-bookmarks</span> <span style="color:#b44">&#34;Refresh Chrome Bookmarks&#34;</span>)
 
-)<span style="color:#080;font-style:italic">;end chrome</span>
+)<span style="color:#080;font-style:italic">;end chrome</span>
 <span style="color:#b44">&#34;Address Book&#34;</span>
 (
      (<span style="color:#b44">&#34;a&#34;</span> <span style="color:#b8860b">addressbook-bookmark-set</span> <span style="color:#b44">&#34;Enter Contact To Addressbook&#34;</span>)
      (<span style="color:#b44">&#34;h&#34;</span> <span style="color:#b8860b">hydra-helm/body</span> <span style="color:#b44">&#34;Return To Helm&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
      (<span style="color:#b44">&#34;&lt;SPC&gt;&#34;</span> <span style="color:#800">nil</span> <span style="color:#b44">&#34;Quit&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
-)<span style="color:#080;font-style:italic">;end addressbook</span>
-)<span style="color:#080;font-style:italic">;end hydra body</span>
-)<span style="color:#080;font-style:italic">;end pretty-hydra-find-files</span>
-(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;C-m&gt; m&#34;</span> <span style="color:#b8860b">&#39;Bookmarks/body</span>)</code></pre></td></tr></table>
+)<span style="color:#080;font-style:italic">;end addressbook</span>
+)<span style="color:#080;font-style:italic">;end hydra body</span>
+)<span style="color:#080;font-style:italic">;end pretty-hydra-find-files</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;C-m&gt; m&#34;</span> <span style="color:#b8860b">&#39;Bookmarks/body</span>)
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><br/>
+</div><br/>
 <br/>
 <p class="p-news">
-Here&rsquo;s a video clip:
-</p></p>
-
-<p><div class="mobile-iframe"></p>
-
+Here's a video clip:
+</p>
+<div class="mobile-iframe">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UhLCGsYYvQg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p></div> <!-- end mobile-iframe --></p>
-
-<p><br/>
-<br/></p>
+</div> <!-- end mobile-iframe -->
+<br/>
+<br/>
 
 
         <div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2019-10-20-emacs-bookmarks%2f&text=Emacs%20Bookmarks&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
@@ -368,8 +367,7 @@ Here&rsquo;s a video clip:
         </span>
     </div>
     <div class="fa-inverse text-center"><small>Print</small></div>
-</a></div>
-    </div><div id="disqus_thread"></div>
+</a></div><div id="disqus_thread"></div>
 <script type="text/javascript">
 
 (function() {
@@ -386,7 +384,8 @@ Here&rsquo;s a video clip:
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
-</div><div class="sidebar d-print-none d-none d-xl-block">
+</div>                      
+</div>                          <div class="sidebar d-print-none d-none d-xl-block">
     
 <h2 class ="center">Meet The Author</h2>
 
@@ -511,6 +510,11 @@ Here&rsquo;s a video clip:
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
+        <a href='https://cloudnine.github.io/categories/music/' class="nav-link">
+        music
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
         <a href='https://cloudnine.github.io/categories/philosophy/' class="nav-link">
         philosophy
         <span class="badge badge-pill badge-secondary">1</span>
@@ -591,13 +595,13 @@ Here&rsquo;s a video clip:
         <span class="badge badge-pill badge-secondary">5</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
-        emacs-functions
-        <span class="badge badge-pill badge-secondary">4</span>
-        </a>
-        
         <a href='https://cloudnine.github.io/tags/music/' class="nav-link">
         music
+        <span class="badge badge-pill badge-secondary">5</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
+        emacs-functions
         <span class="badge badge-pill badge-secondary">4</span>
         </a>
         
@@ -735,8 +739,9 @@ Here&rsquo;s a video clip:
     
 </div>
 
-        </div>
-         <footer class="mt-auto footer d-print-none">
+         </main>
+        <footer class="mt-auto footer d-print-none">
+           
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-xl-3">
@@ -754,7 +759,7 @@ work with.
                     </div>
 
                     <div class="col-md-4 col-xl-3">
-                        <h5>Copyright</h5>
+                        <h5></h5>
 © 2019 - <script>document.write(Date().split` `[3])</script> Yuri Tricys
 
                     </div>
@@ -768,16 +773,9 @@ work with.
                 </div>
             </div>
         </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src= ".js"></script>
-
-
-
 
 <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101236333);</script>
 <script async src='//static.getclicky.com/js'></script>
 
-
-    </body>
+</body>
 </html>

@@ -2,47 +2,56 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Cloud Nine" />
-<meta name="copyright" content="Copyright" />
+<meta name="copyright" content='Copyright &copy; 2019 - 2020 by Yuri Tricys  All rights reserved.' />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
 <meta name="yandex-verification" content="7cb55c3432ff9fc7" />
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
+<meta name="description" content="A simple hydra for using shells with Emacs. WSL, Windows command prompt, Emacs Eshell. Shell cycler"/>
+<title>An Emacs Shell Hydra</title>
+<meta property="article:author" content="Yuri Tricys" />
+<link rel="canonical" href="https://cloudnine.github.io/science/2020-02-15-emacs-shell-hydra/">
 
 
-<meta name="description" content="Today&#39;s post jumps ahead to the shell hydra  Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts from oldest to newest.
-In the last emacs post I covered lines 534 - 656 of my configuration file.">
 
-<meta property="og:title" content="An Emacs Shell Hydra" />
-<meta property="og:description" content="A simple hydra for using shells with Emacs. WSL, Windows command prompt, Emacs Eshell. Shell cycler" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-15-emacs-shell-hydra/" /><meta property="article:published_time" content="2020-02-15T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-02-15T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="An Emacs Shell Hydra"/>
-<meta name="twitter:description" content="A simple hydra for using shells with Emacs. WSL, Windows command prompt, Emacs Eshell. Shell cycler"/>
+
+
+
+
+
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:title" content="An Emacs Shell Hydra">
 <meta property="og:image:type" content="image/jpg" />
 
-
-<meta property="og:image" content="https://cloudnine.github.io/images/science/hcf.jpg">
-<meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/hcf.jpg">
-
-
-<meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
+<meta property="og:image" content="images/science/hcf.jpg">
+<meta property="og:image:secure_url" content="images/science/hcf.jpg">
+<meta property="og:description" content="A simple hydra for using shells with Emacs. WSL, Windows command prompt, Emacs Eshell. Shell cycler">
 <meta property="og:site_name" content="Cloud Nine Blog.">
-
+<meta property="og:url" content="https://cloudnine.github.io/" />
 <meta property="og:type" content="blog">
-
-<title>An Emacs Shell Hydra | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
 
 <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
 <link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<meta property="og:title" content="An Emacs Shell Hydra" />
+<meta property="og:description" content="A simple hydra for using shells with Emacs. WSL, Windows command prompt, Emacs Eshell. Shell cycler" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-15-emacs-shell-hydra/" />
+<meta property="article:published_time" content="2020-02-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-15T00:00:00+00:00" /><meta property="og:site_name" content="Cloud Nine" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="An Emacs Shell Hydra"/>
+<meta name="twitter:description" content="A simple hydra for using shells with Emacs. WSL, Windows command prompt, Emacs Eshell. Shell cycler"/>
+
+
 
 <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD&#43;dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -53,39 +62,19 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.">
         
         
 
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.ea5d6b1a95bc28f9856027f41c46ec57ee1b84d89f9aab3e7e7026b816781f83.css" integrity="sha256-6l1rGpW8KPmFYCf0HEbsV&#43;4bhNifmqs&#43;fnAmuBZ4H4M="  />
 
-<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.60e5f69e5fbc3c868e7a5e4a21dcb8b46da65825a899b6c0bdcb952c45c5969e.css" integrity="sha256-YOX2nl&#43;8PIaOel5KIdy4tG2mWCWombbAvcuVLEXFlp4="  />
 
-<script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath:[['\\(','\\)']],
-    displayMath: [ ['$$','$$'], ['\[','\]'] ],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-           extensions: ["tex2math.js","TeX/noErrors.js","TeX/noUndefined.js",
-             "TeX/AMSmath.js","TeX/AMSsymbols.js"]}
-  }
-  });
-  MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
 
-  MathJax.Hub.Config({
-  
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-  });
-</script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X&#43;965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH&#43;8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM&#43;B07jRM" crossorigin="anonymous" defer></script>
+<script src="//static.getclicky.com/js" integrity="" crossorigin="anonymous" defer></script>
+
+
+<script src="https://cloudnine.github.io/javascripts/init.js" crossorigin="anonymous" defer></script>
+<script src="https://cloudnine.github.io/javascripts/medium-lightbox.js" crossorigin="anonymous" defer></script>
 
         
 
@@ -178,9 +167,9 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.">
 </style>
 
 
-    </head>
+        </head>
     <body>
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
             <div class="container">
                     <a class="navbar-brand pr-2" href="https://cloudnine.github.io/">CLOUD NINE</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -219,94 +208,103 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.">
                     </div>
             </div>
         </nav>
-        
+
+
 <header class="feature-image d-print-none"></header>
 
-        <div class="main">
+
+<main class="main">
             
 <div class="container mt-4 post">
     <h1>An Emacs Shell Hydra</h1><div class="mb-3 mt-2">
     <small>
-        <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 15, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>
+<strong>Author:
+Yuri Tricys
+
+</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 15, 2020&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> &nbsp;<a href="/tags/emacs">emacs</a>, <a href="/tags/emacs-hydras">emacs-hydras</a>, <a href="/tags/learning-center">learning center</a>
     </small>
 </div>
 <div class="mt-4 mb-4 main-content">
         <h5>Today's post jumps ahead to the shell hydra <br/><br/></h5>
-
 <p class= "p-news">Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
 know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts from
 oldest to newest.</p>
-
 <p class = "p-news">In the last emacs <a href="2020-02-11-emacs-frames-buffers-defaults-functions.md" target="_blank">post</a> I covered
  lines 534 - 656 of my configuration file. This post jumps ahead to lines 3932 - 4047 + maybe 20 lines from elsewhere in the file. Keep in
  mind it doesn't matter how you order your code, as long as every line can access the libraries and variables it needs. </p>
-
 <p class= "p-news">This is a shell hydra. I had added Windows Subsystem Linux to my windows machine for some specific purpose and at the time
 was using as well the git-shell manually more than magit through deploy scripts. I needed to switch between shells and set this stuff up.
 As usual, I was in a hurry and make no claims to the most efficient code here. Shells through emacs have there place, like when you
 want to send functions to the shell from text or search through shell history and output. </p>
-
 <h5>First you need to write some easy functions</h5>
-
 <h5>Launch Git</h5>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">git-bash-shell-file-name-p</span> <span style="color:#b44">&#34;...path to...git-bash.exe&#34;</span>)
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">git-bash-shell-file-name-p</span> <span style="color:#b44">&#34;...path to...git-bash.exe&#34;</span>)
 
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">launch-git</span> ()
 (<span style="color:#a2f">interactive</span>)
-(<span style="color:#00a000">w32-shell-execute</span> <span style="color:#800">nil</span> <span style="color:#b8860b">git-bash-shell-file-name-p</span> <span style="color:#800">nil</span> )</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+(<span style="color:#00a000">w32-shell-execute</span> <span style="color:#800">nil</span> <span style="color:#b8860b">git-bash-shell-file-name-p</span> <span style="color:#800">nil</span> )
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Launch Powershell</h5>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">defun</span> <span style="color:#b8860b">launch-powershell</span> ()
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">launch-powershell</span> ()
 (<span style="color:#a2f">interactive</span>)
 (<span style="color:#00a000">w32-shell-execute</span> <span style="color:#800">nil</span> <span style="color:#b44">&#34;powershell&#34;</span> <span style="color:#800">nil</span>)
-)<span style="color:#080;font-style:italic">; end launch-powershell</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+)<span style="color:#080;font-style:italic">; end launch-powershell</span>
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Launch CMD</h5>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">defun</span> <span style="color:#b8860b">launch-cmd</span> ()
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">launch-cmd</span> ()
 (<span style="color:#a2f">interactive</span>)
 (<span style="color:#00a000">w32-shell-execute</span> <span style="color:#800">nil</span> <span style="color:#b44">&#34;cmd&#34;</span> <span style="color:#800">nil</span>)
-)<span style="color:#080;font-style:italic">;end launch-command-prompt</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+)<span style="color:#080;font-style:italic">;end launch-command-prompt</span>
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Launch UBUNTU</h5>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -321,33 +319,35 @@ want to send functions to the shell from text or search through shell history an
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;launch-ubuntu1804 only works if you have wsl installed properly on your system with ubuntu1804</span>
-<span style="color:#080;font-style:italic">;it opens in the home directory of your WSL installation, which is where you need it if you&#39;re using it to more quickly test go programs</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;launch-ubuntu1804 only works if you have wsl installed properly on your system with ubuntu1804</span>
+<span style="color:#080;font-style:italic">;it opens in the home directory of your WSL installation, which is where you need it if you&#39;re using it to more quickly test go programs</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">launch-ubuntu1804</span> ()
 (<span style="color:#a2f">interactive</span>)
 (<span style="color:#00a000">w32-shell-execute</span> <span style="color:#800">nil</span> <span style="color:#b44">&#34;ubuntu1804&#34;</span> <span style="color:#800">nil</span>)
-)<span style="color:#080;font-style:italic">;end launch-screen-case</span>
+)<span style="color:#080;font-style:italic">;end launch-screen-case</span>
 
-<span style="color:#080;font-style:italic">;or path to wsl.exe</span>
+<span style="color:#080;font-style:italic">;or path to wsl.exe</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">win-ubuntu-exe-p</span> <span style="color:#b44">&#34;...Windows/System32/wsl.exe&#34;</span>)
 
-<span style="color:#080;font-style:italic">;this one opens in the directory you call it from</span>
+<span style="color:#080;font-style:italic">;this one opens in the directory you call it from</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">launch-ubuntu1804-win-p</span> ()
 (<span style="color:#a2f">interactive</span>)
 (<span style="color:#00a000">w32-shell-execute</span> <span style="color:#800">nil</span> <span style="color:#b8860b">win-ubuntu-exe-p</span> <span style="color:#800">nil</span>)
-)<span style="color:#080;font-style:italic">;end launch ubuntu1804-win</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+)<span style="color:#080;font-style:italic">;end launch ubuntu1804-win</span>
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Kill Shell Buffers</h5>
-
 <p class= "p-news">Shuts down all buffers with shells and closes all emacs wrapper shell processes</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -360,12 +360,16 @@ want to send functions to the shell from text or search through shell history an
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;cl</span>)
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;cl</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">comint-scroll-to-bottom-on-output</span> <span style="color:#800">t</span>)
 
-<span style="color:#080;font-style:italic">;kill-shell-buffers</span>
+<span style="color:#080;font-style:italic">;kill-shell-buffers</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">is-shell-buffer</span> (<span style="color:#b8860b">buffer</span>)
   (<span style="color:#a2f">let</span> ((<span style="color:#b8860b">name</span> (<span style="color:#00a000">buffer-name</span> <span style="color:#b8860b">buffer</span>)))
     (<span style="color:#a2f">and</span> (<span style="color:#00a000">=</span> <span style="color:#b44">?*</span> (<span style="color:#00a000">aref</span> <span style="color:#b8860b">name</span> <span style="color:#666">0</span>))
@@ -374,15 +378,16 @@ want to send functions to the shell from text or search through shell history an
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">kill-shell-buffers</span> ()
   (<span style="color:#a2f">interactive</span>)
   (<span style="color:#a2f">loop</span> <span style="color:#b8860b">for</span> <span style="color:#b8860b">buffer</span> <span style="color:#b8860b">being</span> <span style="color:#b8860b">the</span> <span style="color:#b8860b">buffers</span>
-        <span style="color:#a2f">do</span> (<span style="color:#a2f">and</span> (<span style="color:#b8860b">is-shell-buffer</span> <span style="color:#b8860b">buffer</span>) (<span style="color:#00a000">kill-buffer</span> <span style="color:#b8860b">buffer</span>))))</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+        <span style="color:#a2f">do</span> (<span style="color:#a2f">and</span> (<span style="color:#b8860b">is-shell-buffer</span> <span style="color:#b8860b">buffer</span>) (<span style="color:#00a000">kill-buffer</span> <span style="color:#b8860b">buffer</span>))))
 
+
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Send Line or Region to Shell</h5>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -418,9 +423,12 @@ want to send functions to the shell from text or search through shell history an
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">; send line/region to shell</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">; send line/region to shell</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">sh-send-line-or-region</span> (<span style="color:#a2f">&amp;optional</span> <span style="color:#b8860b">step</span>)
   (<span style="color:#a2f">interactive</span> ())
   (<span style="color:#a2f">let</span> ((<span style="color:#b8860b">proc</span> (<span style="color:#00a000">get-process</span> <span style="color:#b44">&#34;shell&#34;</span>))
@@ -442,45 +450,48 @@ want to send functions to the shell from text or search through shell history an
       (<span style="color:#00a000">goto-char</span> (<span style="color:#00a000">process-mark</span> <span style="color:#b8860b">proc</span>))
       (<span style="color:#00a000">insert</span> <span style="color:#b8860b">command</span>)
       (<span style="color:#b8860b">move-marker</span> (<span style="color:#00a000">process-mark</span> <span style="color:#b8860b">proc</span>) (<span style="color:#00a000">point</span>))
-      ) <span style="color:#080;font-style:italic">;;pop-to-buffer does not work with save-current-buffer -- bug?</span>
+      ) <span style="color:#080;font-style:italic">;;pop-to-buffer does not work with save-current-buffer -- bug?</span>
     (<span style="color:#00a000">process-send-string</span>  <span style="color:#b8860b">proc</span> <span style="color:#b8860b">command</span>)
     (<span style="color:#b8860b">display-buffer</span> (<span style="color:#00a000">process-buffer</span> <span style="color:#b8860b">proc</span>) <span style="color:#800">t</span>)
     (<span style="color:#a2f">when</span> <span style="color:#b8860b">step</span>
       (<span style="color:#00a000">goto-char</span> <span style="color:#00a000">max</span>)
       (<span style="color:#b8860b">next-line</span>))
-))<span style="color:#080;font-style:italic">;end send line/region</span>
+))<span style="color:#080;font-style:italic">;end send line/region</span>
 
-<span style="color:#080;font-style:italic">;you need the function above to use the following which sends region from your text file then jumps over to the output buffer</span>
+<span style="color:#080;font-style:italic">;you need the function above to use the following which sends region from your text file then jumps over to the output buffer</span>
 
-<span style="color:#080;font-style:italic">;send line or region interactive</span>
+<span style="color:#080;font-style:italic">;send line or region interactive</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">sh-send-line-or-region-and-step</span> ()
   (<span style="color:#a2f">interactive</span>)
-  (<span style="color:#b8860b">sh-send-line-or-region</span> <span style="color:#800">t</span>))</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+  (<span style="color:#b8860b">sh-send-line-or-region</span> <span style="color:#800">t</span>))
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Switch to Process Buffer</h5>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;switch to the process buffer from whereever you are (your script.bat)</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;switch to the process buffer from whereever you are (your script.bat)</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">sh-switch-to-process-buffer</span> ()
   (<span style="color:#a2f">interactive</span>)
-  (<span style="color:#b8860b">pop-to-buffer</span> (<span style="color:#00a000">process-buffer</span> (<span style="color:#00a000">get-process</span> <span style="color:#b44">&#34;shell&#34;</span>)) <span style="color:#800">t</span>))</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+  (<span style="color:#b8860b">pop-to-buffer</span> (<span style="color:#00a000">process-buffer</span> (<span style="color:#00a000">get-process</span> <span style="color:#b44">&#34;shell&#34;</span>)) <span style="color:#800">t</span>))
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Shell Switcher</h5>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -520,56 +531,61 @@ want to send functions to the shell from text or search through shell history an
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">; assign paths (in path section of init)</span>
-<span style="color:#080;font-style:italic">; location of cmdproxy that works with my emacs installation</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">; assign paths (in path section of init)</span>
+<span style="color:#080;font-style:italic">; location of cmdproxy that works with my emacs installation</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">default-shell-file-name-p</span> <span style="color:#b44">&#34;C:/emacs/libexec/emacs/26.2/x86_64-w64-mingw32/cmdproxy.exe&#34;</span>)
 
-<span style="color:#080;font-style:italic">; and the bash shell that works with this</span>
+<span style="color:#080;font-style:italic">; and the bash shell that works with this</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">bash-shell-file-name-p</span> <span style="color:#b44">&#34;C:/Windows/system32/bash.exe&#34;</span>)
 
-<span style="color:#080;font-style:italic">; you need a default comspec</span>
+<span style="color:#080;font-style:italic">; you need a default comspec</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">default-comspec-p</span> <span style="color:#b44">&#34;C:\\Windows\\system32\\cmd.exe&#34;</span>)
 
-<span style="color:#080;font-style:italic">;and a bash comspec</span>
+<span style="color:#080;font-style:italic">;and a bash comspec</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">bash-comspec-p</span> <span style="color:#b44">&#34;C:\\Windows\\system32\\wsl.exe&#34;</span>)
 
-<span style="color:#080;font-style:italic">;shell-switcher</span>
+<span style="color:#080;font-style:italic">;shell-switcher</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">shell-switch-and-call</span> ()
 (<span style="color:#a2f">interactive</span>)
 (<span style="color:#a2f">cond</span>
-<span style="color:#080;font-style:italic">; if cmd-shell set to bash</span>
+<span style="color:#080;font-style:italic">; if cmd-shell set to bash</span>
 ((<span style="color:#00a000">equal</span>  <span style="color:#b8860b">shell-file-name</span> <span style="color:#b8860b">default-shell-file-name-p</span>)
 (<span style="color:#a2f">progn</span>
 (<span style="color:#b8860b">setenv</span> <span style="color:#b44">&#34;COMSPEC&#34;</span> <span style="color:#b8860b">bash-comspec-p</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">shell-file-name</span> <span style="color:#b8860b">bash-shell-file-name-p</span>)
 (<span style="color:#b8860b">setenv</span> <span style="color:#b44">&#34;SHELL&#34;</span> <span style="color:#b8860b">shell-file-name</span>)
 (<span style="color:#b8860b">kill-shell-buffers</span>)
-(<span style="color:#b8860b">shell</span>)))<span style="color:#080;font-style:italic">;end cmd-shell</span>
-<span style="color:#080;font-style:italic">;if bash-shell set to windows</span>
+(<span style="color:#b8860b">shell</span>)))<span style="color:#080;font-style:italic">;end cmd-shell</span>
+<span style="color:#080;font-style:italic">;if bash-shell set to windows</span>
 ( (<span style="color:#00a000">equal</span> <span style="color:#b8860b">shell-file-name</span> <span style="color:#b8860b">bash-shell-file-name-p</span>)
 (<span style="color:#a2f">progn</span>
 (<span style="color:#b8860b">setenv</span> <span style="color:#b44">&#34;COMSPEC&#34;</span> <span style="color:#b8860b">default-comspec-p</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">shell-file-name</span> <span style="color:#b8860b">default-shell-file-name-p</span>)
 (<span style="color:#b8860b">setenv</span> <span style="color:#b44">&#34;SHELL&#34;</span> <span style="color:#b8860b">shell-file-name</span>)
 (<span style="color:#b8860b">kill-shell-buffers</span>)
-(<span style="color:#b8860b">shell</span>)))<span style="color:#080;font-style:italic">;end if bash-shell</span>
-<span style="color:#080;font-style:italic">;if other shell set to windows</span>
+(<span style="color:#b8860b">shell</span>)))<span style="color:#080;font-style:italic">;end if bash-shell</span>
+<span style="color:#080;font-style:italic">;if other shell set to windows</span>
 (<span style="color:#800">t</span> (<span style="color:#a2f">progn</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">shell-file-name</span> <span style="color:#b8860b">default-shell-file-name-p</span>)
 (<span style="color:#b8860b">setenv</span> <span style="color:#b44">&#34;SHELL&#34;</span> <span style="color:#b8860b">shell-file-name</span>)
 (<span style="color:#b8860b">kill-shell-buffers</span>)
-(<span style="color:#b8860b">shell</span>))))<span style="color:#080;font-style:italic">;end conditional</span>
-)<span style="color:#080;font-style:italic">;end shell-switcher</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+(<span style="color:#b8860b">shell</span>))))<span style="color:#080;font-style:italic">;end conditional</span>
+)<span style="color:#080;font-style:italic">;end shell-switcher</span>
 
+
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Finally here is the hydra</h5>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -606,11 +622,14 @@ want to send functions to the shell from text or search through shell history an
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;shell-hydra</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;shell-hydra</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">shell-central-title</span> (<span style="color:#b8860b">with-octicon</span> <span style="color:#b44">&#34;device-desktop&#34;</span> <span style="color:#b44">&#34;Shell Manager&#34;</span>))
-<span style="color:#080;font-style:italic">;generate hydra</span>
+<span style="color:#080;font-style:italic">;generate hydra</span>
 (<span style="color:#b8860b">pretty-hydra-define</span> <span style="color:#b8860b">Shell-Central</span> (<span style="color:#a2f">:title</span> <span style="color:#b8860b">shell-central-title</span> <span style="color:#a2f">:quit-key</span> <span style="color:#b44">&#34;q&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
 (<span style="color:#b44">&#34;Shells&#34;</span>
 (
@@ -619,7 +638,7 @@ want to send functions to the shell from text or search through shell history an
     (<span style="color:#b44">&#34;p&#34;</span> <span style="color:#b8860b">powershell</span> <span style="color:#b44">&#34;Launch Emacs Powershell&#34;</span>)
     (<span style="color:#b44">&#34;e&#34;</span> <span style="color:#b8860b">eshell</span> <span style="color:#b44">&#34;Launch Eshell&#34;</span>)
     (<span style="color:#b44">&#34;g&#34;</span> <span style="color:#b8860b">launch-git</span> <span style="color:#b44">&#34;Launch git&#34;</span>)
-)<span style="color:#080;font-style:italic">;end theme</span>
+)<span style="color:#080;font-style:italic">;end theme</span>
 <span style="color:#b44">&#34;Action&#34;</span>
 (
     (<span style="color:#b44">&#34;l&#34;</span> <span style="color:#b8860b">sh-send-line-or-region-and-step</span> <span style="color:#b44">&#34;Send Line/Region To Shell&#34;</span> )
@@ -629,7 +648,7 @@ want to send functions to the shell from text or search through shell history an
     (<span style="color:#b44">&#34;d&#34;</span> <span style="color:#b8860b">launch-cmd</span> <span style="color:#b44">&#34;Launch Win CMD Prompt&#34;</span>)
     (<span style="color:#b44">&#34;U&#34;</span> <span style="color:#b8860b">launch-ubuntu1804</span> <span style="color:#b44">&#34;Launch Ubuntu&#34;</span>)
     (<span style="color:#b44">&#34;u&#34;</span> <span style="color:#b8860b">launch-ubuntu1804-win-p</span> <span style="color:#b44">&#34;Launch Ubuntu Mount&#34;</span>)
-)<span style="color:#080;font-style:italic">;end highlighting</span>
+)<span style="color:#080;font-style:italic">;end highlighting</span>
 
 <span style="color:#b44">&#34;Other&#34;</span>
 (
@@ -641,20 +660,18 @@ want to send functions to the shell from text or search through shell history an
      (<span style="color:#b44">&#34;o&#34;</span> <span style="color:#b8860b">comint-write-output</span> <span style="color:#b44">&#34;Write Output To File&#34;</span>)
      (<span style="color:#b44">&#34;h&#34;</span> <span style="color:#b8860b">hydra-helm/body</span> <span style="color:#b44">&#34;Return To Helm&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
      (<span style="color:#b44">&#34;&lt;SPC&gt;&#34;</span> <span style="color:#800">nil</span> <span style="color:#b44">&#34;Quit&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span>)
-)<span style="color:#080;font-style:italic">;end other</span>
-)<span style="color:#080;font-style:italic">;end hydra body</span>
-)<span style="color:#080;font-style:italic">;end pretty-hydra-appearance</span>
-(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;C-m&gt; l&#34;</span> <span style="color:#b8860b">&#39;Shell-Central/body</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+)<span style="color:#080;font-style:italic">;end other</span>
+)<span style="color:#080;font-style:italic">;end hydra body</span>
+)<span style="color:#080;font-style:italic">;end pretty-hydra-appearance</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;C-m&gt; l&#34;</span> <span style="color:#b8860b">&#39;Shell-Central/body</span>)
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <p class= "p-news">If you're looking for a more advanced shell switcher have a look at Mike Zamansky's <a href="https://cestlaz.github.io/post/using-emacs-66-eshell-elisp/" target="_blank">eshell switcher</a> over at his blog C'est La Z.
 </p>
-
 <h5>See you next time...</h5>
-
-<p><br/></p>
+<br/>
 
 
         <div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-15-emacs-shell-hydra%2f&text=An%20Emacs%20Shell%20Hydra&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
@@ -695,8 +712,7 @@ want to send functions to the shell from text or search through shell history an
         </span>
     </div>
     <div class="fa-inverse text-center"><small>Print</small></div>
-</a></div>
-    </div><div id="disqus_thread"></div>
+</a></div><div id="disqus_thread"></div>
 <script type="text/javascript">
 
 (function() {
@@ -713,7 +729,8 @@ want to send functions to the shell from text or search through shell history an
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
-</div><div class="sidebar d-print-none d-none d-xl-block">
+</div>                      
+</div>                          <div class="sidebar d-print-none d-none d-xl-block">
     
 <h2 class ="center">Meet The Author</h2>
 
@@ -838,6 +855,11 @@ want to send functions to the shell from text or search through shell history an
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
+        <a href='https://cloudnine.github.io/categories/music/' class="nav-link">
+        music
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
         <a href='https://cloudnine.github.io/categories/philosophy/' class="nav-link">
         philosophy
         <span class="badge badge-pill badge-secondary">1</span>
@@ -918,13 +940,13 @@ want to send functions to the shell from text or search through shell history an
         <span class="badge badge-pill badge-secondary">5</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
-        emacs-functions
-        <span class="badge badge-pill badge-secondary">4</span>
-        </a>
-        
         <a href='https://cloudnine.github.io/tags/music/' class="nav-link">
         music
+        <span class="badge badge-pill badge-secondary">5</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
+        emacs-functions
         <span class="badge badge-pill badge-secondary">4</span>
         </a>
         
@@ -1062,8 +1084,9 @@ want to send functions to the shell from text or search through shell history an
     
 </div>
 
-        </div>
-         <footer class="mt-auto footer d-print-none">
+         </main>
+        <footer class="mt-auto footer d-print-none">
+           
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-xl-3">
@@ -1081,7 +1104,7 @@ work with.
                     </div>
 
                     <div class="col-md-4 col-xl-3">
-                        <h5>Copyright</h5>
+                        <h5></h5>
 © 2019 - <script>document.write(Date().split` `[3])</script> Yuri Tricys
 
                     </div>
@@ -1095,16 +1118,9 @@ work with.
                 </div>
             </div>
         </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src= ".js"></script>
-
-
-
 
 <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101236333);</script>
 <script async src='//static.getclicky.com/js'></script>
 
-
-    </body>
+</body>
 </html>

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog Links on Cloud Nine</title>
+    <title>blog-links on Cloud Nine</title>
     <link>https://cloudnine.github.io/tags/blog-links/</link>
-    <description>Recent content in Blog Links on Cloud Nine</description>
+    <description>Recent content in blog-links on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright</copyright>
     <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/tags/blog-links/index.xml" rel="self" type="application/rss+xml" />
@@ -35,7 +34,8 @@ Grumpy Economist
 Vox
 Zauzel 100
 Zero Hedge
-Naked Capitalism</description>
+Naked Capitalism
+</description>
     </item>
     
   </channel>

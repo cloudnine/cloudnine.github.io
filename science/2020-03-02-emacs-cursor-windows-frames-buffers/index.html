@@ -2,48 +2,56 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Cloud Nine" />
-<meta name="copyright" content="Copyright" />
+<meta name="copyright" content='Copyright &copy; 2019 - 2020 by Yuri Tricys  All rights reserved.' />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
 <meta name="yandex-verification" content="7cb55c3432ff9fc7" />
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
+<meta name="description" content="Emacs configuration with cursor and screen defaults, a hydra, create a scratch buffer, and frame movements."/>
+<title>Emacs Windows, Frames, Buffers, and Cursor</title>
+<meta property="article:author" content="Yuri Tricys" />
+<link rel="canonical" href="https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/">
 
 
-<meta name="description" content="This post covers the first two sections from the &#34;Default Operations&#34; section of my init.   Default Operations
- Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history  
-  Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for.">
 
-<meta property="og:title" content="Emacs Windows, Frames, Buffers, and Cursor" />
-<meta property="og:description" content="Emacs configuration with cursor and screen defaults, a hydra, create a scratch buffer, and frame movements." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/" /><meta property="article:published_time" content="2020-03-02T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-03-02T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Windows, Frames, Buffers, and Cursor"/>
-<meta name="twitter:description" content="Emacs configuration with cursor and screen defaults, a hydra, create a scratch buffer, and frame movements."/>
+
+
+
+
+
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:title" content="Emacs Windows, Frames, Buffers, and Cursor">
 <meta property="og:image:type" content="image/jpg" />
 
-
-<meta property="og:image" content="https://cloudnine.github.io/images/science/christian-bale.jpg">
-<meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/christian-bale.jpg">
-
-
-<meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
+<meta property="og:image" content="images/science/christian-bale.jpg">
+<meta property="og:image:secure_url" content="images/science/christian-bale.jpg">
+<meta property="og:description" content="Emacs configuration with cursor and screen defaults, a hydra, create a scratch buffer, and frame movements.">
 <meta property="og:site_name" content="Cloud Nine Blog.">
-
+<meta property="og:url" content="https://cloudnine.github.io/" />
 <meta property="og:type" content="blog">
-
-<title>Emacs Windows, Frames, Buffers, and Cursor | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
 
 <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
 <link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<meta property="og:title" content="Emacs Windows, Frames, Buffers, and Cursor" />
+<meta property="og:description" content="Emacs configuration with cursor and screen defaults, a hydra, create a scratch buffer, and frame movements." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/" />
+<meta property="article:published_time" content="2020-03-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-02T00:00:00+00:00" /><meta property="og:site_name" content="Cloud Nine" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs Windows, Frames, Buffers, and Cursor"/>
+<meta name="twitter:description" content="Emacs configuration with cursor and screen defaults, a hydra, create a scratch buffer, and frame movements."/>
+
+
 
 <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD&#43;dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -54,39 +62,19 @@
         
         
 
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.ea5d6b1a95bc28f9856027f41c46ec57ee1b84d89f9aab3e7e7026b816781f83.css" integrity="sha256-6l1rGpW8KPmFYCf0HEbsV&#43;4bhNifmqs&#43;fnAmuBZ4H4M="  />
 
-<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.60e5f69e5fbc3c868e7a5e4a21dcb8b46da65825a899b6c0bdcb952c45c5969e.css" integrity="sha256-YOX2nl&#43;8PIaOel5KIdy4tG2mWCWombbAvcuVLEXFlp4="  />
 
-<script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath:[['\\(','\\)']],
-    displayMath: [ ['$$','$$'], ['\[','\]'] ],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-           extensions: ["tex2math.js","TeX/noErrors.js","TeX/noUndefined.js",
-             "TeX/AMSmath.js","TeX/AMSsymbols.js"]}
-  }
-  });
-  MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
 
-  MathJax.Hub.Config({
-  
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-  });
-</script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X&#43;965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH&#43;8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM&#43;B07jRM" crossorigin="anonymous" defer></script>
+<script src="//static.getclicky.com/js" integrity="" crossorigin="anonymous" defer></script>
+
+
+<script src="https://cloudnine.github.io/javascripts/init.js" crossorigin="anonymous" defer></script>
+<script src="https://cloudnine.github.io/javascripts/medium-lightbox.js" crossorigin="anonymous" defer></script>
 
         
 
@@ -179,9 +167,9 @@
 </style>
 
 
-    </head>
+        </head>
     <body>
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
             <div class="container">
                     <a class="navbar-brand pr-2" href="https://cloudnine.github.io/">CLOUD NINE</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -220,25 +208,29 @@
                     </div>
             </div>
         </nav>
-        
+
+
 <header class="feature-image d-print-none"></header>
 
-        <div class="main">
+
+<main class="main">
             
 <div class="container mt-4 post">
     <h1>Emacs Windows, Frames, Buffers, and Cursor</h1><div class="mb-3 mt-2">
     <small>
-        <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Mar 2, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>, <a href='/tags/emacs-functions/'>emacs-functions</a>
+<strong>Author:
+Yuri Tricys
+
+</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Mar 2, 2020&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> &nbsp;<a href="/tags/emacs">emacs</a>, <a href="/tags/emacs-functions">emacs functions</a>, <a href="/tags/emacs-hydras">emacs hydras</a>, <a href="/tags/learning-center">learning center</a>
     </small>
 </div>
 <div class="mt-4 mb-4 main-content">
         <h5>This post covers the first two sections from the "Default Operations" section of my init. <br/><br/></h5>
-
 <ul>
-<li><p>Default Operations</p>
-
+<li>
+<p>Default Operations</p>
 <ul>
 <li>Moving the Cursor and Screen</li>
 <li>Make/kill/move windows frames buffers</li>
@@ -248,23 +240,17 @@
 <li>Clip board (kill ring)</li>
 <li>PDF tools and command line history</li>
 </ul>
-
-<p><br/></p></li>
+  <br/>
+</li>
 </ul>
-
 <h5>Preamble</h5>
-
 <p class= "p-news">Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
 know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts y date from
 oldest to newest.</p>
-
 <p class = "p-news">In the last emacs <a href="https://cloudnine.github.io/science/2020-02-27-emacs-hydra-set-up-code/" target="_blank">post</a> I covered lines 1115 - 1195. This post
 covers lines 1195 - 1366. I include the lines for anyone that wants to patch together the entire init from start to finish. The lines won't always match up because I take stuff out when I'm in the init.</p>
-
 <p class= "p-news"> </p>
-
 <h5>Moving The Cursor and Screen</h5>
-
 <p class= "p-news">I added some spaces between these sections. Saving point, and adjusting the scroll behaviour are standard Emacs defaults
 you want to set. Copy paste these defaults and that's fine. Mwim is great for changing up C-a, C-e, which are end of sentence and beginning
 of sentence. What I use to move around the most are C-p, C-n, C-a, and C-e. I also use M-< and M->, which are bound to beginning of page and
@@ -276,7 +262,7 @@ Same with leaving a mark with C-SPC then popping to mark later with C-0. I usual
 around). Sometimes if there is no memorable landmark near, I'll insert a weird word into a file then use search to get back to it.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -341,38 +327,41 @@ around). Sometimes if there is no memorable landmark near, I'll insert a weird w
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"> <span style="color:#080;font-style:italic">; Don&#39;t highlight matches with jump-char - it&#39;s distracting</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+ <span style="color:#080;font-style:italic">; Don&#39;t highlight matches with jump-char - it&#39;s distracting</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">jump-char-lazy-highlight-face</span> <span style="color:#800">nil</span>)
 
-<span style="color:#080;font-style:italic">; Scroll 1 line at a time</span>
+<span style="color:#080;font-style:italic">; Scroll 1 line at a time</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">scroll-step</span> <span style="color:#666">1</span>)
 
-<span style="color:#080;font-style:italic">; Save point position between sessions</span>
+<span style="color:#080;font-style:italic">; Save point position between sessions</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;saveplace</span>)
 (<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">save-place</span> <span style="color:#800">t</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">save-place-file</span> (<span style="color:#00a000">expand-file-name</span> <span style="color:#b44">&#34;.places&#34;</span> <span style="color:#b8860b">save-place-file-p</span>))
 
-<span style="color:#080;font-style:italic">;Fix the whole huge-jumps-scrolling-between-windows nastiness</span>
+<span style="color:#080;font-style:italic">;Fix the whole huge-jumps-scrolling-between-windows nastiness</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">scroll-conservatively</span> <span style="color:#666">1000</span>)
 
-<span style="color:#080;font-style:italic">;&#34;Don&#39;t hscroll unless needed&#34;- ? More voodoo lisp.</span>
+<span style="color:#080;font-style:italic">;&#34;Don&#39;t hscroll unless needed&#34;- ? More voodoo lisp.</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">hscroll-margin</span> <span style="color:#666">1</span>)
 
-<span style="color:#080;font-style:italic">;Keeps cursor in the same relative row during pgups and dwns</span>
+<span style="color:#080;font-style:italic">;Keeps cursor in the same relative row during pgups and dwns</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">scroll-preserve-screen-position</span> <span style="color:#800">t</span>)
 
-<span style="color:#080;font-style:italic">;Accelerate the cursor when scrolling.</span>
+<span style="color:#080;font-style:italic">;Accelerate the cursor when scrolling.</span>
 (<span style="color:#00a000">load</span> <span style="color:#b44">&#34;accel&#34;</span> <span style="color:#800">t</span>)
 
-<span style="color:#080;font-style:italic">;;Start scrolling when 2 lines from top/bottom</span>
+<span style="color:#080;font-style:italic">;;Start scrolling when 2 lines from top/bottom</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">scroll-margin</span> <span style="color:#666">8</span>)
 
-<span style="color:#080;font-style:italic">;cursor</span>
+<span style="color:#080;font-style:italic">;cursor</span>
 (<span style="color:#b8860b">blink-cursor-mode</span> <span style="color:#666">0</span>)
 
-<span style="color:#080;font-style:italic">;Push the mouse out of the way when the cursor approaches.</span>
+<span style="color:#080;font-style:italic">;Push the mouse out of the way when the cursor approaches.</span>
 (<span style="color:#b8860b">mouse-avoidance-mode</span> <span style="color:#b8860b">&#39;jump</span>)
 
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">smooth-scrolling</span>
@@ -384,36 +373,35 @@ around). Sometimes if there is no memorable landmark near, I'll insert a weird w
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">fast-but-imprecise-scrolling</span> <span style="color:#800">t</span>)
 <span style="color:#a2f">:diminish</span>)
 
-<span style="color:#080;font-style:italic">;scroll other window</span>
+<span style="color:#080;font-style:italic">;scroll other window</span>
 (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-M-n&#34;</span> <span style="color:#b8860b">&#39;helm-scroll-other-window-down</span>)
 (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-M-p&#34;</span> <span style="color:#b8860b">&#39;helm-scroll-other-window</span>)
 
-<span style="color:#080;font-style:italic">;backward/forward paragraph</span>
+<span style="color:#080;font-style:italic">;backward/forward paragraph</span>
 (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;M-p&#34;</span> <span style="color:#b8860b">&#39;backward-paragraph</span>)
 (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;M-n&#34;</span> <span style="color:#b8860b">&#39;forward-paragraph</span>)
 
-<span style="color:#080;font-style:italic">;pop-to-mark-command</span>
+<span style="color:#080;font-style:italic">;pop-to-mark-command</span>
 (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-0&#34;</span> <span style="color:#b8860b">&#39;pop-to-mark-command</span>)
 
-<span style="color:#080;font-style:italic">;Move with M-s</span>
+<span style="color:#080;font-style:italic">;Move with M-s</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">avy</span>
 <span style="color:#a2f">:bind</span>
-(<span style="color:#b44">&#34;M-s&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">avy-goto-char</span>))<span style="color:#080;font-style:italic">;end avy</span>
-<span style="color:#080;font-style:italic">;Move by sections of lines rather than lines</span>
+(<span style="color:#b44">&#34;M-s&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">avy-goto-char</span>))<span style="color:#080;font-style:italic">;end avy</span>
+<span style="color:#080;font-style:italic">;Move by sections of lines rather than lines</span>
 
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">mwim</span>
 <span style="color:#a2f">:bind</span>
 (<span style="color:#b44">&#34;C-a&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">mwim-beginning-of-code-or-line</span>)
-(<span style="color:#b44">&#34;C-e&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">mwim-end-of-code-or-line</span>))<span style="color:#080;font-style:italic">;end mwim</span>
-<span style="color:#080;font-style:italic">;beginning end of buffer</span>
+(<span style="color:#b44">&#34;C-e&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">mwim-end-of-code-or-line</span>))<span style="color:#080;font-style:italic">;end mwim</span>
+<span style="color:#080;font-style:italic">;beginning end of buffer</span>
 (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;home&gt;&#34;</span> <span style="color:#b8860b">&#39;beginning-of-buffer</span>)
-(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;end&gt;&#34;</span> <span style="color:#b8860b">&#39;end-of-buffer</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;end&gt;&#34;</span> <span style="color:#b8860b">&#39;end-of-buffer</span>)
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5> Make/Kill/Move Frames, Windows, and Buffers</h5>
-
 <p class= "p-news">Delete-all-other-buffers and new-frame-scratch-buffer are two functions I use a lot! I like to have a lot of frames open
 and cycle through them with tab, and you always get a lot of buffers open. My fix is to kill all the frames either with C-x 0, or with a
 kill frames command, then I open and jump to a scratch buffer and kill all the buffers but the one I'm. It's easier than a restart when you
@@ -422,7 +410,7 @@ package is a little annoying. C-x-o jumps you from one window to another window 
 you a letter to choose. Without switch window you cycle through the open windows, maybe better but you sometimes forget where you are. </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -506,21 +494,26 @@ you a letter to choose. Without switch window you cycle through the open windows
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">82
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">83
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">84
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">85
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">86
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">87
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">88
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;delete-all-buffers</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;delete-all-buffers</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">delete-all-other-buffers</span> ()
   (<span style="color:#a2f">interactive</span>)
     (<span style="color:#00a000">mapc</span> <span style="color:#b8860b">&#39;kill-buffer</span> (<span style="color:#00a000">cdr</span> (<span style="color:#00a000">buffer-list</span> (<span style="color:#00a000">current-buffer</span>)))))
 
-<span style="color:#080;font-style:italic">;Create scratch buffer</span>
+<span style="color:#080;font-style:italic">;Create scratch buffer</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">new-frame-scratch-buffer</span> ()
 <span style="color:#b44">&#34;Create a new scratch buffer -- \*hello-world\*&#34;</span>
 (<span style="color:#a2f">interactive</span>)
   (<span style="color:#a2f">let</span> ((<span style="color:#b8860b">n</span> <span style="color:#666">0</span>)
         <span style="color:#b8860b">bufname</span> <span style="color:#b8860b">buffer</span>)
     (<span style="color:#a2f">catch</span> <span style="color:#b8860b">&#39;done</span>
-      (<span style="color:#a2f">while</span> <span style="color:#800">t</span>
+      (<span style="color:#a2f">while</span> <span style="color:#b8860b">t</span>
         (<span style="color:#a2f">setq</span> <span style="color:#b8860b">bufname</span> (<span style="color:#00a000">concat</span> <span style="color:#b44">&#34;*hello-world&#34;</span>
           (<span style="color:#a2f">if</span> (<span style="color:#00a000">=</span> <span style="color:#b8860b">n</span> <span style="color:#666">0</span>) <span style="color:#b44">&#34;&#34;</span> (<span style="color:#b8860b">int-to-string</span> <span style="color:#b8860b">n</span>))
             <span style="color:#b44">&#34;*&#34;</span>))
@@ -529,11 +522,11 @@ you a letter to choose. Without switch window you cycle through the open windows
           (<span style="color:#a2f">setq</span> <span style="color:#b8860b">buffer</span> (<span style="color:#00a000">get-buffer-create</span> <span style="color:#b8860b">bufname</span>))
           (<span style="color:#a2f">with-current-buffer</span> <span style="color:#b8860b">buffer</span>
             (<span style="color:#b8860b">emacs-lisp-mode</span>))
-          <span style="color:#080;font-style:italic">;; When called non-interactively, the `t` targets the other window (if it exists).</span>
+          <span style="color:#080;font-style:italic">;; When called non-interactively, the `t` targets the other window (if it exists).</span>
           (<span style="color:#a2f">throw</span> <span style="color:#b8860b">&#39;done</span> (<span style="color:#b8860b">display-buffer</span> <span style="color:#b8860b">buffer</span> <span style="color:#666">&#39;</span>(<span style="color:#b8860b">display-buffer-pop-up-frame</span> <span style="color:#666">.</span>( (<span style="color:#b8860b">window-height</span> <span style="color:#666">.8</span>) (<span style="color:#b8860b">window-width</span> <span style="color:#666">.8</span>)))
 )) )))))
 
-<span style="color:#080;font-style:italic">; rotate windows</span>
+<span style="color:#080;font-style:italic">; rotate windows</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">rotate-windows</span> (<span style="color:#b8860b">arg</span>)
   <span style="color:#b44">&#34;Rotate your windows; use the prefix argument to rotate the other direction&#34;</span>
   (<span style="color:#a2f">interactive</span> <span style="color:#b44">&#34;P&#34;</span>)
@@ -555,15 +548,15 @@ you a letter to choose. Without switch window you cycle through the open windows
             (<span style="color:#b8860b">set-window-buffer-start-and-point</span> <span style="color:#b8860b">w1</span> <span style="color:#b8860b">b2</span> <span style="color:#b8860b">s2</span> <span style="color:#b8860b">p2</span>)
             (<span style="color:#b8860b">set-window-buffer-start-and-point</span> <span style="color:#b8860b">w2</span> <span style="color:#b8860b">b1</span> <span style="color:#b8860b">s1</span> <span style="color:#b8860b">p1</span>)))))))
 
-<span style="color:#080;font-style:italic">; to make a new scratch buffer in a new frame</span>
+<span style="color:#080;font-style:italic">; to make a new scratch buffer in a new frame</span>
  (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-c b&#34;</span> <span style="color:#b8860b">&#39;new-frame-scratch-buffer</span>)
- <span style="color:#080;font-style:italic">;to kill a frame in emacs (also, C-x 0)</span>
+ <span style="color:#080;font-style:italic">;to kill a frame in emacs (also, C-x 0)</span>
  (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-x C-c&#34;</span> <span style="color:#b8860b">&#39;delete-frame</span>)
- <span style="color:#080;font-style:italic">;make a new frame</span>
+ <span style="color:#080;font-style:italic">;make a new frame</span>
  (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-x C-n&#34;</span> <span style="color:#b8860b">&#39;make-frame-command</span>)
 
 
-<span style="color:#080;font-style:italic">;Copy/p frame-cmds.el &amp; frame-fnc.el to frame-cmds directory</span>
+<span style="color:#080;font-style:italic">;Copy/p frame-cmds.el &amp; frame-fnc.el to frame-cmds directory</span>
  (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;frame-cmds</span>)
  (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;M-S-&lt;up&gt;&#34;</span> <span style="color:#b8860b">&#39;move-frame-up</span>)
  (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;M-S-&lt;right&gt;&#34;</span> <span style="color:#b8860b">&#39;move-frame-right</span>)
@@ -574,32 +567,34 @@ you a letter to choose. Without switch window you cycle through the open windows
  (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-M-&lt;down&gt;&#34;</span> <span style="color:#b8860b">&#39;shrink-frame</span>)
  (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-M-&lt;left&gt;&#34;</span> <span style="color:#b8860b">&#39;shrink-frame-horizontally</span>)
 
-<span style="color:#080;font-style:italic">;Switch Windows</span>
+<span style="color:#080;font-style:italic">;Switch Windows</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">switch-window</span>
-<span style="color:#a2f">:defer</span> <span style="color:#800">t</span>
+<span style="color:#a2f">:defer</span> <span style="color:#b8860b">t</span>
 <span style="color:#a2f">:config</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">switch-window-input-style</span> <span style="color:#b8860b">&#39;minibuffer</span>
-      <span style="color:#b8860b">switch-window-threshold</span> <span style="color:#666">2</span>
-      <span style="color:#b8860b">switch-window-increase</span> <span style="color:#666">4</span>
+      <span style="color:#b8860b">switch-window-threshold</span> <span style="color:#b8860b">2</span>
+      <span style="color:#b8860b">switch-window-increase</span> <span style="color:#b8860b">4</span>
       <span style="color:#b8860b">switch-window-shortcut-style</span> <span style="color:#b8860b">&#39;qwerty</span>
       <span style="color:#b8860b">switch-window-qwerty-shortcuts</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;f&#34;</span> <span style="color:#b44">&#34;k&#34;</span> <span style="color:#b44">&#34;j&#34;</span> <span style="color:#b44">&#34;d&#34;</span> <span style="color:#b44">&#34;s&#34;</span> <span style="color:#b44">&#34;l&#34;</span>)
-      <span style="color:#b8860b">switch-window-auto-resize-window</span> <span style="color:#800">t</span>
+      <span style="color:#b8860b">switch-window-auto-resize-window</span> <span style="color:#b8860b">t</span>
       <span style="color:#b8860b">switch-window-default-window-size</span> <span style="color:#666">0.6</span>)
 <span style="color:#a2f">:bind</span>
 ([<span style="color:#b8860b">remap</span> <span style="color:#b8860b">other-window</span>] <span style="color:#666">.</span> <span style="color:#b8860b">switch-window</span>)
-)<span style="color:#080;font-style:italic">;end switch window</span>
-<span style="color:#080;font-style:italic">;enlarge/shrink window</span>
+)<span style="color:#080;font-style:italic">;end switch window</span>
+<span style="color:#080;font-style:italic">;enlarge/shrink window</span>
 (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-&lt;up&gt;&#34;</span> <span style="color:#b8860b">&#39;enlarge-window</span>)
 (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-&lt;down&gt;&#34;</span> <span style="color:#b8860b">&#39;shrink-window</span>)
-<span style="color:#080;font-style:italic">;hydra-buffers-frames</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+<span style="color:#080;font-style:italic">;hydra-buffers-frames</span>
 
+
+
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Here's the hydra for buffers frames and windows:</h5>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -634,11 +629,14 @@ you a letter to choose. Without switch window you cycle through the open windows
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;define a title function</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;define a title function</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">frames-buffers-title</span> (<span style="color:#b8860b">with-faicon</span> <span style="color:#b44">&#34;clone&#34;</span> <span style="color:#b44">&#34;FRAMES AND BUFFERS&#34;</span>))
-<span style="color:#080;font-style:italic">;generate hydra</span>
+<span style="color:#080;font-style:italic">;generate hydra</span>
 (<span style="color:#b8860b">pretty-hydra-define</span> <span style="color:#b8860b">Frames-Buffers</span> (<span style="color:#a2f">:foreign-keys</span> <span style="color:#d2413a;font-weight:bold">warn</span> <span style="color:#a2f">:title</span> <span style="color:#b8860b">frames-buffers-title</span> <span style="color:#a2f">:quit-key</span> <span style="color:#b44">&#34;q&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">pink</span> )
 (<span style="color:#b44">&#34;Delete, Make and Switch&#34;</span>
    ((<span style="color:#b44">&#34;d&#34;</span>  <span style="color:#b8860b">delete-all-other-buffers</span> <span style="color:#b44">&#34;Delete All Other Buffers&#34;</span>)
@@ -648,7 +646,7 @@ you a letter to choose. Without switch window you cycle through the open windows
     (<span style="color:#b44">&#34;m&#34;</span>  <span style="color:#b8860b">make-frame-command</span> <span style="color:#b44">&#34;Open A New Frame&#34;</span>)
     (<span style="color:#b44">&#34;o&#34;</span>  <span style="color:#b8860b">switch-window</span> <span style="color:#b44">&#34;Switch To Other Window&#34;</span>)
     (<span style="color:#b44">&#34;r&#34;</span>  <span style="color:#b8860b">rotate-windows</span> <span style="color:#b44">&#34;Rotate Windows&#34;</span>)
-)<span style="color:#080;font-style:italic">;end delete</span>
+)<span style="color:#080;font-style:italic">;end delete</span>
 
 <span style="color:#b44">&#34;Move Frames And Windows&#34;</span>
    (
@@ -658,7 +656,7 @@ you a letter to choose. Without switch window you cycle through the open windows
     (<span style="color:#b44">&#34;&lt;&#34;</span>   <span style="color:#b8860b">move-frame-left</span> <span style="color:#b44">&#34;Move Left M-S-&lt;left&gt;&#34;</span> )
     (<span style="color:#b44">&#34;E&#34;</span>   <span style="color:#b8860b">enlarge-frame-horizontally</span> <span style="color:#b44">&#34;Horizontal Grow  C-M-&lt;right&gt;&#34;</span>)
     (<span style="color:#b44">&#34;L&#34;</span>   <span style="color:#b8860b">shrink-frame-horizontally</span> <span style="color:#b44">&#34;Horizontal Shrink C-M-&lt;left&gt;&#34;</span> )
-     ) <span style="color:#080;font-style:italic">;end Move frames and windows</span>
+     ) <span style="color:#080;font-style:italic">;end Move frames and windows</span>
 
 <span style="color:#b44">&#34;EXIT&#34;</span>
   (  (<span style="color:#b44">&#34;G&#34;</span>   <span style="color:#b8860b">enlarge-frame</span>  <span style="color:#b44">&#34;Enlarge Frame C-M-&lt;up&gt;&#34;</span>   )
@@ -667,15 +665,15 @@ you a letter to choose. Without switch window you cycle through the open windows
     (<span style="color:#b44">&#34;w&#34;</span>  <span style="color:#b8860b">shrink-window</span>   <span style="color:#b44">&#34; Shrink Window C-&lt;down&gt;&#34;</span>)
     (<span style="color:#b44">&#34;h&#34;</span> <span style="color:#b8860b">hydra-helm/body</span> <span style="color:#b44">&#34;Return To Helm&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
     (<span style="color:#b44">&#34;&lt;SPC&gt;&#34;</span> <span style="color:#800">nil</span> <span style="color:#b44">&#34;Quit&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
-)<span style="color:#080;font-style:italic">;end exit</span>
-)<span style="color:#080;font-style:italic">;end hydra body</span>
-)<span style="color:#080;font-style:italic">;end pretty-hydra-appearance</span>
-(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;C-m&gt; f&#34;</span> <span style="color:#b8860b">&#39;Frames-Buffers/body</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+)<span style="color:#080;font-style:italic">;end exit</span>
+)<span style="color:#080;font-style:italic">;end hydra body</span>
+)<span style="color:#080;font-style:italic">;end pretty-hydra-appearance</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;C-m&gt; f&#34;</span> <span style="color:#b8860b">&#39;Frames-Buffers/body</span>)
 
-<p><div class="mobile-iframe">
+</code></pre></td></tr></table>
+</div>
+</div><br/>
+<div class="mobile-iframe">
 <figure class="zoom-effect">
 <div class="aspectRatioPlaceholder" >
 <div class="aspect-ratio-fill" style="padding-bottom: 75.78947368421053%;"></div> <!-- end aspect ratio fill -->
@@ -684,8 +682,7 @@ you a letter to choose. Without switch window you cycle through the open windows
 </div> <!-- end aspect ratio -->
 </figure> <!-- end figure -->
 </div> <!--mobile-iframe-->
-<br/></p>
-
+<br/>
 <h5>That's all for now. See you next time.</h5>
 
 
@@ -727,8 +724,7 @@ you a letter to choose. Without switch window you cycle through the open windows
         </span>
     </div>
     <div class="fa-inverse text-center"><small>Print</small></div>
-</a></div>
-    </div><div id="disqus_thread"></div>
+</a></div><div id="disqus_thread"></div>
 <script type="text/javascript">
 
 (function() {
@@ -745,7 +741,8 @@ you a letter to choose. Without switch window you cycle through the open windows
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
-</div><div class="sidebar d-print-none d-none d-xl-block">
+</div>                      
+</div>                          <div class="sidebar d-print-none d-none d-xl-block">
     
 <h2 class ="center">Meet The Author</h2>
 
@@ -870,6 +867,11 @@ you a letter to choose. Without switch window you cycle through the open windows
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
+        <a href='https://cloudnine.github.io/categories/music/' class="nav-link">
+        music
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
         <a href='https://cloudnine.github.io/categories/philosophy/' class="nav-link">
         philosophy
         <span class="badge badge-pill badge-secondary">1</span>
@@ -950,13 +952,13 @@ you a letter to choose. Without switch window you cycle through the open windows
         <span class="badge badge-pill badge-secondary">5</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
-        emacs-functions
-        <span class="badge badge-pill badge-secondary">4</span>
-        </a>
-        
         <a href='https://cloudnine.github.io/tags/music/' class="nav-link">
         music
+        <span class="badge badge-pill badge-secondary">5</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
+        emacs-functions
         <span class="badge badge-pill badge-secondary">4</span>
         </a>
         
@@ -1094,8 +1096,9 @@ you a letter to choose. Without switch window you cycle through the open windows
     
 </div>
 
-        </div>
-         <footer class="mt-auto footer d-print-none">
+         </main>
+        <footer class="mt-auto footer d-print-none">
+           
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-xl-3">
@@ -1113,7 +1116,7 @@ work with.
                     </div>
 
                     <div class="col-md-4 col-xl-3">
-                        <h5>Copyright</h5>
+                        <h5></h5>
 © 2019 - <script>document.write(Date().split` `[3])</script> Yuri Tricys
 
                     </div>
@@ -1127,19 +1130,9 @@ work with.
                 </div>
             </div>
         </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src= ".js"></script>
-
-
-<script src= "https://cloudnine.github.io/javascripts/medium-lightbox.js"></script>
-<script src= "https://cloudnine.github.io/javascripts/init_science.js"></script>
-
-
 
 <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101236333);</script>
 <script async src='//static.getclicky.com/js'></script>
 
-
-    </body>
+</body>
 </html>

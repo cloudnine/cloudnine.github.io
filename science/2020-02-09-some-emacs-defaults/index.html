@@ -2,47 +2,56 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Cloud Nine" />
-<meta name="copyright" content="Copyright" />
+<meta name="copyright" content='Copyright &copy; 2019 - 2020 by Yuri Tricys  All rights reserved.' />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
 <meta name="yandex-verification" content="7cb55c3432ff9fc7" />
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
+<meta name="description" content="Some configuration defaults for your Emacs configuration file."/>
+<title>Emacs Defaults</title>
+<meta property="article:author" content="Yuri Tricys" />
+<link rel="canonical" href="https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/">
 
 
-<meta name="description" content="Today&#39;s post has some of the default settings from my initialization file.   SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key   
-Preamble Last post I covered function declarations from the above subsection, lines 135 - 424 of my configuration.">
 
-<meta property="og:title" content="Emacs Defaults" />
-<meta property="og:description" content="Some configuration defaults for your Emacs configuration file." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/" /><meta property="article:published_time" content="2020-02-09T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-02-09T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Defaults"/>
-<meta name="twitter:description" content="Some configuration defaults for your Emacs configuration file."/>
+
+
+
+
+
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:title" content="Emacs Defaults">
 <meta property="og:image:type" content="image/jpg" />
 
-
-<meta property="og:image" content="https://cloudnine.github.io/images/science/hcf.jpg">
-<meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/hcf.jpg">
-
-
-<meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
+<meta property="og:image" content="images/science/hcf.jpg">
+<meta property="og:image:secure_url" content="images/science/hcf.jpg">
+<meta property="og:description" content="Some configuration defaults for your Emacs configuration file.">
 <meta property="og:site_name" content="Cloud Nine Blog.">
-
+<meta property="og:url" content="https://cloudnine.github.io/" />
 <meta property="og:type" content="blog">
-
-<title>Emacs Defaults | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
 
 <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
 <link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<meta property="og:title" content="Emacs Defaults" />
+<meta property="og:description" content="Some configuration defaults for your Emacs configuration file." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/" />
+<meta property="article:published_time" content="2020-02-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-09T00:00:00+00:00" /><meta property="og:site_name" content="Cloud Nine" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs Defaults"/>
+<meta name="twitter:description" content="Some configuration defaults for your Emacs configuration file."/>
+
+
 
 <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD&#43;dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -53,39 +62,19 @@ Preamble Last post I covered function declarations from the above subsection, li
         
         
 
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.ea5d6b1a95bc28f9856027f41c46ec57ee1b84d89f9aab3e7e7026b816781f83.css" integrity="sha256-6l1rGpW8KPmFYCf0HEbsV&#43;4bhNifmqs&#43;fnAmuBZ4H4M="  />
 
-<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.60e5f69e5fbc3c868e7a5e4a21dcb8b46da65825a899b6c0bdcb952c45c5969e.css" integrity="sha256-YOX2nl&#43;8PIaOel5KIdy4tG2mWCWombbAvcuVLEXFlp4="  />
 
-<script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath:[['\\(','\\)']],
-    displayMath: [ ['$$','$$'], ['\[','\]'] ],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-           extensions: ["tex2math.js","TeX/noErrors.js","TeX/noUndefined.js",
-             "TeX/AMSmath.js","TeX/AMSsymbols.js"]}
-  }
-  });
-  MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
 
-  MathJax.Hub.Config({
-  
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-  });
-</script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X&#43;965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH&#43;8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM&#43;B07jRM" crossorigin="anonymous" defer></script>
+<script src="//static.getclicky.com/js" integrity="" crossorigin="anonymous" defer></script>
+
+
+<script src="https://cloudnine.github.io/javascripts/init.js" crossorigin="anonymous" defer></script>
+<script src="https://cloudnine.github.io/javascripts/medium-lightbox.js" crossorigin="anonymous" defer></script>
 
         
 
@@ -178,9 +167,9 @@ Preamble Last post I covered function declarations from the above subsection, li
 </style>
 
 
-    </head>
+        </head>
     <body>
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
             <div class="container">
                     <a class="navbar-brand pr-2" href="https://cloudnine.github.io/">CLOUD NINE</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -219,25 +208,28 @@ Preamble Last post I covered function declarations from the above subsection, li
                     </div>
             </div>
         </nav>
-        
+
+
 <header class="feature-image d-print-none"></header>
 
-        <div class="main">
+
+<main class="main">
             
 <div class="container mt-4 post">
     <h1>Emacs Defaults</h1><div class="mb-3 mt-2">
     <small>
-        <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 9, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>
+<strong>Author:
+Yuri Tricys
+
+</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 9, 2020&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> &nbsp;<a href="/tags/emacs">emacs</a>, <a href="/tags/learning-center">learning center</a>
     </small>
 </div>
 <div class="mt-4 mb-4 main-content">
         <h5>Today's post has some of the default settings from my initialization file. <br/><br/></h5>
-
 <ul>
 <li>SET UP, DEFAULTS, AND CUSTOMIZATION
-
 <ul>
 <li>Necessary Adjustments when you set-up on a new computer</li>
 <li>Paths to Update on Change</li>
@@ -252,41 +244,39 @@ Preamble Last post I covered function declarations from the above subsection, li
 <li>Some New Key Bindings</li>
 <li>Popup, Pos-tip,Tooltip, Posframe</li>
 <li>Which Key</li>
-</ul></li>
 </ul>
-
-<p><br/></p>
-
+</li>
+</ul>
+<br/>
 <h5>Preamble</h5>
-
 <p class= "p-news">Last <a href="https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/" target="_blank">post</a>
  I covered function declarations from the above subsection, lines 135 - 424 of my configuration. This post
 covers up to "Frames, Buffers, And Lines" (also defaults), so lines 425 - 534.</p>
-
 <p class= "p-news">Most of the defaults are relevant. If you don't want your Emacs to beep when you hit the end of the file, then you need
 to set a default, and the same for another annoying stuff. I make no promises the following section is efficient (let me know if you see
 some double entries). </p>
-
 <h5>Customization</h5>
-
 <p class= "p-news">First though, Emacs will continually add to your config with any auto settings configured through the GUI customization
 interface. You don't want that, so you need to put it in a separate file like this. </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">setq</span> <span style="color:#b8860b">custom-file</span> (<span style="color:#00a000">expand-file-name</span> <span style="color:#b44">&#34;custom.el&#34;</span> <span style="color:#b44">&#34;c:/emacs/emax/&#34;</span>))
- (<span style="color:#00a000">load</span> <span style="color:#b8860b">custom-file</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">custom-file</span> (<span style="color:#00a000">expand-file-name</span> <span style="color:#b44">&#34;custom.el&#34;</span> <span style="color:#b44">&#34;c:/emacs/emax/&#34;</span>))
+ (<span style="color:#00a000">load</span> <span style="color:#b8860b">custom-file</span>)
 
-<p><h5>Here are some of the defaults I use</h5><br/></p>
+</code></pre></td></tr></table>
+</div>
+</div><br/>
+<h5>Here are some of the defaults I use</h5><br/>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -346,76 +336,79 @@ interface. You don't want that, so you need to put it in a separate file like th
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"> <span style="color:#080;font-style:italic">;; Keep emacs Custom-settings in separate file</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+ <span style="color:#080;font-style:italic">;; Keep emacs Custom-settings in separate file</span>
 (<span style="color:#a2f">when</span> <span style="color:#00a000">window-system</span>
-(<span style="color:#b8860b">blink-cursor-mode</span> <span style="color:#666">0</span>)                           <span style="color:#080;font-style:italic">; Disable the cursor blinking</span>
-<span style="color:#080;font-style:italic">;(scroll-bar-mode 0)                             ; Disable the scroll bar</span>
-(<span style="color:#b8860b">tool-bar-mode</span> <span style="color:#666">0</span>)                               <span style="color:#080;font-style:italic">; Disable the tool bar</span>
-(<span style="color:#b8860b">tooltip-mode</span> <span style="color:#666">0</span>))                               <span style="color:#080;font-style:italic">; Disable the tooltips</span>
+(<span style="color:#b8860b">blink-cursor-mode</span> <span style="color:#666">0</span>)                           <span style="color:#080;font-style:italic">; Disable the cursor blinking</span>
+<span style="color:#080;font-style:italic">;(scroll-bar-mode 0)                             ; Disable the scroll bar</span>
+(<span style="color:#b8860b">tool-bar-mode</span> <span style="color:#666">0</span>)                               <span style="color:#080;font-style:italic">; Disable the tool bar</span>
+(<span style="color:#b8860b">tooltip-mode</span> <span style="color:#666">0</span>))                               <span style="color:#080;font-style:italic">; Disable the tooltips</span>
 (<span style="color:#a2f">setq-default</span>
-<span style="color:#b8860b">ad-redefinition-action</span> <span style="color:#b8860b">&#39;accept</span>                   <span style="color:#080;font-style:italic">; Silence warnings for redefinition</span>
-<span style="color:#b8860b">confirm-kill-emacs</span> <span style="color:#b8860b">&#39;yes-or-no-p</span>                  <span style="color:#080;font-style:italic">; Confirm before exiting Emacs</span>
-<span style="color:#b8860b">cursor-in-non-selected-windows</span> <span style="color:#800">t</span>                 <span style="color:#080;font-style:italic">; Hide the cursor in inactive windows</span>
-<span style="color:#b8860b">delete-by-moving-to-trash</span> <span style="color:#800">t</span>                      <span style="color:#080;font-style:italic">; Delete files to trash</span>
-<span style="color:#b8860b">display-time-default-load-average</span> <span style="color:#800">nil</span>            <span style="color:#080;font-style:italic">; Don&#39;t display load average</span>
-<span style="color:#b8860b">display-time-format</span> <span style="color:#b44">&#34;%H:%M&#34;</span>                      <span style="color:#080;font-style:italic">; Format the time string</span>
-<span style="color:#b8860b">fill-column</span> <span style="color:#666">140</span>                                   <span style="color:#080;font-style:italic">; Set width for automatic line breaks</span>
-<span style="color:#b8860b">help-window-select</span> <span style="color:#800">t</span>                             <span style="color:#080;font-style:italic">; Focus new help windows when opened</span>
-<span style="color:#b8860b">indent-tabs-mode</span> <span style="color:#800">nil</span>                             <span style="color:#080;font-style:italic">; Stop using tabs to indent</span>
-<span style="color:#b8860b">inhibit-startup-screen</span> <span style="color:#800">t</span>                         <span style="color:#080;font-style:italic">; Disable start-up screen</span>
-<span style="color:#b8860b">initial-scratch-message</span> <span style="color:#b44">&#34;&#34;</span>                       <span style="color:#080;font-style:italic">; Empty the initial *scratch* buffer</span>
-<span style="color:#080;font-style:italic">; left-margin-width 1 right-margin-width 1         ; Add left and right margins</span>
-<span style="color:#b8860b">mode-require-final-newline</span> <span style="color:#b8860b">&#39;visit-save</span>           <span style="color:#080;font-style:italic">; Add a newline at EOF on visit</span>
-<span style="color:#b8860b">mouse-yank-at-point</span> <span style="color:#800">t</span>                            <span style="color:#080;font-style:italic">; Yank at point rather than pointer</span>
-<span style="color:#b8860b">ns-use-srgb-colorspace</span> <span style="color:#800">nil</span>                       <span style="color:#080;font-style:italic">; Don&#39;t use sRGB colors</span>
-<span style="color:#b8860b">recenter-positions</span> <span style="color:#666">&#39;</span>(<span style="color:#666">5</span> <span style="color:#b8860b">top</span> <span style="color:#b8860b">bottom</span>)               <span style="color:#080;font-style:italic">; Set re-centering positions</span>
-<span style="color:#b8860b">redisplay-dont-pause</span> <span style="color:#800">t</span>                           <span style="color:#080;font-style:italic">; don&#39;t pause display on input</span>
-<span style="color:#b8860b">debug-on-error</span> <span style="color:#800">t</span>
-<span style="color:#b8860b">jit-lock-defer-time</span> <span style="color:#666">0</span>
-<span style="color:#b8860b">frame-resize-pixelwise</span> <span style="color:#800">t</span>
-<span style="color:#b8860b">fast-but-imprecise-scrolling</span> <span style="color:#800">t</span>
-<span style="color:#b8860b">scroll-conservatively</span> <span style="color:#666">10000</span>                      <span style="color:#080;font-style:italic">; Always scroll by one line</span>
-<span style="color:#b8860b">scroll-margin</span> <span style="color:#666">1</span>                                  <span style="color:#080;font-style:italic">; scroll N lines to screen edge</span>
-<span style="color:#b8860b">scroll-step</span> <span style="color:#666">1</span>                                    <span style="color:#080;font-style:italic">; keyboard scroll one line at a time</span>
-<span style="color:#b8860b">scroll-preserve-screen-position</span> <span style="color:#666">1</span>
-<span style="color:#b8860b">select-enable-clipboard</span> <span style="color:#800">t</span>                        <span style="color:#080;font-style:italic">; Merge system&#39;s and Emacs&#39; clipboard</span>
-<span style="color:#b8860b">show-trailing-whitespace</span> <span style="color:#800">nil</span>                     <span style="color:#080;font-style:italic">; Display trailing whitespaces</span>
-<span style="color:#080;font-style:italic">; split-height-threshold nil                       ; Disable vertical window splitting</span>
-<span style="color:#080;font-style:italic">; split-width-threshold nil                        ; Disable horizontal window splitting</span>
-<span style="color:#b8860b">tab-width</span> <span style="color:#666">4</span>                                      <span style="color:#080;font-style:italic">; Set width for tabs</span>
-<span style="color:#b8860b">uniquify-buffer-name-style</span> <span style="color:#b8860b">&#39;forward</span>              <span style="color:#080;font-style:italic">; Uniquify buffer names</span>
-<span style="color:#080;font-style:italic">; window-combination-resize t                      ; Resize windows proportionally</span>
-<span style="color:#b8860b">x-stretch-cursor</span> <span style="color:#800">t</span>)                              <span style="color:#080;font-style:italic">; Stretch cursor to the glyph width</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">sentence-end-double-space</span> <span style="color:#800">nil</span>)             <span style="color:#080;font-style:italic">; End a sentence after a dot and a space</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">line-number-mode</span> <span style="color:#800">t</span>)                         <span style="color:#080;font-style:italic">; Enable line numbers in the mode-line</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">column-number-mode</span> <span style="color:#800">t</span>)                       <span style="color:#080;font-style:italic">; Enable column numbers in the mode-line</span>
-(<span style="color:#b8860b">size-indication-mode</span> <span style="color:#666">1</span>)                          <span style="color:#080;font-style:italic">; Enable size status in the mode-line</span>
-(<span style="color:#b8860b">display-time-mode</span>)                               <span style="color:#080;font-style:italic">; Enable time in the mode-line</span>
-(<span style="color:#b8860b">fringe-mode</span> <span style="color:#666">0</span>)                                   <span style="color:#080;font-style:italic">; Hide fringes</span>
-(<span style="color:#00a000">fset</span> <span style="color:#b8860b">&#39;yes-or-no-p</span> <span style="color:#b8860b">&#39;y-or-n-p</span>)                     <span style="color:#080;font-style:italic">; Replace yes/no prompts with y/n</span>
-<span style="color:#080;font-style:italic">;(show-paren-mode t)</span>
+<span style="color:#b8860b">ad-redefinition-action</span> <span style="color:#b8860b">&#39;accept</span>                   <span style="color:#080;font-style:italic">; Silence warnings for redefinition</span>
+<span style="color:#b8860b">confirm-kill-emacs</span> <span style="color:#b8860b">&#39;yes-or-no-p</span>                  <span style="color:#080;font-style:italic">; Confirm before exiting Emacs</span>
+<span style="color:#b8860b">cursor-in-non-selected-windows</span> <span style="color:#800">t</span>                 <span style="color:#080;font-style:italic">; Hide the cursor in inactive windows</span>
+<span style="color:#b8860b">delete-by-moving-to-trash</span> <span style="color:#800">t</span>                      <span style="color:#080;font-style:italic">; Delete files to trash</span>
+<span style="color:#b8860b">display-time-default-load-average</span> <span style="color:#800">nil</span>            <span style="color:#080;font-style:italic">; Don&#39;t display load average</span>
+<span style="color:#b8860b">display-time-format</span> <span style="color:#b44">&#34;%H:%M&#34;</span>                      <span style="color:#080;font-style:italic">; Format the time string</span>
+<span style="color:#b8860b">fill-column</span> <span style="color:#666">140</span>                                   <span style="color:#080;font-style:italic">; Set width for automatic line breaks</span>
+<span style="color:#b8860b">help-window-select</span> <span style="color:#800">t</span>                             <span style="color:#080;font-style:italic">; Focus new help windows when opened</span>
+<span style="color:#b8860b">indent-tabs-mode</span> <span style="color:#800">nil</span>                             <span style="color:#080;font-style:italic">; Stop using tabs to indent</span>
+<span style="color:#b8860b">inhibit-startup-screen</span> <span style="color:#800">t</span>                         <span style="color:#080;font-style:italic">; Disable start-up screen</span>
+<span style="color:#b8860b">initial-scratch-message</span> <span style="color:#b44">&#34;&#34;</span>                       <span style="color:#080;font-style:italic">; Empty the initial *scratch* buffer</span>
+<span style="color:#080;font-style:italic">; left-margin-width 1 right-margin-width 1         ; Add left and right margins</span>
+<span style="color:#b8860b">mode-require-final-newline</span> <span style="color:#b8860b">&#39;visit-save</span>           <span style="color:#080;font-style:italic">; Add a newline at EOF on visit</span>
+<span style="color:#b8860b">mouse-yank-at-point</span> <span style="color:#800">t</span>                            <span style="color:#080;font-style:italic">; Yank at point rather than pointer</span>
+<span style="color:#b8860b">ns-use-srgb-colorspace</span> <span style="color:#800">nil</span>                       <span style="color:#080;font-style:italic">; Don&#39;t use sRGB colors</span>
+<span style="color:#b8860b">recenter-positions</span> <span style="color:#666">&#39;</span>(<span style="color:#666">5</span> <span style="color:#b8860b">top</span> <span style="color:#b8860b">bottom</span>)               <span style="color:#080;font-style:italic">; Set re-centering positions</span>
+<span style="color:#b8860b">redisplay-dont-pause</span> <span style="color:#800">t</span>                           <span style="color:#080;font-style:italic">; don&#39;t pause display on input</span>
+<span style="color:#b8860b">debug-on-error</span> <span style="color:#b8860b">t</span>
+<span style="color:#b8860b">jit-lock-defer-time</span> <span style="color:#b8860b">0</span>
+<span style="color:#b8860b">frame-resize-pixelwise</span> <span style="color:#b8860b">t</span>
+<span style="color:#b8860b">fast-but-imprecise-scrolling</span> <span style="color:#b8860b">t</span>
+<span style="color:#b8860b">scroll-conservatively</span> <span style="color:#666">10000</span>                      <span style="color:#080;font-style:italic">; Always scroll by one line</span>
+<span style="color:#b8860b">scroll-margin</span> <span style="color:#666">1</span>                                  <span style="color:#080;font-style:italic">; scroll N lines to screen edge</span>
+<span style="color:#b8860b">scroll-step</span> <span style="color:#666">1</span>                                    <span style="color:#080;font-style:italic">; keyboard scroll one line at a time</span>
+<span style="color:#b8860b">scroll-preserve-screen-position</span> <span style="color:#b8860b">1</span>
+<span style="color:#b8860b">select-enable-clipboard</span> <span style="color:#800">t</span>                        <span style="color:#080;font-style:italic">; Merge system&#39;s and Emacs&#39; clipboard</span>
+<span style="color:#b8860b">show-trailing-whitespace</span> <span style="color:#800">nil</span>                     <span style="color:#080;font-style:italic">; Display trailing whitespaces</span>
+<span style="color:#080;font-style:italic">; split-height-threshold nil                       ; Disable vertical window splitting</span>
+<span style="color:#080;font-style:italic">; split-width-threshold nil                        ; Disable horizontal window splitting</span>
+<span style="color:#b8860b">tab-width</span> <span style="color:#666">4</span>                                      <span style="color:#080;font-style:italic">; Set width for tabs</span>
+<span style="color:#b8860b">uniquify-buffer-name-style</span> <span style="color:#b8860b">&#39;forward</span>              <span style="color:#080;font-style:italic">; Uniquify buffer names</span>
+<span style="color:#080;font-style:italic">; window-combination-resize t                      ; Resize windows proportionally</span>
+<span style="color:#b8860b">x-stretch-cursor</span> <span style="color:#800">t</span>)                              <span style="color:#080;font-style:italic">; Stretch cursor to the glyph width</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">sentence-end-double-space</span> <span style="color:#800">nil</span>)             <span style="color:#080;font-style:italic">; End a sentence after a dot and a space</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">line-number-mode</span> <span style="color:#800">t</span>)                         <span style="color:#080;font-style:italic">; Enable line numbers in the mode-line</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">column-number-mode</span> <span style="color:#800">t</span>)                       <span style="color:#080;font-style:italic">; Enable column numbers in the mode-line</span>
+(<span style="color:#b8860b">size-indication-mode</span> <span style="color:#666">1</span>)                          <span style="color:#080;font-style:italic">; Enable size status in the mode-line</span>
+(<span style="color:#b8860b">display-time-mode</span>)                               <span style="color:#080;font-style:italic">; Enable time in the mode-line</span>
+(<span style="color:#b8860b">fringe-mode</span> <span style="color:#666">0</span>)                                   <span style="color:#080;font-style:italic">; Hide fringes</span>
+(<span style="color:#00a000">fset</span> <span style="color:#b8860b">&#39;yes-or-no-p</span> <span style="color:#b8860b">&#39;y-or-n-p</span>)                     <span style="color:#080;font-style:italic">; Replace yes/no prompts with y/n</span>
+<span style="color:#080;font-style:italic">;(show-paren-mode t)</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">show-paren-style</span> <span style="color:#b8860b">&#39;expression</span>)
-<span style="color:#080;font-style:italic">;(menu-bar-mode 0)                                 ; Disable the menu bar</span>
-<span style="color:#080;font-style:italic">;(mouse-avoidance-mode &#39;banish)                    ; Avoid collision of mouse with point</span>
-(<span style="color:#00a000">put</span> <span style="color:#b8860b">&#39;downcase-region</span> <span style="color:#b8860b">&#39;disabled</span> <span style="color:#800">nil</span>)              <span style="color:#080;font-style:italic">; Enable downcase-region</span>
-(<span style="color:#00a000">put</span> <span style="color:#b8860b">&#39;upcase-region</span> <span style="color:#b8860b">&#39;disabled</span> <span style="color:#800">nil</span>)                <span style="color:#080;font-style:italic">; Enable upcase-region</span>
-<span style="color:#080;font-style:italic">;Garbage-collect on focus-out, Emacs /should/ feel snappier.</span>
+<span style="color:#080;font-style:italic">;(menu-bar-mode 0)                                 ; Disable the menu bar</span>
+<span style="color:#080;font-style:italic">;(mouse-avoidance-mode &#39;banish)                    ; Avoid collision of mouse with point</span>
+(<span style="color:#00a000">put</span> <span style="color:#b8860b">&#39;downcase-region</span> <span style="color:#b8860b">&#39;disabled</span> <span style="color:#800">nil</span>)              <span style="color:#080;font-style:italic">; Enable downcase-region</span>
+(<span style="color:#00a000">put</span> <span style="color:#b8860b">&#39;upcase-region</span> <span style="color:#b8860b">&#39;disabled</span> <span style="color:#800">nil</span>)                <span style="color:#080;font-style:italic">; Enable upcase-region</span>
+<span style="color:#080;font-style:italic">;Garbage-collect on focus-out, Emacs /should/ feel snappier.</span>
 (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;focus-out-hook</span> <span style="color:#00a000">#&#39;garbage-collect</span>)
-<span style="color:#080;font-style:italic">;delete trailing whitespace</span>
+<span style="color:#080;font-style:italic">;delete trailing whitespace</span>
 (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;before-save-hook</span> <span style="color:#b8860b">&#39;delete-trailing-whitespace</span>)
 (<span style="color:#b8860b">pdf-tools-install</span> <span style="color:#a2f">:no-query</span>)
-<span style="color:#080;font-style:italic">;set-warning level</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">warning-minimum-level</span> <span style="color:#a2f">:emergency</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+<span style="color:#080;font-style:italic">;set-warning level</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">warning-minimum-level</span> <span style="color:#a2f">:emergency</span>)
 
-<p><h5>Here are the rest for this post, the last line is line 534 of my init </h5> <br/></p>
+</code></pre></td></tr></table>
+</div>
+</div><br/>
+<h5>Here are the rest for this post, the last line is line 534 of my init </h5> <br/>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -454,55 +447,63 @@ interface. You don't want that, so you need to put it in a separate file like th
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">; Silence warnings for redefinition</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+
+<span style="color:#080;font-style:italic">; Silence warnings for redefinition</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">ad-redefinition-action</span> <span style="color:#b8860b">&#39;warn</span>)
-<span style="color:#080;font-style:italic">; Hide the cursor in inactive windows</span>
+<span style="color:#080;font-style:italic">; Hide the cursor in inactive windows</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">cursor-in-non-selected-windows</span> <span style="color:#800">t</span> )
-<span style="color:#080;font-style:italic">; Don&#39;t display load average</span>
+<span style="color:#080;font-style:italic">; Don&#39;t display load average</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">display-time-default-load-average</span> <span style="color:#800">nil</span>)
-<span style="color:#080;font-style:italic">; Focus new help windows when opened</span>
+<span style="color:#080;font-style:italic">; Focus new help windows when opened</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">help-window-select</span> <span style="color:#800">t</span> )
-<span style="color:#080;font-style:italic">; Prefers spaces over tabs</span>
+<span style="color:#080;font-style:italic">; Prefers spaces over tabs</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">indent-tabs-mode</span> <span style="color:#800">nil</span> )
-<span style="color:#080;font-style:italic">; Merge system&#39;s and Emacs&#39; clipboard</span>
+<span style="color:#080;font-style:italic">; Merge system&#39;s and Emacs&#39; clipboard</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">select-enable-clipboard</span> <span style="color:#800">t</span> )
-<span style="color:#080;font-style:italic">;interprogram-paste-before-kill</span>
+<span style="color:#080;font-style:italic">;interprogram-paste-before-kill</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">save-interprogram-paste-before-kill</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">; Avoid the :ensure keyword for each package</span>
+<span style="color:#080;font-style:italic">; Avoid the :ensure keyword for each package</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">use-package-always-ensure</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">; Always follow the symlinks</span>
+<span style="color:#080;font-style:italic">; Always follow the symlinks</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">vc-follow-symlinks</span> <span style="color:#b8860b">&#39;ask</span>)
-<span style="color:#080;font-style:italic">;view-read-only-defined in &#39;files.el, (require &#39;file.el) moved from later line to here</span>
+<span style="color:#080;font-style:italic">;view-read-only-defined in &#39;files.el, (require &#39;file.el) moved from later line to here</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;files</span>)
-<span style="color:#080;font-style:italic">;read-only files in read-only-mode</span>
+<span style="color:#080;font-style:italic">;read-only files in read-only-mode</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">view-read-only</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">;no byte compile warnings (not set here?)</span>
-<span style="color:#080;font-style:italic">;(setq byte-compile-warnings -1)</span>
-<span style="color:#080;font-style:italic">; Re-define package--save-selected-packages to stop customization sending dependeny info to melpa process.</span>
+<span style="color:#080;font-style:italic">;no byte compile warnings (not set here?)</span>
+<span style="color:#080;font-style:italic">;(setq byte-compile-warnings -1)</span>
+<span style="color:#080;font-style:italic">; Re-define package--save-selected-packages to stop customization sending dependeny info to melpa process.</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">package--save-selected-packages</span> (<span style="color:#a2f">&amp;rest</span> <span style="color:#b8860b">opt</span>) <span style="color:#800">nil</span>)
-<span style="color:#080;font-style:italic">;ensure manual indentation</span>
+<span style="color:#080;font-style:italic">;ensure manual indentation</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">electric-indent-mode</span> <span style="color:#666">-1</span>)
 (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;after-change-major-mode-hook</span> (<span style="color:#a2f">lambda</span>() (<span style="color:#b8860b">electric-indent-mode</span> <span style="color:#666">-1</span>)))
-<span style="color:#080;font-style:italic">;set tab width</span>
+<span style="color:#080;font-style:italic">;set tab width</span>
 (<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">tab-width</span> <span style="color:#666">4</span>)
-<span style="color:#080;font-style:italic">;(bind-key &#34;C-x TAB&#34; &#39;indent-rigidly)</span>
+<span style="color:#080;font-style:italic">;(bind-key &#34;C-x TAB&#34; &#39;indent-rigidly)</span>
 (<span style="color:#b8860b">global-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-x TAB&#34;</span>) <span style="color:#b8860b">&#39;indent-rigidly</span>)
-<span style="color:#080;font-style:italic">;; Save a list of recent files visited. (open recent file with C-x f)</span>
+<span style="color:#080;font-style:italic">;; Save a list of recent files visited. (open recent file with C-x f)</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;recentf</span>)
 (<span style="color:#b8860b">recentf-mode</span> <span style="color:#666">1</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">recentf-max-saved-items</span> <span style="color:#666">100</span>)
-<span style="color:#080;font-style:italic">;save abbrevs silently</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">save-abbrevs</span> <span style="color:#b8860b">&#39;silently</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+<span style="color:#080;font-style:italic">;save abbrevs silently</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">save-abbrevs</span> <span style="color:#b8860b">&#39;silently</span>)
 
+
+
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <p class= "p-news">See you next time...</p>
-
-<p><br/>
-<br/></p>
+<br/>
+<br/>
 
 
         <div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-09-some-emacs-defaults%2f&text=Emacs%20Defaults&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
@@ -543,8 +544,7 @@ interface. You don't want that, so you need to put it in a separate file like th
         </span>
     </div>
     <div class="fa-inverse text-center"><small>Print</small></div>
-</a></div>
-    </div><div id="disqus_thread"></div>
+</a></div><div id="disqus_thread"></div>
 <script type="text/javascript">
 
 (function() {
@@ -561,7 +561,8 @@ interface. You don't want that, so you need to put it in a separate file like th
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
-</div><div class="sidebar d-print-none d-none d-xl-block">
+</div>                      
+</div>                          <div class="sidebar d-print-none d-none d-xl-block">
     
 <h2 class ="center">Meet The Author</h2>
 
@@ -686,6 +687,11 @@ interface. You don't want that, so you need to put it in a separate file like th
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
+        <a href='https://cloudnine.github.io/categories/music/' class="nav-link">
+        music
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
         <a href='https://cloudnine.github.io/categories/philosophy/' class="nav-link">
         philosophy
         <span class="badge badge-pill badge-secondary">1</span>
@@ -766,13 +772,13 @@ interface. You don't want that, so you need to put it in a separate file like th
         <span class="badge badge-pill badge-secondary">5</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
-        emacs-functions
-        <span class="badge badge-pill badge-secondary">4</span>
-        </a>
-        
         <a href='https://cloudnine.github.io/tags/music/' class="nav-link">
         music
+        <span class="badge badge-pill badge-secondary">5</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
+        emacs-functions
         <span class="badge badge-pill badge-secondary">4</span>
         </a>
         
@@ -910,8 +916,9 @@ interface. You don't want that, so you need to put it in a separate file like th
     
 </div>
 
-        </div>
-         <footer class="mt-auto footer d-print-none">
+         </main>
+        <footer class="mt-auto footer d-print-none">
+           
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-xl-3">
@@ -929,7 +936,7 @@ work with.
                     </div>
 
                     <div class="col-md-4 col-xl-3">
-                        <h5>Copyright</h5>
+                        <h5></h5>
 © 2019 - <script>document.write(Date().split` `[3])</script> Yuri Tricys
 
                     </div>
@@ -943,16 +950,9 @@ work with.
                 </div>
             </div>
         </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src= ".js"></script>
-
-
-
 
 <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101236333);</script>
 <script async src='//static.getclicky.com/js'></script>
 
-
-    </body>
+</body>
 </html>

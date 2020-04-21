@@ -2,46 +2,56 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Cloud Nine" />
-<meta name="copyright" content="Copyright" />
+<meta name="copyright" content='Copyright &copy; 2019 - 2020 by Yuri Tricys  All rights reserved.' />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
 <meta name="yandex-verification" content="7cb55c3432ff9fc7" />
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
+<meta name="description" content="Emacs configuration for some highlighting code packages."/>
+<title>Emacs Highlighting Packages</title>
+<meta property="article:author" content="Yuri Tricys" />
+<link rel="canonical" href="https://cloudnine.github.io/science/2020-02-27-emacs-highlighting-packages/">
 
 
-<meta name="description" content="This post covers &#34;Highlights&#34; from the appearance section of my init.   Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra    Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.">
 
-<meta property="og:title" content="Emacs Highlighting Packages" />
-<meta property="og:description" content="Emacs configuration for some highlighting code packages." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-27-emacs-highlighting-packages/" /><meta property="article:published_time" content="2020-02-27T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-02-27T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Highlighting Packages"/>
-<meta name="twitter:description" content="Emacs configuration for some highlighting code packages."/>
+
+
+
+
+
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:title" content="Emacs Highlighting Packages">
 <meta property="og:image:type" content="image/jpg" />
 
-
-<meta property="og:image" content="https://cloudnine.github.io/images/science/christian-bale.jpg">
-<meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/christian-bale.jpg">
-
-
-<meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
+<meta property="og:image" content="images/science/christian-bale.jpg">
+<meta property="og:image:secure_url" content="images/science/christian-bale.jpg">
+<meta property="og:description" content="Emacs configuration for some highlighting code packages.">
 <meta property="og:site_name" content="Cloud Nine Blog.">
-
+<meta property="og:url" content="https://cloudnine.github.io/" />
 <meta property="og:type" content="blog">
-
-<title>Emacs Highlighting Packages | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
 
 <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
 <link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<meta property="og:title" content="Emacs Highlighting Packages" />
+<meta property="og:description" content="Emacs configuration for some highlighting code packages." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-27-emacs-highlighting-packages/" />
+<meta property="article:published_time" content="2020-02-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-27T00:00:00+00:00" /><meta property="og:site_name" content="Cloud Nine" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs Highlighting Packages"/>
+<meta name="twitter:description" content="Emacs configuration for some highlighting code packages."/>
+
+
 
 <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD&#43;dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -52,39 +62,19 @@
         
         
 
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.ea5d6b1a95bc28f9856027f41c46ec57ee1b84d89f9aab3e7e7026b816781f83.css" integrity="sha256-6l1rGpW8KPmFYCf0HEbsV&#43;4bhNifmqs&#43;fnAmuBZ4H4M="  />
 
-<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.60e5f69e5fbc3c868e7a5e4a21dcb8b46da65825a899b6c0bdcb952c45c5969e.css" integrity="sha256-YOX2nl&#43;8PIaOel5KIdy4tG2mWCWombbAvcuVLEXFlp4="  />
 
-<script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath:[['\\(','\\)']],
-    displayMath: [ ['$$','$$'], ['\[','\]'] ],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-           extensions: ["tex2math.js","TeX/noErrors.js","TeX/noUndefined.js",
-             "TeX/AMSmath.js","TeX/AMSsymbols.js"]}
-  }
-  });
-  MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
 
-  MathJax.Hub.Config({
-  
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-  });
-</script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X&#43;965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH&#43;8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM&#43;B07jRM" crossorigin="anonymous" defer></script>
+<script src="//static.getclicky.com/js" integrity="" crossorigin="anonymous" defer></script>
+
+
+<script src="https://cloudnine.github.io/javascripts/init.js" crossorigin="anonymous" defer></script>
+<script src="https://cloudnine.github.io/javascripts/medium-lightbox.js" crossorigin="anonymous" defer></script>
 
         
 
@@ -177,9 +167,9 @@
 </style>
 
 
-    </head>
+        </head>
     <body>
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
             <div class="container">
                     <a class="navbar-brand pr-2" href="https://cloudnine.github.io/">CLOUD NINE</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -218,25 +208,28 @@
                     </div>
             </div>
         </nav>
-        
+
+
 <header class="feature-image d-print-none"></header>
 
-        <div class="main">
+
+<main class="main">
             
 <div class="container mt-4 post">
     <h1>Emacs Highlighting Packages</h1><div class="mb-3 mt-2">
     <small>
-        <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 27, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>
+<strong>Author:
+Yuri Tricys
+
+</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 27, 2020&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> &nbsp;<a href="/tags/emacs">emacs</a>, <a href="/tags/learning-center">learning center</a>
     </small>
 </div>
 <div class="mt-4 mb-4 main-content">
         <h5>This post covers "Highlights" from the appearance section of my init. <br/><br/></h5>
-
 <ul>
 <li>Appearance
-
 <ul>
 <li>Entering and Exiting Emacs</li>
 <li>Default Appearance Customizations</li>
@@ -245,46 +238,41 @@
 <li>Hydras</li>
 <li>Appearance Hydra
 <br/></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h5>Preamble</h5>
-
 <p class= "p-news">Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
 know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts y date from
 oldest to newest.</p>
-
 <p class = "p-news">In the last emacs <a href= "https://cloudnine.github.io/science/2020-02-22-emacs-themes/" target="_blank">post</a> I covered lines 914 - 1031. This post
 covers lines 1031 - 1110. Include the lines for anyone that wants to patch together my entire init from start to finish. The lines won't always match up because I take stuff out when I'm my init.</p>
-
 <p class= "p-news">Highlight packages just the ones I grouped as such for simplicity. They go in an appearance hydra that I will post in a minute.</p>
-
 <h5>Highlight Numbers</h5>
-
 <p class= "p-news">Adds some syntax highlighting just for numbers. Use case: you have a doc with numbers everywhere and you want to see them contrasted against text. </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">highlight-numbers</span>
 <span style="color:#a2f">:commands</span> <span style="color:#b8860b">highlight-numbers-mode</span>
-)<span style="color:#080;font-style:italic">;end highight numbers</span>
-<span style="color:#080;font-style:italic">; Highlight-identifiers</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+)<span style="color:#080;font-style:italic">;end highight numbers</span>
+<span style="color:#080;font-style:italic">; Highlight-identifiers</span>
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Rainbow Identifiers and Delimiters</h5>
-
 <p class= "p-news">Delimiters is a must use that highlights brackets with different colours. Identifiers is an alternate syntax highlighting
 to try out on code. I didn't use it yet.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -295,29 +283,33 @@ to try out on code. I didn't use it yet.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">rainbow-identifiers</span>
 <span style="color:#a2f">:commands</span> <span style="color:#b8860b">rainbow-identifiers-mode</span>
-)<span style="color:#080;font-style:italic">;end rainbow identifiers</span>
-<span style="color:#080;font-style:italic">;Highlight Delimiters</span>
+)<span style="color:#080;font-style:italic">;end rainbow identifiers</span>
+<span style="color:#080;font-style:italic">;Highlight Delimiters</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">rainbow-delimiters</span>
 <span style="color:#a2f">:commands</span> <span style="color:#b8860b">rainbow-delimiters-mode</span>
 <span style="color:#a2f">:hook</span>(
 (<span style="color:#b8860b">prog-mode</span> <span style="color:#666">.</span> <span style="color:#b8860b">rainbow-delimiters-mode</span>)
 (<span style="color:#b8860b">text-mode</span> <span style="color:#666">.</span> <span style="color:#b8860b">rainbow-delimiters-mode</span>)
-)<span style="color:#080;font-style:italic">;end hook</span>
-)<span style="color:#080;font-style:italic">;end rainbow-delimiters</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+)<span style="color:#080;font-style:italic">;end hook</span>
+)<span style="color:#080;font-style:italic">;end rainbow-delimiters</span>
 
+
+
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Rainbow Mode</h5>
-
 <p class= "p-news">Highlights Hex colours in corresponding hex colour. Use it a lot.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
@@ -327,76 +319,76 @@ to try out on code. I didn't use it yet.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Show Hex Color Codes</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Show Hex Color Codes</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">rainbow-mode</span>
 <span style="color:#a2f">:commands</span> <span style="color:#b8860b">rainbow-mode</span>
 <span style="color:#a2f">:diminish</span>
 <span style="color:#a2f">:hook</span> (
 (<span style="color:#b8860b">web-mode</span> <span style="color:#666">.</span> <span style="color:#b8860b">rainbow-mode</span>)
 (<span style="color:#b8860b">css-mode</span> <span style="color:#666">.</span> <span style="color:#b8860b">rainbow-mode</span>)
-)<span style="color:#080;font-style:italic">;end hook</span>
-)<span style="color:#080;font-style:italic">;end rainbow-mode</span></code></pre></td></tr></table>
+)<span style="color:#080;font-style:italic">;end hook</span>
+)<span style="color:#080;font-style:italic">;end rainbow-mode</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><br/></p>
-
+</div><br/>
 <h5>Syntax and Font</h5>
-
 <p class= "p-news">Defaults you need somewhere.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Highlight Syntax</span>
-(<span style="color:#b8860b">global-font-lock-mode</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">; Highlight current line</span>
-<span style="color:#080;font-style:italic">;(global-hl-line-mode 1)</span>
-<span style="color:#080;font-style:italic">;maximum font decoration</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">font-lock-maximum-decoration</span> <span style="color:#800">t</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
-
-<h5>Highlight Parentheses</h5>
-
-<p class= "p-news">Rainbow Identifiers maybe has this covered.</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Highlight Parenthesis</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Highlight Syntax</span>
+(<span style="color:#b8860b">global-font-lock-mode</span> <span style="color:#800">t</span>)
+<span style="color:#080;font-style:italic">; Highlight current line</span>
+<span style="color:#080;font-style:italic">;(global-hl-line-mode 1)</span>
+<span style="color:#080;font-style:italic">;maximum font decoration</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">font-lock-maximum-decoration</span> <span style="color:#800">t</span>)
+
+</code></pre></td></tr></table>
+</div>
+</div><br/>
+<h5>Highlight Parentheses</h5>
+<p class= "p-news">Rainbow Identifiers maybe has this covered.</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;Highlight Parenthesis</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">highlight-parentheses</span>
 <span style="color:#a2f">:config</span>
 (<span style="color:#b8860b">show-paren-mode</span> <span style="color:#800">t</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">show-paren-style</span> <span style="color:#b8860b">&#39;mixed</span>)
 <span style="color:#666">&#39;</span>(<span style="color:#b8860b">kept-old-versions</span> <span style="color:#666">0</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">show-paren-delay</span> <span style="color:#666">0</span>)
-)<span style="color:#080;font-style:italic">;end highlight parenthesis</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+)<span style="color:#080;font-style:italic">;end highlight parenthesis</span>
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Indent Guides and Volatile Things</h5>
-
 <p class= "p-news">Indent guides highlights indents, good for python and all code. BVolatile things is so far whatever flagged removal.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -416,38 +408,38 @@ to try out on code. I didn't use it yet.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Highlight Indent Guides</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Highlight Indent Guides</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">highlight-indent-guides</span>
 <span style="color:#a2f">:diminish</span>
 <span style="color:#a2f">:commands</span> <span style="color:#b8860b">highlight-indent-guides-mode</span>
 <span style="color:#a2f">:custom</span>
-<span style="color:#080;font-style:italic">;(highlight-indent-guides-auto-enabled t)</span>
+<span style="color:#080;font-style:italic">;(highlight-indent-guides-auto-enabled t)</span>
 (<span style="color:#b8860b">highlight-indent-guides-responsive</span> <span style="color:#800">t</span>)
 (<span style="color:#b8860b">highlight-indent-guides-method</span> <span style="color:#b8860b">&#39;character</span>)
 <span style="color:#a2f">:hook</span>
 (<span style="color:#b8860b">prog-mode</span>  <span style="color:#666">.</span> <span style="color:#b8860b">highlight-indent-guides-mode</span>)
-) <span style="color:#080;font-style:italic">; end indent-guides</span>
+) <span style="color:#080;font-style:italic">; end indent-guides</span>
 
-<span style="color:#080;font-style:italic">;Highlight Volatile Things ?</span>
+<span style="color:#080;font-style:italic">;Highlight Volatile Things ?</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">volatile-highlights</span>
 <span style="color:#a2f">:diminish</span>
 <span style="color:#a2f">:commands</span> <span style="color:#b8860b">volatile-highlights-mode</span>
-<span style="color:#080;font-style:italic">;:hook</span>
-<span style="color:#080;font-style:italic">;(after-init . volatile-highlights-mode)</span>
+<span style="color:#080;font-style:italic">;:hook</span>
+<span style="color:#080;font-style:italic">;(after-init . volatile-highlights-mode)</span>
 <span style="color:#a2f">:custom-face</span>
-(<span style="color:#b8860b">vhl/default-face</span> ((<span style="color:#800">nil</span> (<span style="color:#a2f">:foreground</span> <span style="color:#b44">&#34;#FF3333&#34;</span> <span style="color:#a2f">:background</span> <span style="color:#b44">&#34;#FFCDCD&#34;</span>)))))<span style="color:#080;font-style:italic">;end volatile highlites</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+(<span style="color:#b8860b">vhl/default-face</span> ((<span style="color:#800">nil</span> (<span style="color:#a2f">:foreground</span> <span style="color:#b44">&#34;#FF3333&#34;</span> <span style="color:#a2f">:background</span> <span style="color:#b44">&#34;#FFCDCD&#34;</span>)))))<span style="color:#080;font-style:italic">;end volatile highlites</span>
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5> Fill Column Indicator</h5>
-
 <p class= "p-news">Cool. I use it all the time to figure out where I am on the page. </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -458,29 +450,29 @@ to try out on code. I didn't use it yet.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Highlight column edge</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Highlight column edge</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">fill-column-indicator</span>
 <span style="color:#a2f">:commands</span> <span style="color:#b8860b">fill-column-indicator-mode</span>
 <span style="color:#a2f">:config</span>
-<span style="color:#080;font-style:italic">;to change the color</span>
+<span style="color:#080;font-style:italic">;to change the color</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">fci-rule-color</span> <span style="color:#b44">&#34;#111122&#34;</span>)
-<span style="color:#080;font-style:italic">;( set fci-rule-use-dashes nil)</span>
+<span style="color:#080;font-style:italic">;( set fci-rule-use-dashes nil)</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">fci-rule-width</span> <span style="color:#666">1</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">fci-rule-color</span> <span style="color:#b44">&#34;darkblue&#34;</span>)
 <span style="color:#a2f">:diminish</span>
-)<span style="color:#080;font-style:italic">;end fill column indicator</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+)<span style="color:#080;font-style:italic">;end fill column indicator</span>
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Beacon</h5>
-
 <p class= "p-news">Cool flashy hello cursor when you jump around. </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -495,27 +487,30 @@ to try out on code. I didn't use it yet.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;highlight cursor when jump window/buffer</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;highlight cursor when jump window/buffer</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">beacon</span>
 <span style="color:#a2f">:diminish</span>
 <span style="color:#a2f">:commands</span> <span style="color:#b8860b">beacon-mode</span>
 <span style="color:#a2f">:init</span>
 (<span style="color:#b8860b">beacon-mode</span> <span style="color:#666">1</span>)
 <span style="color:#a2f">:config</span>
-<span style="color:#080;font-style:italic">;; only flash on window/buffer changes...</span>
+<span style="color:#080;font-style:italic">;; only flash on window/buffer changes...</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">beacon-blink-when-window-changes</span> <span style="color:#800">t</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">beacon-blink-when-window-scrolls</span> <span style="color:#800">nil</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">beacon-blink-when-point-moves</span> <span style="color:#800">nil</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">beacon-blink-duration</span> <span style="color:#666">.2</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">beacon-blink-delay</span> <span style="color:#666">.2</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">beacon-size</span> <span style="color:#666">20</span>)
-)<span style="color:#080;font-style:italic">;end beacon</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+)<span style="color:#080;font-style:italic">;end beacon</span>
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>That's all for this post. See you in the next one.</h5>
 
 
@@ -557,8 +552,7 @@ to try out on code. I didn't use it yet.</p>
         </span>
     </div>
     <div class="fa-inverse text-center"><small>Print</small></div>
-</a></div>
-    </div><div id="disqus_thread"></div>
+</a></div><div id="disqus_thread"></div>
 <script type="text/javascript">
 
 (function() {
@@ -575,7 +569,8 @@ to try out on code. I didn't use it yet.</p>
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
-</div><div class="sidebar d-print-none d-none d-xl-block">
+</div>                      
+</div>                          <div class="sidebar d-print-none d-none d-xl-block">
     
 <h2 class ="center">Meet The Author</h2>
 
@@ -700,6 +695,11 @@ to try out on code. I didn't use it yet.</p>
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
+        <a href='https://cloudnine.github.io/categories/music/' class="nav-link">
+        music
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
         <a href='https://cloudnine.github.io/categories/philosophy/' class="nav-link">
         philosophy
         <span class="badge badge-pill badge-secondary">1</span>
@@ -780,13 +780,13 @@ to try out on code. I didn't use it yet.</p>
         <span class="badge badge-pill badge-secondary">5</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
-        emacs-functions
-        <span class="badge badge-pill badge-secondary">4</span>
-        </a>
-        
         <a href='https://cloudnine.github.io/tags/music/' class="nav-link">
         music
+        <span class="badge badge-pill badge-secondary">5</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
+        emacs-functions
         <span class="badge badge-pill badge-secondary">4</span>
         </a>
         
@@ -924,8 +924,9 @@ to try out on code. I didn't use it yet.</p>
     
 </div>
 
-        </div>
-         <footer class="mt-auto footer d-print-none">
+         </main>
+        <footer class="mt-auto footer d-print-none">
+           
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-xl-3">
@@ -943,7 +944,7 @@ work with.
                     </div>
 
                     <div class="col-md-4 col-xl-3">
-                        <h5>Copyright</h5>
+                        <h5></h5>
 © 2019 - <script>document.write(Date().split` `[3])</script> Yuri Tricys
 
                     </div>
@@ -957,19 +958,9 @@ work with.
                 </div>
             </div>
         </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src= ".js"></script>
-
-
-<script src= "https://cloudnine.github.io/javascripts/medium-lightbox.js"></script>
-<script src= "https://cloudnine.github.io/javascripts/init_science.js"></script>
-
-
 
 <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101236333);</script>
 <script async src='//static.getclicky.com/js'></script>
 
-
-    </body>
+</body>
 </html>

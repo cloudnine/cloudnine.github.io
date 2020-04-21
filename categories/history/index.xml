@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>History on Cloud Nine</title>
+    <title>history on Cloud Nine</title>
     <link>https://cloudnine.github.io/categories/history/</link>
-    <description>Recent content in History on Cloud Nine</description>
+    <description>Recent content in history on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright</copyright>
     <lastBuildDate>Sat, 28 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/categories/history/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +17,7 @@
       <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/books/2020-03-28-american-financier/</guid>
-      <description>J.P. Morgan: celebrated, powerfully unambiguous, oligarchically connected, pillar of American history. The man with the bushy furrowed brows, pudgy fat nose, and bulging adams apple. As a school boy, he was infirm, aloof, and disliked. As a business titan his stubby fingers horned on every corner of gilded America. He built the railway to the west. When Edison dumped Tesla on the street with a shovel - less a year or two of salary - Morgan picked him up and put him back in the money.</description>
+      <description>J.P. Morgan: celebrated, powerfully unambiguous, oligarchically connected, pillar of American history. The man with the bushyfurrowed brows, pudgy fat nose, and bulging adams apple. As a school boy, he was infirm, aloof, and disliked. As a business titan his stubby fingers horned onevery corner of gilded America. He built the railway to the west. When Edison dumped Tesla on the street with a shovel - less a year or two of salary - Morganpicked him up and put him back in the money.</description>
     </item>
     
   </channel>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Links on Cloud Nine</title>
@@ -6,7 +6,6 @@
     <description>Recent content in Links on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright</copyright>
     <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/categories/links/index.xml" rel="self" type="application/rss+xml" />
@@ -35,7 +34,8 @@ Grumpy Economist
 Vox
 Zauzel 100
 Zero Hedge
-Naked Capitalism</description>
+Naked Capitalism
+</description>
     </item>
     
     <item>
@@ -53,7 +53,8 @@ OECD
 UN Data
 World Bank
 Stats Canada
-25 million outdated data sets from google</description>
+25 million outdated data sets from google
+</description>
     </item>
     
   </channel>

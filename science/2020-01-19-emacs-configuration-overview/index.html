@@ -2,46 +2,56 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Cloud Nine" />
-<meta name="copyright" content="Copyright" />
+<meta name="copyright" content='Copyright &copy; 2019 - 2020 by Yuri Tricys  All rights reserved.' />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
 <meta name="yandex-verification" content="7cb55c3432ff9fc7" />
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
+<meta name="description" content="The Where, What, and Why of My Emacs Configuration"/>
+<title>Emacs Configuration Overview</title>
+<meta property="article:author" content="Yuri Tricys" />
+<link rel="canonical" href="https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/">
 
 
-<meta name="description" content="Below are some notes covering among other things why I got into Emacs, where I got my version, and how my configuration is organized. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or Sublime Text are awesome, and offer also great selections of unique packages. Atom, for example, has some super useful snippet packages. You can convert them into Yasnippet format (an Emacs snippet package), but it&#39;s a hassle.">
 
-<meta property="og:title" content="Emacs Configuration Overview" />
-<meta property="og:description" content="The Where, What, and Why of My Emacs Configuration" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/" /><meta property="article:published_time" content="2020-01-19T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-01-19T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Configuration Overview"/>
-<meta name="twitter:description" content="The Where, What, and Why of My Emacs Configuration"/>
+
+
+
+
+
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:title" content="Emacs Configuration Overview">
 <meta property="og:image:type" content="image/jpg" />
 
-
-<meta property="og:image" content="https://cloudnine.github.io/images/science/pleiades.jpg">
-<meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/pleiades.jpg">
-
-
-<meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
+<meta property="og:image" content="images/science/pleiades.jpg">
+<meta property="og:image:secure_url" content="images/science/pleiades.jpg">
+<meta property="og:description" content="The Where, What, and Why of My Emacs Configuration">
 <meta property="og:site_name" content="Cloud Nine Blog.">
-
+<meta property="og:url" content="https://cloudnine.github.io/" />
 <meta property="og:type" content="blog">
-
-<title>Emacs Configuration Overview | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
 
 <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
 <link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<meta property="og:title" content="Emacs Configuration Overview" />
+<meta property="og:description" content="The Where, What, and Why of My Emacs Configuration" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/" />
+<meta property="article:published_time" content="2020-01-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-19T00:00:00+00:00" /><meta property="og:site_name" content="Cloud Nine" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs Configuration Overview"/>
+<meta name="twitter:description" content="The Where, What, and Why of My Emacs Configuration"/>
+
+
 
 <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD&#43;dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -52,39 +62,19 @@
         
         
 
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.ea5d6b1a95bc28f9856027f41c46ec57ee1b84d89f9aab3e7e7026b816781f83.css" integrity="sha256-6l1rGpW8KPmFYCf0HEbsV&#43;4bhNifmqs&#43;fnAmuBZ4H4M="  />
 
-<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.60e5f69e5fbc3c868e7a5e4a21dcb8b46da65825a899b6c0bdcb952c45c5969e.css" integrity="sha256-YOX2nl&#43;8PIaOel5KIdy4tG2mWCWombbAvcuVLEXFlp4="  />
 
-<script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath:[['\\(','\\)']],
-    displayMath: [ ['$$','$$'], ['\[','\]'] ],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-           extensions: ["tex2math.js","TeX/noErrors.js","TeX/noUndefined.js",
-             "TeX/AMSmath.js","TeX/AMSsymbols.js"]}
-  }
-  });
-  MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
 
-  MathJax.Hub.Config({
-  
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-  });
-</script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X&#43;965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH&#43;8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM&#43;B07jRM" crossorigin="anonymous" defer></script>
+<script src="//static.getclicky.com/js" integrity="" crossorigin="anonymous" defer></script>
+
+
+<script src="https://cloudnine.github.io/javascripts/init.js" crossorigin="anonymous" defer></script>
+<script src="https://cloudnine.github.io/javascripts/medium-lightbox.js" crossorigin="anonymous" defer></script>
 
         
 
@@ -177,9 +167,9 @@
 </style>
 
 
-    </head>
+        </head>
     <body>
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
             <div class="container">
                     <a class="navbar-brand pr-2" href="https://cloudnine.github.io/">CLOUD NINE</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -218,17 +208,22 @@
                     </div>
             </div>
         </nav>
-        
+
+
 <header class="feature-image d-print-none"></header>
 
-        <div class="main">
+
+<main class="main">
             
 <div class="container mt-4 post">
     <h1>Emacs Configuration Overview</h1><div class="mb-3 mt-2">
     <small>
-        <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Jan 19, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/about-the-author/'>about-the-author</a>, <a href='/tags/economics/'>economics</a>, <a href='/tags/text-editors/'>text-editors</a>, <a href='/tags/learning-center/'>learning-center</a>
+<strong>Author:
+Yuri Tricys
+
+</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Jan 19, 2020&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> &nbsp;<a href="/tags/about-the-author">about the author</a>, <a href="/tags/economics">economics</a>, <a href="/tags/emacs">emacs</a>, <a href="/tags/learning-center">learning center</a>, <a href="/tags/text-editors">text editors</a>
     </small>
 </div>
 <div class="mt-4 mb-4 main-content">
@@ -237,15 +232,12 @@ organized. As mentioned before, other text editors in use today, like <a href="h
 href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ Idea</a>, or <a href="https://www.sublimetext.com/" target="_blank">Sublime
 Text</a> are awesome, and offer also great selections of unique packages. Atom, for example, has some super useful snippet packages. You can
 convert them into Yasnippet format (an Emacs snippet package), but it's a hassle. So there are a lot of reasons not to use Emacs. </p>
-
 <p class="p-news">
 Having said that, and despite the fact Emacs is written in the <a href="https://en.wikipedia.org/wiki/Satire" target="_blank">widely
 used</a> Elisp language, I use it and promote it. Here's why. Emacs has an incredibly clean feel. Properly configured, it's simple,
 unencumbered text with all the function of an IDE and more. Plus, it's old sKool, with a capital K.
 </p>
-
 <h3>Why </h3>
-
 <p class="p-news"> I first got into Emacs in 2013. After five or six years of part-time college in sciences and arts, and many
 years in industry in a variety of positions, including business owner, I went back to university in 2009 to finish my bachelors degree.
 Having finished Adam Smith's <a href="https://en.wikipedia.org/wiki/The_Wealth_of_Nations" target="_blank">"The Wealth of Nations,"</a> but
@@ -254,14 +246,12 @@ General Theory of Employment, Interest And Money"</a> I majored in economics. As
 href="https://economics.ubc.ca/" target="_blank">The Vancouver School of Economics</a> was excellent, on the data and programming side our
 courses disappointingly veered away from computer science. While at one point we were introduced to the R GUI, in general we were taught
 Stata, and I did most of my work with Excel, Word, or Open Office. </p>
-
 <p class="p-news"> After graduation, I left the Economics Department. My passion for economics was (and still is)
 alive. But, as much as you can love it for its beauty - and I do - a university is an ugly thing. Nothing had changed. If the earth were to be 'flat'
 today, the university would promote it. The irony is that in our world both progress and degeneration are born from the same profit making
 sham. I went on my way. A year after graduation a former professor contacted me and offered research work. Hungry for among other things
 knowledge, I ended up back in the jaws of the beast.
 </p>
-
 <p class="p-news">
 After signing the contract, I spent a month wading through theory. Elusively shallow waters turned deep. I needed guidance. For better
 and worse, that's what I got. My director agreed to a budget for supervision. I had been digging around <a
@@ -273,14 +263,12 @@ href="https://enec.ethz.ch/people/person-detail.html?persid=169504" target="_bla
 Rutherford's work, and when I saw it again beneath a GAMS thread post, I contacted him. Renger's price was out of my range, but someone
 anyway wanted to make it happen, because the directors spoke and I had my supervisor.
 </p>
-
 <p class="p-news">
 Renger gave me what I was looking for, the computational side of economics. He showed me <a href="https://www.gnu.org/software/emacs/"
 target="_blank">Emacs</a>, <a
 href="https://github.com/emacs-ess/ESS/tree/2812b85880807e5da35dbf2e69fc1b577f2ad7f4" target="_blank">Emacs Speaks Statistics</a> (ESS),
 the Emacs alternative to the R GUI or Rstudio, and the Emacs <a href="https://github.com/ShiroTakeda/gams-mode/tree/210bd355dd2075bde3fd76c880aa489a25a54cb5"
 target="_blank">GAMS package</a>, now available on <a href="https://melpa.org/#/" target="_blank">Melpa</a>.</p>
-
 <p class="p-news">
 Most of the work we did together was in GAMS, but to do it I had to get started with Emacs, and I had a lot of data modelling to get through before I
 would get to <a href="https://en.wikipedia.org/wiki/Computable_general_equilibrium" target="_blank">CGE</a>. I dropped everything I'd
@@ -293,9 +281,7 @@ but it was easier to find and fix missing observations in R. Actually, R is more
 would be perhaps more so Python), but Excel has its more frequently visited place. Microsoft Access, on the other hand, can be substituted
 out for something like MySQL at straight profit. If I had to do the same today, I'd use Mariadb through Emacs for database work.
 </p>
-
 <h3>Where </h3>
-
 <p class="p-news">
 I never did meet Renger, but even over Skype, and even bouncing questions back at me as a questions, he was great to work with. That said,
 he was a CGE guy and CGE is big deal that doesn't need a lot of Emacs. I don't know what it's like today, but back then his initialization
@@ -304,7 +290,6 @@ href="https://vigou3.gitlab.io/emacs-modified-windows/" target="_blank">version.
 Latex engine and an included R configuration. Still, if you want <a href="https://imagemagick.org/index.php" target="_blank">Image
 Magick</a> or <a href="https://github.com/politza/pdf-tools" target="_blank">PDF Tools</a> support, you'll want something else. I'll get to that.
 </p>
-
 <p class="p-news">
 The evolution of every Emacs configuration is too long of a story. It's a trial and error process. Emacs at its best is like an operating
 system in an operating system. You're building a car (well, a workshop) from second hand parts. You've got to find them, fit them, run them,
@@ -312,7 +297,6 @@ fix them, and make new ones when you need them. Everything is built in a variati
 language with a cool history, it's basically useless for anything other than programming theory or specialized <a
 href="https://en.wikipedia.org/wiki/Top-down_and_bottom-up_design" target="_blank">bottom-up</a> stuff like Emacs.
 </p>
-
 <p class="p-news">
 You can get from a blank initialization to a fully operational emacs installation without taking a single lisp course, but if I were
 to start again, I'd take a week or two and do a crash course in lisp. Now I'm not an expert programmer. I've so far covered too many
@@ -321,7 +305,6 @@ target="_blank">polymath</a>. But, after eight years of programming, I know a go
 href="https://en.wikipedia.org/wiki/Robert_J._Chassell" target="_blank">Robert J. Chassel's</a> <a
 href="https://www.gnu.org/software/emacs/manual/pdf/eintr.pdf" target="_blank">"An Introduction To Programming In Emacs Lisp" </a>
 is one such resource. A week in there will get any beginning Emacs enthusiast well ahead of the game.</p>
-
 <p class="p-news">
 Another one, for the advanced and
 ambitious lisp enthusiast, was written by the quite famous programmer, writer, and investor Paul Graham, founder of <a
@@ -330,14 +313,12 @@ href="https://www.ycombinator.com/" target="_blank">Ycombinator</a> one the incu
 can download essentially the same thing for free from his website <a href="https://sep.yimg.com/ty/cdn/paulgraham/onlisp.pdf?t=1564708198&"
 target="_blank">here</a>. Either way, a week in there will get you a great introduction to some foundational programming language theory through lisp.
 </p>
-
 <p class="p-news">
 Emacs configurations get hefty and drag on load time. There are ways around this. You can, for example, run Emacs as a server, in which case the process is always
 on and doesn't need to load when you start, or you can optimize the load time. Another way around is to use a Linux distro. A lot of Emacs
 packages are written for Unix and spawn a lot of processes, which slows things down on the Windows NTFS backed file system. If you're just
 starting out, Linux is anyway a headache well worth your time. But, if you're like me, a long time Windows user, and you want to get the
 most out of Emacs, you'll need a few resources.</p>
-
 <p class="p-news">
 <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux" target="_blank">Windows Subsystem Linux</a>, with <a
 href="https://www.virtualbox.org/" target="_blank">VirtualBox</a> or <a
@@ -348,21 +329,18 @@ gotten around to running graphics programs on it. I'm still using Emacs on the W
 one-time cost, it's not slow enough for me to notice. Even with a reasonable amount of RAM however any work on data with more than a million
 records would be more efficiently done on the Linux system.
 </p>
-
 <p class="p-news">
 There are a few other things you'll want to do to speed up Emacs on Windows. One is to defer load times in your initialization with
 <code>:commands</code>, <code>:defer</code>, <code>:bind</code>, <code>:mode</code>, or <code>:interpreter</code>, from Emacs <a
 href="https://jwiegley.github.io/use-package/keywords/" target="_blank">Use-Package</a>, another does the same with conditional calls to
 code chunks in your configuration, using something like <code>(eval-after-load 'example-mode '(require 'setup-example-mode)).</code>
 </p>
-
 <p class="p-news">
 Also, if you're using <a href="https://orgmode.org/worg/org-contrib/babel/" target="_blank">Org-babel</a> in your initialization to separate
 the code you want to send to the interpreter or compiler from text you want to write or send to the web, you'll want to remember the more
 separate chunks you tangle the slower the load time. Ideally you would have two versions of your init file, one with lots of organized code
 chunks for folding and editing easily, and another with one code chunk to optimize load time.
 </p>
-
 <p class="p-news">
 Finally, if you're running Emacs on a windows system, you'll want to run a version that is compiled for windows. This will give you access
 to useful linux libraries. Today, I'm using a window's compiled version I found on the web last year that supports <a
@@ -370,73 +348,88 @@ href="https://github.com/politza/pdf-tools" target="_blank">PDF Tools</a> and <a
 href="https://imagemagick.org/index.php" target="_blank">Image Magick</a>. Way Cool.
 The next section is from the notes I took about the Emacs version I found. I don't know the guy who compiled it. I just use his distro.
 </p>
-
 <h4> Windows Emacs Installation</h4>
-
 <ul>
-<li><p class="p-news">a better emacs exe is compiled with imagemagick support, pdftools support, and other libraries sourced
-from Mingw64. &ldquo;XPM JPEG TIFF GIF PNG RSVG IMAGEMAGICK SOUND NOTIFY ACL GNUTLS LIBXML2 ZLIB TOOLKIT_SCROLL_BARS MODULES THREADS LCMS2&rdquo;</p></li>
-<li><p class="p-news">Here are the links to his version and patches:</p></li>
+<li>
+<p class="p-news">a better emacs exe is compiled with imagemagick support, pdftools support, and other libraries sourced
+from Mingw64. "XPM JPEG TIFF GIF PNG RSVG IMAGEMAGICK SOUND NOTIFY ACL GNUTLS LIBXML2 ZLIB TOOLKIT_SCROLL_BARS MODULES THREADS LCMS2"</p>
+</li>
+<li>
+<p class="p-news">Here are the links to his version and patches:</p>
+</li>
 </ul>
-
 <p class="p-news">
 <a href="https://github.com/m-parashar/emax64/releases" target="_blank">https://github.com/m-parashar/emax64/releases</a> <br/>
-
-<a href="https://ntemacs.sourceforge.io/" target="_blank">https://ntemacs.sourceforge.io/</a> <br/>
-
-<a href="https://github.com/m-parashar/emax64" target="_blank">https://github.com/m-parashar/emax64</a> <br/>
-
-<a href="https://github.com/m-parashar/emax64/releases" target="_blank">https://github.com/m-parashar/emax64/releases</a> <br/>
-
+<p><a href="https://ntemacs.sourceforge.io/" target="_blank"><a href="https://ntemacs.sourceforge.io/">https://ntemacs.sourceforge.io/</a></a> <br/></p>
+<p><a href="https://github.com/m-parashar/emax64" target="_blank"><a href="https://github.com/m-parashar/emax64">https://github.com/m-parashar/emax64</a></a> <br/></p>
+<p><a href="https://github.com/m-parashar/emax64/releases" target="_blank"><a href="https://github.com/m-parashar/emax64/releases">https://github.com/m-parashar/emax64/releases</a></a> <br/></p>
 </p>
-
 <ul>
-<li><p class="p-news">I prefer to install to c://, as that is what I&rsquo;m used to.</p></li>
+<li>
+<p class="p-news">I prefer to install to c://, as that is what I'm used to.</p>
+</li>
 </ul>
-
 <h4>Description</h4>
-
 <ul>
-<li><p class="p-news">64-bit Windows build of Emacs 26.2 final release.</p></li>
-<li><p class="p-news">Patched with ImageMagick 7 support. Binaries and libs included.</p></li>
-<li><p class="p-news">PDF-TOOLS (epdfinfo.exe) included. [emax.7z package]</p></li>
-<li><p class="p-news">Features[1]: &ldquo;XPM JPEG TIFF GIF PNG RSVG IMAGEMAGICK SOUND NOTIFY ACL GNUTLS LIBXML2 ZLIB TOOLKIT_SCROLL_BARS MODULES THREADS LCMS2&rdquo;</p></li>
-<li><p class="p-news">Optimized clean build. Options[2]: &ldquo;&ndash;without-compress-install &ndash;without-dbus &ndash;with-modules &lsquo;CFLAGS= -O2 -g3&rsquo;&rdquo;</p></li>
-<li><p class="p-news">Built and tested on a clean Windows 10 system.</p></li>
-<li><p class="p-news">addpm modified to not create/update any registry HOME entries. It only creates shortcuts as it should.</p></li>
+<li>
+<p class="p-news">64-bit Windows build of Emacs 26.2 final release.</p>
+</li>
+<li>
+<p class="p-news">Patched with ImageMagick 7 support. Binaries and libs included.</p>
+</li>
+<li>
+<p class="p-news">PDF-TOOLS (epdfinfo.exe) included. [emax.7z package]</p>
+</li>
+<li>
+<p class="p-news">Features[1]: "XPM JPEG TIFF GIF PNG RSVG IMAGEMAGICK SOUND NOTIFY ACL GNUTLS LIBXML2 ZLIB TOOLKIT_SCROLL_BARS MODULES THREADS LCMS2"</p>
+</li>
+<li>
+<p class="p-news">Optimized clean build. Options[2]: "--without-compress-install --without-dbus --with-modules 'CFLAGS= -O2 -g3'"</p>
+</li>
+<li>
+<p class="p-news">Built and tested on a clean Windows 10 system.</p>
+</li>
+<li>
+<p class="p-news">addpm modified to not create/update any registry HOME entries. It only creates shortcuts as it should.</p>
+</li>
 </ul>
-
 <p class="p-news">
 [1] C-h v system-configuration-features <br/>
 [2] C-h v system-configuration-options
 </p>
-
 <h4>Installation:</h4>
-
 <ul>
-<li><p class="p-news">Unpack the 7z binary archive, preferably in C:\ root directory.</p></li>
-<li><p class="p-news">Double-click the addpm.exe file in emax64\bin to create/update shortcuts.</p>
-<h4>Recommended:</h4></li>
-<li><p class="p-news">installation instructions for msys2, which provides a bash shell and other linux tools for windows, and is
-a windows programming tool <a href="http://www.msys2.org" target="_blank"><a href="http://www.msys2.org/">http://www.msys2.org/</a></a> </p></li>
-<li><p class="p-news">Install MSYS2 [64-bit: <a href="http://repo.msys2.org/distrib/msys2-x86_64-latest.exe"
-target="_blank"><a href="http://repo.msys2.org/distrib/msys2-x86_64-latest.exe">http://repo.msys2.org/distrib/msys2-x86_64-latest.exe</a></a>]</p></li>
-<li><p class="p-news">Download and unpack emax.7z into your HOME directory, usually C:\Users&lt;username&gt;\AppData\Roaming</p></li>
-<li><p class="p-news">emax.7z is an environment to make your Emacs experience a little more tolerable on Windows.</p></li>
-<li><p class="p-news">It includes a barebones dotfile along with BusyBox 64-bit, some MinGW packages, SSH, W3M, Aspell, and other GNU tools to help you start right away.</p></li>
+<li>
+<p class="p-news">Unpack the 7z binary archive, preferably in C:\ root directory.</p>
+</li>
+<li>
+<p class="p-news">Double-click the addpm.exe file in emax64\bin to create/update shortcuts.</p>
+</li>
 </ul>
-
+<h4>Recommended:</h4>
+- <p class="p-news">installation instructions for msys2, which provides a bash shell and other linux tools for windows, and is
+a windows programming tool <a href="http://www.msys2.org" target="_blank">http://www.msys2.org/</a> </p>
+- <p class="p-news">Install MSYS2 [64-bit: <a href="http://repo.msys2.org/distrib/msys2-x86_64-latest.exe"
+target="_blank">http://repo.msys2.org/distrib/msys2-x86_64-latest.exe</a>]</p>
+- <p class="p-news">Download and unpack emax.7z into your HOME directory, usually C:\Users\<username>\AppData\Roaming</p>
+- <p class="p-news">emax.7z is an environment to make your Emacs experience a little more tolerable on Windows.</p>
+- <p class="p-news">It includes a barebones dotfile along with BusyBox 64-bit, some MinGW packages, SSH, W3M, Aspell, and other GNU tools to help you start right away.</p>
 <h4>Sources:</h4>
-
 <ul>
-<li><p class="p-news">GNU Emacs sources, patched as described above, are available as a separate src archive.</p></li>
-<li><p class="p-news">All the other binaries included in the emax64 and emax archives are unmodified and distributed as is.</p></li>
-<li><p class="p-news"> Their sources can be downloaded from MSYS2/MinGW servers: <a href="http://repo.msys2.org/mingw/sources/" target="_blank"><a href="http://repo.msys2.org/mingw/sources/">http://repo.msys2.org/mingw/sources/</a></a></p></li>
-<li><p class="p-news"> BusyBox (Windows) sources can be obtained from here: <a href="https://frippery.org/files/busybox/" target="_blank"><a href="https://frippery.org/files/busybox/">https://frippery.org/files/busybox/</a></a></p></li>
+<li>
+<p class="p-news">GNU Emacs sources, patched as described above, are available as a separate src archive.</p>
+</li>
+<li>
+<p class="p-news">All the other binaries included in the emax64 and emax archives are unmodified and distributed as is.</p>
+</li>
+<li>
+<p class="p-news"> Their sources can be downloaded from MSYS2/MinGW servers: <a href="http://repo.msys2.org/mingw/sources/" target="_blank">http://repo.msys2.org/mingw/sources/</a></p>
+</li>
+<li>
+<p class="p-news"> BusyBox (Windows) sources can be obtained from here: <a href="https://frippery.org/files/busybox/" target="_blank">https://frippery.org/files/busybox/</a></p>
+</li>
 </ul>
-
 <h3>What</h3>
-
 <p class="p-news">
 An Emacs initialization file calls and configures packages (libraries). Like any other program resources need to be loaded into namespaces in order, so
 they can be found when called on. One of the more popular Emacs packages is called <a href="https://orgmode.org/" target="_blank">Org-Mode.</a>
@@ -447,7 +440,6 @@ One of the libraries affiliated with Org-mode is called Org-babel.  It enables l
 sent to the interpreter or compiler. With Org-babel you can put your entire initialization file into one .org file.
 You can then fold it to navigate it, interpret it, or compile it for faster loading.
 </p>
-
 <p class="p-news">
 The following elisp sets up my initialization file, which is called on line ~129 with <code>org-babel-load-file</code>.
 This goes in the .emacs file in your root emacs directory.  I'll add to the comments before the code to explain
@@ -455,11 +447,10 @@ them. I'm a fan of both GPL and BSD, but it's hard to argue with the merits of t
 configuration <a href="http://www.wtfpl.net/about/" target="_blank">here</a>. Pardon any overkill, I was in a hurry so I just threw Parashar's .emacs together
 with mine. They were essentially the same, with some minor syntax changes.
 </p>
-
 <h4>.emacs</h4>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  4
@@ -636,29 +627,32 @@ with mine. They were essentially the same, with some minor syntax changes.
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">175
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">176
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">177
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">178
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">179
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#080;font-style:italic">;; Copyright (C) 2019 Manish Parashar</span>
-<span style="color:#080;font-style:italic">;; Author: Manish Parashar</span>
-<span style="color:#080;font-style:italic">;; This program is free software. You can redistribute it and/or modify it under</span>
-<span style="color:#080;font-style:italic">;; the terms of the DWTFYWT Public License, version 2 as</span>
-<span style="color:#080;font-style:italic">;; published by Sam Hocevar.</span>
-<span style="color:#080;font-style:italic">;; This program is distributed in the hope that it will be useful, but WITHOUT</span>
-<span style="color:#080;font-style:italic">;; ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span>
-<span style="color:#080;font-style:italic">;; FOR A PARTICULAR PURPOSE.</span>
-<span style="color:#080;font-style:italic">;; You should have received a copy of the DWTFYWT Public</span>
-<span style="color:#080;font-style:italic">;; License along with this program. If not, see http://www.wtfpl.net/.</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">
+<span style="color:#080;font-style:italic">;; Copyright (C) 2019 Manish Parashar</span>
+<span style="color:#080;font-style:italic">;; Author: Manish Parashar</span>
+<span style="color:#080;font-style:italic">;; This program is free software. You can redistribute it and/or modify it under</span>
+<span style="color:#080;font-style:italic">;; the terms of the DWTFYWT Public License, version 2 as</span>
+<span style="color:#080;font-style:italic">;; published by Sam Hocevar.</span>
+<span style="color:#080;font-style:italic">;; This program is distributed in the hope that it will be useful, but WITHOUT</span>
+<span style="color:#080;font-style:italic">;; ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS</span>
+<span style="color:#080;font-style:italic">;; FOR A PARTICULAR PURPOSE.</span>
+<span style="color:#080;font-style:italic">;; You should have received a copy of the DWTFYWT Public</span>
+<span style="color:#080;font-style:italic">;; License along with this program. If not, see http://www.wtfpl.net/.</span>
 
-<span style="color:#080;font-style:italic">;comment on off to debug init (you&#39;ll need this or the restart with debugger to find missing brackets in your init file.)</span>
-<span style="color:#080;font-style:italic">;(setq debug-on-error t)</span>
+<span style="color:#080;font-style:italic">;comment on off to debug init (you&#39;ll need this or the restart with debugger to find missing brackets in your init file.)</span>
+<span style="color:#080;font-style:italic">;(setq debug-on-error t)</span>
 
-<span style="color:#080;font-style:italic">;; Set repositories</span>
+<span style="color:#080;font-style:italic">;; Set repositories</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;package</span>)
 (<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">package-enable-at-startup</span> <span style="color:#800">nil</span>)
 
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">load-prefer-newer</span> <span style="color:#800">t</span>)
 
-<span style="color:#080;font-style:italic">;; these are the archives emacs will use to find packages. There&#39;s overkill here.</span>
+<span style="color:#080;font-style:italic">;; these are the archives emacs will use to find packages. There&#39;s overkill here.</span>
 (<span style="color:#a2f">unless</span> (<span style="color:#b8860b">assoc-default</span> <span style="color:#b44">&#34;melpa&#34;</span> <span style="color:#b8860b">package-archives</span>)
 (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;package-archives</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;melpa&#34;</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;http://melpa.org/packages/&#34;</span>) <span style="color:#800">t</span>))
 
@@ -682,24 +676,24 @@ with mine. They were essentially the same, with some minor syntax changes.
 
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">package-user-dir</span> <span style="color:#b44">&#34;~/emax/elpa&#34;</span>)
 
-<span style="color:#080;font-style:italic">;I don&#39;t think you need this. Apparently will not for sure when version 27 is out.</span>
+<span style="color:#080;font-style:italic">;I don&#39;t think you need this. Apparently will not for sure when version 27 is out.</span>
 (<span style="color:#b8860b">package-initialize</span>)
-<span style="color:#080;font-style:italic">; some better initialization code here: https://github.com/jwiegley/use-package/issues/219</span>
+<span style="color:#080;font-style:italic">; some better initialization code here: https://github.com/jwiegley/use-package/issues/219</span>
 
-<span style="color:#080;font-style:italic">;; Install dependencies</span>
+<span style="color:#080;font-style:italic">;; Install dependencies</span>
 (<span style="color:#a2f">unless</span> (<span style="color:#a2f">and</span> (<span style="color:#b8860b">package-installed-p</span> <span style="color:#b8860b">&#39;delight</span>)
                (<span style="color:#b8860b">package-installed-p</span> <span style="color:#b8860b">&#39;use-package</span>))
 (<span style="color:#b8860b">package-refresh-contents</span>)
 (<span style="color:#b8860b">package-install</span> <span style="color:#b8860b">&#39;delight</span> <span style="color:#800">t</span>)
 (<span style="color:#b8860b">package-install</span> <span style="color:#b8860b">&#39;use-package</span> <span style="color:#800">t</span>))
 (<span style="color:#a2f">setq-default</span>
-<span style="color:#080;font-style:italic">; use-package-always-defer t</span>
- <span style="color:#b8860b">use-package-always-ensure</span> <span style="color:#800">t</span>
+<span style="color:#080;font-style:italic">; use-package-always-defer t</span>
+ <span style="color:#b8860b">use-package-always-ensure</span> <span style="color:#b8860b">t</span>
  <span style="color:#b8860b">use-package-verbose</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">;(use-package auto-compile)</span>
+<span style="color:#080;font-style:italic">;(use-package auto-compile)</span>
 
-<span style="color:#080;font-style:italic">;; Default value for :pin in each use-package.</span>
-<span style="color:#080;font-style:italic">;(setq use-package-always-pin &#34;melpa-stable&#34;)</span>
+<span style="color:#080;font-style:italic">;; Default value for :pin in each use-package.</span>
+<span style="color:#080;font-style:italic">;(setq use-package-always-pin &#34;melpa-stable&#34;)</span>
 
 (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b44">&#34;c:/emacs/emax/elpa/auto-compile&#34;</span>)
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;packed</span>)
@@ -710,10 +704,10 @@ with mine. They were essentially the same, with some minor syntax changes.
 (<span style="color:#a2f">eval-when-compile</span>
   (<span style="color:#a2f">setq</span> <span style="color:#b8860b">use-package-expand-minimally</span> <span style="color:#b8860b">byte-compile-current-file</span>))
 
-<span style="color:#080;font-style:italic">; to use the package you just ensured was installed, use-package, you require here</span>
+<span style="color:#080;font-style:italic">; to use the package you just ensured was installed, use-package, you require here</span>
 (<span style="color:#a2f">eval-when-compile</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;use-package</span>))
-<span style="color:#080;font-style:italic">;use-package is worth the read, see link in this post.</span>
+<span style="color:#080;font-style:italic">;use-package is worth the read, see link in this post.</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">diminish</span>
 <span style="color:#a2f">:config</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;diminish</span>))
@@ -722,22 +716,22 @@ with mine. They were essentially the same, with some minor syntax changes.
 <span style="color:#a2f">:config</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;bind-key</span>))
 
-<span style="color:#080;font-style:italic">; you need this to use org-babel</span>
-<span style="color:#080;font-style:italic">;; Use latest Org</span>
+<span style="color:#080;font-style:italic">; you need this to use org-babel</span>
+<span style="color:#080;font-style:italic">;; Use latest Org</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">org</span>
-<span style="color:#080;font-style:italic">;:pin org</span>
+<span style="color:#080;font-style:italic">;:pin org</span>
 <span style="color:#a2f">:ensure</span> <span style="color:#b8860b">org-plus-contrib</span>
 <span style="color:#a2f">:demand</span> <span style="color:#800">t</span>)
 
-<span style="color:#080;font-style:italic">; defvar, define some path variables so emacs can find libraries when it loads</span>
-<span style="color:#080;font-style:italic">; I load paths into variables, so I can change them easily in one place if I change computers.</span>
+<span style="color:#080;font-style:italic">; defvar, define some path variables so emacs can find libraries when it loads</span>
+<span style="color:#080;font-style:italic">; I load paths into variables, so I can change them easily in one place if I change computers.</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">emax-root</span> (<span style="color:#00a000">concat</span> (<span style="color:#00a000">expand-file-name</span> <span style="color:#b44">&#34;~&#34;</span>) <span style="color:#b44">&#34;/emax&#34;</span>))
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">emax-bin</span> (<span style="color:#00a000">concat</span> <span style="color:#b8860b">emax-root</span> <span style="color:#b44">&#34;/bin&#34;</span>))
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">emax-bin64</span> (<span style="color:#00a000">concat</span> <span style="color:#b8860b">emax-root</span> <span style="color:#b44">&#34;/bin64&#34;</span>))
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">emax-mingw64</span> (<span style="color:#00a000">concat</span> <span style="color:#b8860b">emax-root</span> <span style="color:#b44">&#34;/mingw64/bin&#34;</span>))
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">emax-lisp</span> (<span style="color:#00a000">concat</span> <span style="color:#b8860b">emax-root</span> <span style="color:#b44">&#34;/lisp&#34;</span>))
 
-<span style="color:#080;font-style:italic">; add the variables to paths</span>
+<span style="color:#080;font-style:italic">; add the variables to paths</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">exec-path</span> (<span style="color:#00a000">cons</span> <span style="color:#b8860b">emax-bin</span> <span style="color:#b8860b">exec-path</span>))
 (<span style="color:#b8860b">setenv</span> <span style="color:#b44">&#34;PATH&#34;</span> (<span style="color:#00a000">concat</span> <span style="color:#b8860b">emax-bin</span> <span style="color:#b44">&#34;;&#34;</span> (<span style="color:#b8860b">getenv</span> <span style="color:#b44">&#34;PATH&#34;</span>)))
 
@@ -749,39 +743,39 @@ with mine. They were essentially the same, with some minor syntax changes.
 
 (<span style="color:#b8860b">setenv</span> <span style="color:#b44">&#34;PATH&#34;</span> (<span style="color:#00a000">concat</span> <span style="color:#b44">&#34;C:\\msys64\\usr\\bin;C:\\msys64\\mingw64\\bin;&#34;</span> (<span style="color:#b8860b">getenv</span> <span style="color:#b44">&#34;PATH&#34;</span>)))
 
-<span style="color:#080;font-style:italic">; except for here, when I do not load paths into variables</span>
+<span style="color:#080;font-style:italic">; except for here, when I do not load paths into variables</span>
 (<span style="color:#a2f">dolist</span> (<span style="color:#b8860b">dir</span> <span style="color:#666">&#39;</span>(<span style="color:#b44">&#34;~/emax/&#34;</span> <span style="color:#b44">&#34;~/emax/bin/&#34;</span> <span style="color:#b44">&#34;~/emax/bin64/&#34;</span> <span style="color:#b44">&#34;~/emax/mingw64/bin/&#34;</span> <span style="color:#b44">&#34;~/emax/lisp/&#34;</span> <span style="color:#b44">&#34;~/emax/elpa/&#34;</span>))
 (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b8860b">dir</span>))
 
 (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b44">&#34;c:/emacs/lisp/&#34;</span>)
-<span style="color:#080;font-style:italic">;;the pre-installed packages</span>
+<span style="color:#080;font-style:italic">;;the pre-installed packages</span>
 (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b44">&#34;c:/emacs/site-lisp/&#34;</span>)
 
 (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b44">&#34;c:/emacs/share/26.2/lisp&#34;</span>)
 
-<span style="color:#080;font-style:italic">; overkill this as much as possible, never works anyway</span>
+<span style="color:#080;font-style:italic">; overkill this as much as possible, never works anyway</span>
 (<span style="color:#b8860b">set-language-environment</span> <span style="color:#b8860b">&#39;utf-8</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">locale-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
 (<span style="color:#b8860b">set-default-coding-systems</span> <span style="color:#b8860b">&#39;utf-8</span>)
 (<span style="color:#b8860b">set-terminal-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
 (<span style="color:#b8860b">prefer-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
 
-<span style="color:#080;font-style:italic">;; Tangle configuration. It&#39;s important to use one of these lines. That org file is your inititialization.</span>
-<span style="color:#080;font-style:italic">;(org-babel-load-file (expand-file-name &#34;~/emax/emax.org&#34;))</span>
+<span style="color:#080;font-style:italic">;; Tangle configuration. It&#39;s important to use one of these lines. That org file is your inititialization.</span>
+<span style="color:#080;font-style:italic">;(org-babel-load-file (expand-file-name &#34;~/emax/emax.org&#34;))</span>
 (<span style="color:#b8860b">org-babel-load-file</span> <span style="color:#b44">&#34;c:/emacs/emax/emax.org&#34;</span>)
 
 <span style="color:#b8860b">For</span> <span style="color:#b8860b">you</span> <span style="color:#b8860b">memory</span> <span style="color:#b8860b">guys.</span>
-<span style="color:#080;font-style:italic">;;(garbage-collect))</span>
+<span style="color:#080;font-style:italic">;;(garbage-collect))</span>
 
-<span style="color:#080;font-style:italic">;;; init.el ends here</span>
+<span style="color:#080;font-style:italic">;;; init.el ends here</span>
 
-<span style="color:#080;font-style:italic">; I don&#39;t remember how this got here. I think emacs adds it now. package-selected-packages is a list of installed packages,</span>
-<span style="color:#080;font-style:italic">; that&#39;s either useful or problematic when you call list-packages.</span>
+<span style="color:#080;font-style:italic">; I don&#39;t remember how this got here. I think emacs adds it now. package-selected-packages is a list of installed packages,</span>
+<span style="color:#080;font-style:italic">; that&#39;s either useful or problematic when you call list-packages.</span>
 (<span style="color:#b8860b">custom-set-variables</span>
- <span style="color:#080;font-style:italic">;; custom-set-variables was added by Custom.</span>
- <span style="color:#080;font-style:italic">;; If you edit it by hand, you could mess it up, so be careful.</span>
- <span style="color:#080;font-style:italic">;; Your init file should contain only one such instance.</span>
- <span style="color:#080;font-style:italic">;; If there is more than one, they won&#39;t work right.</span>
+ <span style="color:#080;font-style:italic">;; custom-set-variables was added by Custom.</span>
+ <span style="color:#080;font-style:italic">;; If you edit it by hand, you could mess it up, so be careful.</span>
+ <span style="color:#080;font-style:italic">;; Your init file should contain only one such instance.</span>
+ <span style="color:#080;font-style:italic">;; If there is more than one, they won&#39;t work right.</span>
  <span style="color:#666">&#39;</span>(<span style="color:#b8860b">package-selected-packages</span>
    (<span style="color:#a2f">quote</span>
    (<span style="color:#b8860b">magit</span> <span style="color:#b8860b">yasnippet-snippets</span> <span style="color:#b8860b">yaml-mode</span> <span style="color:#b8860b">writegood-mode</span> <span style="color:#b8860b">wordnut</span>
@@ -810,22 +804,21 @@ with mine. They were essentially the same, with some minor syntax changes.
 <span style="color:#b8860b">all-the-icons-dired</span> <span style="color:#b8860b">ag</span> <span style="color:#b8860b">academic-phrases</span> <span style="color:#b8860b">ac-php</span>
 <span style="color:#b8860b">ac-html-bootstrap</span>))))
 (<span style="color:#b8860b">custom-set-faces</span>
- <span style="color:#080;font-style:italic">;; custom-set-faces was added by Custom.</span>
- <span style="color:#080;font-style:italic">;; If you edit it by hand, you could mess it up, so be careful.</span>
- <span style="color:#080;font-style:italic">;; Your init file should contain only one such instance.</span>
- <span style="color:#080;font-style:italic">;; If there is more than one, they won&#39;t work right.</span>
- )<span style="color:#080;font-style:italic">;</span></code></pre></td></tr></table>
+ <span style="color:#080;font-style:italic">;; custom-set-faces was added by Custom.</span>
+ <span style="color:#080;font-style:italic">;; If you edit it by hand, you could mess it up, so be careful.</span>
+ <span style="color:#080;font-style:italic">;; Your init file should contain only one such instance.</span>
+ <span style="color:#080;font-style:italic">;; If there is more than one, they won&#39;t work right.</span>
+ )<span style="color:#080;font-style:italic">;</span>
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<p class="p-news">
+</div><p class="p-news">
 The code above is the opening to the init file. Mine is a big one. The rest of it is stored in my case here: <code>"c:/emacs/emax/emax.org"</code>
 (whereas the section above is stored here: <code>"C:/emacs/.emacs"</code>). "emax.org" is folded origami style. In later posts, I want to go
 through quickly each of the sections. So next I'm going to introduce you to the folded headings. When the document is open in Emacs, you hit
 'tab' with the cursor ('point') over the section heading and it will toggle the contents to drop down.
 </p>
-
 <h3> MY INITIALIZATION FILE</h3>
-
 <ul>
 <li>SET UP, DEFAULTS, AND CUSTOMIZATION</li>
 <li>APPEARANCE</li>
@@ -874,31 +867,27 @@ through quickly each of the sections. So next I'm going to introduce you to the 
 <li>Yaml Mode</li>
 <li>Git</li>
 </ul>
-
-<p><p class="p-news">
-While most of the above is operational, there are a lot of areas I&rsquo;ve set up but haven&rsquo;t gotten around to testing. Basically, whenever I do
-any work I keep notes explaining how I did it. In most cases, I&rsquo;ve taken those notes and turned out some Elisp to automate the process, but
-in quite a few cases I haven&rsquo;t gotten around to it and haven&rsquo;t had to use it again. But, it&rsquo;s 80% done, and when I get the time I&rsquo;ll finish
+<p class="p-news">
+While most of the above is operational, there are a lot of areas I've set up but haven't gotten around to testing. Basically, whenever I do
+any work I keep notes explaining how I did it. In most cases, I've taken those notes and turned out some Elisp to automate the process, but
+in quite a few cases I haven't gotten around to it and haven't had to use it again. But, it's 80% done, and when I get the time I'll finish
 it off, optimized it, and publish it to the net. Below is an image of the same, for good measure.</p>
-<br/></p>
-
-<p><div class="col-12">
+<br/>
+<div class="col-12">
 <div class="mobile-iframe">
 <figure class="zoom-effect">
 <div class="aspectRatioPlaceholder" >
 <div class="aspect-ratio-fill" style="padding-bottom: 75.78947368421053%;"></div> <!-- end aspect ratio fill -->
 <!--config overview-->
-<img src="init.jpg" align="center" title="Tricys Emacs Initialization" class="inline-image img-zoom" width="100%" alt="emacs initialization" data-width="1920" data-height="1080"></p>
-
-<p></div> <!-- end aspect ratio -->
+<img src="init.jpg" align="center" title="Tricys Emacs Initialization" class="inline-image img-zoom" width="100%" alt="emacs initialization" data-width="1920" data-height="1080">
+</div> <!-- end aspect ratio -->
 </figure> <!-- end figure -->
 </div> <!--mobile-iframe-->
 <br/>
-</div> <!-- end col --></p>
-
-<p><br/>
-<h5>Until Next Time&hellip;</h5>
-<br/></p>
+</div> <!-- end col -->
+<br/>
+<h5>Until Next Time...</h5>
+<br/>
 
 
         <div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-19-emacs-configuration-overview%2f&text=Emacs%20Configuration%20Overview&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
@@ -939,8 +928,7 @@ it off, optimized it, and publish it to the net. Below is an image of the same, 
         </span>
     </div>
     <div class="fa-inverse text-center"><small>Print</small></div>
-</a></div>
-    </div><div id="disqus_thread"></div>
+</a></div><div id="disqus_thread"></div>
 <script type="text/javascript">
 
 (function() {
@@ -957,7 +945,8 @@ it off, optimized it, and publish it to the net. Below is an image of the same, 
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
-</div><div class="sidebar d-print-none d-none d-xl-block">
+</div>                      
+</div>                          <div class="sidebar d-print-none d-none d-xl-block">
     
 <h2 class ="center">Meet The Author</h2>
 
@@ -1082,6 +1071,11 @@ it off, optimized it, and publish it to the net. Below is an image of the same, 
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
+        <a href='https://cloudnine.github.io/categories/music/' class="nav-link">
+        music
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
         <a href='https://cloudnine.github.io/categories/philosophy/' class="nav-link">
         philosophy
         <span class="badge badge-pill badge-secondary">1</span>
@@ -1162,13 +1156,13 @@ it off, optimized it, and publish it to the net. Below is an image of the same, 
         <span class="badge badge-pill badge-secondary">5</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
-        emacs-functions
-        <span class="badge badge-pill badge-secondary">4</span>
-        </a>
-        
         <a href='https://cloudnine.github.io/tags/music/' class="nav-link">
         music
+        <span class="badge badge-pill badge-secondary">5</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
+        emacs-functions
         <span class="badge badge-pill badge-secondary">4</span>
         </a>
         
@@ -1306,8 +1300,9 @@ it off, optimized it, and publish it to the net. Below is an image of the same, 
     
 </div>
 
-        </div>
-         <footer class="mt-auto footer d-print-none">
+         </main>
+        <footer class="mt-auto footer d-print-none">
+           
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-xl-3">
@@ -1325,7 +1320,7 @@ work with.
                     </div>
 
                     <div class="col-md-4 col-xl-3">
-                        <h5>Copyright</h5>
+                        <h5></h5>
 © 2019 - <script>document.write(Date().split` `[3])</script> Yuri Tricys
 
                     </div>
@@ -1339,19 +1334,9 @@ work with.
                 </div>
             </div>
         </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src= ".js"></script>
-
-
-<script src= "https://cloudnine.github.io/javascripts/medium-lightbox.js"></script>
-<script src= "https://cloudnine.github.io/javascripts/init_science.js"></script>
-
-
 
 <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101236333);</script>
 <script async src='//static.getclicky.com/js'></script>
 
-
-    </body>
+</body>
 </html>

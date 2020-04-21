@@ -2,46 +2,56 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Cloud Nine" />
-<meta name="copyright" content="Copyright" />
+<meta name="copyright" content='Copyright &copy; 2019 - 2020 by Yuri Tricys  All rights reserved.' />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
 <meta name="yandex-verification" content="7cb55c3432ff9fc7" />
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
+<meta name="description" content="Configuration for porting an Emacs installation to a new computer (with windows compiled Emacs version)"/>
+<title>Emacs Installation and Defaults</title>
+<meta property="article:author" content="Yuri Tricys" />
+<link rel="canonical" href="https://cloudnine.github.io/science/2020-01-24-emacs-installation-and-defaults/">
 
 
-<meta name="description" content="Directly below are the subheadings to the first main heading of my initialization file, see my last post Emacs Configuration Overview. I&#39;ll go through the lines of code in order, but remember, the line numbers you see in Hugo&#39;s code block css styling are relative to the code on this page not the emacs initialization file [Hugo is the Static Content Management System based on GO I used to make this blog].">
 
-<meta property="og:title" content="Emacs Installation and Defaults" />
-<meta property="og:description" content="Configuration for porting an Emacs installation to a new computer (with windows compiled Emacs version)" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-01-24-emacs-installation-and-defaults/" /><meta property="article:published_time" content="2020-01-24T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-01-24T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Installation and Defaults"/>
-<meta name="twitter:description" content="Configuration for porting an Emacs installation to a new computer (with windows compiled Emacs version)"/>
+
+
+
+
+
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:title" content="Emacs Installation and Defaults">
 <meta property="og:image:type" content="image/jpg" />
 
-
-<meta property="og:image" content="https://cloudnine.github.io/images/science/hcf.jpg">
-<meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/hcf.jpg">
-
-
-<meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
+<meta property="og:image" content="images/science/hcf.jpg">
+<meta property="og:image:secure_url" content="images/science/hcf.jpg">
+<meta property="og:description" content="Configuration for porting an Emacs installation to a new computer (with windows compiled Emacs version)">
 <meta property="og:site_name" content="Cloud Nine Blog.">
-
+<meta property="og:url" content="https://cloudnine.github.io/" />
 <meta property="og:type" content="blog">
-
-<title>Emacs Installation and Defaults | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
 
 <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
 <link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<meta property="og:title" content="Emacs Installation and Defaults" />
+<meta property="og:description" content="Configuration for porting an Emacs installation to a new computer (with windows compiled Emacs version)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-01-24-emacs-installation-and-defaults/" />
+<meta property="article:published_time" content="2020-01-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-24T00:00:00+00:00" /><meta property="og:site_name" content="Cloud Nine" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs Installation and Defaults"/>
+<meta name="twitter:description" content="Configuration for porting an Emacs installation to a new computer (with windows compiled Emacs version)"/>
+
+
 
 <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD&#43;dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -52,39 +62,19 @@
         
         
 
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.ea5d6b1a95bc28f9856027f41c46ec57ee1b84d89f9aab3e7e7026b816781f83.css" integrity="sha256-6l1rGpW8KPmFYCf0HEbsV&#43;4bhNifmqs&#43;fnAmuBZ4H4M="  />
 
-<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.60e5f69e5fbc3c868e7a5e4a21dcb8b46da65825a899b6c0bdcb952c45c5969e.css" integrity="sha256-YOX2nl&#43;8PIaOel5KIdy4tG2mWCWombbAvcuVLEXFlp4="  />
 
-<script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath:[['\\(','\\)']],
-    displayMath: [ ['$$','$$'], ['\[','\]'] ],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-           extensions: ["tex2math.js","TeX/noErrors.js","TeX/noUndefined.js",
-             "TeX/AMSmath.js","TeX/AMSsymbols.js"]}
-  }
-  });
-  MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
 
-  MathJax.Hub.Config({
-  
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-  });
-</script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X&#43;965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH&#43;8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM&#43;B07jRM" crossorigin="anonymous" defer></script>
+<script src="//static.getclicky.com/js" integrity="" crossorigin="anonymous" defer></script>
+
+
+<script src="https://cloudnine.github.io/javascripts/init.js" crossorigin="anonymous" defer></script>
+<script src="https://cloudnine.github.io/javascripts/medium-lightbox.js" crossorigin="anonymous" defer></script>
 
         
 
@@ -177,9 +167,9 @@
 </style>
 
 
-    </head>
+        </head>
     <body>
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
             <div class="container">
                     <a class="navbar-brand pr-2" href="https://cloudnine.github.io/">CLOUD NINE</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -218,17 +208,22 @@
                     </div>
             </div>
         </nav>
-        
+
+
 <header class="feature-image d-print-none"></header>
 
-        <div class="main">
+
+<main class="main">
             
 <div class="container mt-4 post">
     <h1>Emacs Installation and Defaults</h1><div class="mb-3 mt-2">
     <small>
-        <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Jan 24, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/windows/'>windows</a>, <a href='/tags/changing-computers/'>changing-computers</a>
+<strong>Author:
+Yuri Tricys
+
+</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Jan 24, 2020&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> &nbsp;<a href="/tags/changing-computers">changing computers</a>, <a href="/tags/emacs">emacs</a>, <a href="/tags/learning-center">learning center</a>, <a href="/tags/windows">windows</a>
     </small>
 </div>
 <div class="mt-4 mb-4 main-content">
@@ -241,12 +236,9 @@ this blog]. There are roughly 760 lines of code beneath these subheadings (all o
 href="https://encyclopedia2.thefreedictionary.com/Quick+and+dirty+code" target="_blank">quick and dirty</a>). I'll go through the relevant
 stuff and skip anything redundant in this post and the next few. Each post will have the following reference headings, and then the
 breakdown and write-up below that.  </p>
-
 <h3>Beginning of Initialization File <br/><br/></h3>
-
 <ul>
 <li>SET UP, DEFAULTS, AND CUSTOMIZATION
-
 <ul>
 <li>Necessary Adjustments when you set-up on a new computer</li>
 <li>Paths to Update on Change</li>
@@ -261,21 +253,18 @@ breakdown and write-up below that.  </p>
 <li>Some New Key Bindings</li>
 <li>Popup, Pos-tip,Tooltip, Posframe</li>
 <li>Which Key</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p class="p-news">
 Oh yes, when I installed the dashboard package there was an option to choose a picture. That's when I named my Emacs configuration. Welcome
 to Poseidon the text editor.</p>
-
-<p><br/>
+<br/>
 <img src="poseidon.jpg" alt="emacs-initialization" align="center" title="Tricys Emacs Initialization" class="img" width="100%" />
 <br/>
 <br/>
-<h3>Necessary Adjustments when you set-up on a new computer</h3></p>
-
+<h3>Necessary Adjustments when you set-up on a new computer</h3>
 <h4>steps needed to get set-up on a new computer<br/><br/></h4>
-
 <ol>
 <li>install emacs</li>
 <li>install external executables</li>
@@ -289,34 +278,32 @@ paths, providing missing libraries, ensuring executables and missing library dep
 <li>to troubleshoot basic errors use emacs debugger, messages, and the restart-emacs package. Also, comment out org tangle blocks and
 initialize the init incrementally.</li>
 </ol>
-
 <h4>Paths to Update on Change</h4>
-
 <p class="p-news">
 Here paths to executables, libraries, and external urls are stored in variables. When you install Poseidon on a new system, or change a
 program or its location, change the path variable assignments here. Later in the code, usually in a use-package :config or a function the
 variables are called.
 </p>
-
 <p class="p-news">
 Oh, btw, before the path assignments is an org-tangle block, delineated by the org-mode elisp code on lines 2 and 4. Everything inside them is processed by emacs, everything outside is notes and text you can push to the web easily.
 </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#080;font-style:italic">;notes and code</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#080;font-style:italic">;notes and code</span>
 <span style="">#</span><span style="color:#b8860b">+begin_src</span> <span style="color:#b8860b">emacs-lisp</span>
-<span style="color:#080;font-style:italic">;emacs initialization code</span>
-<span style="">#</span><span style="color:#b8860b">+end_src</span></code></pre></td></tr></table>
+<span style="color:#080;font-style:italic">;emacs initialization code</span>
+<span style="">#</span><span style="color:#b8860b">+end_src</span>
+</code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -368,10 +355,13 @@ Oh, btw, before the path assignments is an org-tangle block, delineated by the o
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="">#</span><span style="color:#b8860b">+begin_src</span> <span style="color:#b8860b">emacs-lisp</span>
-<span style="color:#080;font-style:italic">; most of the executables I use from within emacs, except some security ones and some of the browsers</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">
+<span style="">#</span><span style="color:#b8860b">+begin_src</span> <span style="color:#b8860b">emacs-lisp</span>
+<span style="color:#080;font-style:italic">; most of the executables I use from within emacs, except some security ones and some of the browsers</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">xampp-p</span> <span style="color:#b44">&#34;.../xampp/xampp-control.exe&#34;</span>)
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">notepad++-p</span> <span style="color:#b44">&#34;.../Program Files/Notepad++/notepad++.exe&#34;</span>)
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">backup-init-p</span> <span style="color:#b44">&#34;.../emacs/emax/run-backup-init-silently.vbs&#34;</span>)
@@ -407,7 +397,7 @@ Oh, btw, before the path assignments is an org-tangle block, delineated by the o
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">ag-executable-p</span> <span style="color:#b44">&#34;.../emacs/ag/ag.exe&#34;</span>)
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">ispell-program-name-p</span> <span style="color:#b44">&#34;.../emacs/hunspell-1.3.2-3-w32-bin/bin/hunspell.exe&#34;</span>)
 
-<span style="color:#080;font-style:italic">;library paths</span>
+<span style="color:#080;font-style:italic">;library paths</span>
 
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">auto-yas-p</span> <span style="color:#b44">&#34;~/emax/elpa/auto-yasnippet-20190326.958/&#34;</span>)
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">yas-p</span> <span style="color:#b44">&#34;~/.emacs.d/elpa/yasnippet-20190724.1204/&#34;</span>)
@@ -421,19 +411,20 @@ Oh, btw, before the path assignments is an org-tangle block, delineated by the o
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">which-key-posframe-p</span> <span style="color:#b44">&#34;.../emacs/emax/elpa/which-key-posframe-20190427.1103/which-key-posframe.el&#34;</span>)
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">hydra-posframe-p</span> <span style="color:#b44">&#34;.../emacs/emax/elpa/hydra-posframe/&#34;</span>)
 
-<span style="">#</span><span style="color:#b8860b">+end_src</span></code></pre></td></tr></table>
+<span style="">#</span><span style="color:#b8860b">+end_src</span>
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><p class="p-news">
-So there&rsquo;s the first 130 lines or so of my init file (52 shown here plus the paths I didn&rsquo;t bother to paste in and some text). Btw, it
-doesn&rsquo;t matter where you store your stuff, as long as emacs knows where it is. In fact, that&rsquo;s the point of assigning the paths to
-variables. When your paths or path names change, you don&rsquo;t have to search the document for each path. Coming up are the function
+</div><p class="p-news">
+So there's the first 130 lines or so of my init file (52 shown here plus the paths I didn't bother to paste in and some text). Btw, it
+doesn't matter where you store your stuff, as long as emacs knows where it is. In fact, that's the point of assigning the paths to
+variables. When your paths or path names change, you don't have to search the document for each path. Coming up are the function
 declarations.
 </p>
 <br/>
 <br/>
-<h5>Until Next Time&hellip;</h5>
-<br/></p>
+<h5>Until Next Time...</h5>
+<br/>
 
 
         <div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-24-emacs-installation-and-defaults%2f&text=Emacs%20Installation%20and%20Defaults&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
@@ -474,8 +465,7 @@ declarations.
         </span>
     </div>
     <div class="fa-inverse text-center"><small>Print</small></div>
-</a></div>
-    </div><div id="disqus_thread"></div>
+</a></div><div id="disqus_thread"></div>
 <script type="text/javascript">
 
 (function() {
@@ -492,7 +482,8 @@ declarations.
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
-</div><div class="sidebar d-print-none d-none d-xl-block">
+</div>                      
+</div>                          <div class="sidebar d-print-none d-none d-xl-block">
     
 <h2 class ="center">Meet The Author</h2>
 
@@ -617,6 +608,11 @@ declarations.
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
+        <a href='https://cloudnine.github.io/categories/music/' class="nav-link">
+        music
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
         <a href='https://cloudnine.github.io/categories/philosophy/' class="nav-link">
         philosophy
         <span class="badge badge-pill badge-secondary">1</span>
@@ -697,13 +693,13 @@ declarations.
         <span class="badge badge-pill badge-secondary">5</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
-        emacs-functions
-        <span class="badge badge-pill badge-secondary">4</span>
-        </a>
-        
         <a href='https://cloudnine.github.io/tags/music/' class="nav-link">
         music
+        <span class="badge badge-pill badge-secondary">5</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
+        emacs-functions
         <span class="badge badge-pill badge-secondary">4</span>
         </a>
         
@@ -841,8 +837,9 @@ declarations.
     
 </div>
 
-        </div>
-         <footer class="mt-auto footer d-print-none">
+         </main>
+        <footer class="mt-auto footer d-print-none">
+           
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-xl-3">
@@ -860,7 +857,7 @@ work with.
                     </div>
 
                     <div class="col-md-4 col-xl-3">
-                        <h5>Copyright</h5>
+                        <h5></h5>
 © 2019 - <script>document.write(Date().split` `[3])</script> Yuri Tricys
 
                     </div>
@@ -874,16 +871,9 @@ work with.
                 </div>
             </div>
         </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src= ".js"></script>
-
-
-
 
 <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101236333);</script>
 <script async src='//static.getclicky.com/js'></script>
 
-
-    </body>
+</body>
 </html>

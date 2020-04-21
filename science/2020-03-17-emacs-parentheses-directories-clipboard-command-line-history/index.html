@@ -2,48 +2,56 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Cloud Nine" />
-<meta name="copyright" content="Copyright" />
+<meta name="copyright" content='Copyright &copy; 2019 - 2020 by Yuri Tricys  All rights reserved.' />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
 <meta name="yandex-verification" content="7cb55c3432ff9fc7" />
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
+<meta name="description" content="Emacs configuration with Parentheses Hydra, Directories Hydra, Clipboard, and Command Line History."/>
+<title>Emacs Parentheses, Directories, Clipboard, Command-Line-History</title>
+<meta property="article:author" content="Yuri Tricys" />
+<link rel="canonical" href="https://cloudnine.github.io/science/2020-03-17-emacs-parentheses-directories-clipboard-command-line-history/">
 
 
-<meta name="description" content="This post covers Parentheses, Directories, Clipboard, and Command Line History from the &#34;Default Operations&#34; section of my init.   Default Operations
- Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history  
-  Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for.">
 
-<meta property="og:title" content="Emacs Parentheses, Directories, Clipboard, Command-Line-History" />
-<meta property="og:description" content="Emacs configuration with Parentheses Hydra, Directories Hydra, Clipboard, and Command Line History." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-03-17-emacs-parentheses-directories-clipboard-command-line-history/" /><meta property="article:published_time" content="2020-03-17T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-03-17T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Parentheses, Directories, Clipboard, Command-Line-History"/>
-<meta name="twitter:description" content="Emacs configuration with Parentheses Hydra, Directories Hydra, Clipboard, and Command Line History."/>
+
+
+
+
+
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:title" content="Emacs Parentheses, Directories, Clipboard, Command-Line-History">
 <meta property="og:image:type" content="image/jpg" />
 
-
-<meta property="og:image" content="https://cloudnine.github.io/images/science/christian-bale.jpg">
-<meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/christian-bale.jpg">
-
-
-<meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
+<meta property="og:image" content="images/science/christian-bale.jpg">
+<meta property="og:image:secure_url" content="images/science/christian-bale.jpg">
+<meta property="og:description" content="Emacs configuration with Parentheses Hydra, Directories Hydra, Clipboard, and Command Line History.">
 <meta property="og:site_name" content="Cloud Nine Blog.">
-
+<meta property="og:url" content="https://cloudnine.github.io/" />
 <meta property="og:type" content="blog">
-
-<title>Emacs Parentheses, Directories, Clipboard, Command-Line-History | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
 
 <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
 <link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<meta property="og:title" content="Emacs Parentheses, Directories, Clipboard, Command-Line-History" />
+<meta property="og:description" content="Emacs configuration with Parentheses Hydra, Directories Hydra, Clipboard, and Command Line History." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-03-17-emacs-parentheses-directories-clipboard-command-line-history/" />
+<meta property="article:published_time" content="2020-03-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-17T00:00:00+00:00" /><meta property="og:site_name" content="Cloud Nine" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs Parentheses, Directories, Clipboard, Command-Line-History"/>
+<meta name="twitter:description" content="Emacs configuration with Parentheses Hydra, Directories Hydra, Clipboard, and Command Line History."/>
+
+
 
 <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD&#43;dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -54,39 +62,19 @@
         
         
 
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.ea5d6b1a95bc28f9856027f41c46ec57ee1b84d89f9aab3e7e7026b816781f83.css" integrity="sha256-6l1rGpW8KPmFYCf0HEbsV&#43;4bhNifmqs&#43;fnAmuBZ4H4M="  />
 
-<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.60e5f69e5fbc3c868e7a5e4a21dcb8b46da65825a899b6c0bdcb952c45c5969e.css" integrity="sha256-YOX2nl&#43;8PIaOel5KIdy4tG2mWCWombbAvcuVLEXFlp4="  />
 
-<script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath:[['\\(','\\)']],
-    displayMath: [ ['$$','$$'], ['\[','\]'] ],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-           extensions: ["tex2math.js","TeX/noErrors.js","TeX/noUndefined.js",
-             "TeX/AMSmath.js","TeX/AMSsymbols.js"]}
-  }
-  });
-  MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
 
-  MathJax.Hub.Config({
-  
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-  });
-</script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X&#43;965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH&#43;8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM&#43;B07jRM" crossorigin="anonymous" defer></script>
+<script src="//static.getclicky.com/js" integrity="" crossorigin="anonymous" defer></script>
+
+
+<script src="https://cloudnine.github.io/javascripts/init.js" crossorigin="anonymous" defer></script>
+<script src="https://cloudnine.github.io/javascripts/medium-lightbox.js" crossorigin="anonymous" defer></script>
 
         
 
@@ -179,9 +167,9 @@
 </style>
 
 
-    </head>
+        </head>
     <body>
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
             <div class="container">
                     <a class="navbar-brand pr-2" href="https://cloudnine.github.io/">CLOUD NINE</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -220,25 +208,29 @@
                     </div>
             </div>
         </nav>
-        
+
+
 <header class="feature-image d-print-none"></header>
 
-        <div class="main">
+
+<main class="main">
             
 <div class="container mt-4 post">
     <h1>Emacs Parentheses, Directories, Clipboard, Command-Line-History</h1><div class="mb-3 mt-2">
     <small>
-        <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Mar 17, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/emacs-hydras/'>emacs-hydras</a>
+<strong>Author:
+Yuri Tricys
+
+</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Mar 17, 2020&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> &nbsp;<a href="/tags/emacs">emacs</a>, <a href="/tags/emacs-hydras">emacs hydras</a>, <a href="/tags/learning-center">learning center</a>
     </small>
 </div>
 <div class="mt-4 mb-4 main-content">
         <h5>This post covers Parentheses, Directories, Clipboard, and Command Line History from the "Default Operations" section of my init. <br/><br/></h5>
-
 <ul>
-<li><p>Default Operations</p>
-
+<li>
+<p>Default Operations</p>
 <ul>
 <li>Moving the Cursor and Screen</li>
 <li>Make/kill/move windows frames buffers</li>
@@ -248,24 +240,18 @@
 <li>Clip board (kill ring)</li>
 <li>PDF tools and command line history</li>
 </ul>
-
-<p><br/></p></li>
+  <br/>
+</li>
 </ul>
-
 <h5>Preamble</h5>
-
 <p class= "p-news">Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
 know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts y date from
 oldest to newest.</p>
-
 <p class = "p-news">In the last emacs <a href="https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/"
 target="_blank">post</a> I covered lines 1377 - 1649. This post covers lines 1652 - 2003. I include the lines for anyone that wants
 to patch together the entire init from start to finish. The lines won't always match up because I take stuff out when I'm in the init.</p>
-
 <p class= "p-news"> </p>
-
 <h5>Parentheses</h5>
-
 <p class= "p-news">
 Skeleton pairs are included in Emacs. Configure them and you get two brackets of the types you specify with cursor in between when you
 insert one. Code below. The Smart Parentheses package follows. This hydra configuration is a little different than the others as the hydra
@@ -280,7 +266,7 @@ expand, which expands the region to everything within the brackets and I use tha
 </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -355,9 +341,13 @@ expand, which expands the region to everything within the brackets and I use tha
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">    <span style="color:#080;font-style:italic">;insert pairs</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+	<span style="color:#080;font-style:italic">;insert pairs</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">skeleton-pair</span> <span style="color:#800">t</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">skeleton-pair-on-word</span> <span style="color:#800">t</span>)
 (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;\(&#34;</span>   <span style="color:#b8860b">&#39;skeleton-pair-insert-maybe</span>)
@@ -367,76 +357,77 @@ expand, which expands the region to everything within the brackets and I use tha
 (<span style="color:#b8860b">bind-key</span>  <span style="color:#b44">&#34;\&#39;&#34;</span> <span style="color:#b8860b">&#39;skeleton-pair-insert-maybe</span>)
 (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;\&lt;&#34;</span>  <span style="color:#b8860b">&#39;skeleton-pair-insert-maybe</span>)
 
-<span style="color:#080;font-style:italic">;Smart Parentheses</span>
+<span style="color:#080;font-style:italic">;Smart Parentheses</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">smartparens</span>
 <span style="color:#a2f">:diminish</span> <span style="color:#b8860b">smartparens-mode</span>
 <span style="color:#a2f">:diminish</span> <span style="color:#b8860b">smartparens-strict-mode</span>
 <span style="color:#a2f">:after</span> <span style="color:#b8860b">hydra</span>
 <span style="color:#a2f">:commands</span> (<span style="color:#b8860b">web-mode</span> <span style="color:#b8860b">Parentheses_/body</span> <span style="color:#b8860b">smartparens-mode</span>)
 <span style="color:#a2f">:init</span>
-<span style="color:#080;font-style:italic">;define title generator function</span>
+<span style="color:#080;font-style:italic">;define title generator function</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">with-material</span> (<span style="color:#b8860b">icon</span> <span style="color:#b8860b">str</span> <span style="color:#a2f">&amp;rest</span> <span style="color:#b8860b">height</span> <span style="color:#b8860b">v-adjust</span>)
       (<span style="color:#b8860b">s-concat</span> (<span style="color:#b8860b">all-the-icons-material</span> <span style="color:#b8860b">icon</span> <span style="color:#a2f">:v-adjust</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">v-adjust</span> <span style="color:#666">0</span>) <span style="color:#a2f">:height</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">height</span> <span style="color:#666">1</span>)) <span style="color:#b44">&#34; &#34;</span> <span style="color:#b8860b">str</span>))
-<span style="color:#080;font-style:italic">;generate hydra title</span>
+<span style="color:#080;font-style:italic">;generate hydra title</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">parens-title</span> (<span style="color:#b8860b">with-material</span> <span style="color:#b44">&#34;code&#34;</span> <span style="color:#b44">&#34;Parentheses&#34;</span>))
 <span style="color:#a2f">:config</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;smartparens-config</span>)
 (<span style="color:#b8860b">smartparens-global-mode</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">smartparens-global-strict-mode</span> <span style="color:#666">0</span>)
 (<span style="color:#b8860b">show-smartparens-global-mode</span>)
-<span style="color:#080;font-style:italic">;generate hydra</span>
+<span style="color:#080;font-style:italic">;generate hydra</span>
 <span style="color:#a2f">:pretty-hydra</span>
-<span style="color:#080;font-style:italic">;pretty-hydra-define _Parentheses</span>
-( <span style="color:#b8860b">Parentheses_</span> (<span style="color:#a2f">:color</span> <span style="color:#b8860b">pink</span> <span style="color:#a2f">:quit-key</span> <span style="color:#b44">&#34;q&#34;</span> <span style="color:#a2f">:title</span> <span style="color:#b8860b">parens-title</span>)<span style="color:#080;font-style:italic">;end heads</span>
+<span style="color:#080;font-style:italic">;pretty-hydra-define _Parentheses</span>
+( <span style="color:#b8860b">Parentheses_</span> (<span style="color:#a2f">:color</span> <span style="color:#b8860b">pink</span> <span style="color:#a2f">:quit-key</span> <span style="color:#b44">&#34;q&#34;</span> <span style="color:#a2f">:title</span> <span style="color:#b8860b">parens-title</span>)<span style="color:#080;font-style:italic">;end heads</span>
 (<span style="color:#b44">&#34;Moving&#34;</span>
          ((<span style="color:#b44">&#34;a&#34;</span> <span style="color:#b8860b">sp-beginning-of-sexp</span> <span style="color:#b44">&#34;Beginning&#34;</span>)
-          (<span style="color:#b44">&#34;e&#34;</span> <span style="color:#b8860b">sp-end-of-sexp</span>  <span style="color:#b44">&#34;End&#34;</span>   )
-          (<span style="color:#b44">&#34;f&#34;</span> <span style="color:#b8860b">sp-forward-sexp</span> <span style="color:#b44">&#34;Forward&#34;</span>)
-          (<span style="color:#b44">&#34;b&#34;</span> <span style="color:#b8860b">sp-backward-sexp</span> <span style="color:#b44">&#34;Backward&#34;</span>)
-          (<span style="color:#b44">&#34;n&#34;</span> <span style="color:#b8860b">sp-down-sexp</span> <span style="color:#b44">&#34;Down&#34;</span>)
-          (<span style="color:#b44">&#34;N&#34;</span> <span style="color:#b8860b">sp-backward-down-sexp</span> <span style="color:#b44">&#34;Bw Down&#34;</span>)
-          (<span style="color:#b44">&#34;p&#34;</span> <span style="color:#b8860b">sp-up-sexp</span> <span style="color:#b44">&#34;Up&#34;</span> )
-          (<span style="color:#b44">&#34;P&#34;</span> <span style="color:#b8860b">sp-backward-up-sexp</span> <span style="color:#b44">&#34;Bw Up&#34;</span>))
+	      (<span style="color:#b44">&#34;e&#34;</span> <span style="color:#b8860b">sp-end-of-sexp</span>  <span style="color:#b44">&#34;End&#34;</span>   )
+	      (<span style="color:#b44">&#34;f&#34;</span> <span style="color:#b8860b">sp-forward-sexp</span> <span style="color:#b44">&#34;Forward&#34;</span>)
+	      (<span style="color:#b44">&#34;b&#34;</span> <span style="color:#b8860b">sp-backward-sexp</span> <span style="color:#b44">&#34;Backward&#34;</span>)
+	      (<span style="color:#b44">&#34;n&#34;</span> <span style="color:#b8860b">sp-down-sexp</span> <span style="color:#b44">&#34;Down&#34;</span>)
+	      (<span style="color:#b44">&#34;N&#34;</span> <span style="color:#b8860b">sp-backward-down-sexp</span> <span style="color:#b44">&#34;Bw Down&#34;</span>)
+	      (<span style="color:#b44">&#34;p&#34;</span> <span style="color:#b8860b">sp-up-sexp</span> <span style="color:#b44">&#34;Up&#34;</span> )
+	      (<span style="color:#b44">&#34;P&#34;</span> <span style="color:#b8860b">sp-backward-up-sexp</span> <span style="color:#b44">&#34;Bw Up&#34;</span>))
 <span style="color:#b44">&#34;Slurping &amp; barfing&#34;</span>
               ((<span style="color:#b44">&#34;h&#34;</span> <span style="color:#b8860b">sp-backward-slurp-sexp</span> <span style="color:#b44">&#34;Bw Slurp&#34;</span>)
-          (<span style="color:#b44">&#34;H&#34;</span> <span style="color:#b8860b">sp-backward-barf-sexp</span> <span style="color:#b44">&#34;Bw Barf&#34;</span>)
-          (<span style="color:#b44">&#34;l&#34;</span> <span style="color:#b8860b">sp-forward-slurp-sexp</span> <span style="color:#b44">&#34;Slurp&#34;</span>)
-          (<span style="color:#b44">&#34;L&#34;</span> <span style="color:#b8860b">sp-forward-barf-sexp</span> <span style="color:#b44">&#34;Barf&#34;</span>))
+	      (<span style="color:#b44">&#34;H&#34;</span> <span style="color:#b8860b">sp-backward-barf-sexp</span> <span style="color:#b44">&#34;Bw Barf&#34;</span>)
+	      (<span style="color:#b44">&#34;l&#34;</span> <span style="color:#b8860b">sp-forward-slurp-sexp</span> <span style="color:#b44">&#34;Slurp&#34;</span>)
+	      (<span style="color:#b44">&#34;L&#34;</span> <span style="color:#b8860b">sp-forward-barf-sexp</span> <span style="color:#b44">&#34;Barf&#34;</span>))
 <span style="color:#b44">&#34;Wrapping&#34;</span>
-          ((<span style="color:#b44">&#34;R&#34;</span> <span style="color:#b8860b">sp-rewrap-sexp</span> <span style="color:#b44">&#34;Rewrap&#34;</span>)
-          (<span style="color:#b44">&#34;u&#34;</span> <span style="color:#b8860b">sp-unwrap-sexp</span> <span style="color:#b44">&#34;Unwrap&#34;</span>)
-          (<span style="color:#b44">&#34;U&#34;</span> <span style="color:#b8860b">sp-backward-unwrap-sexp</span> <span style="color:#b44">&#34;Bw Unwrap&#34;</span>)
-          (<span style="color:#b44">&#34;(&#34;</span> <span style="color:#b8860b">sp-wrap-round</span> <span style="color:#b44">&#34;Wrap&#34;</span>)
-          (<span style="color:#b44">&#34;{&#34;</span> <span style="color:#b8860b">sp-wrap-curly</span> <span style="color:#b44">&#34;Wrap&#34;</span>)
-          (<span style="color:#b44">&#34;[&#34;</span> <span style="color:#b8860b">sp-wrap-square</span> <span style="color:#b44">&#34;Wrap&#34;</span>))
+	      ((<span style="color:#b44">&#34;R&#34;</span> <span style="color:#b8860b">sp-rewrap-sexp</span> <span style="color:#b44">&#34;Rewrap&#34;</span>)
+	      (<span style="color:#b44">&#34;u&#34;</span> <span style="color:#b8860b">sp-unwrap-sexp</span> <span style="color:#b44">&#34;Unwrap&#34;</span>)
+	      (<span style="color:#b44">&#34;U&#34;</span> <span style="color:#b8860b">sp-backward-unwrap-sexp</span> <span style="color:#b44">&#34;Bw Unwrap&#34;</span>)
+	      (<span style="color:#b44">&#34;(&#34;</span> <span style="color:#b8860b">sp-wrap-round</span> <span style="color:#b44">&#34;Wrap&#34;</span>)
+	      (<span style="color:#b44">&#34;{&#34;</span> <span style="color:#b8860b">sp-wrap-curly</span> <span style="color:#b44">&#34;Wrap&#34;</span>)
+	      (<span style="color:#b44">&#34;[&#34;</span> <span style="color:#b8860b">sp-wrap-square</span> <span style="color:#b44">&#34;Wrap&#34;</span>))
 <span style="color:#b44">&#34;Sexp juggling&#34;</span>
-          ((<span style="color:#b44">&#34;S&#34;</span> <span style="color:#b8860b">sp-split-sexp</span> <span style="color:#b44">&#34;Split&#34;</span>)
-          (<span style="color:#b44">&#34;s&#34;</span> <span style="color:#b8860b">sp-splice-sexp</span> <span style="color:#b44">&#34;Splice&#34;</span>)
-          (<span style="color:#b44">&#34;r&#34;</span> <span style="color:#b8860b">sp-raise-sexp</span> <span style="color:#b44">&#34;Raise&#34;</span>)
-          (<span style="color:#b44">&#34;j&#34;</span> <span style="color:#b8860b">sp-join-sexp</span> <span style="color:#b44">&#34;Join&#34;</span>)
-          (<span style="color:#b44">&#34;t&#34;</span> <span style="color:#b8860b">sp-transpose-sexp</span> <span style="color:#b44">&#34;Transpose&#34;</span>)
-          (<span style="color:#b44">&#34;A&#34;</span> <span style="color:#b8860b">sp-absorb-sexp</span> <span style="color:#b44">&#34;Absorb&#34;</span>)
-          (<span style="color:#b44">&#34;E&#34;</span> <span style="color:#b8860b">sp-emit-sexp</span> <span style="color:#b44">&#34;Emit&#34;</span>)
-          (<span style="color:#b44">&#34;o&#34;</span> <span style="color:#b8860b">sp-convolute-sexp</span> <span style="color:#b44">&#34;Convolute&#34;</span>))
+	      ((<span style="color:#b44">&#34;S&#34;</span> <span style="color:#b8860b">sp-split-sexp</span> <span style="color:#b44">&#34;Split&#34;</span>)
+	      (<span style="color:#b44">&#34;s&#34;</span> <span style="color:#b8860b">sp-splice-sexp</span> <span style="color:#b44">&#34;Splice&#34;</span>)
+	      (<span style="color:#b44">&#34;r&#34;</span> <span style="color:#b8860b">sp-raise-sexp</span> <span style="color:#b44">&#34;Raise&#34;</span>)
+	      (<span style="color:#b44">&#34;j&#34;</span> <span style="color:#b8860b">sp-join-sexp</span> <span style="color:#b44">&#34;Join&#34;</span>)
+	      (<span style="color:#b44">&#34;t&#34;</span> <span style="color:#b8860b">sp-transpose-sexp</span> <span style="color:#b44">&#34;Transpose&#34;</span>)
+	      (<span style="color:#b44">&#34;A&#34;</span> <span style="color:#b8860b">sp-absorb-sexp</span> <span style="color:#b44">&#34;Absorb&#34;</span>)
+	      (<span style="color:#b44">&#34;E&#34;</span> <span style="color:#b8860b">sp-emit-sexp</span> <span style="color:#b44">&#34;Emit&#34;</span>)
+	      (<span style="color:#b44">&#34;o&#34;</span> <span style="color:#b8860b">sp-convolute-sexp</span> <span style="color:#b44">&#34;Convolute&#34;</span>))
 <span style="color:#b44">&#34;Editing&#34;</span>
-          ((<span style="color:#b44">&#34;c&#34;</span> <span style="color:#b8860b">sp-change-inner</span> <span style="color:#b44">&#34;Change&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span>)
-          (<span style="color:#b44">&#34;C&#34;</span> <span style="color:#b8860b">sp-change-enclosing</span> <span style="color:#b44">&#34;Change&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
-          (<span style="color:#b44">&#34;k&#34;</span> <span style="color:#b8860b">sp-kill-sexp</span> <span style="color:#b44">&#34;Kill&#34;</span>)
-          (<span style="color:#b44">&#34;K&#34;</span> <span style="color:#b8860b">sp-backward-kill-sexp</span> <span style="color:#b44">&#34;Bw Kill&#34;</span>)
-          (<span style="color:#b44">&#34;w&#34;</span> <span style="color:#b8860b">sp-copy-sexp</span> <span style="color:#b44">&#34;Copy&#34;</span> )
+	      ((<span style="color:#b44">&#34;c&#34;</span> <span style="color:#b8860b">sp-change-inner</span> <span style="color:#b44">&#34;Change&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span>)
+	      (<span style="color:#b44">&#34;C&#34;</span> <span style="color:#b8860b">sp-change-enclosing</span> <span style="color:#b44">&#34;Change&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
+	      (<span style="color:#b44">&#34;k&#34;</span> <span style="color:#b8860b">sp-kill-sexp</span> <span style="color:#b44">&#34;Kill&#34;</span>)
+	      (<span style="color:#b44">&#34;K&#34;</span> <span style="color:#b8860b">sp-backward-kill-sexp</span> <span style="color:#b44">&#34;Bw Kill&#34;</span>)
+	      (<span style="color:#b44">&#34;w&#34;</span> <span style="color:#b8860b">sp-copy-sexp</span> <span style="color:#b44">&#34;Copy&#34;</span> )
           (<span style="color:#b44">&#34;h&#34;</span> <span style="color:#b8860b">hydra-helm/body</span> <span style="color:#b44">&#34;Return To Helm&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
           (<span style="color:#b44">&#34;&lt;SPC&gt;&#34;</span> <span style="color:#800">nil</span> <span style="color:#b44">&#34;Quit&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
-)<span style="color:#080;font-style:italic">;end section</span>
-)<span style="color:#080;font-style:italic">;end heads</span>
-)<span style="color:#080;font-style:italic">;end hydra</span>
+)<span style="color:#080;font-style:italic">;end section</span>
+)<span style="color:#080;font-style:italic">;end heads</span>
+)<span style="color:#080;font-style:italic">;end hydra</span>
 <span style="color:#a2f">:bind</span>
 (<span style="color:#b44">&#34;&lt;C-m&gt; p&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">Parentheses_/body</span>)
-)<span style="color:#080;font-style:italic">;end smartparens</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+)<span style="color:#080;font-style:italic">;end smartparens</span>
 
-<p><div class="mobile-iframe">
+
+</code></pre></td></tr></table>
+</div>
+</div><br/>
+<div class="mobile-iframe">
 <figure class="zoom-effect">
 <div class="aspectRatioPlaceholder" >
 <div class="aspect-ratio-fill" style="padding-bottom: 75.78947368421053%;"></div> <!-- end aspect ratio fill -->
@@ -445,19 +436,16 @@ expand, which expands the region to everything within the brackets and I use tha
 </div> <!-- end aspect ratio -->
 </figure> <!-- end figure -->
 </div> <!--mobile-iframe-->
-<small class="col-6 d-flex mx-auto">Image: Parenthese Hydra</small></p>
-
-<p><br/></p>
-
+<small class="col-6 d-flex mx-auto">Image: Parenthese Hydra</small>
+<br/>
 <h5>Directories Defaults</h5>
-
 <p class= "p-news">Most of this code sets up good defaults for emacs directories management. Hiding details by default makes the screen
 legible. Configuring C-a to move the cursor back to the start of the directory files. Making the directory if it doesn't exist. The function
 to create a directory. Getting dired mode role over to the first file when you get to the end. All of these things in emacs require default
 configuration. Here it is. </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -539,28 +527,31 @@ configuration. Here it is. </p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">80
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">81
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">82
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">83
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">84
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;dired movement defaults</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;dired movement defaults</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;dired</span>)
 
-<span style="color:#080;font-style:italic">;hide dir details</span>
+<span style="color:#080;font-style:italic">;hide dir details</span>
 (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;dired-mode-hook</span> <span style="color:#b8860b">&#39;dired-hide-details-mode</span> <span style="color:#800">t</span>)
 
-<span style="color:#080;font-style:italic">;; Make dired less verbose</span>
+<span style="color:#080;font-style:italic">;; Make dired less verbose</span>
 (<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">dired-details-hidden-string</span> <span style="color:#b44">&#34;&#34;</span>)
 
-<span style="color:#080;font-style:italic">; Move files between split panes</span>
+<span style="color:#080;font-style:italic">; Move files between split panes</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">dired-dwim-target</span> <span style="color:#800">t</span>)
 
-<span style="color:#080;font-style:italic">;; C-a is nicer in dired if it moves back to start of files</span>
+<span style="color:#080;font-style:italic">;; C-a is nicer in dired if it moves back to start of files</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">dired-back-to-start-of-files</span> ()
 (<span style="color:#a2f">interactive</span>)
 (<span style="color:#00a000">backward-char</span> (<span style="color:#00a000">-</span> (<span style="color:#00a000">current-column</span>) <span style="color:#666">2</span>)))
 (<span style="color:#00a000">define-key</span> <span style="color:#b8860b">dired-mode-map</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-a&#34;</span>) <span style="color:#b8860b">&#39;dired-back-to-start-of-files</span>)
 (<span style="color:#00a000">define-key</span> <span style="color:#b8860b">dired-mode-map</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;k&#34;</span>) <span style="color:#b8860b">&#39;dired-do-delete</span>)
 
-<span style="color:#080;font-style:italic">;; M-up is nicer in dired if it moves to the fourth line - the first file</span>
+<span style="color:#080;font-style:italic">;; M-up is nicer in dired if it moves to the fourth line - the first file</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">dired-back-to-top</span> ()
 (<span style="color:#a2f">interactive</span>)
 (<span style="color:#b8860b">beginning-of-buffer</span>)
@@ -568,7 +559,7 @@ configuration. Here it is. </p>
 (<span style="color:#00a000">define-key</span> <span style="color:#b8860b">dired-mode-map</span> (<span style="color:#00a000">vector</span> <span style="color:#b8860b">&#39;remap</span> <span style="color:#b8860b">&#39;beginning-of-buffer</span>) <span style="color:#b8860b">&#39;dired-back-to-top</span>)
 (<span style="color:#00a000">define-key</span> <span style="color:#b8860b">dired-mode-map</span> (<span style="color:#00a000">vector</span> <span style="color:#b8860b">&#39;remap</span> <span style="color:#b8860b">&#39;smart-up</span>) <span style="color:#b8860b">&#39;dired-back-to-top</span>)
 
-<span style="color:#080;font-style:italic">;; M-down is nicer in dired if it moves to the last file</span>
+<span style="color:#080;font-style:italic">;; M-down is nicer in dired if it moves to the last file</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">dired-jump-to-bottom</span> ()
 (<span style="color:#a2f">interactive</span>)
 (<span style="color:#b8860b">end-of-buffer</span>)
@@ -576,14 +567,14 @@ configuration. Here it is. </p>
 (<span style="color:#00a000">define-key</span> <span style="color:#b8860b">dired-mode-map</span> (<span style="color:#00a000">vector</span> <span style="color:#b8860b">&#39;remap</span> <span style="color:#b8860b">&#39;end-of-buffer</span>) <span style="color:#b8860b">&#39;dired-jump-to-bottom</span>)
 (<span style="color:#00a000">define-key</span> <span style="color:#b8860b">dired-mode-map</span> (<span style="color:#00a000">vector</span> <span style="color:#b8860b">&#39;remap</span> <span style="color:#b8860b">&#39;smart-down</span>) <span style="color:#b8860b">&#39;dired-jump-to-bottom</span>)
 
-<span style="color:#080;font-style:italic">;; Delete with C-x C-k to match file buffers and magit</span>
+<span style="color:#080;font-style:italic">;; Delete with C-x C-k to match file buffers and magit</span>
 (<span style="color:#00a000">define-key</span> <span style="color:#b8860b">dired-mode-map</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-x C-k&#34;</span>) <span style="color:#b8860b">&#39;dired-do-delete</span>)
 (<span style="color:#b8860b">eval-after-load</span> <span style="color:#b44">&#34;wdired&#34;</span>
 <span style="color:#666">&#39;</span>(<span style="color:#a2f">progn</span>
 (<span style="color:#00a000">define-key</span> <span style="color:#b8860b">wdired-mode-map</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-a&#34;</span>) <span style="color:#b8860b">&#39;dired-back-to-start-of-files</span>)
 (<span style="color:#00a000">define-key</span> <span style="color:#b8860b">wdired-mode-map</span> (<span style="color:#00a000">vector</span> <span style="color:#b8860b">&#39;remap</span> <span style="color:#b8860b">&#39;beginning-of-buffer</span>) <span style="color:#b8860b">&#39;dired-back-to-top</span>)
 (<span style="color:#00a000">define-key</span> <span style="color:#b8860b">wdired-mode-map</span> (<span style="color:#00a000">vector</span> <span style="color:#b8860b">&#39;remap</span> <span style="color:#b8860b">&#39;end-of-buffer</span>) <span style="color:#b8860b">&#39;dired-jump-to-bottom</span>)))
-<span style="color:#080;font-style:italic">;my-dired-create-file</span>
+<span style="color:#080;font-style:italic">;my-dired-create-file</span>
 (<span style="color:#b8860b">eval-after-load</span> <span style="color:#b8860b">&#39;dired</span>
   <span style="color:#666">&#39;</span>(<span style="color:#a2f">progn</span>
      (<span style="color:#00a000">define-key</span> <span style="color:#b8860b">dired-mode-map</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;c&#34;</span>) <span style="color:#b8860b">&#39;my-dired-create-file</span>)
@@ -611,29 +602,28 @@ configuration. Here it is. </p>
        (<span style="color:#b8860b">revert-buffer</span>)
        (<span style="color:#b8860b">dired-goto-file</span> (<span style="color:#00a000">expand-file-name</span> <span style="color:#b8860b">file</span>)))
 )
- ) <span style="color:#080;font-style:italic">;end my dired create file</span>
+ ) <span style="color:#080;font-style:italic">;end my dired create file</span>
 
-<span style="color:#080;font-style:italic">;backup directory</span>
+<span style="color:#080;font-style:italic">;backup directory</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">backup-directory-alist</span> <span style="color:#666">&#39;</span>((<span style="color:#b44">&#34;.&#34;</span> <span style="color:#666">.</span> <span style="color:#b44">&#34;~/backups&#34;</span>)))
 
-<span style="color:#080;font-style:italic">;if directory doesn&#39;t exist make it</span>
+<span style="color:#080;font-style:italic">;if directory doesn&#39;t exist make it</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">my-create-non-existent-directory</span> ()
 (<span style="color:#a2f">let</span> ((<span style="color:#b8860b">parent-directory</span> (<span style="color:#00a000">file-name-directory</span> <span style="color:#00a000">buffer-file-name</span>)))
-          (<span style="color:#a2f">when</span> (<span style="color:#a2f">and</span> (<span style="color:#b8860b">not</span> (<span style="color:#00a000">file-exists-p</span> <span style="color:#b8860b">parent-directory</span>))
-                 (<span style="color:#b8860b">y-or-n-p</span> (<span style="color:#00a000">format</span> <span style="color:#b44">&#34;Directory `%s does not exist! Create it?&#34;</span> <span style="color:#b8860b">parent-directory</span>)))
-        (<span style="color:#b8860b">make-directory</span> <span style="color:#b8860b">parent-directory</span> <span style="color:#800">t</span>))))
-(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;find-file-not-found-functions</span> <span style="color:#b8860b">&#39;my-create-non-existent-directory</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+		  (<span style="color:#a2f">when</span> (<span style="color:#a2f">and</span> (<span style="color:#b8860b">not</span> (<span style="color:#00a000">file-exists-p</span> <span style="color:#b8860b">parent-directory</span>))
+				 (<span style="color:#b8860b">y-or-n-p</span> (<span style="color:#00a000">format</span> <span style="color:#b44">&#34;Directory `%s does not exist! Create it?&#34;</span> <span style="color:#b8860b">parent-directory</span>)))
+		(<span style="color:#b8860b">make-directory</span> <span style="color:#b8860b">parent-directory</span> <span style="color:#800">t</span>))))
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;find-file-not-found-functions</span> <span style="color:#b8860b">&#39;my-create-non-existent-directory</span>)
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Neo Tree is Cool</h5>
-
 <p class= "p-news">But I don't use it. I have a function that toggles on/off icons in dired buffers and don't need to open up and navigate
 directories in side window. I just use dired mode. But here it is anyway.  </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -662,42 +652,47 @@ directories in side window. I just use dired mode. But here it is anyway.  </p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;neotree</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;neotree</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">neotree</span>
 <span style="color:#a2f">:config</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">neo-theme</span> (<span style="color:#a2f">if</span> (<span style="color:#b8860b">display-graphic-p</span>) <span style="color:#b8860b">&#39;icons</span> <span style="color:#b8860b">&#39;arrow</span>))
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;all-the-icons</span>)
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;neotree</span>)
 (<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">neo-smart-open</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">;only &#39;icons&#39; works with all-the-icons</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">neo-theme</span> <span style="color:#b8860b">&#39;icons</span>) <span style="color:#080;font-style:italic">; &#39;classic, &#39;nerd, &#39;ascii, &#39;arrow</span>
+<span style="color:#080;font-style:italic">;only &#39;icons&#39; works with all-the-icons</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">neo-theme</span> <span style="color:#b8860b">&#39;icons</span>) <span style="color:#080;font-style:italic">; &#39;classic, &#39;nerd, &#39;ascii, &#39;arrow</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">neo-vc-integration</span> <span style="color:#666">&#39;</span>(<span style="color:#b8860b">face</span> <span style="color:#b8860b">char</span>))
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">neo-show-hidden-files</span> <span style="color:#800">t</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">neo-toggle-window-keep-p</span> <span style="color:#800">t</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">neo-force-change-root</span> <span style="color:#800">t</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">neo-window-width</span> <span style="color:#666">35</span>)
-<span style="color:#080;font-style:italic">;; face customizations</span>
+<span style="color:#080;font-style:italic">;; face customizations</span>
 (<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">&#39;neo-vc-edited-face</span> <span style="color:#800">nil</span> <span style="color:#a2f">:foreground</span> <span style="color:#b44">&#34;#E2C08D&#34;</span>)
 (<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">&#39;neo-vc-added-face</span> <span style="color:#800">nil</span> <span style="color:#a2f">:foreground</span> <span style="color:#b44">&#34;green4&#34;</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">all-the-icons-color-icons</span> <span style="color:#800">t</span>)
  (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;neotree-mode-hook</span>
 (<span style="color:#a2f">lambda</span> ()
-        (<span style="color:#a2f">setq-local</span> <span style="color:#b8860b">mode-line-format</span> <span style="color:#800">nil</span>)
-        (<span style="color:#a2f">setq-local</span> <span style="color:#b8860b">display-line-numbers</span> <span style="color:#800">nil</span>)
-        (<span style="color:#b8860b">local-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-s&#34;</span>) <span style="color:#b8860b">&#39;isearch-forward</span>)
-        (<span style="color:#b8860b">local-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-M-s&#34;</span>) <span style="color:#b8860b">&#39;isearch-forward-regexp</span>)
-        (<span style="color:#b8860b">local-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-r&#34;</span>) <span style="color:#b8860b">&#39;isearch-backward</span>)
-        (<span style="color:#b8860b">local-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-M-r&#34;</span>) <span style="color:#b8860b">&#39;isearch-backward-regexp</span>)))
+ 		(<span style="color:#a2f">setq-local</span> <span style="color:#b8860b">mode-line-format</span> <span style="color:#800">nil</span>)
+ 		(<span style="color:#a2f">setq-local</span> <span style="color:#b8860b">display-line-numbers</span> <span style="color:#800">nil</span>)
+ 		(<span style="color:#b8860b">local-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-s&#34;</span>) <span style="color:#b8860b">&#39;isearch-forward</span>)
+ 		(<span style="color:#b8860b">local-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-M-s&#34;</span>) <span style="color:#b8860b">&#39;isearch-forward-regexp</span>)
+ 		(<span style="color:#b8860b">local-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-r&#34;</span>) <span style="color:#b8860b">&#39;isearch-backward</span>)
+ 		(<span style="color:#b8860b">local-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">&#34;C-M-r&#34;</span>) <span style="color:#b8860b">&#39;isearch-backward-regexp</span>)))
 <span style="color:#a2f">:bind</span>
 (<span style="color:#b44">&#34;&lt;f9&gt;&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">neotree-toggle</span>)
-)<span style="color:#080;font-style:italic">;end neotree</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+)<span style="color:#080;font-style:italic">;end neotree</span>
 
-<p><div class="mobile-iframe">
+
+</code></pre></td></tr></table>
+</div>
+</div><br/>
+<div class="mobile-iframe">
 <figure class="zoom-effect">
 <div class="aspectRatioPlaceholder" >
 <div class="aspect-ratio-fill" style="padding-bottom: 75.78947368421053%;"></div> <!-- end aspect ratio fill -->
@@ -707,10 +702,8 @@ directories in side window. I just use dired mode. But here it is anyway.  </p>
 </figure> <!-- end figure -->
 </div> <!--mobile-iframe-->
 <small class="col-6 d-flex mx-auto">Image: Neo Tree</small>
-<br/></p>
-
+<br/>
 <h5>Image-dired</h5>
-
 <p class= "p-news">This is a cool set up. Image-dired I think you need to download from the net. It's not on Melpa. The same with dired+,
 and image+. These guys together with image-magick enable image viewing and resizing in buffers. You can rotate and delete the images as
 well. Image-dired (or maybe it's image+) makes thumbnails in a directory you specify below. You will need to install image-magick and for
@@ -720,7 +713,7 @@ would use the shell or another program. I use Inkscape, Gimp, and Faststone Imag
 is a path to a library or executable defined earlier. See earlier emacs posts.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -756,26 +749,31 @@ is a path to a library or executable defined earlier. See earlier emacs posts.</
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;dired+</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;dired+</span>
 (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b8860b">dired+-p</span>)
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;dired+</span>)
 
-<span style="color:#080;font-style:italic">;image-dired</span>
-<span style="color:#080;font-style:italic">;image-mode (image[jpg]-mode)</span>
+<span style="color:#080;font-style:italic">;image-dired</span>
+<span style="color:#080;font-style:italic">;image-mode (image[jpg]-mode)</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">image-magick-enabled</span> <span style="color:#800">t</span>)
 
-<span style="color:#080;font-style:italic">;image-dired</span>
+<span style="color:#080;font-style:italic">;image-dired</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;image-dired</span>)
 (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b8860b">image-magick-p</span>)
 (<span style="color:#a2f">setq</span>  <span style="color:#b8860b">image-dired-dir</span>   <span style="color:#b8860b">image-dired-p</span>)
 
-<span style="color:#080;font-style:italic">;image+</span>
+<span style="color:#080;font-style:italic">;image+</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">image+</span>
-<span style="color:#a2f">:defer</span> <span style="color:#800">t</span>
+<span style="color:#a2f">:defer</span> <span style="color:#b8860b">t</span>
 <span style="color:#a2f">:load-path</span> <span style="color:#b8860b">image+-p</span>
-<span style="color:#080;font-style:italic">;:disabled</span>
+<span style="color:#080;font-style:italic">;:disabled</span>
 <span style="color:#a2f">:config</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;image</span>)
 (<span style="color:#b8860b">eval-after-load</span> <span style="color:#b8860b">&#39;image</span> <span style="color:#666">&#39;</span>(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;image+</span>))
@@ -793,17 +791,17 @@ is a path to a library or executable defined earlier. See earlier emacs posts.</
               (<span style="color:#b44">&#34;r&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">imagex-sticky-rotate-right</span>)
               (<span style="color:#b44">&#34;l&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">imagex-sticky-rotate-left</span>)
               (<span style="color:#b44">&#34;/&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">imagex-sticky-binding/body</span>))
-)<span style="color:#080;font-style:italic">;end image+</span></code></pre></td></tr></table>
+)<span style="color:#080;font-style:italic">;end image+</span>
+
+
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><br/></p>
-
-<p><div class="container">
-<div class="row img-end"></p>
-
-<p><div class="col-xs-12 col-md-6 col-lg-6 "></p>
-
-<p><div class="mobile-iframe">
+</div><br/>
+<div class="container">
+<div class="row img-end">
+<div class="col-xs-12 col-md-6 col-lg-6 ">
+<div class="mobile-iframe">
 <figure class="zoom-effect">
 <div class="aspectRatioPlaceholder" >
 <div class="aspect-ratio-fill" style="padding-bottom: 75.78947368421053%;"></div> <!-- end aspect ratio fill -->
@@ -811,11 +809,9 @@ is a path to a library or executable defined earlier. See earlier emacs posts.</
 <img src="image-dired.jpg" align="center" title="" class="inline-image img-zoom" width="100%" alt="theme-image-here" data-width="1920" data-height="1080">
 </div> <!-- end aspect ratio -->
 </figure> <!-- end figure -->
-</div> <!--mobile-iframe--></p>
-
-<p></div>  <!-- end image --></p>
-
-<p><div class="col-xs-12 col-md-6 col-lg-6 ">
+</div> <!--mobile-iframe-->
+</div>  <!-- end image -->
+<div class="col-xs-12 col-md-6 col-lg-6 ">
 <div class="mobile-iframe">
 <figure class="zoom-effect">
 <div class="aspectRatioPlaceholder" >
@@ -824,17 +820,13 @@ is a path to a library or executable defined earlier. See earlier emacs posts.</
 <img src="image-dired-zoom.jpg" align="center" title="" class="inline-image img-zoom" width="100%" alt="theme-image-here" data-width="1920" data-height="1080">
 </div> <!-- end aspect ratio -->
 </figure> <!-- end figure -->
-</div> <!--mobile-iframe--></p>
-
-<p></div>  <!-- end image -->
+</div> <!--mobile-iframe-->
+</div>  <!-- end image -->
 </div>  <!-- end row-->
-</div>  <!-- end container --></p>
-
+</div>  <!-- end container -->
 <p><small class="col-6 d-flex mx-auto">Images: Dired-Images</small>
 <br/></p>
-
 <h5>Directories Hydra</h5>
-
 <p class= "p-news">This directories hydra is super useful. Remember, hydras simply consolidate functions you can call from the mini-buffer
 or with shortcuts defined in their respective packages. The functions I use the most in the hydra are create a directory and create a file.
 I also often will rename files. Rename is copy, and if you call it with two different directories open in adjacent windows it pre-fills the
@@ -843,7 +835,7 @@ shell or internet explorer, and I do usually use internet explorer for this. But
 in a directory I always use emacs. I'll toggle on and off the details as needed and enable often also icons just for kicks. </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -892,16 +884,19 @@ in a directory I always use emacs. I'll toggle on and off the details as needed 
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;define material icon function</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;define material icon function</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">with-material</span> (<span style="color:#b8860b">icon</span> <span style="color:#b8860b">str</span> <span style="color:#a2f">&amp;rest</span> <span style="color:#b8860b">height</span> <span style="color:#b8860b">v-adjust</span>)
       (<span style="color:#b8860b">s-concat</span> (<span style="color:#b8860b">all-the-icons-material</span> <span style="color:#b8860b">icon</span> <span style="color:#a2f">:v-adjust</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">v-adjust</span> <span style="color:#666">0</span>) <span style="color:#a2f">:height</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">height</span> <span style="color:#666">1</span>)) <span style="color:#b44">&#34; &#34;</span> <span style="color:#b8860b">str</span>))
 
-<span style="color:#080;font-style:italic">;define dired-modes hydra title</span>
+<span style="color:#080;font-style:italic">;define dired-modes hydra title</span>
 (<span style="color:#a2f">defvar</span> <span style="color:#b8860b">dired-title</span> (<span style="color:#b8860b">with-material</span> <span style="color:#b44">&#34;folder_open&#34;</span> <span style="color:#b44">&#34;Directories&#34;</span>))
 
-<span style="color:#080;font-style:italic">;define dired-modes hydra</span>
+<span style="color:#080;font-style:italic">;define dired-modes hydra</span>
 (<span style="color:#b8860b">pretty-hydra-define</span>  <span style="color:#b8860b">Directories_</span> ( <span style="color:#a2f">:title</span> <span style="color:#b8860b">dired-title</span> <span style="color:#a2f">:quit-key</span> <span style="color:#b44">&#34;q&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">pink</span> )
 (<span style="color:#b44">&#34;Mode&#34;</span>
    ((<span style="color:#b44">&#34;d&#34;</span> <span style="color:#b8860b">dired</span> <span style="color:#b44">&#34;Directory Choose&#34;</span>)
@@ -913,7 +908,7 @@ in a directory I always use emacs. I'll toggle on and off the details as needed 
     (<span style="color:#b44">&#34;~&#34;</span> <span style="color:#b8860b">dired-hide-details-mode</span> <span style="color:#b44">&#34;Show Details&#34;</span> <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span> )
     (<span style="color:#b44">&#34;i&#34;</span> <span style="color:#b8860b">all-the-icons-dired-mode</span> <span style="color:#b44">&#34;Directory With Icons&#34;</span> <span style="color:#a2f">:toggle</span> <span style="color:#800">t</span> )
     (<span style="color:#b44">&#34;h&#34;</span> <span style="color:#b8860b">hydra-helm/body</span> <span style="color:#b44">&#34;Go To Hydra Helm&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
- )<span style="color:#080;font-style:italic">;end mode</span>
+ )<span style="color:#080;font-style:italic">;end mode</span>
 
 <span style="color:#b44">&#34;Mark&#34;</span>
    (
@@ -926,7 +921,7 @@ in a directory I always use emacs. I'll toggle on and off the details as needed 
     (<span style="color:#b44">&#34;o&#34;</span> <span style="color:#b8860b">dired-find-file-other-window</span> <span style="color:#b44">&#34;Open File In Other Window&#34;</span> )
     (<span style="color:#b44">&#34;C&#34;</span> <span style="color:#b8860b">dired-copy-filename-as-kill</span> <span style="color:#b44">&#34;Copy Selection Name&#34;</span>)
     (<span style="color:#b44">&#34;&lt;SPC&gt;&#34;</span> <span style="color:#800">nil</span> <span style="color:#b44">&#34;Quit&#34;</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
-)<span style="color:#080;font-style:italic">;end mark</span>
+)<span style="color:#080;font-style:italic">;end mark</span>
 
 <span style="color:#b44">&#34;Action&#34;</span>
    (
@@ -939,15 +934,15 @@ in a directory I always use emacs. I'll toggle on and off the details as needed 
     (<span style="color:#b44">&#34;-&#34;</span> <span style="color:#b8860b">imagex-sticky-zoom-out</span> <span style="color:#b44">&#34;Zoom Out On Image&#34;</span> )
     (<span style="color:#b44">&#34;R&#34;</span> <span style="color:#b8860b">imagex-sticky-rotate-right</span> <span style="color:#b44">&#34;Rotate Image Right&#34;</span> )
     (<span style="color:#b44">&#34;L&#34;</span> <span style="color:#b8860b">imagex-sticky-rotate-left</span> <span style="color:#b44">&#34;Rotate Image Left&#34;</span> )
-)<span style="color:#080;font-style:italic">;end action</span>
-)<span style="color:#080;font-style:italic">;end hydra body</span>
-)<span style="color:#080;font-style:italic">;end pretty-hydra-dired</span>
-(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;C-m&gt; d&#34;</span>  <span style="color:#b8860b">&#39;Directories_/body</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+)<span style="color:#080;font-style:italic">;end action</span>
+)<span style="color:#080;font-style:italic">;end hydra body</span>
+)<span style="color:#080;font-style:italic">;end pretty-hydra-dired</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;&lt;C-m&gt; d&#34;</span>  <span style="color:#b8860b">&#39;Directories_/body</span>)
 
-<p><div class="mobile-iframe">
+</code></pre></td></tr></table>
+</div>
+</div><br/>
+<div class="mobile-iframe">
 <figure class="zoom-effect">
 <div class="aspectRatioPlaceholder" >
 <div class="aspect-ratio-fill" style="padding-bottom: 75.78947368421053%;"></div> <!-- end aspect ratio fill -->
@@ -955,19 +950,16 @@ in a directory I always use emacs. I'll toggle on and off the details as needed 
 <img src="directories.jpg" align="center" title="" class="inline-image img-zoom" width="100%" alt="theme-image-here" data-width="1920" data-height="1080">
 </div> <!-- end aspect ratio -->
 </figure> <!-- end figure -->
-</div> <!--mobile-iframe--></p>
-
+</div> <!--mobile-iframe-->
 <p><small class="col-6 d-flex mx-auto">Images: Directories Hydra</small>
 <br/></p>
-
 <h5>Some Kill Ring Settings and Functions</h5>
 <p class= "p-news">Before they had clipboards they had kill-rings. I'm not asking. 😄 "Kill" is copy and "Yank" is paste. In Emacs myself (and most people) use M-w and C-y. I've never liked the M-w for cutting, but I use it anyway. I also have M-y to show the kill-ring in the helm buffer, which I use a lot.  </p>
 <p class= "p-news">Below is code to browse the kill-ring with C-c 9, which I rarely use. There's also some code to ensure you get the ents of the windows clipboard in your kill ring, which is really important.</p>
-
 <h5></h5>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -986,11 +978,14 @@ in a directory I always use emacs. I'll toggle on and off the details as needed 
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">; Remove text in active region if inserting text</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">; Remove text in active region if inserting text</span>
 (<span style="color:#b8860b">delete-selection-mode</span> <span style="color:#666">1</span>)
-<span style="color:#080;font-style:italic">;clipboard is saved to kill-ring</span>
+<span style="color:#080;font-style:italic">;clipboard is saved to kill-ring</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">clipboard-to-kill-ring</span>()
    <span style="color:#b44">&#34;save the external clipboard contents to the kill ring&#34;</span>
    (<span style="color:#a2f">interactive</span>)
@@ -1000,16 +995,17 @@ in a directory I always use emacs. I'll toggle on and off the details as needed 
 (<span style="color:#a2f">defadvice</span> <span style="color:#b8860b">yank</span> (<span style="color:#b8860b">before</span> <span style="color:#b8860b">maybe-copy-windows-clipboard</span> (<span style="color:#b8860b">arg</span>))
      (<span style="color:#b8860b">clipboard-to-kill-ring</span>))
 (<span style="color:#b8860b">ad-activate</span> <span style="color:#b8860b">&#39;yank</span>))
-<span style="color:#080;font-style:italic">;Browse Kill Ring</span>
+<span style="color:#080;font-style:italic">;Browse Kill Ring</span>
  (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">browse-kill-ring</span>
-<span style="color:#a2f">:defer</span> <span style="color:#800">t</span>
+<span style="color:#a2f">:defer</span> <span style="color:#b8860b">t</span>
 <span style="color:#a2f">:config</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">browse-kill-ring-highlight-current-entry</span> <span style="color:#800">t</span>)
 <span style="color:#a2f">:bind</span>
-(<span style="color:#b44">&#34;C-c 9&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">browse-kill-ring</span>))</code></pre></td></tr></table>
+(<span style="color:#b44">&#34;C-c 9&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">browse-kill-ring</span>))
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><br/>
+</div><br/>
 <h5>Easy Kill</h5>
 <p class= "p-news">
 Easy Kill gives an option to add a letter after M-w and save specific items, as follows: <br/>
@@ -1031,10 +1027,10 @@ M-w w: save word at point <br/>
     C-SPC: turn selection into an active region<br/>
     C-g: abort<br/>
 </p>
-<p class= "p-news">Hungry delete follows that, and it&rsquo;s cool. You use C-d to delete, as usual, but all the empty space is deleted in one shot. So it pulls all the gaps out of the code. It also automatically deletes the entire line if you are at the left margin and the space is gone. So double C-d will delete all trailing white space between two paragraphs and then the next line of the next paragraph. Sanity kill back to indent works backwards. I just highlight the line and delete it. </p></p>
+<p class= "p-news">Hungry delete follows that, and it's cool. You use C-d to delete, as usual, but all the empty space is deleted in one shot. So it pulls all the gaps out of the code. It also automatically deletes the entire line if you are at the left margin and the space is gone. So double C-d will delete all trailing white space between two paragraphs and then the next line of the next paragraph. Sanity kill back to indent works backwards. I just highlight the line and delete it. </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -1051,39 +1047,38 @@ M-w w: save word at point <br/>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">easy-kill</span>
 <span style="color:#a2f">:config</span>
 (<span style="color:#b8860b">global-set-key</span> [<span style="color:#b8860b">remap</span> <span style="color:#b8860b">kill-ring-save</span>] <span style="color:#00a000">#&#39;</span><span style="color:#b8860b">easy-kill</span>)
 (<span style="color:#b8860b">global-set-key</span> [<span style="color:#b8860b">remap</span> <span style="color:#b8860b">mark-sexp</span>] <span style="color:#00a000">#&#39;</span><span style="color:#b8860b">easy-mark</span>))
-<span style="color:#080;font-style:italic">;hungry delete</span>
+<span style="color:#080;font-style:italic">;hungry delete</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">hungry-delete</span>
 <span style="color:#a2f">:diminish</span>
 <span style="color:#a2f">:config</span>
 (<span style="color:#b8860b">global-hungry-delete-mode</span>))
-<span style="color:#080;font-style:italic">;sanity delete</span>
+<span style="color:#080;font-style:italic">;sanity delete</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">sanityinc/kill-back-to-indentation</span> ()
  <span style="color:#b44">&#34;Kill from point back to the first non-whitespace character on the line.&#34;</span>
  (<span style="color:#a2f">interactive</span>)
  (<span style="color:#a2f">let</span> ((<span style="color:#b8860b">prev-pos</span> (<span style="color:#00a000">point</span>)))
    (<span style="color:#b8860b">back-to-indentation</span>)
    (<span style="color:#b8860b">kill-region</span> (<span style="color:#00a000">point</span>) <span style="color:#b8860b">prev-pos</span>)))
-(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-M-&lt;backspace&gt;&#34;</span> <span style="color:#b8860b">&#39;sanityinc/kill-back-to-indentation</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-M-&lt;backspace&gt;&#34;</span> <span style="color:#b8860b">&#39;sanityinc/kill-back-to-indentation</span>)
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Pdf Tools and Command Line history </h5>
-
 <p class= "p-news"><a href="https://emacs.stackexchange.com/questions/19686/how-to-use-pdf-tools-pdf-view-mode-in-emacs" target="_blank">PDF Tools</a> of course require an emacs compiled with pdf tools support. See earlier blog posts for installing emacs (search for emacs or install)
 </p>
-
 <p class= "p-news">paste/substring is a custom function you can use to copy a string, run this function, paste the string into the minibuffer, then paste the last 11 characters of the string anywhere you like (it's on the kill ring). This is useful to copy a youtube URL from the browser with C-c, run this function, paste the youtube URL into the minibuffer, Enter, then paste the Youtube ID anywhere you like (Youtube ID is last 11 ch of URL).
 </p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -1100,29 +1095,31 @@ M-w w: save word at point <br/>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;start server so pdf-tools autostart when pdf is selected can use emacsclient to open in same instance</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;start server so pdf-tools autostart when pdf is selected can use emacsclient to open in same instance</span>
 (<span style="color:#b8860b">server-start</span>)
 (<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">&#39;TeX-after-compilation-finished-functions</span> <span style="color:#00a000">#&#39;</span><span style="color:#b8860b">TeX-revert-document-buffer</span>)
-<span style="color:#080;font-style:italic">;command line history</span>
+<span style="color:#080;font-style:italic">;command line history</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">command-log-mode</span>
 <span style="color:#a2f">:commands</span> (<span style="color:#b8860b">global-command-log-mode</span> <span style="color:#b8860b">clm/toggle-command-log-buffer</span>)
 <span style="color:#a2f">:config</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;command-log-mode</span>)
 (<span style="color:#b8860b">global-command-log-mode</span>)
-)<span style="color:#080;font-style:italic">;end command-log mode</span>
-<span style="color:#080;font-style:italic">;substring</span>
+)<span style="color:#080;font-style:italic">;end command-log mode</span>
+<span style="color:#080;font-style:italic">;substring</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">paste/substring</span> (<span style="color:#b8860b">astring</span>)
   <span style="color:#b44">&#34;Copy a string to clipboard&#34;</span>
 (<span style="color:#a2f">interactive</span> <span style="color:#b44">&#34;sAstring: &#34;</span>)
 (<span style="color:#a2f">with-temp-buffer</span>
     (<span style="color:#00a000">insert</span> (<span style="color:#00a000">substring</span> <span style="color:#b8860b">astring</span> <span style="color:#666">-11</span>))
-    (<span style="color:#b8860b">clipboard-kill-region</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))))</code></pre></td></tr></table>
+    (<span style="color:#b8860b">clipboard-kill-region</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))))
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><br/>
-<h5>That&rsquo;s all for now. See you next time.</h5></p>
+</div><br/>
+<h5>That's all for now. See you next time.</h5>
 
 
         <div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-17-emacs-parentheses-directories-clipboard-command-line-history%2f&text=Emacs%20Parentheses%2c%20Directories%2c%20Clipboard%2c%20Command-Line-History&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
@@ -1163,8 +1160,7 @@ M-w w: save word at point <br/>
         </span>
     </div>
     <div class="fa-inverse text-center"><small>Print</small></div>
-</a></div>
-    </div><div id="disqus_thread"></div>
+</a></div><div id="disqus_thread"></div>
 <script type="text/javascript">
 
 (function() {
@@ -1181,7 +1177,8 @@ M-w w: save word at point <br/>
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
-</div><div class="sidebar d-print-none d-none d-xl-block">
+</div>                      
+</div>                          <div class="sidebar d-print-none d-none d-xl-block">
     
 <h2 class ="center">Meet The Author</h2>
 
@@ -1306,6 +1303,11 @@ M-w w: save word at point <br/>
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
+        <a href='https://cloudnine.github.io/categories/music/' class="nav-link">
+        music
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
         <a href='https://cloudnine.github.io/categories/philosophy/' class="nav-link">
         philosophy
         <span class="badge badge-pill badge-secondary">1</span>
@@ -1386,13 +1388,13 @@ M-w w: save word at point <br/>
         <span class="badge badge-pill badge-secondary">5</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
-        emacs-functions
-        <span class="badge badge-pill badge-secondary">4</span>
-        </a>
-        
         <a href='https://cloudnine.github.io/tags/music/' class="nav-link">
         music
+        <span class="badge badge-pill badge-secondary">5</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
+        emacs-functions
         <span class="badge badge-pill badge-secondary">4</span>
         </a>
         
@@ -1530,8 +1532,9 @@ M-w w: save word at point <br/>
     
 </div>
 
-        </div>
-         <footer class="mt-auto footer d-print-none">
+         </main>
+        <footer class="mt-auto footer d-print-none">
+           
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-xl-3">
@@ -1549,7 +1552,7 @@ work with.
                     </div>
 
                     <div class="col-md-4 col-xl-3">
-                        <h5>Copyright</h5>
+                        <h5></h5>
 © 2019 - <script>document.write(Date().split` `[3])</script> Yuri Tricys
 
                     </div>
@@ -1563,19 +1566,9 @@ work with.
                 </div>
             </div>
         </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src= ".js"></script>
-
-
-<script src= "https://cloudnine.github.io/javascripts/medium-lightbox.js"></script>
-<script src= "https://cloudnine.github.io/javascripts/init_science.js"></script>
-
-
 
 <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101236333);</script>
 <script async src='//static.getclicky.com/js'></script>
 
-
-    </body>
+</body>
 </html>

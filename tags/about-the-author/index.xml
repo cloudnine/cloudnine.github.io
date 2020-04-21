@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About the Author on Cloud Nine</title>
+    <title>about the author on Cloud Nine</title>
     <link>https://cloudnine.github.io/tags/about-the-author/</link>
-    <description>Recent content in About the Author on Cloud Nine</description>
+    <description>Recent content in about the author on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright</copyright>
     <lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/tags/about-the-author/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +17,7 @@
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/books/2020-03-04-written-good/</guid>
-      <description>Yesterday wasn&#39;t a typical day. It was my birthday. I took a brush to the whiteboard and replaced all the TODOs with the words &#34;Read Python,&#34; in an extra large blue custom font I&#39;m calling &#39;meander.&#39; I packed one of the python books in with a couple of others and took the train to the library. My idea of a good time really is a quiet nook and a well written book.</description>
+      <description>Yesterday wasn&#39;t a typical day. It was my birthday. I took a brush to the whiteboard and replaced all the TODOs with thewords &#34;Read Python,&#34; in an extra large blue custom font I&#39;m calling &#39;meander.&#39; I packed one of the python books in with a couple of othersand took the train to the library. My idea of a good time really is a quiet nook and a well written book.</description>
     </item>
     
     <item>
@@ -27,7 +26,7 @@
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/</guid>
-      <description>Below are some notes covering among other things why I got into Emacs, where I got my version, and how my configuration is organized. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or Sublime Text are awesome, and offer also great selections of unique packages. Atom, for example, has some super useful snippet packages. You can convert them into Yasnippet format (an Emacs snippet package), but it&#39;s a hassle.</description>
+      <description>Below are some notes covering among other things why I got into Emacs, where I got my version, and how my configuration isorganized. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or SublimeText are awesome, and offer also great selections of unique packages. Atom, for example, has some super useful snippet packages. You canconvert them into Yasnippet format (an Emacs snippet package), but it&#39;s a hassle.</description>
     </item>
     
     <item>
@@ -36,7 +35,7 @@
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/about/01-12-2019-hello-music-playlist-exercise-bike/</guid>
-      <description>Preamble There&#39;s not a lot of time to sort unstructured music archives. Take what you find here and have fun with it. Stuff to listen to while contemplating the work you have to do                       Stuff to listen to after stuffing yourself                  Stuff to listen to on the exercise bike                                                </description>
+      <description>PreambleThere&#39;s not a lot of time to sort unstructured music archives. Take what you find here and have fun with it.Stuff to listen to while contemplating the work you have to do          Stuff to listen to after stuffing yourself        Stuff to listen to on the exercise bike                    </description>
     </item>
     
   </channel>

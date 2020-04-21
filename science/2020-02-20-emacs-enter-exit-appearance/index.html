@@ -2,46 +2,56 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Cloud Nine" />
-<meta name="copyright" content="Copyright" />
+<meta name="copyright" content='Copyright &copy; 2019 - 2020 by Yuri Tricys  All rights reserved.' />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw" />
 <meta name="yandex-verification" content="7cb55c3432ff9fc7" />
 <meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A" />
+<meta name="description" content="Some configuration defaults to enter and exit your Emacs configuration."/>
+<title>Emacs Appearance, Entering and Exiting (&#43; Some Functions)</title>
+<meta property="article:author" content="Yuri Tricys" />
+<link rel="canonical" href="https://cloudnine.github.io/science/2020-02-20-emacs-enter-exit-appearance/">
 
 
-<meta name="description" content="Today&#39;s post covers &#34;Entering and Exiting Emacs&#34; and &#34;Default Appearance Customizations&#34; from the appearance section of my init.   Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra    Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.">
 
-<meta property="og:title" content="Emacs Appearance, Entering and Exiting (&#43; Some Functions)" />
-<meta property="og:description" content="Some configuration defaults to enter and exit your Emacs configuration." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-20-emacs-enter-exit-appearance/" /><meta property="article:published_time" content="2020-02-20T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-02-20T00:00:00&#43;00:00"/><meta property="og:site_name" content="Cloud Nine" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Appearance, Entering and Exiting (&#43; Some Functions)"/>
-<meta name="twitter:description" content="Some configuration defaults to enter and exit your Emacs configuration."/>
+
+
+
+
+
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:title" content="Emacs Appearance, Entering and Exiting (&#43; Some Functions)">
 <meta property="og:image:type" content="image/jpg" />
 
-
-<meta property="og:image" content="https://cloudnine.github.io/images/science/christian-bale.jpg">
-<meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/christian-bale.jpg">
-
-
-<meta property="og:description" content="Visit Cloud Nine to read stuff, learn about emacs, and get motivated. While you&#39;re at it, check out the author bio and leave a comment.">
+<meta property="og:image" content="images/science/christian-bale.jpg">
+<meta property="og:image:secure_url" content="images/science/christian-bale.jpg">
+<meta property="og:description" content="Some configuration defaults to enter and exit your Emacs configuration.">
 <meta property="og:site_name" content="Cloud Nine Blog.">
-
+<meta property="og:url" content="https://cloudnine.github.io/" />
 <meta property="og:type" content="blog">
-
-<title>Emacs Appearance, Entering and Exiting (&#43; Some Functions) | Cloud Nine</title>
 
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-16x16.png' sizes="16x16">
 <link rel="icon" type="image/png" href='https://cloudnine.github.io/images/favicon-32x32.png' sizes="32x32">
 
 <link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"/>
 <link rel="alternate" type="application/rss+xml" href='https://cloudnine.github.io/index.xml' />
+
+<meta property="og:title" content="Emacs Appearance, Entering and Exiting (&#43; Some Functions)" />
+<meta property="og:description" content="Some configuration defaults to enter and exit your Emacs configuration." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloudnine.github.io/science/2020-02-20-emacs-enter-exit-appearance/" />
+<meta property="article:published_time" content="2020-02-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-20T00:00:00+00:00" /><meta property="og:site_name" content="Cloud Nine" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs Appearance, Entering and Exiting (&#43; Some Functions)"/>
+<meta name="twitter:description" content="Some configuration defaults to enter and exit your Emacs configuration."/>
+
+
 
 <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD&#43;dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -52,39 +62,19 @@
         
         
 
+<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.ea5d6b1a95bc28f9856027f41c46ec57ee1b84d89f9aab3e7e7026b816781f83.css" integrity="sha256-6l1rGpW8KPmFYCf0HEbsV&#43;4bhNifmqs&#43;fnAmuBZ4H4M="  />
 
-<link rel="stylesheet" href="https://cloudnine.github.io/css/bundle.min.60e5f69e5fbc3c868e7a5e4a21dcb8b46da65825a899b6c0bdcb952c45c5969e.css" integrity="sha256-YOX2nl&#43;8PIaOel5KIdy4tG2mWCWombbAvcuVLEXFlp4="  />
 
-<script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath:[['\\(','\\)']],
-    displayMath: [ ['$$','$$'], ['\[','\]'] ],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-           extensions: ["tex2math.js","TeX/noErrors.js","TeX/noUndefined.js",
-             "TeX/AMSmath.js","TeX/AMSsymbols.js"]}
-  }
-  });
-  MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
 
-  MathJax.Hub.Config({
-  
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-  });
-</script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X&#43;965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH&#43;8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM&#43;B07jRM" crossorigin="anonymous" defer></script>
+<script src="//static.getclicky.com/js" integrity="" crossorigin="anonymous" defer></script>
+
+
+<script src="https://cloudnine.github.io/javascripts/init.js" crossorigin="anonymous" defer></script>
+<script src="https://cloudnine.github.io/javascripts/medium-lightbox.js" crossorigin="anonymous" defer></script>
 
         
 
@@ -177,9 +167,9 @@
 </style>
 
 
-    </head>
+        </head>
     <body>
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
             <div class="container">
                     <a class="navbar-brand pr-2" href="https://cloudnine.github.io/">CLOUD NINE</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -218,25 +208,28 @@
                     </div>
             </div>
         </nav>
-        
+
+
 <header class="feature-image d-print-none"></header>
 
-        <div class="main">
+
+<main class="main">
             
 <div class="container mt-4 post">
     <h1>Emacs Appearance, Entering and Exiting (&#43; Some Functions)</h1><div class="mb-3 mt-2">
     <small>
-        <strong>Author: Yuri Tricys</strong>
-        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 20, 2020    &nbsp;
-        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> <a href='/tags/emacs/'>emacs</a>, <a href='/tags/learning-center/'>learning-center</a>, <a href='/tags/emacs-functions/'>emacs-functions</a>
+<strong>Author:
+Yuri Tricys
+
+</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;Feb 20, 2020&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> &nbsp;<a href="/tags/emacs">emacs</a>, <a href="/tags/emacs-functions">emacs functions</a>, <a href="/tags/learning-center">learning center</a>
     </small>
 </div>
 <div class="mt-4 mb-4 main-content">
         <h5>Today's post covers "Entering and Exiting Emacs" and "Default Appearance Customizations" from the appearance section of my init. <br/><br/></h5>
-
 <ul>
 <li>Appearance
-
 <ul>
 <li>Entering and Exiting Emacs</li>
 <li>Default Appearance Customizations</li>
@@ -245,28 +238,23 @@
 <li>Hydras</li>
 <li>Appearance Hydra
 <br/></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h5>Preamble</h5>
-
 <p class= "p-news">Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
 know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts y date from
 oldest to newest.</p>
-
 <p class = "p-news">In the last emacs <a href="https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/" target="_blank">post</a> I covered lines 664 - 769. This post
 covers lines 771 - 914</p>
-
 <p class= "p-news">Most of this is relevant. If you don't want your Emacs to beep when you hit the end of the file, then you need
 to set a default, and the same for another annoying stuff. I make no promises the following section is efficient (let me know if you see
 some double entries). </p>
-
 <h5>Entering and Exiting Emacs</h5>
-
 <p class= "p-news">Dashboard is cool. Gives you an opening screen you can post an image.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -295,9 +283,13 @@ some double entries). </p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">dashboard</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">dashboard</span>
 <span style="color:#a2f">:after</span> <span style="color:#b8860b">all-the-icons</span>
 <span style="color:#a2f">:diminish</span> (<span style="color:#b8860b">dashboard-mode</span> <span style="color:#b8860b">page-break-lines-mode</span>)
 <span style="color:#a2f">:load-path</span> <span style="color:#b8860b">dash-p</span>
@@ -305,78 +297,41 @@ some double entries). </p>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;dashboard</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">dashboard-footer</span> <span style="color:#b44">&#34;Time teaches all things.&#34;</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">dashboard-footer-icon</span> (<span style="color:#b8860b">all-the-icons-octicon</span> <span style="color:#b44">&#34;calendar&#34;</span>
-                                                   <span style="color:#a2f">:height</span> <span style="color:#666">1.1</span>
-                                                   <span style="color:#a2f">:v-adjust</span> <span style="color:#666">-0.05</span>
+                                                   <span style="color:#a2f">:height</span> <span style="color:#b8860b">1.1</span>
+                                                   <span style="color:#a2f">:v-adjust</span> <span style="color:#b8860b">-0.05</span>
                                                    <span style="color:#a2f">:face</span> <span style="color:#b8860b">&#39;font-lock-keyword-face</span>))
 <span style="color:#a2f">:custom</span>
 (<span style="color:#b8860b">dashboard-center-content</span> <span style="color:#800">t</span>)
 (<span style="color:#b8860b">dashboard-setup-startup-hook</span>)
 (<span style="color:#b8860b">dashboard-startup-banner</span> <span style="color:#b8860b">dash-image-p</span>)
 (<span style="color:#b8860b">dashboard-banner-logo-title</span> <span style="color:#b44">&#34;Poseidon Editor&#34;</span>)
-<span style="color:#080;font-style:italic">;(dashboard-startup-banner 3)</span>
+<span style="color:#080;font-style:italic">;(dashboard-startup-banner 3)</span>
 (<span style="color:#b8860b">dashboard-items</span>
 <span style="color:#666">&#39;</span>(
 (<span style="color:#b8860b">bookmarks</span> <span style="color:#666">.</span> <span style="color:#666">5</span>)
-<span style="color:#080;font-style:italic">;(projects . 5)</span>
+<span style="color:#080;font-style:italic">;(projects . 5)</span>
 (<span style="color:#b8860b">recents</span> <span style="color:#666">.</span> <span style="color:#666">5</span>)
-)<span style="color:#080;font-style:italic">;end a-list</span>
-)<span style="color:#080;font-style:italic">;end dashboard-items</span>
+)<span style="color:#080;font-style:italic">;end a-list</span>
+)<span style="color:#080;font-style:italic">;end dashboard-items</span>
 <span style="color:#a2f">:custom-face</span>
 (<span style="color:#b8860b">dashboard-heading</span> ((<span style="color:#800">t</span> (<span style="color:#a2f">:foreground</span> <span style="color:#b44">&#34;#f1fa8c&#34;</span> <span style="color:#a2f">:weight</span> <span style="color:#b8860b">bold</span>))))
 <span style="color:#a2f">:hook</span>
 (<span style="color:#b8860b">after-init</span> <span style="color:#666">.</span> <span style="color:#b8860b">dashboard-setup-startup-hook</span>)
-)<span style="color:#080;font-style:italic">;end-dashboard</span></code></pre></td></tr></table>
+)<span style="color:#080;font-style:italic">;end-dashboard</span>
+
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><br/>
-<h5>Here&rsquo;s my current dashboard image. Below the images there are shorts-cuts to files you&rsquo;ve been working on.</h5>
+</div><br/>
+<h5>Here's my current dashboard image. Below the images there are shorts-cuts to files you've been working on.</h5>
 <br/>
 <img src="../2020-01-24-emacs-installation-and-defaults/poseidon.jpg" alt="emacs-initialization" align="center" title="Tricys Emacs Initialization" class="img" width="100%" />
-<br/></p>
-
+<br/>
 <h5>Exit Poseidon</h5>
-
 <p class= "p-news">A function to exit emacs. I use it from minibuffer or from a hydra.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;exit and save command-logs,only works if command-log-mode feature is loaded at the same time global-command-log-mode is started</span>
-(<span style="color:#a2f">defun</span> <span style="color:#b8860b">exit-poseidon</span> ()
-(<span style="color:#a2f">interactive</span>)
-(<span style="color:#a2f">progn</span>
-(<span style="color:#a2f">if</span> (<span style="color:#a2f">featurep</span> <span style="color:#b8860b">&#39;command-log-mode</span>)
-(<span style="color:#a2f">progn</span>
-(<span style="color:#b8860b">clm/save-command-log</span>)
-(<span style="color:#b8860b">stop-mpd</span>)
-(<span style="color:#b8860b">save-buffers-kill-terminal</span>)))
-(<span style="color:#b8860b">save-buffers-kill-terminal</span>))
-)<span style="color:#080;font-style:italic">;end exit poseidon</span>
-<span style="color:#080;font-style:italic">; the mnemonic is C-x really quit (close everything)</span>
-(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-x r q&#34;</span> <span style="color:#b8860b">&#39;exit-poseidon</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
-
-<h5>Restart Poseidon</h5>
-
-<p class= "p-news">Restart is nifty for trouble-shooting init</p>
-<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -390,32 +345,72 @@ some double entries). </p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">restart-emacs</span>
-<span style="color:#080;font-style:italic">;:init</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;exit and save command-logs,only works if command-log-mode feature is loaded at the same time global-command-log-mode is started</span>
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">exit-poseidon</span> ()
+(<span style="color:#a2f">interactive</span>)
+(<span style="color:#a2f">progn</span>
+(<span style="color:#a2f">if</span> (<span style="color:#a2f">featurep</span> <span style="color:#b8860b">&#39;command-log-mode</span>)
+(<span style="color:#a2f">progn</span>
+(<span style="color:#b8860b">clm/save-command-log</span>)
+(<span style="color:#b8860b">stop-mpd</span>)
+(<span style="color:#b8860b">save-buffers-kill-terminal</span>)))
+(<span style="color:#b8860b">save-buffers-kill-terminal</span>))
+)<span style="color:#080;font-style:italic">;end exit poseidon</span>
+<span style="color:#080;font-style:italic">; the mnemonic is C-x really quit (close everything)</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-x r q&#34;</span> <span style="color:#b8860b">&#39;exit-poseidon</span>)
+
+</code></pre></td></tr></table>
+</div>
+</div><br/>
+<h5>Restart Poseidon</h5>
+<p class= "p-news">Restart is nifty for trouble-shooting init</p>
+<div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">restart-emacs</span>
+<span style="color:#080;font-style:italic">;:init</span>
 <span style="color:#a2f">:config</span>
-<span style="color:#080;font-style:italic">;(setq restart-emacs-restore-frames t)</span>
+<span style="color:#080;font-style:italic">;(setq restart-emacs-restore-frames t)</span>
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">restart-poseidon</span>()
 (<span style="color:#a2f">interactive</span>)
 (<span style="color:#a2f">progn</span>
 (<span style="color:#a2f">if</span> (<span style="color:#a2f">featurep</span> <span style="color:#b8860b">&#39;command-log-mode</span>) (<span style="color:#b8860b">clm/save-command-log</span>)
 (<span style="color:#b8860b">restart-emacs</span>))
 (<span style="color:#b8860b">restart-emacs</span>))
-)<span style="color:#080;font-style:italic">;end restart-poseidon</span>
+)<span style="color:#080;font-style:italic">;end restart-poseidon</span>
 <span style="color:#a2f">:bind</span>
 (<span style="color:#b44">&#34;C-x r r&#34;</span> <span style="color:#666">.</span> <span style="color:#b8860b">restart-poseidon</span>)
-)<span style="color:#080;font-style:italic">;end restart-emacs</span></code></pre></td></tr></table>
+)<span style="color:#080;font-style:italic">;end restart-emacs</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><br/>
+</div><br/>
 <h5>Default Appearance Customizations</h5>
-<h5>system info</h5></p>
-
+<h5>system info</h5>
 <p class= "p-news">Puts info and path at top of frame</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -434,37 +429,40 @@ some double entries). </p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">setq</span> <span style="color:#00a000">system-name</span> <span style="color:#b44">&#34;Your System Name&#34;</span>)
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+(<span style="color:#a2f">setq</span> <span style="color:#00a000">system-name</span> <span style="color:#b44">&#34;Your System Name&#34;</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#00a000">user-full-name</span> <span style="color:#b44">&#34;Your Name&#34;</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">user-mail-address</span> <span style="color:#b44">&#34;your-email@e-mail.com&#34;</span>)
-<span style="color:#080;font-style:italic">;menu-bar, tool-bar, scroll-bar</span>
-<span style="color:#080;font-style:italic">;(if (fboundp &#39;menu-bar-mode) (menu-bar-mode -1))</span>
+<span style="color:#080;font-style:italic">;menu-bar, tool-bar, scroll-bar</span>
+<span style="color:#080;font-style:italic">;(if (fboundp &#39;menu-bar-mode) (menu-bar-mode -1))</span>
 (<span style="color:#a2f">if</span> (<span style="color:#00a000">fboundp</span> <span style="color:#b8860b">&#39;tool-bar-mode</span>) (<span style="color:#b8860b">tool-bar-mode</span> <span style="color:#666">-1</span>))
-<span style="color:#080;font-style:italic">;(if (fboundp &#39;scroll-bar-mode) (scroll-bar-mode -1))</span>
-<span style="color:#080;font-style:italic">;clock</span>
+<span style="color:#080;font-style:italic">;(if (fboundp &#39;scroll-bar-mode) (scroll-bar-mode -1))</span>
+<span style="color:#080;font-style:italic">;clock</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">display-time-12hr-format</span> <span style="color:#800">t</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">display-time-format</span> <span style="color:#b44">&#34;%H:%M - %B %d - %Y&#34;</span>)
 (<span style="color:#b8860b">display-time-mode</span> <span style="color:#666">1</span>)
-<span style="color:#080;font-style:italic">;(setq display-time-day-and-date t)</span>
-<span style="color:#080;font-style:italic">;Put path, time, date at frame top</span>
+<span style="color:#080;font-style:italic">;(setq display-time-day-and-date t)</span>
+<span style="color:#080;font-style:italic">;Put path, time, date at frame top</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">global-mode-string</span> <span style="color:#800">nil</span>)
 (<span style="color:#a2f">defun</span> <span style="color:#b8860b">frame-title-prefix</span>()
 (<span style="color:#00a000">list</span> (<span style="color:#00a000">format</span> <span style="color:#b44">&#34;%s %%S: %%j &#34;</span> (<span style="color:#00a000">concat</span> <span style="color:#b44">&#34;System: &#34;</span> <span style="color:#00a000">system-name</span> <span style="color:#b44">&#34; - Editor: Poseidon - Path&#34;</span>))
          <span style="color:#666">&#39;</span>(<span style="color:#00a000">buffer-file-name</span> <span style="color:#b44">&#34;%f&#34;</span> (<span style="color:#b8860b">dired-directory</span> <span style="color:#b8860b">dired-directory</span> <span style="color:#b44">&#34;%b&#34;</span>))))
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">frame-title-format</span>
-<span style="color:#666">&#39;</span>(<span style="color:#b44">&#34; &#34;</span> (<span style="color:#a2f">:eval</span> (<span style="color:#b8860b">frame-title-prefix</span>)) <span style="color:#b44">&#34; - Time and Date: &#34;</span> <span style="color:#b8860b">display-time-string</span>))</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/>
-<h5>Desktop Config</h5></p>
+<span style="color:#666">&#39;</span>(<span style="color:#b44">&#34; &#34;</span> (<span style="color:#a2f">:eval</span> (<span style="color:#b8860b">frame-title-prefix</span>)) <span style="color:#b44">&#34; - Time and Date: &#34;</span> <span style="color:#b8860b">display-time-string</span>))
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
+<h5>Desktop Config</h5>
 <p class= "p-news">I only use when I have some complex shit going on and I need to come back to it exactly. It's a bit weird, you need to
 alternate saves to keep a default opening in reserve.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -477,9 +475,12 @@ alternate saves to keep a default opening in reserve.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;save desktop configuration</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;save desktop configuration</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">desktop+</span>
 <span style="color:#a2f">:commands</span> (<span style="color:#b8860b">desktop-create</span> <span style="color:#b8860b">desktop-load</span>)
 <span style="color:#a2f">:init</span>
@@ -489,44 +490,49 @@ alternate saves to keep a default opening in reserve.</p>
  ))
 <span style="color:#a2f">:config</span>
 (<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;desktop+</span>)
-<span style="color:#080;font-style:italic">;if you want to also save open buffers</span>
-<span style="color:#080;font-style:italic">;(setq desktop+-special-buffer-handlers &#39;(org-agenda-mode shell-mode))</span>
-)<span style="color:#080;font-style:italic">;end desktop+</span></code></pre></td></tr></table>
+<span style="color:#080;font-style:italic">;if you want to also save open buffers</span>
+<span style="color:#080;font-style:italic">;(setq desktop+-special-buffer-handlers &#39;(org-agenda-mode shell-mode))</span>
+)<span style="color:#080;font-style:italic">;end desktop+</span>
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><br/>
-<h5>A couple defaults</h5></p>
+</div><br/>
+<h5>A couple defaults</h5>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;inhibit font caching</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;inhibit font caching</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">inhibit-compacting-font-caches</span> <span style="color:#800">t</span>)
-<span style="color:#080;font-style:italic">;increase/decrease text</span>
+<span style="color:#080;font-style:italic">;increase/decrease text</span>
 (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C-=&#34;</span> <span style="color:#b8860b">&#39;text-scale-increase</span>)
 (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">&#34;C--&#34;</span> <span style="color:#b8860b">&#39;text-scale-decrease</span>)
-<span style="color:#080;font-style:italic">;Wrap words at window edge</span>
+<span style="color:#080;font-style:italic">;Wrap words at window edge</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">truncate-partial-width-windows</span> <span style="color:#800">nil</span>)
-<span style="color:#080;font-style:italic">;(global-visual-line-mode t)</span>
-(<span style="color:#b8860b">diminish</span> <span style="color:#b8860b">&#39;visual-line-mode</span>)</code></pre></td></tr></table>
+<span style="color:#080;font-style:italic">;(global-visual-line-mode t)</span>
+(<span style="color:#b8860b">diminish</span> <span style="color:#b8860b">&#39;visual-line-mode</span>)
+
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><br/>
+</div><br/>
 <h5>Visual Fill Column and Adaptive Wrap</h5>
 <p class= "p-news">Visual Fill Column shows a line where words will end. You can change the fill column to fit various page widths, like
-word is 100 or something. Adaptive wrap I think preserves the indent on text wrapping.</p></p>
+word is 100 or something. Adaptive wrap I think preserves the indent on text wrapping.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -541,32 +547,33 @@ word is 100 or something. Adaptive wrap I think preserves the indent on text wra
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Wrap words at column edge</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;Wrap words at column edge</span>
 (<span style="color:#a2f">use-package</span> <span style="color:#b8860b">visual-fill-column</span>
 <span style="color:#a2f">:commands</span> <span style="color:#b8860b">visual-fill-column-mode</span>
 <span style="color:#a2f">:config</span>
-<span style="color:#080;font-style:italic">;(add-hook &#39;visual-line-mode-hook #&#39;visual-fill-column-mode)</span>
+<span style="color:#080;font-style:italic">;(add-hook &#39;visual-line-mode-hook #&#39;visual-fill-column-mode)</span>
 (<span style="color:#b8860b">advice-add</span> <span style="color:#b8860b">&#39;text-scale-increase</span> <span style="color:#a2f">:after</span>
    <span style="color:#00a000">#&#39;</span><span style="color:#b8860b">visual-fill-column-adjust</span>)
 (<span style="color:#b8860b">advice-add</span> <span style="color:#b8860b">&#39;text-scale-decrease</span> <span style="color:#a2f">:after</span>
    <span style="color:#00a000">#&#39;</span><span style="color:#b8860b">visual-fill-column-adjust</span>)
-)<span style="color:#080;font-style:italic">;end use package fill column</span>
+)<span style="color:#080;font-style:italic">;end use package fill column</span>
 
-<span style="color:#080;font-style:italic">; you need to download adaptive wrap library from somewhere and add a path to it</span>
-<span style="color:#080;font-style:italic">;adaptive wrap indents wrapped lines</span>
+<span style="color:#080;font-style:italic">; you need to download adaptive wrap library from somewhere and add a path to it</span>
+<span style="color:#080;font-style:italic">;adaptive wrap indents wrapped lines</span>
 (<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">&#39;load-path</span> <span style="color:#b8860b">adaptive-wrap-p</span>)
-(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;adaptive-wrap</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/>
-<h5>Coding system</h5></p>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">&#39;adaptive-wrap</span>)
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
+<h5>Coding system</h5>
 <p class= "p-news">Overkill doesn't always work.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -577,9 +584,12 @@ word is 100 or something. Adaptive wrap I think preserves the indent on text wra
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">;all the coding systems you can handle (still doesn&#39;t always work)</span>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;all the coding systems you can handle (still doesn&#39;t always work)</span>
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">locale-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
 (<span style="color:#b8860b">set-terminal-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
 (<span style="color:#b8860b">set-keyboard-coding-system</span> <span style="color:#b8860b">&#39;utf-8</span>)
@@ -589,18 +599,17 @@ word is 100 or something. Adaptive wrap I think preserves the indent on text wra
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">coding-system-for-read</span> <span style="color:#b8860b">&#39;utf-8</span>)
 (<span style="color:#a2f">setq</span> <span style="color:#b8860b">coding-system-for-write</span> <span style="color:#b8860b">&#39;utf-8</span>)
 (<span style="color:#b8860b">set-default-coding-systems</span> <span style="color:#b8860b">&#39;utf-8</span>)
-<span style="color:#080;font-style:italic">;Replace characters that paste into emacs incorrectly</span></code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+<span style="color:#080;font-style:italic">;Replace characters that paste into emacs incorrectly</span>
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>Replace Garbage Characters</h5>
-
 <p class= "p-news">When you cut and paste from the net or other programs the coding systems don't always match. You can garbage characters
 on your screen. I use this to replace them. Whenever I meet a new one I add it below, if I remember.</p>
 <div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
@@ -615,12 +624,15 @@ on your screen. I use this to replace them. Whenever I meet a new one I add it b
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
 </span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">(<span style="color:#a2f">defun</span> <span style="color:#b8860b">replace-garbage-chars</span> ()
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">replace-garbage-chars</span> ()
 <span style="color:#b44">&#34;Replace goofy MS and other garbage characters with latin1 equivalents.&#34;</span>
 (<span style="color:#a2f">interactive</span>)
-(<span style="color:#a2f">save-excursion</span>             <span style="color:#080;font-style:italic">;save the current point</span>
+(<span style="color:#a2f">save-excursion</span>             <span style="color:#080;font-style:italic">;save the current point</span>
 (<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\221&#34;</span> <span style="color:#b44">&#34;`&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
 (<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\222&#34;</span> <span style="color:#b44">&#34;&#39;&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
 (<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\226&#34;</span> <span style="color:#b44">&#34;-&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
@@ -629,13 +641,13 @@ on your screen. I use this to replace them. Whenever I meet a new one I add it b
 (<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\224&#34;</span> <span style="color:#b44">&#34;)&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
 (<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\205&#34;</span> <span style="color:#b44">&#34;...&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
 (<span style="color:#b8860b">replace-string</span> <span style="color:#b44">&#34;\225&#34;</span> <span style="color:#b44">&#34;-&#34;</span> <span style="color:#800">nil</span> (<span style="color:#00a000">point-min</span>) (<span style="color:#00a000">point-max</span>))
-))<span style="color:#080;font-style:italic">;end replace-garbage-characters</span>
-<span style="color:#080;font-style:italic">;bind-key replace-garbage-characters</span>
-(<span style="color:#b8860b">bind-key</span>  <span style="color:#b44">&#34;\C-cr&#34;</span>  <span style="color:#b8860b">&#39;replace-garbage-chars</span>)</code></pre></td></tr></table>
-</div>
-</div>
-<p><br/></p>
+))<span style="color:#080;font-style:italic">;end replace-garbage-characters</span>
+<span style="color:#080;font-style:italic">;bind-key replace-garbage-characters</span>
+(<span style="color:#b8860b">bind-key</span>  <span style="color:#b44">&#34;\C-cr&#34;</span>  <span style="color:#b8860b">&#39;replace-garbage-chars</span>)
 
+</code></pre></td></tr></table>
+</div>
+</div><br/>
 <h5>That's all. See you next time.</h5>
 
 
@@ -677,8 +689,7 @@ on your screen. I use this to replace them. Whenever I meet a new one I add it b
         </span>
     </div>
     <div class="fa-inverse text-center"><small>Print</small></div>
-</a></div>
-    </div><div id="disqus_thread"></div>
+</a></div><div id="disqus_thread"></div>
 <script type="text/javascript">
 
 (function() {
@@ -695,7 +706,8 @@ on your screen. I use this to replace them. Whenever I meet a new one I add it b
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
-</div><div class="sidebar d-print-none d-none d-xl-block">
+</div>                      
+</div>                          <div class="sidebar d-print-none d-none d-xl-block">
     
 <h2 class ="center">Meet The Author</h2>
 
@@ -820,6 +832,11 @@ on your screen. I use this to replace them. Whenever I meet a new one I add it b
         <span class="badge badge-pill badge-secondary">1</span>
         </a>
         
+        <a href='https://cloudnine.github.io/categories/music/' class="nav-link">
+        music
+        <span class="badge badge-pill badge-secondary">1</span>
+        </a>
+        
         <a href='https://cloudnine.github.io/categories/philosophy/' class="nav-link">
         philosophy
         <span class="badge badge-pill badge-secondary">1</span>
@@ -900,13 +917,13 @@ on your screen. I use this to replace them. Whenever I meet a new one I add it b
         <span class="badge badge-pill badge-secondary">5</span>
         </a>
         
-        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
-        emacs-functions
-        <span class="badge badge-pill badge-secondary">4</span>
-        </a>
-        
         <a href='https://cloudnine.github.io/tags/music/' class="nav-link">
         music
+        <span class="badge badge-pill badge-secondary">5</span>
+        </a>
+        
+        <a href='https://cloudnine.github.io/tags/emacs-functions/' class="nav-link">
+        emacs-functions
         <span class="badge badge-pill badge-secondary">4</span>
         </a>
         
@@ -1044,8 +1061,9 @@ on your screen. I use this to replace them. Whenever I meet a new one I add it b
     
 </div>
 
-        </div>
-         <footer class="mt-auto footer d-print-none">
+         </main>
+        <footer class="mt-auto footer d-print-none">
+           
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-xl-3">
@@ -1063,7 +1081,7 @@ work with.
                     </div>
 
                     <div class="col-md-4 col-xl-3">
-                        <h5>Copyright</h5>
+                        <h5></h5>
 © 2019 - <script>document.write(Date().split` `[3])</script> Yuri Tricys
 
                     </div>
@@ -1077,16 +1095,9 @@ work with.
                 </div>
             </div>
         </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script src= ".js"></script>
-
-
-
 
 <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101236333);</script>
 <script async src='//static.getclicky.com/js'></script>
 
-
-    </body>
+</body>
 </html>

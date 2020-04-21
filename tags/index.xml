@@ -1,140 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Cloud Nine</title>
+    <title>Cloud Nine</title>
     <link>https://cloudnine.github.io/tags/</link>
-    <description>Recent content in Tags on Cloud Nine</description>
+    <description>Recent content on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright</copyright>
-    <lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>About the Author</title>
-      <link>https://cloudnine.github.io/tags/about-the-author/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      <title>music</title>
+      <link>https://cloudnine.github.io/tags/music/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/tags/about-the-author/</guid>
+      <guid>https://cloudnine.github.io/tags/music/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Academic</title>
-      <link>https://cloudnine.github.io/tags/academic/</link>
-      <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
+      <title>science fiction</title>
+      <link>https://cloudnine.github.io/tags/science-fiction/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/tags/academic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Alternative Energy</title>
-      <link>https://cloudnine.github.io/tags/alternative-energy/</link>
-      <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/alternative-energy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>https://cloudnine.github.io/tags/blog/</link>
-      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blog Links</title>
-      <link>https://cloudnine.github.io/tags/blog-links/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/blog-links/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Calculus</title>
-      <link>https://cloudnine.github.io/tags/calculus/</link>
-      <pubDate>Thu, 21 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/calculus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Changing Computers</title>
-      <link>https://cloudnine.github.io/tags/changing-computers/</link>
-      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/changing-computers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Climate Change</title>
-      <link>https://cloudnine.github.io/tags/climate-change/</link>
-      <pubDate>Thu, 13 Nov 2008 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/climate-change/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Computational Modelling</title>
-      <link>https://cloudnine.github.io/tags/computational-modelling/</link>
-      <pubDate>Thu, 14 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/computational-modelling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Custom Charts</title>
-      <link>https://cloudnine.github.io/tags/custom-charts/</link>
-      <pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/custom-charts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data Firm</title>
-      <link>https://cloudnine.github.io/tags/data-firm/</link>
-      <pubDate>Tue, 15 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/data-firm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data Links</title>
-      <link>https://cloudnine.github.io/tags/data-links/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/data-links/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data Science</title>
-      <link>https://cloudnine.github.io/tags/data-science/</link>
-      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/data-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Economics</title>
-      <link>https://cloudnine.github.io/tags/economics/</link>
-      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/economics/</guid>
+      <guid>https://cloudnine.github.io/tags/science-fiction/</guid>
       <description></description>
     </item>
     
@@ -148,16 +39,7 @@
     </item>
     
     <item>
-      <title>Emacs Functions</title>
-      <link>https://cloudnine.github.io/tags/emacs-functions/</link>
-      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/emacs-functions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Emacs Hydras</title>
+      <title>emacs-hydras</title>
       <link>https://cloudnine.github.io/tags/emacs-hydras/</link>
       <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -166,25 +48,7 @@
     </item>
     
     <item>
-      <title>Featured</title>
-      <link>https://cloudnine.github.io/tags/featured/</link>
-      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/featured/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Investing</title>
-      <link>https://cloudnine.github.io/tags/investing/</link>
-      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/investing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Learning Center</title>
+      <title>learning center</title>
       <link>https://cloudnine.github.io/tags/learning-center/</link>
       <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -193,43 +57,7 @@
     </item>
     
     <item>
-      <title>Macroeconomics</title>
-      <link>https://cloudnine.github.io/tags/macroeconomics/</link>
-      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/macroeconomics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Music</title>
-      <link>https://cloudnine.github.io/tags/music/</link>
-      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/music/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>News Room</title>
-      <link>https://cloudnine.github.io/tags/news-room/</link>
-      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/news-room/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Newsroom</title>
-      <link>https://cloudnine.github.io/tags/newsroom/</link>
-      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/newsroom/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Non Fiction</title>
+      <title>non fiction</title>
       <link>https://cloudnine.github.io/tags/non-fiction/</link>
       <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -238,25 +66,7 @@
     </item>
     
     <item>
-      <title>Opinion</title>
-      <link>https://cloudnine.github.io/tags/opinion/</link>
-      <pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/opinion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Organizational Psychology</title>
-      <link>https://cloudnine.github.io/tags/organizational-psychology/</link>
-      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/organizational-psychology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Personal Development</title>
+      <title>personal-development</title>
       <link>https://cloudnine.github.io/tags/personal-development/</link>
       <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -265,11 +75,209 @@
     </item>
     
     <item>
-      <title>Public Sector</title>
-      <link>https://cloudnine.github.io/tags/public-sector/</link>
-      <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
+      <title>news room</title>
+      <link>https://cloudnine.github.io/tags/news-room/</link>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/tags/public-sector/</guid>
+      <guid>https://cloudnine.github.io/tags/news-room/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>about the author</title>
+      <link>https://cloudnine.github.io/tags/about-the-author/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/about-the-author/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://cloudnine.github.io/tags/blog/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emacs functions</title>
+      <link>https://cloudnine.github.io/tags/emacs-functions/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/emacs-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>featured</title>
+      <link>https://cloudnine.github.io/tags/featured/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/featured/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>organizational psychology</title>
+      <link>https://cloudnine.github.io/tags/organizational-psychology/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/organizational-psychology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Video</title>
+      <link>https://cloudnine.github.io/tags/video/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/video/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>video motivational</title>
+      <link>https://cloudnine.github.io/tags/video-motivational/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/video-motivational/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>changing computers</title>
+      <link>https://cloudnine.github.io/tags/changing-computers/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/changing-computers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://cloudnine.github.io/tags/windows/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>economics</title>
+      <link>https://cloudnine.github.io/tags/economics/</link>
+      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/economics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>text editors</title>
+      <link>https://cloudnine.github.io/tags/text-editors/</link>
+      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/text-editors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>video emacs</title>
+      <link>https://cloudnine.github.io/tags/video-emacs/</link>
+      <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/video-emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macroeconomics</title>
+      <link>https://cloudnine.github.io/tags/macroeconomics/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/macroeconomics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>newsroom</title>
+      <link>https://cloudnine.github.io/tags/newsroom/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/newsroom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stock market</title>
+      <link>https://cloudnine.github.io/tags/stock-market/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/stock-market/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trade</title>
+      <link>https://cloudnine.github.io/tags/trade/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/trade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trends global</title>
+      <link>https://cloudnine.github.io/tags/trends-global/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/trends-global/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>investing</title>
+      <link>https://cloudnine.github.io/tags/investing/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/investing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>alternative-energy</title>
+      <link>https://cloudnine.github.io/tags/alternative-energy/</link>
+      <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/alternative-energy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog-links</title>
+      <link>https://cloudnine.github.io/tags/blog-links/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/blog-links/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-links</title>
+      <link>https://cloudnine.github.io/tags/data-links/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/data-links/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data science</title>
+      <link>https://cloudnine.github.io/tags/data-science/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/data-science/</guid>
       <description></description>
     </item>
     
@@ -283,7 +291,16 @@
     </item>
     
     <item>
-      <title>Research</title>
+      <title>public sector</title>
+      <link>https://cloudnine.github.io/tags/public-sector/</link>
+      <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/public-sector/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>research</title>
       <link>https://cloudnine.github.io/tags/research/</link>
       <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
       
@@ -292,25 +309,16 @@
     </item>
     
     <item>
-      <title>Science Fiction</title>
-      <link>https://cloudnine.github.io/tags/science-fiction/</link>
-      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      <title>data firm</title>
+      <link>https://cloudnine.github.io/tags/data-firm/</link>
+      <pubDate>Tue, 15 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/tags/science-fiction/</guid>
+      <guid>https://cloudnine.github.io/tags/data-firm/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Stock Market</title>
-      <link>https://cloudnine.github.io/tags/stock-market/</link>
-      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/stock-market/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tech</title>
+      <title>tech</title>
       <link>https://cloudnine.github.io/tags/tech/</link>
       <pubDate>Fri, 04 Mar 2016 00:00:00 +0000</pubDate>
       
@@ -319,65 +327,56 @@
     </item>
     
     <item>
-      <title>Text Editors</title>
-      <link>https://cloudnine.github.io/tags/text-editors/</link>
-      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+      <title>calculus</title>
+      <link>https://cloudnine.github.io/tags/calculus/</link>
+      <pubDate>Thu, 21 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/tags/text-editors/</guid>
+      <guid>https://cloudnine.github.io/tags/calculus/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Trade</title>
-      <link>https://cloudnine.github.io/tags/trade/</link>
-      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      <title>computational modelling</title>
+      <link>https://cloudnine.github.io/tags/computational-modelling/</link>
+      <pubDate>Thu, 14 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/tags/trade/</guid>
+      <guid>https://cloudnine.github.io/tags/computational-modelling/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Trends Global</title>
-      <link>https://cloudnine.github.io/tags/trends-global/</link>
-      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      <title>custom charts</title>
+      <link>https://cloudnine.github.io/tags/custom-charts/</link>
+      <pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/tags/trends-global/</guid>
+      <guid>https://cloudnine.github.io/tags/custom-charts/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Video</title>
-      <link>https://cloudnine.github.io/tags/video/</link>
-      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      <title>opinion</title>
+      <link>https://cloudnine.github.io/tags/opinion/</link>
+      <pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/tags/video/</guid>
+      <guid>https://cloudnine.github.io/tags/opinion/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Video Emacs</title>
-      <link>https://cloudnine.github.io/tags/video-emacs/</link>
-      <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+      <title>academic</title>
+      <link>https://cloudnine.github.io/tags/academic/</link>
+      <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/tags/video-emacs/</guid>
+      <guid>https://cloudnine.github.io/tags/academic/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Video Motivational</title>
-      <link>https://cloudnine.github.io/tags/video-motivational/</link>
-      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      <title>climate change</title>
+      <link>https://cloudnine.github.io/tags/climate-change/</link>
+      <pubDate>Thu, 13 Nov 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/tags/video-motivational/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Windows</title>
-      <link>https://cloudnine.github.io/tags/windows/</link>
-      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/windows/</guid>
+      <guid>https://cloudnine.github.io/tags/climate-change/</guid>
       <description></description>
     </item>
     
