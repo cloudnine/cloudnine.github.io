@@ -4,32 +4,42 @@
   
   <url>
     <loc>https://cloudnine.github.io/</loc>
-    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/categories/</loc>
-    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/current/</loc>
-    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/tags/</loc>
-    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/categories/movies/</loc>
-    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/tags/music/</loc>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/categories/music/</loc>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/current/2020-04-20-video-test/</loc>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/categories/movies/</loc>
     <lastmod>2020-04-10T00:00:00+00:00</lastmod>
   </url>
   
