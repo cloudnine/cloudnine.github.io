@@ -4,45 +4,32 @@
   
   <url>
     <loc>https://cloudnine.github.io/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/categories/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/current/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/tags/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/tags/music/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/categories/music/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/current/2020-04-20-video-test/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/categories/movies/</loc>
+    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/music/</loc>
     <lastmod>2020-04-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -59,7 +46,6 @@
   <url>
     <loc>https://cloudnine.github.io/science/</loc>
     <lastmod>2020-04-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -90,7 +76,6 @@
   <url>
     <loc>https://cloudnine.github.io/books/</loc>
     <lastmod>2020-04-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -141,7 +126,6 @@
   <url>
     <loc>https://cloudnine.github.io/motivation/</loc>
     <lastmod>2020-03-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -352,7 +336,6 @@
   <url>
     <loc>https://cloudnine.github.io/about/</loc>
     <lastmod>2019-12-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -403,7 +386,6 @@
   <url>
     <loc>https://cloudnine.github.io/archives/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -814,6 +796,10 @@
   <url>
     <loc>https://cloudnine.github.io/post/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/search/</loc>
   </url>
   
 </urlset>
