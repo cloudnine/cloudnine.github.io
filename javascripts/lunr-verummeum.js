@@ -92,40 +92,37 @@ function renderResults(results) {
     results.slice(0, 100).forEach(function (result) {
 
 
-        var $resultstring = "<section class='post'>" +
-            "<div  class='row'>" +
-            "<div class='col-md-4'> " +
-            "<div class='image'>" +
-            "<a href='" + result.uri + "'>" +
-            "<img src='" + result.banner + "' class='img-responsive' alt=''>" +
-            "</a>" +
-            "</div>" +
-            "</div>" +
-            "<div class='col-md-8'>" +
-            "<h2><a href='" + result.uri + "'>" + result.title + "</a></h2>" +
-            "<div class='clearfix'>" +
-            "<p class='author-category'>";
-        for (i = 0; i < result.tags.length; i++) {
+var $resultstring = "<article class='post'>" +
+"<a class='title post-meta-styling' alt='" + .result.showTitle + "href='" + result.permalink + "'>" +
+"<div class="d-lg-flex flex-row post-meta-styling'> " +
+"<div class='thumb-img col-lg-2' style='background-image: linear-gradient(rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0.15)), url('" + result.image + "');>" +
+"</div><div class='col-lg-10 text-center text-lg-left align-self-center'>" +
+"<h2>" + result.showTitle +  "</h2>" +
+"</div></div></a>" +
+"<div class='mb-3 mt-2'>" +
+"<small><strong>Author:" + result.showAuthor +  "</strong> |" + "&nbsp;" +
+"<i class='far fa-calendar-alt'></i>" + "&nbsp;" + result.showDate + "&nbsp;" +
+"|<i class='fa fa-tags' title='Tags' aria-hidden='true'></i>&nbsp;" +
+for (i = 0; i < result.tags.length; i++) {
             $resultstring += "<a href='/tags/" + result.tags[i] + "'>" + result.tags[i] + "</a>";
             if ((i + 1) < result.tags.length) {
                 $resultstring += ", ";
             }
         }
 
-        $resultstring += "</p>" +
-            "<p class='date-comments'>" +
-            "<a href='" + result.uri + "'><i class='fa fa-calendar-o'></i> " + moment(result.date).format('LL') + "</a>" +
-            "</p>" +
-            "</div>" +
-            "<div class='intro'>" + result.summary + "</div>" +
-            "<p class='read-more'><a href='" + result.uri + "' class='btn btn-template-main'>Continue reading</a>" +
-            "</p>" +
-            "</div>" +
-            "</div>" +
-            "</section>";
+$resultstring += "</small></div><div>" + result.showSummary +
+"</div><div class='mt-2'>" +
+"<a class='btn btn-outline-secondary' href='" + result.permalink + "'role = 'button'>Continue Reading...</a>" +
+"</div></article>";
 
-        var $result = ($resultstring);
-        $results.append($result);
+var $result = ($resultstring);
+        $("#results").append($result);
+
+    }
+};
+
+
+
     });
 }
 
