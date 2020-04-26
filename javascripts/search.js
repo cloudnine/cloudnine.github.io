@@ -149,7 +149,7 @@ var searchFn = function () {
                 res.title = normalize(result.title);
                 res.subtitle = normalize(result.subtitle);
                 res.description = normalize(result.description);
-                res.content = normalize(result.summary);
+                res.content = normalize(result.content);
                 var newTags_1 = [];
                 result.tags.forEach(function (tag) {
                     return newTags_1.push(normalize(tag));
