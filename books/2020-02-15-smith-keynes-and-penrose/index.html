@@ -33,7 +33,7 @@
 <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3&#43;Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p&#43;WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S&#43;L3BlXeVIU" crossorigin="anonymous"/>
-<link rel="stylesheet" href="/css/bundle.min.107e93523464798f912a395c0dd9200d92c7eb8c106933a96445f49bd3a2a25b.css" integrity="sha256-EH6TUjRkeY&#43;RKjlcDdkgDZLH64wQaTOpZEX0m9Oiols="/>
+<link rel="stylesheet" href="/css/bundle.min.62ab964f8d692e84fe07c14ff4302089c1dccc220e9650307e435c5f64678429.css" integrity="sha256-YquWT41pLoT&#43;B8FP9DAgicHczCIOllAwfkNcX2RnhCk="/>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft&#43;2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
@@ -51,97 +51,17 @@
 
 
 <style type="text/css">
-        .feature-image {
-          background-image: url("https://cloudnine.github.io/images/books/fading-newspaper-horizontal.jpg");
-          width:100%;
-          height: auto;
-        }
-@media (max-width: 575px) {
 .feature-image {
-    min-height: 180px;
+background-image: url("https://cloudnine.github.io/images/books/fading-newspaper-horizontal.jpg");
+width:100%;
+height: auto;
 }
-
-.feature-image-text {
-    max-width: 80%;
-    margin-top:5px;
-}
-.feature-image-text h1 {
-    font-size: 1.3rem;
-}
-.feature-image-text .intro-description {
-    font-size: .75rem;
-}
-}  
-
-@media (min-width: 576px) {
-    .feature-image {
-    min-height: 200px;
-    }
-.feature-image-text {
-    max-width: 80%;
-    margin-top:10px;
-}
-.feature-image-text h1 {
-    font-size: 1.3rem;
-}
-.feature-image-text .intro-description {
-    font-size: .75rem;
-}
-}  
-
-@media (min-width: 768px) {
-    .feature-image {
-    min-height: 250px;
-    }
-.feature-image-text {
-    max-width: 80%;
-    margin-top:10px;
-}
-.feature-image-text h1 {
-    font-size: 1.6rem;
-}
-.feature-image-text .intro-description {
-    font-size: 1rem;
-}
-} 
-
-@media (min-width: 992px) {
-    .feature-image {
-    min-height: 350px;
-}
-.feature-image-text {
-    max-width: 600px;
-    margin-top:15px;
-}
-.feature-image-text h1 {
-    font-size: 2rem;
-}
-.feature-image-text .intro-description {
-    font-size: 1.4rem;
-}
-} 
-@media (min-width: 1200px) {
-    .feature-image {
-    min-height: 630px;
-}
-.feature-image-text {
-    max-width: 760px;
-    margin-top:20px;
-}
-.feature-image-text h1 {
-    font-size: 2.3rem;
-}
-.feature-image-text .intro-description {
-    font-size: 1.6rem;
-}
-} 
 </style>
 
 
 </head>
 <body>
 <div id="wrapper" class="wrapper">
-
 <div id="navigation" class="navigation navbar container-fluid navbar-expand-xl fixed-top bg-dark  navbar-dark ">
 <button class="navbar-toggler collapsed mr-3 " type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 <i class="fas fa-bars"></i></button>
@@ -166,11 +86,23 @@
 </ul>
 </div>
 </div>  
-<header class="feature-image d-print-none"></header>
 
 
+
+
+
+
+
+
+<header id="header" class="feature-image"><div class="feature-image-text"><h1 class="text-center">Bookish Stuff</h1>
+<div class="intro-description  d-block"></div>
+</div></header>
+
+
+
+<main id="main" class="main">
 <div class="container mt-4 post">
-    <h1>Smith, Keynes, and Penrose</h1><div class="mb-3 mt-2">
+<h1>Smith, Keynes, and Penrose</h1><div class="mb-3 mt-2">
     <small>
 <strong>Author:
 Yuri Tricys
@@ -254,8 +186,7 @@ would posses curiosity and a thirst for knowledge. Knowledge of worth does not s
 let me tell you, this book is so far beautiful written. </p>
 <br/>
 
-
-        <div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fbooks%2f2020-02-15-smith-keynes-and-penrose%2f&text=Smith%2c%20Keynes%2c%20and%20Penrose&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
+         <div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fbooks%2f2020-02-15-smith-keynes-and-penrose%2f&text=Smith%2c%20Keynes%2c%20and%20Penrose&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow">
     <div>
         <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x"></i>
@@ -311,7 +242,12 @@ let me tell you, this book is so far beautiful written. </p>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br/><br/>
 </article>                      
-</div>                          <div id ="sidebar" class="sidebar d-print-none d-none d-md-block">
+</div>                          
+</main>                          
+
+<div id="banner"></div>
+
+<div id ="sidebar" class="sidebar d-print-none d-none d-md-block">
     
 <h2 class ="center">Meet The Author</h2>
 
@@ -665,8 +601,7 @@ let me tell you, this book is so far beautiful written. </p>
     
 </div>                          
 
-
-
+<div id="ads"></div>
 
 <footer id="footer" class="mt-auto footer d-print-none">
            
