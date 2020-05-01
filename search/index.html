@@ -33,7 +33,7 @@
 <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3&#43;Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p&#43;WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S&#43;L3BlXeVIU" crossorigin="anonymous"/>
-<link rel="stylesheet" href="/css/bundle.min.62ab964f8d692e84fe07c14ff4302089c1dccc220e9650307e435c5f64678429.css" integrity="sha256-YquWT41pLoT&#43;B8FP9DAgicHczCIOllAwfkNcX2RnhCk="/>
+<link rel="stylesheet" href="/css/bundle.min.9e1e09fc700cc74eb845d4b776888d09c796fc4867a1125f1050be581f462813.css" integrity="sha256-nh4J/HAMx064RdS3doiNCceW/EhnoRJfEFC&#43;WB9GKBM="/>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft&#43;2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
@@ -57,35 +57,73 @@ width: 100%;
 height:auto;
 }
 
-@media (max-width: 35rem) {
-.feature-image {
-min-height: 11.25rem;
-}}
 
-@media (min-width: 35.875rem) {
-.feature-image {
-min-height: 12.5rem;
-}}
-@media (min-width: 48rem) {
-.feature-image {
-min-height: 15.625rem;
-}}
-@media (min-width: 62rem) {
-.feature-image {
-min-height: 21.875rem;
-}}
-@media (min-width: 75rem) {
-.feature-image {
-min-height: 25rem;
-}}
+<!---------------------------------------------------------------------------->
+<!--                                page grid                                -->
+<!---------------------------------------------------------------------------->
+.wrapper{
+display:grid;
+grid-template-columns: 1fr;
+grid-template-rows:auto;
+}
+
+#navigation{
+grid-column: 1;
+grid-row:1;
+}
+
+#header{
+grid-column: 1;
+grid-row:2;
+display:grid;
+grid-template-columns:1fr 2fr 1fr;
+grid-template-rows: auto;
+}
+
+#banner{
+grid-column: 1;
+grid-row:3;
+}
+#main{
+grid-column: 1;
+grid-row:4;
+}
+#sidebar{
+grid-column: 1;
+grid-row:5;
+}
+#ads{
+grid-column: 1;
+grid-row:6;
+}
+#footer{
+grid-column: 1;
+grid-row:7;
+}
+
+<!---------------------------------------------------------------------------->
+<!--                               header grid                               -->
+<!---------------------------------------------------------------------------->
+
+.feature-image-text{
+grid-column:2;
+grid-row:1;
+display:grid;
+grid-template-columns: 1fr;
+grid-template-rows:auto;
+margin:0rem;
+max-width:none;
+}
+
 
 
 .inner-form {
-display: -ms-flexbox;
-display: flex;
-width: 40rem;
+grid-column:1;
+grid-row:1;
+display: grid;
+min-width: 100%;
 -ms-flex-pack: justify;
-justify-content: space-between;
+
 -ms-flex-align: center;
 align-items: center;
 box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
@@ -95,7 +133,7 @@ overflow: hidden;
 }
 
  .inner-form .input-field {
-height: 3rem;
+height: 2.5rem;
 }
 
  .inner-form .input-field input {
@@ -160,6 +198,292 @@ height: 36px;
 fill: #222;
 }
 
+
+
+
+<!---------------------------------------------------------------------------->
+<!--                            post-summary-grid                            -->
+<!---------------------------------------------------------------------------->
+
+#post-summary-grid {
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: auto;
+border: 1px solid #ccc;
+border-radius: .8rem;
+justify-content: center;
+}
+
+
+#post-summary-image{
+grid-column:1;
+grid-row:1;
+height:auto;
+}
+
+
+#results-message{
+text-align:center;
+}
+
+
+.search-img{
+
+height:5.625rem;
+padding: .25rem;
+border-radius: .8rem;
+width: 100%;
+object-fit:contain;
+}
+
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+
+
+
+@media (max-width: 35rem) {
+.feature-image {
+min-height: 11.25rem;
+}
+
+.feature-image-text{
+display:grid;
+grid-column:2;
+grid-row:1;
+grid-template-columns: 1fr;
+grid-template-rows:auto;
+margin:0rem;
+max-width:none;
+}
+
+.wrapper{
+display:grid;
+grid-template-columns: 1fr;
+grid-template-rows:auto;
+}
+
+#header{
+grid-column: 1;
+grid-row:2;
+display:grid;
+grid-template-columns:1fr 2fr 1fr;
+grid-template-rows: auto;
+}
+
+
+}  
+
+ 
+ 
+ 
+
+
+@media (min-width: 35.875rem) {
+.feature-image {
+min-height: 12.5rem;
+}
+
+
+#header{
+grid-column: 1;
+grid-row:2;
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+grid-template-rows: auto;
+}
+
+.feature-image-text{
+grid-template-columns: 1fr;
+grid-template-rows:auto;
+grid-column:2;
+grid-row:1;
+display:grid;
+margin:0rem;
+max-width:none;
+}
+
+
+}  
+
+ 
+ 
+ 
+ 
+
+
+@media (min-width: 48rem) {
+.feature-image {
+min-height: 15.625rem;
+}
+
+
+.wrapper {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: auto;
+
+}
+#navigation{
+grid-column: 1/ span 3;
+grid-row:1;
+}
+#header{
+display:grid;
+grid-column: 1/ span 3;
+grid-row:2;
+}
+
+
+.feature-image-text{
+grid-template-columns: 1fr;
+grid-template-rows:auto;
+display:grid;
+grid-column:2;
+grid-row:1;
+margin:0rem;
+max-width:none;
+}
+
+#banner{
+grid-column: 1/ span 3;
+grid-row:3;
+}
+#main{
+grid-column: 2;
+grid-row:4;
+}
+#sidebar{
+grid-column: 3;
+grid-row:4;
+}
+#ads{
+grid-column: 1;
+grid-row:4;
+}
+#footer{
+grid-column: 1/ span 3;
+grid-row:5;
+}
+
+
+}  
+
+ 
+ 
+ 
+ 
+
+
+
+@media (min-width: 62rem) {
+.feature-image {
+min-height: 21.875rem;
+}
+
+#header{
+display:grid;
+
+
+}
+
+.feature-image-text{
+grid-template-columns: 1fr;
+grid-template-rows:auto;
+grid-column:2;
+grid-row:1;
+display:grid;
+max-width:none;
+}
+
+
+
+.wrapper {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: auto;
+
+}
+
+}
+ 
+
+ 
+ 
+ 
+ 
+
+@media (min-width: 75rem) {
+.feature-image {
+min-height: 25rem;}
+
+.wrapper {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: auto;
+grid-column-gap:0rem;
+}
+
+#navigation{
+grid-column: 1/ span 3;
+grid-row:1;
+}
+
+
+#header{
+display:grid;
+grid-column: 1/span 3;
+grid-row:2;
+}
+
+
+.feature-image-text{
+grid-template-columns: 1fr;
+grid-template-rows:auto;
+grid-column:2;
+grid-row:1;
+max-width:none;
+}
+
+#banner{
+grid-column: 1/ span 3;
+grid-row:3;
+}
+#main{
+grid-column: 2;
+grid-row:4;
+min-height:80rem;
+}
+
+#sidebar{
+grid-column: 3;
+grid-row:4;
+}
+#ads{
+grid-column: 1;
+grid-row:4;
+}
+
+#footer{
+grid-column: 1/ span 3;
+grid-row:5;
+}
+}
+  
+
+
+
+
+
+
+
+
 </style>
 
 </head>
@@ -192,8 +516,8 @@ fill: #222;
 
 
 <header id="header" class="feature-image">
-<div class="feature-image-text">
 
+<div class="feature-image-text">
 <div class="inner-form">
 <div class="input-field first-wrap">
 <div class="svg-wrapper">
@@ -205,54 +529,24 @@ fill: #222;
 </div>
 </div>
 
+</div>                          
 
-</div> 
 </header>
 
 
 
 <main id="main" class="main">
 <div class="container mt-4 mb-4 recent-posts">
-<br/><div class="container">
-<div class="row">
+<br/><div class="row" style ="height: auto!important;">
 <div class="col-md-12">
-<h1>Search</h1>
-</div>
-</div>
-</div>
-
-
-<div id="content" style ="height: auto!important;">
-<div class="container">
-<div class="row" style ="height: auto!important;">
-<div class="col-md-12">
-
 <div class="article-post" style="height: auto!important;">
 <p id="loading" style="display:none;">Loading search data...</p>
-<label for="searchBox">Enter your search below to find content on this blog:</label>
-
-
-<button id="btnGo" disabled="disabled" class="btn btn-primary ml-3 float-left" style>Go</button>
-
 <div class="sep"></div>
 <a name="resultsArea" style="transition: all .2s;"></a>
 <div id="results">
-<p>No items found.</p>
-
 </div>
-
-
 </div>                          
 </div>                          
-
-
-
-
-
-</div>                          
-</div>                          
-
-<div class="col-md-12"></div>
 </div>                          
 </div>                          
 </main>
@@ -260,6 +554,39 @@ fill: #222;
 
 
 
+<footer id="footer" class="mt-auto footer d-print-none">
+           
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Website</h5>
+This blog was created using <a href="https://gohugo.io/">Hugo</a>,
+<a href="https://getbootstrap.com/">Bootstrap</a>, and the Silhouette Hugo theme.
+
+                    </div>
+
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Disclaimer</h5>
+Opinions expressed here are my own and may not reflect those of any company I work for, or people I
+work with.
+
+                    </div>
+
+                    <div class="col-md-4 col-xl-3">
+                        <h5></h5>
+© 2019 - <script>document.write(Date().split` `[3])</script> Yuri Tricys
+
+                    </div>
+
+                </div>
+                <hr />
+                <div class="d-flex justify-content-center icons">
+                    <a class="py-2 px-2" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><i class="fab fa-linkedin"></i></a>
+<a class="py-2 px-2" href='https://cloudnine.github.io/index.xml'><i class="fas fa-rss"></i></a>
+
+                </div>
+            </div>
+        </footer>
 
 </div>
 

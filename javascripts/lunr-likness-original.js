@@ -21,15 +21,22 @@ var searchFn = function () {
             var result = results[i].item;
             var openAnchor = "<a href=\"" + result.permalink + "\" " +
                 "alt=\"" + result.showTitle + "\">";
-            var resultPane = "<div class=\"container\">" +
-                "<div class=\"row\">" +
-                openAnchor + result.showTitle + "</a></div>" +
-                "<div class=\"row\">" +
-                "<div class=\"col-12 col-md-4 col-lg-2\">" +
-                openAnchor + "<img src=\"" + result.image + "\" alt=\"" + result.showTitle + "\" class=\"rounded w-100\"></a></div>" +
-                ("<div class=\"col-12 col-md-8 col-lg-10\"><small>" + result.showDescription + "</small></div>") +
-                "</div></div>";
-            $("#results").append(resultPane);
+             var showImageUrl = result.showImage.replace(new RegExp(' ', 'g'), '\/');
+
+
+var resultPane = '<article id=\"post-summary-grid\"class=\"post\">' +
+'<a id=\"post-summary-image\" class=\"title post-meta-styling\" href=\"' + result.permalink + '#article-title\"'  +
+'alt=\"' + result.showTitle + '\">' +
+'<img src=\"' + result.showImage + '\" alt=\"' + result.showTitle + '\" class=\"search-img\">'+
+'<a id=\"post-summary-title\" class=\"title post-meta-styling\" href=\"' + result.permalink + '#article-title\"><div>'+
+'<h2>' + result.showTitle + '</h2></div></a>' +
+'<div id=\"post-summary-meta\" class=\"ml-2 mb-2 mt-1\"><small><strong>Author:' + result.showAuthor +  '</strong>' +
+'|&nbsp;<i class=\"far fa-calendar-alt\"></i>&nbsp;' +  result.showDate + '</small></div>' +
+'<div id="\post-summary\">' + result.showSummary + '</div>' +
+'<a id=\"post-summary-continue\" class=\"btn btn-outline-secondary\"  href=\"' + result.permalink + '\" role =\"button\">Continue Reading...</a>'+
+'<div id=\"post-summary-data\"></div></article>';
+
+$("#results").append(resultPane);
         }
     };
     var checkTerms = function (terms, weight, target) {
@@ -75,11 +82,11 @@ var searchFn = function () {
             if (results.length > limit) {
                 resultsMessage += " Showing first " + limit + " results.";
             }
-            $("#results").html("<p>" + resultsMessage + "</p>");
+            $("#results").html('<p class="p-news" id="results-message">' + resultsMessage + '</p>');
             render(results);
         }
         else {
-            $("#results").html('<p>No items found.</p>');
+            $("#results").html('<p class="p-news" id="results-message">No items found.</p>');
         }
     };
     var runSearch = function () {
@@ -92,14 +99,14 @@ var searchFn = function () {
         }
         lastTerm = term;
         if (term.length < minChars) {
-            $("#results").html('<p>No items found.</p>');
+            $("#results").html('<p class="p-news" id="results-message">No items found.</p>');
             $("#btnGo").attr("disabled", true);
             return;
         }
         $("#btnGo").removeAttr("disabled");
         searching = true;
         var startSearch = new Date();
-        $("#results").html('<p>Processing search...</p>');
+        $("#results").html('<p class="p-news" id="results-message">Processing search...</p>');
         var terms = term.split(" ");
         var termsTree = [];
         for (var i = 0; i < terms.length; i += 1) {
@@ -121,7 +128,7 @@ var searchFn = function () {
         search(termsTree);
         searching = false;
         var endSearch = new Date();
-        $("#results").append("<p><small>Search took " + (endSearch - startSearch) + "ms.</small></p>");
+        $("#results").append('<p class="p-news" id="results-message"><small>Search took ' + (endSearch - startSearch) + 'ms.</small></p>');
     };
     var initSearch = function () {
         $("#searchBox").keyup(function () {
@@ -146,6 +153,10 @@ var searchFn = function () {
                 var res = {};
                 res.showTitle = result.title;
                 res.showDescription = result.description;
+                res.showDate = result.date;
+                res.showSummary = result.summary;
+                res.showAuthor = result.author;
+                res.showImage = result.image;
                 res.title = normalize(result.title);
                 res.subtitle = normalize(result.subtitle);
                 res.description = normalize(result.description);
@@ -156,7 +167,6 @@ var searchFn = function () {
                 });
                 res.tags = newTags_1;
                 res.permalink = result.permalink;
-                res.image = result.image;
                 searchHost.index.push(res);
                 dup[result.permalink] = true;
             }
