@@ -6,10 +6,20 @@
     <description>Recent content in learning center on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 09 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/tags/learning-center/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Web Developer Hydra</title>
+      <link>https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/</guid>
+      <description>This post covers the following sections from my init.   Web Developer Hydra
+  Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date fromoldest to newest.</description>
+    </item>
     
     <item>
       <title>The Helm Hydra</title>
