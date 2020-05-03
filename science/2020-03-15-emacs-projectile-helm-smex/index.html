@@ -1,739 +1,597 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=author content="Cloud Nine"><meta name=copyright content="Copyright &copy; 2019 -2020byYuri TricysAll rights reserved."><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=google-site-verification content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw"><meta name=yandex-verification content="7cb55c3432ff9fc7"><meta name=msvalidate.01 content="C3105C04193385EF751ABBCF0EBC693A"><meta name=description content="Emacs configuration for Helm, SMEX, Bookmarks, and Projectile packages."><title>Emacs Projectile, Helm, and Smex</title><meta property="article:author" content="Yuri Tricys"><link rel=canonical href=https://cloudnine.github.io/science/2020-03-15-emacs-projectile-helm-smex/><meta name=theme-color content="#ffffff"><meta property="og:title" content="Emacs Projectile, Helm, and Smex"><meta property="og:image:type" content="image/jpg"><meta property="og:image" content="https://cloudnine.github.io/images/science/christian-bale.jpg"><meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/christian-bale.jpg"><meta property="og:description" content="Emacs configuration for Helm, SMEX, Bookmarks, and Projectile packages."><meta property="og:site_name" content="Cloud Nine Blog."><meta property="og:url" content="https://cloudnine.github.io/science/2020-03-15-emacs-projectile-helm-smex/"><meta property="og:type" content="website"><link rel=icon type=image/png href=https://cloudnine.github.io/images/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=https://cloudnine.github.io/images/favicon-32x32.png sizes=32x32><link rel=me type=text/html href=https://www.linkedin.com/in/yuri-tricys-aa004b26/><link rel=alternate type=application/rss+xml href=https://cloudnine.github.io/index.xml><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Oswald:400" integrity crossorigin=anonymous></link><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css integrity=sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh crossorigin=anonymous></link><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous></link><link rel=stylesheet href=/css/bundle.css integrity><script src=https://code.jquery.com/jquery-3.4.1.min.js integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js integrity=sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo crossorigin=anonymous defer></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js integrity=sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 crossorigin=anonymous defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js integrity="sha256-34Si1Y6llMBKM3G0jQILVeoQKEwuxjbk4zGWXXMT4ps=" crossorigin=anonymous defer></script><script src=https://cloudnine.github.io/js/min/bundle.min.964d3af33c3c75fc536731cf858cd4e67ed1ac8f9af37b6e3b667410d714a3eb33be81ef45aad5fc7d2b98fb3c8eb6f305ec6012ad05844eff798b08fe87c4d5.js integrity="sha512-lk068zw8dfxTZzHPhYzU5n7RrI+a83tuO2Z0ENcUo+szvoHvRarV/H0rmPs8jrbzBexgEq0FhE7/eYsI/ofE1Q==" crossorigin=anonymous defer></script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Blog","image":"https://cloudnine.github.io/images/science/christian-bale.jpg","url":"https://cloudnine.github.io/science/2020-03-15-emacs-projectile-helm-smex/","thumbnailUrl":"https://cloudnine.github.io/images/science/christian-bale.jpg","headline":"Emacs Projectile, Helm, and Smex","description":"Emacs configuration for Helm, SMEX, Bookmarks, and Projectile packages.","datePublished":"2020-03-15T00:00:00Z","dateCreated":"2020-03-15T00:00:00Z","creator":"Yuri Tricys","author":"Yuri Tricys","articleSection":"science","publisher":{"name":"Cloud Nine","logo":"","@type":"Organization"}}</script><script defer>var clicky_site_ids=clicky_site_ids||[];clicky_site_ids.push(101236333);</script><script async src=//static.getclicky.com/js></script><style type=text/css>.feature-image{background-image:url(https://cloudnine.github.io/images/science/christian-bale.jpg);width:100%;height:auto}</style></head><body><div id=wrapper class=wrapper><div id=navigation class="navigation navbar container-fluid navbar-expand-xl fixed-top bg-dark navbar-dark"><button class="navbar-toggler collapsed mr-3" type=button data-toggle=collapse data-target=#navbarCollapse aria-controls=navbarCollapse aria-expanded=false aria-label="Toggle navigation">
-<i class="fas fa-bars"></i></button>
-<a class="navbar-brand mr-2" href=https://cloudnine.github.io/>CLOUD NINE</a><div class="navbar-collapse collapse" id=navbarCollapse><ul class="navbar-nav mr-auto"><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/about/>About</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/motivation/>Motivation</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/science/>Science</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/categories/>Categories</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/tags/>Tags</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/books/>Books</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/current/>Current</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/archives/>Archives</a></li></ul></div><div class=nav-right-side><ul class="navbar-icons navbar-nav"><li class=nav-item id=search><a class="nav-link active" href=https://cloudnine.github.io/search/><span class="d-none d-lg-inline-flex">Search&nbsp;&nbsp;</span><i class="fas fa-search"></i></a></li><li class=nav-item id=user><a class="nav-link active" href=#><span class="d-none d-lg-inline-flex">Login&nbsp;&nbsp;&nbsp;</span><i class="fas fa-user"></i></a></li><li class=nav-item id=shop><a class="nav-link active" href=#><span class="d-none d-lg-inline-flex">Shop&nbsp;&nbsp;</span><i class="fas fa-shopping-cart"></i></a></li></ul></div></div><header id=header class=feature-image><div class=feature-image-text><h1 class=text-center>Sciency Stuff</h1><div class="intro-description d-block"></div></div></header><main id=main class=main><div class="container mt-4 post"><a name=article-title class=anchor-top></a><h1>Emacs Projectile, Helm, and Smex</h1><div id=post-summary-meta class="ml-2 mb-2 mt-1"><small><strong>Author:
-Yuri Tricys</strong> |&nbsp; <i class="far fa-calendar-alt"></i>&nbsp;Mar 15, 2020&nbsp;
-|&nbsp; <i class="fa fa-tags" title=Tags aria-hidden=true></i>&nbsp;
-<a href=/tags/emacs>emacs</a>,
-<a href=/tags/emacs-hydras>emacs hydras</a>,
-<a href=/tags/learning-center>learning center</a></small></div><article class="mt-4 mb-4 main-content"><h5>This post covers Projectile, Helm, Smex, and Bookmarks from the "Default Operations" section of my init.<br><br></h5><ul><li><p>Default Operations</p><ul><li>Moving the Cursor and Screen</li><li>Make/kill/move windows frames buffers</li><li>Projectile, Helm and Smex</li><li>Parentheses</li><li>Directories</li><li>Clip board (kill ring)</li><li>PDF tools and command line history</li></ul><br></li></ul><h5>Preamble</h5><p class=p-news>Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
-know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts y date from
-oldest to newest.</p><p class=p-news>In the last emacs <a href=https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/ target=_blank>post</a> I covered lines 1195 - 1366. This post covers lines 1377 - 1649. I include the lines for anyone that wants
-to patch together the entire init from start to finish. The lines won't always match up because I take stuff out when I'm in the init.</p><p class=p-news></p><h5>Projectile, Helm, Smex, and Bookmarks</h5><p class=p-news>Projectile is a big package with a lot of popular functionality. I haven't explored it a ton, but it automagically localizes functions to a
-directory. This is helpful if you have big project directories and you want to save time finding and switching files. You just switch
-projects and use the projectile functions to search directories and files, open up files in an adjacent window, and so on. There's an
-indexing method that uses either emacs lisp (the one I'm using below), a hybrid of lisp and the your ops find program, or just your ops find
-program. The alien method optimizes the hybrid method which you want on Windows, only you have to get windows to use some linux search
-utilities. I use a windows compiled ag.exe instead of Windows find.exe, but it's still slow, especially with caching. The native indexing
-method in lisp is also slow. Projectile works fine for me when I turn of caching and minimize the indexing, but in the end unless I have a
-massive directory, it's just faster for me to use bookmarks, which is what I do 95% of the time. Still, here's the code I use.</p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
-<span style=color:#080;font-style:italic>;projectile add .projectile to any file</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>projectile</span>
-<span style=color:#a2f>:config</span>
-(<span style=color:#b8860b>projectile-global-mode</span>)
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>projectile-enable-caching</span> <span style=color:#800>t</span>)
-<span style=color:#080;font-style:italic>;(setq projectile-indexing-method &#39;alien)</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>projectile-indexing-method</span> <span style=color:#b8860b>&#39;hybrid</span>)
-<span style=color:#080;font-style:italic>;(setq projectile-indexing-method &#39;native)</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>projectile-sort-order</span> <span style=color:#b8860b>&#39;recently-active</span>)
-<span style=color:#080;font-style:italic>;(setq projectile-switch-project-action &#39;projectile-dired)</span>
-<span style=color:#080;font-style:italic>;enable safe local variables</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>enable-local-variables</span> <span style=color:#666>&#39;</span><span style=color:#a2f>:safe</span>)
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>enable-local-eval</span> <span style=color:#666>&#39;</span><span style=color:#a2f>:safe</span>)
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>projectile-completion-system</span> <span style=color:#b8860b>&#39;helm</span>)
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>projectile-switch-project-action</span> <span style=color:#b8860b>&#39;helm-projectile</span>)
-(<span style=color:#00a000>define-key</span> <span style=color:#b8860b>projectile-mode-map</span> (<span style=color:#b8860b>kbd</span> <span style=color:#b44>&#34;C-c p&#34;</span>) <span style=color:#b8860b>&#39;projectile-command-map</span>)
-<span style=color:#080;font-style:italic>;:bind (&#34;C-c p&#34; . projectile-command-map)</span>
-<span style=color:#080;font-style:italic>;(setq projectile-enable-caching t)</span>
+<!doctype html><html lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="author" content="Cloud Nine"><meta name="copyright" content="Copyright © 2019 -2020byYuri TricysAll rights reserved."><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw"><meta name="yandex-verification" content="7cb55c3432ff9fc7"><meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A"><meta name="description" content="Emacs configuration for Helm, SMEX, Bookmarks, and Projectile packages."><title>Emacs Projectile, Helm, and Smex</title><meta property="article:author" content="Yuri Tricys"><link rel="canonical" href="https://cloudnine.github.io/science/2020-03-15-emacs-projectile-helm-smex/"><meta name="theme-color" content="#ffffff"><meta property="og:title" content="Emacs Projectile, Helm, and Smex"><meta property="og:image:type" content="image/jpg"><meta property="og:image" content="https://cloudnine.github.io/images/science/christian-bale.jpg"><meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/christian-bale.jpg"><meta property="og:description" content="Emacs configuration for Helm, SMEX, Bookmarks, and Projectile packages."><meta property="og:site_name" content="Cloud Nine Blog."><meta property="og:url" content="https://cloudnine.github.io/science/2020-03-15-emacs-projectile-helm-smex/"><meta property="og:type" content="website"><link rel="icon" type="image/png" href="https://cloudnine.github.io/images/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="https://cloudnine.github.io/images/favicon-32x32.png" sizes="32x32"><link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><link rel="alternate" type="application/rss+xml" href="https://cloudnine.github.io/index.xml"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400" integrity="" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"><link rel="stylesheet" href="/css/bundle.css" integrity=""><script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer="defer"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer="defer"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer="defer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js" integrity="sha256-34Si1Y6llMBKM3G0jQILVeoQKEwuxjbk4zGWXXMT4ps=" crossorigin="anonymous" defer="defer"></script><script src="https://cloudnine.github.io/js/min/bundle.min.964d3af33c3c75fc536731cf858cd4e67ed1ac8f9af37b6e3b667410d714a3eb33be81ef45aad5fc7d2b98fb3c8eb6f305ec6012ad05844eff798b08fe87c4d5.js" integrity="sha512-lk068zw8dfxTZzHPhYzU5n7RrI+a83tuO2Z0ENcUo+szvoHvRarV/H0rmPs8jrbzBexgEq0FhE7/eYsI/ofE1Q==" crossorigin="anonymous" defer="defer"></script><script type="application/ld+json">{ "@context" : "http://schema.org", "@type" : "Blog", "image":"https://cloudnine.github.io/images/science/christian-bale.jpg", "url":"https://cloudnine.github.io/science/2020-03-15-emacs-projectile-helm-smex/", "thumbnailUrl":"https://cloudnine.github.io/images/science/christian-bale.jpg", "headline":"Emacs Projectile, Helm, and Smex", "description":"Emacs configuration for Helm, SMEX, Bookmarks, and Projectile packages.", "datePublished":"2020-03-15T00:00:00Z", "dateCreated":"2020-03-15T00:00:00Z", "creator":"Yuri Tricys", "author": "Yuri Tricys", "articleSection":"science", "publisher":{"name":"Cloud Nine", "logo":"","@type":"Organization"}}</script><script defer="defer">var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101236333);</script><script async src="//static.getclicky.com/js"></script><style type="text/css">.feature-image {
+background-image: url("https://cloudnine.github.io/images/science/christian-bale.jpg");
+width:100%;
+height: auto;
+}</style></head><body><div id="wrapper" class="wrapper"><div id="navigation" class="navigation navbar container-fluid navbar-expand-xl fixed-top bg-dark navbar-dark"><button class="navbar-toggler collapsed mr-3" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button> <a class="navbar-brand mr-2" href="https://cloudnine.github.io/">CLOUD NINE</a><div class="navbar-collapse collapse" id="navbarCollapse"><ul class="navbar-nav mr-auto"><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/about/">About</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/motivation/">Motivation</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/science/">Science</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/categories/">Categories</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/tags/">Tags</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/books/">Books</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/current/">Current</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/archives/">Archives</a></li></ul></div><div class="nav-right-side"><ul class="navbar-icons navbar-nav"><li class="nav-item" id="search"><a class="nav-link active" href="https://cloudnine.github.io/search/"><span class="d-none d-lg-inline-flex">Search  </span><i class="fas fa-search"></i></a></li><li class="nav-item" id="user"><a class="nav-link active" href="#"><span class="d-none d-lg-inline-flex">Login   </span><i class="fas fa-user"></i></a></li><li class="nav-item" id="shop"><a class="nav-link active" href="#"><span class="d-none d-lg-inline-flex">Shop  </span><i class="fas fa-shopping-cart"></i></a></li></ul></div></div><header id="header" class="feature-image"><div class="feature-image-text"><h1 class="text-center">Sciency Stuff</h1><div class="intro-description d-block"></div></div></header><main id="main" class="main"><div class="container mt-4 post"><a name="article-title" class="anchor-top"></a><h1>Emacs Projectile, Helm, and Smex</h1><div id="post-summary-meta" class="ml-2 mb-2 mt-1"><small><strong>Author: Yuri Tricys </strong>|  <i class="far fa-calendar-alt"></i> Mar 15, 2020  |  <i class="fa fa-tags" title="Tags" aria-hidden="true"></i>   <a href="/tags/emacs">emacs</a>, <a href="/tags/emacs-hydras">emacs hydras</a>, <a href="/tags/learning-center">learning center</a></small></div><article class="mt-4 mb-4 main-content"><h5>This post covers Projectile, Helm, Smex, and Bookmarks from the "Default Operations" section of my init.<br><br></h5><ul><li><p>Default Operations</p><ul><li>Moving the Cursor and Screen</li><li>Make/kill/move windows frames buffers</li><li>Projectile, Helm and Smex</li><li>Parentheses</li><li>Directories</li><li>Clip board (kill ring)</li><li>PDF tools and command line history</li></ul><br></li></ul><h5>Preamble</h5><p class="p-news">Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts y date from oldest to newest.</p><p class="p-news">In the last emacs <a href="https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/" target="_blank">post</a> I covered lines 1195 - 1366. This post covers lines 1377 - 1649. I include the lines for anyone that wants to patch together the entire init from start to finish. The lines won't always match up because I take stuff out when I'm in the init.</p><p class="p-news"></p><h5>Projectile, Helm, Smex, and Bookmarks</h5><p class="p-news">Projectile is a big package with a lot of popular functionality. I haven't explored it a ton, but it automagically localizes functions to a directory. This is helpful if you have big project directories and you want to save time finding and switching files. You just switch projects and use the projectile functions to search directories and files, open up files in an adjacent window, and so on. There's an indexing method that uses either emacs lisp (the one I'm using below), a hybrid of lisp and the your ops find program, or just your ops find program. The alien method optimizes the hybrid method which you want on Windows, only you have to get windows to use some linux search utilities. I use a windows compiled ag.exe instead of Windows find.exe, but it's still slow, especially with caching. The native indexing method in lisp is also slow. Projectile works fine for me when I turn of caching and minimize the indexing, but in the end unless I have a massive directory, it's just faster for me to use bookmarks, which is what I do 95% of the time. Still, here's the code I use.</p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;projectile add .projectile to any file</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">projectile</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#b8860b">projectile-global-mode</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">projectile-enable-caching</span> <span style="color:#800">t</span>)
+<span style="color:#080;font-style:italic">;(setq projectile-indexing-method 'alien)</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">projectile-indexing-method</span> <span style="color:#b8860b">'hybrid</span>)
+<span style="color:#080;font-style:italic">;(setq projectile-indexing-method 'native)</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">projectile-sort-order</span> <span style="color:#b8860b">'recently-active</span>)
+<span style="color:#080;font-style:italic">;(setq projectile-switch-project-action 'projectile-dired)</span>
+<span style="color:#080;font-style:italic">;enable safe local variables</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">enable-local-variables</span> <span style="color:#666">'</span><span style="color:#a2f">:safe</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">enable-local-eval</span> <span style="color:#666">'</span><span style="color:#a2f">:safe</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">projectile-completion-system</span> <span style="color:#b8860b">'helm</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">projectile-switch-project-action</span> <span style="color:#b8860b">'helm-projectile</span>)
+(<span style="color:#00a000">define-key</span> <span style="color:#b8860b">projectile-mode-map</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">"C-c p"</span>) <span style="color:#b8860b">'projectile-command-map</span>)
+<span style="color:#080;font-style:italic">;:bind ("C-c p" . projectile-command-map)</span>
+<span style="color:#080;font-style:italic">;(setq projectile-enable-caching t)</span>
 
-(<span style=color:#a2f>with-eval-after-load</span> <span style=color:#b8860b>&#39;projectile</span>
-(<span style=color:#a2f>defun</span> <span style=color:#b8860b>projectile-find-file-other-window</span> (<span style=color:#a2f>&amp;optional</span> <span style=color:#b8860b>invalidate-cache</span>)
-  <span style=color:#b44>&#34;Jump to a project&#39;s file using completion and show it in another window. With a prefix arg INVALIDATE-CACHE invalidates the cache first.&#34;</span>
-  (<span style=color:#a2f>interactive</span> <span style=color:#b44>&#34;P&#34;</span>)
-  (<span style=color:#a2f>progn</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>split-window-preferred-function</span> <span style=color:#b8860b>&#39;split-window-sensibly</span>)
-(<span style=color:#b8860b>projectile--find-file</span> <span style=color:#b8860b>invalidate-cache</span> <span style=color:#00a000>#&#39;</span><span style=color:#b8860b>find-file-other-window</span>)
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>split-window-preferred-function</span> <span style=color:#800>nil</span>)
-)<span style=color:#080;font-style:italic>;end progn</span>
-))<span style=color:#080;font-style:italic>;end redfined projectile function</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>projectile-mode-line-function</span> <span style=color:#666>&#39;</span>(<span style=color:#a2f>lambda</span> () (<span style=color:#00a000>format</span> <span style=color:#b44>&#34; Projectile[%s]&#34;</span> (<span style=color:#b8860b>projectile-project-name</span>))))
-)<span style=color:#080;font-style:italic>;end projectile</span>
+(<span style="color:#a2f">with-eval-after-load</span> <span style="color:#b8860b">'projectile</span>
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">projectile-find-file-other-window</span> (<span style="color:#a2f">&optional</span> <span style="color:#b8860b">invalidate-cache</span>)
+  <span style="color:#b44">"Jump to a project's file using completion and show it in another window. With a prefix arg INVALIDATE-CACHE invalidates the cache first."</span>
+  (<span style="color:#a2f">interactive</span> <span style="color:#b44">"P"</span>)
+  (<span style="color:#a2f">progn</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">split-window-preferred-function</span> <span style="color:#b8860b">'split-window-sensibly</span>)
+(<span style="color:#b8860b">projectile--find-file</span> <span style="color:#b8860b">invalidate-cache</span> <span style="color:#00a000">#'</span><span style="color:#b8860b">find-file-other-window</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">split-window-preferred-function</span> <span style="color:#800">nil</span>)
+)<span style="color:#080;font-style:italic">;end progn</span>
+))<span style="color:#080;font-style:italic">;end redfined projectile function</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">projectile-mode-line-function</span> <span style="color:#666">'</span>(<span style="color:#a2f">lambda</span> () (<span style="color:#00a000">format</span> <span style="color:#b44">" Projectile[%s]"</span> (<span style="color:#b8860b">projectile-project-name</span>))))
+)<span style="color:#080;font-style:italic">;end projectile</span>
 
 
-</code></pre></td></tr></table></div></div><br><h5>Projectile Hydra</h5><p class=p-news>And here is the projectile hydra with code below it.</p><div class=mobile-iframe><figure class=zoom-effect><div class=aspectRatioPlaceholder><div class=aspect-ratio-fill style=padding-bottom:75.78947368421053%></div><img src=projectile.jpg align=center class="inline-image img-zoom" width=100% alt=theme-image-here data-width=1920 data-height=1080></div></figure></div><br><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">43
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">44
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
-<span style=color:#080;font-style:italic>;define with-octicon function, to use in engine-mode title</span>
-(<span style=color:#a2f>defun</span> <span style=color:#b8860b>with-octicon</span> (<span style=color:#b8860b>icon</span> <span style=color:#b8860b>str</span> <span style=color:#a2f>&amp;rest</span> <span style=color:#b8860b>height</span> <span style=color:#b8860b>v-adjust</span>)
-    (<span style=color:#b8860b>s-concat</span> (<span style=color:#b8860b>all-the-icons-octicon</span> <span style=color:#b8860b>icon</span> <span style=color:#a2f>:v-adjust</span> (<span style=color:#a2f>or</span> <span style=color:#b8860b>v-adjust</span> <span style=color:#666>0</span>) <span style=color:#a2f>:height</span> (<span style=color:#a2f>or</span> <span style=color:#b8860b>height</span> <span style=color:#666>1</span>)) <span style=color:#b44>&#34; &#34;</span> <span style=color:#b8860b>str</span>))
-(<span style=color:#a2f>defvar</span> <span style=color:#b8860b>projectile-title</span> (<span style=color:#b8860b>with-octicon</span> <span style=color:#b44>&#34;briefcase&#34;</span> <span style=color:#b44>&#34;Projectile&#34;</span>))
-<span style=color:#080;font-style:italic>;generate hydra</span>
-(<span style=color:#b8860b>pretty-hydra-define</span> <span style=color:#b8860b>Projectile</span> (<span style=color:#a2f>:title</span> <span style=color:#b8860b>projectile-title</span> <span style=color:#a2f>:quit-key</span> <span style=color:#b44>&#34;q&#34;</span> <span style=color:#a2f>:color</span> <span style=color:#b8860b>teal</span> )
-(<span style=color:#b44>&#34;This Frame/Window&#34;</span>
+</code></pre></td></tr></table></div></div><br><h5>Projectile Hydra</h5><p class="p-news">And here is the projectile hydra with code below it.</p><div class="mobile-iframe"><figure class="zoom-effect"><div class="aspectRatioPlaceholder"><div class="aspect-ratio-fill" style="padding-bottom: 75.78947368421053%;"></div><!-- end aspect ratio fill --><!--appearance hydra--> <img src="projectile.jpg" align="center" title="" class="inline-image img-zoom" width="100%" alt="theme-image-here" data-width="1920" data-height="1080"></div><!-- end aspect ratio --></figure><!-- end figure --></div><!--mobile-iframe--><br><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;define with-octicon function, to use in engine-mode title</span>
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">with-octicon</span> (<span style="color:#b8860b">icon</span> <span style="color:#b8860b">str</span> <span style="color:#a2f">&rest</span> <span style="color:#b8860b">height</span> <span style="color:#b8860b">v-adjust</span>)
+    (<span style="color:#b8860b">s-concat</span> (<span style="color:#b8860b">all-the-icons-octicon</span> <span style="color:#b8860b">icon</span> <span style="color:#a2f">:v-adjust</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">v-adjust</span> <span style="color:#666">0</span>) <span style="color:#a2f">:height</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">height</span> <span style="color:#666">1</span>)) <span style="color:#b44">" "</span> <span style="color:#b8860b">str</span>))
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">projectile-title</span> (<span style="color:#b8860b">with-octicon</span> <span style="color:#b44">"briefcase"</span> <span style="color:#b44">"Projectile"</span>))
+<span style="color:#080;font-style:italic">;generate hydra</span>
+(<span style="color:#b8860b">pretty-hydra-define</span> <span style="color:#b8860b">Projectile</span> (<span style="color:#a2f">:title</span> <span style="color:#b8860b">projectile-title</span> <span style="color:#a2f">:quit-key</span> <span style="color:#b44">"q"</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">teal</span> )
+(<span style="color:#b44">"This Frame/Window"</span>
 (
-     (<span style=color:#b44>&#34;s&#34;</span>  <span style=color:#b8860b>helm-projectile-switch-project</span> <span style=color:#b44>&#34;Switch Projects&#34;</span>)
-     (<span style=color:#b44>&#34;f&#34;</span> <span style=color:#b8860b>helm-projectile-find-file</span> <span style=color:#b44>&#34;Find File In Project&#34;</span>)
-     (<span style=color:#b44>&#34;n&#34;</span> <span style=color:#b8860b>helm-projectile-find-file-in-known-projects</span> <span style=color:#b44>&#34;Find File In All Projects&#34;</span>)
-     (<span style=color:#b44>&#34;d&#34;</span> <span style=color:#b8860b>helm-projectile-find-dir</span> <span style=color:#b44>&#34;Find Dir In Project&#34;</span>)
-     (<span style=color:#b44>&#34;p&#34;</span> <span style=color:#b8860b>helm-projectile-find-file-dwim</span> <span style=color:#b44>&#34;Find File At Point&#34;</span>)
-     (<span style=color:#b44>&#34;r&#34;</span> <span style=color:#b8860b>helm-projectile-recentf</span> <span style=color:#b44>&#34;Find Recent Files&#34;</span>)
-     (<span style=color:#b44>&#34;b&#34;</span> <span style=color:#b8860b>helm-projectile-switch-to-buffer</span> <span style=color:#b44>&#34;Switch Buffers&#34;</span>)
-     (<span style=color:#b44>&#34;a&#34;</span> <span style=color:#b8860b>helm-projectile-ag</span> <span style=color:#b44>&#34;Search Project&#34;</span>)
-)<span style=color:#080;font-style:italic>;end local</span>
-<span style=color:#b44>&#34;Other Frame/Window&#34;</span>
+     (<span style="color:#b44">"s"</span>  <span style="color:#b8860b">helm-projectile-switch-project</span> <span style="color:#b44">"Switch Projects"</span>)
+     (<span style="color:#b44">"f"</span> <span style="color:#b8860b">helm-projectile-find-file</span> <span style="color:#b44">"Find File In Project"</span>)
+     (<span style="color:#b44">"n"</span> <span style="color:#b8860b">helm-projectile-find-file-in-known-projects</span> <span style="color:#b44">"Find File In All Projects"</span>)
+     (<span style="color:#b44">"d"</span> <span style="color:#b8860b">helm-projectile-find-dir</span> <span style="color:#b44">"Find Dir In Project"</span>)
+     (<span style="color:#b44">"p"</span> <span style="color:#b8860b">helm-projectile-find-file-dwim</span> <span style="color:#b44">"Find File At Point"</span>)
+     (<span style="color:#b44">"r"</span> <span style="color:#b8860b">helm-projectile-recentf</span> <span style="color:#b44">"Find Recent Files"</span>)
+     (<span style="color:#b44">"b"</span> <span style="color:#b8860b">helm-projectile-switch-to-buffer</span> <span style="color:#b44">"Switch Buffers"</span>)
+     (<span style="color:#b44">"a"</span> <span style="color:#b8860b">helm-projectile-ag</span> <span style="color:#b44">"Search Project"</span>)
+)<span style="color:#080;font-style:italic">;end local</span>
+<span style="color:#b44">"Other Frame/Window"</span>
 (
-     (<span style=color:#b44>&#34;F&#34;</span> <span style=color:#b8860b>projectile-find-file-other-frame</span> <span style=color:#b44>&#34;Find File Other Frame&#34;</span>)
-     (<span style=color:#b44>&#34;w&#34;</span> <span style=color:#b8860b>projectile-find-file-other-window</span> <span style=color:#b44>&#34;Find File Other Window&#34;</span>)
-     (<span style=color:#b44>&#34;o&#34;</span> <span style=color:#b8860b>projectile-find-other-file-other-window</span> <span style=color:#b44>&#34;Find Other Other Window&#34;</span>)
-     (<span style=color:#b44>&#34;B&#34;</span> <span style=color:#b8860b>projectile-switch-to-buffer-other-window</span> <span style=color:#b44>&#34;Switch Buffer Other Window&#34;</span>)
-     (<span style=color:#b44>&#34;m&#34;</span> <span style=color:#b8860b>projectile-multi-occur</span> <span style=color:#b44>&#34;Search Multi Occurances&#34;</span>)
-)<span style=color:#080;font-style:italic>;end chrome</span>
-<span style=color:#b44>&#34;Actions&#34;</span>
+     (<span style="color:#b44">"F"</span> <span style="color:#b8860b">projectile-find-file-other-frame</span> <span style="color:#b44">"Find File Other Frame"</span>)
+     (<span style="color:#b44">"w"</span> <span style="color:#b8860b">projectile-find-file-other-window</span> <span style="color:#b44">"Find File Other Window"</span>)
+     (<span style="color:#b44">"o"</span> <span style="color:#b8860b">projectile-find-other-file-other-window</span> <span style="color:#b44">"Find Other Other Window"</span>)
+     (<span style="color:#b44">"B"</span> <span style="color:#b8860b">projectile-switch-to-buffer-other-window</span> <span style="color:#b44">"Switch Buffer Other Window"</span>)
+     (<span style="color:#b44">"m"</span> <span style="color:#b8860b">projectile-multi-occur</span> <span style="color:#b44">"Search Multi Occurances"</span>)
+)<span style="color:#080;font-style:italic">;end chrome</span>
+<span style="color:#b44">"Actions"</span>
 (
-<span style=color:#080;font-style:italic>;     (&#34;i&#34; projectile-initiate-project &#34;Add .projectile To Dir&#34;)</span>
-     (<span style=color:#b44>&#34;c&#34;</span> <span style=color:#b8860b>projectile-edit-dir-locals</span> <span style=color:#b44>&#34;Add Project Config&#34;</span>)
-     (<span style=color:#b44>&#34;I&#34;</span> <span style=color:#b8860b>projectile-invalidate-cache</span> <span style=color:#b44>&#34;Clear Projectile Cache&#34;</span>)
-     (<span style=color:#b44>&#34;S&#34;</span> <span style=color:#b8860b>projectile-run-shell</span> <span style=color:#b44>&#34;Run Shell&#34;</span>)
-     (<span style=color:#b44>&#34;v&#34;</span> <span style=color:#b8860b>projectile-save-project-buffers</span> <span style=color:#b44>&#34;Save Project Buffers&#34;</span>)
-     (<span style=color:#b44>&#34;k&#34;</span> <span style=color:#b8860b>projectile-kill-project-buffers</span> <span style=color:#b44>&#34;kill Project Buffers&#34;</span>)
-     (<span style=color:#b44>&#34;t&#34;</span> <span style=color:#b8860b>projectile-toggle-read-only</span> <span style=color:#b44>&#34;Toggle Project Read Only&#34;</span>)
-     (<span style=color:#b44>&#34;D&#34;</span> <span style=color:#b8860b>projectile-discover-projects-in-directory</span> <span style=color:#b44>&#34;Discover Projects Directory&#34;</span>)
-     (<span style=color:#b44>&#34;h&#34;</span> <span style=color:#b8860b>hydra-helm/body</span> <span style=color:#b44>&#34;Return To Helm&#34;</span> <span style=color:#a2f>:color</span> <span style=color:#b8860b>blue</span> )
-     (<span style=color:#b44>&#34;&lt;SPC&gt;&#34;</span> <span style=color:#800>nil</span> <span style=color:#b44>&#34;Quit&#34;</span> <span style=color:#a2f>:color</span> <span style=color:#b8860b>blue</span> )
-)<span style=color:#080;font-style:italic>;end addressbook</span>
-)<span style=color:#080;font-style:italic>;end hydra body</span>
-)<span style=color:#080;font-style:italic>;end pretty-hydra-find-files</span>
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;&lt;C-m&gt; j&#34;</span> <span style=color:#b8860b>&#39;Projectile/body</span>)
+<span style="color:#080;font-style:italic">;     ("i" projectile-initiate-project "Add .projectile To Dir")</span>
+     (<span style="color:#b44">"c"</span> <span style="color:#b8860b">projectile-edit-dir-locals</span> <span style="color:#b44">"Add Project Config"</span>)
+     (<span style="color:#b44">"I"</span> <span style="color:#b8860b">projectile-invalidate-cache</span> <span style="color:#b44">"Clear Projectile Cache"</span>)
+     (<span style="color:#b44">"S"</span> <span style="color:#b8860b">projectile-run-shell</span> <span style="color:#b44">"Run Shell"</span>)
+     (<span style="color:#b44">"v"</span> <span style="color:#b8860b">projectile-save-project-buffers</span> <span style="color:#b44">"Save Project Buffers"</span>)
+     (<span style="color:#b44">"k"</span> <span style="color:#b8860b">projectile-kill-project-buffers</span> <span style="color:#b44">"kill Project Buffers"</span>)
+     (<span style="color:#b44">"t"</span> <span style="color:#b8860b">projectile-toggle-read-only</span> <span style="color:#b44">"Toggle Project Read Only"</span>)
+     (<span style="color:#b44">"D"</span> <span style="color:#b8860b">projectile-discover-projects-in-directory</span> <span style="color:#b44">"Discover Projects Directory"</span>)
+     (<span style="color:#b44">"h"</span> <span style="color:#b8860b">hydra-helm/body</span> <span style="color:#b44">"Return To Helm"</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
+     (<span style="color:#b44">"&lt;SPC>"</span> <span style="color:#800">nil</span> <span style="color:#b44">"Quit"</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
+)<span style="color:#080;font-style:italic">;end addressbook</span>
+)<span style="color:#080;font-style:italic">;end hydra body</span>
+)<span style="color:#080;font-style:italic">;end pretty-hydra-find-files</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"&lt;C-m> j"</span> <span style="color:#b8860b">'Projectile/body</span>)
 
 
-</code></pre></td></tr></table></div></div><br><h5>Helm, Helm Emmet, Helm Projectile</h5><p class=p-news>Helm is great. It partitions the screen temporarily with dropdowns you can scroll. There are actions you can call on helm
-functions that automate frequently used related functions. With my hydra system, I rarely use the actions, but I've gotten used to the helm
-way. Below the helm initialization code. Check the defaults, fuzzy matching and so on, they matter, but keep your eye open for overkill
-😉 . I used to use Smart MetaX, SMEX, for dropdowns, and IDO search for searching through the open buffer. I still prefer IDO search (I
-Search)to Helm occur, because when you search a second time it doesn't reset the search to the beginning of the buffer and cycling through
-the helm mini-buffer isn't as visually appealing as cycling through the physical file. I programmed I search within easy reach, and the
-reverse I search, that I have bound to C-r, doesn't trigger Helm Occur. Still, I haven't bothered to stop using Helm Occur, meaning it's not
-so bad that I have to change it again. There's a function in here called "better-helm", which is great when you are using projectile and
-want to include those files in your helm search. If you disable projectile comment out these lines of code
-';helm-source-projectile-files-list' and ';helm-source-projectile-buffers-list.'</p><p class=p-news>There are a couple of other packages in here, "helm-projectile", "helm-helm-commands," "helm-chrome", and "helm-mode-manager",
-"helm-bookmark" (you need to get the file manually and add the path), helm-fuzzier, and "helm-emmet". I use helm-chrome, helm-bookmark, and
-helm-fuzzier the most, but check them all out. Helm-fuzzier jumps helm to any sequenced characters you type in the search
-set, helm-chrome gives a searchable dropdown of your chrome bookmarks. So that's great. Helm-bookmark does the same with all your bookmarks.
-Here's the code. I short-cutted helm-emmet in web-dev hydra. It's sometimes a useful option as you can see the emmet expansions and cycle
-through them. You can do the same with Company-mode, which is how I usually do it. Still, it's convenient sometimes. Here's the code.</p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">  9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 13
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 14
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 15
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 20
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 21
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 22
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 23
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 24
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 25
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 26
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 27
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 28
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 29
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 30
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 31
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 32
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 33
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 34
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 35
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 36
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 37
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 38
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 39
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 40
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 41
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 42
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 43
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 44
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 45
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 46
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 47
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 48
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 49
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 50
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 51
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 52
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 53
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 54
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 55
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 56
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 57
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 58
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 59
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 60
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 61
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 62
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 63
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 64
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 65
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 66
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 67
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 68
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 69
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 70
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 71
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 72
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 73
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 74
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 75
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 76
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 77
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 78
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 79
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 80
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 81
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 82
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 83
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 84
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 85
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 86
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 87
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 88
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 89
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 90
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 91
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 92
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 93
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 94
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 95
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 96
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 97
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 98
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 99
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">100
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">101
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">102
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">103
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">104
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">105
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">106
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">107
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">108
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">109
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">110
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">111
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">112
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">113
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">114
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">115
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">116
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">117
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">118
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">119
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">120
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">121
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">122
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">123
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">124
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">125
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">126
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">127
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">128
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">129
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">130
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">131
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">132
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">133
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">134
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">135
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">136
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">137
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">138
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">139
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">140
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">141
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">142
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">143
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">144
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">145
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">146
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">147
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">148
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">149
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">150
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">151
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">152
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">153
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">154
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">155
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">156
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">157
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">158
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">159
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">160
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">161
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">162
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">163
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">164
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">165
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">166
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
-<span style=color:#080;font-style:italic>;Helm</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>helm</span>
-<span style=color:#a2f>:defer</span>    <span style=color:#b8860b>3</span>
-<span style=color:#a2f>:diminish</span> <span style=color:#b8860b>helm-mode</span>
-<span style=color:#a2f>:init</span>
-  (<span style=color:#a2f>progn</span>
-    (<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;helm-config</span>)
-    (<span style=color:#b8860b>helm-mode</span> <span style=color:#666>1</span>)
-<span style=color:#080;font-style:italic>;    (set-face-attribute &#39;helm-selection nil</span>
-<span style=color:#080;font-style:italic>;            :background &#34;purple&#34;</span>
-<span style=color:#080;font-style:italic>;            :foreground &#34;black&#34;)</span>
-    (<span style=color:#a2f>setq</span> <span style=color:#b8860b>helm-candidate-number-limit</span> <span style=color:#666>100</span>)
-               (<span style=color:#a2f>setq</span> <span style=color:#b8860b>helm-idle-delay</span> <span style=color:#b8860b>0.0</span>
-                     <span style=color:#b8860b>helm-input-idle-delay</span> <span style=color:#b8860b>0.01</span>
-                     <span style=color:#b8860b>helm-yas-display-key-on-candidate</span> <span style=color:#b8860b>t</span>
-                     <span style=color:#b8860b>helm-quick-update</span> <span style=color:#b8860b>t</span>
-                     <span style=color:#b8860b>helm-M-x-requires-pattern</span> <span style=color:#800>nil</span>))
+</code></pre></td></tr></table></div></div><br><h5>Helm, Helm Emmet, Helm Projectile</h5><p class="p-news">Helm is great. It partitions the screen temporarily with dropdowns you can scroll. There are actions you can call on helm functions that automate frequently used related functions. With my hydra system, I rarely use the actions, but I've gotten used to the helm way. Below the helm initialization code. Check the defaults, fuzzy matching and so on, they matter, but keep your eye open for overkill 😉 . I used to use Smart MetaX, SMEX, for dropdowns, and IDO search for searching through the open buffer. I still prefer IDO search (I Search)to Helm occur, because when you search a second time it doesn't reset the search to the beginning of the buffer and cycling through the helm mini-buffer isn't as visually appealing as cycling through the physical file. I programmed I search within easy reach, and the reverse I search, that I have bound to C-r, doesn't trigger Helm Occur. Still, I haven't bothered to stop using Helm Occur, meaning it's not so bad that I have to change it again. There's a function in here called "better-helm", which is great when you are using projectile and want to include those files in your helm search. If you disable projectile comment out these lines of code ';helm-source-projectile-files-list' and ';helm-source-projectile-buffers-list.'</p><p class="p-news">There are a couple of other packages in here, "helm-projectile", "helm-helm-commands," "helm-chrome", and "helm-mode-manager", "helm-bookmark" (you need to get the file manually and add the path), helm-fuzzier, and "helm-emmet". I use helm-chrome, helm-bookmark, and helm-fuzzier the most, but check them all out. Helm-fuzzier jumps helm to any sequenced characters you type in the search set, helm-chrome gives a searchable dropdown of your chrome bookmarks. So that's great. Helm-bookmark does the same with all your bookmarks. Here's the code. I short-cutted helm-emmet in web-dev hydra. It's sometimes a useful option as you can see the emmet expansions and cycle through them. You can do the same with Company-mode, which is how I usually do it. Still, it's convenient sometimes. Here's the code.</p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">105
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">106
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">107
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">108
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">109
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">110
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">111
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">112
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">113
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">114
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">115
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">116
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">117
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">118
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">119
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">120
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">121
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">122
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">123
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">124
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">125
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">126
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">127
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">128
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">129
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">130
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">131
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">132
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">133
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">134
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">135
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">136
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">137
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">138
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">139
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">140
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">141
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">142
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">143
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">144
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">145
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">146
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">147
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">148
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">149
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">150
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">151
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">152
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">153
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">154
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">155
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">156
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">157
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">158
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">159
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">160
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">161
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">162
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">163
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">164
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">165
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">166
+</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;Helm</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">helm</span>
+<span style="color:#a2f">:defer</span>    <span style="color:#b8860b">3</span>
+<span style="color:#a2f">:diminish</span> <span style="color:#b8860b">helm-mode</span>
+<span style="color:#a2f">:init</span>
+  (<span style="color:#a2f">progn</span>
+    (<span style="color:#a2f">require</span> <span style="color:#b8860b">'helm-config</span>)
+    (<span style="color:#b8860b">helm-mode</span> <span style="color:#666">1</span>)
+<span style="color:#080;font-style:italic">;    (set-face-attribute 'helm-selection nil</span>
+<span style="color:#080;font-style:italic">;            :background "purple"</span>
+<span style="color:#080;font-style:italic">;            :foreground "black")</span>
+    (<span style="color:#a2f">setq</span> <span style="color:#b8860b">helm-candidate-number-limit</span> <span style="color:#666">100</span>)
+               (<span style="color:#a2f">setq</span> <span style="color:#b8860b">helm-idle-delay</span> <span style="color:#b8860b">0.0</span>
+                     <span style="color:#b8860b">helm-input-idle-delay</span> <span style="color:#b8860b">0.01</span>
+                     <span style="color:#b8860b">helm-yas-display-key-on-candidate</span> <span style="color:#b8860b">t</span>
+                     <span style="color:#b8860b">helm-quick-update</span> <span style="color:#b8860b">t</span>
+                     <span style="color:#b8860b">helm-M-x-requires-pattern</span> <span style="color:#800">nil</span>))
 
-(<span style=color:#a2f>setq-default</span>
-      <span style=color:#b8860b>helm-M-x-fuzzy-match</span>        <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-buffers-fuzzy-matching</span> <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-recentf-fuzzy-match</span>    <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-imenu-fuzzy-match</span>      <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-locate-fuzzy-match</span>     <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-apropos-fuzzy-match</span>    <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-lisp-fuzzy-completion</span>  <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-allow-mouse</span>            <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-follow-mode-persistent</span> <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-semantic-fuzzy-match</span>   <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-session-fuzzy-match</span>    <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-etags-fuzzy-match</span>      <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-mode-fuzzy-match</span>       <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-completion-in-region-fuzzy-match</span> <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-fuzzier-mode</span>           <span style=color:#b8860b>t</span>
-)<span style=color:#080;font-style:italic>;end-set-q</span>
+(<span style="color:#a2f">setq-default</span>
+      <span style="color:#b8860b">helm-M-x-fuzzy-match</span>        <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-buffers-fuzzy-matching</span> <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-recentf-fuzzy-match</span>    <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-imenu-fuzzy-match</span>      <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-locate-fuzzy-match</span>     <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-apropos-fuzzy-match</span>    <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-lisp-fuzzy-completion</span>  <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-allow-mouse</span>            <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-follow-mode-persistent</span> <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-semantic-fuzzy-match</span>   <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-session-fuzzy-match</span>    <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-etags-fuzzy-match</span>      <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-mode-fuzzy-match</span>       <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-completion-in-region-fuzzy-match</span> <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-fuzzier-mode</span>           <span style="color:#b8860b">t</span>
+)<span style="color:#080;font-style:italic">;end-set-q</span>
 
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>helm-autoresize-max-height</span>  <span style=color:#b8860b>35</span>
-      <span style=color:#b8860b>helm-autoresize-min-height</span>  <span style=color:#666>35</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">helm-autoresize-max-height</span>  <span style="color:#b8860b">35</span>
+      <span style="color:#b8860b">helm-autoresize-min-height</span>  <span style="color:#666">35</span>)
 
- (<span style=color:#a2f>when</span> (<span style=color:#b8860b>executable-find</span> <span style=color:#b44>&#34;curl&#34;</span>)
-  (<span style=color:#a2f>setq</span> <span style=color:#b8860b>helm-google-suggest-use-curl-p</span> <span style=color:#800>t</span>))
+ (<span style="color:#a2f">when</span> (<span style="color:#b8860b">executable-find</span> <span style="color:#b44">"curl"</span>)
+  (<span style="color:#a2f">setq</span> <span style="color:#b8860b">helm-google-suggest-use-curl-p</span> <span style="color:#800">t</span>))
 
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>helm-split-window-in-side-p</span>           <span style=color:#b8860b>t</span>
-<span style=color:#080;font-style:italic>;      helm-move-to-line-cycle-in-source     0</span>
-      <span style=color:#b8860b>helm-ff-search-library-in-sexp</span>        <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-scroll-amount</span>                    <span style=color:#b8860b>8</span>
-      <span style=color:#b8860b>helm-ff-file-name-history-use-recentf</span> <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-echo-input-in-header-line</span>        <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>helm-source-names-using-follow</span>        <span style=color:#666>&#39;</span>(<span style=color:#b44>&#34;Buffers&#34;</span> <span style=color:#b44>&#34;kill-buffer&#34;</span> <span style=color:#b44>&#34;Occur&#34;</span>))
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">helm-split-window-in-side-p</span>           <span style="color:#b8860b">t</span>
+<span style="color:#080;font-style:italic">;      helm-move-to-line-cycle-in-source     0</span>
+      <span style="color:#b8860b">helm-ff-search-library-in-sexp</span>        <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-scroll-amount</span>                    <span style="color:#b8860b">8</span>
+      <span style="color:#b8860b">helm-ff-file-name-history-use-recentf</span> <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-echo-input-in-header-line</span>        <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">helm-source-names-using-follow</span>        <span style="color:#666">'</span>(<span style="color:#b44">"Buffers"</span> <span style="color:#b44">"kill-buffer"</span> <span style="color:#b44">"Occur"</span>))
 
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>helm-grep-ag-command</span>
-         <span style=color:#b44>&#34;rg --color=always --colors &#39;match:fg:black&#39; --colors &#39;match:bg:yellow&#39; --smart-case --no-heading --line-number %s %s %s&#34;</span>
-         <span style=color:#b8860b>helm-grep-ag-pipe-cmd-switches</span>
-         <span style=color:#666>&#39;</span>(<span style=color:#b44>&#34;--colors &#39;match:fg:black&#39;&#34;</span> <span style=color:#b44>&#34;--colors &#39;match:bg:yellow&#39;&#34;</span>))
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">helm-grep-ag-command</span>
+         <span style="color:#b44">"rg --color=always --colors 'match:fg:black' --colors 'match:bg:yellow' --smart-case --no-heading --line-number %s %s %s"</span>
+         <span style="color:#b8860b">helm-grep-ag-pipe-cmd-switches</span>
+         <span style="color:#666">'</span>(<span style="color:#b44">"--colors 'match:fg:black'"</span> <span style="color:#b44">"--colors 'match:bg:yellow'"</span>))
 
-<span style=color:#a2f>:config</span>
-(<span style=color:#b8860b>add-to-list</span> <span style=color:#b8860b>&#39;helm-sources-using-default-as-input</span> <span style=color:#b8860b>&#39;helm-source-man-pages</span>)
-<span style=color:#080;font-style:italic>;(add-to-list &#39;helm-completing-read-handlers-alist</span>
-<span style=color:#080;font-style:italic>;             &#39;(read-ido . nil))</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">'helm-sources-using-default-as-input</span> <span style="color:#b8860b">'helm-source-man-pages</span>)
+<span style="color:#080;font-style:italic">;(add-to-list 'helm-completing-read-handlers-alist</span>
+<span style="color:#080;font-style:italic">;             '(read-ido . nil))</span>
 
-(<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;helm-buffers</span>)
-(<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;helm-for-files</span>)
-(<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;shell</span>)
-(<span style=color:#a2f>defun</span> <span style=color:#b8860b>better-helm</span> ()
-(<span style=color:#a2f>interactive</span>)
-(<span style=color:#a2f>let</span> ((<span style=color:#b8860b>helm-ff-transformer-show-only-basename</span> <span style=color:#800>nil</span>)
-    <span style=color:#b8860b>helm-source-list</span>)
-(<span style=color:#a2f>unless</span> <span style=color:#b8860b>helm-source-buffers-list</span>
-  (<span style=color:#a2f>setq</span> <span style=color:#b8860b>helm-source-buffers-list</span>
-        (<span style=color:#b8860b>helm-make-source</span> <span style=color:#b44>&#34;Buffers&#34;</span> <span style=color:#b8860b>&#39;helm-source-buffers</span>)))
-(<span style=color:#a2f>cond</span> (
-       <span style=color:#080;font-style:italic>;; Just add helm-source-projectile-* in list when current place in project.</span>
-       (<span style=color:#b8860b>projectile-project-p</span>)
-       (<span style=color:#a2f>setq</span> <span style=color:#b8860b>helm-source-list</span>
-             <span style=color:#666>&#39;</span>(
-               <span style=color:#080;font-style:italic>;; helm-source-awesome-tab-group</span>
-               <span style=color:#b8860b>helm-source-projectile-buffers-list</span>
-               <span style=color:#b8860b>helm-source-buffers-list</span>
-               <span style=color:#b8860b>helm-source-recentf</span>
-               <span style=color:#b8860b>helm-source-projectile-files-list</span>)))
-       (<span style=color:#b8860b>t</span>
-       (<span style=color:#a2f>setq</span> <span style=color:#b8860b>helm-source-list</span>
-             <span style=color:#666>&#39;</span>(
-               <span style=color:#080;font-style:italic>;; helm-source-awesome-tab-group</span>
-               <span style=color:#b8860b>helm-source-buffers-list</span>
-               <span style=color:#b8860b>helm-source-recentf</span>))))
-(<span style=color:#b8860b>helm-other-buffer</span> <span style=color:#b8860b>helm-source-list</span> <span style=color:#b44>&#34;*helm search*&#34;</span>)))<span style=color:#080;font-style:italic>;end better helm</span>
-<span style=color:#080;font-style:italic>;yes</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>helm-command-prefix-key</span> <span style=color:#b44>&#34;C-c h&#34;</span>)
-(<span style=color:#00a000>define-key</span>  <span style=color:#b8860b>helm-map</span> (<span style=color:#b8860b>kbd</span> <span style=color:#b44>&#34;&lt;tab&gt;&#34;</span>) <span style=color:#b8860b>&#39;helm-execute-persistent-action</span>)
-(<span style=color:#00a000>define-key</span>  <span style=color:#b8860b>helm-map</span> (<span style=color:#b8860b>kbd</span> <span style=color:#b44>&#34;C-i&#34;</span>) <span style=color:#b8860b>&#39;helm-execute-persistent-action</span>)
-(<span style=color:#00a000>define-key</span>  <span style=color:#b8860b>helm-map</span> (<span style=color:#b8860b>kbd</span> <span style=color:#b44>&#34;C-z&#34;</span>) <span style=color:#b8860b>&#39;helm-select-action</span>)
-(<span style=color:#00a000>define-key</span>  <span style=color:#b8860b>shell-mode-map</span> (<span style=color:#b8860b>kbd</span> <span style=color:#b44>&#34;C-c C-l&#34;</span>) <span style=color:#b8860b>&#39;helm-comint-input-ring</span>)
-(<span style=color:#00a000>define-key</span>  <span style=color:#b8860b>minibuffer-local-map</span> (<span style=color:#b8860b>kbd</span> <span style=color:#b44>&#34;C-c C-l&#34;</span>) <span style=color:#b8860b>&#39;helm-minibuffer-history</span>)
-<span style=color:#a2f>:bind</span> (
-(<span style=color:#b44>&#34;M-x&#34;</span>  <span style=color:#666>.</span>  <span style=color:#b8860b>helm-M-x</span>)
-(<span style=color:#b44>&#34;M-y&#34;</span> <span style=color:#666>.</span> <span style=color:#b8860b>helm-show-kill-ring</span>)
-(<span style=color:#b44>&#34;M-b&#34;</span>    <span style=color:#666>.</span>  <span style=color:#b8860b>better-helm</span>)
-<span style=color:#080;font-style:italic>;(&#34;C-o&#34;    .  helm-occur)</span>
-(<span style=color:#b44>&#34;C-s&#34;</span>     <span style=color:#666>.</span> <span style=color:#b8860b>helm-occur</span>)
-(<span style=color:#b44>&#34;C-x C-f&#34;</span>  <span style=color:#666>.</span>  <span style=color:#b8860b>helm-mini</span>)
-(<span style=color:#b44>&#34;C-x f&#34;</span>  <span style=color:#666>.</span>  <span style=color:#b8860b>helm-find-files</span>)
-(<span style=color:#b44>&#34;C-x c x&#34;</span> <span style=color:#666>.</span>  <span style=color:#b8860b>helm-register</span>)
-(<span style=color:#b44>&#34;C-x c g&#34;</span> <span style=color:#666>.</span>  <span style=color:#b8860b>helm-google-suggest</span>)
-(<span style=color:#b44>&#34;C-x c M-:&#34;</span> <span style=color:#666>.</span> <span style=color:#b8860b>helm-eval-expression-with-eldoc</span>))
-<span style=color:#a2f>:hook</span>
-(<span style=color:#b8860b>after-init</span> <span style=color:#666>.</span> <span style=color:#b8860b>helm-mode</span>)
-(<span style=color:#b8860b>after-init</span> <span style=color:#666>.</span> <span style=color:#b8860b>helm-autoresize-mode</span>)
-)<span style=color:#080;font-style:italic>;end use-package helm</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">'helm-buffers</span>)
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">'helm-for-files</span>)
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">'shell</span>)
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">better-helm</span> ()
+(<span style="color:#a2f">interactive</span>)
+(<span style="color:#a2f">let</span> ((<span style="color:#b8860b">helm-ff-transformer-show-only-basename</span> <span style="color:#800">nil</span>)
+    <span style="color:#b8860b">helm-source-list</span>)
+(<span style="color:#a2f">unless</span> <span style="color:#b8860b">helm-source-buffers-list</span>
+  (<span style="color:#a2f">setq</span> <span style="color:#b8860b">helm-source-buffers-list</span>
+        (<span style="color:#b8860b">helm-make-source</span> <span style="color:#b44">"Buffers"</span> <span style="color:#b8860b">'helm-source-buffers</span>)))
+(<span style="color:#a2f">cond</span> (
+       <span style="color:#080;font-style:italic">;; Just add helm-source-projectile-* in list when current place in project.</span>
+       (<span style="color:#b8860b">projectile-project-p</span>)
+       (<span style="color:#a2f">setq</span> <span style="color:#b8860b">helm-source-list</span>
+             <span style="color:#666">'</span>(
+               <span style="color:#080;font-style:italic">;; helm-source-awesome-tab-group</span>
+               <span style="color:#b8860b">helm-source-projectile-buffers-list</span>
+               <span style="color:#b8860b">helm-source-buffers-list</span>
+               <span style="color:#b8860b">helm-source-recentf</span>
+               <span style="color:#b8860b">helm-source-projectile-files-list</span>)))
+       (<span style="color:#b8860b">t</span>
+       (<span style="color:#a2f">setq</span> <span style="color:#b8860b">helm-source-list</span>
+             <span style="color:#666">'</span>(
+               <span style="color:#080;font-style:italic">;; helm-source-awesome-tab-group</span>
+               <span style="color:#b8860b">helm-source-buffers-list</span>
+               <span style="color:#b8860b">helm-source-recentf</span>))))
+(<span style="color:#b8860b">helm-other-buffer</span> <span style="color:#b8860b">helm-source-list</span> <span style="color:#b44">"*helm search*"</span>)))<span style="color:#080;font-style:italic">;end better helm</span>
+<span style="color:#080;font-style:italic">;yes</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">helm-command-prefix-key</span> <span style="color:#b44">"C-c h"</span>)
+(<span style="color:#00a000">define-key</span>  <span style="color:#b8860b">helm-map</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">"&lt;tab>"</span>) <span style="color:#b8860b">'helm-execute-persistent-action</span>)
+(<span style="color:#00a000">define-key</span>  <span style="color:#b8860b">helm-map</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">"C-i"</span>) <span style="color:#b8860b">'helm-execute-persistent-action</span>)
+(<span style="color:#00a000">define-key</span>  <span style="color:#b8860b">helm-map</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">"C-z"</span>) <span style="color:#b8860b">'helm-select-action</span>)
+(<span style="color:#00a000">define-key</span>  <span style="color:#b8860b">shell-mode-map</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">"C-c C-l"</span>) <span style="color:#b8860b">'helm-comint-input-ring</span>)
+(<span style="color:#00a000">define-key</span>  <span style="color:#b8860b">minibuffer-local-map</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">"C-c C-l"</span>) <span style="color:#b8860b">'helm-minibuffer-history</span>)
+<span style="color:#a2f">:bind</span> (
+(<span style="color:#b44">"M-x"</span>  <span style="color:#666">.</span>  <span style="color:#b8860b">helm-M-x</span>)
+(<span style="color:#b44">"M-y"</span> <span style="color:#666">.</span> <span style="color:#b8860b">helm-show-kill-ring</span>)
+(<span style="color:#b44">"M-b"</span>    <span style="color:#666">.</span>  <span style="color:#b8860b">better-helm</span>)
+<span style="color:#080;font-style:italic">;("C-o"    .  helm-occur)</span>
+(<span style="color:#b44">"C-s"</span>     <span style="color:#666">.</span> <span style="color:#b8860b">helm-occur</span>)
+(<span style="color:#b44">"C-x C-f"</span>  <span style="color:#666">.</span>  <span style="color:#b8860b">helm-mini</span>)
+(<span style="color:#b44">"C-x f"</span>  <span style="color:#666">.</span>  <span style="color:#b8860b">helm-find-files</span>)
+(<span style="color:#b44">"C-x c x"</span> <span style="color:#666">.</span>  <span style="color:#b8860b">helm-register</span>)
+(<span style="color:#b44">"C-x c g"</span> <span style="color:#666">.</span>  <span style="color:#b8860b">helm-google-suggest</span>)
+(<span style="color:#b44">"C-x c M-:"</span> <span style="color:#666">.</span> <span style="color:#b8860b">helm-eval-expression-with-eldoc</span>))
+<span style="color:#a2f">:hook</span>
+(<span style="color:#b8860b">after-init</span> <span style="color:#666">.</span> <span style="color:#b8860b">helm-mode</span>)
+(<span style="color:#b8860b">after-init</span> <span style="color:#666">.</span> <span style="color:#b8860b">helm-autoresize-mode</span>)
+)<span style="color:#080;font-style:italic">;end use-package helm</span>
 
 
-<span style=color:#080;font-style:italic>; Helm Projectile</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>helm-projectile</span>
-<span style=color:#a2f>:defer</span>  <span style=color:#b8860b>5</span>
-<span style=color:#a2f>:init</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>projectile-completion-system</span> <span style=color:#b8860b>&#39;helm</span>)
-<span style=color:#a2f>:config</span>
-(<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;helm-projectile</span>)
-<span style=color:#a2f>:bind</span>
-(<span style=color:#b44>&#34;C-c p h&#34;</span> <span style=color:#666>.</span> <span style=color:#b8860b>helm-projectile</span>)
-<span style=color:#a2f>:hook</span>
-(<span style=color:#b8860b>after-init</span> <span style=color:#666>.</span> <span style=color:#b8860b>helm-projectile-on</span>)
-)<span style=color:#080;font-style:italic>;end package helm projectile</span>
-<span style=color:#080;font-style:italic>;helm find helm commands</span>
-<span style=color:#080;font-style:italic>;helm-commands-comands</span>
+<span style="color:#080;font-style:italic">; Helm Projectile</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">helm-projectile</span>
+<span style="color:#a2f">:defer</span>  <span style="color:#b8860b">5</span>
+<span style="color:#a2f">:init</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">projectile-completion-system</span> <span style="color:#b8860b">'helm</span>)
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">'helm-projectile</span>)
+<span style="color:#a2f">:bind</span>
+(<span style="color:#b44">"C-c p h"</span> <span style="color:#666">.</span> <span style="color:#b8860b">helm-projectile</span>)
+<span style="color:#a2f">:hook</span>
+(<span style="color:#b8860b">after-init</span> <span style="color:#666">.</span> <span style="color:#b8860b">helm-projectile-on</span>)
+)<span style="color:#080;font-style:italic">;end package helm projectile</span>
+<span style="color:#080;font-style:italic">;helm find helm commands</span>
+<span style="color:#080;font-style:italic">;helm-commands-comands</span>
 
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>helm-helm-commands</span>
-<span style=color:#a2f>:commands</span> <span style=color:#b8860b>helm-helm-commands</span>
-)<span style=color:#080;font-style:italic>;end helm-helm-commands</span>
-<span style=color:#080;font-style:italic>;helm fuzzier matching</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">helm-helm-commands</span>
+<span style="color:#a2f">:commands</span> <span style="color:#b8860b">helm-helm-commands</span>
+)<span style="color:#080;font-style:italic">;end helm-helm-commands</span>
+<span style="color:#080;font-style:italic">;helm fuzzier matching</span>
 
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>helm-fuzzier</span>
-<span style=color:#a2f>:config</span>
-(<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;helm-fuzzier</span>)
-(<span style=color:#b8860b>helm-fuzzier-mode</span> <span style=color:#666>1</span>)
-)<span style=color:#080;font-style:italic>;helm-fuzzier</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">helm-fuzzier</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">'helm-fuzzier</span>)
+(<span style="color:#b8860b">helm-fuzzier-mode</span> <span style="color:#666">1</span>)
+)<span style="color:#080;font-style:italic">;helm-fuzzier</span>
 
-<span style=color:#080;font-style:italic>;helm-mode-manager</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>helm-mode-manager</span>
-<span style=color:#a2f>:commands</span> (<span style=color:#b8860b>helm-switch-major-mode</span> <span style=color:#b8860b>helm-enable-minor-mode</span> <span style=color:#b8860b>helm-disable-minor-mode</span> <span style=color:#b8860b>helm-mode-manager-describe-mode</span> <span style=color:#b8860b>helm-mode-manager-list-major-modes</span>)
-<span style=color:#a2f>:config</span>
-(<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;helm-mode-manager</span>)
-)<span style=color:#080;font-style:italic>;end helm-mode-manager</span>
-<span style=color:#080;font-style:italic>;helm-chrome (bookmark manager)</span>
+<span style="color:#080;font-style:italic">;helm-mode-manager</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">helm-mode-manager</span>
+<span style="color:#a2f">:commands</span> (<span style="color:#b8860b">helm-switch-major-mode</span> <span style="color:#b8860b">helm-enable-minor-mode</span> <span style="color:#b8860b">helm-disable-minor-mode</span> <span style="color:#b8860b">helm-mode-manager-describe-mode</span> <span style="color:#b8860b">helm-mode-manager-list-major-modes</span>)
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">'helm-mode-manager</span>)
+)<span style="color:#080;font-style:italic">;end helm-mode-manager</span>
+<span style="color:#080;font-style:italic">;helm-chrome (bookmark manager)</span>
 
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>helm-chrome</span>
-<span style=color:#a2f>:commands</span> (<span style=color:#b8860b>helm-chrome-bookmarks</span> <span style=color:#b8860b>helm-chrome-reload-bookmarks</span>)
-<span style=color:#a2f>:defer</span> <span style=color:#b8860b>t</span>
-<span style=color:#a2f>:config</span>
-(<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;helm-chrome</span> )
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>helm-chrome-use-urls</span> <span style=color:#800>t</span>)
-)<span style=color:#080;font-style:italic>;end helm-chrome</span>
-<span style=color:#080;font-style:italic>;helm-css-scss</span>
-<span style=color:#080;font-style:italic>;(use-package helm-css-scss</span>
-<span style=color:#080;font-style:italic>;:commands (helm-css-scss-multi helm-css-scss-insert-close-comment)</span>
-<span style=color:#080;font-style:italic>;);end helm-css-scss</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">helm-chrome</span>
+<span style="color:#a2f">:commands</span> (<span style="color:#b8860b">helm-chrome-bookmarks</span> <span style="color:#b8860b">helm-chrome-reload-bookmarks</span>)
+<span style="color:#a2f">:defer</span> <span style="color:#b8860b">t</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">'helm-chrome</span> )
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">helm-chrome-use-urls</span> <span style="color:#800">t</span>)
+)<span style="color:#080;font-style:italic">;end helm-chrome</span>
+<span style="color:#080;font-style:italic">;helm-css-scss</span>
+<span style="color:#080;font-style:italic">;(use-package helm-css-scss</span>
+<span style="color:#080;font-style:italic">;:commands (helm-css-scss-multi helm-css-scss-insert-close-comment)</span>
+<span style="color:#080;font-style:italic">;);end helm-css-scss</span>
 
-<span style=color:#080;font-style:italic>;helm emmet</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>helm-emmet</span>
-<span style=color:#a2f>:commands</span> (<span style=color:#b8860b>helm-emmet</span>)
-)<span style=color:#080;font-style:italic>;end helm-edit</span>
-<span style=color:#080;font-style:italic>;helm-bookmark</span>
-(<span style=color:#b8860b>add-to-list</span> <span style=color:#b8860b>&#39;load-path</span> <span style=color:#b8860b>helm-bookmark-p</span>)
-(<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;helm-bookmark</span>)
+<span style="color:#080;font-style:italic">;helm emmet</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">helm-emmet</span>
+<span style="color:#a2f">:commands</span> (<span style="color:#b8860b">helm-emmet</span>)
+)<span style="color:#080;font-style:italic">;end helm-edit</span>
+<span style="color:#080;font-style:italic">;helm-bookmark</span>
+(<span style="color:#b8860b">add-to-list</span> <span style="color:#b8860b">'load-path</span> <span style="color:#b8860b">helm-bookmark-p</span>)
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">'helm-bookmark</span>)
 
-</code></pre></td></tr></table></div></div><br><h5>SMEX, Address book, and Helm-Addressbook</h5><p class=p-news>SMEX is good to have around if you ever want to use it. The address book is so so. It integrates with your regular
-bookmarks, which is annoying. It would better if you could call it separately. Nonetheless, here is the code for that and the associated
-helm package.</p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
-<span style=color:#080;font-style:italic>; Smart M-X, still around if you get sick of helm</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>smex</span>
-<span style=color:#a2f>:bind</span>
-(<span style=color:#b44>&#34;C-M-x&#34;</span> <span style=color:#666>.</span> <span style=color:#b8860b>smex</span>)
-<span style=color:#080;font-style:italic>;(&#34;M-X&#34; . smex-major-mode-commands)</span>
-)<span style=color:#080;font-style:italic>;end use package smex</span>
+</code></pre></td></tr></table></div></div><br><h5>SMEX, Address book, and Helm-Addressbook</h5><p class="p-news">SMEX is good to have around if you ever want to use it. The address book is so so. It integrates with your regular bookmarks, which is annoying. It would better if you could call it separately. Nonetheless, here is the code for that and the associated helm package.</p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">; Smart M-X, still around if you get sick of helm</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">smex</span>
+<span style="color:#a2f">:bind</span>
+(<span style="color:#b44">"C-M-x"</span> <span style="color:#666">.</span> <span style="color:#b8860b">smex</span>)
+<span style="color:#080;font-style:italic">;("M-X" . smex-major-mode-commands)</span>
+)<span style="color:#080;font-style:italic">;end use package smex</span>
 
-<span style=color:#080;font-style:italic>;addressbook-bookmark</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>addressbook-bookmark</span>
-<span style=color:#a2f>:after</span> <span style=color:#b8860b>helm-addressbook</span>
-<span style=color:#a2f>:commands</span> (<span style=color:#b8860b>addressbook-bookmark-set</span> <span style=color:#b8860b>helm-addressbook-bookmarks</span>)
-)<span style=color:#080;font-style:italic>;end package addressbook-bookmark</span>
+<span style="color:#080;font-style:italic">;addressbook-bookmark</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">addressbook-bookmark</span>
+<span style="color:#a2f">:after</span> <span style="color:#b8860b">helm-addressbook</span>
+<span style="color:#a2f">:commands</span> (<span style="color:#b8860b">addressbook-bookmark-set</span> <span style="color:#b8860b">helm-addressbook-bookmarks</span>)
+)<span style="color:#080;font-style:italic">;end package addressbook-bookmark</span>
 
-<span style=color:#080;font-style:italic>;helm-addressbook bookmark</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>helm-addressbook</span>
-)<span style=color:#080;font-style:italic>;end-use-package helm address book</span>
-<span style=color:#080;font-style:italic>;bookmarks configuration</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>bookmark-default-file</span> <span style=color:#b8860b>bookmarks-p</span>)
+<span style="color:#080;font-style:italic">;helm-addressbook bookmark</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">helm-addressbook</span>
+)<span style="color:#080;font-style:italic">;end-use-package helm address book</span>
+<span style="color:#080;font-style:italic">;bookmarks configuration</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">bookmark-default-file</span> <span style="color:#b8860b">bookmarks-p</span>)
 
-</code></pre></td></tr></table></div></div><br><h5>Here's the bookmark hydra, which I used all the time</h5><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
-<span style=color:#080;font-style:italic>;bookmark hydra</span>
-(<span style=color:#a2f>defvar</span> <span style=color:#b8860b>bookmarks-title</span> (<span style=color:#b8860b>with-faicon</span> <span style=color:#b44>&#34;book&#34;</span> <span style=color:#b44>&#34;Manage Book Marks&#34;</span>))
-<span style=color:#080;font-style:italic>;generate hydra</span>
-(<span style=color:#b8860b>pretty-hydra-define</span> <span style=color:#b8860b>Bookmarks</span> (<span style=color:#a2f>:title</span> <span style=color:#b8860b>bookmarks-title</span> <span style=color:#a2f>:quit-key</span> <span style=color:#b44>&#34;q&#34;</span> <span style=color:#a2f>:color</span> <span style=color:#b8860b>teal</span> )
-(<span style=color:#b44>&#34;Local Bookmarks&#34;</span>
+</code></pre></td></tr></table></div></div><br><h5>Here's the bookmark hydra, which I used all the time</h5><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;bookmark hydra</span>
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">bookmarks-title</span> (<span style="color:#b8860b">with-faicon</span> <span style="color:#b44">"book"</span> <span style="color:#b44">"Manage Book Marks"</span>))
+<span style="color:#080;font-style:italic">;generate hydra</span>
+(<span style="color:#b8860b">pretty-hydra-define</span> <span style="color:#b8860b">Bookmarks</span> (<span style="color:#a2f">:title</span> <span style="color:#b8860b">bookmarks-title</span> <span style="color:#a2f">:quit-key</span> <span style="color:#b44">"q"</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">teal</span> )
+(<span style="color:#b44">"Local Bookmarks"</span>
 (
-     (<span style=color:#b44>&#34;b&#34;</span>  <span style=color:#b8860b>helm-bookmarks</span> <span style=color:#b44>&#34;Jump To A Bookmark&#34;</span>)
-     (<span style=color:#b44>&#34;s&#34;</span> <span style=color:#b8860b>bookmark-set</span> <span style=color:#b44>&#34;Set A Bookmark&#34;</span>)
-     (<span style=color:#b44>&#34;e&#34;</span> <span style=color:#b8860b>edit-bookmarks</span> <span style=color:#b44>&#34;Edit Bookmarks&#34;</span>)
-)<span style=color:#080;font-style:italic>;end local</span>
-<span style=color:#b44>&#34;Chrome Bookmarks&#34;</span>
+     (<span style="color:#b44">"b"</span>  <span style="color:#b8860b">helm-bookmarks</span> <span style="color:#b44">"Jump To A Bookmark"</span>)
+     (<span style="color:#b44">"s"</span> <span style="color:#b8860b">bookmark-set</span> <span style="color:#b44">"Set A Bookmark"</span>)
+     (<span style="color:#b44">"e"</span> <span style="color:#b8860b">edit-bookmarks</span> <span style="color:#b44">"Edit Bookmarks"</span>)
+)<span style="color:#080;font-style:italic">;end local</span>
+<span style="color:#b44">"Chrome Bookmarks"</span>
 (
-     (<span style=color:#b44>&#34;c&#34;</span> <span style=color:#b8860b>helm-chrome-bookmarks</span> <span style=color:#b44>&#34;Select A Chrome Bookmark&#34;</span>)
-     (<span style=color:#b44>&#34;r&#34;</span> <span style=color:#b8860b>helm-chrome-reload-bookmarks</span> <span style=color:#b44>&#34;Refresh Chrome Bookmarks&#34;</span>)
+     (<span style="color:#b44">"c"</span> <span style="color:#b8860b">helm-chrome-bookmarks</span> <span style="color:#b44">"Select A Chrome Bookmark"</span>)
+     (<span style="color:#b44">"r"</span> <span style="color:#b8860b">helm-chrome-reload-bookmarks</span> <span style="color:#b44">"Refresh Chrome Bookmarks"</span>)
 
-)<span style=color:#080;font-style:italic>;end chrome</span>
-<span style=color:#b44>&#34;Address Book&#34;</span>
+)<span style="color:#080;font-style:italic">;end chrome</span>
+<span style="color:#b44">"Address Book"</span>
 (
-     (<span style=color:#b44>&#34;a&#34;</span> <span style=color:#b8860b>addressbook-bookmark-set</span> <span style=color:#b44>&#34;Enter Contact To Addressbook&#34;</span>)
-     (<span style=color:#b44>&#34;h&#34;</span> <span style=color:#b8860b>hydra-helm/body</span> <span style=color:#b44>&#34;Return To Helm&#34;</span> <span style=color:#a2f>:color</span> <span style=color:#b8860b>blue</span> )
-     (<span style=color:#b44>&#34;&lt;SPC&gt;&#34;</span> <span style=color:#800>nil</span> <span style=color:#b44>&#34;Quit&#34;</span> <span style=color:#a2f>:color</span> <span style=color:#b8860b>blue</span> )
-)<span style=color:#080;font-style:italic>;end addressbook</span>
-)<span style=color:#080;font-style:italic>;end hydra body</span>
-)<span style=color:#080;font-style:italic>;end pretty-hydra-find-files</span>
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;&lt;C-m&gt; m&#34;</span> <span style=color:#b8860b>&#39;Bookmarks/body</span>)
+     (<span style="color:#b44">"a"</span> <span style="color:#b8860b">addressbook-bookmark-set</span> <span style="color:#b44">"Enter Contact To Addressbook"</span>)
+     (<span style="color:#b44">"h"</span> <span style="color:#b8860b">hydra-helm/body</span> <span style="color:#b44">"Return To Helm"</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
+     (<span style="color:#b44">"&lt;SPC>"</span> <span style="color:#800">nil</span> <span style="color:#b44">"Quit"</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
+)<span style="color:#080;font-style:italic">;end addressbook</span>
+)<span style="color:#080;font-style:italic">;end hydra body</span>
+)<span style="color:#080;font-style:italic">;end pretty-hydra-find-files</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"&lt;C-m> m"</span> <span style="color:#b8860b">'Bookmarks/body</span>)
 
-</code></pre></td></tr></table></div></div><div class=mobile-iframe><figure class=zoom-effect><div class=aspectRatioPlaceholder><div class=aspect-ratio-fill style=padding-bottom:75.78947368421053%></div><img src=bookmarks.jpg align=center class="inline-image img-zoom" width=100% alt=theme-image-here data-width=1920 data-height=1080></div></figure></div><br><h5>That's all for now. See you next time.</h5><div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-15-emacs-projectile-helm-smex%2f&text=Emacs%20Projectile%2c%20Helm%2c%20and%20Smex&tw_p=tweetbutton" class=p-2 title="Share on Twitter" target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Tweet</small></div></a><a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-15-emacs-projectile-helm-smex%2f&t=Emacs%20Projectile%2c%20Helm%2c%20and%20Smex" class=p-2 title="Share on Facebook" target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-facebook fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-15-emacs-projectile-helm-smex%2f&title=Emacs%20Projectile%2c%20Helm%2c%20and%20Smex&source=mattbutton.com" class=p-2 title="Share on LinkedIn" target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href=javascript:window.print() title="Print this article" class=p-2 target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fa fa-print fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Print</small></div></a></div><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")
-return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;var disqus_shortname='cloud-nine-2';dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=http://disqus.com/ class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a><br><br></article></div></main><div id=banner></div><div id=sidebar class="sidebar d-print-none d-none d-md-block"><h2 class=center>Meet The Author</h2><div class=mobile-iframe><iframe width=360 height=180 src="https://www.youtube.com/embed/HR3O17D0MaE?start=0.2" frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><p>Hi, I'm <strong>Yuri Tricys</strong>, the author of Cloud Nine. I'm a <strong>researcher</strong>, <strong>technical writer</strong>, <strong>data analyst</strong>, and <strong>web developer</strong>.</p><p>Cloud Nine is a place where you can browse some of the <strong>free</strong> content I create.</p><p>You can also <strong>outsource</strong> <strong>research</strong> to me directly. In fact, I encourage you to do so.</p><p>Just send an e-mail to <a href="mailto:tricys@alumni.ubc.ca? subject=Research">tricys@alumni.ubc.ca</a> with "Research" in the subject line and I'll get back to you.</p><h2 class=center>Featured Video</h2><div class=mobile-iframe><iframe width=360 height=180 src=https://www.youtube.com/embed/-XxEX3LUgOY frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><h2 class=mt-4>Featured Posts</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/motivation/2020-02-25-developing-cognitive-ambidexterity/ class=nav-link>Developing Cognitive Ambidexterity</a>
-<a href=https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/ class=nav-link>Emacs Bookmarks</a></nav><h2 class=mt-4>Recent Posts</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/ class=nav-link>The Web Developer Hydra</a>
-<a href=https://cloudnine.github.io/science/2020-04-09-helm-hydra/ class=nav-link>The Helm Hydra</a>
-<a href=https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/ class=nav-link>Dune, by Frank Herbert</a>
-<a href=https://cloudnine.github.io/books/2020-04-07-citadel-algis-budrys/ class=nav-link>Citadel, by Algis Budrys</a>
-<a href=https://cloudnine.github.io/science/2020-03-29-emacs-elnode-and-editor-hydra/ class=nav-link>Emacs Configuration Elnode and the Editor Hydra</a>
-<a href=https://cloudnine.github.io/books/2020-03-28-american-financier/ class=nav-link>American Financier, by Jean Strous</a></nav><h2 class="mt-4 text-capitalize">categories</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/categories/computer-science/ class=nav-link>computer-science
-<span class="badge badge-pill badge-secondary">42</span></a>
-<a href=https://cloudnine.github.io/categories/economics/ class=nav-link>economics
-<span class="badge badge-pill badge-secondary">28</span></a>
-<a href=https://cloudnine.github.io/categories/finance/ class=nav-link>finance
-<span class="badge badge-pill badge-secondary">19</span></a>
-<a href=https://cloudnine.github.io/categories/business/ class=nav-link>business
-<span class="badge badge-pill badge-secondary">18</span></a>
-<a href=https://cloudnine.github.io/categories/politics/ class=nav-link>politics
-<span class="badge badge-pill badge-secondary">13</span></a>
-<a href=https://cloudnine.github.io/categories/psychology/ class=nav-link>psychology
-<span class="badge badge-pill badge-secondary">11</span></a>
-<a href=https://cloudnine.github.io/categories/statistics/ class=nav-link>statistics
-<span class="badge badge-pill badge-secondary">4</span></a>
-<a href=https://cloudnine.github.io/categories/links/ class=nav-link>links
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/categories/math/ class=nav-link>math
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/categories/ethics/ class=nav-link>ethics
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/history/ class=nav-link>history
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/law/ class=nav-link>law
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/maths/ class=nav-link>maths
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/movies/ class=nav-link>movies
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/music/ class=nav-link>music
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/philosophy/ class=nav-link>philosophy
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/physics/ class=nav-link>physics
-<span class="badge badge-pill badge-secondary">1</span></a></nav><h2 class="mt-4 text-capitalize">tags</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/tags/learning-center/ class=nav-link>learning-center
-<span class="badge badge-pill badge-secondary">47</span></a>
-<a href=https://cloudnine.github.io/tags/emacs/ class=nav-link>emacs
-<span class="badge badge-pill badge-secondary">24</span></a>
-<a href=https://cloudnine.github.io/tags/data-science/ class=nav-link>data-science
-<span class="badge badge-pill badge-secondary">20</span></a>
-<a href=https://cloudnine.github.io/tags/newsroom/ class=nav-link>newsroom
-<span class="badge badge-pill badge-secondary">19</span></a>
-<a href=https://cloudnine.github.io/tags/data-firm/ class=nav-link>data-firm
-<span class="badge badge-pill badge-secondary">16</span></a>
-<a href=https://cloudnine.github.io/tags/emacs-hydras/ class=nav-link>emacs-hydras
-<span class="badge badge-pill badge-secondary">14</span></a>
-<a href=https://cloudnine.github.io/tags/macroeconomics/ class=nav-link>macroeconomics
-<span class="badge badge-pill badge-secondary">14</span></a>
-<a href=https://cloudnine.github.io/tags/opinion/ class=nav-link>opinion
-<span class="badge badge-pill badge-secondary">14</span></a>
-<a href=https://cloudnine.github.io/tags/personal-development/ class=nav-link>personal-development
-<span class="badge badge-pill badge-secondary">12</span></a>
-<a href=https://cloudnine.github.io/tags/research/ class=nav-link>research
-<span class="badge badge-pill badge-secondary">10</span></a>
-<a href=https://cloudnine.github.io/tags/trends-global/ class=nav-link>trends-global
-<span class="badge badge-pill badge-secondary">9</span></a>
-<a href=https://cloudnine.github.io/tags/trade/ class=nav-link>trade
-<span class="badge badge-pill badge-secondary">8</span></a>
-<a href=https://cloudnine.github.io/tags/academic/ class=nav-link>academic
-<span class="badge badge-pill badge-secondary">5</span></a>
-<a href=https://cloudnine.github.io/tags/music/ class=nav-link>music
-<span class="badge badge-pill badge-secondary">5</span></a>
-<a href=https://cloudnine.github.io/tags/emacs-functions/ class=nav-link>emacs-functions
-<span class="badge badge-pill badge-secondary">4</span></a>
-<a href=https://cloudnine.github.io/tags/organizational-psychology/ class=nav-link>organizational-psychology
-<span class="badge badge-pill badge-secondary">4</span></a>
-<a href=https://cloudnine.github.io/tags/stock-market/ class=nav-link>stock-market
-<span class="badge badge-pill badge-secondary">4</span></a>
-<a href=https://cloudnine.github.io/tags/about-the-author/ class=nav-link>about-the-author
-<span class="badge badge-pill badge-secondary">3</span></a>
-<a href=https://cloudnine.github.io/tags/non-fiction/ class=nav-link>non-fiction
-<span class="badge badge-pill badge-secondary">3</span></a>
-<a href=https://cloudnine.github.io/tags/science-fiction/ class=nav-link>science-fiction
-<span class="badge badge-pill badge-secondary">3</span></a>
-<a href=https://cloudnine.github.io/tags/featured/ class=nav-link>featured
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/r-programming/ class=nav-link>r-programming
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/text-editors/ class=nav-link>text-editors
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/video/ class=nav-link>video
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/windows/ class=nav-link>windows
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/alternative-energy/ class=nav-link>alternative-energy
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/blog/ class=nav-link>blog
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/blog-links/ class=nav-link>blog-links
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/calculus/ class=nav-link>calculus
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/changing-computers/ class=nav-link>changing-computers
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/climate-change/ class=nav-link>climate-change
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/computational-modelling/ class=nav-link>computational-modelling
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/custom-charts/ class=nav-link>custom-charts
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/data-links/ class=nav-link>data-links
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/economics/ class=nav-link>economics
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/investing/ class=nav-link>investing
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/news-room/ class=nav-link>news-room
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/public-sector/ class=nav-link>public-sector
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/tech/ class=nav-link>tech
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/video-emacs/ class=nav-link>video-emacs
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/video-motivational/ class=nav-link>video-motivational
-<span class="badge badge-pill badge-secondary">1</span></a></nav></div><div id=ads></div><footer id=footer class="mt-auto footer d-print-none"><div class=container-fluid><div class="row justify-content-center"><div class="col-md-4 col-xl-3"><h5>Website</h5>This blog was created using <a href=https://gohugo.io/>Hugo</a>,
-<a href=https://getbootstrap.com/>Bootstrap</a>, and the Silhouette Hugo theme.</div><div class="col-md-4 col-xl-3"><h5>Disclaimer</h5>Opinions expressed here are my own and may not reflect those of any company I work for, or people I
-work with.</div><div class="col-md-4 col-xl-3"><h5></h5>© 2019 - <script>document.write(Date().split` `[3])</script>Yuri Tricys</div></div><hr><div class="d-flex justify-content-center icons"><a class="py-2 px-2" href=https://www.linkedin.com/in/yuri-tricys-aa004b26/><i class="fab fa-linkedin"></i></a><a class="py-2 px-2" href=https://cloudnine.github.io/index.xml><i class="fas fa-rss"></i></a></div></div></footer></div></body></html>
+</code></pre></td></tr></table></div></div><div class="mobile-iframe"><figure class="zoom-effect"><div class="aspectRatioPlaceholder"><div class="aspect-ratio-fill" style="padding-bottom: 75.78947368421053%;"></div><!-- end aspect ratio fill --><!--appearance hydra--> <img src="bookmarks.jpg" align="center" title="" class="inline-image img-zoom" width="100%" alt="theme-image-here" data-width="1920" data-height="1080"></div><!-- end aspect ratio --></figure><!-- end figure --></div><!--mobile-iframe--><br><h5>That's all for now. See you next time.</h5><div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-15-emacs-projectile-helm-smex%2f&text=Emacs%20Projectile%2c%20Helm%2c%20and%20Smex&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Tweet</small></div></a><a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-15-emacs-projectile-helm-smex%2f&t=Emacs%20Projectile%2c%20Helm%2c%20and%20Smex" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-facebook fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-15-emacs-projectile-helm-smex%2f&title=Emacs%20Projectile%2c%20Helm%2c%20and%20Smex&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href="javascript:window.print()" title="Print this article" class="p-2" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i> <i class="fa fa-print fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Print</small></div></a></div><div id="disqus_thread"></div><script type="text/javascript">(function() {
+      
+      
+      if (window.location.hostname == "localhost")
+                return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'cloud-nine-2';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br><br></article></div></main><div id="banner"></div><div id="sidebar" class="sidebar d-print-none d-none d-md-block"><h2 class="center">Meet The Author</h2><div class="mobile-iframe"><iframe width="360" height="180" src="https://www.youtube.com/embed/HR3O17D0MaE?start=0.2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><p>Hi, I'm <strong>Yuri Tricys</strong>, the author of Cloud Nine. I'm a <strong>researcher</strong>, <strong>technical writer</strong>, <strong>data analyst</strong>, and <strong>web developer</strong>.</p><p>Cloud Nine is a place where you can browse some of the <strong>free</strong> content I create.</p><p>You can also <strong>outsource</strong> <strong>research</strong> to me directly. In fact, I encourage you to do so.</p><p>Just send an e-mail to <a href="mailto:tricys@alumni.ubc.ca? subject=Research">tricys@alumni.ubc.ca</a> with "Research" in the subject line and I'll get back to you.</p><h2 class="center">Featured Video</h2><div class="mobile-iframe"><iframe width="360" height="180" src="https://www.youtube.com/embed/-XxEX3LUgOY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><h2 class="mt-4">Featured Posts</h2><nav class="nav flex-column"><a href="https://cloudnine.github.io/motivation/2020-02-25-developing-cognitive-ambidexterity/" class="nav-link">Developing Cognitive Ambidexterity</a> <a href="https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/" class="nav-link">Emacs Bookmarks</a></nav><h2 class="mt-4">Recent Posts</h2><nav class="nav flex-column"><a href="https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/" class="nav-link">The Web Developer Hydra</a> <a href="https://cloudnine.github.io/science/2020-04-09-helm-hydra/" class="nav-link">The Helm Hydra</a> <a href="https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/" class="nav-link">Dune, by Frank Herbert</a> <a href="https://cloudnine.github.io/books/2020-04-07-citadel-algis-budrys/" class="nav-link">Citadel, by Algis Budrys</a> <a href="https://cloudnine.github.io/science/2020-03-29-emacs-elnode-and-editor-hydra/" class="nav-link">Emacs Configuration Elnode and the Editor Hydra</a> <a href="https://cloudnine.github.io/books/2020-03-28-american-financier/" class="nav-link">American Financier, by Jean Strous</a></nav><h2 class="mt-4 text-capitalize">categories</h2><nav class="nav flex-column"><a href="https://cloudnine.github.io/categories/computer-science/" class="nav-link">computer-science <span class="badge badge-pill badge-secondary">42</span> </a><a href="https://cloudnine.github.io/categories/economics/" class="nav-link">economics <span class="badge badge-pill badge-secondary">28</span> </a><a href="https://cloudnine.github.io/categories/finance/" class="nav-link">finance <span class="badge badge-pill badge-secondary">19</span> </a><a href="https://cloudnine.github.io/categories/business/" class="nav-link">business <span class="badge badge-pill badge-secondary">18</span> </a><a href="https://cloudnine.github.io/categories/politics/" class="nav-link">politics <span class="badge badge-pill badge-secondary">13</span> </a><a href="https://cloudnine.github.io/categories/psychology/" class="nav-link">psychology <span class="badge badge-pill badge-secondary">11</span> </a><a href="https://cloudnine.github.io/categories/statistics/" class="nav-link">statistics <span class="badge badge-pill badge-secondary">4</span> </a><a href="https://cloudnine.github.io/categories/links/" class="nav-link">links <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/categories/math/" class="nav-link">math <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/categories/ethics/" class="nav-link">ethics <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/history/" class="nav-link">history <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/law/" class="nav-link">law <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/maths/" class="nav-link">maths <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/movies/" class="nav-link">movies <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/music/" class="nav-link">music <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/philosophy/" class="nav-link">philosophy <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/physics/" class="nav-link">physics <span class="badge badge-pill badge-secondary">1</span></a></nav><h2 class="mt-4 text-capitalize">tags</h2><nav class="nav flex-column"><a href="https://cloudnine.github.io/tags/learning-center/" class="nav-link">learning-center <span class="badge badge-pill badge-secondary">47</span> </a><a href="https://cloudnine.github.io/tags/emacs/" class="nav-link">emacs <span class="badge badge-pill badge-secondary">24</span> </a><a href="https://cloudnine.github.io/tags/data-science/" class="nav-link">data-science <span class="badge badge-pill badge-secondary">20</span> </a><a href="https://cloudnine.github.io/tags/newsroom/" class="nav-link">newsroom <span class="badge badge-pill badge-secondary">19</span> </a><a href="https://cloudnine.github.io/tags/data-firm/" class="nav-link">data-firm <span class="badge badge-pill badge-secondary">16</span> </a><a href="https://cloudnine.github.io/tags/emacs-hydras/" class="nav-link">emacs-hydras <span class="badge badge-pill badge-secondary">14</span> </a><a href="https://cloudnine.github.io/tags/macroeconomics/" class="nav-link">macroeconomics <span class="badge badge-pill badge-secondary">14</span> </a><a href="https://cloudnine.github.io/tags/opinion/" class="nav-link">opinion <span class="badge badge-pill badge-secondary">14</span> </a><a href="https://cloudnine.github.io/tags/personal-development/" class="nav-link">personal-development <span class="badge badge-pill badge-secondary">12</span> </a><a href="https://cloudnine.github.io/tags/research/" class="nav-link">research <span class="badge badge-pill badge-secondary">10</span> </a><a href="https://cloudnine.github.io/tags/trends-global/" class="nav-link">trends-global <span class="badge badge-pill badge-secondary">9</span> </a><a href="https://cloudnine.github.io/tags/trade/" class="nav-link">trade <span class="badge badge-pill badge-secondary">8</span> </a><a href="https://cloudnine.github.io/tags/academic/" class="nav-link">academic <span class="badge badge-pill badge-secondary">5</span> </a><a href="https://cloudnine.github.io/tags/music/" class="nav-link">music <span class="badge badge-pill badge-secondary">5</span> </a><a href="https://cloudnine.github.io/tags/emacs-functions/" class="nav-link">emacs-functions <span class="badge badge-pill badge-secondary">4</span> </a><a href="https://cloudnine.github.io/tags/organizational-psychology/" class="nav-link">organizational-psychology <span class="badge badge-pill badge-secondary">4</span> </a><a href="https://cloudnine.github.io/tags/stock-market/" class="nav-link">stock-market <span class="badge badge-pill badge-secondary">4</span> </a><a href="https://cloudnine.github.io/tags/about-the-author/" class="nav-link">about-the-author <span class="badge badge-pill badge-secondary">3</span> </a><a href="https://cloudnine.github.io/tags/non-fiction/" class="nav-link">non-fiction <span class="badge badge-pill badge-secondary">3</span> </a><a href="https://cloudnine.github.io/tags/science-fiction/" class="nav-link">science-fiction <span class="badge badge-pill badge-secondary">3</span> </a><a href="https://cloudnine.github.io/tags/featured/" class="nav-link">featured <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/r-programming/" class="nav-link">r-programming <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/text-editors/" class="nav-link">text-editors <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/video/" class="nav-link">video <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/windows/" class="nav-link">windows <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/alternative-energy/" class="nav-link">alternative-energy <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/blog/" class="nav-link">blog <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/blog-links/" class="nav-link">blog-links <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/calculus/" class="nav-link">calculus <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/changing-computers/" class="nav-link">changing-computers <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/climate-change/" class="nav-link">climate-change <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/computational-modelling/" class="nav-link">computational-modelling <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/custom-charts/" class="nav-link">custom-charts <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/data-links/" class="nav-link">data-links <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/economics/" class="nav-link">economics <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/investing/" class="nav-link">investing <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/news-room/" class="nav-link">news-room <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/public-sector/" class="nav-link">public-sector <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/tech/" class="nav-link">tech <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/video-emacs/" class="nav-link">video-emacs <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/video-motivational/" class="nav-link">video-motivational <span class="badge badge-pill badge-secondary">1</span></a></nav></div><div id="ads"></div><footer id="footer" class="mt-auto footer d-print-none"><div class="container-fluid"><div class="row justify-content-center"><div class="col-md-4 col-xl-3"><h5>Website</h5>This blog was created using <a href="https://gohugo.io/">Hugo</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, and the Silhouette Hugo theme.</div><div class="col-md-4 col-xl-3"><h5>Disclaimer</h5>Opinions expressed here are my own and may not reflect those of any company I work for, or people I work with.</div><div class="col-md-4 col-xl-3"><h5></h5>© 2019 -<script>document.write(Date().split` `[3])</script>Yuri Tricys</div></div><hr><div class="d-flex justify-content-center icons"><a class="py-2 px-2" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><i class="fab fa-linkedin"></i></a> <a class="py-2 px-2" href="https://cloudnine.github.io/index.xml"><i class="fas fa-rss"></i></a></div></div></footer></div></body></html>

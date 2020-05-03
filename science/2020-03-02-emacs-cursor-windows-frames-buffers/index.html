@@ -1,532 +1,399 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=author content="Cloud Nine"><meta name=copyright content="Copyright &copy; 2019 -2020byYuri TricysAll rights reserved."><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=google-site-verification content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw"><meta name=yandex-verification content="7cb55c3432ff9fc7"><meta name=msvalidate.01 content="C3105C04193385EF751ABBCF0EBC693A"><meta name=description content="Emacs configuration with cursor and screen defaults, a hydra, create a scratch buffer, and frame movements."><title>Emacs Windows, Frames, Buffers, and Cursor</title><meta property="article:author" content="Yuri Tricys"><link rel=canonical href=https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/><meta name=theme-color content="#ffffff"><meta property="og:title" content="Emacs Windows, Frames, Buffers, and Cursor"><meta property="og:image:type" content="image/jpg"><meta property="og:image" content="https://cloudnine.github.io/images/science/christian-bale.jpg"><meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/christian-bale.jpg"><meta property="og:description" content="Emacs configuration with cursor and screen defaults, a hydra, create a scratch buffer, and frame movements."><meta property="og:site_name" content="Cloud Nine Blog."><meta property="og:url" content="https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/"><meta property="og:type" content="website"><link rel=icon type=image/png href=https://cloudnine.github.io/images/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=https://cloudnine.github.io/images/favicon-32x32.png sizes=32x32><link rel=me type=text/html href=https://www.linkedin.com/in/yuri-tricys-aa004b26/><link rel=alternate type=application/rss+xml href=https://cloudnine.github.io/index.xml><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Oswald:400" integrity crossorigin=anonymous></link><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css integrity=sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh crossorigin=anonymous></link><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous></link><link rel=stylesheet href=/css/bundle.css integrity><script src=https://code.jquery.com/jquery-3.4.1.min.js integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js integrity=sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo crossorigin=anonymous defer></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js integrity=sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 crossorigin=anonymous defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js integrity="sha256-34Si1Y6llMBKM3G0jQILVeoQKEwuxjbk4zGWXXMT4ps=" crossorigin=anonymous defer></script><script src=https://cloudnine.github.io/js/min/bundle.min.964d3af33c3c75fc536731cf858cd4e67ed1ac8f9af37b6e3b667410d714a3eb33be81ef45aad5fc7d2b98fb3c8eb6f305ec6012ad05844eff798b08fe87c4d5.js integrity="sha512-lk068zw8dfxTZzHPhYzU5n7RrI+a83tuO2Z0ENcUo+szvoHvRarV/H0rmPs8jrbzBexgEq0FhE7/eYsI/ofE1Q==" crossorigin=anonymous defer></script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Blog","image":"https://cloudnine.github.io/images/science/christian-bale.jpg","url":"https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/","thumbnailUrl":"https://cloudnine.github.io/images/science/christian-bale.jpg","headline":"Emacs Windows, Frames, Buffers, and Cursor","description":"Emacs configuration with cursor and screen defaults, a hydra, create a scratch buffer, and frame movements.","datePublished":"2020-03-02T00:00:00Z","dateCreated":"2020-03-02T00:00:00Z","creator":"Yuri Tricys","author":"Yuri Tricys","articleSection":"science","publisher":{"name":"Cloud Nine","logo":"","@type":"Organization"}}</script><script defer>var clicky_site_ids=clicky_site_ids||[];clicky_site_ids.push(101236333);</script><script async src=//static.getclicky.com/js></script><style type=text/css>.feature-image{background-image:url(https://cloudnine.github.io/images/science/christian-bale.jpg);width:100%;height:auto}</style></head><body><div id=wrapper class=wrapper><div id=navigation class="navigation navbar container-fluid navbar-expand-xl fixed-top bg-dark navbar-dark"><button class="navbar-toggler collapsed mr-3" type=button data-toggle=collapse data-target=#navbarCollapse aria-controls=navbarCollapse aria-expanded=false aria-label="Toggle navigation">
-<i class="fas fa-bars"></i></button>
-<a class="navbar-brand mr-2" href=https://cloudnine.github.io/>CLOUD NINE</a><div class="navbar-collapse collapse" id=navbarCollapse><ul class="navbar-nav mr-auto"><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/about/>About</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/motivation/>Motivation</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/science/>Science</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/categories/>Categories</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/tags/>Tags</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/books/>Books</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/current/>Current</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/archives/>Archives</a></li></ul></div><div class=nav-right-side><ul class="navbar-icons navbar-nav"><li class=nav-item id=search><a class="nav-link active" href=https://cloudnine.github.io/search/><span class="d-none d-lg-inline-flex">Search&nbsp;&nbsp;</span><i class="fas fa-search"></i></a></li><li class=nav-item id=user><a class="nav-link active" href=#><span class="d-none d-lg-inline-flex">Login&nbsp;&nbsp;&nbsp;</span><i class="fas fa-user"></i></a></li><li class=nav-item id=shop><a class="nav-link active" href=#><span class="d-none d-lg-inline-flex">Shop&nbsp;&nbsp;</span><i class="fas fa-shopping-cart"></i></a></li></ul></div></div><header id=header class=feature-image><div class=feature-image-text><h1 class=text-center>Sciency Stuff</h1><div class="intro-description d-block"></div></div></header><main id=main class=main><div class="container mt-4 post"><a name=article-title class=anchor-top></a><h1>Emacs Windows, Frames, Buffers, and Cursor</h1><div id=post-summary-meta class="ml-2 mb-2 mt-1"><small><strong>Author:
-Yuri Tricys</strong> |&nbsp; <i class="far fa-calendar-alt"></i>&nbsp;Mar 2, 2020&nbsp;
-|&nbsp; <i class="fa fa-tags" title=Tags aria-hidden=true></i>&nbsp;
-<a href=/tags/emacs>emacs</a>,
-<a href=/tags/emacs-functions>emacs functions</a>,
-<a href=/tags/emacs-hydras>emacs hydras</a>,
-<a href=/tags/learning-center>learning center</a></small></div><article class="mt-4 mb-4 main-content"><h5>This post covers the first two sections from the "Default Operations" section of my init.<br><br></h5><ul><li><p>Default Operations</p><ul><li>Moving the Cursor and Screen</li><li>Make/kill/move windows frames buffers</li><li>Projectile, Helm and Smex</li><li>Parentheses</li><li>Directories</li><li>Clip board (kill ring)</li><li>PDF tools and command line history</li></ul><br></li></ul><h5>Preamble</h5><p class=p-news>Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
-know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts y date from
-oldest to newest.</p><p class=p-news>In the last emacs <a href=https://cloudnine.github.io/science/2020-02-27-emacs-hydra-set-up-code/ target=_blank>post</a> I covered lines 1115 - 1195. This post
-covers lines 1195 - 1366. I include the lines for anyone that wants to patch together the entire init from start to finish. The lines won't always match up because I take stuff out when I'm in the init.</p><p class=p-news></p><h5>Moving The Cursor and Screen</h5><p class=p-news>I added some spaces between these sections. Saving point, and adjusting the scroll behaviour are standard Emacs defaults
-you want to set. Copy paste these defaults and that's fine. Mwim is great for changing up C-a, C-e, which are end of sentence and beginning
-of sentence. What I use to move around the most are C-p, C-n, C-a, and C-e. I also use M-< and M->, which are bound to beginning of page and
-end of page, though in the code below they are bound to <home>and <end>. Use either or rebind. I don't usually go to the thumb so I'm not
-too frequently moving with the meta key (ALT). For example, I'm not using M-p, M-n for jumping paragraphs, and C-M-f or C-M-b, moving
-back/forward by word often. The Avy package, here bound to M-s is apparently great for jumping to targets, but I'm not yet using it often.
-Same with leaving a mark with C-SPC then popping to mark later with C-0. I usually use C-s search to cycle through the words I'm looking for
-(actually now it's bound to helm search, which I like a little less than ido search, because you have to hit enter, but it still gets you
-around). Sometimes if there is no memorable landmark near, I'll insert a weird word into a file then use search to get back to it.</p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">43
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">44
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">45
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">46
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">47
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">48
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">49
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">50
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">51
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">52
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">53
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">54
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">55
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">56
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">57
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">58
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">59
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">60
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">61
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">62
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">63
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">64
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">65
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">66
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">67
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
- <span style=color:#080;font-style:italic>; Don&#39;t highlight matches with jump-char - it&#39;s distracting</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>jump-char-lazy-highlight-face</span> <span style=color:#800>nil</span>)
+<!doctype html><html lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="author" content="Cloud Nine"><meta name="copyright" content="Copyright © 2019 -2020byYuri TricysAll rights reserved."><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw"><meta name="yandex-verification" content="7cb55c3432ff9fc7"><meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A"><meta name="description" content="Emacs configuration with cursor and screen defaults, a hydra, create a scratch buffer, and frame movements."><title>Emacs Windows, Frames, Buffers, and Cursor</title><meta property="article:author" content="Yuri Tricys"><link rel="canonical" href="https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/"><meta name="theme-color" content="#ffffff"><meta property="og:title" content="Emacs Windows, Frames, Buffers, and Cursor"><meta property="og:image:type" content="image/jpg"><meta property="og:image" content="https://cloudnine.github.io/images/science/christian-bale.jpg"><meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/christian-bale.jpg"><meta property="og:description" content="Emacs configuration with cursor and screen defaults, a hydra, create a scratch buffer, and frame movements."><meta property="og:site_name" content="Cloud Nine Blog."><meta property="og:url" content="https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/"><meta property="og:type" content="website"><link rel="icon" type="image/png" href="https://cloudnine.github.io/images/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="https://cloudnine.github.io/images/favicon-32x32.png" sizes="32x32"><link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><link rel="alternate" type="application/rss+xml" href="https://cloudnine.github.io/index.xml"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400" integrity="" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"><link rel="stylesheet" href="/css/bundle.css" integrity=""><script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer="defer"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer="defer"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer="defer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js" integrity="sha256-34Si1Y6llMBKM3G0jQILVeoQKEwuxjbk4zGWXXMT4ps=" crossorigin="anonymous" defer="defer"></script><script src="https://cloudnine.github.io/js/min/bundle.min.964d3af33c3c75fc536731cf858cd4e67ed1ac8f9af37b6e3b667410d714a3eb33be81ef45aad5fc7d2b98fb3c8eb6f305ec6012ad05844eff798b08fe87c4d5.js" integrity="sha512-lk068zw8dfxTZzHPhYzU5n7RrI+a83tuO2Z0ENcUo+szvoHvRarV/H0rmPs8jrbzBexgEq0FhE7/eYsI/ofE1Q==" crossorigin="anonymous" defer="defer"></script><script type="application/ld+json">{ "@context" : "http://schema.org", "@type" : "Blog", "image":"https://cloudnine.github.io/images/science/christian-bale.jpg", "url":"https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/", "thumbnailUrl":"https://cloudnine.github.io/images/science/christian-bale.jpg", "headline":"Emacs Windows, Frames, Buffers, and Cursor", "description":"Emacs configuration with cursor and screen defaults, a hydra, create a scratch buffer, and frame movements.", "datePublished":"2020-03-02T00:00:00Z", "dateCreated":"2020-03-02T00:00:00Z", "creator":"Yuri Tricys", "author": "Yuri Tricys", "articleSection":"science", "publisher":{"name":"Cloud Nine", "logo":"","@type":"Organization"}}</script><script defer="defer">var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101236333);</script><script async src="//static.getclicky.com/js"></script><style type="text/css">.feature-image {
+background-image: url("https://cloudnine.github.io/images/science/christian-bale.jpg");
+width:100%;
+height: auto;
+}</style></head><body><div id="wrapper" class="wrapper"><div id="navigation" class="navigation navbar container-fluid navbar-expand-xl fixed-top bg-dark navbar-dark"><button class="navbar-toggler collapsed mr-3" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button> <a class="navbar-brand mr-2" href="https://cloudnine.github.io/">CLOUD NINE</a><div class="navbar-collapse collapse" id="navbarCollapse"><ul class="navbar-nav mr-auto"><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/about/">About</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/motivation/">Motivation</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/science/">Science</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/categories/">Categories</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/tags/">Tags</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/books/">Books</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/current/">Current</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/archives/">Archives</a></li></ul></div><div class="nav-right-side"><ul class="navbar-icons navbar-nav"><li class="nav-item" id="search"><a class="nav-link active" href="https://cloudnine.github.io/search/"><span class="d-none d-lg-inline-flex">Search  </span><i class="fas fa-search"></i></a></li><li class="nav-item" id="user"><a class="nav-link active" href="#"><span class="d-none d-lg-inline-flex">Login   </span><i class="fas fa-user"></i></a></li><li class="nav-item" id="shop"><a class="nav-link active" href="#"><span class="d-none d-lg-inline-flex">Shop  </span><i class="fas fa-shopping-cart"></i></a></li></ul></div></div><header id="header" class="feature-image"><div class="feature-image-text"><h1 class="text-center">Sciency Stuff</h1><div class="intro-description d-block"></div></div></header><main id="main" class="main"><div class="container mt-4 post"><a name="article-title" class="anchor-top"></a><h1>Emacs Windows, Frames, Buffers, and Cursor</h1><div id="post-summary-meta" class="ml-2 mb-2 mt-1"><small><strong>Author: Yuri Tricys </strong>|  <i class="far fa-calendar-alt"></i> Mar 2, 2020  |  <i class="fa fa-tags" title="Tags" aria-hidden="true"></i>   <a href="/tags/emacs">emacs</a>, <a href="/tags/emacs-functions">emacs functions</a>, <a href="/tags/emacs-hydras">emacs hydras</a>, <a href="/tags/learning-center">learning center</a></small></div><article class="mt-4 mb-4 main-content"><h5>This post covers the first two sections from the "Default Operations" section of my init.<br><br></h5><ul><li><p>Default Operations</p><ul><li>Moving the Cursor and Screen</li><li>Make/kill/move windows frames buffers</li><li>Projectile, Helm and Smex</li><li>Parentheses</li><li>Directories</li><li>Clip board (kill ring)</li><li>PDF tools and command line history</li></ul><br></li></ul><h5>Preamble</h5><p class="p-news">Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts y date from oldest to newest.</p><p class="p-news">In the last emacs <a href="https://cloudnine.github.io/science/2020-02-27-emacs-hydra-set-up-code/" target="_blank">post</a> I covered lines 1115 - 1195. This post covers lines 1195 - 1366. I include the lines for anyone that wants to patch together the entire init from start to finish. The lines won't always match up because I take stuff out when I'm in the init.</p><p class="p-news"></p><h5>Moving The Cursor and Screen</h5><p class="p-news">I added some spaces between these sections. Saving point, and adjusting the scroll behaviour are standard Emacs defaults you want to set. Copy paste these defaults and that's fine. Mwim is great for changing up C-a, C-e, which are end of sentence and beginning of sentence. What I use to move around the most are C-p, C-n, C-a, and C-e. I also use M-&lt; and M->, which are bound to beginning of page and end of page, though in the code below they are bound to<home>and<end>. Use either or rebind. I don't usually go to the thumb so I'm not too frequently moving with the meta key (ALT). For example, I'm not using M-p, M-n for jumping paragraphs, and C-M-f or C-M-b, moving back/forward by word often. The Avy package, here bound to M-s is apparently great for jumping to targets, but I'm not yet using it often. Same with leaving a mark with C-SPC then popping to mark later with C-0. I usually use C-s search to cycle through the words I'm looking for (actually now it's bound to helm search, which I like a little less than ido search, because you have to hit enter, but it still gets you around). Sometimes if there is no memorable landmark near, I'll insert a weird word into a file then use search to get back to it.</end></home></p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+ <span style="color:#080;font-style:italic">; Don't highlight matches with jump-char - it's distracting</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">jump-char-lazy-highlight-face</span> <span style="color:#800">nil</span>)
 
-<span style=color:#080;font-style:italic>; Scroll 1 line at a time</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>scroll-step</span> <span style=color:#666>1</span>)
+<span style="color:#080;font-style:italic">; Scroll 1 line at a time</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">scroll-step</span> <span style="color:#666">1</span>)
 
-<span style=color:#080;font-style:italic>; Save point position between sessions</span>
-(<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;saveplace</span>)
-(<span style=color:#a2f>setq-default</span> <span style=color:#b8860b>save-place</span> <span style=color:#800>t</span>)
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>save-place-file</span> (<span style=color:#00a000>expand-file-name</span> <span style=color:#b44>&#34;.places&#34;</span> <span style=color:#b8860b>save-place-file-p</span>))
+<span style="color:#080;font-style:italic">; Save point position between sessions</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">'saveplace</span>)
+(<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">save-place</span> <span style="color:#800">t</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">save-place-file</span> (<span style="color:#00a000">expand-file-name</span> <span style="color:#b44">".places"</span> <span style="color:#b8860b">save-place-file-p</span>))
 
-<span style=color:#080;font-style:italic>;Fix the whole huge-jumps-scrolling-between-windows nastiness</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>scroll-conservatively</span> <span style=color:#666>1000</span>)
+<span style="color:#080;font-style:italic">;Fix the whole huge-jumps-scrolling-between-windows nastiness</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">scroll-conservatively</span> <span style="color:#666">1000</span>)
 
-<span style=color:#080;font-style:italic>;&#34;Don&#39;t hscroll unless needed&#34;- ? More voodoo lisp.</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>hscroll-margin</span> <span style=color:#666>1</span>)
+<span style="color:#080;font-style:italic">;"Don't hscroll unless needed"- ? More voodoo lisp.</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">hscroll-margin</span> <span style="color:#666">1</span>)
 
-<span style=color:#080;font-style:italic>;Keeps cursor in the same relative row during pgups and dwns</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>scroll-preserve-screen-position</span> <span style=color:#800>t</span>)
+<span style="color:#080;font-style:italic">;Keeps cursor in the same relative row during pgups and dwns</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">scroll-preserve-screen-position</span> <span style="color:#800">t</span>)
 
-<span style=color:#080;font-style:italic>;Accelerate the cursor when scrolling.</span>
-(<span style=color:#00a000>load</span> <span style=color:#b44>&#34;accel&#34;</span> <span style=color:#800>t</span>)
+<span style="color:#080;font-style:italic">;Accelerate the cursor when scrolling.</span>
+(<span style="color:#00a000">load</span> <span style="color:#b44">"accel"</span> <span style="color:#800">t</span>)
 
-<span style=color:#080;font-style:italic>;;Start scrolling when 2 lines from top/bottom</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>scroll-margin</span> <span style=color:#666>8</span>)
+<span style="color:#080;font-style:italic">;;Start scrolling when 2 lines from top/bottom</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">scroll-margin</span> <span style="color:#666">8</span>)
 
-<span style=color:#080;font-style:italic>;cursor</span>
-(<span style=color:#b8860b>blink-cursor-mode</span> <span style=color:#666>0</span>)
+<span style="color:#080;font-style:italic">;cursor</span>
+(<span style="color:#b8860b">blink-cursor-mode</span> <span style="color:#666">0</span>)
 
-<span style=color:#080;font-style:italic>;Push the mouse out of the way when the cursor approaches.</span>
-(<span style=color:#b8860b>mouse-avoidance-mode</span> <span style=color:#b8860b>&#39;jump</span>)
+<span style="color:#080;font-style:italic">;Push the mouse out of the way when the cursor approaches.</span>
+(<span style="color:#b8860b">mouse-avoidance-mode</span> <span style="color:#b8860b">'jump</span>)
 
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>smooth-scrolling</span>
-<span style=color:#a2f>:config</span>
-(<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;smooth-scrolling</span>)
-(<span style=color:#b8860b>smooth-scrolling-mode</span> <span style=color:#800>t</span>)
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>smooth-scroll/vscroll-step-size</span> <span style=color:#666>1</span>)
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>smooth-scroll/hscroll-step-size</span> <span style=color:#666>1</span>)
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>fast-but-imprecise-scrolling</span> <span style=color:#800>t</span>)
-<span style=color:#a2f>:diminish</span>)
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">smooth-scrolling</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">'smooth-scrolling</span>)
+(<span style="color:#b8860b">smooth-scrolling-mode</span> <span style="color:#800">t</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">smooth-scroll/vscroll-step-size</span> <span style="color:#666">1</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">smooth-scroll/hscroll-step-size</span> <span style="color:#666">1</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">fast-but-imprecise-scrolling</span> <span style="color:#800">t</span>)
+<span style="color:#a2f">:diminish</span>)
 
-<span style=color:#080;font-style:italic>;scroll other window</span>
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-M-n&#34;</span> <span style=color:#b8860b>&#39;helm-scroll-other-window-down</span>)
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-M-p&#34;</span> <span style=color:#b8860b>&#39;helm-scroll-other-window</span>)
+<span style="color:#080;font-style:italic">;scroll other window</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-M-n"</span> <span style="color:#b8860b">'helm-scroll-other-window-down</span>)
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-M-p"</span> <span style="color:#b8860b">'helm-scroll-other-window</span>)
 
-<span style=color:#080;font-style:italic>;backward/forward paragraph</span>
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;M-p&#34;</span> <span style=color:#b8860b>&#39;backward-paragraph</span>)
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;M-n&#34;</span> <span style=color:#b8860b>&#39;forward-paragraph</span>)
+<span style="color:#080;font-style:italic">;backward/forward paragraph</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"M-p"</span> <span style="color:#b8860b">'backward-paragraph</span>)
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"M-n"</span> <span style="color:#b8860b">'forward-paragraph</span>)
 
-<span style=color:#080;font-style:italic>;pop-to-mark-command</span>
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-0&#34;</span> <span style=color:#b8860b>&#39;pop-to-mark-command</span>)
+<span style="color:#080;font-style:italic">;pop-to-mark-command</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-0"</span> <span style="color:#b8860b">'pop-to-mark-command</span>)
 
-<span style=color:#080;font-style:italic>;Move with M-s</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>avy</span>
-<span style=color:#a2f>:bind</span>
-(<span style=color:#b44>&#34;M-s&#34;</span> <span style=color:#666>.</span> <span style=color:#b8860b>avy-goto-char</span>))<span style=color:#080;font-style:italic>;end avy</span>
-<span style=color:#080;font-style:italic>;Move by sections of lines rather than lines</span>
+<span style="color:#080;font-style:italic">;Move with M-s</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">avy</span>
+<span style="color:#a2f">:bind</span>
+(<span style="color:#b44">"M-s"</span> <span style="color:#666">.</span> <span style="color:#b8860b">avy-goto-char</span>))<span style="color:#080;font-style:italic">;end avy</span>
+<span style="color:#080;font-style:italic">;Move by sections of lines rather than lines</span>
 
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>mwim</span>
-<span style=color:#a2f>:bind</span>
-(<span style=color:#b44>&#34;C-a&#34;</span> <span style=color:#666>.</span> <span style=color:#b8860b>mwim-beginning-of-code-or-line</span>)
-(<span style=color:#b44>&#34;C-e&#34;</span> <span style=color:#666>.</span> <span style=color:#b8860b>mwim-end-of-code-or-line</span>))<span style=color:#080;font-style:italic>;end mwim</span>
-<span style=color:#080;font-style:italic>;beginning end of buffer</span>
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;&lt;home&gt;&#34;</span> <span style=color:#b8860b>&#39;beginning-of-buffer</span>)
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;&lt;end&gt;&#34;</span> <span style=color:#b8860b>&#39;end-of-buffer</span>)
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">mwim</span>
+<span style="color:#a2f">:bind</span>
+(<span style="color:#b44">"C-a"</span> <span style="color:#666">.</span> <span style="color:#b8860b">mwim-beginning-of-code-or-line</span>)
+(<span style="color:#b44">"C-e"</span> <span style="color:#666">.</span> <span style="color:#b8860b">mwim-end-of-code-or-line</span>))<span style="color:#080;font-style:italic">;end mwim</span>
+<span style="color:#080;font-style:italic">;beginning end of buffer</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"&lt;home>"</span> <span style="color:#b8860b">'beginning-of-buffer</span>)
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"&lt;end>"</span> <span style="color:#b8860b">'end-of-buffer</span>)
 
-</code></pre></td></tr></table></div></div><br><h5>Make/Kill/Move Frames, Windows, and Buffers</h5><p class=p-news>Delete-all-other-buffers and new-frame-scratch-buffer are two functions I use a lot! I like to have a lot of frames open
-and cycle through them with tab, and you always get a lot of buffers open. My fix is to kill all the frames either with C-x 0, or with a
-kill frames command, then I open and jump to a scratch buffer and kill all the buffers but the one I'm. It's easier than a restart when you
-want to clear out your last session and start new. I rarely rotate windows, but I do use frame commands now and then. The switch window
-package is a little annoying. C-x-o jumps you from one window to another window unless you have more than two open, then switch window gives
-you a letter to choose. Without switch window you cycle through the open windows, maybe better but you sometimes forget where you are.</p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">43
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">44
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">45
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">46
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">47
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">48
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">49
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">50
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">51
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">52
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">53
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">54
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">55
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">56
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">57
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">58
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">59
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">60
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">61
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">62
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">63
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">64
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">65
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">66
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">67
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">68
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">69
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">70
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">71
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">72
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">73
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">74
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">75
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">76
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">77
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">78
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">79
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">80
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">81
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">82
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">83
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">84
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">85
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">86
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">87
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">88
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
-<span style=color:#080;font-style:italic>;delete-all-buffers</span>
-(<span style=color:#a2f>defun</span> <span style=color:#b8860b>delete-all-other-buffers</span> ()
-  (<span style=color:#a2f>interactive</span>)
-    (<span style=color:#00a000>mapc</span> <span style=color:#b8860b>&#39;kill-buffer</span> (<span style=color:#00a000>cdr</span> (<span style=color:#00a000>buffer-list</span> (<span style=color:#00a000>current-buffer</span>)))))
+</code></pre></td></tr></table></div></div><br><h5>Make/Kill/Move Frames, Windows, and Buffers</h5><p class="p-news">Delete-all-other-buffers and new-frame-scratch-buffer are two functions I use a lot! I like to have a lot of frames open and cycle through them with tab, and you always get a lot of buffers open. My fix is to kill all the frames either with C-x 0, or with a kill frames command, then I open and jump to a scratch buffer and kill all the buffers but the one I'm. It's easier than a restart when you want to clear out your last session and start new. I rarely rotate windows, but I do use frame commands now and then. The switch window package is a little annoying. C-x-o jumps you from one window to another window unless you have more than two open, then switch window gives you a letter to choose. Without switch window you cycle through the open windows, maybe better but you sometimes forget where you are.</p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">79
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">80
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">81
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">82
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">83
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">84
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">85
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">86
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">87
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">88
+</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;delete-all-buffers</span>
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">delete-all-other-buffers</span> ()
+  (<span style="color:#a2f">interactive</span>)
+    (<span style="color:#00a000">mapc</span> <span style="color:#b8860b">'kill-buffer</span> (<span style="color:#00a000">cdr</span> (<span style="color:#00a000">buffer-list</span> (<span style="color:#00a000">current-buffer</span>)))))
 
-<span style=color:#080;font-style:italic>;Create scratch buffer</span>
-(<span style=color:#a2f>defun</span> <span style=color:#b8860b>new-frame-scratch-buffer</span> ()
-<span style=color:#b44>&#34;Create a new scratch buffer -- \*hello-world\*&#34;</span>
-(<span style=color:#a2f>interactive</span>)
-  (<span style=color:#a2f>let</span> ((<span style=color:#b8860b>n</span> <span style=color:#666>0</span>)
-        <span style=color:#b8860b>bufname</span> <span style=color:#b8860b>buffer</span>)
-    (<span style=color:#a2f>catch</span> <span style=color:#b8860b>&#39;done</span>
-      (<span style=color:#a2f>while</span> <span style=color:#b8860b>t</span>
-        (<span style=color:#a2f>setq</span> <span style=color:#b8860b>bufname</span> (<span style=color:#00a000>concat</span> <span style=color:#b44>&#34;*hello-world&#34;</span>
-          (<span style=color:#a2f>if</span> (<span style=color:#00a000>=</span> <span style=color:#b8860b>n</span> <span style=color:#666>0</span>) <span style=color:#b44>&#34;&#34;</span> (<span style=color:#b8860b>int-to-string</span> <span style=color:#b8860b>n</span>))
-            <span style=color:#b44>&#34;*&#34;</span>))
-        (<span style=color:#a2f>setq</span> <span style=color:#b8860b>n</span> (<span style=color:#00a000>1+</span> <span style=color:#b8860b>n</span>))
-        (<span style=color:#a2f>when</span> (<span style=color:#b8860b>not</span> (<span style=color:#00a000>get-buffer</span> <span style=color:#b8860b>bufname</span>))
-          (<span style=color:#a2f>setq</span> <span style=color:#b8860b>buffer</span> (<span style=color:#00a000>get-buffer-create</span> <span style=color:#b8860b>bufname</span>))
-          (<span style=color:#a2f>with-current-buffer</span> <span style=color:#b8860b>buffer</span>
-            (<span style=color:#b8860b>emacs-lisp-mode</span>))
-          <span style=color:#080;font-style:italic>;; When called non-interactively, the `t` targets the other window (if it exists).</span>
-          (<span style=color:#a2f>throw</span> <span style=color:#b8860b>&#39;done</span> (<span style=color:#b8860b>display-buffer</span> <span style=color:#b8860b>buffer</span> <span style=color:#666>&#39;</span>(<span style=color:#b8860b>display-buffer-pop-up-frame</span> <span style=color:#666>.</span>( (<span style=color:#b8860b>window-height</span> <span style=color:#666>.8</span>) (<span style=color:#b8860b>window-width</span> <span style=color:#666>.8</span>)))
+<span style="color:#080;font-style:italic">;Create scratch buffer</span>
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">new-frame-scratch-buffer</span> ()
+<span style="color:#b44">"Create a new scratch buffer -- \*hello-world\*"</span>
+(<span style="color:#a2f">interactive</span>)
+  (<span style="color:#a2f">let</span> ((<span style="color:#b8860b">n</span> <span style="color:#666">0</span>)
+        <span style="color:#b8860b">bufname</span> <span style="color:#b8860b">buffer</span>)
+    (<span style="color:#a2f">catch</span> <span style="color:#b8860b">'done</span>
+      (<span style="color:#a2f">while</span> <span style="color:#b8860b">t</span>
+        (<span style="color:#a2f">setq</span> <span style="color:#b8860b">bufname</span> (<span style="color:#00a000">concat</span> <span style="color:#b44">"*hello-world"</span>
+          (<span style="color:#a2f">if</span> (<span style="color:#00a000">=</span> <span style="color:#b8860b">n</span> <span style="color:#666">0</span>) <span style="color:#b44">""</span> (<span style="color:#b8860b">int-to-string</span> <span style="color:#b8860b">n</span>))
+            <span style="color:#b44">"*"</span>))
+        (<span style="color:#a2f">setq</span> <span style="color:#b8860b">n</span> (<span style="color:#00a000">1+</span> <span style="color:#b8860b">n</span>))
+        (<span style="color:#a2f">when</span> (<span style="color:#b8860b">not</span> (<span style="color:#00a000">get-buffer</span> <span style="color:#b8860b">bufname</span>))
+          (<span style="color:#a2f">setq</span> <span style="color:#b8860b">buffer</span> (<span style="color:#00a000">get-buffer-create</span> <span style="color:#b8860b">bufname</span>))
+          (<span style="color:#a2f">with-current-buffer</span> <span style="color:#b8860b">buffer</span>
+            (<span style="color:#b8860b">emacs-lisp-mode</span>))
+          <span style="color:#080;font-style:italic">;; When called non-interactively, the `t` targets the other window (if it exists).</span>
+          (<span style="color:#a2f">throw</span> <span style="color:#b8860b">'done</span> (<span style="color:#b8860b">display-buffer</span> <span style="color:#b8860b">buffer</span> <span style="color:#666">'</span>(<span style="color:#b8860b">display-buffer-pop-up-frame</span> <span style="color:#666">.</span>( (<span style="color:#b8860b">window-height</span> <span style="color:#666">.8</span>) (<span style="color:#b8860b">window-width</span> <span style="color:#666">.8</span>)))
 )) )))))
 
-<span style=color:#080;font-style:italic>; rotate windows</span>
-(<span style=color:#a2f>defun</span> <span style=color:#b8860b>rotate-windows</span> (<span style=color:#b8860b>arg</span>)
-  <span style=color:#b44>&#34;Rotate your windows; use the prefix argument to rotate the other direction&#34;</span>
-  (<span style=color:#a2f>interactive</span> <span style=color:#b44>&#34;P&#34;</span>)
-  (<span style=color:#a2f>if</span> (<span style=color:#b8860b>not</span> (<span style=color:#00a000>&gt;</span> (<span style=color:#b8860b>count-windows</span>) <span style=color:#666>1</span>))
-      (<span style=color:#00a000>message</span> <span style=color:#b44>&#34;You can&#39;t rotate a single window!&#34;</span>)
-    (<span style=color:#a2f>let*</span> ((<span style=color:#b8860b>rotate-times</span> (<span style=color:#00a000>prefix-numeric-value</span> <span style=color:#b8860b>arg</span>))
-           (<span style=color:#b8860b>direction</span> (<span style=color:#a2f>if</span> (<span style=color:#a2f>or</span> (<span style=color:#00a000>&lt;</span> <span style=color:#b8860b>rotate-times</span> <span style=color:#666>0</span>) (<span style=color:#00a000>equal</span> <span style=color:#b8860b>arg</span> <span style=color:#666>&#39;</span>(<span style=color:#666>4</span>)))
-                          <span style=color:#b8860b>&#39;reverse</span> <span style=color:#b8860b>&#39;identity</span>)))
-      (<span style=color:#a2f>dotimes</span> (<span style=color:#b8860b>_</span> (<span style=color:#00a000>abs</span> <span style=color:#b8860b>rotate-times</span>))
-        (<span style=color:#a2f>dotimes</span> (<span style=color:#b8860b>i</span> (<span style=color:#00a000>-</span> (<span style=color:#b8860b>count-windows</span>) <span style=color:#666>1</span>))
-          (<span style=color:#a2f>let*</span> ((<span style=color:#b8860b>w1</span> (<span style=color:#00a000>elt</span> (<span style=color:#00a000>funcall</span> <span style=color:#b8860b>direction</span> (<span style=color:#00a000>window-list</span>)) <span style=color:#b8860b>i</span>))
-                 (<span style=color:#b8860b>w2</span> (<span style=color:#00a000>elt</span> (<span style=color:#00a000>funcall</span> <span style=color:#b8860b>direction</span> (<span style=color:#00a000>window-list</span>)) (<span style=color:#00a000>+</span> <span style=color:#b8860b>i</span> <span style=color:#666>1</span>)))
-                 (<span style=color:#b8860b>b1</span> (<span style=color:#00a000>window-buffer</span> <span style=color:#b8860b>w1</span>))
-                 (<span style=color:#b8860b>b2</span> (<span style=color:#00a000>window-buffer</span> <span style=color:#b8860b>w2</span>))
-                 (<span style=color:#b8860b>s1</span> (<span style=color:#00a000>window-start</span> <span style=color:#b8860b>w1</span>))
-                 (<span style=color:#b8860b>s2</span> (<span style=color:#00a000>window-start</span> <span style=color:#b8860b>w2</span>))
-                 (<span style=color:#b8860b>p1</span> (<span style=color:#00a000>window-point</span> <span style=color:#b8860b>w1</span>))
-                 (<span style=color:#b8860b>p2</span> (<span style=color:#00a000>window-point</span> <span style=color:#b8860b>w2</span>)))
-            (<span style=color:#b8860b>set-window-buffer-start-and-point</span> <span style=color:#b8860b>w1</span> <span style=color:#b8860b>b2</span> <span style=color:#b8860b>s2</span> <span style=color:#b8860b>p2</span>)
-            (<span style=color:#b8860b>set-window-buffer-start-and-point</span> <span style=color:#b8860b>w2</span> <span style=color:#b8860b>b1</span> <span style=color:#b8860b>s1</span> <span style=color:#b8860b>p1</span>)))))))
+<span style="color:#080;font-style:italic">; rotate windows</span>
+(<span style="color:#a2f">defun</span> <span style="color:#b8860b">rotate-windows</span> (<span style="color:#b8860b">arg</span>)
+  <span style="color:#b44">"Rotate your windows; use the prefix argument to rotate the other direction"</span>
+  (<span style="color:#a2f">interactive</span> <span style="color:#b44">"P"</span>)
+  (<span style="color:#a2f">if</span> (<span style="color:#b8860b">not</span> (<span style="color:#00a000">></span> (<span style="color:#b8860b">count-windows</span>) <span style="color:#666">1</span>))
+      (<span style="color:#00a000">message</span> <span style="color:#b44">"You can't rotate a single window!"</span>)
+    (<span style="color:#a2f">let*</span> ((<span style="color:#b8860b">rotate-times</span> (<span style="color:#00a000">prefix-numeric-value</span> <span style="color:#b8860b">arg</span>))
+           (<span style="color:#b8860b">direction</span> (<span style="color:#a2f">if</span> (<span style="color:#a2f">or</span> (<span style="color:#00a000">&lt;</span> <span style="color:#b8860b">rotate-times</span> <span style="color:#666">0</span>) (<span style="color:#00a000">equal</span> <span style="color:#b8860b">arg</span> <span style="color:#666">'</span>(<span style="color:#666">4</span>)))
+                          <span style="color:#b8860b">'reverse</span> <span style="color:#b8860b">'identity</span>)))
+      (<span style="color:#a2f">dotimes</span> (<span style="color:#b8860b">_</span> (<span style="color:#00a000">abs</span> <span style="color:#b8860b">rotate-times</span>))
+        (<span style="color:#a2f">dotimes</span> (<span style="color:#b8860b">i</span> (<span style="color:#00a000">-</span> (<span style="color:#b8860b">count-windows</span>) <span style="color:#666">1</span>))
+          (<span style="color:#a2f">let*</span> ((<span style="color:#b8860b">w1</span> (<span style="color:#00a000">elt</span> (<span style="color:#00a000">funcall</span> <span style="color:#b8860b">direction</span> (<span style="color:#00a000">window-list</span>)) <span style="color:#b8860b">i</span>))
+                 (<span style="color:#b8860b">w2</span> (<span style="color:#00a000">elt</span> (<span style="color:#00a000">funcall</span> <span style="color:#b8860b">direction</span> (<span style="color:#00a000">window-list</span>)) (<span style="color:#00a000">+</span> <span style="color:#b8860b">i</span> <span style="color:#666">1</span>)))
+                 (<span style="color:#b8860b">b1</span> (<span style="color:#00a000">window-buffer</span> <span style="color:#b8860b">w1</span>))
+                 (<span style="color:#b8860b">b2</span> (<span style="color:#00a000">window-buffer</span> <span style="color:#b8860b">w2</span>))
+                 (<span style="color:#b8860b">s1</span> (<span style="color:#00a000">window-start</span> <span style="color:#b8860b">w1</span>))
+                 (<span style="color:#b8860b">s2</span> (<span style="color:#00a000">window-start</span> <span style="color:#b8860b">w2</span>))
+                 (<span style="color:#b8860b">p1</span> (<span style="color:#00a000">window-point</span> <span style="color:#b8860b">w1</span>))
+                 (<span style="color:#b8860b">p2</span> (<span style="color:#00a000">window-point</span> <span style="color:#b8860b">w2</span>)))
+            (<span style="color:#b8860b">set-window-buffer-start-and-point</span> <span style="color:#b8860b">w1</span> <span style="color:#b8860b">b2</span> <span style="color:#b8860b">s2</span> <span style="color:#b8860b">p2</span>)
+            (<span style="color:#b8860b">set-window-buffer-start-and-point</span> <span style="color:#b8860b">w2</span> <span style="color:#b8860b">b1</span> <span style="color:#b8860b">s1</span> <span style="color:#b8860b">p1</span>)))))))
 
-<span style=color:#080;font-style:italic>; to make a new scratch buffer in a new frame</span>
- (<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-c b&#34;</span> <span style=color:#b8860b>&#39;new-frame-scratch-buffer</span>)
- <span style=color:#080;font-style:italic>;to kill a frame in emacs (also, C-x 0)</span>
- (<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-x C-c&#34;</span> <span style=color:#b8860b>&#39;delete-frame</span>)
- <span style=color:#080;font-style:italic>;make a new frame</span>
- (<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-x C-n&#34;</span> <span style=color:#b8860b>&#39;make-frame-command</span>)
-
-
-<span style=color:#080;font-style:italic>;Copy/p frame-cmds.el &amp; frame-fnc.el to frame-cmds directory</span>
- (<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;frame-cmds</span>)
- (<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;M-S-&lt;up&gt;&#34;</span> <span style=color:#b8860b>&#39;move-frame-up</span>)
- (<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;M-S-&lt;right&gt;&#34;</span> <span style=color:#b8860b>&#39;move-frame-right</span>)
- (<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;M-S-&lt;down&gt;&#34;</span> <span style=color:#b8860b>&#39;move-frame-down</span>)
- (<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;M-S-&lt;left&gt;&#34;</span> <span style=color:#b8860b>&#39;move-frame-left</span>)
- (<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-M-&lt;up&gt;&#34;</span> <span style=color:#b8860b>&#39;enlarge-frame</span>)
- (<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-M-&lt;right&gt;&#34;</span> <span style=color:#b8860b>&#39;enlarge-frame-horizontally</span>)
- (<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-M-&lt;down&gt;&#34;</span> <span style=color:#b8860b>&#39;shrink-frame</span>)
- (<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-M-&lt;left&gt;&#34;</span> <span style=color:#b8860b>&#39;shrink-frame-horizontally</span>)
-
-<span style=color:#080;font-style:italic>;Switch Windows</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>switch-window</span>
-<span style=color:#a2f>:defer</span> <span style=color:#b8860b>t</span>
-<span style=color:#a2f>:config</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>switch-window-input-style</span> <span style=color:#b8860b>&#39;minibuffer</span>
-      <span style=color:#b8860b>switch-window-threshold</span> <span style=color:#b8860b>2</span>
-      <span style=color:#b8860b>switch-window-increase</span> <span style=color:#b8860b>4</span>
-      <span style=color:#b8860b>switch-window-shortcut-style</span> <span style=color:#b8860b>&#39;qwerty</span>
-      <span style=color:#b8860b>switch-window-qwerty-shortcuts</span> <span style=color:#666>&#39;</span>(<span style=color:#b44>&#34;f&#34;</span> <span style=color:#b44>&#34;k&#34;</span> <span style=color:#b44>&#34;j&#34;</span> <span style=color:#b44>&#34;d&#34;</span> <span style=color:#b44>&#34;s&#34;</span> <span style=color:#b44>&#34;l&#34;</span>)
-      <span style=color:#b8860b>switch-window-auto-resize-window</span> <span style=color:#b8860b>t</span>
-      <span style=color:#b8860b>switch-window-default-window-size</span> <span style=color:#666>0.6</span>)
-<span style=color:#a2f>:bind</span>
-([<span style=color:#b8860b>remap</span> <span style=color:#b8860b>other-window</span>] <span style=color:#666>.</span> <span style=color:#b8860b>switch-window</span>)
-)<span style=color:#080;font-style:italic>;end switch window</span>
-<span style=color:#080;font-style:italic>;enlarge/shrink window</span>
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-&lt;up&gt;&#34;</span> <span style=color:#b8860b>&#39;enlarge-window</span>)
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-&lt;down&gt;&#34;</span> <span style=color:#b8860b>&#39;shrink-window</span>)
-<span style=color:#080;font-style:italic>;hydra-buffers-frames</span>
+<span style="color:#080;font-style:italic">; to make a new scratch buffer in a new frame</span>
+ (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-c b"</span> <span style="color:#b8860b">'new-frame-scratch-buffer</span>)
+ <span style="color:#080;font-style:italic">;to kill a frame in emacs (also, C-x 0)</span>
+ (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-x C-c"</span> <span style="color:#b8860b">'delete-frame</span>)
+ <span style="color:#080;font-style:italic">;make a new frame</span>
+ (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-x C-n"</span> <span style="color:#b8860b">'make-frame-command</span>)
 
 
+<span style="color:#080;font-style:italic">;Copy/p frame-cmds.el & frame-fnc.el to frame-cmds directory</span>
+ (<span style="color:#a2f">require</span> <span style="color:#b8860b">'frame-cmds</span>)
+ (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"M-S-&lt;up>"</span> <span style="color:#b8860b">'move-frame-up</span>)
+ (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"M-S-&lt;right>"</span> <span style="color:#b8860b">'move-frame-right</span>)
+ (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"M-S-&lt;down>"</span> <span style="color:#b8860b">'move-frame-down</span>)
+ (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"M-S-&lt;left>"</span> <span style="color:#b8860b">'move-frame-left</span>)
+ (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-M-&lt;up>"</span> <span style="color:#b8860b">'enlarge-frame</span>)
+ (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-M-&lt;right>"</span> <span style="color:#b8860b">'enlarge-frame-horizontally</span>)
+ (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-M-&lt;down>"</span> <span style="color:#b8860b">'shrink-frame</span>)
+ (<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-M-&lt;left>"</span> <span style="color:#b8860b">'shrink-frame-horizontally</span>)
 
-</code></pre></td></tr></table></div></div><br><h5>Here's the hydra for buffers frames and windows:</h5><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
-<span style=color:#080;font-style:italic>;define a title function</span>
-(<span style=color:#a2f>defvar</span> <span style=color:#b8860b>frames-buffers-title</span> (<span style=color:#b8860b>with-faicon</span> <span style=color:#b44>&#34;clone&#34;</span> <span style=color:#b44>&#34;FRAMES AND BUFFERS&#34;</span>))
-<span style=color:#080;font-style:italic>;generate hydra</span>
-(<span style=color:#b8860b>pretty-hydra-define</span> <span style=color:#b8860b>Frames-Buffers</span> (<span style=color:#a2f>:foreign-keys</span> <span style=color:#d2413a;font-weight:700>warn</span> <span style=color:#a2f>:title</span> <span style=color:#b8860b>frames-buffers-title</span> <span style=color:#a2f>:quit-key</span> <span style=color:#b44>&#34;q&#34;</span> <span style=color:#a2f>:color</span> <span style=color:#b8860b>pink</span> )
-(<span style=color:#b44>&#34;Delete, Make and Switch&#34;</span>
-   ((<span style=color:#b44>&#34;d&#34;</span>  <span style=color:#b8860b>delete-all-other-buffers</span> <span style=color:#b44>&#34;Delete All Other Buffers&#34;</span>)
-    (<span style=color:#b44>&#34;f&#34;</span>  <span style=color:#00a000>delete-frame</span> <span style=color:#b44>&#34;Delete This Frame&#34;</span> )
-    (<span style=color:#b44>&#34;F&#34;</span>  <span style=color:#b8860b>delete-other-frames</span> <span style=color:#b44>&#34;Delete All Other Frames&#34;</span> )
-    (<span style=color:#b44>&#34;s&#34;</span>  <span style=color:#b8860b>new-frame-scratch-buffer</span> <span style=color:#b44>&#34;Make New Scratch Frame&#34;</span> )
-    (<span style=color:#b44>&#34;m&#34;</span>  <span style=color:#b8860b>make-frame-command</span> <span style=color:#b44>&#34;Open A New Frame&#34;</span>)
-    (<span style=color:#b44>&#34;o&#34;</span>  <span style=color:#b8860b>switch-window</span> <span style=color:#b44>&#34;Switch To Other Window&#34;</span>)
-    (<span style=color:#b44>&#34;r&#34;</span>  <span style=color:#b8860b>rotate-windows</span> <span style=color:#b44>&#34;Rotate Windows&#34;</span>)
-)<span style=color:#080;font-style:italic>;end delete</span>
+<span style="color:#080;font-style:italic">;Switch Windows</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">switch-window</span>
+<span style="color:#a2f">:defer</span> <span style="color:#b8860b">t</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">switch-window-input-style</span> <span style="color:#b8860b">'minibuffer</span>
+      <span style="color:#b8860b">switch-window-threshold</span> <span style="color:#b8860b">2</span>
+      <span style="color:#b8860b">switch-window-increase</span> <span style="color:#b8860b">4</span>
+      <span style="color:#b8860b">switch-window-shortcut-style</span> <span style="color:#b8860b">'qwerty</span>
+      <span style="color:#b8860b">switch-window-qwerty-shortcuts</span> <span style="color:#666">'</span>(<span style="color:#b44">"f"</span> <span style="color:#b44">"k"</span> <span style="color:#b44">"j"</span> <span style="color:#b44">"d"</span> <span style="color:#b44">"s"</span> <span style="color:#b44">"l"</span>)
+      <span style="color:#b8860b">switch-window-auto-resize-window</span> <span style="color:#b8860b">t</span>
+      <span style="color:#b8860b">switch-window-default-window-size</span> <span style="color:#666">0.6</span>)
+<span style="color:#a2f">:bind</span>
+([<span style="color:#b8860b">remap</span> <span style="color:#b8860b">other-window</span>] <span style="color:#666">.</span> <span style="color:#b8860b">switch-window</span>)
+)<span style="color:#080;font-style:italic">;end switch window</span>
+<span style="color:#080;font-style:italic">;enlarge/shrink window</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-&lt;up>"</span> <span style="color:#b8860b">'enlarge-window</span>)
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-&lt;down>"</span> <span style="color:#b8860b">'shrink-window</span>)
+<span style="color:#080;font-style:italic">;hydra-buffers-frames</span>
 
-<span style=color:#b44>&#34;Move Frames And Windows&#34;</span>
+
+
+</code></pre></td></tr></table></div></div><br><h5>Here's the hydra for buffers frames and windows:</h5><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;define a title function</span>
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">frames-buffers-title</span> (<span style="color:#b8860b">with-faicon</span> <span style="color:#b44">"clone"</span> <span style="color:#b44">"FRAMES AND BUFFERS"</span>))
+<span style="color:#080;font-style:italic">;generate hydra</span>
+(<span style="color:#b8860b">pretty-hydra-define</span> <span style="color:#b8860b">Frames-Buffers</span> (<span style="color:#a2f">:foreign-keys</span> <span style="color:#d2413a;font-weight:bold">warn</span> <span style="color:#a2f">:title</span> <span style="color:#b8860b">frames-buffers-title</span> <span style="color:#a2f">:quit-key</span> <span style="color:#b44">"q"</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">pink</span> )
+(<span style="color:#b44">"Delete, Make and Switch"</span>
+   ((<span style="color:#b44">"d"</span>  <span style="color:#b8860b">delete-all-other-buffers</span> <span style="color:#b44">"Delete All Other Buffers"</span>)
+    (<span style="color:#b44">"f"</span>  <span style="color:#00a000">delete-frame</span> <span style="color:#b44">"Delete This Frame"</span> )
+    (<span style="color:#b44">"F"</span>  <span style="color:#b8860b">delete-other-frames</span> <span style="color:#b44">"Delete All Other Frames"</span> )
+    (<span style="color:#b44">"s"</span>  <span style="color:#b8860b">new-frame-scratch-buffer</span> <span style="color:#b44">"Make New Scratch Frame"</span> )
+    (<span style="color:#b44">"m"</span>  <span style="color:#b8860b">make-frame-command</span> <span style="color:#b44">"Open A New Frame"</span>)
+    (<span style="color:#b44">"o"</span>  <span style="color:#b8860b">switch-window</span> <span style="color:#b44">"Switch To Other Window"</span>)
+    (<span style="color:#b44">"r"</span>  <span style="color:#b8860b">rotate-windows</span> <span style="color:#b44">"Rotate Windows"</span>)
+)<span style="color:#080;font-style:italic">;end delete</span>
+
+<span style="color:#b44">"Move Frames And Windows"</span>
    (
-    (<span style=color:#b44>&#34;U&#34;</span>   <span style=color:#b8860b>move-frame-up</span> <span style=color:#b44>&#34;Move Up M-S-&lt;up&gt;&#34;</span>)
-    (<span style=color:#b44>&#34;&gt;&#34;</span>   <span style=color:#b8860b>move-frame-right</span> <span style=color:#b44>&#34;Move Right M-S-&lt;right&gt;&#34;</span>)
-    (<span style=color:#b44>&#34;D&#34;</span>   <span style=color:#b8860b>move-frame-down</span> <span style=color:#b44>&#34;Move Down M-S-&lt;down&gt;&#34;</span> )
-    (<span style=color:#b44>&#34;&lt;&#34;</span>   <span style=color:#b8860b>move-frame-left</span> <span style=color:#b44>&#34;Move Left M-S-&lt;left&gt;&#34;</span> )
-    (<span style=color:#b44>&#34;E&#34;</span>   <span style=color:#b8860b>enlarge-frame-horizontally</span> <span style=color:#b44>&#34;Horizontal Grow  C-M-&lt;right&gt;&#34;</span>)
-    (<span style=color:#b44>&#34;L&#34;</span>   <span style=color:#b8860b>shrink-frame-horizontally</span> <span style=color:#b44>&#34;Horizontal Shrink C-M-&lt;left&gt;&#34;</span> )
-     ) <span style=color:#080;font-style:italic>;end Move frames and windows</span>
+    (<span style="color:#b44">"U"</span>   <span style="color:#b8860b">move-frame-up</span> <span style="color:#b44">"Move Up M-S-&lt;up>"</span>)
+    (<span style="color:#b44">">"</span>   <span style="color:#b8860b">move-frame-right</span> <span style="color:#b44">"Move Right M-S-&lt;right>"</span>)
+    (<span style="color:#b44">"D"</span>   <span style="color:#b8860b">move-frame-down</span> <span style="color:#b44">"Move Down M-S-&lt;down>"</span> )
+    (<span style="color:#b44">"&lt;"</span>   <span style="color:#b8860b">move-frame-left</span> <span style="color:#b44">"Move Left M-S-&lt;left>"</span> )
+    (<span style="color:#b44">"E"</span>   <span style="color:#b8860b">enlarge-frame-horizontally</span> <span style="color:#b44">"Horizontal Grow  C-M-&lt;right>"</span>)
+    (<span style="color:#b44">"L"</span>   <span style="color:#b8860b">shrink-frame-horizontally</span> <span style="color:#b44">"Horizontal Shrink C-M-&lt;left>"</span> )
+     ) <span style="color:#080;font-style:italic">;end Move frames and windows</span>
 
-<span style=color:#b44>&#34;EXIT&#34;</span>
-  (  (<span style=color:#b44>&#34;G&#34;</span>   <span style=color:#b8860b>enlarge-frame</span>  <span style=color:#b44>&#34;Enlarge Frame C-M-&lt;up&gt;&#34;</span>   )
-    (<span style=color:#b44>&#34;g&#34;</span>   <span style=color:#b8860b>shrink-frame</span> <span style=color:#b44>&#34;Shrink Frame C-M-&lt;down&gt;&#34;</span> )
-    (<span style=color:#b44>&#34;W&#34;</span>  <span style=color:#b8860b>enlarge-window</span>  <span style=color:#b44>&#34;Enlarge Window C-&lt;up&gt;&#34;</span> )
-    (<span style=color:#b44>&#34;w&#34;</span>  <span style=color:#b8860b>shrink-window</span>   <span style=color:#b44>&#34; Shrink Window C-&lt;down&gt;&#34;</span>)
-    (<span style=color:#b44>&#34;h&#34;</span> <span style=color:#b8860b>hydra-helm/body</span> <span style=color:#b44>&#34;Return To Helm&#34;</span> <span style=color:#a2f>:color</span> <span style=color:#b8860b>blue</span> )
-    (<span style=color:#b44>&#34;&lt;SPC&gt;&#34;</span> <span style=color:#800>nil</span> <span style=color:#b44>&#34;Quit&#34;</span> <span style=color:#a2f>:color</span> <span style=color:#b8860b>blue</span> )
-)<span style=color:#080;font-style:italic>;end exit</span>
-)<span style=color:#080;font-style:italic>;end hydra body</span>
-)<span style=color:#080;font-style:italic>;end pretty-hydra-appearance</span>
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;&lt;C-m&gt; f&#34;</span> <span style=color:#b8860b>&#39;Frames-Buffers/body</span>)
+<span style="color:#b44">"EXIT"</span>
+  (  (<span style="color:#b44">"G"</span>   <span style="color:#b8860b">enlarge-frame</span>  <span style="color:#b44">"Enlarge Frame C-M-&lt;up>"</span>   )
+    (<span style="color:#b44">"g"</span>   <span style="color:#b8860b">shrink-frame</span> <span style="color:#b44">"Shrink Frame C-M-&lt;down>"</span> )
+    (<span style="color:#b44">"W"</span>  <span style="color:#b8860b">enlarge-window</span>  <span style="color:#b44">"Enlarge Window C-&lt;up>"</span> )
+    (<span style="color:#b44">"w"</span>  <span style="color:#b8860b">shrink-window</span>   <span style="color:#b44">" Shrink Window C-&lt;down>"</span>)
+    (<span style="color:#b44">"h"</span> <span style="color:#b8860b">hydra-helm/body</span> <span style="color:#b44">"Return To Helm"</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
+    (<span style="color:#b44">"&lt;SPC>"</span> <span style="color:#800">nil</span> <span style="color:#b44">"Quit"</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
+)<span style="color:#080;font-style:italic">;end exit</span>
+)<span style="color:#080;font-style:italic">;end hydra body</span>
+)<span style="color:#080;font-style:italic">;end pretty-hydra-appearance</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"&lt;C-m> f"</span> <span style="color:#b8860b">'Frames-Buffers/body</span>)
 
-</code></pre></td></tr></table></div></div><br><div class=mobile-iframe><figure class=zoom-effect><div class=aspectRatioPlaceholder><div class=aspect-ratio-fill style=padding-bottom:75.78947368421053%></div><img src=frame-buffers.jpg align=center class="inline-image img-zoom" width=100% alt=theme-image-here data-width=1920 data-height=1080></div></figure></div><br><h5>That's all for now. See you next time.</h5><div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-02-emacs-cursor-windows-frames-buffers%2f&text=Emacs%20Windows%2c%20Frames%2c%20Buffers%2c%20and%20Cursor&tw_p=tweetbutton" class=p-2 title="Share on Twitter" target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Tweet</small></div></a><a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-02-emacs-cursor-windows-frames-buffers%2f&t=Emacs%20Windows%2c%20Frames%2c%20Buffers%2c%20and%20Cursor" class=p-2 title="Share on Facebook" target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-facebook fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-02-emacs-cursor-windows-frames-buffers%2f&title=Emacs%20Windows%2c%20Frames%2c%20Buffers%2c%20and%20Cursor&source=mattbutton.com" class=p-2 title="Share on LinkedIn" target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href=javascript:window.print() title="Print this article" class=p-2 target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fa fa-print fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Print</small></div></a></div><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")
-return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;var disqus_shortname='cloud-nine-2';dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=http://disqus.com/ class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a><br><br></article></div></main><div id=banner></div><div id=sidebar class="sidebar d-print-none d-none d-md-block"><h2 class=center>Meet The Author</h2><div class=mobile-iframe><iframe width=360 height=180 src="https://www.youtube.com/embed/HR3O17D0MaE?start=0.2" frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><p>Hi, I'm <strong>Yuri Tricys</strong>, the author of Cloud Nine. I'm a <strong>researcher</strong>, <strong>technical writer</strong>, <strong>data analyst</strong>, and <strong>web developer</strong>.</p><p>Cloud Nine is a place where you can browse some of the <strong>free</strong> content I create.</p><p>You can also <strong>outsource</strong> <strong>research</strong> to me directly. In fact, I encourage you to do so.</p><p>Just send an e-mail to <a href="mailto:tricys@alumni.ubc.ca? subject=Research">tricys@alumni.ubc.ca</a> with "Research" in the subject line and I'll get back to you.</p><h2 class=center>Featured Video</h2><div class=mobile-iframe><iframe width=360 height=180 src=https://www.youtube.com/embed/-XxEX3LUgOY frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><h2 class=mt-4>Featured Posts</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/motivation/2020-02-25-developing-cognitive-ambidexterity/ class=nav-link>Developing Cognitive Ambidexterity</a>
-<a href=https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/ class=nav-link>Emacs Bookmarks</a></nav><h2 class=mt-4>Recent Posts</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/ class=nav-link>The Web Developer Hydra</a>
-<a href=https://cloudnine.github.io/science/2020-04-09-helm-hydra/ class=nav-link>The Helm Hydra</a>
-<a href=https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/ class=nav-link>Dune, by Frank Herbert</a>
-<a href=https://cloudnine.github.io/books/2020-04-07-citadel-algis-budrys/ class=nav-link>Citadel, by Algis Budrys</a>
-<a href=https://cloudnine.github.io/science/2020-03-29-emacs-elnode-and-editor-hydra/ class=nav-link>Emacs Configuration Elnode and the Editor Hydra</a>
-<a href=https://cloudnine.github.io/books/2020-03-28-american-financier/ class=nav-link>American Financier, by Jean Strous</a></nav><h2 class="mt-4 text-capitalize">categories</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/categories/computer-science/ class=nav-link>computer-science
-<span class="badge badge-pill badge-secondary">42</span></a>
-<a href=https://cloudnine.github.io/categories/economics/ class=nav-link>economics
-<span class="badge badge-pill badge-secondary">28</span></a>
-<a href=https://cloudnine.github.io/categories/finance/ class=nav-link>finance
-<span class="badge badge-pill badge-secondary">19</span></a>
-<a href=https://cloudnine.github.io/categories/business/ class=nav-link>business
-<span class="badge badge-pill badge-secondary">18</span></a>
-<a href=https://cloudnine.github.io/categories/politics/ class=nav-link>politics
-<span class="badge badge-pill badge-secondary">13</span></a>
-<a href=https://cloudnine.github.io/categories/psychology/ class=nav-link>psychology
-<span class="badge badge-pill badge-secondary">11</span></a>
-<a href=https://cloudnine.github.io/categories/statistics/ class=nav-link>statistics
-<span class="badge badge-pill badge-secondary">4</span></a>
-<a href=https://cloudnine.github.io/categories/links/ class=nav-link>links
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/categories/math/ class=nav-link>math
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/categories/ethics/ class=nav-link>ethics
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/history/ class=nav-link>history
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/law/ class=nav-link>law
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/maths/ class=nav-link>maths
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/movies/ class=nav-link>movies
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/music/ class=nav-link>music
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/philosophy/ class=nav-link>philosophy
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/physics/ class=nav-link>physics
-<span class="badge badge-pill badge-secondary">1</span></a></nav><h2 class="mt-4 text-capitalize">tags</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/tags/learning-center/ class=nav-link>learning-center
-<span class="badge badge-pill badge-secondary">47</span></a>
-<a href=https://cloudnine.github.io/tags/emacs/ class=nav-link>emacs
-<span class="badge badge-pill badge-secondary">24</span></a>
-<a href=https://cloudnine.github.io/tags/data-science/ class=nav-link>data-science
-<span class="badge badge-pill badge-secondary">20</span></a>
-<a href=https://cloudnine.github.io/tags/newsroom/ class=nav-link>newsroom
-<span class="badge badge-pill badge-secondary">19</span></a>
-<a href=https://cloudnine.github.io/tags/data-firm/ class=nav-link>data-firm
-<span class="badge badge-pill badge-secondary">16</span></a>
-<a href=https://cloudnine.github.io/tags/emacs-hydras/ class=nav-link>emacs-hydras
-<span class="badge badge-pill badge-secondary">14</span></a>
-<a href=https://cloudnine.github.io/tags/macroeconomics/ class=nav-link>macroeconomics
-<span class="badge badge-pill badge-secondary">14</span></a>
-<a href=https://cloudnine.github.io/tags/opinion/ class=nav-link>opinion
-<span class="badge badge-pill badge-secondary">14</span></a>
-<a href=https://cloudnine.github.io/tags/personal-development/ class=nav-link>personal-development
-<span class="badge badge-pill badge-secondary">12</span></a>
-<a href=https://cloudnine.github.io/tags/research/ class=nav-link>research
-<span class="badge badge-pill badge-secondary">10</span></a>
-<a href=https://cloudnine.github.io/tags/trends-global/ class=nav-link>trends-global
-<span class="badge badge-pill badge-secondary">9</span></a>
-<a href=https://cloudnine.github.io/tags/trade/ class=nav-link>trade
-<span class="badge badge-pill badge-secondary">8</span></a>
-<a href=https://cloudnine.github.io/tags/academic/ class=nav-link>academic
-<span class="badge badge-pill badge-secondary">5</span></a>
-<a href=https://cloudnine.github.io/tags/music/ class=nav-link>music
-<span class="badge badge-pill badge-secondary">5</span></a>
-<a href=https://cloudnine.github.io/tags/emacs-functions/ class=nav-link>emacs-functions
-<span class="badge badge-pill badge-secondary">4</span></a>
-<a href=https://cloudnine.github.io/tags/organizational-psychology/ class=nav-link>organizational-psychology
-<span class="badge badge-pill badge-secondary">4</span></a>
-<a href=https://cloudnine.github.io/tags/stock-market/ class=nav-link>stock-market
-<span class="badge badge-pill badge-secondary">4</span></a>
-<a href=https://cloudnine.github.io/tags/about-the-author/ class=nav-link>about-the-author
-<span class="badge badge-pill badge-secondary">3</span></a>
-<a href=https://cloudnine.github.io/tags/non-fiction/ class=nav-link>non-fiction
-<span class="badge badge-pill badge-secondary">3</span></a>
-<a href=https://cloudnine.github.io/tags/science-fiction/ class=nav-link>science-fiction
-<span class="badge badge-pill badge-secondary">3</span></a>
-<a href=https://cloudnine.github.io/tags/featured/ class=nav-link>featured
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/r-programming/ class=nav-link>r-programming
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/text-editors/ class=nav-link>text-editors
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/video/ class=nav-link>video
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/windows/ class=nav-link>windows
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/alternative-energy/ class=nav-link>alternative-energy
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/blog/ class=nav-link>blog
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/blog-links/ class=nav-link>blog-links
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/calculus/ class=nav-link>calculus
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/changing-computers/ class=nav-link>changing-computers
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/climate-change/ class=nav-link>climate-change
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/computational-modelling/ class=nav-link>computational-modelling
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/custom-charts/ class=nav-link>custom-charts
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/data-links/ class=nav-link>data-links
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/economics/ class=nav-link>economics
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/investing/ class=nav-link>investing
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/news-room/ class=nav-link>news-room
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/public-sector/ class=nav-link>public-sector
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/tech/ class=nav-link>tech
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/video-emacs/ class=nav-link>video-emacs
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/video-motivational/ class=nav-link>video-motivational
-<span class="badge badge-pill badge-secondary">1</span></a></nav></div><div id=ads></div><footer id=footer class="mt-auto footer d-print-none"><div class=container-fluid><div class="row justify-content-center"><div class="col-md-4 col-xl-3"><h5>Website</h5>This blog was created using <a href=https://gohugo.io/>Hugo</a>,
-<a href=https://getbootstrap.com/>Bootstrap</a>, and the Silhouette Hugo theme.</div><div class="col-md-4 col-xl-3"><h5>Disclaimer</h5>Opinions expressed here are my own and may not reflect those of any company I work for, or people I
-work with.</div><div class="col-md-4 col-xl-3"><h5></h5>© 2019 - <script>document.write(Date().split` `[3])</script>Yuri Tricys</div></div><hr><div class="d-flex justify-content-center icons"><a class="py-2 px-2" href=https://www.linkedin.com/in/yuri-tricys-aa004b26/><i class="fab fa-linkedin"></i></a><a class="py-2 px-2" href=https://cloudnine.github.io/index.xml><i class="fas fa-rss"></i></a></div></div></footer></div></body></html>
+</code></pre></td></tr></table></div></div><br><div class="mobile-iframe"><figure class="zoom-effect"><div class="aspectRatioPlaceholder"><div class="aspect-ratio-fill" style="padding-bottom: 75.78947368421053%;"></div><!-- end aspect ratio fill --><!--appearance hydra--> <img src="frame-buffers.jpg" align="center" title="" class="inline-image img-zoom" width="100%" alt="theme-image-here" data-width="1920" data-height="1080"></div><!-- end aspect ratio --></figure><!-- end figure --></div><!--mobile-iframe--><br><h5>That's all for now. See you next time.</h5><div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-02-emacs-cursor-windows-frames-buffers%2f&text=Emacs%20Windows%2c%20Frames%2c%20Buffers%2c%20and%20Cursor&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Tweet</small></div></a><a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-02-emacs-cursor-windows-frames-buffers%2f&t=Emacs%20Windows%2c%20Frames%2c%20Buffers%2c%20and%20Cursor" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-facebook fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-03-02-emacs-cursor-windows-frames-buffers%2f&title=Emacs%20Windows%2c%20Frames%2c%20Buffers%2c%20and%20Cursor&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href="javascript:window.print()" title="Print this article" class="p-2" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i> <i class="fa fa-print fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Print</small></div></a></div><div id="disqus_thread"></div><script type="text/javascript">(function() {
+      
+      
+      if (window.location.hostname == "localhost")
+                return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'cloud-nine-2';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br><br></article></div></main><div id="banner"></div><div id="sidebar" class="sidebar d-print-none d-none d-md-block"><h2 class="center">Meet The Author</h2><div class="mobile-iframe"><iframe width="360" height="180" src="https://www.youtube.com/embed/HR3O17D0MaE?start=0.2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><p>Hi, I'm <strong>Yuri Tricys</strong>, the author of Cloud Nine. I'm a <strong>researcher</strong>, <strong>technical writer</strong>, <strong>data analyst</strong>, and <strong>web developer</strong>.</p><p>Cloud Nine is a place where you can browse some of the <strong>free</strong> content I create.</p><p>You can also <strong>outsource</strong> <strong>research</strong> to me directly. In fact, I encourage you to do so.</p><p>Just send an e-mail to <a href="mailto:tricys@alumni.ubc.ca? subject=Research">tricys@alumni.ubc.ca</a> with "Research" in the subject line and I'll get back to you.</p><h2 class="center">Featured Video</h2><div class="mobile-iframe"><iframe width="360" height="180" src="https://www.youtube.com/embed/-XxEX3LUgOY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><h2 class="mt-4">Featured Posts</h2><nav class="nav flex-column"><a href="https://cloudnine.github.io/motivation/2020-02-25-developing-cognitive-ambidexterity/" class="nav-link">Developing Cognitive Ambidexterity</a> <a href="https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/" class="nav-link">Emacs Bookmarks</a></nav><h2 class="mt-4">Recent Posts</h2><nav class="nav flex-column"><a href="https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/" class="nav-link">The Web Developer Hydra</a> <a href="https://cloudnine.github.io/science/2020-04-09-helm-hydra/" class="nav-link">The Helm Hydra</a> <a href="https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/" class="nav-link">Dune, by Frank Herbert</a> <a href="https://cloudnine.github.io/books/2020-04-07-citadel-algis-budrys/" class="nav-link">Citadel, by Algis Budrys</a> <a href="https://cloudnine.github.io/science/2020-03-29-emacs-elnode-and-editor-hydra/" class="nav-link">Emacs Configuration Elnode and the Editor Hydra</a> <a href="https://cloudnine.github.io/books/2020-03-28-american-financier/" class="nav-link">American Financier, by Jean Strous</a></nav><h2 class="mt-4 text-capitalize">categories</h2><nav class="nav flex-column"><a href="https://cloudnine.github.io/categories/computer-science/" class="nav-link">computer-science <span class="badge badge-pill badge-secondary">42</span> </a><a href="https://cloudnine.github.io/categories/economics/" class="nav-link">economics <span class="badge badge-pill badge-secondary">28</span> </a><a href="https://cloudnine.github.io/categories/finance/" class="nav-link">finance <span class="badge badge-pill badge-secondary">19</span> </a><a href="https://cloudnine.github.io/categories/business/" class="nav-link">business <span class="badge badge-pill badge-secondary">18</span> </a><a href="https://cloudnine.github.io/categories/politics/" class="nav-link">politics <span class="badge badge-pill badge-secondary">13</span> </a><a href="https://cloudnine.github.io/categories/psychology/" class="nav-link">psychology <span class="badge badge-pill badge-secondary">11</span> </a><a href="https://cloudnine.github.io/categories/statistics/" class="nav-link">statistics <span class="badge badge-pill badge-secondary">4</span> </a><a href="https://cloudnine.github.io/categories/links/" class="nav-link">links <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/categories/math/" class="nav-link">math <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/categories/ethics/" class="nav-link">ethics <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/history/" class="nav-link">history <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/law/" class="nav-link">law <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/maths/" class="nav-link">maths <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/movies/" class="nav-link">movies <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/music/" class="nav-link">music <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/philosophy/" class="nav-link">philosophy <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/physics/" class="nav-link">physics <span class="badge badge-pill badge-secondary">1</span></a></nav><h2 class="mt-4 text-capitalize">tags</h2><nav class="nav flex-column"><a href="https://cloudnine.github.io/tags/learning-center/" class="nav-link">learning-center <span class="badge badge-pill badge-secondary">47</span> </a><a href="https://cloudnine.github.io/tags/emacs/" class="nav-link">emacs <span class="badge badge-pill badge-secondary">24</span> </a><a href="https://cloudnine.github.io/tags/data-science/" class="nav-link">data-science <span class="badge badge-pill badge-secondary">20</span> </a><a href="https://cloudnine.github.io/tags/newsroom/" class="nav-link">newsroom <span class="badge badge-pill badge-secondary">19</span> </a><a href="https://cloudnine.github.io/tags/data-firm/" class="nav-link">data-firm <span class="badge badge-pill badge-secondary">16</span> </a><a href="https://cloudnine.github.io/tags/emacs-hydras/" class="nav-link">emacs-hydras <span class="badge badge-pill badge-secondary">14</span> </a><a href="https://cloudnine.github.io/tags/macroeconomics/" class="nav-link">macroeconomics <span class="badge badge-pill badge-secondary">14</span> </a><a href="https://cloudnine.github.io/tags/opinion/" class="nav-link">opinion <span class="badge badge-pill badge-secondary">14</span> </a><a href="https://cloudnine.github.io/tags/personal-development/" class="nav-link">personal-development <span class="badge badge-pill badge-secondary">12</span> </a><a href="https://cloudnine.github.io/tags/research/" class="nav-link">research <span class="badge badge-pill badge-secondary">10</span> </a><a href="https://cloudnine.github.io/tags/trends-global/" class="nav-link">trends-global <span class="badge badge-pill badge-secondary">9</span> </a><a href="https://cloudnine.github.io/tags/trade/" class="nav-link">trade <span class="badge badge-pill badge-secondary">8</span> </a><a href="https://cloudnine.github.io/tags/academic/" class="nav-link">academic <span class="badge badge-pill badge-secondary">5</span> </a><a href="https://cloudnine.github.io/tags/music/" class="nav-link">music <span class="badge badge-pill badge-secondary">5</span> </a><a href="https://cloudnine.github.io/tags/emacs-functions/" class="nav-link">emacs-functions <span class="badge badge-pill badge-secondary">4</span> </a><a href="https://cloudnine.github.io/tags/organizational-psychology/" class="nav-link">organizational-psychology <span class="badge badge-pill badge-secondary">4</span> </a><a href="https://cloudnine.github.io/tags/stock-market/" class="nav-link">stock-market <span class="badge badge-pill badge-secondary">4</span> </a><a href="https://cloudnine.github.io/tags/about-the-author/" class="nav-link">about-the-author <span class="badge badge-pill badge-secondary">3</span> </a><a href="https://cloudnine.github.io/tags/non-fiction/" class="nav-link">non-fiction <span class="badge badge-pill badge-secondary">3</span> </a><a href="https://cloudnine.github.io/tags/science-fiction/" class="nav-link">science-fiction <span class="badge badge-pill badge-secondary">3</span> </a><a href="https://cloudnine.github.io/tags/featured/" class="nav-link">featured <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/r-programming/" class="nav-link">r-programming <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/text-editors/" class="nav-link">text-editors <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/video/" class="nav-link">video <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/windows/" class="nav-link">windows <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/alternative-energy/" class="nav-link">alternative-energy <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/blog/" class="nav-link">blog <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/blog-links/" class="nav-link">blog-links <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/calculus/" class="nav-link">calculus <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/changing-computers/" class="nav-link">changing-computers <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/climate-change/" class="nav-link">climate-change <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/computational-modelling/" class="nav-link">computational-modelling <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/custom-charts/" class="nav-link">custom-charts <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/data-links/" class="nav-link">data-links <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/economics/" class="nav-link">economics <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/investing/" class="nav-link">investing <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/news-room/" class="nav-link">news-room <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/public-sector/" class="nav-link">public-sector <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/tech/" class="nav-link">tech <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/video-emacs/" class="nav-link">video-emacs <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/video-motivational/" class="nav-link">video-motivational <span class="badge badge-pill badge-secondary">1</span></a></nav></div><div id="ads"></div><footer id="footer" class="mt-auto footer d-print-none"><div class="container-fluid"><div class="row justify-content-center"><div class="col-md-4 col-xl-3"><h5>Website</h5>This blog was created using <a href="https://gohugo.io/">Hugo</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, and the Silhouette Hugo theme.</div><div class="col-md-4 col-xl-3"><h5>Disclaimer</h5>Opinions expressed here are my own and may not reflect those of any company I work for, or people I work with.</div><div class="col-md-4 col-xl-3"><h5></h5>© 2019 -<script>document.write(Date().split` `[3])</script>Yuri Tricys</div></div><hr><div class="d-flex justify-content-center icons"><a class="py-2 px-2" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><i class="fab fa-linkedin"></i></a> <a class="py-2 px-2" href="https://cloudnine.github.io/index.xml"><i class="fas fa-rss"></i></a></div></div></footer></div></body></html>

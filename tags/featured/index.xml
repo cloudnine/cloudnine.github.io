@@ -1,9 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>featured on Cloud Nine</title><link>https://cloudnine.github.io/tags/featured/</link><description>Recent content in featured on Cloud Nine</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/featured/index.xml" rel="self" type="application/rss+xml"/><item><title>Developing Cognitive Ambidexterity</title><link>https://cloudnine.github.io/motivation/2020-02-25-developing-cognitive-ambidexterity/</link><pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate><guid>https://cloudnine.github.io/motivation/2020-02-25-developing-cognitive-ambidexterity/</guid><description>Today's motivational video is about the benefits of cognitive ambidexterity, why you should take some time to work on that each week, and how you can do that.
-For those of you that come here for my emacs posts, don't worry, nothing has changed. I have been working on
-multidisciplinary studies for over twenty years. I routinely work at several types of activities. These include psychology work, finance,
-data science, computer programming, writing, and now also vlogging.</description></item><item><title>Emacs Bookmarks</title><link>https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/</link><pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate><guid>https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/</guid><description>Jumping To Directories In Emacs
-If you want to accomplish things efficiently with your computer, you will benefit from mastering a text editor. I use emacs as a general
-project manager for web development, writing, and organizing thoughts, materials, and actions. Jumping to and from directories and files
-enables quickly me to get things done more efficiently. To do this I use a few different packages and functions.
-They are:
-Bookmarks</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>featured on Cloud Nine</title>
+    <link>https://cloudnine.github.io/tags/featured/</link>
+    <description>Recent content in featured on Cloud Nine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/tags/featured/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Developing Cognitive Ambidexterity</title>
+      <link>https://cloudnine.github.io/motivation/2020-02-25-developing-cognitive-ambidexterity/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/motivation/2020-02-25-developing-cognitive-ambidexterity/</guid>
+      <description>Today&#39;s motivational video is about the benefits of cognitive ambidexterity, why you should take some time to work on that each week, and how you can do that.
+ For those of you that come here for my emacs posts, don&#39;t worry, nothing has changed. I have been working onmultidisciplinary studies for over twenty years. I routinely work at several types of activities. These include psychology work, finance,data science, computer programming, writing, and now also vlogging.</description>
+    </item>
+    
+    <item>
+      <title>Emacs Bookmarks</title>
+      <link>https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/</link>
+      <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/</guid>
+      <description>Jumping To Directories In EmacsIf you want to accomplish things efficiently with your computer, you will benefit from mastering a text editor. I use emacs as a generalproject manager for web development, writing, and organizing thoughts, materials, and actions. Jumping to and from directories and filesenables quickly me to get things done more efficiently. To do this I use a few different packages and functions.They are:  Bookmarks</description>
+    </item>
+    
+  </channel>
+</rss>

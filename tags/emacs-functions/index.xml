@@ -1,14 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>emacs functions on Cloud Nine</title><link>https://cloudnine.github.io/tags/emacs-functions/</link><description>Recent content in emacs functions on Cloud Nine</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/emacs-functions/index.xml" rel="self" type="application/rss+xml"/><item><title>Emacs Windows, Frames, Buffers, and Cursor</title><link>https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/</link><pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate><guid>https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/</guid><description>This post covers the first two sections from the "Default Operations" section of my init.
-Default Operations
-Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history
-Preamble
-Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
-know what you're looking for.</description></item><item><title>Emacs Themes and All-The-Icons</title><link>https://cloudnine.github.io/science/2020-02-22-emacs-themes/</link><pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate><guid>https://cloudnine.github.io/science/2020-02-22-emacs-themes/</guid><description>Today's post covers "Themes" from the appearance section of my init.
-Appearance Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra Preamble
-Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
-know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag.</description></item><item><title>Emacs Appearance, Entering and Exiting (+ Some Functions)</title><link>https://cloudnine.github.io/science/2020-02-20-emacs-enter-exit-appearance/</link><pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate><guid>https://cloudnine.github.io/science/2020-02-20-emacs-enter-exit-appearance/</guid><description>Today's post covers "Entering and Exiting Emacs" and "Default Appearance Customizations" from the appearance section of my init.
-Appearance Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra Preamble
-Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
-know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag.</description></item><item><title>Emacs Functions (And Program Launcher Hydra)</title><link>https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/</link><pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate><guid>https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/</guid><description>Today's post has some functions from the functions declaration section of the beginning of my initialization file.
-SET UP, DEFAULTS, AND CUSTOMIZATION Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key
-There are a lot of function declarations in this initialization file.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>emacs functions on Cloud Nine</title>
+    <link>https://cloudnine.github.io/tags/emacs-functions/</link>
+    <description>Recent content in emacs functions on Cloud Nine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/tags/emacs-functions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Emacs Windows, Frames, Buffers, and Cursor</title>
+      <link>https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/</guid>
+      <description>This post covers the first two sections from the &#34;Default Operations&#34; section of my init.   Default Operations
+ Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history    PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for.</description>
+    </item>
+    
+    <item>
+      <title>Emacs Themes and All-The-Icons</title>
+      <link>https://cloudnine.github.io/science/2020-02-22-emacs-themes/</link>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-02-22-emacs-themes/</guid>
+      <description>Today&#39;s post covers &#34;Themes&#34; from the appearance section of my init.  Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra     PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
+    </item>
+    
+    <item>
+      <title>Emacs Appearance, Entering and Exiting (&#43; Some Functions)</title>
+      <link>https://cloudnine.github.io/science/2020-02-20-emacs-enter-exit-appearance/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-02-20-emacs-enter-exit-appearance/</guid>
+      <description>Today&#39;s post covers &#34;Entering and Exiting Emacs&#34; and &#34;Default Appearance Customizations&#34; from the appearance section of my init.  Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra     PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
+    </item>
+    
+    <item>
+      <title>Emacs Functions (And Program Launcher Hydra)</title>
+      <link>https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/</guid>
+      <description>Today&#39;s post has some functions from the functions declaration section of the beginning of my initialization file. SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key    There are a lot of function declarations in this initialization file.</description>
+    </item>
+    
+  </channel>
+</rss>
