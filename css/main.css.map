@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "c:/Hugo/sites/cloudnine-build-directory",
+	"sourceRoot": "C:/Hugo/sites/cloudnine-build-directory",
 	"sources": [
 		"stdin"
 	],

@@ -1,419 +1,546 @@
-<!doctype html><html lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="author" content="Cloud Nine"><meta name="copyright" content="Copyright © 2019 -2020byYuri TricysAll rights reserved."><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw"><meta name="yandex-verification" content="7cb55c3432ff9fc7"><meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A"><meta name="description" content="Some nifty Emacs functions. From Yuri Tricys' Emacs configuration."><title>Emacs Functions (And Program Launcher Hydra)</title><meta property="article:author" content="Yuri Tricys"><link rel="canonical" href="https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/"><meta name="theme-color" content="#ffffff"><meta property="og:title" content="Emacs Functions (And Program Launcher Hydra)"><meta property="og:image:type" content="image/jpg"><meta property="og:image" content="https://cloudnine.github.io/images/science/hcf.jpg"><meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/hcf.jpg"><meta property="og:description" content="Some nifty Emacs functions. From Yuri Tricys' Emacs configuration."><meta property="og:site_name" content="Cloud Nine Blog."><meta property="og:url" content="https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/"><meta property="og:type" content="website"><link rel="icon" type="image/png" href="https://cloudnine.github.io/images/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="https://cloudnine.github.io/images/favicon-32x32.png" sizes="32x32"><link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><link rel="alternate" type="application/rss+xml" href="https://cloudnine.github.io/index.xml"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400" integrity="" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"><link rel="stylesheet" href="/css/bundle.css" integrity=""><script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer="defer"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer="defer"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer="defer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js" integrity="sha256-34Si1Y6llMBKM3G0jQILVeoQKEwuxjbk4zGWXXMT4ps=" crossorigin="anonymous" defer="defer"></script><script src="https://cloudnine.github.io/js/min/bundle.min.964d3af33c3c75fc536731cf858cd4e67ed1ac8f9af37b6e3b667410d714a3eb33be81ef45aad5fc7d2b98fb3c8eb6f305ec6012ad05844eff798b08fe87c4d5.js" integrity="sha512-lk068zw8dfxTZzHPhYzU5n7RrI+a83tuO2Z0ENcUo+szvoHvRarV/H0rmPs8jrbzBexgEq0FhE7/eYsI/ofE1Q==" crossorigin="anonymous" defer="defer"></script><script type="application/ld+json">{ "@context" : "http://schema.org", "@type" : "Blog", "image":"https://cloudnine.github.io/images/science/hcf.jpg", "url":"https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/", "thumbnailUrl":"https://cloudnine.github.io/images/science/hcf.jpg", "headline":"Emacs Functions (And Program Launcher Hydra)", "description":"Some nifty Emacs functions. From Yuri Tricys' Emacs configuration.", "datePublished":"2020-01-31T00:00:00Z", "dateCreated":"2020-01-31T00:00:00Z", "creator":"Yuri Tricys", "author": "Yuri Tricys", "articleSection":"science", "publisher":{"name":"Cloud Nine", "logo":"","@type":"Organization"}}</script><script defer="defer">var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101236333);</script><script async src="//static.getclicky.com/js"></script><style type="text/css">.feature-image {
-background-image: url("https://cloudnine.github.io/images/science/hcf.jpg");
-width:100%;
-height: auto;
-}</style></head><body><div id="wrapper" class="wrapper"><div id="navigation" class="navigation navbar container-fluid navbar-expand-xl fixed-top bg-dark navbar-dark"><button class="navbar-toggler collapsed mr-3" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button> <a class="navbar-brand mr-2" href="https://cloudnine.github.io/">CLOUD NINE</a><div class="navbar-collapse collapse" id="navbarCollapse"><ul class="navbar-nav mr-auto"><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/about/">About</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/motivation/">Motivation</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/science/">Science</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/categories/">Categories</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/tags/">Tags</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/books/">Books</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/current/">Current</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/archives/">Archives</a></li></ul></div><div class="nav-right-side"><ul class="navbar-icons navbar-nav"><li class="nav-item" id="search"><a class="nav-link active" href="https://cloudnine.github.io/search/"><span class="d-none d-lg-inline-flex">Search  </span><i class="fas fa-search"></i></a></li><li class="nav-item" id="user"><a class="nav-link active" href="#"><span class="d-none d-lg-inline-flex">Login   </span><i class="fas fa-user"></i></a></li><li class="nav-item" id="shop"><a class="nav-link active" href="#"><span class="d-none d-lg-inline-flex">Shop  </span><i class="fas fa-shopping-cart"></i></a></li></ul></div></div><header id="header" class="feature-image"><div class="feature-image-text"><h1 class="text-center">Sciency Stuff</h1><div class="intro-description d-block"></div></div></header><main id="main" class="main"><div class="container mt-4 post"><a name="article-title" class="anchor-top"></a><h1>Emacs Functions (And Program Launcher Hydra)</h1><div id="post-summary-meta" class="ml-2 mb-2 mt-1"><small><strong>Author: Yuri Tricys </strong>|  <i class="far fa-calendar-alt"></i> Jan 31, 2020  |  <i class="fa fa-tags" title="Tags" aria-hidden="true"></i>   <a href="/tags/emacs">emacs</a>, <a href="/tags/emacs-functions">emacs functions</a>, <a href="/tags/emacs-hydras">emacs hydras</a>, <a href="/tags/learning-center">learning center</a></small></div><article class="mt-4 mb-4 main-content"><h5>Today's post has some functions from the functions declaration section of the beginning of my initialization file.<br><br></h5><ul><li>SET UP, DEFAULTS, AND CUSTOMIZATION<ul><li>Necessary Adjustments when you set-up on a new computer</li><li>Paths to Update on Change</li><li>Executable Paths</li><li>Libraries</li><li>Function declarations</li><li>Emacs Customization Seperate File</li><li>Emax Defaults</li><li>Some Defaults</li><li>Frames, Buffers, And Lines</li><li>Some Custom Default Functions</li><li>Some New Key Bindings</li><li>Popup, Pos-tip,Tooltip, Posframe</li><li>Which Key</li></ul></li></ul><br><p class="p-news">There are a lot of function declarations in this initialization file. Most of them are not written by me, but many are edited. Only some of them are here. The main idea with function declarations is to defer them on start-up to save time. One way to do that is to put them in the :config section of a <a href="https://github.com/jwiegley/use-package">use-package</a> declaration and defer that configuration via one of use-package's defer statements (like :command or :defer). I've yet to defer a lot of things in my initialization. I'll get to it at some point but it's not now in terms of time a priority. Keep that in mind if you use any of these functions in your init file.</p><h5>Clear The Kill Ring<br><br></h5><p class="p-news">Pretty straight forward. Emacs keeps lots of goodies you copied on the clipboard. Later I'll show you how you can cycle through them. This bad boy clears everything when you no longer want to deal with the insanity.</p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
-</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
-<span style="color:#080;font-style:italic">;clear kill-ring</span>
-(<span style="color:#a2f">defun</span> <span style="color:#b8860b">clear-kill-ring</span> ()
-  <span style="color:#b44">"Clear the kill ring variable"</span>
-  (<span style="color:#a2f">interactive</span>)
-  (<span style="color:#a2f">setq</span> <span style="color:#b8860b">kill-ring</span> <span style="color:#b8860b">nil</span>
-        <span style="color:#b8860b">kill-ring-yank-pointer</span> <span style="color:#800">nil</span>))
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=author content="Cloud Nine"><meta name=copyright content="Copyright &copy; 2019 -2020byYuri TricysAll rights reserved."><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=google-site-verification content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw"><meta name=yandex-verification content="7cb55c3432ff9fc7"><meta name=msvalidate.01 content="C3105C04193385EF751ABBCF0EBC693A"><meta name=description content="Some nifty Emacs functions. From Yuri Tricys' Emacs configuration."><title>Emacs Functions (And Program Launcher Hydra)</title><meta property="article:author" content="Yuri Tricys"><link rel=canonical href=https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/><meta name=theme-color content="#ffffff"><meta property="og:title" content="Emacs Functions (And Program Launcher Hydra)"><meta property="og:image:type" content="image/jpg"><meta property="og:image" content="https://cloudnine.github.io/images/science/hcf.jpg"><meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/hcf.jpg"><meta property="og:description" content="Some nifty Emacs functions. From Yuri Tricys' Emacs configuration."><meta property="og:site_name" content="Cloud Nine Blog."><meta property="og:url" content="https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/"><meta property="og:type" content="website"><link rel=icon type=image/png href=https://cloudnine.github.io/images/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=https://cloudnine.github.io/images/favicon-32x32.png sizes=32x32><link rel=me type=text/html href=https://www.linkedin.com/in/yuri-tricys-aa004b26/><link rel=alternate type=application/rss+xml href=https://cloudnine.github.io/index.xml><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Oswald:400" integrity crossorigin=anonymous></link><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css integrity=sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh crossorigin=anonymous></link><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous></link><link rel=stylesheet href=/css/bundle.css integrity><script src=https://code.jquery.com/jquery-3.4.1.min.js integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js integrity=sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo crossorigin=anonymous defer></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js integrity=sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 crossorigin=anonymous defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js integrity="sha256-34Si1Y6llMBKM3G0jQILVeoQKEwuxjbk4zGWXXMT4ps=" crossorigin=anonymous defer></script><script src=https://cloudnine.github.io/js/min/bundle.min.964d3af33c3c75fc536731cf858cd4e67ed1ac8f9af37b6e3b667410d714a3eb33be81ef45aad5fc7d2b98fb3c8eb6f305ec6012ad05844eff798b08fe87c4d5.js integrity="sha512-lk068zw8dfxTZzHPhYzU5n7RrI+a83tuO2Z0ENcUo+szvoHvRarV/H0rmPs8jrbzBexgEq0FhE7/eYsI/ofE1Q==" crossorigin=anonymous defer></script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Blog","image":"https://cloudnine.github.io/images/science/hcf.jpg","url":"https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/","thumbnailUrl":"https://cloudnine.github.io/images/science/hcf.jpg","headline":"Emacs Functions (And Program Launcher Hydra)","description":"Some nifty Emacs functions. From Yuri Tricys' Emacs configuration.","datePublished":"2020-01-31T00:00:00Z","dateCreated":"2020-01-31T00:00:00Z","creator":"Yuri Tricys","author":"Yuri Tricys","articleSection":"science","publisher":{"name":"Cloud Nine","logo":"","@type":"Organization"}}</script><script defer>var clicky_site_ids=clicky_site_ids||[];clicky_site_ids.push(101236333);</script><script async src=//static.getclicky.com/js></script><style type=text/css>.feature-image{background-image:url(https://cloudnine.github.io/images/science/hcf.jpg);width:100%;height:auto}</style></head><body><div id=wrapper class=wrapper><div id=navigation class="navigation navbar container-fluid navbar-expand-xl fixed-top bg-dark navbar-dark"><button class="navbar-toggler collapsed mr-3" type=button data-toggle=collapse data-target=#navbarCollapse aria-controls=navbarCollapse aria-expanded=false aria-label="Toggle navigation">
+<i class="fas fa-bars"></i></button>
+<a class="navbar-brand mr-2" href=https://cloudnine.github.io/>CLOUD NINE</a><div class="navbar-collapse collapse" id=navbarCollapse><ul class="navbar-nav mr-auto"><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/about/>About</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/motivation/>Motivation</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/science/>Science</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/categories/>Categories</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/tags/>Tags</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/books/>Books</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/current/>Current</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/archives/>Archives</a></li></ul></div><div class=nav-right-side><ul class="navbar-icons navbar-nav"><li class=nav-item id=search><a class="nav-link active" href=https://cloudnine.github.io/search/><span class="d-none d-lg-inline-flex">Search&nbsp;&nbsp;</span><i class="fas fa-search"></i></a></li><li class=nav-item id=user><a class="nav-link active" href=#><span class="d-none d-lg-inline-flex">Login&nbsp;&nbsp;&nbsp;</span><i class="fas fa-user"></i></a></li><li class=nav-item id=shop><a class="nav-link active" href=#><span class="d-none d-lg-inline-flex">Shop&nbsp;&nbsp;</span><i class="fas fa-shopping-cart"></i></a></li></ul></div></div><header id=header class=feature-image><div class=feature-image-text><h1 class=text-center>Sciency Stuff</h1><div class="intro-description d-block"></div></div></header><main id=main class=main><div class="container mt-4 post"><a name=article-title class=anchor-top></a><h1>Emacs Functions (And Program Launcher Hydra)</h1><div id=post-summary-meta class="ml-2 mb-2 mt-1"><small><strong>Author:
+Yuri Tricys</strong> |&nbsp; <i class="far fa-calendar-alt"></i>&nbsp;Jan 31, 2020&nbsp;
+|&nbsp; <i class="fa fa-tags" title=Tags aria-hidden=true></i>&nbsp;
+<a href=/tags/emacs>emacs</a>,
+<a href=/tags/emacs-functions>emacs functions</a>,
+<a href=/tags/emacs-hydras>emacs hydras</a>,
+<a href=/tags/learning-center>learning center</a></small></div><article class="mt-4 mb-4 main-content"><h5>Today's post has some functions from the functions declaration section of the beginning of my initialization file.<br><br></h5><ul><li>SET UP, DEFAULTS, AND CUSTOMIZATION<ul><li>Necessary Adjustments when you set-up on a new computer</li><li>Paths to Update on Change</li><li>Executable Paths</li><li>Libraries</li><li>Function declarations</li><li>Emacs Customization Seperate File</li><li>Emax Defaults</li><li>Some Defaults</li><li>Frames, Buffers, And Lines</li><li>Some Custom Default Functions</li><li>Some New Key Bindings</li><li>Popup, Pos-tip,Tooltip, Posframe</li><li>Which Key</li></ul></li></ul><br><p class=p-news>There are a lot of function declarations in this initialization file. Most of them are not written by me, but many are
+edited. Only some of them are here. The main idea with function declarations is to defer them on start-up to save time. One way to do that is to put them in the :config section of a <a href=https://github.com/jwiegley/use-package>use-package</a> declaration and defer that configuration via one of use-package's defer
+statements (like :command or :defer). I've yet to defer a lot of things in my initialization. I'll get to it at some point but it's not now
+in terms of time a priority. Keep that in mind if you use any of these functions in your init file.</p><h5>Clear The Kill Ring<br><br></h5><p class=p-news>Pretty straight forward. Emacs keeps lots of goodies you copied on the clipboard. Later I'll show you how you can cycle through them. This bad boy clears everything when you no longer want to deal with the insanity.</p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">8
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
+<span style=color:#080;font-style:italic>;clear kill-ring</span>
+(<span style=color:#a2f>defun</span> <span style=color:#b8860b>clear-kill-ring</span> ()
+  <span style=color:#b44>&#34;Clear the kill ring variable&#34;</span>
+  (<span style=color:#a2f>interactive</span>)
+  (<span style=color:#a2f>setq</span> <span style=color:#b8860b>kill-ring</span> <span style=color:#b8860b>nil</span>
+        <span style=color:#b8860b>kill-ring-yank-pointer</span> <span style=color:#800>nil</span>))
 
-</code></pre></td></tr></table></div></div><br><h5>toggle-all-the-icons-dired-mode</h5><p class="p-news">You need <a href="https://github.com/domtronn/all-the-icons.el" target="_blank">All The Icons</a> installed for this. See the link for images. All The Icons can be slow with large directories on windows, based on how well your system is optimized for memory. This let's you use it when you want to (for example when transferring files between directories or cleaning them up).</p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+</code></pre></td></tr></table></div></div><br><h5>toggle-all-the-icons-dired-mode</h5><p class=p-news>You need <a href=https://github.com/domtronn/all-the-icons.el target=_blank>All The Icons</a> installed for this. See
+the link for images. All The Icons can be slow with large directories on windows, based on how well your system is optimized for memory.
+This let's you use it when you want to (for example when transferring files between directories or cleaning them up).</p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
 
-<span style="color:#080;font-style:italic">;toggle-all-the-icons-dired-mode</span>
-(<span style="color:#a2f">defun</span> <span style="color:#b8860b">toggle-all-the-icons-dired-mode</span> ()
-(<span style="color:#a2f">interactive</span>)
-(<span style="color:#a2f">if</span> (<span style="color:#a2f">featurep</span> <span style="color:#b8860b">'all-the-icons-dired</span>)
-(<span style="color:#a2f">if</span> <span style="color:#b8860b">all-the-icons-dired-mode</span>
-(<span style="color:#a2f">progn</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">all-the-icons-dired-mode</span> <span style="color:#800">nil</span>)
-(<span style="color:#b8860b">remove-hook</span> <span style="color:#b8860b">'dired-mode-hook</span> <span style="color:#b8860b">'all-the-icons-dired-mode</span> ))<span style="color:#080;font-style:italic">;end on case</span>
-(<span style="color:#a2f">progn</span>
-(<span style="color:#b8860b">all-the-icons-dired-mode</span>)
-(<span style="color:#b8860b">add-hook</span> <span style="color:#b8860b">'dired-mode-hook</span> <span style="color:#b8860b">'all-the-icons-dired-mode</span> ))<span style="color:#080;font-style:italic">;end off case</span>
-)<span style="color:#080;font-style:italic">;end conditional</span>
-)<span style="color:#080;font-style:italic">;end package conditional</span>
-)<span style="color:#080;font-style:italic">;end toggle-all-the-icons</span>
+<span style=color:#080;font-style:italic>;toggle-all-the-icons-dired-mode</span>
+(<span style=color:#a2f>defun</span> <span style=color:#b8860b>toggle-all-the-icons-dired-mode</span> ()
+(<span style=color:#a2f>interactive</span>)
+(<span style=color:#a2f>if</span> (<span style=color:#a2f>featurep</span> <span style=color:#b8860b>&#39;all-the-icons-dired</span>)
+(<span style=color:#a2f>if</span> <span style=color:#b8860b>all-the-icons-dired-mode</span>
+(<span style=color:#a2f>progn</span>
+(<span style=color:#a2f>setq</span> <span style=color:#b8860b>all-the-icons-dired-mode</span> <span style=color:#800>nil</span>)
+(<span style=color:#b8860b>remove-hook</span> <span style=color:#b8860b>&#39;dired-mode-hook</span> <span style=color:#b8860b>&#39;all-the-icons-dired-mode</span> ))<span style=color:#080;font-style:italic>;end on case</span>
+(<span style=color:#a2f>progn</span>
+(<span style=color:#b8860b>all-the-icons-dired-mode</span>)
+(<span style=color:#b8860b>add-hook</span> <span style=color:#b8860b>&#39;dired-mode-hook</span> <span style=color:#b8860b>&#39;all-the-icons-dired-mode</span> ))<span style=color:#080;font-style:italic>;end off case</span>
+)<span style=color:#080;font-style:italic>;end conditional</span>
+)<span style=color:#080;font-style:italic>;end package conditional</span>
+)<span style=color:#080;font-style:italic>;end toggle-all-the-icons</span>
 
-</code></pre></td></tr></table></div></div><br><h5>Shell get buffer create</h5><p class="p-news">This is used by the function that follows it, "shell-same-window". It opens a shell in the buffer you are working in.<br></p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">77
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">78
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">79
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">80
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">81
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">82
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">83
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">84
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">85
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">86
-</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
-<span style="color:#080;font-style:italic">;shell in same window</span>
-(<span style="color:#a2f">defun</span> <span style="color:#b8860b">shell-get-buffer-create</span> (<span style="color:#a2f">&optional</span> <span style="color:#b8860b">buffer</span>)
-  <span style="color:#b44">"Run an inferior shell, with I/O through BUFFER (which defaults to </span><span style="color:#b8860b">`*shell*'</span><span style="color:#b44">).
-</span><span style="color:#b44">Interactively, a prefix arg means to prompt for BUFFER.
-</span><span style="color:#b44">If </span><span style="color:#b8860b">`default-directory'</span><span style="color:#b44"> is a remote file name, it is also prompted
-</span><span style="color:#b44">to change if called with a prefix arg.
-</span><span style="color:#b44">If BUFFER exists but shell process is not running, make new shell.
-</span><span style="color:#b44">If BUFFER exists and shell process is running, just switch to BUFFER.
-</span><span style="color:#b44">Program used comes from variable </span><span style="color:#b8860b">`explicit-shell-file-name'</span><span style="color:#b44">,
-</span><span style="color:#b44"> or (if that is nil) from the ESHELL environment variable,
-</span><span style="color:#b44"> or (if that is nil) from </span><span style="color:#b8860b">`shell-file-name'</span><span style="color:#b44">.
-</span><span style="color:#b44">If a file </span><span style="color:#b8860b">`~/.emacs_SHELLNAME'</span><span style="color:#b44"> exists, or </span><span style="color:#b8860b">`~/.emacs.d/init_SHELLNAME.sh'</span><span style="color:#b44">,
-</span><span style="color:#b44">it is given as initial input (but this may be lost, due to a timing
-</span><span style="color:#b44">error, if the shell discards input when it starts up).
-</span><span style="color:#b44">The buffer is put in Shell mode, giving commands for sending input
-</span><span style="color:#b44">and controlling the subjobs of the shell.  See </span><span style="color:#b8860b">`shell-mode'</span><span style="color:#b44">.
-</span><span style="color:#b44">See also the variable </span><span style="color:#b8860b">`shell-prompt-pattern'</span><span style="color:#b44">.
-</span><span style="color:#b44">To specify a coding system for converting non-ASCII characters
-</span><span style="color:#b44">in the input and output to the shell, use \\[universal-coding-system-argument]
-</span><span style="color:#b44">before \\[shell].  You can also specify this with \\[set-buffer-process-coding-system]
-</span><span style="color:#b44">in the shell buffer, after you start the shell.
-</span><span style="color:#b44">The default comes from </span><span style="color:#b8860b">`process-coding-system-alist'</span><span style="color:#b44"> and
-</span><span style="color:#b44"></span><span style="color:#b8860b">`default-process-coding-system'</span><span style="color:#b44">.
-</span><span style="color:#b44">The shell file name (sans directories) is used to make a symbol name
-</span><span style="color:#b44">such as </span><span style="color:#b8860b">`explicit-csh-args'</span><span style="color:#b44">.  If that symbol is a variable,
-</span><span style="color:#b44">its value is used as a list of arguments when invoking the shell.
-</span><span style="color:#b44">Otherwise, one argument </span><span style="color:#b8860b">`-i'</span><span style="color:#b44"> is passed to the shell.
-</span><span style="color:#b44">\(Type \\[describe-mode] in the shell buffer for a list of commands.)"</span>
-  (<span style="color:#a2f">interactive</span>
-   (<span style="color:#00a000">list</span>
-    (<span style="color:#a2f">and</span> <span style="color:#b8860b">current-prefix-arg</span>
-   (<span style="color:#a2f">prog1</span>
-       (<span style="color:#00a000">read-buffer</span> <span style="color:#b44">"Shell buffer: "</span>
-        <span style="color:#080;font-style:italic">;; If the current buffer is an inactive</span>
-        <span style="color:#080;font-style:italic">;; shell buffer, use it as the default.</span>
-        (<span style="color:#a2f">if</span> (<span style="color:#a2f">and</span> (<span style="color:#00a000">eq</span> <span style="color:#b8860b">major-mode</span> <span style="color:#b8860b">'shell-mode</span>)
-           (<span style="color:#00a000">null</span> (<span style="color:#00a000">get-buffer-process</span> (<span style="color:#00a000">current-buffer</span>))))
-            (<span style="color:#00a000">buffer-name</span>)
-          (<span style="color:#00a000">generate-new-buffer-name</span> <span style="color:#b44">"*shell*"</span>)))
-     (<span style="color:#a2f">if</span> (<span style="color:#b8860b">file-remote-p</span> <span style="color:#b8860b">default-directory</span>)
-         <span style="color:#080;font-style:italic">;; It must be possible to declare a local default-directory.</span>
-               <span style="color:#080;font-style:italic">;; FIXME: This can't be right: it changes the default-directory</span>
-               <span style="color:#080;font-style:italic">;; of the current-buffer rather than of the *shell* buffer.</span>
-         (<span style="color:#a2f">setq</span> <span style="color:#b8860b">default-directory</span>
-         (<span style="color:#00a000">expand-file-name</span>
-          (<span style="color:#b8860b">read-directory-name</span>
-           <span style="color:#b44">"Default directory: "</span> <span style="color:#b8860b">default-directory</span> <span style="color:#b8860b">default-directory</span>
-           <span style="color:#800">t</span> <span style="color:#800">nil</span>))))))))
-  (<span style="color:#a2f">setq</span> <span style="color:#b8860b">buffer</span> (<span style="color:#a2f">if</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">buffer</span> (<span style="color:#b8860b">not</span> (<span style="color:#b8860b">derived-mode-p</span> <span style="color:#b8860b">'shell-mode</span>))
-                       (<span style="color:#b8860b">comint-check-proc</span> (<span style="color:#00a000">current-buffer</span>)))
-                   (<span style="color:#00a000">get-buffer-create</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">buffer</span> <span style="color:#b44">"*shell*"</span>))
-                 <span style="color:#080;font-style:italic">;; If the current buffer is a dead shell buffer, use it.</span>
-                 (<span style="color:#00a000">current-buffer</span>)))
-<span style="color:#080;font-style:italic">;; On remote hosts, the local `shell-file-name' might be useless.</span>
-  (<span style="color:#a2f">if</span> (<span style="color:#a2f">and</span> (<span style="color:#b8860b">called-interactively-p</span> <span style="color:#b8860b">'any</span>)
-     (<span style="color:#b8860b">file-remote-p</span> <span style="color:#b8860b">default-directory</span>)
-     (<span style="color:#00a000">null</span> <span style="color:#b8860b">explicit-shell-file-name</span>)
-     (<span style="color:#00a000">null</span> (<span style="color:#b8860b">getenv</span> <span style="color:#b44">"ESHELL"</span>)))
-      (<span style="color:#a2f">with-current-buffer</span> <span style="color:#b8860b">buffer</span>
-  (<span style="color:#00a000">set</span> (<span style="color:#00a000">make-local-variable</span> <span style="color:#b8860b">'explicit-shell-file-name</span>)
-       (<span style="color:#b8860b">file-remote-p</span>
-        (<span style="color:#00a000">expand-file-name</span>
-         (<span style="color:#b8860b">read-file-name</span>
-    <span style="color:#b44">"Remote shell path: "</span> <span style="color:#b8860b">default-directory</span> <span style="color:#b8860b">shell-file-name</span>
-    <span style="color:#800">t</span> <span style="color:#b8860b">shell-file-name</span>))
-        <span style="color:#b8860b">'localname</span>))))
-<span style="color:#080;font-style:italic">;; The buffer's window must be correctly set when we call comint (so</span>
-  <span style="color:#080;font-style:italic">;; that comint sets the COLUMNS env var properly).</span>
-  (<span style="color:#a2f">with-current-buffer</span> <span style="color:#b8860b">buffer</span>
-    (<span style="color:#a2f">unless</span> (<span style="color:#b8860b">comint-check-proc</span> <span style="color:#b8860b">buffer</span>)
-      (<span style="color:#a2f">let*</span> ((<span style="color:#b8860b">prog</span> (<span style="color:#a2f">or</span> <span style="color:#b8860b">explicit-shell-file-name</span>
-           (<span style="color:#b8860b">getenv</span> <span style="color:#b44">"ESHELL"</span>) <span style="color:#b8860b">shell-file-name</span>))
-       (<span style="color:#b8860b">name</span> (<span style="color:#00a000">file-name-nondirectory</span> <span style="color:#b8860b">prog</span>))
-       (<span style="color:#b8860b">startfile</span> (<span style="color:#00a000">concat</span> <span style="color:#b44">"~/.emacs_"</span> <span style="color:#b8860b">name</span>))
-       (<span style="color:#b8860b">xargs-name</span> (<span style="color:#00a000">intern-soft</span> (<span style="color:#00a000">concat</span> <span style="color:#b44">"explicit-"</span> <span style="color:#b8860b">name</span> <span style="color:#b44">"-args"</span>))))
-        (<span style="color:#a2f">unless</span> (<span style="color:#00a000">file-exists-p</span> <span style="color:#b8860b">startfile</span>)
-    (<span style="color:#a2f">setq</span> <span style="color:#b8860b">startfile</span> (<span style="color:#00a000">concat</span> <span style="color:#b8860b">user-emacs-directory</span> <span style="color:#b44">"init_"</span> <span style="color:#b8860b">name</span> <span style="color:#b44">".sh"</span>)))
-        (<span style="color:#00a000">apply</span> <span style="color:#b8860b">'make-comint-in-buffer</span> <span style="color:#b44">"shell"</span> <span style="color:#b8860b">buffer</span> <span style="color:#b8860b">prog</span>
-         (<span style="color:#a2f">if</span> (<span style="color:#00a000">file-exists-p</span> <span style="color:#b8860b">startfile</span>) <span style="color:#b8860b">startfile</span>)
-         (<span style="color:#a2f">if</span> (<span style="color:#a2f">and</span> <span style="color:#b8860b">xargs-name</span> (<span style="color:#00a000">boundp</span> <span style="color:#b8860b">xargs-name</span>))
-       (<span style="color:#00a000">symbol-value</span> <span style="color:#b8860b">xargs-name</span>)
-           <span style="color:#666">'</span>(<span style="color:#b44">"-i"</span>)))
-        (<span style="color:#b8860b">shell-mode</span>))))
-  <span style="color:#b8860b">buffer</span>)
+</code></pre></td></tr></table></div></div><br><h5>Shell get buffer create</h5><p class=p-news>This is used by the function that follows it, "shell-same-window". It opens a shell in the buffer you are working in.<br></p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">43
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">44
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">45
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">46
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">47
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">48
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">49
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">50
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">51
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">52
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">53
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">54
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">55
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">56
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">57
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">58
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">59
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">60
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">61
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">62
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">63
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">64
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">65
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">66
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">67
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">68
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">69
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">70
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">71
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">72
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">73
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">74
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">75
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">76
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">77
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">78
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">79
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">80
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">81
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">82
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">83
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">84
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">85
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">86
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
+<span style=color:#080;font-style:italic>;shell in same window</span>
+(<span style=color:#a2f>defun</span> <span style=color:#b8860b>shell-get-buffer-create</span> (<span style=color:#a2f>&amp;optional</span> <span style=color:#b8860b>buffer</span>)
+  <span style=color:#b44>&#34;Run an inferior shell, with I/O through BUFFER (which defaults to </span><span style=color:#b8860b>`*shell*&#39;</span><span style=color:#b44>).
+</span><span style=color:#b44>Interactively, a prefix arg means to prompt for BUFFER.
+</span><span style=color:#b44>If </span><span style=color:#b8860b>`default-directory&#39;</span><span style=color:#b44> is a remote file name, it is also prompted
+</span><span style=color:#b44>to change if called with a prefix arg.
+</span><span style=color:#b44>If BUFFER exists but shell process is not running, make new shell.
+</span><span style=color:#b44>If BUFFER exists and shell process is running, just switch to BUFFER.
+</span><span style=color:#b44>Program used comes from variable </span><span style=color:#b8860b>`explicit-shell-file-name&#39;</span><span style=color:#b44>,
+</span><span style=color:#b44> or (if that is nil) from the ESHELL environment variable,
+</span><span style=color:#b44> or (if that is nil) from </span><span style=color:#b8860b>`shell-file-name&#39;</span><span style=color:#b44>.
+</span><span style=color:#b44>If a file </span><span style=color:#b8860b>`~/.emacs_SHELLNAME&#39;</span><span style=color:#b44> exists, or </span><span style=color:#b8860b>`~/.emacs.d/init_SHELLNAME.sh&#39;</span><span style=color:#b44>,
+</span><span style=color:#b44>it is given as initial input (but this may be lost, due to a timing
+</span><span style=color:#b44>error, if the shell discards input when it starts up).
+</span><span style=color:#b44>The buffer is put in Shell mode, giving commands for sending input
+</span><span style=color:#b44>and controlling the subjobs of the shell.  See </span><span style=color:#b8860b>`shell-mode&#39;</span><span style=color:#b44>.
+</span><span style=color:#b44>See also the variable </span><span style=color:#b8860b>`shell-prompt-pattern&#39;</span><span style=color:#b44>.
+</span><span style=color:#b44>To specify a coding system for converting non-ASCII characters
+</span><span style=color:#b44>in the input and output to the shell, use \\[universal-coding-system-argument]
+</span><span style=color:#b44>before \\[shell].  You can also specify this with \\[set-buffer-process-coding-system]
+</span><span style=color:#b44>in the shell buffer, after you start the shell.
+</span><span style=color:#b44>The default comes from </span><span style=color:#b8860b>`process-coding-system-alist&#39;</span><span style=color:#b44> and
+</span><span style=color:#b44></span><span style=color:#b8860b>`default-process-coding-system&#39;</span><span style=color:#b44>.
+</span><span style=color:#b44>The shell file name (sans directories) is used to make a symbol name
+</span><span style=color:#b44>such as </span><span style=color:#b8860b>`explicit-csh-args&#39;</span><span style=color:#b44>.  If that symbol is a variable,
+</span><span style=color:#b44>its value is used as a list of arguments when invoking the shell.
+</span><span style=color:#b44>Otherwise, one argument </span><span style=color:#b8860b>`-i&#39;</span><span style=color:#b44> is passed to the shell.
+</span><span style=color:#b44>\(Type \\[describe-mode] in the shell buffer for a list of commands.)&#34;</span>
+  (<span style=color:#a2f>interactive</span>
+   (<span style=color:#00a000>list</span>
+    (<span style=color:#a2f>and</span> <span style=color:#b8860b>current-prefix-arg</span>
+   (<span style=color:#a2f>prog1</span>
+       (<span style=color:#00a000>read-buffer</span> <span style=color:#b44>&#34;Shell buffer: &#34;</span>
+        <span style=color:#080;font-style:italic>;; If the current buffer is an inactive</span>
+        <span style=color:#080;font-style:italic>;; shell buffer, use it as the default.</span>
+        (<span style=color:#a2f>if</span> (<span style=color:#a2f>and</span> (<span style=color:#00a000>eq</span> <span style=color:#b8860b>major-mode</span> <span style=color:#b8860b>&#39;shell-mode</span>)
+           (<span style=color:#00a000>null</span> (<span style=color:#00a000>get-buffer-process</span> (<span style=color:#00a000>current-buffer</span>))))
+            (<span style=color:#00a000>buffer-name</span>)
+          (<span style=color:#00a000>generate-new-buffer-name</span> <span style=color:#b44>&#34;*shell*&#34;</span>)))
+     (<span style=color:#a2f>if</span> (<span style=color:#b8860b>file-remote-p</span> <span style=color:#b8860b>default-directory</span>)
+         <span style=color:#080;font-style:italic>;; It must be possible to declare a local default-directory.</span>
+               <span style=color:#080;font-style:italic>;; FIXME: This can&#39;t be right: it changes the default-directory</span>
+               <span style=color:#080;font-style:italic>;; of the current-buffer rather than of the *shell* buffer.</span>
+         (<span style=color:#a2f>setq</span> <span style=color:#b8860b>default-directory</span>
+         (<span style=color:#00a000>expand-file-name</span>
+          (<span style=color:#b8860b>read-directory-name</span>
+           <span style=color:#b44>&#34;Default directory: &#34;</span> <span style=color:#b8860b>default-directory</span> <span style=color:#b8860b>default-directory</span>
+           <span style=color:#800>t</span> <span style=color:#800>nil</span>))))))))
+  (<span style=color:#a2f>setq</span> <span style=color:#b8860b>buffer</span> (<span style=color:#a2f>if</span> (<span style=color:#a2f>or</span> <span style=color:#b8860b>buffer</span> (<span style=color:#b8860b>not</span> (<span style=color:#b8860b>derived-mode-p</span> <span style=color:#b8860b>&#39;shell-mode</span>))
+                       (<span style=color:#b8860b>comint-check-proc</span> (<span style=color:#00a000>current-buffer</span>)))
+                   (<span style=color:#00a000>get-buffer-create</span> (<span style=color:#a2f>or</span> <span style=color:#b8860b>buffer</span> <span style=color:#b44>&#34;*shell*&#34;</span>))
+                 <span style=color:#080;font-style:italic>;; If the current buffer is a dead shell buffer, use it.</span>
+                 (<span style=color:#00a000>current-buffer</span>)))
+<span style=color:#080;font-style:italic>;; On remote hosts, the local `shell-file-name&#39; might be useless.</span>
+  (<span style=color:#a2f>if</span> (<span style=color:#a2f>and</span> (<span style=color:#b8860b>called-interactively-p</span> <span style=color:#b8860b>&#39;any</span>)
+     (<span style=color:#b8860b>file-remote-p</span> <span style=color:#b8860b>default-directory</span>)
+     (<span style=color:#00a000>null</span> <span style=color:#b8860b>explicit-shell-file-name</span>)
+     (<span style=color:#00a000>null</span> (<span style=color:#b8860b>getenv</span> <span style=color:#b44>&#34;ESHELL&#34;</span>)))
+      (<span style=color:#a2f>with-current-buffer</span> <span style=color:#b8860b>buffer</span>
+  (<span style=color:#00a000>set</span> (<span style=color:#00a000>make-local-variable</span> <span style=color:#b8860b>&#39;explicit-shell-file-name</span>)
+       (<span style=color:#b8860b>file-remote-p</span>
+        (<span style=color:#00a000>expand-file-name</span>
+         (<span style=color:#b8860b>read-file-name</span>
+    <span style=color:#b44>&#34;Remote shell path: &#34;</span> <span style=color:#b8860b>default-directory</span> <span style=color:#b8860b>shell-file-name</span>
+    <span style=color:#800>t</span> <span style=color:#b8860b>shell-file-name</span>))
+        <span style=color:#b8860b>&#39;localname</span>))))
+<span style=color:#080;font-style:italic>;; The buffer&#39;s window must be correctly set when we call comint (so</span>
+  <span style=color:#080;font-style:italic>;; that comint sets the COLUMNS env var properly).</span>
+  (<span style=color:#a2f>with-current-buffer</span> <span style=color:#b8860b>buffer</span>
+    (<span style=color:#a2f>unless</span> (<span style=color:#b8860b>comint-check-proc</span> <span style=color:#b8860b>buffer</span>)
+      (<span style=color:#a2f>let*</span> ((<span style=color:#b8860b>prog</span> (<span style=color:#a2f>or</span> <span style=color:#b8860b>explicit-shell-file-name</span>
+           (<span style=color:#b8860b>getenv</span> <span style=color:#b44>&#34;ESHELL&#34;</span>) <span style=color:#b8860b>shell-file-name</span>))
+       (<span style=color:#b8860b>name</span> (<span style=color:#00a000>file-name-nondirectory</span> <span style=color:#b8860b>prog</span>))
+       (<span style=color:#b8860b>startfile</span> (<span style=color:#00a000>concat</span> <span style=color:#b44>&#34;~/.emacs_&#34;</span> <span style=color:#b8860b>name</span>))
+       (<span style=color:#b8860b>xargs-name</span> (<span style=color:#00a000>intern-soft</span> (<span style=color:#00a000>concat</span> <span style=color:#b44>&#34;explicit-&#34;</span> <span style=color:#b8860b>name</span> <span style=color:#b44>&#34;-args&#34;</span>))))
+        (<span style=color:#a2f>unless</span> (<span style=color:#00a000>file-exists-p</span> <span style=color:#b8860b>startfile</span>)
+    (<span style=color:#a2f>setq</span> <span style=color:#b8860b>startfile</span> (<span style=color:#00a000>concat</span> <span style=color:#b8860b>user-emacs-directory</span> <span style=color:#b44>&#34;init_&#34;</span> <span style=color:#b8860b>name</span> <span style=color:#b44>&#34;.sh&#34;</span>)))
+        (<span style=color:#00a000>apply</span> <span style=color:#b8860b>&#39;make-comint-in-buffer</span> <span style=color:#b44>&#34;shell&#34;</span> <span style=color:#b8860b>buffer</span> <span style=color:#b8860b>prog</span>
+         (<span style=color:#a2f>if</span> (<span style=color:#00a000>file-exists-p</span> <span style=color:#b8860b>startfile</span>) <span style=color:#b8860b>startfile</span>)
+         (<span style=color:#a2f>if</span> (<span style=color:#a2f>and</span> <span style=color:#b8860b>xargs-name</span> (<span style=color:#00a000>boundp</span> <span style=color:#b8860b>xargs-name</span>))
+       (<span style=color:#00a000>symbol-value</span> <span style=color:#b8860b>xargs-name</span>)
+           <span style=color:#666>&#39;</span>(<span style=color:#b44>&#34;-i&#34;</span>)))
+        (<span style=color:#b8860b>shell-mode</span>))))
+  <span style=color:#b8860b>buffer</span>)
 
-</code></pre></td></tr></table></div></div><br><h5>Open Shell In Same Window</h5><p class="p-news">Opens a shell in the window you are working.<br></p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
-<span style="color:#080;font-style:italic">;open shell in same window</span>
-(<span style="color:#a2f">defun</span> <span style="color:#b8860b">shell-same-window</span> ()
-(<span style="color:#a2f">interactive</span>)
-(<span style="color:#b8860b">switch-to-buffer</span> (<span style="color:#b8860b">shell-get-buffer-create</span>))
-)<span style="color:#080;font-style:italic">;shell-same-window</span>
+</code></pre></td></tr></table></div></div><br><h5>Open Shell In Same Window</h5><p class=p-news>Opens a shell in the window you are working.<br></p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
+<span style=color:#080;font-style:italic>;open shell in same window</span>
+(<span style=color:#a2f>defun</span> <span style=color:#b8860b>shell-same-window</span> ()
+(<span style=color:#a2f>interactive</span>)
+(<span style=color:#b8860b>switch-to-buffer</span> (<span style=color:#b8860b>shell-get-buffer-create</span>))
+)<span style=color:#080;font-style:italic>;shell-same-window</span>
 
-</code></pre></td></tr></table></div></div><br><h5>Here are couple of mpd player functions.</h5><p class="p-news">The mpd player is the music player I use. You can stream music with it also. It's a command line tool you can read about <a href="https://www.musicpd.org/" target="_blank">here.</a> MPD needs to be stopped and started from the shell. So there are a couple of windows scripts here that do that.</p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
-(<span style="color:#a2f">defun</span> <span style="color:#b8860b">launch-mpd</span> ()
-(<span style="color:#a2f">interactive</span>)
-(<span style="color:#00a000">w32-shell-execute</span> <span style="color:#800">nil</span> <span style="color:#b8860b">mpd-start-p</span> <span style="color:#800">nil</span>)
-)<span style="color:#080;font-style:italic">;end launch mpd</span>
-(<span style="color:#a2f">defun</span> <span style="color:#b8860b">stop-mpd</span> ()
-(<span style="color:#a2f">interactive</span>)
-(<span style="color:#00a000">w32-shell-execute</span> <span style="color:#800">nil</span> <span style="color:#b8860b">mpd-stop-p</span> <span style="color:#800">nil</span>)
-)<span style="color:#080;font-style:italic">;end stop mpd</span>
-<span style="color:#080;font-style:italic">;mpd toggle</span>
-<span style="color:#080;font-style:italic">;(defvar mpd-on 0)</span>
-(<span style="color:#a2f">setq</span> <span style="color:#b8860b">mpd-on</span> <span style="color:#666">0</span>)
-(<span style="color:#a2f">defun</span> <span style="color:#b8860b">toggle-mpd-player</span> ()
-<span style="color:#b44">"Turns on mpd via win com file and winvbs file in mpd-start path if mpd-on = nil. Turns off mpd by win com in mpd-stop path if mpd-on = 1. If mpd started by another process when mpd-on = nil, this function won't work."</span>
-(<span style="color:#a2f">interactive</span>)
-(<span style="color:#a2f">if</span> (<span style="color:#00a000">=</span> <span style="color:#b8860b">mpd-on</span> <span style="color:#666">0</span>)(<span style="color:#a2f">progn</span>(<span style="color:#b8860b">launch-mpd</span>)(<span style="color:#a2f">setq</span> <span style="color:#b8860b">mpd-on</span> <span style="color:#666">1</span>)(<span style="color:#b8860b">mingus-help</span>)(<span style="color:#00a000">get-buffer</span> <span style="color:#b44">"*Mingus Help*"</span>))
-(<span style="color:#a2f">progn</span> (<span style="color:#b8860b">mingus-stop</span>)(<span style="color:#b8860b">stop-mpd</span>)(<span style="color:#a2f">setq</span> <span style="color:#b8860b">mpd-on</span> <span style="color:#666">0</span>)(<span style="color:#00a000">kill-buffer</span> (<span style="color:#00a000">get-buffer</span> <span style="color:#b44">"*Mingus Help*"</span>))
-(<span style="color:#00a000">kill-buffer</span> (<span style="color:#00a000">get-buffer</span> <span style="color:#b44">"*Mingus*"</span>))(<span style="color:#00a000">kill-buffer</span> (<span style="color:#00a000">get-buffer</span> <span style="color:#b44">"*Mingus Browser*"</span>)))))<span style="color:#080;font-style:italic">;end toggle-mpd</span>
+</code></pre></td></tr></table></div></div><br><h5>Here are couple of mpd player functions.</h5><p class=p-news>The mpd player is the music player I use. You can stream music with it also. It's a command line tool you can read about
+<a href=https://www.musicpd.org/ target=_blank>here.</a> MPD needs to be stopped and started from the shell. So there are a couple of
+windows scripts here that do that.</p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
+(<span style=color:#a2f>defun</span> <span style=color:#b8860b>launch-mpd</span> ()
+(<span style=color:#a2f>interactive</span>)
+(<span style=color:#00a000>w32-shell-execute</span> <span style=color:#800>nil</span> <span style=color:#b8860b>mpd-start-p</span> <span style=color:#800>nil</span>)
+)<span style=color:#080;font-style:italic>;end launch mpd</span>
+(<span style=color:#a2f>defun</span> <span style=color:#b8860b>stop-mpd</span> ()
+(<span style=color:#a2f>interactive</span>)
+(<span style=color:#00a000>w32-shell-execute</span> <span style=color:#800>nil</span> <span style=color:#b8860b>mpd-stop-p</span> <span style=color:#800>nil</span>)
+)<span style=color:#080;font-style:italic>;end stop mpd</span>
+<span style=color:#080;font-style:italic>;mpd toggle</span>
+<span style=color:#080;font-style:italic>;(defvar mpd-on 0)</span>
+(<span style=color:#a2f>setq</span> <span style=color:#b8860b>mpd-on</span> <span style=color:#666>0</span>)
+(<span style=color:#a2f>defun</span> <span style=color:#b8860b>toggle-mpd-player</span> ()
+<span style=color:#b44>&#34;Turns on mpd via win com file and winvbs file in mpd-start path if mpd-on = nil. Turns off mpd by win com in mpd-stop path if mpd-on = 1. If mpd started by another process when mpd-on = nil, this function won&#39;t work.&#34;</span>
+(<span style=color:#a2f>interactive</span>)
+(<span style=color:#a2f>if</span> (<span style=color:#00a000>=</span> <span style=color:#b8860b>mpd-on</span> <span style=color:#666>0</span>)(<span style=color:#a2f>progn</span>(<span style=color:#b8860b>launch-mpd</span>)(<span style=color:#a2f>setq</span> <span style=color:#b8860b>mpd-on</span> <span style=color:#666>1</span>)(<span style=color:#b8860b>mingus-help</span>)(<span style=color:#00a000>get-buffer</span> <span style=color:#b44>&#34;*Mingus Help*&#34;</span>))
+(<span style=color:#a2f>progn</span> (<span style=color:#b8860b>mingus-stop</span>)(<span style=color:#b8860b>stop-mpd</span>)(<span style=color:#a2f>setq</span> <span style=color:#b8860b>mpd-on</span> <span style=color:#666>0</span>)(<span style=color:#00a000>kill-buffer</span> (<span style=color:#00a000>get-buffer</span> <span style=color:#b44>&#34;*Mingus Help*&#34;</span>))
+(<span style=color:#00a000>kill-buffer</span> (<span style=color:#00a000>get-buffer</span> <span style=color:#b44>&#34;*Mingus*&#34;</span>))(<span style=color:#00a000>kill-buffer</span> (<span style=color:#00a000>get-buffer</span> <span style=color:#b44>&#34;*Mingus Browser*&#34;</span>)))))<span style=color:#080;font-style:italic>;end toggle-mpd</span>
 
-</code></pre></td></tr></table></div></div><br><p class="p-news">And here are the script paths and scripts. VBS scripts can run without opening a shell window on the desktop, so those scripts reference the windows shell-scripts, which is one way to do it.</p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">mpd-start-p</span> <span style="color:#b44">"...path-to...mpd-windows-master/start-silently-mpd.vbs"</span>)
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">mpd-stop-p</span> <span style="color:#b44">"...path-to...mpd-windows-master/stop-mpd-silently.vbs"</span>)
+</code></pre></td></tr></table></div></div><br><p class=p-news>And here are the script paths and scripts. VBS scripts can run without opening a shell window on the desktop, so those
+scripts reference the windows shell-scripts, which is one way to do it.</p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
+(<span style=color:#a2f>defvar</span> <span style=color:#b8860b>mpd-start-p</span> <span style=color:#b44>&#34;...path-to...mpd-windows-master/start-silently-mpd.vbs&#34;</span>)
+(<span style=color:#a2f>defvar</span> <span style=color:#b8860b>mpd-stop-p</span> <span style=color:#b44>&#34;...path-to...mpd-windows-master/stop-mpd-silently.vbs&#34;</span>)
 
-</code></pre></td></tr></table></div></div><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp"><span style="color:#080;font-style:italic">; start vbs file</span>
-<span style="color:#b8860b">'HideBat.vbs</span>
-<span style="color:#b8860b">CreateObject</span>(<span style="color:#b44">"Wscript.Shell"</span>)<span style="color:#666">.</span><span style="color:#b8860b">Run</span> <span style="color:#b44">"...path-to.../mpd-windows-master/start.bat"</span><span style="color:#666">,</span> <span style="color:#666">0</span><span style="color:#666">,</span> <span style="color:#b8860b">True</span>
+</code></pre></td></tr></table></div></div><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp><span style=color:#080;font-style:italic>; start vbs file</span>
+<span style=color:#b8860b>&#39;HideBat.vbs</span>
+<span style=color:#b8860b>CreateObject</span>(<span style=color:#b44>&#34;Wscript.Shell&#34;</span>)<span style=color:#666>.</span><span style=color:#b8860b>Run</span> <span style=color:#b44>&#34;...path-to.../mpd-windows-master/start.bat&#34;</span><span style=color:#666>,</span> <span style=color:#666>0</span><span style=color:#666>,</span> <span style=color:#b8860b>True</span>
 
-<span style="color:#080;font-style:italic">; stop vbs file</span>
-<span style="color:#b8860b">'HideBat.vbs</span>
-<span style="color:#b8860b">CreateObject</span>(<span style="color:#b44">"Wscript.Shell"</span>)<span style="color:#666">.</span><span style="color:#b8860b">Run</span> <span style="color:#b44">"...path-to.../mpd-windows-master/stop-mpd.cmd"</span><span style="color:#666">,</span> <span style="color:#666">0</span><span style="color:#666">,</span> <span style="color:#b8860b">True</span>
+<span style=color:#080;font-style:italic>; stop vbs file</span>
+<span style=color:#b8860b>&#39;HideBat.vbs</span>
+<span style=color:#b8860b>CreateObject</span>(<span style=color:#b44>&#34;Wscript.Shell&#34;</span>)<span style=color:#666>.</span><span style=color:#b8860b>Run</span> <span style=color:#b44>&#34;...path-to.../mpd-windows-master/stop-mpd.cmd&#34;</span><span style=color:#666>,</span> <span style=color:#666>0</span><span style=color:#666>,</span> <span style=color:#b8860b>True</span>
 
-<span style="color:#080;font-style:italic">;start.bat</span>
-<span style="color:#b8860b">ECHO</span> <span style="color:#b8860b">OFF</span>
+<span style=color:#080;font-style:italic>;start.bat</span>
+<span style=color:#b8860b>ECHO</span> <span style=color:#b8860b>OFF</span>
 
-<span style="color:#b8860b">for</span> <span style="color:#b8860b">/f</span> <span style="color:#b8860b">%%i</span> <span style="color:#b8860b">in</span> (<span style="color:#b44">"%0"</span>) <span style="color:#a2f">do</span> <span style="color:#00a000">set</span> <span style="color:#b8860b">curpath=%%~dpi</span>
-<span style="color:#b8860b">cd</span> <span style="color:#b8860b">/d</span> <span style="color:#b8860b">%curpath%</span>
+<span style=color:#b8860b>for</span> <span style=color:#b8860b>/f</span> <span style=color:#b8860b>%%i</span> <span style=color:#b8860b>in</span> (<span style=color:#b44>&#34;%0&#34;</span>) <span style=color:#a2f>do</span> <span style=color:#00a000>set</span> <span style=color:#b8860b>curpath=%%~dpi</span>
+<span style=color:#b8860b>cd</span> <span style=color:#b8860b>/d</span> <span style=color:#b8860b>%curpath%</span>
 
-<span style="color:#b8860b">mpd.exe</span> <span style="color:#b8860b">--no-daemon</span> <span style="color:#b8860b">-v</span> <span style="color:#b8860b">--stdout</span> <span style="color:#b8860b">mpd.conf</span>
+<span style=color:#b8860b>mpd.exe</span> <span style=color:#b8860b>--no-daemon</span> <span style=color:#b8860b>-v</span> <span style=color:#b8860b>--stdout</span> <span style=color:#b8860b>mpd.conf</span>
 
-<span style="color:#080;font-style:italic">;stop-mdp.cmd</span>
-<span style="color:#b8860b">TASKKILL</span> <span style="color:#b8860b">/IM</span> <span style="color:#b44">"mpd.exe"</span> <span style="color:#b8860b">/F</span>
+<span style=color:#080;font-style:italic>;stop-mdp.cmd</span>
+<span style=color:#b8860b>TASKKILL</span> <span style=color:#b8860b>/IM</span> <span style=color:#b44>&#34;mpd.exe&#34;</span> <span style=color:#b8860b>/F</span>
 
-</code></pre></td></tr></table></div></div><br><p class="p-news">MPD player needs an emacs compatible interface and I use the <a href="https://www.emacswiki.org/emacs/mingus.el" target="_blank">Mingus Player</a> for that. I'll post later the hydra I use to interface the mingus player functions. '</p><p class="p-news">The rest of the functions in this init section support the <a href="https://cloudnine.github.io/science/windows-program-launcher/" target="_blank">Windows Program Launcher</a>. Here's some code for that hydra.</p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
-</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
-(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">program-launcher-title</span> (<span style="color:#b8860b">with-octicon</span> <span style="color:#b44">"device-desktop"</span> <span style="color:#b44">"Windows Program Launcher"</span>))
-<span style="color:#080;font-style:italic">;generate hydra</span>
-(<span style="color:#b8860b">pretty-hydra-define</span> <span style="color:#b8860b">Windows-Exe</span> (<span style="color:#a2f">:title</span> <span style="color:#b8860b">program-launcher-title</span> <span style="color:#a2f">:quit-key</span> <span style="color:#b44">"q"</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
-(<span style="color:#b44">"A"</span>
+</code></pre></td></tr></table></div></div><br><p class=p-news>MPD player needs an emacs compatible interface and I use the <a href=https://www.emacswiki.org/emacs/mingus.el target=_blank>Mingus Player</a> for that. I'll post later the hydra I use to interface the mingus player functions. '</p><p class=p-news>The rest of the functions in this init section support the <a href=https://cloudnine.github.io/science/windows-program-launcher/ target=_blank>Windows Program Launcher</a>. Here's some code for
+that hydra.</p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">39
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">40
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">41
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">42
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
+(<span style=color:#a2f>defvar</span> <span style=color:#b8860b>program-launcher-title</span> (<span style=color:#b8860b>with-octicon</span> <span style=color:#b44>&#34;device-desktop&#34;</span> <span style=color:#b44>&#34;Windows Program Launcher&#34;</span>))
+<span style=color:#080;font-style:italic>;generate hydra</span>
+(<span style=color:#b8860b>pretty-hydra-define</span> <span style=color:#b8860b>Windows-Exe</span> (<span style=color:#a2f>:title</span> <span style=color:#b8860b>program-launcher-title</span> <span style=color:#a2f>:quit-key</span> <span style=color:#b44>&#34;q&#34;</span> <span style=color:#a2f>:color</span> <span style=color:#b8860b>blue</span> )
+(<span style=color:#b44>&#34;A&#34;</span>
 (
-    (<span style="color:#b44">"w"</span> <span style="color:#b8860b">launch-word</span> <span style="color:#b44">"Launch Word"</span>)
-    (<span style="color:#b44">"e"</span> <span style="color:#b8860b">launch-excel</span> <span style="color:#b44">"Launch Excel"</span>)
-    (<span style="color:#b44">"7"</span> <span style="color:#b8860b">launch-7z</span> <span style="color:#b44">"Launch 7zip"</span>)
-    (<span style="color:#b44">"p"</span> <span style="color:#b8860b">launch-powershell</span> <span style="color:#b44">"Launch Powershell"</span> )
-    (<span style="color:#b44">"c"</span> <span style="color:#b8860b">launch-cmd</span> <span style="color:#b44">"Launch Command Prompt"</span>)
-    (<span style="color:#b44">"U"</span> <span style="color:#b8860b">launch-ubuntu1804</span> <span style="color:#b44">"Launch Ubuntu"</span>)
-    (<span style="color:#b44">"u"</span> <span style="color:#b8860b">launch-ubuntu1804-win-p</span> <span style="color:#b44">"Launch Ubuntu Mount"</span>)
-)<span style="color:#080;font-style:italic">;end A</span>
-<span style="color:#b44">"B"</span>
+    (<span style=color:#b44>&#34;w&#34;</span> <span style=color:#b8860b>launch-word</span> <span style=color:#b44>&#34;Launch Word&#34;</span>)
+    (<span style=color:#b44>&#34;e&#34;</span> <span style=color:#b8860b>launch-excel</span> <span style=color:#b44>&#34;Launch Excel&#34;</span>)
+    (<span style=color:#b44>&#34;7&#34;</span> <span style=color:#b8860b>launch-7z</span> <span style=color:#b44>&#34;Launch 7zip&#34;</span>)
+    (<span style=color:#b44>&#34;p&#34;</span> <span style=color:#b8860b>launch-powershell</span> <span style=color:#b44>&#34;Launch Powershell&#34;</span> )
+    (<span style=color:#b44>&#34;c&#34;</span> <span style=color:#b8860b>launch-cmd</span> <span style=color:#b44>&#34;Launch Command Prompt&#34;</span>)
+    (<span style=color:#b44>&#34;U&#34;</span> <span style=color:#b8860b>launch-ubuntu1804</span> <span style=color:#b44>&#34;Launch Ubuntu&#34;</span>)
+    (<span style=color:#b44>&#34;u&#34;</span> <span style=color:#b8860b>launch-ubuntu1804-win-p</span> <span style=color:#b44>&#34;Launch Ubuntu Mount&#34;</span>)
+)<span style=color:#080;font-style:italic>;end A</span>
+<span style=color:#b44>&#34;B&#34;</span>
 (
-    (<span style="color:#b44">"g"</span> <span style="color:#b8860b">launch-gimp</span> <span style="color:#b44">"Launch Gimp"</span> )
-    (<span style="color:#b44">"i"</span> <span style="color:#b8860b">launch-inkscape</span> <span style="color:#b44">"Launch Inkscape"</span> )
-    (<span style="color:#b44">"f"</span> <span style="color:#b8860b">launch-fsviewer</span> <span style="color:#b44">"Launch FSViewer"</span> )
-    ( <span style="color:#b44">"@"</span> <span style="color:#b8860b">launch-paint</span> <span style="color:#b44">"Launch Paint"</span>)
-    (<span style="color:#b44">"m"</span> <span style="color:#b8860b">launch-mpd</span> <span style="color:#b44">"Launch MPD Music Player"</span> )
-    (<span style="color:#b44">"o"</span> <span style="color:#b8860b">launch-onedrive</span> <span style="color:#b44">"Launch Onedrive"</span> )
-    (<span style="color:#b44">"k"</span> <span style="color:#b8860b">launch-keycast</span> <span style="color:#b44">"Launch Keycast"</span> )
+    (<span style=color:#b44>&#34;g&#34;</span> <span style=color:#b8860b>launch-gimp</span> <span style=color:#b44>&#34;Launch Gimp&#34;</span> )
+    (<span style=color:#b44>&#34;i&#34;</span> <span style=color:#b8860b>launch-inkscape</span> <span style=color:#b44>&#34;Launch Inkscape&#34;</span> )
+    (<span style=color:#b44>&#34;f&#34;</span> <span style=color:#b8860b>launch-fsviewer</span> <span style=color:#b44>&#34;Launch FSViewer&#34;</span> )
+    ( <span style=color:#b44>&#34;@&#34;</span> <span style=color:#b8860b>launch-paint</span> <span style=color:#b44>&#34;Launch Paint&#34;</span>)
+    (<span style=color:#b44>&#34;m&#34;</span> <span style=color:#b8860b>launch-mpd</span> <span style=color:#b44>&#34;Launch MPD Music Player&#34;</span> )
+    (<span style=color:#b44>&#34;o&#34;</span> <span style=color:#b8860b>launch-onedrive</span> <span style=color:#b44>&#34;Launch Onedrive&#34;</span> )
+    (<span style=color:#b44>&#34;k&#34;</span> <span style=color:#b8860b>launch-keycast</span> <span style=color:#b44>&#34;Launch Keycast&#34;</span> )
 
-)<span style="color:#080;font-style:italic">;end B</span>
+)<span style=color:#080;font-style:italic>;end B</span>
 
-<span style="color:#b44">"C"</span>
+<span style=color:#b44>&#34;C&#34;</span>
 (
-     (<span style="color:#b44">"x"</span> <span style="color:#b8860b">launch-xampp</span> <span style="color:#b44">"Launch Xampp"</span>)
-     (<span style="color:#b44">"l"</span> <span style="color:#b8860b">launch-live-reload</span> <span style="color:#b44">"Launch Live Reload"</span>)
-     (<span style="color:#b44">"n"</span> <span style="color:#b8860b">launch-notepad++</span> <span style="color:#b44">"Launch Notepad++"</span>)
-     (<span style="color:#b44">"d"</span> <span style="color:#b8860b">launch-dropbox</span> <span style="color:#b44">"Launch Dropbox"</span>)
-     (<span style="color:#b44">"a"</span> <span style="color:#b8860b">launch-atom</span> <span style="color:#b44">"Launch Atom Editor"</span>)
-     (<span style="color:#b44">"s"</span> <span style="color:#b8860b">launch-screen-cast</span> <span style="color:#b44">"Launch Screen Cast Viewer"</span> )
-     (<span style="color:#b44">"+"</span> <span style="color:#b8860b">launch-win-calc</span> <span style="color:#b44">"Launch Calculator"</span>)
-     (<span style="color:#b44">"h"</span> <span style="color:#b8860b">hydra-helm/body</span> <span style="color:#b44">"Return To Helm"</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span> )
-     (<span style="color:#b44">"&lt;SPC>"</span> <span style="color:#800">nil</span> <span style="color:#b44">"Quit"</span> <span style="color:#a2f">:color</span> <span style="color:#b8860b">blue</span>)
-)<span style="color:#080;font-style:italic">;end C</span>
-)<span style="color:#080;font-style:italic">;end hydra body</span>
-)<span style="color:#080;font-style:italic">;end pretty-hydra-appearance</span>
-(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"&lt;C-m> x"</span> <span style="color:#b8860b">'Windows-Exe/body</span>)
+     (<span style=color:#b44>&#34;x&#34;</span> <span style=color:#b8860b>launch-xampp</span> <span style=color:#b44>&#34;Launch Xampp&#34;</span>)
+     (<span style=color:#b44>&#34;l&#34;</span> <span style=color:#b8860b>launch-live-reload</span> <span style=color:#b44>&#34;Launch Live Reload&#34;</span>)
+     (<span style=color:#b44>&#34;n&#34;</span> <span style=color:#b8860b>launch-notepad++</span> <span style=color:#b44>&#34;Launch Notepad++&#34;</span>)
+     (<span style=color:#b44>&#34;d&#34;</span> <span style=color:#b8860b>launch-dropbox</span> <span style=color:#b44>&#34;Launch Dropbox&#34;</span>)
+     (<span style=color:#b44>&#34;a&#34;</span> <span style=color:#b8860b>launch-atom</span> <span style=color:#b44>&#34;Launch Atom Editor&#34;</span>)
+     (<span style=color:#b44>&#34;s&#34;</span> <span style=color:#b8860b>launch-screen-cast</span> <span style=color:#b44>&#34;Launch Screen Cast Viewer&#34;</span> )
+     (<span style=color:#b44>&#34;+&#34;</span> <span style=color:#b8860b>launch-win-calc</span> <span style=color:#b44>&#34;Launch Calculator&#34;</span>)
+     (<span style=color:#b44>&#34;h&#34;</span> <span style=color:#b8860b>hydra-helm/body</span> <span style=color:#b44>&#34;Return To Helm&#34;</span> <span style=color:#a2f>:color</span> <span style=color:#b8860b>blue</span> )
+     (<span style=color:#b44>&#34;&lt;SPC&gt;&#34;</span> <span style=color:#800>nil</span> <span style=color:#b44>&#34;Quit&#34;</span> <span style=color:#a2f>:color</span> <span style=color:#b8860b>blue</span>)
+)<span style=color:#080;font-style:italic>;end C</span>
+)<span style=color:#080;font-style:italic>;end hydra body</span>
+)<span style=color:#080;font-style:italic>;end pretty-hydra-appearance</span>
+(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;&lt;C-m&gt; x&#34;</span> <span style=color:#b8860b>&#39;Windows-Exe/body</span>)
 
-</code></pre></td></tr></table></div></div><br><p class="p-news">So that's all for this section. Next are defaults and customizations. If you already have an emacs init you should be familiar with many of the upcoming defaults.</p><div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-31-some-emacs-configuration-functions%2f&text=Emacs%20Functions%20%28And%20Program%20Launcher%20Hydra%29&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Tweet</small></div></a><a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-31-some-emacs-configuration-functions%2f&t=Emacs%20Functions%20%28And%20Program%20Launcher%20Hydra%29" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-facebook fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-31-some-emacs-configuration-functions%2f&title=Emacs%20Functions%20%28And%20Program%20Launcher%20Hydra%29&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href="javascript:window.print()" title="Print this article" class="p-2" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i> <i class="fa fa-print fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Print</small></div></a></div><div id="disqus_thread"></div><script type="text/javascript">(function() {
-      
-      
-      if (window.location.hostname == "localhost")
-                return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'cloud-nine-2';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br><br></article></div></main><div id="banner"></div><div id="sidebar" class="sidebar d-print-none d-none d-md-block"><h2 class="center">Meet The Author</h2><div class="mobile-iframe"><iframe width="360" height="180" src="https://www.youtube.com/embed/HR3O17D0MaE?start=0.2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><p>Hi, I'm <strong>Yuri Tricys</strong>, the author of Cloud Nine. I'm a <strong>researcher</strong>, <strong>technical writer</strong>, <strong>data analyst</strong>, and <strong>web developer</strong>.</p><p>Cloud Nine is a place where you can browse some of the <strong>free</strong> content I create.</p><p>You can also <strong>outsource</strong> <strong>research</strong> to me directly. In fact, I encourage you to do so.</p><p>Just send an e-mail to <a href="mailto:tricys@alumni.ubc.ca? subject=Research">tricys@alumni.ubc.ca</a> with "Research" in the subject line and I'll get back to you.</p><h2 class="center">Featured Video</h2><div class="mobile-iframe"><iframe width="360" height="180" src="https://www.youtube.com/embed/-XxEX3LUgOY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><h2 class="mt-4">Featured Posts</h2><nav class="nav flex-column"><a href="https://cloudnine.github.io/motivation/2020-02-25-developing-cognitive-ambidexterity/" class="nav-link">Developing Cognitive Ambidexterity</a> <a href="https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/" class="nav-link">Emacs Bookmarks</a></nav><h2 class="mt-4">Recent Posts</h2><nav class="nav flex-column"><a href="https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/" class="nav-link">The Web Developer Hydra</a> <a href="https://cloudnine.github.io/science/2020-04-09-helm-hydra/" class="nav-link">The Helm Hydra</a> <a href="https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/" class="nav-link">Dune, by Frank Herbert</a> <a href="https://cloudnine.github.io/books/2020-04-07-citadel-algis-budrys/" class="nav-link">Citadel, by Algis Budrys</a> <a href="https://cloudnine.github.io/science/2020-03-29-emacs-elnode-and-editor-hydra/" class="nav-link">Emacs Configuration Elnode and the Editor Hydra</a> <a href="https://cloudnine.github.io/books/2020-03-28-american-financier/" class="nav-link">American Financier, by Jean Strous</a></nav><h2 class="mt-4 text-capitalize">categories</h2><nav class="nav flex-column"><a href="https://cloudnine.github.io/categories/computer-science/" class="nav-link">computer-science <span class="badge badge-pill badge-secondary">42</span> </a><a href="https://cloudnine.github.io/categories/economics/" class="nav-link">economics <span class="badge badge-pill badge-secondary">28</span> </a><a href="https://cloudnine.github.io/categories/finance/" class="nav-link">finance <span class="badge badge-pill badge-secondary">19</span> </a><a href="https://cloudnine.github.io/categories/business/" class="nav-link">business <span class="badge badge-pill badge-secondary">18</span> </a><a href="https://cloudnine.github.io/categories/politics/" class="nav-link">politics <span class="badge badge-pill badge-secondary">13</span> </a><a href="https://cloudnine.github.io/categories/psychology/" class="nav-link">psychology <span class="badge badge-pill badge-secondary">11</span> </a><a href="https://cloudnine.github.io/categories/statistics/" class="nav-link">statistics <span class="badge badge-pill badge-secondary">4</span> </a><a href="https://cloudnine.github.io/categories/links/" class="nav-link">links <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/categories/math/" class="nav-link">math <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/categories/ethics/" class="nav-link">ethics <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/history/" class="nav-link">history <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/law/" class="nav-link">law <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/maths/" class="nav-link">maths <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/movies/" class="nav-link">movies <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/music/" class="nav-link">music <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/philosophy/" class="nav-link">philosophy <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/categories/physics/" class="nav-link">physics <span class="badge badge-pill badge-secondary">1</span></a></nav><h2 class="mt-4 text-capitalize">tags</h2><nav class="nav flex-column"><a href="https://cloudnine.github.io/tags/learning-center/" class="nav-link">learning-center <span class="badge badge-pill badge-secondary">47</span> </a><a href="https://cloudnine.github.io/tags/emacs/" class="nav-link">emacs <span class="badge badge-pill badge-secondary">24</span> </a><a href="https://cloudnine.github.io/tags/data-science/" class="nav-link">data-science <span class="badge badge-pill badge-secondary">20</span> </a><a href="https://cloudnine.github.io/tags/newsroom/" class="nav-link">newsroom <span class="badge badge-pill badge-secondary">19</span> </a><a href="https://cloudnine.github.io/tags/data-firm/" class="nav-link">data-firm <span class="badge badge-pill badge-secondary">16</span> </a><a href="https://cloudnine.github.io/tags/emacs-hydras/" class="nav-link">emacs-hydras <span class="badge badge-pill badge-secondary">14</span> </a><a href="https://cloudnine.github.io/tags/macroeconomics/" class="nav-link">macroeconomics <span class="badge badge-pill badge-secondary">14</span> </a><a href="https://cloudnine.github.io/tags/opinion/" class="nav-link">opinion <span class="badge badge-pill badge-secondary">14</span> </a><a href="https://cloudnine.github.io/tags/personal-development/" class="nav-link">personal-development <span class="badge badge-pill badge-secondary">12</span> </a><a href="https://cloudnine.github.io/tags/research/" class="nav-link">research <span class="badge badge-pill badge-secondary">10</span> </a><a href="https://cloudnine.github.io/tags/trends-global/" class="nav-link">trends-global <span class="badge badge-pill badge-secondary">9</span> </a><a href="https://cloudnine.github.io/tags/trade/" class="nav-link">trade <span class="badge badge-pill badge-secondary">8</span> </a><a href="https://cloudnine.github.io/tags/academic/" class="nav-link">academic <span class="badge badge-pill badge-secondary">5</span> </a><a href="https://cloudnine.github.io/tags/music/" class="nav-link">music <span class="badge badge-pill badge-secondary">5</span> </a><a href="https://cloudnine.github.io/tags/emacs-functions/" class="nav-link">emacs-functions <span class="badge badge-pill badge-secondary">4</span> </a><a href="https://cloudnine.github.io/tags/organizational-psychology/" class="nav-link">organizational-psychology <span class="badge badge-pill badge-secondary">4</span> </a><a href="https://cloudnine.github.io/tags/stock-market/" class="nav-link">stock-market <span class="badge badge-pill badge-secondary">4</span> </a><a href="https://cloudnine.github.io/tags/about-the-author/" class="nav-link">about-the-author <span class="badge badge-pill badge-secondary">3</span> </a><a href="https://cloudnine.github.io/tags/non-fiction/" class="nav-link">non-fiction <span class="badge badge-pill badge-secondary">3</span> </a><a href="https://cloudnine.github.io/tags/science-fiction/" class="nav-link">science-fiction <span class="badge badge-pill badge-secondary">3</span> </a><a href="https://cloudnine.github.io/tags/featured/" class="nav-link">featured <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/r-programming/" class="nav-link">r-programming <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/text-editors/" class="nav-link">text-editors <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/video/" class="nav-link">video <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/windows/" class="nav-link">windows <span class="badge badge-pill badge-secondary">2</span> </a><a href="https://cloudnine.github.io/tags/alternative-energy/" class="nav-link">alternative-energy <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/blog/" class="nav-link">blog <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/blog-links/" class="nav-link">blog-links <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/calculus/" class="nav-link">calculus <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/changing-computers/" class="nav-link">changing-computers <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/climate-change/" class="nav-link">climate-change <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/computational-modelling/" class="nav-link">computational-modelling <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/custom-charts/" class="nav-link">custom-charts <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/data-links/" class="nav-link">data-links <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/economics/" class="nav-link">economics <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/investing/" class="nav-link">investing <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/news-room/" class="nav-link">news-room <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/public-sector/" class="nav-link">public-sector <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/tech/" class="nav-link">tech <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/video-emacs/" class="nav-link">video-emacs <span class="badge badge-pill badge-secondary">1</span> </a><a href="https://cloudnine.github.io/tags/video-motivational/" class="nav-link">video-motivational <span class="badge badge-pill badge-secondary">1</span></a></nav></div><div id="ads"></div><footer id="footer" class="mt-auto footer d-print-none"><div class="container-fluid"><div class="row justify-content-center"><div class="col-md-4 col-xl-3"><h5>Website</h5>This blog was created using <a href="https://gohugo.io/">Hugo</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, and the Silhouette Hugo theme.</div><div class="col-md-4 col-xl-3"><h5>Disclaimer</h5>Opinions expressed here are my own and may not reflect those of any company I work for, or people I work with.</div><div class="col-md-4 col-xl-3"><h5></h5>© 2019 -<script>document.write(Date().split` `[3])</script>Yuri Tricys</div></div><hr><div class="d-flex justify-content-center icons"><a class="py-2 px-2" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><i class="fab fa-linkedin"></i></a> <a class="py-2 px-2" href="https://cloudnine.github.io/index.xml"><i class="fas fa-rss"></i></a></div></div></footer></div></body></html>
+</code></pre></td></tr></table></div></div><br><p class=p-news>So that's all for this section. Next are defaults and customizations. If you already have an emacs init you should be
+familiar with many of the upcoming defaults.</p><div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-31-some-emacs-configuration-functions%2f&text=Emacs%20Functions%20%28And%20Program%20Launcher%20Hydra%29&tw_p=tweetbutton" class=p-2 title="Share on Twitter" target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Tweet</small></div></a><a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-31-some-emacs-configuration-functions%2f&t=Emacs%20Functions%20%28And%20Program%20Launcher%20Hydra%29" class=p-2 title="Share on Facebook" target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-facebook fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-01-31-some-emacs-configuration-functions%2f&title=Emacs%20Functions%20%28And%20Program%20Launcher%20Hydra%29&source=mattbutton.com" class=p-2 title="Share on LinkedIn" target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href=javascript:window.print() title="Print this article" class=p-2 target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fa fa-print fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Print</small></div></a></div><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")
+return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;var disqus_shortname='cloud-nine-2';dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=http://disqus.com/ class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a><br><br></article></div></main><div id=banner></div><div id=sidebar class="sidebar d-print-none d-none d-md-block"><h2 class=center>Meet The Author</h2><div class=mobile-iframe><iframe width=360 height=180 src="https://www.youtube.com/embed/HR3O17D0MaE?start=0.2" frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><p>Hi, I'm <strong>Yuri Tricys</strong>, the author of Cloud Nine. I'm a <strong>researcher</strong>, <strong>technical writer</strong>, <strong>data analyst</strong>, and <strong>web developer</strong>.</p><p>Cloud Nine is a place where you can browse some of the <strong>free</strong> content I create.</p><p>You can also <strong>outsource</strong> <strong>research</strong> to me directly. In fact, I encourage you to do so.</p><p>Just send an e-mail to <a href="mailto:tricys@alumni.ubc.ca? subject=Research">tricys@alumni.ubc.ca</a> with "Research" in the subject line and I'll get back to you.</p><h2 class=center>Featured Video</h2><div class=mobile-iframe><iframe width=360 height=180 src=https://www.youtube.com/embed/-XxEX3LUgOY frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><h2 class=mt-4>Featured Posts</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/motivation/2020-02-25-developing-cognitive-ambidexterity/ class=nav-link>Developing Cognitive Ambidexterity</a>
+<a href=https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/ class=nav-link>Emacs Bookmarks</a></nav><h2 class=mt-4>Recent Posts</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/ class=nav-link>The Web Developer Hydra</a>
+<a href=https://cloudnine.github.io/science/2020-04-09-helm-hydra/ class=nav-link>The Helm Hydra</a>
+<a href=https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/ class=nav-link>Dune, by Frank Herbert</a>
+<a href=https://cloudnine.github.io/books/2020-04-07-citadel-algis-budrys/ class=nav-link>Citadel, by Algis Budrys</a>
+<a href=https://cloudnine.github.io/science/2020-03-29-emacs-elnode-and-editor-hydra/ class=nav-link>Emacs Configuration Elnode and the Editor Hydra</a>
+<a href=https://cloudnine.github.io/books/2020-03-28-american-financier/ class=nav-link>American Financier, by Jean Strous</a></nav><h2 class="mt-4 text-capitalize">categories</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/categories/computer-science/ class=nav-link>computer-science
+<span class="badge badge-pill badge-secondary">42</span></a>
+<a href=https://cloudnine.github.io/categories/economics/ class=nav-link>economics
+<span class="badge badge-pill badge-secondary">28</span></a>
+<a href=https://cloudnine.github.io/categories/finance/ class=nav-link>finance
+<span class="badge badge-pill badge-secondary">19</span></a>
+<a href=https://cloudnine.github.io/categories/business/ class=nav-link>business
+<span class="badge badge-pill badge-secondary">18</span></a>
+<a href=https://cloudnine.github.io/categories/politics/ class=nav-link>politics
+<span class="badge badge-pill badge-secondary">13</span></a>
+<a href=https://cloudnine.github.io/categories/psychology/ class=nav-link>psychology
+<span class="badge badge-pill badge-secondary">11</span></a>
+<a href=https://cloudnine.github.io/categories/statistics/ class=nav-link>statistics
+<span class="badge badge-pill badge-secondary">4</span></a>
+<a href=https://cloudnine.github.io/categories/links/ class=nav-link>links
+<span class="badge badge-pill badge-secondary">2</span></a>
+<a href=https://cloudnine.github.io/categories/math/ class=nav-link>math
+<span class="badge badge-pill badge-secondary">2</span></a>
+<a href=https://cloudnine.github.io/categories/ethics/ class=nav-link>ethics
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/categories/history/ class=nav-link>history
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/categories/law/ class=nav-link>law
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/categories/maths/ class=nav-link>maths
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/categories/movies/ class=nav-link>movies
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/categories/music/ class=nav-link>music
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/categories/philosophy/ class=nav-link>philosophy
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/categories/physics/ class=nav-link>physics
+<span class="badge badge-pill badge-secondary">1</span></a></nav><h2 class="mt-4 text-capitalize">tags</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/tags/learning-center/ class=nav-link>learning-center
+<span class="badge badge-pill badge-secondary">47</span></a>
+<a href=https://cloudnine.github.io/tags/emacs/ class=nav-link>emacs
+<span class="badge badge-pill badge-secondary">24</span></a>
+<a href=https://cloudnine.github.io/tags/data-science/ class=nav-link>data-science
+<span class="badge badge-pill badge-secondary">20</span></a>
+<a href=https://cloudnine.github.io/tags/newsroom/ class=nav-link>newsroom
+<span class="badge badge-pill badge-secondary">19</span></a>
+<a href=https://cloudnine.github.io/tags/data-firm/ class=nav-link>data-firm
+<span class="badge badge-pill badge-secondary">16</span></a>
+<a href=https://cloudnine.github.io/tags/emacs-hydras/ class=nav-link>emacs-hydras
+<span class="badge badge-pill badge-secondary">14</span></a>
+<a href=https://cloudnine.github.io/tags/macroeconomics/ class=nav-link>macroeconomics
+<span class="badge badge-pill badge-secondary">14</span></a>
+<a href=https://cloudnine.github.io/tags/opinion/ class=nav-link>opinion
+<span class="badge badge-pill badge-secondary">14</span></a>
+<a href=https://cloudnine.github.io/tags/personal-development/ class=nav-link>personal-development
+<span class="badge badge-pill badge-secondary">12</span></a>
+<a href=https://cloudnine.github.io/tags/research/ class=nav-link>research
+<span class="badge badge-pill badge-secondary">10</span></a>
+<a href=https://cloudnine.github.io/tags/trends-global/ class=nav-link>trends-global
+<span class="badge badge-pill badge-secondary">9</span></a>
+<a href=https://cloudnine.github.io/tags/trade/ class=nav-link>trade
+<span class="badge badge-pill badge-secondary">8</span></a>
+<a href=https://cloudnine.github.io/tags/academic/ class=nav-link>academic
+<span class="badge badge-pill badge-secondary">5</span></a>
+<a href=https://cloudnine.github.io/tags/music/ class=nav-link>music
+<span class="badge badge-pill badge-secondary">5</span></a>
+<a href=https://cloudnine.github.io/tags/emacs-functions/ class=nav-link>emacs-functions
+<span class="badge badge-pill badge-secondary">4</span></a>
+<a href=https://cloudnine.github.io/tags/organizational-psychology/ class=nav-link>organizational-psychology
+<span class="badge badge-pill badge-secondary">4</span></a>
+<a href=https://cloudnine.github.io/tags/stock-market/ class=nav-link>stock-market
+<span class="badge badge-pill badge-secondary">4</span></a>
+<a href=https://cloudnine.github.io/tags/about-the-author/ class=nav-link>about-the-author
+<span class="badge badge-pill badge-secondary">3</span></a>
+<a href=https://cloudnine.github.io/tags/non-fiction/ class=nav-link>non-fiction
+<span class="badge badge-pill badge-secondary">3</span></a>
+<a href=https://cloudnine.github.io/tags/science-fiction/ class=nav-link>science-fiction
+<span class="badge badge-pill badge-secondary">3</span></a>
+<a href=https://cloudnine.github.io/tags/featured/ class=nav-link>featured
+<span class="badge badge-pill badge-secondary">2</span></a>
+<a href=https://cloudnine.github.io/tags/r-programming/ class=nav-link>r-programming
+<span class="badge badge-pill badge-secondary">2</span></a>
+<a href=https://cloudnine.github.io/tags/text-editors/ class=nav-link>text-editors
+<span class="badge badge-pill badge-secondary">2</span></a>
+<a href=https://cloudnine.github.io/tags/video/ class=nav-link>video
+<span class="badge badge-pill badge-secondary">2</span></a>
+<a href=https://cloudnine.github.io/tags/windows/ class=nav-link>windows
+<span class="badge badge-pill badge-secondary">2</span></a>
+<a href=https://cloudnine.github.io/tags/alternative-energy/ class=nav-link>alternative-energy
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/blog/ class=nav-link>blog
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/blog-links/ class=nav-link>blog-links
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/calculus/ class=nav-link>calculus
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/changing-computers/ class=nav-link>changing-computers
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/climate-change/ class=nav-link>climate-change
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/computational-modelling/ class=nav-link>computational-modelling
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/custom-charts/ class=nav-link>custom-charts
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/data-links/ class=nav-link>data-links
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/economics/ class=nav-link>economics
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/investing/ class=nav-link>investing
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/news-room/ class=nav-link>news-room
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/public-sector/ class=nav-link>public-sector
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/tech/ class=nav-link>tech
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/video-emacs/ class=nav-link>video-emacs
+<span class="badge badge-pill badge-secondary">1</span></a>
+<a href=https://cloudnine.github.io/tags/video-motivational/ class=nav-link>video-motivational
+<span class="badge badge-pill badge-secondary">1</span></a></nav></div><div id=ads></div><footer id=footer class="mt-auto footer d-print-none"><div class=container-fluid><div class="row justify-content-center"><div class="col-md-4 col-xl-3"><h5>Website</h5>This blog was created using <a href=https://gohugo.io/>Hugo</a>,
+<a href=https://getbootstrap.com/>Bootstrap</a>, and the Silhouette Hugo theme.</div><div class="col-md-4 col-xl-3"><h5>Disclaimer</h5>Opinions expressed here are my own and may not reflect those of any company I work for, or people I
+work with.</div><div class="col-md-4 col-xl-3"><h5></h5>© 2019 - <script>document.write(Date().split` `[3])</script>Yuri Tricys</div></div><hr><div class="d-flex justify-content-center icons"><a class="py-2 px-2" href=https://www.linkedin.com/in/yuri-tricys-aa004b26/><i class="fab fa-linkedin"></i></a><a class="py-2 px-2" href=https://cloudnine.github.io/index.xml><i class="fas fa-rss"></i></a></div></div></footer></div></body></html>
