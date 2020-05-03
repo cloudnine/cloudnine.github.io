@@ -1,62 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>music on Cloud Nine</title>
-    <link>https://cloudnine.github.io/tags/music/</link>
-    <description>Recent content in music on Cloud Nine</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://cloudnine.github.io/tags/music/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Test Video Background </title>
-      <link>https://cloudnine.github.io/current/2020-04-20-video-test/</link>
-      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/current/2020-04-20-video-test/</guid>
-      <description>Absolutely amazing smash wire gig to check out here. Can you think of any other way you would rather spend your afternoon?Probably not. Well. We can. We would like to spend our afternoon having a party with these cool folks. Wow! Best and cheapest font ever!A lorem ipsum dolor sit amet, consectetur adipiscing? Tellus integer feugiat scelerisque varius morbi enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis.</description>
-    </item>
-    
-    <item>
-      <title>What&#39;s So Great About the Cloverfield Paradox?</title>
-      <link>https://cloudnine.github.io/current/2020-04-10-cloverfield-paradox-film/</link>
-      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/current/2020-04-10-cloverfield-paradox-film/</guid>
-      <description>Nothing, but it could have been worse. Actually, I got bored anddidn&#39;t watch it all. I&#39;m writing about it here because there were a couple of things I liked. I&#39;ll tell you about those shortly.
-First, disclaimer: I didn&#39;t watch any of the Cloverfield series. They must have been good though, because they made a lot of money. The box office from the first one, &#34;Cloverfield,&#34; released in 2008, something like tripled cost.</description>
-    </item>
-    
-    <item>
-      <title>Hello Music Playlist - Music You Can Work To</title>
-      <link>https://cloudnine.github.io/about/02-12-2019-hello-music-playlist-work/</link>
-      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/about/02-12-2019-hello-music-playlist-work/</guid>
-      <description>PreambleThere&#39;s a lot of good music made for television streams these days. I typically work in silence, but With this stuff I can play low-volume background music and get still get a lot done.                                      </description>
-    </item>
-    
-    <item>
-      <title>Hello Music Playlist</title>
-      <link>https://cloudnine.github.io/about/01-12-2019-hello-music-playlist-exercise-bike/</link>
-      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/about/01-12-2019-hello-music-playlist-exercise-bike/</guid>
-      <description>PreambleThere&#39;s not a lot of time to sort unstructured music archives. Take what you find here and have fun with it.Stuff to listen to while contemplating the work you have to do          Stuff to listen to after stuffing yourself        Stuff to listen to on the exercise bike                    </description>
-    </item>
-    
-    <item>
-      <title>Hello Music Playlist - Saki Kaskas</title>
-      <link>https://cloudnine.github.io/about/01-11-2019-hello-music-playlist-saki/</link>
-      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/about/01-11-2019-hello-music-playlist-saki/</guid>
-      <description>PreambleI knew Saki through my highschool gang&#39;s band Omnibol.He was straight-up, humble, and authentic - and he had a monster talent. Didn&#39;t see him around much over the years but when I did we&#39;d gel. Rest In Peace Saki.
-                                                                                            </description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>music on Cloud Nine</title><link>https://cloudnine.github.io/tags/music/</link><description>Recent content in music on Cloud Nine</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/music/index.xml" rel="self" type="application/rss+xml"/><item><title>Test Video Background</title><link>https://cloudnine.github.io/current/2020-04-20-video-test/</link><pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate><guid>https://cloudnine.github.io/current/2020-04-20-video-test/</guid><description>Absolutely amazing smash wire gig to check out here. Can you think of any other way you would rather spend your afternoon?
+Probably not.
+Well. We can. We would like to spend our afternoon having a party with these cool folks. Wow! Best and cheapest font ever!
+A lorem ipsum dolor sit amet, consectetur adipiscing? Tellus integer feugiat scelerisque varius morbi enim nunc, faucibus a pellentesque sit amet, porttitor eget dolor morbi non arcu risus, quis.</description></item><item><title>What's So Great About the Cloverfield Paradox?</title><link>https://cloudnine.github.io/current/2020-04-10-cloverfield-paradox-film/</link><pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate><guid>https://cloudnine.github.io/current/2020-04-10-cloverfield-paradox-film/</guid><description>Nothing, but it could have been worse. Actually, I got bored and
+didn't watch it all. I'm writing about it here because there were a couple of things I liked. I'll tell you about those shortly.
+First, disclaimer: I didn't watch any of the Cloverfield series. They must have been good though, because they made a lot of money. The box office from the first one, "Cloverfield," released in 2008, something like tripled cost.</description></item><item><title>Hello Music Playlist - Music You Can Work To</title><link>https://cloudnine.github.io/about/02-12-2019-hello-music-playlist-work/</link><pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate><guid>https://cloudnine.github.io/about/02-12-2019-hello-music-playlist-work/</guid><description>Preamble
+There's a lot of good music made for television streams these days. I typically work in silence, but With this stuff I can play low-volume background music and get still get a lot done.</description></item><item><title>Hello Music Playlist</title><link>https://cloudnine.github.io/about/01-12-2019-hello-music-playlist-exercise-bike/</link><pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate><guid>https://cloudnine.github.io/about/01-12-2019-hello-music-playlist-exercise-bike/</guid><description>Preamble
+There's not a lot of time to sort unstructured music archives. Take what you find here and have fun with it.
+Stuff to listen to while contemplating the work you have to do
+Stuff to listen to after stuffing yourself
+Stuff to listen to on the exercise bike</description></item><item><title>Hello Music Playlist - Saki Kaskas</title><link>https://cloudnine.github.io/about/01-11-2019-hello-music-playlist-saki/</link><pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate><guid>https://cloudnine.github.io/about/01-11-2019-hello-music-playlist-saki/</guid><description>Preamble
+I knew Saki through my highschool gang's band Omnibol.
+He was straight-up, humble, and authentic - and he had a monster talent. Didn't see him around much over the years but when I did we'd gel. Rest In Peace Saki.</description></item></channel></rss>

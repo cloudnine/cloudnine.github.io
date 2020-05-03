@@ -1,24 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>alternative-energy on Cloud Nine</title>
-    <link>https://cloudnine.github.io/tags/alternative-energy/</link>
-    <description>Recent content in alternative-energy on Cloud Nine</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Tue, 20 Feb 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://cloudnine.github.io/tags/alternative-energy/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Cobalt: Attractive, But Not Without Its Downsides</title>
-      <link>https://cloudnine.github.io/archives/2018-02-20-cobalt-attractive-not-without-downsides/</link>
-      <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/archives/2018-02-20-cobalt-attractive-not-without-downsides/</guid>
-      <description>The price of a metric ton of cobalt, the precious metal used in lithium batteries, increased 60% in the last year to $81,500USD, a 264% increase since its all time low in February of 2016. Higher prices have lifted present valuations of cobalt bearing propertiesand attracted capital into the metal. Typically, when a commodity booms in price supply increases until the price falls. In 2017, however,analysts predicted high prices through 2022, based on supply-side restrictions.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>alternative-energy on Cloud Nine</title><link>https://cloudnine.github.io/tags/alternative-energy/</link><description>Recent content in alternative-energy on Cloud Nine</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Tue, 20 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/alternative-energy/index.xml" rel="self" type="application/rss+xml"/><item><title>Cobalt: Attractive, But Not Without Its Downsides</title><link>https://cloudnine.github.io/archives/2018-02-20-cobalt-attractive-not-without-downsides/</link><pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate><guid>https://cloudnine.github.io/archives/2018-02-20-cobalt-attractive-not-without-downsides/</guid><description>The price of a metric ton of cobalt, the precious metal used in lithium batteries, increased 60% in the last year to $81,500
+USD, a 264% increase since its all time low in February of 2016. Higher prices have lifted present valuations of cobalt bearing properties
+and attracted capital into the metal. Typically, when a commodity booms in price supply increases until the price falls. In 2017, however,
+analysts predicted high prices through 2022, based on supply-side restrictions.</description></item></channel></rss>
