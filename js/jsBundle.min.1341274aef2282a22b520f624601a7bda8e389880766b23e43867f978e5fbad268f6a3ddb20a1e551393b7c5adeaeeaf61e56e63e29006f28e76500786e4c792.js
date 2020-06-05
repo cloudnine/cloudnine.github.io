@@ -21,7 +21,7 @@ var limit=30;var minChars=2;var searching=false;var render=function(results){res
 '<a  class=\"title post-meta-styling post-search-title\" href=\"'+result.permalink+'#article-title\"><div>'+
 '<h2>'+result.showTitle+'</h2></div></a>'+
 '<div class=\"ml-2 mb-2 mt-1 post-search-meta\"><small><strong>Author:'+result.showAuthor+'</strong>'+
-'|&nbsp;<i class=\"far fa-calendar-alt\"></i>&nbsp;'+result.showDate+'</small></div>'+
+'&nbsp;|&nbsp;<i class=\"far fa-calendar-alt\"></i>&nbsp;'+result.showDate+'</small></div>'+
 '<div class="\post-search-summary\">'+result.showSummary+'</div>'+
 '<a  class=\"btn btn-outline-secondary post-search-continue\"  href=\"'+result.permalink+'\" role =\"button\">Continue Reading...</a>'+
 '<div class=\"post-search-data\"></div></article>';$("#results").append(resultPane);}};var checkTerms=function(terms,weight,target){var weightResult=0;terms.forEach(function(term){if(~target.indexOf(term.term)){var idx=target.indexOf(term.term);while(~idx){weightResult+=term.weight*weight;idx=target.indexOf(term.term,idx+1);}}});return weightResult;};var search=function(terms){var results=[];searchHost.index.forEach(function(item){if(item.tags){var weight_1=0;terms.forEach(function(term){if(item.title.startsWith(term.term)){weight_1+=term.weight*32;}});weight_1+=checkTerms(terms,1,item.content);weight_1+=checkTerms(terms,2,item.description);weight_1+=checkTerms(terms,2,item.subtitle);item.tags.forEach(function(tag){weight_1+=checkTerms(terms,4,tag);});weight_1+=checkTerms(terms,16,item.title);if(weight_1){results.push({weight:weight_1,item:item});}}});if(results.length){var resultsMessage=results.length+" items found.";if(results.length>limit){resultsMessage+=" Showing first "+limit+" results.";}
