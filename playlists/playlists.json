@@ -1,0 +1,264 @@
+ {
+"playlists": [
+{
+"name":"Classic Early Rythms",
+"description" : "Indiana Jones is on Your Ass",
+"songs": "Hugh Masekela: Grazing in the Grass, Smokey Robinson: Going To A Go-Go, Booker T. Jones: Time is Tight, Archie Bell: Tighten Up, Dizzy Gilllespie: Bang Bang, Jean Knight: Big Stuff, Dave Brubeck: Golden Brown",
+"ids": [
+"qxXZF60EPdM",
+"aIBIWXk20wE",
+"LujHv3vTNkY",
+"av9JeMNbKkg",
+"r_tMDjK5M18",
+"zQ9mz2MlwU4",
+"2Qs1J612nZs"
+]
+},
+{
+"name": "Jazz 1",
+"description" : "I did the Samba to Cannonball Adderly",
+"songs": "Cannonball Adderly: Autumn Leaves, Wabash, Toy, Groovy Samba, Oscar Peterson: Take the A train, The Girl from Ipanima, Sometimes Im Happy, Happy Go Lucky Localaka: Night Train,  A Little Jazz Exercise, Charlie Parker: Bloomdido, Dizzy Gillespie: One Note Samba, Con Alma, Beale Street, Flute Blues",
+"ids": [
+"IlxPpZC5OQY",
+"e-S1Ftz4S-M",
+"y7lJRnyRqMw",
+"69uh2T1TtTY",
+"_7WCzeylk08",
+"WeDjbJMb1yw",
+"8r1BAb9k7lg",
+"_zTkpME1ATQ",
+"UjNha6jgOOk",
+"EF16My0SRo8",
+"eUSYlOTP2_k",
+"DggGN8E2vx0",
+"J-3FwDJN9-s",
+"he56MOJSC8A",
+"YvwZ2kwfZ3s"
+]
+},
+{
+"name": "Smooth Jazz",
+"description" : "One Smooth Jazz and a Corduroy Chestnut Blazer on the Rocks Please",
+"songs": "Donald Byrd: Flight Time*, Where are we going?, Just my Imagination, Black Jack, Design A Nation,  M's, Bossa (Canto G Bossa), The Dude, Places and Spaces I've Been, Lansanas Priestess, Dizzy Gillespie: Unicorn",
+"ids": [
+"LwRrSr0fG_E",
+"myPZb3A-VE4",
+"3zOGlr3Tdns",
+"jSxY4OwV8vg",
+"iG8Ob91laHM",
+"GnUsr7Wia6U",
+"ku8g5YE1rtE",
+"hyE2POSOR4E",
+"unbgblfgsQI",
+"hyjnTWOqCmw"
+]
+},
+{
+"name": "Indie Techno",
+"description" : "What is Indie Techno For 500 Alex?",
+"songs": "French 79: Angel, The Year After, Olympic, Golden Times, Code Zero, By Your Side - Featuring Sarah Rebecca ",
+"ids": [
+"lImzGC_qElo",
+"Ct1LjwC_e9c",
+"2o-R3KnJlTg",
+"EvgaGxL30HM",
+"_0FHR7z_zYc",
+"6EWmznNr5d0"
+]
+},
+{
+"name": "Jacob Collier",
+"description" : "Jacob Collier, Featuring Jazz",
+"songs": "Jacob Collier - Do You Feel Love (feat. Steve Vai), Feel (feat. Lianne La Havas), Time Alone With You ft. Daniel Caesar, All I Need (with Mahalia & Ty Dolla $ign), All Night Long, With The Love In My Heart, Don't Stop 'Til You Get Enough, Moon River, Close To You, Saviour, In My Bones (feat. Kimbra & Tank and The Bangas), P.Y.T., It Don't Matter",
+"ids": [
+"yIlbu5bett8",
+"VMzIBNC_ojI",
+"2qUCyW7ewPs",
+"MJpiozQUJvE",
+"nspqYGz-Z1s",
+"IlFD298wTOM",
+"KC3GrzoQG9U",
+"VPLCk-FTVvw",
+"9s1baxrxGHU",
+"MZNq9on-FYo",
+"3-KrhH8ndXg",
+"DaNxq6Q4v1w",
+"3Ed-LrvRQx0"
+]
+},
+{
+"name": "Charlie Watts",
+"description" : "Watts and Watts of Jazz",
+"songs": "Charlie Watts:Satisfaction, Blues in the Cave, Molasses, You Can't Always Get What You Want, Elvin Suite, Blue Bird",
+"ids": [
+"zwTEUljwuVo",
+"8QX-9TAX24U",
+"jdGtZ02DtKw",
+"I2eKiIjY5no",
+"v3UFkkxNBVU",
+"KK5zr4tKpj0"
+]
+},
+{
+"name": "Danish National Symphony Orchestra",
+"description" : "Symphony Orchestras (DNSO)",
+"songs": "Danish National Symphony Orchestra: Diva Dance, Symphony 5 Beethoven, Da Vinci Code, Grand Theft Auto - Soviet Connection, Heidelberg Youth Chamber Orchestra: Pink Panther, Dietrich Paredes - Shostakovich: Symphony No. 10 in E Minor,",
+"ids": [
+"MxXu_8Kxijc",
+"kywprmOV5wc",
+"t-uQe11OIfo",
+"XPW79xB_R7s",
+"QiULpKvM574",
+"UWv_YLYm_Nc"
+]
+},
+{
+"name": "Danish Radio Big Band",
+"description" : "Danish Radio Big Band",
+"songs": "Danish Radio Big Band: Crisis, Welcome Miho Hazama, New Waltzo, Peet's Feet, Boogie Stupid, Dancing Time, Cute, Jazz Alive (featuring ibraham Electric)",
+"ids": [
+"_h_OLCQylNE",
+"tFIxpy3BdCQ",
+"2aTvQL7zJVE",
+"6wBlgAZUGOg",
+"XBJNDjjrPdw",
+"UG0AwyM6qDM",
+"x3qMQxJdH9o",
+"1TFta5dzbxc"
+]
+},
+{
+"name": "Classical 1",
+"description" : "Classical Professions",
+"songs": "Sheku-Kanneh-Mason -Song of the Birds,Klengel Hymnus, Op. 57, Vanessa Mae: Pagaini: La Campanella, Victor Lyadov: Danza ritual del Fuego, Bond - Quixote, Kaori Fujii: Allemande BWV 1013 - J.S. Bach, Hilary Hahn - J.S. Bach: Partita for Violin Solo No. 1 in B Minor, Partita No. 3 prelude, Yo-Yo Ma - Bach: Cello Suite No. 3 in C Major, Casals - Song of The Birds - Camille Thomas, Sibelius : Violin Concerto (Hilary Hahn), Hilary Hahn - Tchaikovsky - Violin Concerto in D Major, Op. 35 (Allegro vivacissimo), Mozart - Violin Concerto No. 3, Marin Marais - Les Folies d'Espagne, Marin Marais - Les Folies d'Espagne (Carlos Roldan, Guitar), Marin Marai - Le Badinage - Jordi Savall ",
+"ids": [
+"vD3UZGQqbl8",
+"IhEW3RUM-_k",
+"jERzLseoAOM",
+"KrSGFNmIhps",
+"muW9BpDR9S0",
+"D-BLV5EaJFQ",
+"iEBX_ouEw1I",
+"2KYRdRnnBYw",
+"xR4IElye7eg",
+"ihMnBq86nD8",
+"J0w0t4Qn6LY",
+"gMG_MR-ihis",
+"N-mA9OMP3DE",
+"Dzw8gtqsvDM"
+]
+},
+{
+"name": "Indie Rock ",
+"description" : "Indie Rock Indie",
+"songs": "Spoon - Finer Feelings, Foster The People - Pick U Up,  Datarock- Fa Fa Fa, The Zolas -  Molotov Girls,  the ponys - double vision, Vampire Weekend - A-Punk, Modest Mouse - Dashboard, Vampire Weekend - Cousins , Arcade Fire - No Cars Go,  Belle and Sebastian - Legal Man, Vampire Weekend: A Punk, Electric Light Orchestra: Mr. Blue Sky, Pheonix: 1901",
+"ids": [
+"tbcUfIimKaU",
+"7f7_Y9LTuZs",
+"AtGlWOIec40",
+"zh8e_zuss2I",
+"JmRwYzawubc",
+"_XC2mqcMMGQ",
+"penvn9VL32Y",
+"1e0u11rgd9Q",
+"83KR_UBWdPI",
+"mQtDjR255qY",
+"G8dsvclf3Tk",
+"cFElidiwxYU"
+]
+},
+{
+"name": "Audio Library 1",
+"description" : "Audio Library: Music You Can Work To",
+"songs": "Audionautix: Fat Caps, Robosk8ter, Opus One, Yeah Yeah, Ice Cold, Ooh Hey, Sunday Spirit, Macaroon 5, Pop Star, Get A Move On, Sk8tboard, Tech Talk, Vanishing Horizon, Lightning Bugs, Code Blue, Lucky Duck ",
+"ids": [
+"7e8X0EzDnQ0",
+"5pJ3Fihx1xg",
+"TqfnHZNa7B8",
+"hPir1eUK7wI",
+"nrEBwdcnGKQ",
+"DYki0P3P4Dc",
+"fVxj8VFlcXw",
+"lHjkix9oKIE",
+"nr6EC2bwqOA",
+"5ycIPvcNeQg",
+"q4V2WIqFbCs",
+"jCpmPue_Plc",
+"3HCKpwjSQBE",
+"FBwoivfvoC0",
+"jCy7KQyIXxo"
+]
+},
+{
+"name": "Popular Music USA",
+"description" : "Chart Pops Americano",
+"songs" : "Asereje - Las Ketchup, Up & Down, The Knocks - Classic feat. Powers, Pharrell,   Calvin Harris - Feels ft. Pharrell Williams, Katy Perry, Big Sean, Calvin Harris - My Way, benny blanco & Calvin Harris - I Found You, Weezer: Island In The Sun, Hero, Happy Together, Ed Sheeran: Beautiful People (feat. Khalid), Dua Lipa: Let's Get Physical Work Out Video",
+"ids": [
+"arZZw8NyPq8",
+"emOKaGi8u5U",
+"ozv4q2ov3Mk",
+"yNXDxUQ4c9U",
+"0C3zgYW_FAM",
+"BdJS11C8LA0",
+"i--uixPYvEk",
+"6_aqeCDk1Yk",
+"rubpIfLPzvU",
+"mj0XInqZMHY",
+"YvVonQ7LUJ0"
+]
+},
+{
+"name": "Lithuanian Music",
+"description" : "There is Also M__ic in Lithuania",
+"songs":"No Real Pioneers - at Ymir Audio, Verslo rizikos rezervas - Mano vaikas prazilo, Verslo Rizikos Rezervas - Kur plauki?, Biplan - Labas rytas,  Daddy Was A Milkman - Seasons, Empti  Radio laga,     Donny Montell feat. Mark Les - LEISK MYLET,  FREAKS ON FLOOR: Star,Rasabasa: Interstellar, KaYra: Alligator ",
+"ids": [
+"YP1x5pIHIT8",
+"Rz1ef7joufA",
+"9CCJQ-A3XWE",
+"XY0dgI5-q0o",
+"FjL3PZu3Oyo",
+"0M6iR8-_Nsg",
+"NOE2P_OToNQ",
+"tDPl-7f_yyc",
+"rq9x7l7SjFQ"
+]
+},
+{
+"name": "International Music",
+"description" : "International Showcase Much",
+"songs": "Il pan del diavolo: Pertanto, Hetty & the Jazzato Band: Tu Vuo' Fa' L'Americano, Paolo Conte - Via Con Me, Monika Liu - Vaikinai, trumpais sortais, Juanitos: Glitter Bomb, Masayoshi Takanaka: Sexy Dance, To Be: Gluecklich, Pieno Lazerai: Robot Is Also Human, Cuarteto de Nos - Mario Neta, Polyrhythmics - Chelada",
+"ids": [
+"HISKAnB7wa0",
+"J0ogqBcK9ow",
+"lUP_fex2RaA",
+"7_KQ8zUhcww",
+"_oJJIbISlUw",
+"qoPot5nnPaA",
+"Bi07mmXhHpA",
+"B0V-IPcsSpE",
+"-RNbCW8yCpI",
+"MjzDEQopJ_g"
+]
+},
+{
+"name": "Le Tigre",
+"description" : "Music From Le Tigre",
+"songs": "Le Tigre - Bang! Bang!, Mediocrity Rules, Phanta, My My Metrocard, Deceptacon, Hot Topic, Sweetie, What's Yr Take On Cassavetes, Friendship Station, After Dark, FYI, Gone B4 Yr Home, Keep On Living",
+"ids": [
+"ROA6WiPdHe8",
+"2SBcZ4c0lc0",
+"EcFez3oikto",
+"7IhilcddEjg",
+"Fxks_wUe8ac",
+"0idmTWxFs1A",
+"hHpAOORtL8E",
+"GnS8Ou6RvdU",
+"qN7zKoRxFSg",
+"cMPqJlXdvCA",
+"ICM24YntscM",
+"b9KiH78Szb8",
+"Jvq4gOjWHuc"
+]
+}
+]
+}

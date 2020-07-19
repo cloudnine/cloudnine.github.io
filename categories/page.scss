@@ -1,0 +1,75 @@
+//tags
+@import "../assets/sass/includes/media_queries";
+//@import "../assets/sass/includes/reset";
+//@import "../assets/sass/includes/variables";
+//@import "../assets/sass/includes/base";
+//@import "../assets/sass/includes/grid";
+//@import "../assets/sass/includes/wrapper";
+//@import "../assets/sass/includes/navigation";
+//@import "../assets/sass/includes/header";
+//@import "../assets/sass/includes/main";
+//@import "../assets/sass/includes/article";
+//@import "../assets/sass/includes/ads";
+//@import "../assets/sass/includes/sidebar";
+//@import "../assets/sass/includes/footer";
+
+.sidebar{
+display:grid;
+width:50%;
+justify-self:end;
+grid-row:5;
+@include responsive(tablet) {
+width:100%;
+justify-self:center;
+grid-column: 2;
+grid-row:5;
+}
+@include responsive(desktop) {
+grid-column: 3;
+grid-row:4;
+}
+& > .about-us{
+grid-column:2;
+grid-row:1;
+display:flex;
+@include responsive(tablet){
+grid-column:1/3;
+grid-row:1;
+}
+@include responsive(desktop){
+grid-column:1/3;
+grid-row:1;
+}
+}//end about us
+}//end sidebar
+
+//categories
+.ads{
+width:50%;
+justify-self:start;
+display:grid;
+grid-row:5;
+@include responsive(tablet) {
+width:100%;
+justify-self:center;
+grid-column: 2;
+grid-row:4;
+}
+@include responsive(desktop) {
+grid-column: 1;
+grid-row:4;
+}
+& > .vimeo{
+display:grid;
+grid-column:1;
+grid-row:1;
+@include responsive(tablet){
+grid-column:1/3;
+grid-row:1;
+}
+@include responsive(desktop){
+grid-column:1/3;
+grid-row:1;
+}
+}//end vimeo
+}//end catagories ads

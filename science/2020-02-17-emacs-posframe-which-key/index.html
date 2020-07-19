@@ -1,13 +1,4 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=author content="Cloud Nine"><meta name=copyright content="Copyright &copy; 2019 -2020byYuri Tricys&nbsp;All rights reserved."><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=google-site-verification content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw"><meta name=yandex-verification content="7cb55c3432ff9fc7"><meta name=msvalidate.01 content="C3105C04193385EF751ABBCF0EBC693A"><meta name=description content="Emacs configuration for posframe and which-key pacakges."><title>Emacs Configuration Posframe and Which Key, Some Key Bindings</title><meta property="article:author" content="Yuri Tricys"><link rel=canonical href=https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/><meta name=theme-color content="#ffffff"><meta property="og:title" content="Emacs Configuration Posframe and Which Key, Some Key Bindings"><meta property="og:image:type" content="image/jpg"><meta property="og:image" content="https://cloudnine.github.io/images/science/hcf.jpg"><meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/hcf.jpg"><meta property="og:description" content="Emacs configuration for posframe and which-key pacakges."><meta property="og:site_name" content="Cloud Nine Blog."><meta property="og:url" content="https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/"><meta property="og:type" content="website"><link rel=icon type=image/png href=https://cloudnine.github.io/images/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=https://cloudnine.github.io/images/favicon-32x32.png sizes=32x32><link rel=me type=text/html href=https://www.linkedin.com/in/yuri-tricys-aa004b26/><link rel=alternate type=application/rss+xml href=https://cloudnine.github.io/index.xml><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Oswald:400" integrity crossorigin=anonymous></link><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css integrity=sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh crossorigin=anonymous></link><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous></link><link rel=stylesheet href=/css/bundleMain.css integrity><script src=https://code.jquery.com/jquery-3.4.1.min.js integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js integrity=sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo crossorigin=anonymous defer></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js integrity=sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 crossorigin=anonymous defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js integrity="sha256-34Si1Y6llMBKM3G0jQILVeoQKEwuxjbk4zGWXXMT4ps=" crossorigin=anonymous defer></script><script src=https://cloudnine.github.io/js/jsBundle.min.1341274aef2282a22b520f624601a7bda8e389880766b23e43867f978e5fbad268f6a3ddb20a1e551393b7c5adeaeeaf61e56e63e29006f28e76500786e4c792.js integrity="sha512-E0EnSu8igqIrUg9iRgGnvajjiYgHZrI+Q4Z/l45futJo9qPdsgoeVROTt8Wt6u6vYeVuY+KQBvKOdlAHhuTHkg==" crossorigin=anonymous defer></script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Blog","image":"https://cloudnine.github.io/images/science/hcf.jpg","url":"https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/","thumbnailUrl":"https://cloudnine.github.io/images/science/hcf.jpg","headline":"Emacs Configuration Posframe and Which Key, Some Key Bindings","description":"Emacs configuration for posframe and which-key pacakges.","datePublished":"2020-02-17T00:00:00Z","dateCreated":"2020-02-17T00:00:00Z","creator":"Yuri Tricys","author":"Yuri Tricys","articleSection":"science","publisher":{"name":"Cloud Nine","logo":"","@type":"Organization"}}</script><script defer>var clicky_site_ids=clicky_site_ids||[];clicky_site_ids.push(101236333);</script><script async src=//static.getclicky.com/js></script><style type=text/css>.feature-image{background-image:linear-gradient( rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url("https://cloudnine.github.io/images/science/hcf.jpg");width:100%;height:auto}</style></head><body><div id=wrapper class=wrapper><nav id=navigation class="navigation navbar container-fluid navbar-expand-xl fixed-top bg-dark navbar-dark"><button class="navbar-toggler collapsed mr-3" type=button data-toggle=collapse data-target=#navbarCollapse aria-controls=navbarCollapse aria-expanded=false aria-label="Toggle navigation">
-<i class="fas fa-bars"></i></button>
-<a class="navbar-brand mr-2" href=https://cloudnine.github.io/>CLOUD NINE</a><div class="navbar-collapse collapse" id=navbarCollapse><ul class="navbar-nav mr-auto"><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/about/>About</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/motivation/>Motivation</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/science/>Science</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/categories/>Categories</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/tags/>Tags</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/books/>Books</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/current/>Current</a></li><li class=nav-item><a class="nav-link active" href=https://cloudnine.github.io/archives/>Archives</a></li></ul></div><div class=nav-right-side><ul class="navbar-icons navbar-nav"><li class=nav-item id=search><a class="nav-link active" href=https://cloudnine.github.io/search/><span class="d-none d-lg-inline-flex">Search&nbsp;&nbsp;</span><i class="fas fa-search"></i></a></li><li class=nav-item id=user><a class="nav-link active" href=#><span class="d-none d-lg-inline-flex">Login&nbsp;&nbsp;&nbsp;</span><i class="fas fa-user"></i></a></li><li class=nav-item id=shop><a class="nav-link active" href=#><span class="d-none d-lg-inline-flex">Shop&nbsp;&nbsp;</span><i class="fas fa-shopping-cart"></i></a></li></ul></div></nav><header id=header class="header feature-image"><div class=feature-image-text><h1 class=text-center>Sciency Stuff</h1><div class="intro-description d-block"></div></div></header><main id=main class=main><div class="container mt-4 post"><a name=article-title class=anchor-top></a><h1>Emacs Configuration Posframe and Which Key, Some Key Bindings</h1><div id=post-summary-meta class="post-summary-meta ml-2 mb-2 mt-1"><small><strong>Author:
-Yuri Tricys</strong> |&nbsp; <i class="far fa-calendar-alt"></i>&nbsp;Feb 17, 2020&nbsp;
-|&nbsp; <i class="fa fa-tags" title=Tags aria-hidden=true></i>&nbsp;
-<a href=/tags/emacs>emacs</a>,
-<a href=/tags/learning-center>learning center</a></small></div><article class="mt-4 mb-4 main-content"><p class=p-news>Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you
-know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts from
-oldest to newest.</p><p class=p-news>In this earlier emacs <a href=https://cloudnine.github.io/science/2020-02-11-emacs-frames-buffers-defaults-functions/ target=_blank>post</a> I covered
-lines 534 - 656 of my configuration file. This post covers lines 664 - 769</p><h5>Some Key Bindings</h5><p class=p-news>Emacs is all about key bindings and shortcuts. The 'macs' part is short for 'macro.' Here are a few I use.</p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="IE=edge"><meta name="author" content="Cloud Nine"><meta name="copyright" content="Copyright © 2019 -2020 Yuri Tricys All rights reserved."><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="robots" content="follow,index"><meta name="google-site-verification" content="FFsoQvDg_f8ARfDuK6TOhBpcqSgNx8_zRFDg_b_DGaw"><meta name="yandex-verification" content="7cb55c3432ff9fc7"><meta name="msvalidate.01" content="C3105C04193385EF751ABBCF0EBC693A"><meta name="description" content="Emacs configuration for posframe and which-key pacakges."><title>Emacs Configuration Posframe and Which Key, Some Key Bindings</title><meta property="article:author" content="Yuri Tricys"><link rel="canonical" href="https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/"><meta name="theme-color" content="#ffffff"><meta property="og:title" content="Emacs Configuration Posframe and Which Key, Some Key Bindings"><meta property="og:image:type" content="image/jpg"><meta property="og:image" content="https://cloudnine.github.io/images/science/hcf.jpg"><meta property="og:image:secure_url" content="https://cloudnine.github.io/images/science/hcf.jpg"><meta property="og:description" content="Emacs configuration for posframe and which-key pacakges."><meta property="og:site_name" content="Cloud Nine Blog."><meta property="og:url" content="https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/"><meta property="og:type" content="website"><link rel="icon" type="image/png" href="https://cloudnine.github.io/images/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="https://cloudnine.github.io/images/favicon-32x32.png" sizes="32x32"><link rel="me" type="text/html" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><link rel="alternate" type="application/rss+xml" href="https://cloudnine.github.io/index.xml"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400" integrity crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"><link rel="stylesheet" href="/css/bundleMain.css" integrity><script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer="defer"></script><script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous" defer="defer"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer="defer"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer="defer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js" integrity="sha256-34Si1Y6llMBKM3G0jQILVeoQKEwuxjbk4zGWXXMT4ps=" crossorigin="anonymous" defer="defer"></script><script src="https://cloudnine.github.io/js/jsBundle.min.5e9a9fc65c03413beccf61b93d458aa9c71516c4e70f73fd3a62b6c039cdab7efd1046be172a84ee08b6ab6fa3cd3d9b6c4ee05df0f1d547c75f0f62c29d7ed1.js" integrity="sha512-XpqfxlwDQTvsz2G5PUWKqccVFsTnD3P9OmK2wDnNq379EEa+FyqE7gi2q2+jzT2bbE7gXfDx1UfHXw9iwp1+0Q==" crossorigin="anonymous" defer="defer"></script><script type="application/ld+json">{"@context":"http://schema.org","@type":"Blog","image":"https://cloudnine.github.io/images/science/hcf.jpg","url":"https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/","thumbnailUrl":"https://cloudnine.github.io/images/science/hcf.jpg","headline":"Emacs Configuration Posframe and Which Key, Some Key Bindings","description":"Emacs configuration for posframe and which-key pacakges.","datePublished":"2020-02-17T00:00:00Z","dateCreated":"2020-02-17T00:00:00Z","creator":"Yuri Tricys","author":"Yuri Tricys","articleSection":"science","publisher":{"name":"Cloud Nine","logo":"","@type":"Organization"}}</script><script defer="defer">var clicky_site_ids=clicky_site_ids||[];clicky_site_ids.push(101236333);</script><script async src="//static.getclicky.com/js"></script><script type="text/javascript">var jsonPlaylists="playlists.json"</script><script type="text/javascript">var jsonVimeo="vimeo.json"</script><style type="text/css">.feature-image{background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://cloudnine.github.io/images/science/hcf.jpg');width:100%;height:auto;background-size:cover}</style></head><body><div id="wrapper" class="wrapper"><nav id="navigation" class="navigation navbar container-fluid navbar-expand-xl fixed-top bg-dark navbar-dark"><button class="navbar-toggler collapsed mr-3" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button> <a class="navbar-brand mr-2" href="https://cloudnine.github.io/">CLOUD NINE</a><div class="navbar-collapse collapse" id="navbarCollapse"><ul class="navbar-nav mr-auto"><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/about/">About</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/motivation/">Motivation</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/science/">Science</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/categories/">Categories</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/tags/">Tags</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/books/">Books</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/current/">Current</a></li><li class="nav-item"><a class="nav-link active" href="https://cloudnine.github.io/archives/">Archives</a></li></ul></div><div class="nav-right-side"><ul class="navbar-icons navbar-nav"><li class="nav-item" id="search"><a class="nav-link active" href="https://cloudnine.github.io/search/"><span class="d-none d-lg-inline-flex">Search  </span><i class="fas fa-search"></i></a></li><li class="nav-item" id="user"><a class="nav-link active" href="#"><span class="d-none d-lg-inline-flex">Login   </span><i class="fas fa-user"></i></a></li><li class="nav-item" id="shop"><a class="nav-link active" href="#"><span class="d-none d-lg-inline-flex">Shop  </span><i class="fas fa-shopping-cart"></i></a></li></ul></div></nav><header id="header" class="header feature-image"><div class="feature-image-text"><h1 class="text-center">Sciency Stuff</h1><div class="intro-description d-block"></div></div></header><main id="main" class="main"><div class="container mt-4 post"><a name="article-title" class="anchor-top"></a><h1>Emacs Configuration Posframe and Which Key, Some Key Bindings</h1><div id="post-summary-meta" class="post-summary-meta ml-2 mb-2 mt-1"><small><strong>Author: Yuri Tricys</strong> |  <i class="far fa-calendar-alt"></i> Feb 17, 2020  |  <i class="fa fa-tags" title="Tags" aria-hidden="true"></i>  <a href="/tags/emacs">emacs</a>, <a href="/tags/learning-center">learning center</a></small></div><article class="mt-4 mb-4 main-content"><p class="p-news">Emacs is old school. You're either new to it - which means you wouldn't be here unless it was your type of thing - or you know what you're looking for. In either case, go to the side bar of this page and click on the 'Emacs' tag. Then read the posts from oldest to newest.</p><p class="p-news">In this earlier emacs <a href="https://cloudnine.github.io/science/2020-02-11-emacs-frames-buffers-defaults-functions/" target="_blank">post</a> I covered lines 534 - 656 of my configuration file. This post covers lines 664 - 769</p><h5>Some Key Bindings</h5><p class="p-news">Emacs is all about key bindings and shortcuts. The 'macs' part is short for 'macro.' Here are a few I use.</p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block"><tr><td style="vertical-align:top;padding:0;margin:0;border:0"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
@@ -38,38 +29,38 @@ lines 534 - 656 of my configuration file. This post covers lines 664 - 769</p><h
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
-<span style=color:#080;font-style:italic>; Rebind C-m as prefix [before any C-m bound]</span>
-<span style=color:#080;font-style:italic>;unest C-m from RET</span>
-(<span style=color:#00a000>define-key</span> <span style=color:#b8860b>input-decode-map</span> [<span style=color:#b44>?\C</span><span style=color:#b8860b>-m</span>] [<span style=color:#b8860b>C-m</span>])
-<span style=color:#080;font-style:italic>; translate it as synonymous with &lt;apps&gt; key</span>
-(<span style=color:#00a000>define-key</span> <span style=color:#b8860b>key-translation-map</span> (<span style=color:#b8860b>kbd</span> <span style=color:#b44>&#34;&lt;apps&gt;&#34;</span>) (<span style=color:#b8860b>kbd</span> <span style=color:#b44>&#34;&lt;C-m&gt;&#34;</span>))
-<span style=color:#080;font-style:italic>;create a prefix command</span>
-(<span style=color:#00a000>define-prefix-command</span> <span style=color:#b8860b>&#39;super-keymap</span>)
-<span style=color:#080;font-style:italic>;set C-m as the prefix-command (note s- is also enabled now</span>
-<span style=color:#080;font-style:italic>;so all C-m can be run with s-</span>
-(<span style=color:#b8860b>global-set-key</span> (<span style=color:#b8860b>kbd</span> <span style=color:#b44>&#34;&lt;C-m&gt;&#34;</span>) <span style=color:#b8860b>super-keymap</span>)
-<span style=color:#080;font-style:italic>;(bind-key &#34;&lt;C-m&gt;&#34; super-keymap)</span>
-<span style=color:#080;font-style:italic>;Undo Undo Default Binding</span>
-(<span style=color:#b8860b>global-unset-key</span> (<span style=color:#b8860b>kbd</span> <span style=color:#b44>&#34;C-_&#34;</span>))
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-c C-u&#34;</span> <span style=color:#b8860b>&#39;undo</span>)
-<span style=color:#080;font-style:italic>;Bind append-lines</span>
-(<span style=color:#b8860b>global-set-key</span> (<span style=color:#b8860b>kbd</span> <span style=color:#b44>&#34;M-j&#34;</span>) <span style=color:#b8860b>&#39;append-lines</span>)
-<span style=color:#080;font-style:italic>;(bind-key &#34;M-j&#34; append-lines)</span>
-<span style=color:#080;font-style:italic>;Bind Kill This Buffer</span>
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;\C-x\C-k&#34;</span> <span style=color:#b8860b>&#39;kill-this-buffer</span>)
-<span style=color:#080;font-style:italic>;New Scratch Buffer</span>
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;C-c b&#34;</span> <span style=color:#b8860b>&#39;new-frame-scratch-buffer</span>)
-<span style=color:#080;font-style:italic>; remap go-to-line</span>
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;M-g&#34;</span> <span style=color:#b8860b>&#39;goto-line</span>)
-(<span style=color:#b8860b>global-set-key</span> [<span style=color:#b8860b>remap</span> <span style=color:#b8860b>goto-line</span>] <span style=color:#b8860b>&#39;goto-line-with-feedback</span>)
-<span style=color:#080;font-style:italic>;Bind New Line Dwim (gets next line bullet, creates new line with it)</span>
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;&lt;C-return&gt;&#34;</span> <span style=color:#b8860b>&#39;new-line-dwim</span>)
-<span style=color:#080;font-style:italic>;(setq there-is-no-variable-here )</span>
-<span style=color:#080;font-style:italic>;describe personal key bindings</span>
-(<span style=color:#b8860b>bind-key</span> <span style=color:#b44>&#34;&lt;f11&gt;&#34;</span>  <span style=color:#b8860b>&#39;describe-personal-keybindings</span>)
+</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">; Rebind C-m as prefix [before any C-m bound]</span>
+<span style="color:#080;font-style:italic">;unest C-m from RET</span>
+(<span style="color:#00a000">define-key</span> <span style="color:#b8860b">input-decode-map</span> [<span style="color:#b44">?\C</span><span style="color:#b8860b">-m</span>] [<span style="color:#b8860b">C-m</span>])
+<span style="color:#080;font-style:italic">; translate it as synonymous with &lt;apps> key</span>
+(<span style="color:#00a000">define-key</span> <span style="color:#b8860b">key-translation-map</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">"&lt;apps>"</span>) (<span style="color:#b8860b">kbd</span> <span style="color:#b44">"&lt;C-m>"</span>))
+<span style="color:#080;font-style:italic">;create a prefix command</span>
+(<span style="color:#00a000">define-prefix-command</span> <span style="color:#b8860b">'super-keymap</span>)
+<span style="color:#080;font-style:italic">;set C-m as the prefix-command (note s- is also enabled now</span>
+<span style="color:#080;font-style:italic">;so all C-m can be run with s-</span>
+(<span style="color:#b8860b">global-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">"&lt;C-m>"</span>) <span style="color:#b8860b">super-keymap</span>)
+<span style="color:#080;font-style:italic">;(bind-key "&lt;C-m>" super-keymap)</span>
+<span style="color:#080;font-style:italic">;Undo Undo Default Binding</span>
+(<span style="color:#b8860b">global-unset-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">"C-_"</span>))
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-c C-u"</span> <span style="color:#b8860b">'undo</span>)
+<span style="color:#080;font-style:italic">;Bind append-lines</span>
+(<span style="color:#b8860b">global-set-key</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">"M-j"</span>) <span style="color:#b8860b">'append-lines</span>)
+<span style="color:#080;font-style:italic">;(bind-key "M-j" append-lines)</span>
+<span style="color:#080;font-style:italic">;Bind Kill This Buffer</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"\C-x\C-k"</span> <span style="color:#b8860b">'kill-this-buffer</span>)
+<span style="color:#080;font-style:italic">;New Scratch Buffer</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"C-c b"</span> <span style="color:#b8860b">'new-frame-scratch-buffer</span>)
+<span style="color:#080;font-style:italic">; remap go-to-line</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"M-g"</span> <span style="color:#b8860b">'goto-line</span>)
+(<span style="color:#b8860b">global-set-key</span> [<span style="color:#b8860b">remap</span> <span style="color:#b8860b">goto-line</span>] <span style="color:#b8860b">'goto-line-with-feedback</span>)
+<span style="color:#080;font-style:italic">;Bind New Line Dwim (gets next line bullet, creates new line with it)</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"&lt;C-return>"</span> <span style="color:#b8860b">'new-line-dwim</span>)
+<span style="color:#080;font-style:italic">;(setq there-is-no-variable-here )</span>
+<span style="color:#080;font-style:italic">;describe personal key bindings</span>
+(<span style="color:#b8860b">bind-key</span> <span style="color:#b44">"&lt;f11>"</span>  <span style="color:#b8860b">'describe-personal-keybindings</span>)
 
-</code></pre></td></tr></table></div></div><br><h5>Posframe and Popup</h5><p class=p-news>Popup and Posframe are standard packages you need to use other packages with popup frames, like hydra. Here's the code:</p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</code></pre></td></tr></table></div></div><br><h5>Posframe and Popup</h5><p class="p-news">Popup and Posframe are standard packages you need to use other packages with popup frames, like hydra. Here's the code:</p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block"><tr><td style="vertical-align:top;padding:0;margin:0;border:0"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
@@ -101,40 +92,39 @@ lines 534 - 656 of my configuration file. This post covers lines 664 - 769</p><h
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
+</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
 
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>popup</span>
-<span style=color:#a2f>:config</span>
-(<span style=color:#b8860b>set-face-attribute</span> <span style=color:#b8860b>&#39;popup-scroll-bar-foreground-face</span> <span style=color:#800>nil</span> <span style=color:#a2f>:inherit</span> <span style=color:#800>nil</span> <span style=color:#a2f>:background</span> <span style=color:#b44>&#34;#FFC300&#34;</span>)
-(<span style=color:#b8860b>set-face-attribute</span> <span style=color:#b8860b>&#39;popup-scroll-bar-background-face</span> <span style=color:#800>nil</span> <span style=color:#a2f>:inherit</span> <span style=color:#800>nil</span> <span style=color:#a2f>:background</span> <span style=color:#b44>&#34;#2471A3&#34;</span>)
-(<span style=color:#b8860b>set-face-attribute</span> <span style=color:#b8860b>&#39;popup-face</span>
-  <span style=color:#666>&#39;</span>((<span style=color:#800>t</span> (<span style=color:#a2f>:background</span> <span style=color:#b44>&#34;#FFC300&#34;</span> <span style=color:#a2f>:foreground</span> <span style=color:#b44>&#34;#2471A3&#34;</span>))))
-(<span style=color:#00a000>define-key</span> <span style=color:#b8860b>popup-menu-keymap</span> (<span style=color:#b8860b>kbd</span> <span style=color:#b44>&#34;SPC&#34;</span>) <span style=color:#b8860b>&#39;popup-select</span>)
-)<span style=color:#080;font-style:italic>;end popup</span>
-<span style=color:#080;font-style:italic>;tooltip popups on mouse over</span>
-(<span style=color:#b8860b>tooltip-mode</span> <span style=color:#666>1</span>)
-<span style=color:#080;font-style:italic>;customize tooltip background</span>
-(<span style=color:#b8860b>set-face-attribute</span> <span style=color:#b8860b>&#39;tooltip</span> <span style=color:#800>nil</span> <span style=color:#a2f>:inherit</span> <span style=color:#800>nil</span> <span style=color:#a2f>:background</span> <span style=color:#b44>&#34;gray96&#34;</span>)
-<span style=color:#080;font-style:italic>;pos-tip, scroll over popups with info</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>pos-tip</span>
-<span style=color:#a2f>:config</span>
-(<span style=color:#a2f>defvar</span> <span style=color:#b8860b>pos-tip-foreground-color</span> <span style=color:#b44>&#34;#FFC300&#34;</span>
-<span style=color:#b44>&#34;Default foreground color of pos-tip&#39;s tooltip.&#34;</span>)
-(<span style=color:#a2f>defvar</span> <span style=color:#b8860b>pos-tip-background-color</span> <span style=color:#b44>&#34;#2471A3&#34;</span>
-<span style=color:#b44>&#34;Default background color of pos-tip&#39;s tooltip.&#34;</span>)
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>pos-tip-background-color</span> <span style=color:#b44>&#34;#2471A3&#34;</span>)
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>pos-tip-foreground-color</span> <span style=color:#b44>&#34;#FFC300&#34;</span>)
-<span style=color:#080;font-style:italic>;(pos-tip-w32-max-width-height)</span>
-<span style=color:#080;font-style:italic>;(pos-tip-w32-max-width-height t)</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">popup</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">'popup-scroll-bar-foreground-face</span> <span style="color:#800">nil</span> <span style="color:#a2f">:inherit</span> <span style="color:#800">nil</span> <span style="color:#a2f">:background</span> <span style="color:#b44">"#FFC300"</span>)
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">'popup-scroll-bar-background-face</span> <span style="color:#800">nil</span> <span style="color:#a2f">:inherit</span> <span style="color:#800">nil</span> <span style="color:#a2f">:background</span> <span style="color:#b44">"#2471A3"</span>)
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">'popup-face</span>
+  <span style="color:#666">'</span>((<span style="color:#800">t</span> (<span style="color:#a2f">:background</span> <span style="color:#b44">"#FFC300"</span> <span style="color:#a2f">:foreground</span> <span style="color:#b44">"#2471A3"</span>))))
+(<span style="color:#00a000">define-key</span> <span style="color:#b8860b">popup-menu-keymap</span> (<span style="color:#b8860b">kbd</span> <span style="color:#b44">"SPC"</span>) <span style="color:#b8860b">'popup-select</span>)
+)<span style="color:#080;font-style:italic">;end popup</span>
+<span style="color:#080;font-style:italic">;tooltip popups on mouse over</span>
+(<span style="color:#b8860b">tooltip-mode</span> <span style="color:#666">1</span>)
+<span style="color:#080;font-style:italic">;customize tooltip background</span>
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">'tooltip</span> <span style="color:#800">nil</span> <span style="color:#a2f">:inherit</span> <span style="color:#800">nil</span> <span style="color:#a2f">:background</span> <span style="color:#b44">"gray96"</span>)
+<span style="color:#080;font-style:italic">;pos-tip, scroll over popups with info</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">pos-tip</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">pos-tip-foreground-color</span> <span style="color:#b44">"#FFC300"</span>
+<span style="color:#b44">"Default foreground color of pos-tip's tooltip."</span>)
+(<span style="color:#a2f">defvar</span> <span style="color:#b8860b">pos-tip-background-color</span> <span style="color:#b44">"#2471A3"</span>
+<span style="color:#b44">"Default background color of pos-tip's tooltip."</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">pos-tip-background-color</span> <span style="color:#b44">"#2471A3"</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">pos-tip-foreground-color</span> <span style="color:#b44">"#FFC300"</span>)
+<span style="color:#080;font-style:italic">;(pos-tip-w32-max-width-height)</span>
+<span style="color:#080;font-style:italic">;(pos-tip-w32-max-width-height t)</span>
 )
-<span style=color:#080;font-style:italic>;posframe</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>posframe</span>
-<span style=color:#a2f>:config</span>
-(<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;posframe</span>)
+<span style="color:#080;font-style:italic">;posframe</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">posframe</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">'posframe</span>)
 )
 
-</code></pre></td></tr></table></div></div><br><h5>Which Key</h5><p class=p-news>Which Key opens a frame with next letter options and explanations after you type a letter. It's great until you have a
-system of hydras, at which point you won't need it. I leave up as it doesn't get in the way.</p><div class=highlight><div style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</code></pre></td></tr></table></div></div><br><h5>Which Key</h5><p class="p-news">Which Key opens a frame with next letter options and explanations after you type a letter. It's great until you have a system of hydras, at which point you won't need it. I leave up as it doesn't get in the way.</p><div class="highlight"><div style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block"><tr><td style="vertical-align:top;padding:0;margin:0;border:0"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
@@ -172,170 +162,42 @@ system of hydras, at which point you won't need it. I leave up as it doesn't get
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">38
-</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-EmacsLisp data-lang=EmacsLisp>
-<span style=color:#080;font-style:italic>;Which Key</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>which-key</span>
-<span style=color:#a2f>:after</span> <span style=color:#b8860b>popup</span> <span style=color:#b8860b>pos-tip</span>
-<span style=color:#a2f>:diminish</span>
-<span style=color:#a2f>:init</span>
-(<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;which-key</span>)
-(<span style=color:#b8860b>which-key-mode</span> <span style=color:#666>1</span>)
-<span style=color:#a2f>:config</span>
-<span style=color:#080;font-style:italic>;(which-key-setup-side-window-right)</span>
-<span style=color:#080;font-style:italic>;(which-key-setup-minibuffer)</span>
-<span style=color:#080;font-style:italic>;(setq which-key-use-C-h-commands t)</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>which-key-popup-type</span> <span style=color:#b8860b>&#39;frame</span>)
-<span style=color:#080;font-style:italic>; max width of which-key frame: number of columns (an integer)</span>
-<span style=color:#080;font-style:italic>;(setq which-key-frame-max-width 140)</span>
-<span style=color:#080;font-style:italic>; max height of which-key frame: number of lines (an integer)</span>
-<span style=color:#080;font-style:italic>;(setq which-key-frame-max-height 120)</span>
-<span style=color:#080;font-style:italic>;this is supposed to improve speed with custom fonts</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>which-key-allow-imprecise-window-fit</span> <span style=color:#800>t</span>)
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>which-key-sort-order</span> <span style=color:#b8860b>&#39;which-key-local-then-key-order</span>)
-<span style=color:#080;font-style:italic>;just so you can read your hyrda function titles in C-m m</span>
-(<span style=color:#a2f>setq-default</span> <span style=color:#b8860b>which-key-show-docstrings</span> <span style=color:#800>nil</span>)
-(<span style=color:#a2f>setq-default</span> <span style=color:#b8860b>which-key-max-description-length</span> <span style=color:#666>11</span>)
-)<span style=color:#080;font-style:italic>;end which-key</span>
-<span style=color:#080;font-style:italic>;Which Key Posframe</span>
-(<span style=color:#a2f>use-package</span> <span style=color:#b8860b>which-key-posframe</span>
-<span style=color:#a2f>:load-path</span> <span style=color:#b8860b>which-key-posframe-p</span>
-<span style=color:#a2f>:after</span> <span style=color:#b8860b>posframe</span>
-<span style=color:#a2f>:config</span>
-(<span style=color:#a2f>require</span> <span style=color:#b8860b>&#39;which-key-posframe</span>)
-(<span style=color:#b8860b>which-key-posframe-mode</span>)
-<span style=color:#080;font-style:italic>;(setq which-key-posframe-poshandlee &#39;posframe-poshandler-frame-center)</span>
-(<span style=color:#a2f>setq</span> <span style=color:#b8860b>which-key-posframe-poshandler</span> <span style=color:#b8860b>&#39;posframe-poshandler-frame-top-center</span>)
-(<span style=color:#b8860b>set-face-attribute</span> <span style=color:#b8860b>&#39;which-key-posframe</span> <span style=color:#800>nil</span> <span style=color:#a2f>:inherit</span> <span style=color:#800>nil</span> <span style=color:#a2f>:background</span> <span style=color:#b44>&#34;#061229&#34;</span>)
-(<span style=color:#b8860b>set-face-attribute</span> <span style=color:#b8860b>&#39;which-key-command-description-face</span> <span style=color:#800>nil</span> <span style=color:#a2f>:inherit</span> <span style=color:#800>nil</span> <span style=color:#a2f>:foreground</span> <span style=color:#b44>&#34;ghost white&#34;</span>)
-(<span style=color:#b8860b>set-face-attribute</span> <span style=color:#b8860b>&#39;which-key-posframe-border</span> <span style=color:#800>nil</span> <span style=color:#a2f>:inherit</span> <span style=color:#800>nil</span> <span style=color:#a2f>:background</span> <span style=color:#b44>&#34;ghost white&#34;</span>)
-)<span style=color:#080;font-style:italic>;end which-key-posframe</span>
+</span></code></pre></td><td style="vertical-align:top;padding:0;margin:0;border:0;width:100%"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-EmacsLisp" data-lang="EmacsLisp">
+<span style="color:#080;font-style:italic">;Which Key</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">which-key</span>
+<span style="color:#a2f">:after</span> <span style="color:#b8860b">popup</span> <span style="color:#b8860b">pos-tip</span>
+<span style="color:#a2f">:diminish</span>
+<span style="color:#a2f">:init</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">'which-key</span>)
+(<span style="color:#b8860b">which-key-mode</span> <span style="color:#666">1</span>)
+<span style="color:#a2f">:config</span>
+<span style="color:#080;font-style:italic">;(which-key-setup-side-window-right)</span>
+<span style="color:#080;font-style:italic">;(which-key-setup-minibuffer)</span>
+<span style="color:#080;font-style:italic">;(setq which-key-use-C-h-commands t)</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">which-key-popup-type</span> <span style="color:#b8860b">'frame</span>)
+<span style="color:#080;font-style:italic">; max width of which-key frame: number of columns (an integer)</span>
+<span style="color:#080;font-style:italic">;(setq which-key-frame-max-width 140)</span>
+<span style="color:#080;font-style:italic">; max height of which-key frame: number of lines (an integer)</span>
+<span style="color:#080;font-style:italic">;(setq which-key-frame-max-height 120)</span>
+<span style="color:#080;font-style:italic">;this is supposed to improve speed with custom fonts</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">which-key-allow-imprecise-window-fit</span> <span style="color:#800">t</span>)
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">which-key-sort-order</span> <span style="color:#b8860b">'which-key-local-then-key-order</span>)
+<span style="color:#080;font-style:italic">;just so you can read your hyrda function titles in C-m m</span>
+(<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">which-key-show-docstrings</span> <span style="color:#800">nil</span>)
+(<span style="color:#a2f">setq-default</span> <span style="color:#b8860b">which-key-max-description-length</span> <span style="color:#666">11</span>)
+)<span style="color:#080;font-style:italic">;end which-key</span>
+<span style="color:#080;font-style:italic">;Which Key Posframe</span>
+(<span style="color:#a2f">use-package</span> <span style="color:#b8860b">which-key-posframe</span>
+<span style="color:#a2f">:load-path</span> <span style="color:#b8860b">which-key-posframe-p</span>
+<span style="color:#a2f">:after</span> <span style="color:#b8860b">posframe</span>
+<span style="color:#a2f">:config</span>
+(<span style="color:#a2f">require</span> <span style="color:#b8860b">'which-key-posframe</span>)
+(<span style="color:#b8860b">which-key-posframe-mode</span>)
+<span style="color:#080;font-style:italic">;(setq which-key-posframe-poshandlee 'posframe-poshandler-frame-center)</span>
+(<span style="color:#a2f">setq</span> <span style="color:#b8860b">which-key-posframe-poshandler</span> <span style="color:#b8860b">'posframe-poshandler-frame-top-center</span>)
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">'which-key-posframe</span> <span style="color:#800">nil</span> <span style="color:#a2f">:inherit</span> <span style="color:#800">nil</span> <span style="color:#a2f">:background</span> <span style="color:#b44">"#061229"</span>)
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">'which-key-command-description-face</span> <span style="color:#800">nil</span> <span style="color:#a2f">:inherit</span> <span style="color:#800">nil</span> <span style="color:#a2f">:foreground</span> <span style="color:#b44">"ghost white"</span>)
+(<span style="color:#b8860b">set-face-attribute</span> <span style="color:#b8860b">'which-key-posframe-border</span> <span style="color:#800">nil</span> <span style="color:#a2f">:inherit</span> <span style="color:#800">nil</span> <span style="color:#a2f">:background</span> <span style="color:#b44">"ghost white"</span>)
+)<span style="color:#080;font-style:italic">;end which-key-posframe</span>
 
-</code></pre></td></tr></table></div></div><br><h5>That's all for now. See you next time...</h5><div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-17-emacs-posframe-which-key%2f&text=Emacs%20Configuration%20Posframe%20and%20Which%20Key%2c%20Some%20Key%20Bindings&tw_p=tweetbutton" class=p-2 title="Share on Twitter" target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Tweet</small></div></a><a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-17-emacs-posframe-which-key%2f&t=Emacs%20Configuration%20Posframe%20and%20Which%20Key%2c%20Some%20Key%20Bindings" class=p-2 title="Share on Facebook" target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-facebook fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-17-emacs-posframe-which-key%2f&title=Emacs%20Configuration%20Posframe%20and%20Which%20Key%2c%20Some%20Key%20Bindings&source=mattbutton.com" class=p-2 title="Share on LinkedIn" target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href=javascript:window.print() title="Print this article" class=p-2 target=_blank rel=nofollow><div><span class=fa-stack><i class="fas fa-circle fa-stack-2x"></i><i class="fa fa-print fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Print</small></div></a></div><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;var disqus_shortname='cloud-nine-2';dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=http://disqus.com/ class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a><br><br></article></div></main><div id=banner class=banner></div><div id=sidebar class="sidebar d-print-none d-none d-md-block"><h2 class=center>Meet The Author</h2><div class=mobile-iframe><iframe width=360 height=180 src="https://www.youtube.com/embed/HR3O17D0MaE?start=0.2" frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><p>Hi, I'm <strong>Yuri Tricys</strong>, the author of Cloud Nine. I'm a <strong>researcher</strong>, <strong>technical writer</strong>, <strong>data analyst</strong>, and <strong>web developer</strong>.</p><p>Cloud Nine is a place where you can browse some of the <strong>free</strong> content I create.</p><p>You can also <strong>outsource</strong> <strong>research</strong> to me directly. In fact, I encourage you to do so.</p><p>Just send an e-mail to <a href="mailto:tricys@alumni.ubc.ca? subject=Research">tricys@alumni.ubc.ca</a> with "Research" in the subject line and I'll get back to you.</p><h2 class=center>Featured Video</h2><div class=mobile-iframe><iframe width=360 height=180 src=https://www.youtube.com/embed/-XxEX3LUgOY frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><h2 class=mt-4>Featured Posts</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/motivation/2020-02-25-developing-cognitive-ambidexterity/ class=nav-link>Developing Cognitive Ambidexterity</a>
-<a href=https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/ class=nav-link>Emacs Bookmarks</a></nav><h2 class=mt-4>Recent Posts</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/ class=nav-link>The Web Developer Hydra</a>
-<a href=https://cloudnine.github.io/science/2020-04-09-helm-hydra/ class=nav-link>The Helm Hydra</a>
-<a href=https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/ class=nav-link>Dune, by Frank Herbert</a>
-<a href=https://cloudnine.github.io/books/2020-04-07-citadel-algis-budrys/ class=nav-link>Citadel, by Algis Budrys</a>
-<a href=https://cloudnine.github.io/science/2020-03-29-emacs-elnode-and-editor-hydra/ class=nav-link>Emacs Configuration Elnode and the Editor Hydra</a>
-<a href=https://cloudnine.github.io/books/2020-03-28-american-financier/ class=nav-link>American Financier, by Jean Strous</a></nav><h2 class="mt-4 text-capitalize">categories</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/categories/computer-science/ class=nav-link>computer-science
-<span class="badge badge-pill badge-secondary">42</span></a>
-<a href=https://cloudnine.github.io/categories/economics/ class=nav-link>economics
-<span class="badge badge-pill badge-secondary">28</span></a>
-<a href=https://cloudnine.github.io/categories/finance/ class=nav-link>finance
-<span class="badge badge-pill badge-secondary">19</span></a>
-<a href=https://cloudnine.github.io/categories/business/ class=nav-link>business
-<span class="badge badge-pill badge-secondary">18</span></a>
-<a href=https://cloudnine.github.io/categories/politics/ class=nav-link>politics
-<span class="badge badge-pill badge-secondary">13</span></a>
-<a href=https://cloudnine.github.io/categories/psychology/ class=nav-link>psychology
-<span class="badge badge-pill badge-secondary">11</span></a>
-<a href=https://cloudnine.github.io/categories/statistics/ class=nav-link>statistics
-<span class="badge badge-pill badge-secondary">4</span></a>
-<a href=https://cloudnine.github.io/categories/links/ class=nav-link>links
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/categories/math/ class=nav-link>math
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/categories/music/ class=nav-link>music
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/categories/ethics/ class=nav-link>ethics
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/history/ class=nav-link>history
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/law/ class=nav-link>law
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/maths/ class=nav-link>maths
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/movies/ class=nav-link>movies
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/philosophy/ class=nav-link>philosophy
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/categories/physics/ class=nav-link>physics
-<span class="badge badge-pill badge-secondary">1</span></a></nav><h2 class="mt-4 text-capitalize">tags</h2><nav class="nav flex-column"><a href=https://cloudnine.github.io/tags/learning-center/ class=nav-link>learning-center
-<span class="badge badge-pill badge-secondary">47</span></a>
-<a href=https://cloudnine.github.io/tags/emacs/ class=nav-link>emacs
-<span class="badge badge-pill badge-secondary">24</span></a>
-<a href=https://cloudnine.github.io/tags/data-science/ class=nav-link>data-science
-<span class="badge badge-pill badge-secondary">20</span></a>
-<a href=https://cloudnine.github.io/tags/newsroom/ class=nav-link>newsroom
-<span class="badge badge-pill badge-secondary">19</span></a>
-<a href=https://cloudnine.github.io/tags/data-firm/ class=nav-link>data-firm
-<span class="badge badge-pill badge-secondary">16</span></a>
-<a href=https://cloudnine.github.io/tags/emacs-hydras/ class=nav-link>emacs-hydras
-<span class="badge badge-pill badge-secondary">14</span></a>
-<a href=https://cloudnine.github.io/tags/macroeconomics/ class=nav-link>macroeconomics
-<span class="badge badge-pill badge-secondary">14</span></a>
-<a href=https://cloudnine.github.io/tags/opinion/ class=nav-link>opinion
-<span class="badge badge-pill badge-secondary">14</span></a>
-<a href=https://cloudnine.github.io/tags/personal-development/ class=nav-link>personal-development
-<span class="badge badge-pill badge-secondary">12</span></a>
-<a href=https://cloudnine.github.io/tags/research/ class=nav-link>research
-<span class="badge badge-pill badge-secondary">10</span></a>
-<a href=https://cloudnine.github.io/tags/trends-global/ class=nav-link>trends-global
-<span class="badge badge-pill badge-secondary">9</span></a>
-<a href=https://cloudnine.github.io/tags/trade/ class=nav-link>trade
-<span class="badge badge-pill badge-secondary">8</span></a>
-<a href=https://cloudnine.github.io/tags/music/ class=nav-link>music
-<span class="badge badge-pill badge-secondary">6</span></a>
-<a href=https://cloudnine.github.io/tags/academic/ class=nav-link>academic
-<span class="badge badge-pill badge-secondary">5</span></a>
-<a href=https://cloudnine.github.io/tags/emacs-functions/ class=nav-link>emacs-functions
-<span class="badge badge-pill badge-secondary">4</span></a>
-<a href=https://cloudnine.github.io/tags/organizational-psychology/ class=nav-link>organizational-psychology
-<span class="badge badge-pill badge-secondary">4</span></a>
-<a href=https://cloudnine.github.io/tags/stock-market/ class=nav-link>stock-market
-<span class="badge badge-pill badge-secondary">4</span></a>
-<a href=https://cloudnine.github.io/tags/about-the-author/ class=nav-link>about-the-author
-<span class="badge badge-pill badge-secondary">3</span></a>
-<a href=https://cloudnine.github.io/tags/non-fiction/ class=nav-link>non-fiction
-<span class="badge badge-pill badge-secondary">3</span></a>
-<a href=https://cloudnine.github.io/tags/science-fiction/ class=nav-link>science-fiction
-<span class="badge badge-pill badge-secondary">3</span></a>
-<a href=https://cloudnine.github.io/tags/featured/ class=nav-link>featured
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/r-programming/ class=nav-link>r-programming
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/text-editors/ class=nav-link>text-editors
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/video/ class=nav-link>video
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/windows/ class=nav-link>windows
-<span class="badge badge-pill badge-secondary">2</span></a>
-<a href=https://cloudnine.github.io/tags/alternative/ class=nav-link>alternative
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/alternative-energy/ class=nav-link>alternative-energy
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/blog/ class=nav-link>blog
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/blog-links/ class=nav-link>blog-links
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/calculus/ class=nav-link>calculus
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/changing-computers/ class=nav-link>changing-computers
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/climate-change/ class=nav-link>climate-change
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/computational-modelling/ class=nav-link>computational-modelling
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/custom-charts/ class=nav-link>custom-charts
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/data-links/ class=nav-link>data-links
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/economics/ class=nav-link>economics
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/grunge/ class=nav-link>grunge
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/investing/ class=nav-link>investing
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/news-room/ class=nav-link>news-room
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/public-sector/ class=nav-link>public-sector
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/punk/ class=nav-link>punk
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/tech/ class=nav-link>tech
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/video-emacs/ class=nav-link>video-emacs
-<span class="badge badge-pill badge-secondary">1</span></a>
-<a href=https://cloudnine.github.io/tags/video-motivational/ class=nav-link>video-motivational
-<span class="badge badge-pill badge-secondary">1</span></a></nav></div><div id=ads class=ads></div><footer id=footer class="mt-auto footer d-print-none"><div class=container-fluid><div class="row justify-content-center"><div class="col-md-4 col-xl-3"><h5>Website</h5>This blog was created using <a href=https://gohugo.io/>Hugo</a>,
-<a href=https://getbootstrap.com/>Bootstrap</a>, and the Silhouette Hugo theme.</div><div class="col-md-4 col-xl-3"><h5>Disclaimer</h5>Opinions expressed here are my own and may not reflect those of any company I work for, or people I
-work with.</div><div class="col-md-4 col-xl-3"><h5></h5>© 2019 - <script>document.write(Date().split` `[3])</script>Yuri Tricys</div></div><hr><div class="d-flex justify-content-center icons"><a class="py-2 px-2" href=https://www.linkedin.com/in/yuri-tricys-aa004b26/><i class="fab fa-linkedin"></i></a><a class="py-2 px-2" href=https://cloudnine.github.io/index.xml><i class="fas fa-rss"></i></a></div></div></footer></div></body></html>
+</code></pre></td></tr></table></div></div><br><h5>That's all for now. See you next time...</h5><div class="share-icons d-flex justify-content-center d-print-none"><a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-17-emacs-posframe-which-key%2f&text=Emacs%20Configuration%20Posframe%20and%20Which%20Key%2c%20Some%20Key%20Bindings&tw_p=tweetbutton" class="p-2" title="Share on Twitter" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Tweet</small></div></a><a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-17-emacs-posframe-which-key%2f&t=Emacs%20Configuration%20Posframe%20and%20Which%20Key%2c%20Some%20Key%20Bindings" class="p-2" title="Share on Facebook" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-facebook fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcloudnine.github.io%2fscience%2f2020-02-17-emacs-posframe-which-key%2f&title=Emacs%20Configuration%20Posframe%20and%20Which%20Key%2c%20Some%20Key%20Bindings&source=mattbutton.com" class="p-2" title="Share on LinkedIn" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Share</small></div></a><a href="javascript:window.print()" title="Print this article" class="p-2" target="_blank" rel="nofollow"><div><span class="fa-stack"><i class="fas fa-circle fa-stack-2x"></i><i class="fa fa-print fa-stack-1x fa-inverse"></i></span></div><div class="fa-inverse text-center"><small>Print</small></div></a></div><div id="disqus_thread"></div><script type="text/javascript">(function(){if(window.location.hostname=="localhost")return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;var disqus_shortname='cloud-nine-2';dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br><br></article></div></main><div id="banner" class="banner"></div><section id="sidebar" class="sidebar"><div class="about-us"><h2>Science, Science, Science</h2><div class="well"><img class="img" title="William Whewell" src="https://cloudnine.github.io/headless/william-whewell_hu868d4ec0693740b6d9960a82bcd67229_770238_100x100_fit_q75_box.jpg"><br><p>This kind man didn't invent the term scientist so you could make a mockery of earthly geometrics! He did it because science is badass, just like him. Taking science seriously is the first step to better health and a better world for all. You can take that first step here.</p><div class="blockquote q-adjust">"We need very much a name to describe a cultivator of science in general. I should incline to call him a Scientist." ~ William Whewell.</div><p>Seriously though, most of our sciency posts are really about computer science, namely Emacs - but don't be swayed by the Old-Skoolers. If you're choosing a text editor for the first time, Emacs is dead.</p><p>Didn't you get the memo? And who are you anyway? Frankenstein? Give it up. Get over it. Go with Webstorm, or Sublime - open up your wallet and pay the man already. Or if you absolutely need to get cranked on Javascript, hit up Atom...it's free, and going places.</p><p>Having said all that, we use Emacs, and around here, the Earth is round.</p></div></div><div class="featured-posts"><h2 class="center vim-header">Featured Posts</h2><div class="preview-featured"><a href="https://cloudnine.github.io/motivation/2020-02-25-developing-cognitive-ambidexterity/"><div style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://cloudnine.github.io/images/archives/psychology-4.jpg')"></div>Developing Cognitive Ambidexterity</a></div><div class="preview-featured"><a href="https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/"><div style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://cloudnine.github.io/images/science/feature-image_huaae40730963afb820590c75654a19224_309141_600x0_resize_q75_box.jpg')"></div>Emacs Bookmarks</a></div></div><div class="recent-container"><h2 class="center recent-header">Similar Posts</h2><div class="previews"><a href="https://cloudnine.github.io/science/2020-02-15-emacs-shell-hydra/"><div style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://cloudnine.github.io/images/science/hcf.jpg')"></div>An Emacs Shell Hydra</a></div><div class="previews"><a href="https://cloudnine.github.io/science/2020-02-11-emacs-frames-buffers-defaults-functions/"><div style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://cloudnine.github.io/images/science/hcf.jpg')"></div>Emacs Frames, Buffers, Lines, Defaults (+ Some Functions)</a></div><div class="previews"><a href="https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/"><div style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://cloudnine.github.io/images/science/hcf.jpg')"></div>Emacs Defaults</a></div><div class="previews"><a href="https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/"><div style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://cloudnine.github.io/images/science/hcf.jpg')"></div>Emacs Functions (And Program Launcher Hydra)</a></div><div class="previews"><a href="https://cloudnine.github.io/science/2020-01-24-emacs-installation-and-defaults/"><div style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://cloudnine.github.io/images/science/hcf.jpg')"></div>Emacs Installation and Defaults</a></div><div class="previews"><a href="https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/"><div style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://cloudnine.github.io/images/science/pleiades.jpg')"></div>Emacs Configuration Overview</a></div></div></section><section id="ads" class="ads"><div class="vimeo"><h2 class="center vim-header">Featured Vimeo</h2><div id="vimeoVids"></div><button id="vimeoSelector" type="button">Select New Vimeo</button></div><div class="youtube"><h2 class="center tube-header">Featured Playlist</h2><div id="youtubeVids"></div><button id="youtubeSelector" type="button">Select New Youtube Playlist</button></div><div class="recent-container"><h2 class="center recent-header">Recent Posts</h2><div class="previews"><a href="https://cloudnine.github.io/motivation/2020-06-28-music-playlist-classical/"><div style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://cloudnine.github.io/headless/classical_hue5ef2771040f56b5c55e7e2d7dea085b_582083_600x0_resize_box_2.png')"></div>Music Playlist: Classical</a></div><div class="previews"><a href="https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/"><div style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/feature-image_hu29d0925b8c37c62fb1e1754721577c25_343982_600x0_resize_q75_box.jpg')"></div>The Web Developer Hydra</a></div><div class="previews"><a href="https://cloudnine.github.io/current/2020-04-10-cloverfield-paradox-film/"><div style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://img.youtube.com/vi/oXV5RZOpkAg/maxresdefault.jpg')"></div>What's So Great About the Cloverfield Paradox?</a></div><div class="previews"><a href="https://cloudnine.github.io/science/2020-04-09-helm-hydra/"><div style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://cloudnine.github.io/images/science/christian-bale.jpg')"></div>The Helm Hydra</a></div><div class="previews"><a href="https://cloudnine.github.io/books/2020-04-07-dune-frank-herbert/"><div style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://cloudnine.github.io/images/books/dune/dune-hero.jpg')"></div>Dune, by Frank Herbert</a></div><div class="previews"><a href="https://cloudnine.github.io/books/2020-04-07-citadel-algis-budrys/"><div style="background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('https://cloudnine.github.io/images/books/books-2.jpg')"></div>Citadel, by Algis Budrys</a></div></div></section><footer id="footer" class="mt-auto footer d-print-none"><div class="container-fluid"><div class="row justify-content-center"><div class="col-md-4 col-xl-3"><h5>Website</h5>This blog was created by <a href="http://buildhello.ca">Build Hello</a> using <a href="https://gohugo.io/">Hugo</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, and the Silhouette Hugo theme.</div><div class="col-md-4 col-xl-3"><h5>Disclaimer</h5>Opinions expressed here are my own and may not reflect those of any company I work for, or people I work with.</div><div class="col-md-4 col-xl-3"><h5>Copyright</h5><span class="cp">© 2019 -<script>document.write(Date().split` `[3])</script> Yuri Tricys</span></div></div><hr><div class="d-flex justify-content-center icons"><a class="py-2 px-2" href="https://www.linkedin.com/in/yuri-tricys-aa004b26/"><i class="fab fa-linkedin"></i></a><a class="develop" href="http://www.buildhello.ca"><div class="footer-logo" style="background-image:url(https://cloudnine.github.io/images/icons/bh-logo_hua1f38330de7d2e6c8292f30f1559bee9_33332_200x0_resize_box_2.png)"></div></a><a class="py-2 px-2" href="https://cloudnine.github.io/index.xml"><i class="fas fa-rss"></i></a></div></div></footer></div></body></html>
