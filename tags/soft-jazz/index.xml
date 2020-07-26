@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>soft jazz on Cloud Nine</title><link>https://cloudnine.github.io/tags/soft-jazz/</link><description>Recent content in soft jazz on Cloud Nine</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Sun, 20 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/soft-jazz/index.xml" rel="self" type="application/rss+xml"/><item><title>Music Playlist - Seventies Era Jazz</title><link>https://cloudnine.github.io/motivation/2019-10-20-music-playlist-jazz/</link><pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate><guid>https://cloudnine.github.io/motivation/2019-10-20-music-playlist-jazz/</guid><description>
-Songs:
-Donald Byrd: Flight Time*, Where are we going?, Just my Imagination, Black Jack, Design A Nation, M&amp;#39;s, Bossa (Canto G Bossa), The Dude, Places and Spaces I&amp;#39;ve Been, Lansanas Priestess, Dizzy Gillespie: Unicorn
-Playlist Title:&amp;nbsp;smooth jazz</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>soft jazz on Cloud Nine</title>
+    <link>https://cloudnine.github.io/tags/soft-jazz/</link>
+    <description>Recent content in soft jazz on Cloud Nine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 20 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/tags/soft-jazz/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Music Playlist - Seventies Era Jazz</title>
+      <link>https://cloudnine.github.io/motivation/2019-10-20-music-playlist-jazz/</link>
+      <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/motivation/2019-10-20-music-playlist-jazz/</guid>
+      <description>Songs:Donald Byrd: Flight Time*, Where are we going?, Just my Imagination, Black Jack, Design A Nation, M&amp;#39;s, Bossa (Canto G Bossa), The Dude, Places and Spaces I&amp;#39;ve Been, Lansanas Priestess, Dizzy Gillespie: Unicorn
+ Playlist Title:&amp;nbsp;Smooth Jazz</description>
+    </item>
+    
+  </channel>
+</rss>
