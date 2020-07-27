@@ -6,17 +6,27 @@
     <description>Recent content on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 26 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Emacs Company Mode</title>
+      <link>https://cloudnine.github.io/science/2020-07-27-emacs-company-mode/</link>
+      <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-07-27-emacs-company-mode/</guid>
+      <description>This post covers the following sections from my init.   Autocompletion
+  Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, search &#39;Emacs&#39; in tags or search on this site. Then read the posts y date fromoldest to newest.</description>
+    </item>
+    
+    <item>
       <title>Music Playlist - Tokyo Megaplex </title>
-      <link>https://cloudnine.github.io/motivation/2020-07-26-music-playlist-tokyo-megaplex/</link>
+      <link>https://cloudnine.github.io/current/2020-07-26-music-playlist-tokyo-megaplex/</link>
       <pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/motivation/2020-07-26-music-playlist-tokyo-megaplex/</guid>
+      <guid>https://cloudnine.github.io/current/2020-07-26-music-playlist-tokyo-megaplex/</guid>
       <description>Songs:Tokyo Megaplex - Pinapple House Party, The Hole Foods Experience, Ahhhhh, The Price Is Wrong  Playlist Title:&amp;nbsp;Tokyo MegaplexAs I understand, Tokyo Megaplex is a Brooklyn musical artist. I listened to a few of their tracks and enjoyed these ones.If you can listen beyond the Hip Hop (a decidedly specific segment of the musical spectrum), they could go nicely with augmented reality. Augmented Reality is a concept developed in recent years by designer KEIICHIMATSUDA.</description>
     </item>
     

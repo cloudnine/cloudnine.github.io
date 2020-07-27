@@ -6,10 +6,28 @@
     <description>Recent content on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 26 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Emacs</title>
+      <link>https://cloudnine.github.io/tags/emacs/</link>
+      <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>learning center</title>
+      <link>https://cloudnine.github.io/tags/learning-center/</link>
+      <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/learning-center/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>film</title>
@@ -21,7 +39,7 @@
     </item>
     
     <item>
-      <title>House</title>
+      <title>house</title>
       <link>https://cloudnine.github.io/tags/house/</link>
       <pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -57,29 +75,11 @@
     </item>
     
     <item>
-      <title>Emacs</title>
-      <link>https://cloudnine.github.io/tags/emacs/</link>
-      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/emacs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>emacs-hydras</title>
       <link>https://cloudnine.github.io/tags/emacs-hydras/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/emacs-hydras/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>learning center</title>
-      <link>https://cloudnine.github.io/tags/learning-center/</link>
-      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/learning-center/</guid>
       <description></description>
     </item>
     
