@@ -4,21 +4,51 @@
   
   <url>
     <loc>https://cloudnine.github.io/</loc>
-    <lastmod>2020-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/categories/</loc>
-    <lastmod>2020-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/science/</loc>
-    <lastmod>2020-07-27T00:00:00+00:00</lastmod>
+    <loc>https://cloudnine.github.io/motivation/</loc>
+    <lastmod>2020-07-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://cloudnine.github.io/tags/</loc>
+    <lastmod>2020-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/jazz/</loc>
+    <lastmod>2020-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/music/</loc>
+    <lastmod>2020-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/categories/music/</loc>
+    <lastmod>2020-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/motivation/2020-07-29-music-playlist-jazz-cannonball-adderly/</loc>
+    <lastmod>2020-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/tags/soft-jazz/</loc>
+    <lastmod>2020-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloudnine.github.io/science/</loc>
     <lastmod>2020-07-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,28 +93,8 @@
   </url>
   
   <url>
-    <loc>https://cloudnine.github.io/tags/jazz/</loc>
-    <lastmod>2020-07-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/tags/music/</loc>
-    <lastmod>2020-07-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/categories/music/</loc>
-    <lastmod>2020-07-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://cloudnine.github.io/current/2020-07-26-music-playlist-tokyo-megaplex/</loc>
     <lastmod>2020-07-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/motivation/</loc>
-    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -484,11 +494,6 @@
   
   <url>
     <loc>https://cloudnine.github.io/motivation/2019-10-20-music-playlist-jazz/</loc>
-    <lastmod>2019-10-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cloudnine.github.io/tags/soft-jazz/</loc>
     <lastmod>2019-10-20T00:00:00+00:00</lastmod>
   </url>
   
