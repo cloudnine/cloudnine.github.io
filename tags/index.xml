@@ -6,10 +6,46 @@
     <description>Recent content on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 29 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cloudnine.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>alternative</title>
+      <link>https://cloudnine.github.io/tags/alternative/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/alternative/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>indie rock</title>
+      <link>https://cloudnine.github.io/tags/indie-rock/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/indie-rock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>music</title>
+      <link>https://cloudnine.github.io/tags/music/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rock</title>
+      <link>https://cloudnine.github.io/tags/rock/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/rock/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>jazz</title>
@@ -17,15 +53,6 @@
       <pubDate>Wed, 29 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/jazz/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>music</title>
-      <link>https://cloudnine.github.io/tags/music/</link>
-      <pubDate>Wed, 29 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/music/</guid>
       <description></description>
     </item>
     
@@ -89,15 +116,6 @@
       <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/emacs-hydras/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>alternative</title>
-      <link>https://cloudnine.github.io/tags/alternative/</link>
-      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/alternative/</guid>
       <description></description>
     </item>
     
@@ -287,15 +305,6 @@
       <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/electronic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rock</title>
-      <link>https://cloudnine.github.io/tags/rock/</link>
-      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/rock/</guid>
       <description></description>
     </item>
     
