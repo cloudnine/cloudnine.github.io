@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: 404.html
+Disallow: index.json
+Disallow:/categories/
+Disallow:/tags/
+Disallow:/headless/
+Disallow:/post/Sitemap:https://cloudnine.github.io/sitemap.xml
