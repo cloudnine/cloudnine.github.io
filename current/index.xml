@@ -6,21 +6,7 @@
     <description>Recent content on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://cloudnine.github.io/current/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Emacs Tutorial, Org-Mode</title>
-      <link>https://cloudnine.github.io/current/2020-09-19-emacs-tutorial-org-mode/</link>
-      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/current/2020-09-19-emacs-tutorial-org-mode/</guid>
-      <description>A brief introduction to Emacs Org-Mode.
-  [Still configuring sound filters, and working on camera angles. Stay tuned.]</description>
-    </item>
-    
+    <lastBuildDate>Sun, 06 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/current/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Swing of Change</title>
       <link>https://cloudnine.github.io/current/2020-09-06-vimeo-jazz-vid-editors-choice/</link>

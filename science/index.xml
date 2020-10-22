@@ -6,10 +6,16 @@
     <description>Recent content on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 24 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://cloudnine.github.io/science/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs Tutorial, Org-Mode</title>
+      <link>https://cloudnine.github.io/science/2020-09-19-emacs-tutorial-org-mode/</link>
+      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-09-19-emacs-tutorial-org-mode/</guid>
+      <description>A brief introduction to Emacs Org-Mode.
+  [Still configuring sound filters, and working on camera angles. Stay tuned.]</description>
+    </item>
     
     <item>
       <title>Emacs Web-Mode, With Hydra</title>

@@ -6,11 +6,7 @@
     <description>Recent content in emacs-hydras on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://cloudnine.github.io/tags/emacs-hydras/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/emacs-hydras/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Web Developer Hydra</title>
       <link>https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/</link>

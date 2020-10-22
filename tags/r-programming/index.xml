@@ -6,11 +6,7 @@
     <description>Recent content in R Programming on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 05 May 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://cloudnine.github.io/tags/r-programming/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 05 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/r-programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Working With Data In R</title>
       <link>https://cloudnine.github.io/archives/2017-05-29-getting-data-into-r/</link>

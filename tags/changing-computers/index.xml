@@ -6,11 +6,7 @@
     <description>Recent content in changing computers on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://cloudnine.github.io/tags/changing-computers/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/changing-computers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs Installation and Defaults</title>
       <link>https://cloudnine.github.io/science/2020-01-24-emacs-installation-and-defaults/</link>

@@ -6,11 +6,7 @@
     <description>Recent content in emacs functions on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://cloudnine.github.io/tags/emacs-functions/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/emacs-functions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs Windows, Frames, Buffers, and Cursor</title>
       <link>https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/</link>
