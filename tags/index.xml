@@ -6,40 +6,13 @@
     <description>Recent content on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 21 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>alternative</title>
-      <link>https://cloudnine.github.io/tags/alternative/</link>
-      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+      <title>Classical</title>
+      <link>https://cloudnine.github.io/tags/classical/</link>
+      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/tags/alternative/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>indie rock</title>
-      <link>https://cloudnine.github.io/tags/indie-rock/</link>
-      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/indie-rock/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>music</title>
-      <link>https://cloudnine.github.io/tags/music/</link>
-      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/music/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rock</title>
-      <link>https://cloudnine.github.io/tags/rock/</link>
-      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/rock/</guid>
+      <guid>https://cloudnine.github.io/tags/classical/</guid>
       <description></description>
     </item>
     
@@ -80,11 +53,47 @@
     </item>
     
     <item>
+      <title>music</title>
+      <link>https://cloudnine.github.io/tags/music/</link>
+      <pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>emacs hyrdas</title>
       <link>https://cloudnine.github.io/tags/emacs-hyrdas/</link>
       <pubDate>Mon, 24 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/emacs-hyrdas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>alternative</title>
+      <link>https://cloudnine.github.io/tags/alternative/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/alternative/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>indie rock</title>
+      <link>https://cloudnine.github.io/tags/indie-rock/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/indie-rock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rock</title>
+      <link>https://cloudnine.github.io/tags/rock/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/rock/</guid>
       <description></description>
     </item>
     
@@ -121,15 +130,6 @@
       <pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/house/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Classical</title>
-      <link>https://cloudnine.github.io/tags/classical/</link>
-      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/classical/</guid>
       <description></description>
     </item>
     
