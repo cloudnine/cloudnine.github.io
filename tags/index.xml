@@ -6,20 +6,11 @@
     <description>Recent content on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 31 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Classical</title>
-      <link>https://cloudnine.github.io/tags/classical/</link>
-      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/classical/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sun, 08 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs</title>
       <link>https://cloudnine.github.io/tags/emacs/</link>
-      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/emacs/</guid>
       <description></description>
@@ -28,7 +19,7 @@
     <item>
       <title>learning center</title>
       <link>https://cloudnine.github.io/tags/learning-center/</link>
-      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/learning-center/</guid>
       <description></description>
@@ -37,9 +28,18 @@
     <item>
       <title>Video</title>
       <link>https://cloudnine.github.io/tags/video/</link>
-      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/video/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Classical</title>
+      <link>https://cloudnine.github.io/tags/classical/</link>
+      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/classical/</guid>
       <description></description>
     </item>
     

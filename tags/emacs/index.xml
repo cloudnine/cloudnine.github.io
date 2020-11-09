@@ -6,7 +6,47 @@
     <description>Recent content in Emacs on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 1</title>
+      <link>https://cloudnine.github.io/science/2020-11-08-emacs-tutorial-exporting-org-mode-to-pdf-1/</link>
+      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-11-08-emacs-tutorial-exporting-org-mode-to-pdf-1/</guid>
+      <description>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 1
+  The above video demonstrates inserting text and images into an org-mode file. I use a function in emacs initialization topull images from a specified directory into org-mode files. See below. The first function, &#34;get-newest-file-from-dir&#34; is used in the secondfunction, &#34;insert-org-image&#34;. It&#39;s the second function I&#39;m calling from a hydra when I pull images from the downloads directory. With alittle more code you can easily combine downloading and pulling images into org-files, in fact the emacs package easy-hugo has a download,process, and insert image into your blog (markdown or org file) function baked into it.</description>
+    </item>
+    
+    <item>
+      <title>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 2</title>
+      <link>https://cloudnine.github.io/science/2020-11-08-emacs-tutorial-exporting-org-mode-to-pdf-2/</link>
+      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-11-08-emacs-tutorial-exporting-org-mode-to-pdf-2/</guid>
+      <description>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 2
+  See you next time...</description>
+    </item>
+    
+    <item>
+      <title>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 3</title>
+      <link>https://cloudnine.github.io/science/2020-11-08-emacs-tutorial-exporting-org-mode-to-pdf-3/</link>
+      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-11-08-emacs-tutorial-exporting-org-mode-to-pdf-3/</guid>
+      <description>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 3
+  See you next time...</description>
+    </item>
+    
+    <item>
+      <title>Emacs Tutorial, Wget, Curl, Headless Chrome</title>
+      <link>https://cloudnine.github.io/science/2020-11-08-emacs-tutorial-wget-curl-headless-chrome/</link>
+      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-11-08-emacs-tutorial-wget-curl-headless-chrome/</guid>
+      <description>A brief introduction to Wget, Curl, and Headless Chrome.
+  Wget and Curl and small programs easily installed through your package manager, or directly by downloading andinstalling. Headless Chrome can be installed from the command line using node and node&#39;s package manager npm. Install node globally and addadd it to your path (or use your package manager to install it). Ensure npm is installed. Headless Chrome can be used globally or in a localworking directory via a package.</description>
+    </item>
+    
     <item>
       <title>Emacs Tutorial, Org-Mode</title>
       <link>https://cloudnine.github.io/science/2020-09-19-emacs-tutorial-org-mode/</link>
