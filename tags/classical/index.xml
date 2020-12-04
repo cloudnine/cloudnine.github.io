@@ -6,14 +6,18 @@
     <description>Recent content in Classical on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 31 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/classical/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Oct 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/tags/classical/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Music Playlist - Marin Marais</title>
       <link>https://cloudnine.github.io/motivation/2020-10-31-music-playlist-classical-moments/</link>
       <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/motivation/2020-10-31-music-playlist-classical-moments/</guid>
-      <description>Songs:Marin Marais: Suite in A Minor. Book 3 (Gavotte),Sarabande A L&amp;#39;Espagnol,Chaconne En Rondeau. Book 2, Prelude En Harpegement. Book 5, Tombeau Pour Marais Le Cadet. Book 5, Suite In B Minor. Tombeau Pour Monsieur De Lully, Marche Persane Dite La Savigny. Book 5, Le Labyrinthe. Book 4, Le Tableau Doperation De La Taille. Book 5, Suite In G Minor (Suite En Sol Mineur) : Prelude, Le Tourbillon. Book 4, Works for Viola da Gamba (XVII th century)</description>
+      <description>Songs: Marin Marais: Suite in A Minor. Book 3 (Gavotte),Sarabande A L&amp;#39;Espagnol,Chaconne En Rondeau. Book 2, Prelude En Harpegement. Book 5, Tombeau Pour Marais Le Cadet. Book 5, Suite In B Minor. Tombeau Pour Monsieur De Lully, Marche Persane Dite La Savigny. Book 5, Le Labyrinthe. Book 4, Le Tableau Doperation De La Taille. Book 5, Suite In G Minor (Suite En Sol Mineur) : Prelude, Le Tourbillon. Book 4, Works for Viola da Gamba (XVII th century)</description>
     </item>
     
     <item>
@@ -22,7 +26,7 @@
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/motivation/2020-06-28-music-playlist-classical/</guid>
-      <description>Songs:Sheku-Kanneh-Mason -Song of the Birds,Klengel Hymnus, Op. 57, Vanessa Mae: Pagaini: La Campanella, Victor Lyadov: Danza ritual del Fuego, Bond - Quixote, Kaori Fujii: Allemande BWV 1013 - J.S. Bach, Hilary Hahn - J.S. Bach: Partita for Violin Solo No. 1 in B Minor, Partita No. 3 prelude, Yo-Yo Ma - Bach: Cello Suite No. 3 in C Major, Casals - Song of The Birds - Camille Thomas, Sibelius : Violin Concerto (Hilary Hahn), Hilary Hahn - Tchaikovsky - Violin Concerto in D Major, Op.</description>
+      <description>Songs: Sheku-Kanneh-Mason -Song of the Birds,Klengel Hymnus, Op. 57, Vanessa Mae: Pagaini: La Campanella, Victor Lyadov: Danza ritual del Fuego, Bond - Quixote, Kaori Fujii: Allemande BWV 1013 - J.S. Bach, Hilary Hahn - J.S. Bach: Partita for Violin Solo No. 1 in B Minor, Partita No. 3 prelude, Yo-Yo Ma - Bach: Cello Suite No. 3 in C Major, Casals - Song of The Birds - Camille Thomas, Sibelius : Violin Concerto (Hilary Hahn), Hilary Hahn - Tchaikovsky - Violin Concerto in D Major, Op.</description>
     </item>
     
   </channel>

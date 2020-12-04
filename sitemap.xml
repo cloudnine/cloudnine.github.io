@@ -505,6 +505,12 @@
 <priority>0.5</priority>
 </url>
 <url>
+<loc>https://cloudnine.github.io/categories/math/</loc>
+<lastmod>2020-02-15T00:00:00+00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
 <loc>https://cloudnine.github.io/categories/maths/</loc>
 <lastmod>2020-02-15T00:00:00+00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -951,12 +957,6 @@
 <url>
 <loc>https://cloudnine.github.io/archives/2016-01-30-what-is-economic-policy/</loc>
 <lastmod>2016-01-30T00:00:00+00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://cloudnine.github.io/categories/math/</loc>
-<lastmod>2016-01-25T00:00:00+00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
