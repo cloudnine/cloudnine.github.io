@@ -6,10 +6,15 @@
     <description>Recent content in computer science on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 08 Nov 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://cloudnine.github.io/categories/computer-science/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 15 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/categories/computer-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs Flymake and PHP Mode</title>
+      <link>https://cloudnine.github.io/science/2020-12-15-emacs-flymake-and-php-mode/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-12-15-emacs-flymake-and-php-mode/</guid>
+      <description>This post covers the following sections from my init.  Flymake PHP Mode   PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, search &#39;Emacs&#39; in tags or search on this site. Then read the posts y date from oldest to newest.</description>
+    </item>
     
     <item>
       <title>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 3</title>
@@ -18,7 +23,7 @@
       
       <guid>https://cloudnine.github.io/science/2020-11-08-emacs-tutorial-exporting-org-mode-to-pdf-3/</guid>
       <description>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 3
-   See you next time... </description>
+  See you next time...</description>
     </item>
     
     <item>
@@ -28,7 +33,7 @@
       
       <guid>https://cloudnine.github.io/science/2020-11-07-emacs-tutorial-exporting-org-mode-to-pdf-2/</guid>
       <description>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 2
-   See you next time... </description>
+  See you next time...</description>
     </item>
     
     <item>
@@ -38,7 +43,7 @@
       
       <guid>https://cloudnine.github.io/science/2020-11-06-emacs-tutorial-exporting-org-mode-to-pdf-1/</guid>
       <description>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 1
-  The above video demonstrates inserting text and images into an org-mode file. I use a function in emacs initialization to pull images from a specified directory into org-mode files. See below. The first function, &#34;get-newest-file-from-dir&#34; is used in the second function, &#34;insert-org-image&#34;. It&#39;s the second function I&#39;m calling from a hydra when I pull images from the downloads directory. With a little more code you can easily combine downloading and pulling images into org-files, in fact the emacs package easy-hugo has a download, process, and insert image into your blog (markdown or org file) function baked into it.</description>
+  The above video demonstrates inserting text and images into an org-mode file. I use a function in emacs initialization topull images from a specified directory into org-mode files. See below. The first function, &#34;get-newest-file-from-dir&#34; is used in the secondfunction, &#34;insert-org-image&#34;. It&#39;s the second function I&#39;m calling from a hydra when I pull images from the downloads directory. With alittle more code you can easily combine downloading and pulling images into org-files, in fact the emacs package easy-hugo has a download,process, and insert image into your blog (markdown or org file) function baked into it.</description>
     </item>
     
     <item>
@@ -48,7 +53,7 @@
       
       <guid>https://cloudnine.github.io/science/2020-11-03-emacs-tutorial-wget-curl-headless-chrome/</guid>
       <description>A brief introduction to Wget, Curl, and Headless Chrome.
-  Wget and Curl and small programs easily installed through your package manager, or directly by downloading and installing. Headless Chrome can be installed from the command line using node and node&#39;s package manager npm. Install node globally and add add it to your path (or use your package manager to install it). Ensure npm is installed. Headless Chrome can be used globally or in a local working directory via a package.</description>
+  Wget and Curl and small programs easily installed through your package manager, or directly by downloading andinstalling. Headless Chrome can be installed from the command line using node and node&#39;s package manager npm. Install node globally and addadd it to your path (or use your package manager to install it). Ensure npm is installed. Headless Chrome can be used globally or in a localworking directory via a package.</description>
     </item>
     
     <item>
@@ -67,7 +72,7 @@
       <pubDate>Mon, 24 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-08-24-emacs-web-mode/</guid>
-      <description>This post covers the following sections from my init.   Web Mode    Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, search &#39;Emacs&#39; in tags or search on this site. Then read the posts y date from oldest to newest.</description>
+      <description>This post covers the following sections from my init.  Web Mode    Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, search &#39;Emacs&#39; in tags or search on this site. Then read the posts y date fromoldest to newest.</description>
     </item>
     
     <item>
@@ -76,7 +81,7 @@
       <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-08-08-emacs-emmet-mode-yasnippet/</guid>
-      <description>This post covers the following sections from my init.   Autocompletion  ** Emmet  ** Yasnippet    Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, search &#39;Emacs&#39; in tags or search on this site. Then read the posts y date from oldest to newest.</description>
+      <description>This post covers the following sections from my init.  Autocompletion  ** Emmet  ** Yasnippet   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, search &#39;Emacs&#39; in tags or search on this site. Then read the posts y date fromoldest to newest.</description>
     </item>
     
     <item>
@@ -85,8 +90,8 @@
       <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-07-27-emacs-company-mode/</guid>
-      <description>This post covers the following sections from my init.    Autocompletion
-   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, search &#39;Emacs&#39; in tags or search on this site. Then read the posts y date from oldest to newest.</description>
+      <description>This post covers the following sections from my init.   Autocompletion
+  Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, search &#39;Emacs&#39; in tags or search on this site. Then read the posts y date fromoldest to newest.</description>
     </item>
     
     <item>
@@ -95,8 +100,8 @@
       <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/</guid>
-      <description>This post covers the following sections from my init.    Web Developer Hydra
-   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date from oldest to newest.</description>
+      <description>This post covers the following sections from my init.   Web Developer Hydra
+  Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date fromoldest to newest.</description>
     </item>
     
     <item>
@@ -105,8 +110,8 @@
       <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-04-09-helm-hydra/</guid>
-      <description>This post covers the following sections from my init.    Helm Hydra
-   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date from oldest to newest.</description>
+      <description>This post covers the following sections from my init.   Helm Hydra
+  PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date fromoldest to newest.</description>
     </item>
     
     <item>
@@ -115,9 +120,9 @@
       <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-03-29-emacs-elnode-and-editor-hydra/</guid>
-      <description>This post covers the following sections from my init.    Elnode
+      <description>This post covers the following sections from my init.   Elnode
   Editor Hydra
-   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date from oldest to newest.</description>
+  PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date fromoldest to newest.</description>
     </item>
     
     <item>
@@ -126,9 +131,9 @@
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-03-22-emacs-finding-files-ediff/</guid>
-      <description>This post covers the following sections from my init.    Finding Files
+      <description>This post covers the following sections from my init.   Finding Files
   Ediff
-   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date from oldest to newest.</description>
+  PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date fromoldest to newest.</description>
     </item>
     
     <item>
@@ -137,9 +142,9 @@
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-03-20-emacs-selection-region-mark-browsers/</guid>
-      <description>This post covers , Directories, Clipboard, and Command Line History from the &#34;Default Operations&#34; section of my init.    Selection Region and Mark
+      <description>This post covers , Directories, Clipboard, and Command Line History from the &#34;Default Operations&#34; section of my init.   Selection Region and Mark
   Browsers
-   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
+  PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
     </item>
     
     <item>
@@ -148,8 +153,8 @@
       <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-03-17-emacs-parentheses-directories-clipboard-command-line-history/</guid>
-      <description>This post covers Parentheses, Directories, Clipboard, and Command Line History from the &#34;Default Operations&#34; section of my init.    Default Operations
- Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history     Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for.</description>
+      <description>This post covers Parentheses, Directories, Clipboard, and Command Line History from the &#34;Default Operations&#34; section of my init.   Default Operations
+ Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history    PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for.</description>
     </item>
     
     <item>
@@ -158,8 +163,8 @@
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-03-15-emacs-projectile-helm-smex/</guid>
-      <description>This post covers Projectile, Helm, Smex, and Bookmarks from the &#34;Default Operations&#34; section of my init.    Default Operations
- Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history     Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for.</description>
+      <description>This post covers Projectile, Helm, Smex, and Bookmarks from the &#34;Default Operations&#34; section of my init.   Default Operations
+ Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history    PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for.</description>
     </item>
     
     <item>
@@ -168,8 +173,8 @@
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/</guid>
-      <description>This post covers the first two sections from the &#34;Default Operations&#34; section of my init.    Default Operations
- Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history     Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for.</description>
+      <description>This post covers the first two sections from the &#34;Default Operations&#34; section of my init.   Default Operations
+ Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history    PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for.</description>
     </item>
     
     <item>
@@ -178,7 +183,7 @@
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-02-27-emacs-highlighting-packages/</guid>
-      <description>This post covers &#34;Highlights&#34; from the appearance section of my init.   Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra     Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
+      <description>This post covers &#34;Highlights&#34; from the appearance section of my init.  Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra     PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
     </item>
     
     <item>
@@ -187,7 +192,7 @@
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-02-27-emacs-hydra-set-up-code/</guid>
-      <description>This post covers &#34;Highlights&#34; from the appearance section of my init.   Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra     Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
+      <description>This post covers &#34;Highlights&#34; from the appearance section of my init.  Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra     PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
     </item>
     
     <item>
@@ -196,7 +201,7 @@
       <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-02-22-emacs-themes/</guid>
-      <description>Today&#39;s post covers &#34;Themes&#34; from the appearance section of my init.   Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra     Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
+      <description>Today&#39;s post covers &#34;Themes&#34; from the appearance section of my init.  Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra     PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
     </item>
     
     <item>
@@ -205,7 +210,7 @@
       <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-02-20-emacs-enter-exit-appearance/</guid>
-      <description>Today&#39;s post covers &#34;Entering and Exiting Emacs&#34; and &#34;Default Appearance Customizations&#34; from the appearance section of my init.   Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra     Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
+      <description>Today&#39;s post covers &#34;Entering and Exiting Emacs&#34; and &#34;Default Appearance Customizations&#34; from the appearance section of my init.  Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra     PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
     </item>
     
     <item>
@@ -214,8 +219,8 @@
       <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/</guid>
-      <description>Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts from oldest to newest.
-In this earlier emacs post I covered lines 534 - 656 of my configuration file.</description>
+      <description>Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts fromoldest to newest.
+In this earlier emacs post I coveredlines 534 - 656 of my configuration file.</description>
     </item>
     
     <item>
@@ -224,8 +229,8 @@ In this earlier emacs post I covered lines 534 - 656 of my configuration file.</
       <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-02-15-emacs-shell-hydra/</guid>
-      <description>Today&#39;s post jumps ahead to the shell hydra  Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts from oldest to newest.
-In the last emacs post I covered lines 534 - 656 of my configuration file.</description>
+      <description>Today&#39;s post jumps ahead to the shell hydra Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts fromoldest to newest.
+In the last emacs post I coveredlines 534 - 656 of my configuration file.</description>
     </item>
     
     <item>
@@ -234,7 +239,7 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.</desc
       <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-02-11-emacs-frames-buffers-defaults-functions/</guid>
-      <description>Today&#39;s post has some of the default settings from my initialization file.   SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key     Preamble Emacs is old school.</description>
+      <description>Today&#39;s post has some of the default settings from my initialization file.  SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key    PreambleEmacs is old school.</description>
     </item>
     
     <item>
@@ -243,7 +248,7 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.</desc
       <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-02-09-some-emacs-defaults/</guid>
-      <description>Today&#39;s post has some of the default settings from my initialization file.   SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key     Preamble Last post I covered function declarations from the above subsection, lines 135 - 424 of my configuration.</description>
+      <description>Today&#39;s post has some of the default settings from my initialization file.  SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key    PreambleLast postI covered function declarations from the above subsection, lines 135 - 424 of my configuration.</description>
     </item>
     
     <item>
@@ -252,7 +257,7 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.</desc
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/</guid>
-      <description>Today&#39;s post has some functions from the functions declaration section of the beginning of my initialization file.  SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key     There are a lot of function declarations in this initialization file.</description>
+      <description>Today&#39;s post has some functions from the functions declaration section of the beginning of my initialization file. SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key    There are a lot of function declarations in this initialization file.</description>
     </item>
     
     <item>
@@ -261,7 +266,7 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.</desc
       <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-01-24-emacs-installation-and-defaults/</guid>
-      <description>Directly below are the subheadings to the first main heading of my initialization file, see my last post Emacs Configuration Overview. I&#39;ll go through the lines of code in order, but remember, the line numbers you see in Hugo&#39;s code block css styling are relative to the code on this page not the emacs initialization file [Hugo is the Static Content Management System based on GO I used to make this blog].</description>
+      <description>Directly below are the subheadings to the first main heading of my initialization file, see my last post Emacs Configuration Overview.I&#39;ll go through the lines of code in order, but remember, the line numbers you see in Hugo&#39;s code block css styling are relative to thecode on this page not the emacs initialization file [Hugo is the Static ContentManagement System based on GO I used to makethis blog].</description>
     </item>
     
     <item>
@@ -270,7 +275,7 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.</desc
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/</guid>
-      <description>Below are some notes covering among other things why I got into Emacs, where I got my version, and how my configuration is organized. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or Sublime Text are awesome, and offer also great selections of unique packages. Atom, for example, has some super useful snippet packages. You can convert them into Yasnippet format (an Emacs snippet package), but it&#39;s a hassle.</description>
+      <description>Below are some notes covering among other things why I got into Emacs, where I got my version, and how my configuration isorganized. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or SublimeText are awesome, and offer also great selections of unique packages. Atom, for example, has some super useful snippet packages. You canconvert them into Yasnippet format (an Emacs snippet package), but it&#39;s a hassle.</description>
     </item>
     
     <item>
@@ -279,7 +284,7 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.</desc
       <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2019-09-23-windows-program-launcher/</guid>
-      <description>For any readers setting up configuration files for their emacs editor, here is the quick and easy code for the windows program launcher shown in the image below.    Here&#39;s the config code:  ```elisp ;path of program you want in your launcher (defvar name-of-program-p &#34;C:/full-path-to-program/program.exe&#34;) ; launcher function (defun launch-program-name () (interactive) (w32-shell-execute nil name-of-program-p nil) );end launch-program-name ```  Then you can put the launch function name in your hydra config, like this:  ` (&#34;</description>
+      <description>For any readers setting up configuration files for their emacs editor, here is the quick and easy code for the windows program launchershown in the image below.Here&#39;s the config code:```elisp;path of program you want in your launcher(defvar name-of-program-p &#34;C:/full-path-to-program/program.exe&#34;); launcher function(defun launch-program-name ()(interactive)(w32-shell-execute nil name-of-program-p nil));end launch-program-name```Then you can put the launch function name in your hydra config, like this:` (&#34;</description>
     </item>
     
     <item>
@@ -288,7 +293,7 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.</desc
       <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/</guid>
-      <description>Jumping To Directories In Emacs If you want to accomplish things efficiently with your computer, you will benefit from mastering a text editor. I use emacs as a general project manager for web development, writing, and organizing thoughts, materials, and actions. Jumping to and from directories and files enables quickly me to get things done more efficiently. To do this I use a few different packages and functions. They are:   Bookmarks</description>
+      <description>Jumping To Directories In EmacsIf you want to accomplish things efficiently with your computer, you will benefit from mastering a text editor. I use emacs as a generalproject manager for web development, writing, and organizing thoughts, materials, and actions. Jumping to and from directories and filesenables quickly me to get things done more efficiently. To do this I use a few different packages and functions.They are:  Bookmarks</description>
     </item>
     
     <item>
@@ -297,7 +302,7 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.</desc
       <pubDate>Tue, 08 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2019-09-08-emacs-with-an-interface/</guid>
-      <description>What&#39;s All This About Text Editors? I always used to ask, why do people post about their text-editors? These days I know the reason. Computers are lightening fast, using them isn&#39;t. You need to leave what you are doing to turn on another piece of software. You have to search for files. You&#39;re constantly having to remember how a process works, or search around the IDE to figure out how to do something again.</description>
+      <description>What&#39;s All This About Text Editors?I always used to ask, why do people post about their text-editors? These days I know the reason. Computers are lightening fast, using themisn&#39;t. You need to leave what you are doing to turn on another piece of software. You have to search for files. You&#39;re constantly having toremember how a process works, or search around the IDE to figure out how to do something again.</description>
     </item>
     
     <item>
@@ -306,7 +311,7 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.</desc
       <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2017-05-29-getting-data-into-r/</guid>
-      <description>Video Tutorial. Loading data into R via Emacs Speaks Statistics, and doing some operations on it.      </description>
+      <description>Video Tutorial. Loading data into R via Emacs Speaks Statistics, and doing some operations on it. </description>
     </item>
     
     <item>
@@ -315,7 +320,7 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.</desc
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-08-02-an-emacs-overview/</guid>
-      <description>Video Tutorial. Emacs Overview.      </description>
+      <description>Video Tutorial. Emacs Overview. </description>
     </item>
     
     <item>
@@ -324,7 +329,7 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.</desc
       <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-03-21-data-and-output/</guid>
-      <description>The communications revolution is no longer promising to shift production possibility frontiers outwardly, it is doing so rapidly. But there is a second shift we have not seen yet, and that&#39;s the big data shift. The capacity for organizations to improve decisions by rendering the changing digital footprint into meaningful direction, is going to reduce economic distortions in a number of ways. Firms will be able to match customers with products more efficiently.</description>
+      <description>The communications revolution is no longer promising to shift production possibility frontiers outwardly, it is doing sorapidly. But there is a second shift we have not seen yet, and that&#39;s the big data shift. The capacity for organizations to improvedecisions by rendering the changing digital footprint into meaningful direction, is going to reduce economic distortions in a number ofways. Firms will be able to match customers with products more efficiently.</description>
     </item>
     
     <item>
@@ -333,8 +338,8 @@ In the last emacs post I covered lines 534 - 656 of my configuration file.</desc
       <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-03-19-smart-government-and-big-data/</guid>
-      <description>The data revolution is impacting government in a number of ways. The foremost is known as &#39;smart government&#39;, which is a reference to the way governments manage the data they have and the way they make that management and the services that go with it available to their clients (constituents in a democracy). The second impact, also intelligent, is known as the &#39;smart city.&#39;
-Smart government is a concept championed by the Estonian government (our example), which won the United Nations Public Service Award, in the category of Promoting Whole of Government Approaches in the Information Age, for their online business registry.</description>
+      <description>The data revolution is impacting government in a number of ways. The foremost is known as &#39;smart government&#39;, which is areference to the way governments manage the data they have and the way they make that management and the services that go with it availableto their clients (constituents in a democracy). The second impact, also intelligent, is known as the &#39;smart city.&#39;
+Smart government is a concept championed by the Estonian government (our example), which won the United Nations PublicService Award, in the category of Promoting Whole of Government Approaches in the Information Age, for their online business registry.</description>
     </item>
     
     <item>
@@ -343,8 +348,8 @@ Smart government is a concept championed by the Estonian government (our example
       <pubDate>Tue, 15 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-03-15-research-new-profit-center/</guid>
-      <description>Enhanced financial regulation typically comes with intended and unintended consequences. Directive 2004/39/EC, the Market for Financial Instruments Directive (MiFID), for example, successfully increased competition among financial instrument trading organizations in Europe. This brought down consumer prices and narrowed margins. It also sent market participants looking to move large blocks of shares into dark pools, where trade data are not made public.
-There will be intended and unintended consequences from MiFID&#39;s successor, MiFID2, which is anticipated to be in effect by January 2018.</description>
+      <description>Enhanced financial regulation typically comes with intended and unintended consequences. Directive 2004/39/EC, the Marketfor Financial Instruments Directive (MiFID), for example, successfully increased competition among financial instrument tradingorganizations in Europe. This brought down consumer prices and narrowed margins. It also sent market participants looking to move largeblocks of shares into dark pools, where trade data are not made public.
+There will be intended and unintended consequences from MiFID&#39;s successor, MiFID2, which is anticipated to be in effectby January 2018.</description>
     </item>
     
     <item>
@@ -353,8 +358,8 @@ There will be intended and unintended consequences from MiFID&#39;s successor, M
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-03-08-data-science-and-the-law/</guid>
-      <description>Information technologies and the data they create are changing the world rapidly in a multitude of ways. The legal profession, one of the most traditional and adverse to change, is beginning to adapt. A new breed of data savvy lawyers are entering legal circles everywhere and bringing with them an inertia from new technologies.
-Firstly, the legal profession stands to gain from those data driven insights that are common across organizations, like more accurately targeted marketing, more informed case selection, more efficient internal procedures, and pricing models that minimize both losses of producer surplus, and dead-weight losses.</description>
+      <description>Information technologies and the data they create are changing the world rapidly in a multitude of ways. The legalprofession, one of the most traditional and adverse to change, is beginning to adapt. A new breed of data savvy lawyers are entering legalcircles everywhere and bringing with them an inertia from new technologies.
+Firstly, the legal profession stands to gain from those data driven insights that are common across organizations, likemore accurately targeted marketing, more informed case selection, more efficient internal procedures, and pricing models that minimize bothlosses of producer surplus, and dead-weight losses.</description>
     </item>
     
     <item>
@@ -363,7 +368,7 @@ Firstly, the legal profession stands to gain from those data driven insights tha
       <pubDate>Fri, 04 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-03-04-the-internet-of-things/</guid>
-      <description>The Internet of things (IOT) is a reference to computerization in devices and machines we use in everyday life. Smart homes and the smart appliances in them are examples of things that are more and more frequently connected to the Internet and programmable with computers. Online appliances transmit sensory information upstream to computer processors that make decisions, like adjusting the heat, turning on or off a hot water tank, switching up power sources, or charging electronic devices, like cars.</description>
+      <description>The Internet of things (IOT) is a reference to computerization in devices and machines we use in everyday life. Smarthomes and the smart appliances in them are examples of things that are more and more frequently connected to the Internet and programmablewith computers. Online appliances transmit sensory information upstream to computer processors that make decisions, like adjusting the heat,turning on or off a hot water tank, switching up power sources, or charging electronic devices, like cars.</description>
     </item>
     
     <item>
@@ -372,7 +377,7 @@ Firstly, the legal profession stands to gain from those data driven insights tha
       <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-02-23-trade-statistics-and-blockchain/</guid>
-      <description>National and international level statistics that report macroeconomic indicators, like nominal and real inflation, international transaction flows, and trade statistics, are relied on by market participants, policy makers and stakeholders as inputs to critical decisions. More often than not, macroeconomic statistics are taken as reliable, after-all, those are our official statistics, right?. But just how reliable are they? Unfortunately, the answer is that aligning statistics with underlying realities is a challenging task, and mainstream macroeconomic statistics should, even in the best of cases, be taken with a grain of salt.</description>
+      <description>National and international level statistics that report macroeconomic indicators, like nominal and real inflation, international transactionflows, and trade statistics, are relied on by market participants, policy makers and stakeholders as inputs to critical decisions. Moreoften than not, macroeconomic statistics are taken as reliable, after-all, those are our official statistics, right?. But just how reliableare they? Unfortunately, the answer is that aligning statistics with underlying realities is a challenging task, and mainstreammacroeconomic statistics should, even in the best of cases, be taken with a grain of salt.</description>
     </item>
     
     <item>
@@ -381,8 +386,8 @@ Firstly, the legal profession stands to gain from those data driven insights tha
       <pubDate>Fri, 12 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-02-12-little-firms-big-decisions/</guid>
-      <description>Big data means billions if not trillions of observations recorded daily. Sophisticated data infrastructures and advanced algorithms reveal new insights into our fast changing world, but only for those massive organizations with the transaction frequency and the know how to extract them, right?
-The question is one of relevance. While big data benefits for large organizations are readily tangible--like in the case where retailers want to know when customers are more likely to purchase which products, or what optimal prices will move discounted products in a set time frame--smaller organizations sometimes just don&#39;t see how the data revolution is important to them.</description>
+      <description>Big data means billions if not trillions of observations recorded daily. Sophisticated data infrastructuresand advanced algorithms reveal new insights into our fast changing world, but only for those massive organizations with the transactionfrequency and the know how to extract them, right?
+The question is one of relevance. While big data benefits for large organizations are readily tangible--like in the casewhere retailers want to know when customers are more likely to purchase which products, or what optimal prices will move discounted productsin a set time frame--smaller organizations sometimes just don&#39;t see how the data revolution is important to them.</description>
     </item>
     
     <item>
@@ -391,7 +396,7 @@ The question is one of relevance. While big data benefits for large organization
       <pubDate>Wed, 10 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-02-10-data-science-and-research/</guid>
-      <description>Data science improves organizational function, but it isn&#39;t always cheap. Scientific data analysis enables organizations to develop more internally efficient business systems. They can more easily reach potential stakeholders and engage them. Data informed organizations can prepare forward, more accurately refine and refocus strategies, and more effectively manage risks. The problem is data science itself is an investment heavy human resource, and those costs are passed on to the employer. Trainees need a strong background in probability and statistics, and expertise in a speciality subject, like political science, medicine, engineering, or economics.</description>
+      <description>Data science improves organizational function, but it isn&#39;t always cheap. Scientific data analysis enables organizations to develop moreinternally efficient business systems. They can more easily reach potential stakeholders and engage them. Data informed organizations canprepare forward, more accurately refine and refocus strategies, and more effectively manage risks. The problem is data science itself is aninvestment heavy human resource, and those costs are passed on to the employer. Trainees need a strong background in probability andstatistics, and expertise in a speciality subject, like political science, medicine, engineering, or economics.</description>
     </item>
     
     <item>
@@ -400,7 +405,7 @@ The question is one of relevance. While big data benefits for large organization
       <pubDate>Sat, 30 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-01-30-what-is-economic-policy/</guid>
-      <description>What is economic policy? If economics can be described as the study of the allocation of scarce resources among agents, economic policy can be described as the public rules and regulations that guide that allocation. Wherever a society is governed with laws, there will be laws that influence the economic prosperity of constituents, producers, and suppliers, as well as the distribution of resources among agents within the economy. Those rules constitute economic policy.</description>
+      <description>What is economic policy?If economics can be described as the study of the allocation of scarce resources among agents, economic policy can bedescribed as the public rules and regulations that guide that allocation. Wherever a society is governed with laws, there will be laws thatinfluence the economic prosperity of constituents, producers, and suppliers, as well as the distribution of resources among agents withinthe economy. Those rules constitute economic policy.</description>
     </item>
     
     <item>
@@ -409,7 +414,7 @@ The question is one of relevance. While big data benefits for large organization
       <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-01-25-what-is-maths-programming/</guid>
-      <description>What is maths programming? Mathematical programming, or computational programming, is the process of translating mathematically representable problems into computer languages then harnessing the power of computers to solve them. Along with the Internet, and task facilitation, mathematical programming is probably the most important contribution from the modern computer to human evolution. There are many kinds of mathematical programming techniques. Among these are: linear and non-linear programming, integer programming, mixed complementary problems, networks, goal programming, multiple objective optimization, queuing theory, regression analysis, and many more.</description>
+      <description>What is maths programming?Mathematical programming, or computational programming, is the process of translating mathematically representableproblems into computer languages then harnessing the power of computers to solve them. Along with the Internet, and task facilitation,mathematical programming is probably the most important contribution from the modern computer to human evolution. There are many kinds ofmathematical programming techniques. Among these are: linear and non-linear programming, integer programming, mixed complementary problems,networks, goal programming, multiple objective optimization, queuing theory, regression analysis, and many more.</description>
     </item>
     
     <item>
@@ -418,7 +423,7 @@ The question is one of relevance. While big data benefits for large organization
       <pubDate>Sat, 23 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-01-23-what-is-decision-analysis/</guid>
-      <description>What is decision analysis? Decision analysis is a subcategory of decision science. Ultimately, all data science could be classified as decision science, because the entire point of data analytics and informatics is to enable better decision making processes to yield better outcomes from decisions. While decision science and decision analysis cannot eliminate the possibility of sub-optimal outcomes, they are in themselves useful if not mandatory processes. They can, for example, enable teams or decision makers to move forward with confidence in their assessments of decision variable behaviour across decision parameters, and thus with more reasonable expectation of probable outcomes.</description>
+      <description>What is decision analysis?Decision analysis is a subcategory of decision science. Ultimately, all data science could be classified as decisionscience, because the entire point of data analytics and informatics is to enable better decision making processes to yield better outcomesfrom decisions. While decision science and decision analysis cannot eliminate the possibility of sub-optimal outcomes, they are inthemselves useful if not mandatory processes. They can, for example, enable teams or decision makers to move forward with confidence intheir assessments of decision variable behaviour across decision parameters, and thus with more reasonable expectation of probable outcomes.</description>
     </item>
     
     <item>
@@ -427,7 +432,7 @@ The question is one of relevance. While big data benefits for large organization
       <pubDate>Thu, 21 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-01-21-what-is-optimization/</guid>
-      <description>What is optimization Optimization is about making choices that lead to first best outcomes. Mathematically, optimization is usually described with differential calculus, though when functions are linear, and problems are adequately fit substitution can lead to optimal solutions. In mathematics, optimization first requires the delineation of an objective function, a dependent function meant to be maximized or minimized through variations in the independent functions that predict it. Solving optimization problems therefore requires identifying maximum or minimum points on the objective function and qualifying those points as local or global maximums or minimums.</description>
+      <description>What is optimizationOptimization is about making choices that lead to first best outcomes. Mathematically,optimization is usually described with differential calculus, though when functions are linear, and problems are adequately fit substitutioncan lead to optimal solutions. In mathematics, optimization first requires the delineation of an objective function, a dependent functionmeant to be maximized or minimized through variations in the independent functions that predict it. Solving optimization problems thereforerequires identifying maximum or minimum points on the objective function and qualifying those points as local or global maximums orminimums.</description>
     </item>
     
     <item>
@@ -436,8 +441,8 @@ The question is one of relevance. While big data benefits for large organization
       <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-01-19-what-are-macroeconomics/</guid>
-      <description>What is macroeconomics Macroeconomics is the field of economics that deals with aggregated quantities. Microeconomics, for example, might deal with firm level economics, while macroeconomics might deal with aggregate firms level economics, the economics of all the firms in an economy together. Macroeconomics therefore includes the study of national level and supranational level economics.
-What kind of indicators are macroeconomic? Macroeconomic indicators include trade indicators, like the trade balance, and trade openness, but also indicators that describe other facets of the economy.</description>
+      <description>What is macroeconomicsMacroeconomics is the field of economics that deals with aggregated quantities. Microeconomics, for example, might dealwith firm level economics, while macroeconomics might deal with aggregate firms level economics, the economics of all the firms in aneconomy together. Macroeconomics therefore includes the study of national level and supranational level economics.
+What kind of indicators are macroeconomic?Macroeconomic indicators include trade indicators, like the trade balance, and trade openness, but also indicators thatdescribe other facets of the economy.</description>
     </item>
     
     <item>
@@ -446,8 +451,8 @@ What kind of indicators are macroeconomic? Macroeconomic indicators include trad
       <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2018-01-18-what-is-international-trade/</guid>
-      <description>What is international trade? International trade is the movement of goods across national borders. Because bilateral exchange rates change frequently, international trade is watched closely by national and supranational governments. Small changes in currency pair spreads can impact the movement of goods across borders and, as a consequence, the health of a nation&#39;s domestic industry and its employment levels.
-How do organizations measure international trade? Physical goods (commodity trade) are tracked by governments when they enter various economic and trade zones within an economy.</description>
+      <description>What is international trade?International trade is the movement of goods across national borders. Because bilateral exchange rates change frequently,international trade is watched closely by national and supranational governments. Small changes in currency pair spreads can impact themovement of goods across borders and, as a consequence, the health of a nation&#39;s domestic industry and its employment levels.
+How do organizations measure international trade?Physical goods (commodity trade) are tracked by governments when they enter various economic and trade zones within aneconomy.</description>
     </item>
     
     <item>
@@ -456,8 +461,8 @@ How do organizations measure international trade? Physical goods (commodity trad
       <pubDate>Thu, 14 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-01-14-what-is-modelling/</guid>
-      <description>What is modelling? Modelling is an important part of decision science. Modellers make simplified representations of reality to produce judgements about reality and guide real decisions. Models can be abstract and theoretical, or data driven and empirical. Both categories can be prescriptive, predictive, or descriptive.
-Why model? Modelling is a cost-effective way to test the successes and failures of potential projects without committing large-scale resources. Modelling is also useful as means of building support necessary to successfully launch projects.</description>
+      <description>What is modelling?Modelling is an important part of decision science. Modellers make simplified representations of reality to producejudgements about reality and guide real decisions. Models can be abstract and theoretical, or data driven and empirical. Both categories canbe prescriptive, predictive, or descriptive.
+Why model?Modelling is a cost-effective way to test the successes and failures of potential projects without committing large-scaleresources. Modelling is also useful as means of building support necessary to successfully launch projects.</description>
     </item>
     
     <item>
@@ -466,7 +471,7 @@ Why model? Modelling is a cost-effective way to test the successes and failures 
       <pubDate>Mon, 11 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-01-11-what-are-statistics/</guid>
-      <description>What are statistics? Statistics are transformations of data through calculation. While in theory any calculation done with data yields a statistic, in practice statistics are associated with scientific and field specific calculations. For example, during preparation phase your data is frequently explored and analysed using simple plotting techniques that present meaningful descriptive statistics from the data or data subset, like the mean, median, and/or quartile ranges. As another example, in macroeconomics, various calculations with data yield well known statistics like GDP, inflation, or trade balance by sector.</description>
+      <description>What are statistics?Statistics are transformations of data through calculation. While in theory any calculation done with data yields astatistic, in practice statistics are associated with scientific and field specific calculations. For example, during preparation phase yourdata is frequently explored and analysed using simple plotting techniques that present meaningful descriptive statistics from the data ordata subset, like the mean, median, and/or quartile ranges. As another example, in macroeconomics, various calculations with data yield wellknown statistics like GDP, inflation, or trade balance by sector.</description>
     </item>
     
     <item>
@@ -475,8 +480,8 @@ Why model? Modelling is a cost-effective way to test the successes and failures 
       <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-01-08-what-is-data-wrangling/</guid>
-      <description>What is data wrangling? Data wrangling is the process of preparing data for analysis or computation. It includes transforming data into various formats and statistical derivations, cleaning data to account for missing observations, clumsy data types, or outright errors, and arranging data into workable categorized data sets.
-When should data be cleaned? Anyone working with data knows it needs to be cleaned many times along the data pipeline. After data is collected, it must be wrangled before it is stored.</description>
+      <description>What is data wrangling?Data wrangling is the process of preparing data for analysis or computation. It includes transforming data into variousformats and statistical derivations, cleaning data to account for missing observations, clumsy data types, or outright errors, and arrangingdata into workable categorized data sets.
+When should data be cleaned?Anyone working with data knows it needs to be cleaned many times along the data pipeline. After data is collected, itmust be wrangled before it is stored.</description>
     </item>
     
     <item>
@@ -485,8 +490,8 @@ When should data be cleaned? Anyone working with data knows it needs to be clean
       <pubDate>Sun, 03 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-01-03-what-is-data-science/</guid>
-      <description>What is data science? The science of data promises to change the world, but many of us do not know what data science is. This segement gives you our answer.
-Data science is the science of data analytics in the context of scientific query. The data scientist first asks scientific questions, then gathers data relevant to those questions, and finally applies a variety of computer processes and statistical and probabilistic theories to derive answers to those questions.</description>
+      <description>What is data science?The science of data promises to change the world, but many of us do not know what data science is. This segement gives you our answer.
+Data science is the science of data analytics in the context of scientific query. The data scientist first asksscientific questions, then gathers data relevant to those questions, and finally applies a variety of computer processes and statistical andprobabilistic theories to derive answers to those questions.</description>
     </item>
     
   </channel>

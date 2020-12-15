@@ -6,18 +6,14 @@
     <description>Recent content in tech on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 04 Mar 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://cloudnine.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 04 Mar 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Internet Of Things</title>
       <link>https://cloudnine.github.io/archives/2016-03-04-the-internet-of-things/</link>
       <pubDate>Fri, 04 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-03-04-the-internet-of-things/</guid>
-      <description>The Internet of things (IOT) is a reference to computerization in devices and machines we use in everyday life. Smart homes and the smart appliances in them are examples of things that are more and more frequently connected to the Internet and programmable with computers. Online appliances transmit sensory information upstream to computer processors that make decisions, like adjusting the heat, turning on or off a hot water tank, switching up power sources, or charging electronic devices, like cars.</description>
+      <description>The Internet of things (IOT) is a reference to computerization in devices and machines we use in everyday life. Smarthomes and the smart appliances in them are examples of things that are more and more frequently connected to the Internet and programmablewith computers. Online appliances transmit sensory information upstream to computer processors that make decisions, like adjusting the heat,turning on or off a hot water tank, switching up power sources, or charging electronic devices, like cars.</description>
     </item>
     
   </channel>

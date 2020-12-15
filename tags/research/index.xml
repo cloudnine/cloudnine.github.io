@@ -6,19 +6,15 @@
     <description>Recent content in research on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 19 Mar 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://cloudnine.github.io/tags/research/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 19 Mar 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Smart Government And The Data Revolution</title>
       <link>https://cloudnine.github.io/archives/2016-03-19-smart-government-and-big-data/</link>
       <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-03-19-smart-government-and-big-data/</guid>
-      <description>The data revolution is impacting government in a number of ways. The foremost is known as &#39;smart government&#39;, which is a reference to the way governments manage the data they have and the way they make that management and the services that go with it available to their clients (constituents in a democracy). The second impact, also intelligent, is known as the &#39;smart city.&#39;
-Smart government is a concept championed by the Estonian government (our example), which won the United Nations Public Service Award, in the category of Promoting Whole of Government Approaches in the Information Age, for their online business registry.</description>
+      <description>The data revolution is impacting government in a number of ways. The foremost is known as &#39;smart government&#39;, which is areference to the way governments manage the data they have and the way they make that management and the services that go with it availableto their clients (constituents in a democracy). The second impact, also intelligent, is known as the &#39;smart city.&#39;
+Smart government is a concept championed by the Estonian government (our example), which won the United Nations PublicService Award, in the category of Promoting Whole of Government Approaches in the Information Age, for their online business registry.</description>
     </item>
     
     <item>
@@ -27,8 +23,8 @@ Smart government is a concept championed by the Estonian government (our example
       <pubDate>Tue, 15 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-03-15-research-new-profit-center/</guid>
-      <description>Enhanced financial regulation typically comes with intended and unintended consequences. Directive 2004/39/EC, the Market for Financial Instruments Directive (MiFID), for example, successfully increased competition among financial instrument trading organizations in Europe. This brought down consumer prices and narrowed margins. It also sent market participants looking to move large blocks of shares into dark pools, where trade data are not made public.
-There will be intended and unintended consequences from MiFID&#39;s successor, MiFID2, which is anticipated to be in effect by January 2018.</description>
+      <description>Enhanced financial regulation typically comes with intended and unintended consequences. Directive 2004/39/EC, the Marketfor Financial Instruments Directive (MiFID), for example, successfully increased competition among financial instrument tradingorganizations in Europe. This brought down consumer prices and narrowed margins. It also sent market participants looking to move largeblocks of shares into dark pools, where trade data are not made public.
+There will be intended and unintended consequences from MiFID&#39;s successor, MiFID2, which is anticipated to be in effectby January 2018.</description>
     </item>
     
     <item>
@@ -37,8 +33,8 @@ There will be intended and unintended consequences from MiFID&#39;s successor, M
       <pubDate>Fri, 12 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-02-12-little-firms-big-decisions/</guid>
-      <description>Big data means billions if not trillions of observations recorded daily. Sophisticated data infrastructures and advanced algorithms reveal new insights into our fast changing world, but only for those massive organizations with the transaction frequency and the know how to extract them, right?
-The question is one of relevance. While big data benefits for large organizations are readily tangible--like in the case where retailers want to know when customers are more likely to purchase which products, or what optimal prices will move discounted products in a set time frame--smaller organizations sometimes just don&#39;t see how the data revolution is important to them.</description>
+      <description>Big data means billions if not trillions of observations recorded daily. Sophisticated data infrastructuresand advanced algorithms reveal new insights into our fast changing world, but only for those massive organizations with the transactionfrequency and the know how to extract them, right?
+The question is one of relevance. While big data benefits for large organizations are readily tangible--like in the casewhere retailers want to know when customers are more likely to purchase which products, or what optimal prices will move discounted productsin a set time frame--smaller organizations sometimes just don&#39;t see how the data revolution is important to them.</description>
     </item>
     
     <item>
@@ -47,7 +43,7 @@ The question is one of relevance. While big data benefits for large organization
       <pubDate>Wed, 10 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-02-10-data-science-and-research/</guid>
-      <description>Data science improves organizational function, but it isn&#39;t always cheap. Scientific data analysis enables organizations to develop more internally efficient business systems. They can more easily reach potential stakeholders and engage them. Data informed organizations can prepare forward, more accurately refine and refocus strategies, and more effectively manage risks. The problem is data science itself is an investment heavy human resource, and those costs are passed on to the employer. Trainees need a strong background in probability and statistics, and expertise in a speciality subject, like political science, medicine, engineering, or economics.</description>
+      <description>Data science improves organizational function, but it isn&#39;t always cheap. Scientific data analysis enables organizations to develop moreinternally efficient business systems. They can more easily reach potential stakeholders and engage them. Data informed organizations canprepare forward, more accurately refine and refocus strategies, and more effectively manage risks. The problem is data science itself is aninvestment heavy human resource, and those costs are passed on to the employer. Trainees need a strong background in probability andstatistics, and expertise in a speciality subject, like political science, medicine, engineering, or economics.</description>
     </item>
     
     <item>
@@ -56,7 +52,7 @@ The question is one of relevance. While big data benefits for large organization
       <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2013-08-14-macroeconomic-outlook/</guid>
-      <description>Introduction The following article comprises my general world economic outlook. It is necessary to clarify a few points for the reader. Firstly, the exercise is positive rather than normative. For example, any mention of oil should be read as an inchoate view of where world oil prices, or supply and demand, may go in future periods, rather than a statement that policies should pursue increased oil output, or that carbon fuel consumption is net surplus enhancing.</description>
+      <description>IntroductionThe following article comprises my general world economic outlook. It is necessary to clarify a few points for thereader. Firstly, the exercise is positive rather than normative. For example, any mention of oil should be read as an inchoate view of whereworld oil prices, or supply and demand, may go in future periods, rather than a statement that policies should pursue increased oil output,or that carbon fuel consumption is net surplus enhancing.</description>
     </item>
     
     <item>
@@ -65,7 +61,7 @@ The question is one of relevance. While big data benefits for large organization
       <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2013-03-28-european-union-government-procurement-study/</guid>
-      <description>Abstract This report analyzes EU-wide public procurement markets and market segments through modelling of the EU&#39;s Tenders Electronic Daily (TED) data, among other sources, as well as the critical legal elements of the emerging EU-wide public procurement regime. The modelling results point to procurement markets that are particularly contestable for Canadian Companies. In the fast changing world of public procurement, the work in this paper is no longer relevant, but does provide sources for future research.</description>
+      <description>AbstractThis report analyzes EU-wide public procurement markets and market segments through modelling ofthe EU&#39;s Tenders Electronic Daily (TED) data, among other sources, as well as the critical legal elements of the emerging EU-wide publicprocurement regime. The modelling results point to procurement markets that are particularly contestable for Canadian Companies. In the fast changing world of public procurement,the work in this paper is no longer relevant, but does provide sources for future research.</description>
     </item>
     
     <item>
@@ -74,7 +70,7 @@ The question is one of relevance. While big data benefits for large organization
       <pubDate>Fri, 07 Dec 2012 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2012-12-07-eu-canada-ceta-workshop/</guid>
-      <description>Abstract An analysis of procurement laws and statistics at the major levels of government across Canada. Data collection, wrangling, modelling, research, writing, and editing by Yuri Tricys, among others. Author and Director of research, Kurt Hubner.    Download EU Canada CETA Workshop</description>
+      <description>AbstractAn analysis of procurement laws and statistics at the major levels of government across Canada.Data collection, wrangling, modelling, research, writing, and editing by Yuri Tricys, among others. Author and Director of research, Kurt Hubner.Download EU Canada CETA Workshop</description>
     </item>
     
     <item>
@@ -83,7 +79,7 @@ The question is one of relevance. While big data benefits for large organization
       <pubDate>Mon, 05 Dec 2011 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2011-12-05-trade-liberalization-and-sector-productivity/</guid>
-      <description>Abstract This paper analyzes the effects of trade liberalization on productivity at the sector level. This is done with a multivariable regression of relative gross labour productivity on sector trade, between the U.S. and Canada, relative to total trade, between Canada and the world. A set of before and after treatment variables are used to distinguish the difference between the effect of trade openness before the NAFTA preferential trade agreement and after the agreement.</description>
+      <description>AbstractThis paper analyzes the effects of trade liberalization on productivity at the sector level. This isdone with a multivariable regression of relative gross labour productivity on sector trade, between theU.S. and Canada, relative to total trade, between Canada and the world. A set of before and aftertreatment variables are used to distinguish the difference between the effect of trade openness beforethe NAFTA preferential trade agreement and after the agreement.</description>
     </item>
     
     <item>
@@ -92,7 +88,7 @@ The question is one of relevance. While big data benefits for large organization
       <pubDate>Tue, 15 Mar 2011 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2011-03-15-a-case-for-continued-pursuit-of-emu-accession-in-lithuania/</guid>
-      <description>Abstract This paper reviews arguments in academic literature for and against Lithuania&#39;s pursuit of EMU accession. The results indicate Lithuania stands to gain in trade with ROW and with the EMU on completion of change-over to the Euro. Moreover, trade specialization and the potential of under-trading, promise further gains from Euro accession. Economies of scale ensure that gains from trade and currency management cost reductions will be large relative to GDP.</description>
+      <description>AbstractThis paper reviews arguments in academic literature for and against Lithuania&#39;s pursuit of EMU accession. Theresults indicate Lithuania stands to gain in trade with ROW and with the EMU on completion of change-over to the Euro. Moreover, tradespecialization and the potential of under-trading, promise further gains from Euro accession. Economies of scale ensure that gains fromtrade and currency management cost reductions will be large relative to GDP.</description>
     </item>
     
     <item>
@@ -101,7 +97,7 @@ The question is one of relevance. While big data benefits for large organization
       <pubDate>Sat, 26 Feb 2011 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2011-02-26-optimal-pathway-to-business-cycle-convergence-in-the-emu/</guid>
-      <description>Abstract This paper reviews academic arguments for and against fiscal policy alignment and increased transnational budgets in the EMU. It suggests credit market instruments are costlier than tax based transfers and the current system of structural funding is inadequate,and an enhanced fiscal transfer system, funded from a community level tax base, is an optimal pathway toward business cycle convergence in the EMU.    Download Business Cycle Convergence In The EMU </description>
+      <description>AbstractThis paper reviews academic arguments for and against fiscal policy alignment and increased transnational budgets in the EMU. It suggestscredit market instruments are costlier than tax based transfers and the current system of structural funding is inadequate,and an enhancedfiscal transfer system, funded from a community level tax base, is an optimal pathway toward business cycle convergence in the EMU. Download Business Cycle Convergence In The EMU</description>
     </item>
     
   </channel>
