@@ -6,15 +6,19 @@
     <description>Recent content in computational modelling on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 14 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/computational-modelling/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Jan 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/tags/computational-modelling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>What Is Modelling</title>
       <link>https://cloudnine.github.io/archives/2016-01-14-what-is-modelling/</link>
       <pubDate>Thu, 14 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2016-01-14-what-is-modelling/</guid>
-      <description>What is modelling?Modelling is an important part of decision science. Modellers make simplified representations of reality to producejudgements about reality and guide real decisions. Models can be abstract and theoretical, or data driven and empirical. Both categories canbe prescriptive, predictive, or descriptive.
-Why model?Modelling is a cost-effective way to test the successes and failures of potential projects without committing large-scaleresources. Modelling is also useful as means of building support necessary to successfully launch projects.</description>
+      <description>What is modelling? Modelling is an important part of decision science. Modellers make simplified representations of reality to produce judgements about reality and guide real decisions. Models can be abstract and theoretical, or data driven and empirical. Both categories can be prescriptive, predictive, or descriptive.
+Why model? Modelling is a cost-effective way to test the successes and failures of potential projects without committing large-scale resources. Modelling is also useful as means of building support necessary to successfully launch projects.</description>
     </item>
     
   </channel>

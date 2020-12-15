@@ -6,15 +6,10 @@
     <description>Recent content in emacs-hydras on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 24 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/emacs-hydras/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Emacs Web-Mode, With Hydra</title>
-      <link>https://cloudnine.github.io/science/2020-08-24-emacs-web-mode/</link>
-      <pubDate>Mon, 24 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/science/2020-08-24-emacs-web-mode/</guid>
-      <description>This post covers the following sections from my init.  Web Mode    Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, search &#39;Emacs&#39; in tags or search on this site. Then read the posts y date fromoldest to newest.</description>
-    </item>
+    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/tags/emacs-hydras/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>The Web Developer Hydra</title>
@@ -22,8 +17,8 @@
       <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-05-02-emacs-web-developer-hydra/</guid>
-      <description>This post covers the following sections from my init.   Web Developer Hydra
-  Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date fromoldest to newest.</description>
+      <description>This post covers the following sections from my init.    Web Developer Hydra
+   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date from oldest to newest.</description>
     </item>
     
     <item>
@@ -32,8 +27,8 @@
       <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-04-09-helm-hydra/</guid>
-      <description>This post covers the following sections from my init.   Helm Hydra
-  PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date fromoldest to newest.</description>
+      <description>This post covers the following sections from my init.    Helm Hydra
+   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date from oldest to newest.</description>
     </item>
     
     <item>
@@ -42,9 +37,9 @@
       <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-03-29-emacs-elnode-and-editor-hydra/</guid>
-      <description>This post covers the following sections from my init.   Elnode
+      <description>This post covers the following sections from my init.    Elnode
   Editor Hydra
-  PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date fromoldest to newest.</description>
+   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date from oldest to newest.</description>
     </item>
     
     <item>
@@ -53,9 +48,9 @@
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-03-22-emacs-finding-files-ediff/</guid>
-      <description>This post covers the following sections from my init.   Finding Files
+      <description>This post covers the following sections from my init.    Finding Files
   Ediff
-  PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date fromoldest to newest.</description>
+   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts y date from oldest to newest.</description>
     </item>
     
     <item>
@@ -64,9 +59,9 @@
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-03-20-emacs-selection-region-mark-browsers/</guid>
-      <description>This post covers , Directories, Clipboard, and Command Line History from the &#34;Default Operations&#34; section of my init.   Selection Region and Mark
+      <description>This post covers , Directories, Clipboard, and Command Line History from the &#34;Default Operations&#34; section of my init.    Selection Region and Mark
   Browsers
-  PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
+   Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
     </item>
     
     <item>
@@ -75,8 +70,8 @@
       <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-03-17-emacs-parentheses-directories-clipboard-command-line-history/</guid>
-      <description>This post covers Parentheses, Directories, Clipboard, and Command Line History from the &#34;Default Operations&#34; section of my init.   Default Operations
- Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history    PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for.</description>
+      <description>This post covers Parentheses, Directories, Clipboard, and Command Line History from the &#34;Default Operations&#34; section of my init.    Default Operations
+ Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history     Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for.</description>
     </item>
     
     <item>
@@ -85,8 +80,8 @@
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-03-15-emacs-projectile-helm-smex/</guid>
-      <description>This post covers Projectile, Helm, Smex, and Bookmarks from the &#34;Default Operations&#34; section of my init.   Default Operations
- Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history    PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for.</description>
+      <description>This post covers Projectile, Helm, Smex, and Bookmarks from the &#34;Default Operations&#34; section of my init.    Default Operations
+ Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history     Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for.</description>
     </item>
     
     <item>
@@ -95,8 +90,8 @@
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-03-02-emacs-cursor-windows-frames-buffers/</guid>
-      <description>This post covers the first two sections from the &#34;Default Operations&#34; section of my init.   Default Operations
- Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history    PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for.</description>
+      <description>This post covers the first two sections from the &#34;Default Operations&#34; section of my init.    Default Operations
+ Moving the Cursor and Screen Make/kill/move windows frames buffers Projectile, Helm and Smex Parentheses Directories Clip board (kill ring) PDF tools and command line history     Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for.</description>
     </item>
     
     <item>
@@ -105,7 +100,7 @@
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-02-27-emacs-hydra-set-up-code/</guid>
-      <description>This post covers &#34;Highlights&#34; from the appearance section of my init.  Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra     PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
+      <description>This post covers &#34;Highlights&#34; from the appearance section of my init.   Appearance  Entering and Exiting Emacs Default Appearance Customizations Themes Highlights Hydras Appearance Hydra     Preamble Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag.</description>
     </item>
     
     <item>
@@ -114,8 +109,8 @@
       <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-02-15-emacs-shell-hydra/</guid>
-      <description>Today&#39;s post jumps ahead to the shell hydra Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts fromoldest to newest.
-In the last emacs post I coveredlines 534 - 656 of my configuration file.</description>
+      <description>Today&#39;s post jumps ahead to the shell hydra  Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or you know what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts from oldest to newest.
+In the last emacs post I covered lines 534 - 656 of my configuration file.</description>
     </item>
     
     <item>
@@ -124,7 +119,7 @@ In the last emacs post I coveredlines 534 - 656 of my configuration file.</desc
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-01-31-some-emacs-configuration-functions/</guid>
-      <description>Today&#39;s post has some functions from the functions declaration section of the beginning of my initialization file. SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key    There are a lot of function declarations in this initialization file.</description>
+      <description>Today&#39;s post has some functions from the functions declaration section of the beginning of my initialization file.  SET UP, DEFAULTS, AND CUSTOMIZATION  Necessary Adjustments when you set-up on a new computer Paths to Update on Change Executable Paths Libraries Function declarations Emacs Customization Seperate File Emax Defaults Some Defaults Frames, Buffers, And Lines Some Custom Default Functions Some New Key Bindings Popup, Pos-tip,Tooltip, Posframe Which Key     There are a lot of function declarations in this initialization file.</description>
     </item>
     
     <item>
@@ -133,7 +128,7 @@ In the last emacs post I coveredlines 534 - 656 of my configuration file.</desc
       <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2019-09-23-windows-program-launcher/</guid>
-      <description>For any readers setting up configuration files for their emacs editor, here is the quick and easy code for the windows program launchershown in the image below.Here&#39;s the config code:```elisp;path of program you want in your launcher(defvar name-of-program-p &#34;C:/full-path-to-program/program.exe&#34;); launcher function(defun launch-program-name ()(interactive)(w32-shell-execute nil name-of-program-p nil));end launch-program-name```Then you can put the launch function name in your hydra config, like this:` (&#34;</description>
+      <description>For any readers setting up configuration files for their emacs editor, here is the quick and easy code for the windows program launcher shown in the image below.    Here&#39;s the config code:  ```elisp ;path of program you want in your launcher (defvar name-of-program-p &#34;C:/full-path-to-program/program.exe&#34;) ; launcher function (defun launch-program-name () (interactive) (w32-shell-execute nil name-of-program-p nil) );end launch-program-name ```  Then you can put the launch function name in your hydra config, like this:  ` (&#34;</description>
     </item>
     
     <item>
@@ -142,7 +137,7 @@ In the last emacs post I coveredlines 534 - 656 of my configuration file.</desc
       <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/</guid>
-      <description>Jumping To Directories In EmacsIf you want to accomplish things efficiently with your computer, you will benefit from mastering a text editor. I use emacs as a generalproject manager for web development, writing, and organizing thoughts, materials, and actions. Jumping to and from directories and filesenables quickly me to get things done more efficiently. To do this I use a few different packages and functions.They are:  Bookmarks</description>
+      <description>Jumping To Directories In Emacs If you want to accomplish things efficiently with your computer, you will benefit from mastering a text editor. I use emacs as a general project manager for web development, writing, and organizing thoughts, materials, and actions. Jumping to and from directories and files enables quickly me to get things done more efficiently. To do this I use a few different packages and functions. They are:   Bookmarks</description>
     </item>
     
     <item>
@@ -151,7 +146,7 @@ In the last emacs post I coveredlines 534 - 656 of my configuration file.</desc
       <pubDate>Tue, 08 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2019-09-08-emacs-with-an-interface/</guid>
-      <description>What&#39;s All This About Text Editors?I always used to ask, why do people post about their text-editors? These days I know the reason. Computers are lightening fast, using themisn&#39;t. You need to leave what you are doing to turn on another piece of software. You have to search for files. You&#39;re constantly having toremember how a process works, or search around the IDE to figure out how to do something again.</description>
+      <description>What&#39;s All This About Text Editors? I always used to ask, why do people post about their text-editors? These days I know the reason. Computers are lightening fast, using them isn&#39;t. You need to leave what you are doing to turn on another piece of software. You have to search for files. You&#39;re constantly having to remember how a process works, or search around the IDE to figure out how to do something again.</description>
     </item>
     
   </channel>

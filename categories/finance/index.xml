@@ -6,14 +6,18 @@
     <description>Recent content in finance on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/categories/finance/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cloudnine.github.io/categories/finance/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Newton&#39;s Stock Market</title>
       <link>https://cloudnine.github.io/archives/2018-02-25-newtons-stock-market/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2018-02-25-newtons-stock-market/</guid>
-      <description>Naturalsciences in usual circumstances are wonderfully predictable; what goes up must come down. Economists since Walras have beenpromoting the profitable illusion that economics is a natural science. Today, more than anytime in history, that charade is obviously bunk.US stocks have gone up but not down. This has analysts, traders, economists, and pretty much everyone else asking the same questions. Whyaren&#39;t they coming down? When will they? Should I buy US stocks?</description>
+      <description>Natural sciences in usual circumstances are wonderfully predictable; what goes up must come down. Economists since Walras have been promoting the profitable illusion that economics is a natural science. Today, more than anytime in history, that charade is obviously bunk. US stocks have gone up but not down. This has analysts, traders, economists, and pretty much everyone else asking the same questions. Why aren&#39;t they coming down? When will they? Should I buy US stocks?</description>
     </item>
     
     <item>
@@ -22,8 +26,8 @@
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2018-02-23-time-value-of-money/</guid>
-      <description>What is the Best Age To Invest?According to value investors, like Warren Buffet, the secret sauce of finance can be explained in five simple words:
-Investing is all about timing. The five simple words that contain the secret to investing like a billionaire are: The time value of money.While money doesn&#39;t exactly grow on trees, it does actually grow like a tree-a big, green, Christmasy [acceptable?], money tree. Yes, mostpeople eventually learn the sheer power of savings and compound interest, but few people learn it early enough to use it wisely.</description>
+      <description>What is the Best Age To Invest? According to value investors, like Warren Buffet, the secret sauce of finance can be explained in five simple words:
+Investing is all about timing. The five simple words that contain the secret to investing like a billionaire are: The time value of money. While money doesn&#39;t exactly grow on trees, it does actually grow like a tree-a big, green, Christmasy [acceptable?], money tree. Yes, most people eventually learn the sheer power of savings and compound interest, but few people learn it early enough to use it wisely.</description>
     </item>
     
     <item>
@@ -32,7 +36,7 @@ Investing is all about timing. The five simple words that contain the secret to 
       <pubDate>Tue, 20 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2018-02-20-cobalt-attractive-not-without-downsides/</guid>
-      <description>The price of a metric ton of cobalt, the precious metal used in lithium batteries, increased 60% in the last year to $81,500USD, a 264% increase since its all time low in February of 2016. Higher prices have lifted present valuations of cobalt bearing propertiesand attracted capital into the metal. Typically, when a commodity booms in price supply increases until the price falls. In 2017, however,analysts predicted high prices through 2022, based on supply-side restrictions.</description>
+      <description>The price of a metric ton of cobalt, the precious metal used in lithium batteries, increased 60% in the last year to $81,500 USD, a 264% increase since its all time low in February of 2016. Higher prices have lifted present valuations of cobalt bearing properties and attracted capital into the metal. Typically, when a commodity booms in price supply increases until the price falls. In 2017, however, analysts predicted high prices through 2022, based on supply-side restrictions.</description>
     </item>
     
     <item>
@@ -41,7 +45,7 @@ Investing is all about timing. The five simple words that contain the secret to 
       <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2018-02-18-what-is-an-etf/</guid>
-      <description>What is an ETF?Electronically traded funds are close-end funds that trade on a stock exchange. They are managed through a creation andredemption scheme that ties their contents to those of an index, or selection of investments that meet specific criteria. The value of anETF is determined by market forces. When the value deviates from the net asset value (NAV) of the underlying investments, traders trade onthe arbitrage opportunity.</description>
+      <description>What is an ETF? Electronically traded funds are close-end funds that trade on a stock exchange. They are managed through a creation and redemption scheme that ties their contents to those of an index, or selection of investments that meet specific criteria. The value of an ETF is determined by market forces. When the value deviates from the net asset value (NAV) of the underlying investments, traders trade on the arbitrage opportunity.</description>
     </item>
     
     <item>
@@ -50,7 +54,7 @@ Investing is all about timing. The five simple words that contain the secret to 
       <pubDate>Mon, 12 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2018-02-12-should-i-stay-or-should-i-go/</guid>
-      <description>Despite whatsome people will tell you, the recent sell-off in the stock market was not a result of rising bond yields (as I said before rising bondyields are more likely to have delayed the sell-off). Yes, bond yields now are more volatile, and so are stocks; and yes, money movingbetween the two and from the sidelines has an impact on that volatility; but, there are two stronger theories, in my opinion, explaining thesell-off now.</description>
+      <description>Despite what some people will tell you, the recent sell-off in the stock market was not a result of rising bond yields (as I said before rising bond yields are more likely to have delayed the sell-off). Yes, bond yields now are more volatile, and so are stocks; and yes, money moving between the two and from the sidelines has an impact on that volatility; but, there are two stronger theories, in my opinion, explaining the sell-off now.</description>
     </item>
     
     <item>
@@ -77,7 +81,7 @@ Vox
 Zauzel 100
 Zero Hedge
 Naked Capitalism
-</description>
+ </description>
     </item>
     
     <item>
@@ -86,7 +90,7 @@ Naked Capitalism
       <pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2015-12-03-where-is-the-money/</guid>
-      <description>As Krugman might say, &#34;...it&#39;s in the market, stupid.&#34; The most influential economy in the world is poised to raiseinterest rates, but not because of inflation. Central banks in major parts of the world are still at the zero bound, and core prices arebehaving as they should when targeted only because liquidity is trapped on balance sheets as inventory. What happened? Why did monetaryeasing take half a decade to jump-start the US dollar economy?</description>
+      <description>As Krugman might say, &#34;...it&#39;s in the market, stupid.&#34; The most influential economy in the world is poised to raise interest rates, but not because of inflation. Central banks in major parts of the world are still at the zero bound, and core prices are behaving as they should when targeted only because liquidity is trapped on balance sheets as inventory. What happened? Why did monetary easing take half a decade to jump-start the US dollar economy?</description>
     </item>
     
     <item>
@@ -95,7 +99,7 @@ Naked Capitalism
       <pubDate>Sun, 28 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2015-06-28-bis-warns-of-low-rates/</guid>
-      <description>The Bank of International Settlements (BIS) continues to reprimand contemporary central banking culture for easy moneyfixes it argues feed instability by creating global economic conditions that foster bubbles. As the story goes, demand side policies areband-aids slapped on top of deep structural wounds. This is especially the case in a world where financial intermediation dominates moneychannels with a vast array of levers, ropes, and pulleys that push the lag between easing and higher demand more and more unmeasurably intothe future.</description>
+      <description>The Bank of International Settlements (BIS) continues to reprimand contemporary central banking culture for easy money fixes it argues feed instability by creating global economic conditions that foster bubbles. As the story goes, demand side policies are band-aids slapped on top of deep structural wounds. This is especially the case in a world where financial intermediation dominates money channels with a vast array of levers, ropes, and pulleys that push the lag between easing and higher demand more and more unmeasurably into the future.</description>
     </item>
     
     <item>
@@ -104,7 +108,7 @@ Naked Capitalism
       <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2015-02-26-to-raise-or-not-to-raise/</guid>
-      <description>US indicators out this week, like the Chicago PMI and the CPI estimates, support both sides of a US turn-around, the output side and theconsumption side. Yet still the FED, though widely expected to raise rates in the summer, remains tight-lipped about it, downplayingpositive economic indicators. This sounds like policy speak for &#39;we want to keep the option in our pocket,&#39; and there is good reason. While the UK and the US have been running the money tap seemingly forever, at least since 1929 part-two, the great depression strikes back,the rest of the known world, and the unknown world, is starting to catch up.</description>
+      <description>US indicators out this week, like the Chicago PMI and the CPI estimates, support both sides of a US turn-around, the output side and the consumption side. Yet still the FED, though widely expected to raise rates in the summer, remains tight-lipped about it, downplaying positive economic indicators. This sounds like policy speak for &#39;we want to keep the option in our pocket,&#39; and there is good reason. While the UK and the US have been running the money tap seemingly forever, at least since 1929 part-two, the great depression strikes back, the rest of the known world, and the unknown world, is starting to catch up.</description>
     </item>
     
     <item>
@@ -113,7 +117,7 @@ Naked Capitalism
       <pubDate>Wed, 04 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2014-06-04-upcoming-ecb-rate-changes/</guid>
-      <description>Yesterday&#39;s flash Harmonized Consumer Price Index indicated a drop in EMU price rises to 0.5%. Given the ECB&#39;s primary target is pricestability, markets are widely anticipating tomorrow&#39;s ECB meeting will see overnight interest rates reduced to negative levels.This wouldhave banks less likely to deposit daily surpluses in the ECB overnight and more likely to loan them out. They would also commit a smallerportion of liquidity to paying down liabilities previously acquired with the ECB.</description>
+      <description>Yesterday&#39;s flash Harmonized Consumer Price Index indicated a drop in EMU price rises to 0.5%. Given the ECB&#39;s primary target is price stability, markets are widely anticipating tomorrow&#39;s ECB meeting will see overnight interest rates reduced to negative levels.This would have banks less likely to deposit daily surpluses in the ECB overnight and more likely to loan them out. They would also commit a smaller portion of liquidity to paying down liabilities previously acquired with the ECB.</description>
     </item>
     
     <item>
@@ -122,7 +126,7 @@ Naked Capitalism
       <pubDate>Wed, 14 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2013-08-14-macroeconomic-outlook/</guid>
-      <description>IntroductionThe following article comprises my general world economic outlook. It is necessary to clarify a few points for thereader. Firstly, the exercise is positive rather than normative. For example, any mention of oil should be read as an inchoate view of whereworld oil prices, or supply and demand, may go in future periods, rather than a statement that policies should pursue increased oil output,or that carbon fuel consumption is net surplus enhancing.</description>
+      <description>Introduction The following article comprises my general world economic outlook. It is necessary to clarify a few points for the reader. Firstly, the exercise is positive rather than normative. For example, any mention of oil should be read as an inchoate view of where world oil prices, or supply and demand, may go in future periods, rather than a statement that policies should pursue increased oil output, or that carbon fuel consumption is net surplus enhancing.</description>
     </item>
     
     <item>
@@ -131,7 +135,7 @@ Naked Capitalism
       <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2013-03-28-european-union-government-procurement-study/</guid>
-      <description>AbstractThis report analyzes EU-wide public procurement markets and market segments through modelling ofthe EU&#39;s Tenders Electronic Daily (TED) data, among other sources, as well as the critical legal elements of the emerging EU-wide publicprocurement regime. The modelling results point to procurement markets that are particularly contestable for Canadian Companies. In the fast changing world of public procurement,the work in this paper is no longer relevant, but does provide sources for future research.</description>
+      <description>Abstract This report analyzes EU-wide public procurement markets and market segments through modelling of the EU&#39;s Tenders Electronic Daily (TED) data, among other sources, as well as the critical legal elements of the emerging EU-wide public procurement regime. The modelling results point to procurement markets that are particularly contestable for Canadian Companies. In the fast changing world of public procurement, the work in this paper is no longer relevant, but does provide sources for future research.</description>
     </item>
     
     <item>
@@ -140,7 +144,7 @@ Naked Capitalism
       <pubDate>Fri, 07 Dec 2012 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2012-12-07-eu-canada-ceta-workshop/</guid>
-      <description>AbstractAn analysis of procurement laws and statistics at the major levels of government across Canada.Data collection, wrangling, modelling, research, writing, and editing by Yuri Tricys, among others. Author and Director of research, Kurt Hubner.Download EU Canada CETA Workshop</description>
+      <description>Abstract An analysis of procurement laws and statistics at the major levels of government across Canada. Data collection, wrangling, modelling, research, writing, and editing by Yuri Tricys, among others. Author and Director of research, Kurt Hubner.    Download EU Canada CETA Workshop</description>
     </item>
     
     <item>
@@ -149,7 +153,7 @@ Naked Capitalism
       <pubDate>Sat, 26 Feb 2011 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2011-02-26-optimal-pathway-to-business-cycle-convergence-in-the-emu/</guid>
-      <description>AbstractThis paper reviews academic arguments for and against fiscal policy alignment and increased transnational budgets in the EMU. It suggestscredit market instruments are costlier than tax based transfers and the current system of structural funding is inadequate,and an enhancedfiscal transfer system, funded from a community level tax base, is an optimal pathway toward business cycle convergence in the EMU. Download Business Cycle Convergence In The EMU</description>
+      <description>Abstract This paper reviews academic arguments for and against fiscal policy alignment and increased transnational budgets in the EMU. It suggests credit market instruments are costlier than tax based transfers and the current system of structural funding is inadequate,and an enhanced fiscal transfer system, funded from a community level tax base, is an optimal pathway toward business cycle convergence in the EMU.    Download Business Cycle Convergence In The EMU </description>
     </item>
     
     <item>
@@ -158,7 +162,7 @@ Naked Capitalism
       <pubDate>Sat, 28 Nov 2009 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2009-11-28-strong-dollar-could-be-good-for-canada/</guid>
-      <description>Punditsof the double-dip recession theory cite the now globally anticipated fallout of the U.S. dollar as a key source. The fed is printing moneylike confetti, they say. The U.S. Treasury bill bubble is soon to pop, they add. The newly coined (U.S. dollar-carry trade) (it usedto be the yen-carry trade) is driving commodities through the roof, they squeal. The concerns are many. For example, rampant increases inU.</description>
+      <description>Pundits of the double-dip recession theory cite the now globally anticipated fallout of the U.S. dollar as a key source. The fed is printing money like confetti, they say. The U.S. Treasury bill bubble is soon to pop, they add. The newly coined (U.S. dollar-carry trade) (it used to be the yen-carry trade) is driving commodities through the roof, they squeal. The concerns are many. For example, rampant increases in U.</description>
     </item>
     
     <item>
@@ -167,7 +171,7 @@ Naked Capitalism
       <pubDate>Thu, 15 Oct 2009 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2009-09-15-dealing-with-the-hst/</guid>
-      <description>Protests across the province last month made it clear to British Columbians that the PST/GST harmonization announced on July 23 by PremierGordon Campbell is not going over well. Former Premier Bill Vander Zalm grasped onto the issue like a life raft, presumably hoping toresurrect his long-thought dead but apparently still alive Social Credit initiatives. The NDP are joining Mr. Vander Zalm in the attack onthe provincial Liberal for, perhaps, partisan reasons (it&#39;s worth nothing that New Democrats in prairies support the HST).</description>
+      <description>Protests across the province last month made it clear to British Columbians that the PST/GST harmonization announced on July 23 by Premier Gordon Campbell is not going over well. Former Premier Bill Vander Zalm grasped onto the issue like a life raft, presumably hoping to resurrect his long-thought dead but apparently still alive Social Credit initiatives. The NDP are joining Mr. Vander Zalm in the attack on the provincial Liberal for, perhaps, partisan reasons (it&#39;s worth nothing that New Democrats in prairies support the HST).</description>
     </item>
     
     <item>
@@ -176,7 +180,7 @@ Naked Capitalism
       <pubDate>Sun, 30 Nov 2008 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2008-11-30-wedding-bells-business-and-state-tie-the-knot/</guid>
-      <description>Last month, before U.S. election results, I was chatting with a friend about economic political history. He wrote a linethat stuck with me. He wrote (Western civilization has got to stop patting itself on the back for separating church and state and get onwith the business of separating business and state.) At the time I thought the line might one day just come off (I was thinking ofreceding lobbyist influence given the likelihood of a democrat government.</description>
+      <description>Last month, before U.S. election results, I was chatting with a friend about economic political history. He wrote a line that stuck with me. He wrote (Western civilization has got to stop patting itself on the back for separating church and state and get on with the business of separating business and state.) At the time I thought the line might one day just come off (I was thinking of receding lobbyist influence given the likelihood of a democrat government.</description>
     </item>
     
     <item>
@@ -185,8 +189,8 @@ Naked Capitalism
       <pubDate>Fri, 24 Oct 2008 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2008-09-24-stimulating-interest/</guid>
-      <description>So world leaders (note: 20 of them) have agreed to come together in a first ever meeting of the G20 to discuss arestructuring of global financial market systems. Finally, economic and politically minded people everywhere are revisiting the decisionsthat have shaped our global economy into the fertile soil for crisis that it has become.
-Milton Friedman&#39;s legacy is under attack. The concepts of nationalism and socialism in the state are not only beingreconsidered, they are being re-instituted as we speak (the nationalization of big banks globally).</description>
+      <description>So world leaders (note: 20 of them) have agreed to come together in a first ever meeting of the G20 to discuss a restructuring of global financial market systems. Finally, economic and politically minded people everywhere are revisiting the decisions that have shaped our global economy into the fertile soil for crisis that it has become.
+Milton Friedman&#39;s legacy is under attack. The concepts of nationalism and socialism in the state are not only being reconsidered, they are being re-instituted as we speak (the nationalization of big banks globally).</description>
     </item>
     
     <item>
@@ -195,8 +199,8 @@ Milton Friedman&#39;s legacy is under attack. The concepts of nationalism and so
       <pubDate>Wed, 22 Oct 2008 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/archives/2008-09-22-wall-streets-liquidity-problem/</guid>
-      <description>It doesn&#39;t take a rocket scientist to see that addressing the liquidity problem on Wall Street by borrowing to restorethe ability to lend does not address the underlying aggregate debt issue.
-The common sense approach says that to avoid a sudden crash or some kind of long drawn out debt deflation, the AmericanGovernment needs to address the ability of the real economy to earn, borrow and spend. And in this sense yes, much of the relief could havegone to debtors at large and not the creditors, who to pay their new debts will have to lend more.</description>
+      <description>It doesn&#39;t take a rocket scientist to see that addressing the liquidity problem on Wall Street by borrowing to restore the ability to lend does not address the underlying aggregate debt issue.
+The common sense approach says that to avoid a sudden crash or some kind of long drawn out debt deflation, the American Government needs to address the ability of the real economy to earn, borrow and spend. And in this sense yes, much of the relief could have gone to debtors at large and not the creditors, who to pay their new debts will have to lend more.</description>
     </item>
     
   </channel>
