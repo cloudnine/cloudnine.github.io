@@ -6,11 +6,11 @@
     <description>Recent content on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 08 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs</title>
       <link>https://cloudnine.github.io/tags/emacs/</link>
-      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/emacs/</guid>
       <description></description>
@@ -19,9 +19,27 @@
     <item>
       <title>learning center</title>
       <link>https://cloudnine.github.io/tags/learning-center/</link>
-      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/learning-center/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linting</title>
+      <link>https://cloudnine.github.io/tags/linting/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/linting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>https://cloudnine.github.io/tags/php/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/php/</guid>
       <description></description>
     </item>
     
@@ -62,11 +80,11 @@
     </item>
     
     <item>
-      <title>emacs hyrdas</title>
-      <link>https://cloudnine.github.io/tags/emacs-hyrdas/</link>
+      <title>emacs-hydras</title>
+      <link>https://cloudnine.github.io/tags/emacs-hydras/</link>
       <pubDate>Mon, 24 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/tags/emacs-hyrdas/</guid>
+      <guid>https://cloudnine.github.io/tags/emacs-hydras/</guid>
       <description></description>
     </item>
     
@@ -130,15 +148,6 @@
       <pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/house/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>emacs-hydras</title>
-      <link>https://cloudnine.github.io/tags/emacs-hydras/</link>
-      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/emacs-hydras/</guid>
       <description></description>
     </item>
     
