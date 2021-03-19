@@ -423,8 +423,9 @@ First, note the image to the right says &#34;Journalism is not a Crime.&#34; It 
       <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-02-17-emacs-posframe-which-key/</guid>
-      <description>Emacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, go to the side bar of this page and click on the &#39;Emacs&#39; tag. Then read the posts fromoldest to newest.
-In this earlier emacs post I coveredlines 534 - 656 of my configuration file.</description>
+      <description>Updated March 18, 2021Most of my code has changed a lot recently. Check updated posts.
+For each post can update code listed in that post.Keep in mind code for linux and wsl configs will have their own posts,except in the case of .early-init and init.el, which have systemswitches (to load system specific dot-files).
+Also note: abandoned convention of listing initlines. Now if you want to find the code, and there is now plentyof decent emacs code, use the search function.</description>
     </item>
     
     <item>
@@ -508,7 +509,9 @@ Alignment is a concept that explains what&#39;s going on. Let each line in this 
       <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-01-24-emacs-installation-and-defaults/</guid>
-      <description>Directly below are the subheadings to the first main heading of my initialization file, see my last post Emacs Configuration Overview.I&#39;ll go through the lines of code in order, but remember, the line numbers you see in Hugo&#39;s code block css styling are relative to thecode on this page not the emacs initialization file [Hugo is the Static ContentManagement System based on GO I used to makethis blog].</description>
+      <description>Updated March 18, 2021Most of my code has changed a lot recently. Check updated posts.
+For each post can update code listed in that post.Keep in mind code for linux and wsl configs will have their own posts,except in the case of .early-init and init.el, which have systemswitches (to load system specific dot-files).
+Also note: abandoned convention of listing initlines. Now if you want to find the code, and there is now plentyof decent emacs code, use the search function.</description>
     </item>
     
     <item>
@@ -517,7 +520,9 @@ Alignment is a concept that explains what&#39;s going on. Let each line in this 
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/</guid>
-      <description>Below are some notes covering among other things why I got into Emacs, where I got my version, and how my configuration isorganized. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or SublimeText are awesome, and offer also great selections of unique packages. Atom, for example, has some super useful snippet packages. You canconvert them into Yasnippet format (an Emacs snippet package), but it&#39;s a hassle.</description>
+      <description>Updated March 18, 2021Most of my code has changed a lot recently. Check updated posts.
+For each post can update code listed in that post.Keep in mind code for linux and wsl configs will have their own posts,except in the case of .early-init and init.el, which have systemswitches (to load system specific dot-files).
+Also note: abandoned convention of listing initlines. Now if you want to find the code, and there is now plentyof decent emacs code, use the search function.</description>
     </item>
     
     <item>
@@ -564,7 +569,9 @@ Alignment is a concept that explains what&#39;s going on. Let each line in this 
       <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2019-09-23-windows-program-launcher/</guid>
-      <description>For any readers setting up configuration files for their emacs editor, here is the quick and easy code for the windows program launchershown in the image below.Here&#39;s the config code:```elisp;path of program you want in your launcher(defvar name-of-program-p &#34;C:/full-path-to-program/program.exe&#34;); launcher function(defun launch-program-name ()(interactive)(w32-shell-execute nil name-of-program-p nil));end launch-program-name```Then you can put the launch function name in your hydra config, like this:` (&#34;</description>
+      <description>Updated March 18, 2021Most of my code has changed a lot recently. Check updated posts.
+For each post can update code listed in that post.Keep in mind code for linux and wsl configs will have their own posts,except in the case of .early-init and init.el, which have systemswitches (to load system specific dot-files).
+Also note: abandoned convention of listing initlines. Now if you want to find the code, and there is now plentyof decent emacs code, use the search function.</description>
     </item>
     
     <item>
@@ -573,7 +580,9 @@ Alignment is a concept that explains what&#39;s going on. Let each line in this 
       <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/</guid>
-      <description>Jumping To Directories In EmacsIf you want to accomplish things efficiently with your computer, you will benefit from mastering a text editor. I use emacs as a generalproject manager for web development, writing, and organizing thoughts, materials, and actions. Jumping to and from directories and filesenables quickly me to get things done more efficiently. To do this I use a few different packages and functions.They are:  Bookmarks</description>
+      <description>Updated March 18, 2021Most of my code has changed a lot recently. Check updated posts.
+For each post can update code listed in that post.Keep in mind code for linux and wsl configs will have their own posts,except in the case of .early-init and init.el, which have systemswitches (to load system specific dot-files).
+Also note: abandoned convention of listing initlines. Now if you want to find the code, and there is now plentyof decent emacs code, use the search function.</description>
     </item>
     
     <item>
@@ -601,7 +610,9 @@ Alignment is a concept that explains what&#39;s going on. Let each line in this 
       <pubDate>Tue, 08 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2019-09-08-emacs-with-an-interface/</guid>
-      <description>What&#39;s All This About Text Editors?I always used to ask, why do people post about their text-editors? These days I know the reason. Computers are lightening fast, using themisn&#39;t. You need to leave what you are doing to turn on another piece of software. You have to search for files. You&#39;re constantly having toremember how a process works, or search around the IDE to figure out how to do something again.</description>
+      <description>Updated March 18, 2021Most of my code has changed a lot recently. Check updated posts.
+For each post can update code listed in that post.Keep in mind code for linux and wsl configs will have their own posts,except in the case of .early-init and init.el, which have systemswitches (to load system specific dot-files).
+Also note: abandoned convention of listing initlines. Now if you want to find the code, and there is now plentyof decent emacs code, use the search function.</description>
     </item>
     
     <item>

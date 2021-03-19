@@ -22,7 +22,9 @@
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/</guid>
-      <description>Below are some notes covering among other things why I got into Emacs, where I got my version, and how my configuration isorganized. As mentioned before, other text editors in use today, like Atom, IntelliJ Idea, or SublimeText are awesome, and offer also great selections of unique packages. Atom, for example, has some super useful snippet packages. You canconvert them into Yasnippet format (an Emacs snippet package), but it&#39;s a hassle.</description>
+      <description>Updated March 18, 2021Most of my code has changed a lot recently. Check updated posts.
+For each post can update code listed in that post.Keep in mind code for linux and wsl configs will have their own posts,except in the case of .early-init and init.el, which have systemswitches (to load system specific dot-files).
+Also note: abandoned convention of listing initlines. Now if you want to find the code, and there is now plentyof decent emacs code, use the search function.</description>
     </item>
     
   </channel>
