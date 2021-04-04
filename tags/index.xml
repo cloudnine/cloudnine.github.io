@@ -6,7 +6,34 @@
     <description>Recent content on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 29 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>contemporary</title>
+      <link>https://cloudnine.github.io/tags/contemporary/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/contemporary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jazz</title>
+      <link>https://cloudnine.github.io/tags/jazz/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/jazz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>strings</title>
+      <link>https://cloudnine.github.io/tags/strings/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/strings/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>css</title>
       <link>https://cloudnine.github.io/tags/css/</link>
@@ -130,15 +157,6 @@
       <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/classical/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>jazz</title>
-      <link>https://cloudnine.github.io/tags/jazz/</link>
-      <pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/jazz/</guid>
       <description></description>
     </item>
     
