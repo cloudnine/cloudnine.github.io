@@ -16,16 +16,5 @@
       <description>Yesterday wasn&#39;t a typical day. It was my birthday. I took a brush to the whiteboard and replaced all the TODOs with thewords &#34;Read Python,&#34; in an extra large blue custom font I&#39;m calling &#39;meander.&#39; I packed one of the python books in with a couple of othersand took the train to the library. My idea of a good time really is a quiet nook and a well written book.</description>
     </item>
     
-    <item>
-      <title>Emacs Configuration Overview</title>
-      <link>https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/</link>
-      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/</guid>
-      <description>Updated March 18, 2021Most of my code has changed a lot recently. Check updated posts.
-For each post can update code listed in that post.Keep in mind code for linux and wsl configs will have their own posts,except in the case of .early-init and init.el, which have systemswitches (to load system specific dot-files).
-Also note: abandoned convention of listing initlines. Now if you want to find the code, and there is now plentyof decent emacs code, use the search function.</description>
-    </item>
-    
   </channel>
 </rss>

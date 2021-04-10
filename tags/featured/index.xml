@@ -18,7 +18,17 @@
     </item>
     
     <item>
-      <title>Emacs Bookmarks</title>
+      <title>How To Use And Configure The Emacs Text Editor, An Overview</title>
+      <link>https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/</link>
+      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-01-19-emacs-configuration-overview/</guid>
+      <description>Updated March 18, 2021Loading EmacsEmacs users write custom code for their software. Each &#39;configuration&#39; can be highly individualized. Because some custom configurations take longer to load than others, Emacs users like to minimize and measure their &#39;load&#39; time.
+The software loads like any other software, loading libraries included in the core, and then additional libraries according to various configuration files. With Emacs, these files are stored in various locations based on the settings specified by the user, and the system Emacs is installed on.</description>
+    </item>
+    
+    <item>
+      <title>How To Use And Configure Emacs Bookmark Packages</title>
       <link>https://cloudnine.github.io/science/2019-10-20-emacs-bookmarks/</link>
       <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
       
