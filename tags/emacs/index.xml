@@ -6,7 +6,16 @@
     <description>Recent content in Emacs on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 29 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Nine Vlogs, Writing a Hugo Post in Emacs</title>
+      <link>https://cloudnine.github.io/science/2021-05-02-writing-a-hugo-post-with-emacs/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2021-05-02-writing-a-hugo-post-with-emacs/</guid>
+      <description>   That&amp;rsquo;s all for now&amp;hellip; </description>
+    </item>
+    
     <item>
       <title>Css and Scss Modes - Emacs Configuration</title>
       <link>https://cloudnine.github.io/science/2021-01-29-emacs-css-and-scss/</link>
@@ -23,6 +32,26 @@
       
       <guid>https://cloudnine.github.io/science/2020-12-15-emacs-flymake-and-php-mode/</guid>
       <description>This post covers the following sections from my init.  Flymake PHP Mode   PreambleEmacs is old school. You&#39;re either new to it - which means you wouldn&#39;t be here unless it was your type of thing - or youknow what you&#39;re looking for. In either case, search &#39;Emacs&#39; in tags or search on this site. Then read the posts y date from oldest to newest.</description>
+    </item>
+    
+    <item>
+      <title>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 5</title>
+      <link>https://cloudnine.github.io/science/2020-11-14-emacs-tutorial-exporting-org-mode-to-pdf-5/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-11-14-emacs-tutorial-exporting-org-mode-to-pdf-5/</guid>
+      <description>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 5
+  That&amp;rsquo;s all for now&amp;hellip; </description>
+    </item>
+    
+    <item>
+      <title>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 4</title>
+      <link>https://cloudnine.github.io/science/2020-11-14-emacs-tutorial-exporting-org-mode-to-pdf-4/</link>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/science/2020-11-14-emacs-tutorial-exporting-org-mode-to-pdf-4/</guid>
+      <description>Emacs Tutorial, Exporting Org-Mode Files To PDF, Episode 4
+  That&amp;rsquo;s all for now&amp;hellip; </description>
     </item>
     
     <item>
