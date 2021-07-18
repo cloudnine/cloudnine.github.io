@@ -98,42 +98,6 @@
     </item>
     
     <item>
-      <title>good reads</title>
-      <link>https://cloudnine.github.io/tags/good-reads/</link>
-      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/good-reads/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>history</title>
-      <link>https://cloudnine.github.io/tags/history/</link>
-      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/history/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>newsroom</title>
-      <link>https://cloudnine.github.io/tags/newsroom/</link>
-      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/newsroom/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>science</title>
-      <link>https://cloudnine.github.io/tags/science/</link>
-      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>agriculture</title>
       <link>https://cloudnine.github.io/tags/agriculture/</link>
       <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
@@ -161,20 +125,11 @@
     </item>
     
     <item>
-      <title>contemporary</title>
-      <link>https://cloudnine.github.io/tags/contemporary/</link>
-      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      <title>history</title>
+      <link>https://cloudnine.github.io/tags/history/</link>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://cloudnine.github.io/tags/contemporary/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>strings</title>
-      <link>https://cloudnine.github.io/tags/strings/</link>
-      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/strings/</guid>
+      <guid>https://cloudnine.github.io/tags/history/</guid>
       <description></description>
     </item>
     
@@ -265,6 +220,15 @@
       <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/seventies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>science fiction</title>
+      <link>https://cloudnine.github.io/tags/science-fiction/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/science-fiction/</guid>
       <description></description>
     </item>
     
@@ -391,15 +355,6 @@
       <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/punk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>science fiction</title>
-      <link>https://cloudnine.github.io/tags/science-fiction/</link>
-      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/science-fiction/</guid>
       <description></description>
     </item>
     
@@ -589,6 +544,15 @@
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/macroeconomics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>newsroom</title>
+      <link>https://cloudnine.github.io/tags/newsroom/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/newsroom/</guid>
       <description></description>
     </item>
     
