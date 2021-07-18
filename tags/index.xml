@@ -6,22 +6,31 @@
     <description>Recent content on Cloud Nine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 02 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cloudnine.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>music</title>
+      <link>https://cloudnine.github.io/tags/music/</link>
+      <pubDate>Sat, 17 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>science fiction</title>
+      <link>https://cloudnine.github.io/tags/science-fiction/</link>
+      <pubDate>Sat, 17 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/science-fiction/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>jazz</title>
       <link>https://cloudnine.github.io/tags/jazz/</link>
       <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/jazz/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>music</title>
-      <link>https://cloudnine.github.io/tags/music/</link>
-      <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/music/</guid>
       <description></description>
     </item>
     
@@ -224,16 +233,7 @@
     </item>
     
     <item>
-      <title>science fiction</title>
-      <link>https://cloudnine.github.io/tags/science-fiction/</link>
-      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/science-fiction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>news room</title>
+      <title>news-room</title>
       <link>https://cloudnine.github.io/tags/news-room/</link>
       <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
       
@@ -373,15 +373,6 @@
       <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/personal-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>opinion</title>
-      <link>https://cloudnine.github.io/tags/opinion/</link>
-      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cloudnine.github.io/tags/opinion/</guid>
       <description></description>
     </item>
     
@@ -697,6 +688,15 @@
       <pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
       
       <guid>https://cloudnine.github.io/tags/custom-charts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opinion</title>
+      <link>https://cloudnine.github.io/tags/opinion/</link>
+      <pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://cloudnine.github.io/tags/opinion/</guid>
       <description></description>
     </item>
     
